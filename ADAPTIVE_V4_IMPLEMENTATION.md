@@ -14,7 +14,13 @@
 > | Website | The Sites agent offers **Adaptive v4 \| Evidence-routed Nemotron Ultra**: 2 calls max, reviewed bound $0.121. Console copy updated. |
 > | Runner | `scripts/live_adaptive_v4.py` has three commands: `smoke`, `prepare` and `execute`. `smoke` runs the real sandbox with scripted replies and a scratch ledger. `prepare` and `execute` are the frozen paid run, enforcing ≤ 16 calls / $0.50. |
 
-Status: **implemented and tested offline. No new paid inference has been run.** Measured v4 improvements: none yet. The frozen v3 results (Ultra-only 6/8, Super→Ultra 6/8, Super-only 0/8 at `reports/cloud-comparison/20261029T170003Z`) are unchanged and remain the baseline.
+Status (end of 30 October): **implemented, fixed and run live.** Router `adaptive-v4-router-3`, contract `agentkernel_line_blocks_v4_1`, input cap 36,000. Live results are in [ADAPTIVE_V4_LIVE.md](ADAPTIVE_V4_LIVE.md):
+
+- **Frozen pilot:** 5/8, vs Ultra-only 6/8. audit_3 was newly solved. Two cases were lost to the parser and input-bound defects, since fixed.
+- **Post-fix re-check:** 2/2. aggregate_3 was recovered by the evidence-directed correction.
+- **Dashboard:** audit_3 verified.
+
+The frozen v3 results (Ultra-only 6/8, Super→Ultra 6/8, Super-only 0/8, at `reports/cloud-comparison/20261029T170003Z`) are unchanged and remain the baseline. The sections below record the morning's design; the update table above lists every later change.
 
 ## Diagnosis (from the preserved records; development-seen, not evaluation)
 
@@ -86,7 +92,10 @@ Evidence: `reports/adaptive-v4/20261030T115040Z/diagnosis.json`, `SCORECARD.md`.
 
 - The CLI and module are opt-in. They reuse `reports/product-v3/budget.json` (reserve → settle/unknown, no replay) and the unchanged `ConcurrencyVerifier`.
 - v2 (Sites agent) and v3 (`ProductRepair`) code is untouched.
-- **Not done:** the dashboard/MCP option under `sites/agentkernel-console` and the single-use review flow hookup. No Site, sharing or budget setting was changed.
+- **Done later on 30 October:**
+  - the local Model Lab option **Adaptive v4**, on product-v1 cases only, with the TSan image pinned
+  - the Sites agent option, which reuses the existing single-use review and budget checks
+- **Not done:** the hosted console wording is built but not redeployed, and the ChatGPT plugin has no v4-specific tool.
 
 ## Tests
 
@@ -119,17 +128,15 @@ The tests cover:
 | A, development pilot | Super with v3 JSON contract vs v4 block contract on `ledger_2`, `snapshot_2`, `capacity_2`, `predicate_2`, plus at most 4 Ultra evidence-directed corrections | 12 | $0.2046 | Within the delegated $0.50 / 16-call cap. Expected actual spend is about $0.01. |
 | B, held-out four-arm comparison | 5 new program families, rotated arm order, concurrency 1 | 30 | $0.658 | **Exceeds the delegated cap; needs an explicit expanded limit.** |
 
-Stage A was **not executed**:
-- Its execution wiring is not built.
-- `AdaptiveV4.run` has not yet run against a real Nebius sandbox; the pure layer is tested, the orchestrator only by import and payload checks.
-- This session's own working budget was nearly spent.
+Stage A, the Super contract comparison, was **not executed**. The delegated budget went instead to a frozen live v4 pilot on all eight product-v1 test cases (10 calls), a post-fix re-check (3 calls) and two dashboard runs (2 calls). That is 15 of 16 calls and $0.0295 in total, with no unknown calls. `AdaptiveV4.run` has run end to end against the real Nebius Sandbox: a smoke test with scripted replies, then the live runs.
 
 Stage B's held-out families are named in the protocol only. Their fixtures and private reference validation are not built yet.
 
 ## Limitations
 
-- No v4 verified-count, cost or latency claim exists. The targets (≥ Ultra-only verified, −25 % spend, −20 % median e2e) are untested.
-- The orchestrator has no end-to-end mock test.
+- **Development-seen only.** The live results come from eight development-seen programs, with no unseen or statistical claim. The cost target (−25% spend) was not met: v4 cost slightly more than Ultra-only in the frozen pilot. The latency target is unproven.
+- **Super-first is uncalibrated,** so the cheaper tier is still never tried first.
+- **No blind-retry control was run,** so the aggregate_3 recovery can't be attributed to the evidence rather than to the extra call alone.
 - TSan phase attribution in `TimedCampaign` uses a heuristic on the task. The verification-phase split for tests + semantics is derived by subtraction.
 - TSan symbolization is still missing in the image, so stacks carry no function names. The verifier was not altered.
 - Router calibration from 4 development programs would remain sparse. No learned-accuracy claim follows from it.

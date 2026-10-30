@@ -59,6 +59,7 @@ function render(){
  }
  $('run-status').textContent=run.status;$('run-status').className='pill '+(run.status==='completed'?'good':'');
  $('comparison-label').textContent=run.fixture+' · '+(['queued','running'].includes(run.status)?'LIVE':replay?'HISTORICAL / SAVED REPLAY':'HISTORICAL / REAL MODELS');
+ $('flow-note').textContent=run.tiers.includes('ADAPTIVE_V4')?'Adaptive v4 flow: BASELINE → ROUTER → ULTRA REPAIR → VERIFY → ULTRA + FAILED-CANDIDATE EVIDENCE (only if rejected) → FINAL RESULT':'Adaptive flow: BASELINE → NANO TRIAGE → SUPER REPAIR → VERIFY → optional ULTRA → FINAL RESULT';
  $('run-note').textContent=(run.note||'')+' Passing tests do not prove semantic equivalence.';
  for(const [tier,item] of entries){
   const job=item.job,inf=replay?null:item.inference;const meta=inf?.metadata||{};const verification=job?.verification;
@@ -171,3 +172,31 @@ for(const [i,label] of ['BASELINE','FINGERPRINT','NANO','SUPER','EXACT-SOURCE ED
 const sceneObserver=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting)e.target.classList.add('in-view');},{threshold:.2});document.querySelectorAll('.scene').forEach(s=>sceneObserver.observe(s));
 function failureMotion(){const box=$('failure').getBoundingClientRect();const progress=-box.top/(box.height-innerHeight);$('failure').classList.toggle('failed',progress>.22);}
 let framePending=false;addEventListener('scroll',()=>{if(!framePending){framePending=true;requestAnimationFrame(()=>{failureMotion();framePending=false;});}},{passive:true});addEventListener('resize',failureMotion);failureMotion();loadCombined();
+
+// Adaptive v4 live evidence (saved runs only; values the record lacks stay unknown).
+async function loadV4(){
+ try{
+  const d=await api('/api/v4');const pilot=d.runs.find(r=>r.purpose==='pilot');const rechecks=d.runs.filter(r=>r!==pilot);
+  if(!pilot)throw new Error('No frozen v4 pilot found');
+  const verified=rows=>rows.filter(r=>r.status==='verified').length;
+  const cost=rows=>rows.every(r=>r.cost_usd!=null)?rows.reduce((a,r)=>a+r.cost_usd,0):null;
+  const ultraOnly=pilot.rows.filter(r=>d.v3_baseline[r.case]?.ultra_only==='verified').length;
+  const corrections=[pilot,...rechecks].flatMap(r=>r.rows).filter(r=>r.status==='verified'&&r.attempts.some(a=>a.recovery==='verifier')).length;
+  const dash=d.dashboard_runs.filter(r=>r.status==='verified');
+  $('v4-metrics').replaceChildren(
+   metric('Frozen pilot',verified(pilot.rows)+' / '+pilot.rows.length,'v3 Ultra-only on the same programs: '+ultraOnly+' / '+pilot.rows.length),
+   metric('Post-fix re-check',rechecks.map(r=>verified(r.rows)+' / '+r.rows.length).join(' · ')||'—','Only the cases the two defects hit'),
+   metric('Evidence corrections',String(corrections),'Rejected candidate recovered by the second Ultra call'),
+   metric('Dashboard runs verified',dash.length+' / '+d.dashboard_runs.length,d.dashboard_runs.length?d.dashboard_runs.map(r=>r.case+': '+r.status).join(' · '):'None yet'),
+   metric('Pilot inference cost',money(cost(pilot.rows)),'Hosted Token Factory charges, incl. failed calls'));
+  const head=node('tr');for(const h of ['PROGRAM','v3 SUPER ONLY','v3 SUPER → ULTRA','v3 ULTRA ONLY','v4 FROZEN PILOT','v4 AFTER FIXES'])head.append(node('th','',h));$('v4-head').replaceChildren(head);
+  const cell=(status,detail)=>{const td=node('td');if(!status){td.textContent='—';return td;}td.append(node('span','pill '+(status==='verified'?'good':status==='rejected'||status==='unknown'?'bad':''),status));if(detail)td.append(node('small','',' '+detail));return td;};
+  const route=r=>r.attempts.map(a=>(a.stage||'').toUpperCase()+(a.recovery==='verifier'?'+EVIDENCE':a.recovery==='format'?' RETRY':'')+(a.total_runs?' '+a.passed_runs+'/'+a.total_runs:a.outcome==='invalid_output'?' reply rejected':a.outcome==='not_started'?' not started':a.outcome==='unknown'?' unknown (no call made)':'')).join(' → ');
+  $('v4-matrix').replaceChildren();
+  for(const r of pilot.rows){const v3=d.v3_baseline[r.case]||{};const fixed=rechecks.map(x=>x.rows.find(y=>y.case===r.case)).find(Boolean);const tr=node('tr');const th=node('th','',r.case);th.scope='row';
+   tr.append(th,cell(v3.super_only),cell(v3.fast),cell(v3.ultra_only),cell(r.status,route(r)),cell(fixed?.status,fixed?route(fixed):''));$('v4-matrix').append(tr);}
+  $('v4-notes').replaceChildren(...['audit_3: verified by v4; no v3 route solved it.','capacity_3 / aggregate_3: lost in the frozen pilot to two AgentKernel defects (a parser rule and an input bound), both fixed and re-checked.','aggregate_3: first Ultra candidate failed stress and TSan; the evidence-directed correction verified 100/100 with 3/3 TSan.','rendezvous_3: unsolved by every route, including the v4 correction.'].map(t=>node('li','',t)));
+  $('v4-scope').textContent=d.scope+' Frozen pilot '+pilot.id+' ('+pilot.router+', '+pilot.contract+'); re-checks '+rechecks.map(r=>r.id+' ('+r.contract+')').join(', ')+'.';
+ }catch(e){$('v4-scope').textContent='v4 evidence unavailable. No values have been substituted. '+e.message;}
+}
+loadV4();

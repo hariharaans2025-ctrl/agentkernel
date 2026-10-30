@@ -46,6 +46,8 @@ def make_server(service, port=8766):
                     self.send(200, {**service.configuration(), 'csrf': token})
                 elif path == '/api/runs':
                     self.send(200, service.list_runs())
+                elif path == '/api/v4':
+                    self.send(200, service.v4_results())
                 elif path == '/api/benchmark/combined':
                     report = service.root/'reports/combined-view-20261004/combined-benchmark.json'
                     self.send(200, json.loads(report.read_text(encoding='utf-8')) if report.exists() else {'status':'unavailable','rows':[]})

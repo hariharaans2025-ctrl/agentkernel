@@ -1,6 +1,6 @@
 # ADR-0001: Adaptive architecture for the AgentKernel repair kernel
 
-**Status:** Proposed
+**Status:** Accepted (implemented and run live, 30 October 2026)
 **Date:** 2026-10-30
 **Deciders:** Project owner (AgentKernel); hackathon submission owner
 **Context window:** Nebius × NVIDIA Global AI Hackathon, track *Coding and Agentic Engineering*. Submission deadline 30 Oct 2026, 22:30 IST (per `SUBMISSION.md`).
@@ -38,7 +38,7 @@ Adopt an **evidence-gated, cost-aware deterministic router** (the v4 design) as 
 
 ```mermaid
 flowchart TD
-    %% Router policy: adaptive-v4-router-2
+    %% Router policy: adaptive-v4-router-3, contract agentkernel_line_blocks_v4_1
     T[Task contract + frozen source identity] --> C0{Verified-candidate reuse?}
     C0 -->|hit: zero model calls| V
     C0 -->|miss| B[Baseline in Nebius Sandbox: build, stress, TSan → fingerprints]

@@ -124,6 +124,22 @@ def test_v4_result_maps_onto_dashboard_job_without_inventing_values(root, monkey
     assert metrics['false_fix'] is True  # the rejected first candidate stays visible
 
 
+def test_v4_results_reads_saved_pilots_and_rechecks_only(root):
+    assert DashboardService(root).v4_results()['runs'] == []  # nothing saved: nothing invented
+    live = root/'reports/adaptive-v4-live'
+    for ident, purpose, cases in (('A', 'pilot', {'audit_3': 'verified', 'aggregate_3': 'unknown'}), ('B', 'Post-fix re-check', {'aggregate_3': 'verified'})):
+        (live/ident).mkdir(parents=True)
+        (live/ident/'protocol.json').write_text(json.dumps({'cases': list(cases), 'purpose': purpose, 'router': 'r3', 'contract': 'c'}))
+        for case, status in cases.items():
+            attempts = [{'stage': 'ultra', 'outcome': 'rejected', 'verification': {'passed_runs': 92, 'total_runs': 100, 'tsan_passed': False}},
+                        {'stage': 'ultra', 'outcome': status, 'recovery': 'verifier', 'verification': {'passed_runs': 100, 'total_runs': 100, 'tsan_passed': True}}]
+            (live/ident/f'{case}-summary.json').write_text(json.dumps({'status': status, 'cost_usd': 0.001, 'attempts': attempts}))
+    runs = DashboardService(root).v4_results()['runs']
+    assert [(r['id'], r['purpose'], [x['status'] for x in r['rows']]) for r in runs] == [('A', 'pilot', ['verified', 'unknown']), ('B', 'Post-fix re-check', ['verified'])]
+    assert runs[1]['rows'][0]['attempts'][0] == {'stage': 'ultra', 'outcome': 'rejected', 'recovery': None, 'error': None, 'tokens': None,
+                                                  'cost_usd': None, 'passed_runs': 92, 'total_runs': 100, 'tsan_passed': False}
+
+
 def test_restart_marks_interrupted_without_rerunning(root):
     s=DashboardService(root)
     ident=str(uuid.uuid4())

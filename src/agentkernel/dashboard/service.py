@@ -212,6 +212,42 @@ class DashboardService:
                 'checked_at': now(), 'models': catalog.models, 'model_error': catalog.error, 'sandbox': sandbox}
             return copy.deepcopy(self.connection)
 
+    def v4_results(self):
+        """Saved live v4 evidence: frozen pilots, post-fix re-checks and dashboard runs. Read-only; nothing estimated."""
+        def attempt(a):
+            v = a.get('verification') or {}
+            return {'stage': a.get('stage'), 'outcome': a.get('outcome'), 'recovery': a.get('recovery'), 'error': a.get('error_code'),
+                    'tokens': a.get('tokens'), 'cost_usd': a.get('cost_usd'), 'passed_runs': v.get('passed_runs'),
+                    'total_runs': v.get('total_runs'), 'tsan_passed': v.get('tsan_passed', v.get('sanitizer_passed'))}
+        def row(case, r):
+            return {'case': case, 'status': r.get('status'), 'tokens': r.get('tokens'), 'cost_usd': r.get('cost_usd'),
+                    'attempts': [attempt(a) for a in r.get('attempts') or []]}
+        runs = []
+        for protocol in sorted((self.root / 'reports/adaptive-v4-live').glob('*/protocol.json')):
+            try:
+                plan = json.loads(protocol.read_text(encoding='utf-8'))
+                rows = [row(c, json.loads((protocol.parent / f'{c}-summary.json').read_text(encoding='utf-8')))
+                        for c in plan['cases'] if (protocol.parent / f'{c}-summary.json').is_file()]
+            except (OSError, ValueError, KeyError):
+                continue
+            if rows:
+                runs.append({'id': protocol.parent.name, 'purpose': plan.get('purpose', 'pilot'), 'router': plan.get('router'),
+                             'contract': plan.get('contract'), 'complete': (protocol.parent / 'REPORT.md').is_file(), 'rows': rows})
+        with self.lock:
+            dashboard = [{'id': r['id'], 'created_at': r['created_at'], 'case': r['fixture'], 'status': (r['results']['ADAPTIVE_V4'].get('job') or {}).get('status') or r['results']['ADAPTIVE_V4']['status'],
+                          'cost_usd': (r['results']['ADAPTIVE_V4'].get('job') or {}).get('cost_usd'),
+                          'verification': (r['results']['ADAPTIVE_V4'].get('job') or {}).get('verification')}
+                         for r in self.runs.values() if r.get('tiers') == ['ADAPTIVE_V4']]
+        baseline = {}
+        try:
+            view = json.loads((self.root / 'reports/cloud-comparison/20261029T170003Z/comparison-view.json').read_text(encoding='utf-8'))
+            for r in view['rows']:
+                baseline.setdefault(r['case'], {})[r['arm']] = r.get('status')
+        except (OSError, ValueError, KeyError):
+            pass
+        return {'runs': runs, 'dashboard_runs': sorted(dashboard, key=lambda r: r['created_at']), 'v3_baseline': baseline,
+                'scope': 'Development-seen synthetic programs; no unseen or statistical claim.'}
+
     def list_runs(self):
         with self.lock:
             return [copy.deepcopy(item) for item in sorted(self.runs.values(), key=lambda r: r['created_at'], reverse=True)]

@@ -92,7 +92,7 @@ Invalid output can also escalate under the existing bounded policy. Unknown usag
 | Hosted adaptive v2 | Local fine-tuned specialist → Super → Ultra | Product flow exists; local and hosted usage must be distinguished |
 | Measured cloud v3 / `fast` | Super → Ultra | Fresh Token Factory calls and matched comparison results below |
 | Candidate reuse experiment | Reuse an identical-input proposal → fresh verifier | Avoided repeated inference on one known case; not new model repair ability |
-| Adaptive v4 prototype | New edit contract, conservative router, richer failure evidence, snapshot branching | New code and offline tests; no new live v4 repair-performance result yet |
+| Adaptive v4 (live, 30 Oct) | Line-block contract, deterministic router (Ultra until calibrated), one evidence-directed Ultra correction | 5/8 frozen pilot, 2/2 post-fix re-check, dashboard audit_3 verified; development-seen programs only |
 
 Do not show a v4 screen or implementation plan and describe the v3 numbers as v4 results.
 
@@ -180,7 +180,16 @@ Claude's implementation report describes a new opt-in prototype with:
 - Lossless deduplication of repeated failure records rather than blind truncation.
 - Isolated branches of an uploaded sandbox snapshot to avoid unnecessary setup/upload work.
 
-**Current status:** The implementation report records 24 focused offline tests and a 111-test regression selection. These are not live model-success measurements. The report also states that v4's live orchestrator has not been exercised, the execution wiring for the paid pilot is unfinished, and dashboard/MCP integration is not done. Performance targets remain untested.
+**Current status (end of 30 October):** v4 has run live. Full detail is in `ADAPTIVE_V4_LIVE.md`.
+
+| Run | Result |
+| --- | --- |
+| Frozen pilot | 5/8, vs Ultra-only 6/8. audit_3 was newly solved. Two losses came from AgentKernel defects, both since fixed. |
+| Post-fix re-check | 2/2. aggregate_3 was recovered by the evidence-directed correction, going from 92/100 stress with TSan failing to 100/100 with 3/3 TSan. |
+| Local dashboard | audit_3 verified |
+| Full remote suite | 473 passed, 0 failed |
+
+Say "matches or beats Ultra-only after the fixes, on eight development-seen programs". Don't claim lower cost or unseen generalization.
 
 With no qualifying v4 calibration, the router selects Ultra directly. Do not present that default as a demonstrated accuracy or cost advantage.
 
@@ -250,7 +259,7 @@ Production-scale validation, private GitHub authentication, automatic merging, f
 
 - Open the console and confirm the agent heartbeat if you intend to request new work.
 - Keep the inventory run, patch, verifier evidence and scorecard ready.
-- Know which route you are showing: deployed v2, measured cloud v3, or unvalidated v4 prototype.
+- Know which route you are showing: deployed v2, measured cloud v3, or live-tested v4.
 - Keep credentials, `.env` files and service tokens off screen.
 - Ensure judges can access the provided demo or test build; the existing hosted Site is private.
 - Confirm any public repository/video links separately. A local archive is not a Devpost submission.
