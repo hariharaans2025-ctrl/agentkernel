@@ -8,7 +8,7 @@
 
 **Working application:** https://agentkernel-control.abuzzleaf32.chatgpt.site/ — owner-private. This URL alone does not provide judge access. Arrange authorized judge access or supply the runnable test build; never disclose the owner's Nebius API key or private Site service token.
 
-**Public repository:** publication pending. The previously supplied `hariharaans2025-ctrl/agentkernel` URL returned 404 during the submission check. Publish the sanitized source archive under a public repository and verify its README and MIT license are visible before copying its URL into Devpost.
+**Public repository:** https://github.com/hariharaans2025-ctrl/agentkernel — public, MIT license detected by GitHub, README visible (verified 30 October 2026). The hosted console source ships in the release archive, because its folder is a separate repository used by the Sites deployment.
 
 **Public video:** recording and YouTube publication pending. Use DEMO_SCRIPT.md; target 2 minutes 50 seconds.
 
