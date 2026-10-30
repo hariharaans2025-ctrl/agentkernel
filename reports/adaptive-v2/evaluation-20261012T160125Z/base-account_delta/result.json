@@ -1,0 +1,35 @@
+{
+  "mode": "base",
+  "status": "rejected",
+  "attempts": [
+    {
+      "stage": "base",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 360,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": false,
+      "input_tokens": 273,
+      "output_tokens": 87,
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct [base]",
+      "adapter_sha256": null,
+      "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\"}\n}\n```",
+      "error": "JSONDecodeError",
+      "inference_ms": 27352.060600000186
+    }
+  ],
+  "tokens": 360,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "model_calls": 1,
+  "remote_model_calls": 0,
+  "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "end_to_end_ms": 34544.09399999986,
+  "false_fix": false,
+  "patch": null,
+  "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\"}\n}\n```",
+  "verification": null,
+  "inference_ms": 27352.060600000186,
+  "verification_ms": 0
+}

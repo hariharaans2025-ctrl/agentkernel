@@ -1,0 +1,145 @@
+{
+  "status": "verified",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1421,
+      "cost_usd": 0.001663,
+      "false_fix": false,
+      "recovery": null,
+      "reserved_usd": 0.060576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "b70c12a8e45b4ca4a7bcfd0efea63d64",
+      "inference_ms": 1401.1245000001509,
+      "input_tokens": 1300,
+      "output_tokens": 121,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE solution.c 3-9\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n}\n@@ END\n@@ REPLACE solution.c 10-16\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "no_op_blocks_dropped": [],
+        "blocks": [
+          {
+            "file": "solution.c",
+            "start": 3,
+            "end": 9,
+            "replacement_lines": 7
+          },
+          {
+            "file": "solution.c",
+            "start": 10,
+            "end": 16,
+            "replacement_lines": 7
+          }
+        ]
+      },
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -2,15 +2,15 @@\n #include <sched.h>\n void publish_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n+    cache->value = 42;\n+    pthread_mutex_unlock(&cache->mutex);\n     meet(cache);\n     sched_yield();\n-    cache->value = 42;\n-    pthread_mutex_unlock(&cache->mutex);\n }\n void observe_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n+    cache->observed = cache->value;\n+    pthread_mutex_unlock(&cache->mutex);\n     meet(cache);\n     sched_yield();\n-    cache->observed = cache->value;\n-    pthread_mutex_unlock(&cache->mutex);\n }\n",
+      "verification_phases_ms": {
+        "apply": 2986.97170000014,
+        "build": 2311.029800000142,
+        "stress": 9374.524599999859,
+        "tsan_build": 2339.6771999996417,
+        "original_tests_and_semantics": 5789.213199999722
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 19814.444799999364,
+      "taxonomy": {
+        "primary": "verified",
+        "gates": []
+      }
+    }
+  ],
+  "model_calls": 1,
+  "calls_by_model": {
+    "ultra": 1
+  },
+  "tokens": 1421,
+  "cost_usd": 0.001663,
+  "reserved_usd": 0.060576,
+  "false_fix": false,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 403,
+      "editable_files": 1,
+      "editable_lines": 16,
+      "header_bytes": 284,
+      "primitives": {
+        "mutex_lock": 2,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": false,
+      "baseline_fingerprint": "TIMEOUT:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "hang",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002486,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0032318,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.03529999958118424
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 0
+  },
+  "end_to_end_ms": 45414.06789999928,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 2506.808799999817,
+    "upload": 3577.479900000071,
+    "baseline_build": 3877.217799999926,
+    "baseline_stress": 11186.629400000129,
+    "inference": 1401.1245000001509,
+    "verify_apply": 2986.97170000014,
+    "verify_build": 2311.029800000142,
+    "verify_stress": 9374.524599999859,
+    "verify_tsan_build": 2339.6771999996417,
+    "verify_original_tests_and_semantics": 5789.213199999722,
+    "e2e": 45414.06789999928
+  },
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -2,15 +2,15 @@\n #include <sched.h>\n void publish_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n+    cache->value = 42;\n+    pthread_mutex_unlock(&cache->mutex);\n     meet(cache);\n     sched_yield();\n-    cache->value = 42;\n-    pthread_mutex_unlock(&cache->mutex);\n }\n void observe_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n+    cache->observed = cache->value;\n+    pthread_mutex_unlock(&cache->mutex);\n     meet(cache);\n     sched_yield();\n-    cache->observed = cache->value;\n-    pthread_mutex_unlock(&cache->mutex);\n }\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

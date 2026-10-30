@@ -1,0 +1,3 @@
+#include "state.h"
+#include <stdio.h>
+State s;int observed;void*w(void*x){observed=await_value(&s);return 0;}int main(int argc,char**argv){pthread_mutex_init(&s.mutex,0);pthread_cond_init(&s.changed,0);sem_init(&s.waiting,0,0);atomic_init(&s.awakened,0);s.ready=0;s.value=-999;pthread_t t;pthread_create(&t,0,w,0);sem_wait(&s.waiting);pthread_mutex_lock(&s.mutex);pthread_cond_broadcast(&s.changed);pthread_mutex_unlock(&s.mutex);while(atomic_load(&s.awakened)<1)sched_yield();complete(&s);pthread_join(t,0);int ok=observed==42 && s.ready==0 && s.value==42;if(!ok) { puts("FAIL"); return 1; } puts(argc>1?"SEMANTIC_PASS":"PASS"); return 0;}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "project": "job-queue-service",
+  "description": "Synthetic multi-file C/pthreads job queue: worker and monitoring lock inversion, with an explicit scheduling hook to reproduce it.",
+  "origin": "synthetic_example",
+  "source_files": ["src/queue.c"],
+  "support_files": ["src/main.c", "include/queue.h", "Makefile", "README.md"],
+  "build_command": ["gcc", "-pthread", "-g", "-O1", "-Iinclude", "src/main.c", "src/queue.c", "-o", "job_service"],
+  "run_command": ["./job_service", "--stress"],
+  "binary_path": "job_service",
+  "baseline_runs": 3,
+  "max_runtime_seconds": 2,
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [["./job_service", "--smoke"], ["./job_service", "--check"]],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [{
+      "name": "100 jobs exactly once, checksum 5050, queue drained",
+      "build_command": ["gcc", "-pthread", "-g", "-O1", "-Iinclude", "src/main.c", "src/queue.c", "-o", "semantic"],
+      "run_command": ["./semantic", "--check"],
+      "expected_stdout": "SEMANTIC_PASS",
+      "required": true
+    }]
+  },
+  "budgets": {
+    "max_model_calls": 3,
+    "max_total_tokens": 24000,
+    "max_input_tokens_per_call": 6000,
+    "max_output_tokens_per_call": 2048,
+    "max_wall_seconds": 1800
+  }
+}

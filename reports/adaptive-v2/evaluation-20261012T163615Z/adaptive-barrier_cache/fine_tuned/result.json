@@ -1,0 +1,16 @@
+{
+  "stage": "fine_tuned",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 539,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 425,
+  "output_tokens": 114,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct + AgentKernel LoRA",
+  "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6",
+  "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n<<<END_FILE>>>\n",
+  "error": "ValueError",
+  "inference_ms": 23847.731400001067
+}

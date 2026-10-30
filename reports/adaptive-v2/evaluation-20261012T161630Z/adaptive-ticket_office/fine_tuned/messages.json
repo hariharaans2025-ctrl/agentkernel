@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Repair C/pthreads synchronization while preserving all original work, scheduling hooks, interfaces and protected tests. Return ONLY a JSON object with one key \"files\": an object mapping each editable filename to its complete corrected source. Do not include Markdown, explanations, commands, tests, or new files. JSON-encode each source string exactly once: source newlines become JSON \\n escapes, and quotes/backslashes must decode to the original C syntax. Put the lock before the shared read, preserve the shared write, and synchronize all readers. Never replace sched_yield with another API."
+  },
+  {
+    "role": "user",
+    "content": "{\"task\": \"Allocate all 400 tickets exactly once, with no duplicates or missing values. Synchronize allocation and concurrent count readers; retain every scheduling hook.\", \"editable_files\": [\"solution.c\"], \"sources\": {\"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    return office->next_ticket;\\n}\\n\"}, \"headers\": {\"state.h\": \"#ifndef STATE_H\\n#define STATE_H\\n#include <pthread.h>\\ntypedef struct { pthread_mutex_t mutex; int next_ticket; } TicketOffice;\\nint reserve_ticket(TicketOffice *);\\nint issued_count(TicketOffice *);\\n#endif\\n\"}, \"requirements\": [\"Allocate all 400 tickets exactly once, with no duplicates or missing values. Synchronize allocation and concurrent count readers; retain every scheduling hook.\"]}"
+  }
+]

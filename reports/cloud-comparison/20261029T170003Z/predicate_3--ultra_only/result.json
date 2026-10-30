@@ -1,0 +1,56 @@
+{
+  "status": "verified",
+  "profile": "ultra_only",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1643,
+      "cost_usd": 0.001859,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "f02ced1642264e8cb008e9910f36744d",
+      "input_tokens": 1535,
+      "output_tokens": 108,
+      "reasoning_tokens": 0,
+      "response": "{\n  \"edits\": [\n    {\n      \"file\": \"await.c\",\n      \"start_line\": 2,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\"\n      ]\n    }\n  ]\n}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"await.c\", \"search\": \"#include \\\"state.h\\\"\\nint await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nint await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1175.80889997771,
+      "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 19026.364099991042
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1643,
+  "cost_usd": 0.001859,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "end_to_end_ms": 34494.75910002366,
+  "inference_ms": 1175.80889997771,
+  "verification_ms": 19026.364099991042,
+  "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"await.c\",\n      \"start_line\": 2,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\"\n      ]\n    }\n  ]\n}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

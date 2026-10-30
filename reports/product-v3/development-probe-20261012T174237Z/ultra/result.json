@@ -1,0 +1,15 @@
+{
+  "outcome": "invalid_output",
+  "error_code": "invalid_repair_contract",
+  "tokens": 1329,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.002411,
+  "validation": [
+    {
+      "field": "edits.0",
+      "type": "edit_no_change",
+      "hint": "The replacement must differ from search."
+    }
+  ],
+  "returned_model": "nvidia/Nemotron-3-Ultra-550b-a55b"
+}

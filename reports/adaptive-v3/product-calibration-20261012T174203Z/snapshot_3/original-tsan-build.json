@@ -1,0 +1,28 @@
+{
+  "command": [
+    "clang",
+    "-fsanitize=thread",
+    "-g",
+    "-O1",
+    "-pthread",
+    "-g",
+    "-O1",
+    "publisher.c",
+    "snapshot.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 768.129611,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "f821c863-2ac5-4c0c-a0f6-5f49c60cae04",
+    "transport_wall_ms": 3816.1024000000907
+  },
+  "success": true
+}

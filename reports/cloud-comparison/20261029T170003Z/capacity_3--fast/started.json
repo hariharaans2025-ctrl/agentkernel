@@ -1,0 +1,99 @@
+{
+  "profile": "fast",
+  "max_calls": 2,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+    "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf",
+    "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+    "oracle.c": "8b100cec261e0ba2fa564c5f3133e506bcf2e57537ae5b356f99a97862686688"
+  },
+  "task": {
+    "task_id": "capacity_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\capacity_3--fast\\input",
+    "source_files": [
+      "acquire.c",
+      "inspect.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "acquire.c",
+      "inspect.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "acquire.c",
+            "inspect.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+      "split": "test",
+      "family": "capacity",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

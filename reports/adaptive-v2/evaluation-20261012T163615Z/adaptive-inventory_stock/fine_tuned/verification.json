@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 0,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 32206.955300000118,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "solution.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 217.000294,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "0d0f25f8-7b67-4102-9ee2-2bd065667a6b",
+        "transport_wall_ms": 2261.104499999419
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 5.663563000000038,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "0d0f25f8-7b67-4102-9ee2-2bd065667a6b",
+            "transport_wall_ms": 1678.855800000747
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 19174.686700000166,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "solution.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.880593,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "f97c512e-f89c-4740-a690-bc6c8fdb6697",
+              "transport_wall_ms": 2271.869299998798
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 5.609823000000014,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "f97c512e-f89c-4740-a690-bc6c8fdb6697",
+              "transport_wall_ms": 1677.159999999276
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "passed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 3
+        },
+        "duration_ms": 1361.0585999995237,
+        "representative_runs": []
+      }
+    }
+  },
+  "reason": "The patch passed the configured verification campaign.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": true,
+  "semantic_regression": false,
+  "false_fix": false
+}

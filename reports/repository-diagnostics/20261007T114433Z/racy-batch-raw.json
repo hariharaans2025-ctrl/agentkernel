@@ -1,0 +1,53 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-07T11:45:03.218722+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "83138cac-46b7-405a-ae72-5c1127be02e1",
+        "batch_transport_wall_ms": 2108.6626000032993
+      },
+      "stdout": "",
+      "stderr": "==9==WARNING: invalid path to external symbolizer!\n==9==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=9)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=11, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=12, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n",
+      "duration_ms": 30.146971000000022
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-07T11:45:03.289527+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "83138cac-46b7-405a-ae72-5c1127be02e1",
+        "batch_transport_wall_ms": 2108.6626000032993
+      },
+      "stdout": "",
+      "stderr": "==14==WARNING: invalid path to external symbolizer!\n==14==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=14)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=16, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=17, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n",
+      "duration_ms": 16.96133400000005
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-07T11:45:03.338310+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "83138cac-46b7-405a-ae72-5c1127be02e1",
+        "batch_transport_wall_ms": 2108.6626000032993
+      },
+      "stdout": "",
+      "stderr": "==19==WARNING: invalid path to external symbolizer!\n==19==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=19)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=21, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=22, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n",
+      "duration_ms": 16.913453999999994
+    }
+  }
+]

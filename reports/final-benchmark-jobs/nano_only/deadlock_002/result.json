@@ -1,0 +1,288 @@
+{
+  "fixture": "deadlock_002",
+  "mode": "nano_only",
+  "status": "unresolved",
+  "baseline_status": "failed",
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 10569.682500005001,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_002:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "6f356d08-b8c4-41d5-8e79-6654dc293288",
+          "transport_wall_ms": 3436.260399990715
+        },
+        "stdout": "T1 LOCK A1\nT0 LOCK A0\nT0 WAIT A1\nT1 WAIT A0\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_002:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "6f356d08-b8c4-41d5-8e79-6654dc293288",
+          "transport_wall_ms": 3453.7054000247736
+        },
+        "stdout": "T0 LOCK A0\nT1 LOCK A1\nT1 WAIT A0\nT0 WAIT A1\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_002:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "6f356d08-b8c4-41d5-8e79-6654dc293288",
+          "transport_wall_ms": 3679.4069999887142
+        },
+        "stdout": "T1 LOCK A1\nT0 LOCK A0\nT0 WAIT A1\nT1 WAIT A0\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "a64e728c6ef3d9c1",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T0",
+          "T1"
+        ],
+        "lock_orders": [
+          [
+            "A0",
+            "A1"
+          ],
+          [
+            "A1",
+            "A0"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_002:1",
+          "deadlock_002:2",
+          "deadlock_002:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "A0",
+              "A1"
+            ],
+            [
+              "A1",
+              "A0"
+            ]
+          ],
+          "cycle": [
+            "A0",
+            "A1",
+            "A0"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "fingerprints": [
+    {
+      "fingerprint_id": "a64e728c6ef3d9c1",
+      "pattern": "cyclic_lock_wait",
+      "threads": [
+        "T0",
+        "T1"
+      ],
+      "lock_orders": [
+        [
+          "A0",
+          "A1"
+        ],
+        [
+          "A1",
+          "A0"
+        ]
+      ],
+      "confidence": 0.9,
+      "occurrences": 3,
+      "representative_runs": [
+        "deadlock_002:1",
+        "deadlock_002:2",
+        "deadlock_002:3"
+      ],
+      "evidence": {
+        "edges": [
+          [
+            "A0",
+            "A1"
+          ],
+          [
+            "A1",
+            "A0"
+          ]
+        ],
+        "cycle": [
+          "A0",
+          "A1",
+          "A0"
+        ],
+        "finding_locations": []
+      }
+    }
+  ],
+  "route": [
+    "NANO"
+  ],
+  "model_attempts": [
+    {
+      "tier": "NANO",
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "input_tokens": 2315,
+      "output_tokens": 2048,
+      "latency_ms": 7153.4248999960255,
+      "retry_count": 0,
+      "reasoning_tokens": null,
+      "requested_max_output_tokens": 2048,
+      "requested_enable_thinking": null,
+      "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+      "finish_reason": "length",
+      "request_id": "4edd18c7744d55b5a9482c56f33a0594",
+      "error_code": "incomplete_response",
+      "verification_reason": "Inference failed. Inference failed; no patch was applied."
+    }
+  ],
+  "repairs": [],
+  "patches": [],
+  "verification_progress": {
+    "completed": null,
+    "required": 100
+  },
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_checks": null,
+  "sanitizer_checks": null,
+  "patch_accepted": false,
+  "build_passed": null,
+  "input_tokens": 2315,
+  "output_tokens": 2048,
+  "reasoning_tokens": null,
+  "inference_latency_ms": 7153.4248999960255,
+  "execution_latency_ms": 10736.058808005002,
+  "end_to_end_latency_ms": 23198.87010002276,
+  "verification_runs": null,
+  "passes": null,
+  "deadlocks": null,
+  "races": null,
+  "crashes": null,
+  "infrastructure_failures": null,
+  "false_fix": false,
+  "final_tier": "NANO",
+  "format_rejections": 0,
+  "patch_rejections": 0,
+  "nano_calls": 1,
+  "super_calls": 0,
+  "ultra_calls": 0,
+  "cost_usd": null,
+  "grounding": {
+    "used": false,
+    "reason": null,
+    "status": "not_needed",
+    "results": []
+  },
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "confirmed",
+    "spans_submitted": 11,
+    "spans_observed": [
+      {
+        "id": "28a33394-ca96-452b-8d54-c8d3f7dffbf1",
+        "name": "concurrency_job",
+        "parent_id": null
+      },
+      {
+        "id": "d9db91c0-c403-4833-a2fe-89a99ee99e6e",
+        "name": "baseline",
+        "parent_id": "28a33394-ca96-452b-8d54-c8d3f7dffbf1"
+      },
+      {
+        "id": "996c862c-33a7-4624-bfdb-7527b48d0a2f",
+        "name": "compile",
+        "parent_id": "d9db91c0-c403-4833-a2fe-89a99ee99e6e"
+      },
+      {
+        "id": "24613a9e-f834-49c1-a968-516f0d9df67a",
+        "name": "baseline_compile",
+        "parent_id": "996c862c-33a7-4624-bfdb-7527b48d0a2f"
+      },
+      {
+        "id": "d2ce326c-2f4f-4587-89fa-4b18c215c7c3",
+        "name": "campaign",
+        "parent_id": "d9db91c0-c403-4833-a2fe-89a99ee99e6e"
+      },
+      {
+        "id": "65eabd9b-3f0c-4397-b8b8-b9a1e7f09d80",
+        "name": "baseline_stress_campaign",
+        "parent_id": "d2ce326c-2f4f-4587-89fa-4b18c215c7c3"
+      },
+      {
+        "id": "50c19d3d-f2e1-43d3-b12e-672b099c2046",
+        "name": "analysis",
+        "parent_id": "28a33394-ca96-452b-8d54-c8d3f7dffbf1"
+      },
+      {
+        "id": "b0fe6f82-3bea-4c40-8689-da518b2d69a1",
+        "name": "fingerprint",
+        "parent_id": "50c19d3d-f2e1-43d3-b12e-672b099c2046"
+      },
+      {
+        "id": "cb50f74f-709a-4f04-91c2-3efbc8af70b7",
+        "name": "fingerprint_analysis",
+        "parent_id": "b0fe6f82-3bea-4c40-8689-da518b2d69a1"
+      },
+      {
+        "id": "f10f63ac-3ef5-4bc4-b387-20787e5331df",
+        "name": "repair_1",
+        "parent_id": "28a33394-ca96-452b-8d54-c8d3f7dffbf1"
+      },
+      {
+        "id": "355d7912-4de3-4a1d-8f2f-62fe53e9934f",
+        "name": "nano_diagnosis",
+        "parent_id": "f10f63ac-3ef5-4bc4-b387-20787e5331df"
+      }
+    ],
+    "feedback_submitted": 6,
+    "trace_ids": [
+      "28a33394-ca96-452b-8d54-c8d3f7dffbf1"
+    ]
+  },
+  "source_sha256": {
+    "main.c": "9fd1912777dc1b1a63ced70fd980e5d7a778604fd369ca6835b15c79a0c41d14",
+    "oracle.c": "c95dc1caab257f46e355b2b3f0ebbf2f7367562a48e9db3a302bd24527d9189a",
+    "stress.h": "1a2ecf8f7805b0be74d4005282c9878ccb3cf56b323d2e752d2405902e220d48"
+  },
+  "inference_mode": "real"
+}

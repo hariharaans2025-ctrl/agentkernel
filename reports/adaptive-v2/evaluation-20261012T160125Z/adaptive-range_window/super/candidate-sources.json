@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\n#include <sched.h>\nvoid set_window(Window *window, int lower, int upper) {\n    pthread_mutex_lock(&window->mutex);\n    window->lower = lower;\n    window->upper = upper;\n    pthread_mutex_unlock(&window->mutex);\n}\nvoid get_window(Window *window, int *lower, int *upper) {\n    pthread_mutex_lock(&window->mutex);\n    *lower = window->lower;\n    *upper = window->upper;\n    pthread_mutex_unlock(&window->mutex);\n}\n"
+}

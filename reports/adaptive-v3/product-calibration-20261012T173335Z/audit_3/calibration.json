@@ -1,0 +1,28 @@
+{
+  "case": "audit_3",
+  "split": "test",
+  "family": "audit",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "commit.c": "ab51b30319c12432f12de583b21f1514ca52b58ef209ba9e986d3b2a55482122",
+    "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+  },
+  "source_sha256": {
+    "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+    "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+  },
+  "support_sha256": {
+    "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+    "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 62.78079829999842
+}

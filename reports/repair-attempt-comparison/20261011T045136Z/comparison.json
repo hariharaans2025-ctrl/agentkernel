@@ -1,0 +1,116 @@
+{
+  "sources": {
+    "full": {
+      "path": "reports/repository-live-ab/20261007T121122Z/full/metrics.json",
+      "sha256": "a30ca04d98314c5e8443737db4063216dda5ce8200e72a4c9f90a377fe3e3589"
+    },
+    "compact": {
+      "path": "reports/repository-live-ab/20261007T121122Z/selected_grouped/metrics.json",
+      "sha256": "3ec61b791adf155aa7c5802d1445e879bd1fe21db9ffca9052eb60b51255a57a"
+    },
+    "diagnostic": {
+      "path": "reports/barrier-repair-live/20261010T092756Z/metrics.json",
+      "sha256": "144bc87aab9537354e8c88d922c9d409bced07b60f724dbbbfd5df697566a5a1"
+    },
+    "verification": {
+      "path": "reports/super-candidate-verification/20261010T093633Z/metrics.json",
+      "sha256": "0e2c5a4c024f63505eff90429ab2348cfc0ded1cd3dcae689ad8e76030b4d425"
+    }
+  },
+  "measurements": {
+    "full": {
+      "arm": "full",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 5911,
+      "cost_usd": null,
+      "input_tokens": 5299,
+      "output_tokens": 612,
+      "inference_ms": 5618.897099979222,
+      "verification_ms": 254000.6992999988,
+      "end_to_end_ms": 273762.8550999798,
+      "public_tokenizer_input_tokens": 5299,
+      "provider_minus_public_tokens": 0,
+      "false_fix": true,
+      "semantic_regression": false,
+      "semantic_passed": true,
+      "tsan_passed": false,
+      "stress_passed": 0,
+      "stress_total": 100,
+      "deadlocks": 100,
+      "races": 0
+    },
+    "compact": {
+      "arm": "selected_grouped",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 4933,
+      "cost_usd": null,
+      "input_tokens": 4384,
+      "output_tokens": 549,
+      "inference_ms": 5263.900799996918,
+      "verification_ms": 250812.14340002043,
+      "end_to_end_ms": 263559.91959999665,
+      "public_tokenizer_input_tokens": 4384,
+      "provider_minus_public_tokens": 0,
+      "false_fix": true,
+      "semantic_regression": false,
+      "semantic_passed": true,
+      "tsan_passed": false,
+      "stress_passed": 0,
+      "stress_total": 100,
+      "deadlocks": 100,
+      "races": 0
+    },
+    "diagnostic": {
+      "outcome": "unknown",
+      "model_calls": 1,
+      "tokens": 6062,
+      "cost_usd": null,
+      "inference_ms": 5564.294899988454,
+      "verification_ms": null,
+      "input_tokens": 5022,
+      "output_tokens": 1040,
+      "provider_minus_public_tokens": 0,
+      "end_to_end_ms": 81397.61220000219,
+      "usage_incomplete": false
+    },
+    "verification": {
+      "new_model_calls": 0,
+      "new_tokens": 0,
+      "origin_model_calls": 1,
+      "origin_tokens": 6062,
+      "end_to_end_ms": 74950.55830001365,
+      "outcome": "rejected",
+      "verification_ms": 61127.89150001481,
+      "stress_passed": 100,
+      "stress_total": 100,
+      "original_tests_passed": true,
+      "semantic_passed": true,
+      "tsan_passed": false,
+      "false_fix": true,
+      "semantic_regression": false,
+      "races": 3,
+      "deadlocks": 0,
+      "infrastructure_failures": 0
+    }
+  },
+  "diagnostic_vs_compact_percent_change": {
+    "tokens": 22.88668153253599,
+    "input_tokens": 14.552919708029188,
+    "output_tokens": 89.43533697632058,
+    "inference_ms": 5.706682390209772
+  },
+  "diagnostic_recorded_controller_time_ms": 156348.17050001584,
+  "total_model_calls": 3,
+  "combined_inference_tokens": 16906,
+  "verified_model_repairs": 0,
+  "tokens_per_verified_model_repair": null,
+  "limitations": [
+    "Single attempt per condition; different invocation times.",
+    "Inference latency includes provider catalog checks.",
+    "Diagnostic completed verification is a separate campaign; original interrupted run remains UNKNOWN.",
+    "Controller-time sum excludes user waiting, read-only recovery and tokenizer preparation; it is not continuous end-to-end latency.",
+    "Faster verification reflects completing programs instead of timeout waits; not measured application-performance improvement."
+  ]
+}

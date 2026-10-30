@@ -1,0 +1,245 @@
+{
+  "failed_candidate_files": {
+    "record.c": "#include \"state.h\"\nvoid record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n",
+    "read.c": "#include \"state.h\"\nint consistent(State*s){int a=s->parity[0],b=s->parity[1],t=s->total;return a+b==t;}\n"
+  },
+  "canonical_patch": "--- a/record.c\n+++ b/record.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}\n+void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n",
+  "build": {
+    "success": true,
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "original_tests": [
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "SEMANTIC_PASS\n",
+      "stderr": ""
+    }
+  ],
+  "stress": {
+    "counts": {
+      "PASS": 97,
+      "UNKNOWN_FAILURE": 3
+    },
+    "total_runs": 100,
+    "fingerprint": "UNKNOWN_FAILURE:3",
+    "failing_runs": {
+      "records": {
+        "d4147dd68553ac5c": {
+          "classification": "UNKNOWN_FAILURE",
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout_template": "FAIL\n",
+          "stderr_template": "",
+          "tsan_conflicts": []
+        }
+      },
+      "runs": {
+        "aggregate_3:52": {
+          "fingerprint": "d4147dd68553ac5c",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "aggregate_3:78": {
+          "fingerprint": "d4147dd68553ac5c",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "aggregate_3:84": {
+          "fingerprint": "d4147dd68553ac5c",
+          "stdout_values": [],
+          "stderr_values": []
+        }
+      },
+      "lossless": true
+    }
+  },
+  "semantics": [
+    {
+      "requirement": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+      "required": true,
+      "passed": false,
+      "stdout": "FAIL\n"
+    }
+  ],
+  "tsan": {
+    "status": "failed",
+    "counts": {
+      "RACE_DETECTED": 3
+    },
+    "fingerprint": "RACE_DETECTED:3",
+    "failing_runs": {
+      "records": {
+        "48033c6072f25f09": {
+          "classification": "RACE_DETECTED",
+          "exit_code": 66,
+          "timed_out": false,
+          "stdout_template": "",
+          "stderr_template": "⟨#⟩WARNING: invalid path to external symbolizer!\n⟨#⟩WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (⟨#⟩)\n  Read of size 4 at ⟨#⟩ by thread ⟨#⟩:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (app+⟨#⟩) (⟨#⟩)\n\n  Previous write of size 4 at ⟨#⟩ by thread ⟨#⟩ (mutexes: write M0):\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (app+⟨#⟩) (⟨#⟩)\n\n  Mutex M0 (⟨#⟩) created at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n\n  Thread ⟨#⟩ (⟨#⟩, running) created by main thread at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n\n  Thread ⟨#⟩ (⟨#⟩, finished) created by main thread at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+⟨#⟩) (⟨#⟩) \n==================\n",
+          "tsan_conflicts": [
+            "WARNING: ThreadSanitizer: data race (⟨#⟩)\n  Read of size 4 at ⟨#⟩ by thread ⟨#⟩:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (app+⟨#⟩) (⟨#⟩)\n\n  Previous write of size 4 at ⟨#⟩ by thread ⟨#⟩ (mutexes: write M0):\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (app+⟨#⟩) (⟨#⟩)\n\n  Mutex M0 (⟨#⟩) created at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n\n  Thread ⟨#⟩ (⟨#⟩, running) created by main thread at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n\n  Thread ⟨#⟩ (⟨#⟩, finished) created by main thread at:\n    #0 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #1 <null> <null> (app+⟨#⟩) (⟨#⟩)\n    #2 <null> <null> (libc.so.6+⟨#⟩) (⟨#⟩)\n"
+          ]
+        }
+      },
+      "runs": {
+        "aggregate_3:1": {
+          "fingerprint": "48033c6072f25f09",
+          "stdout_values": [],
+          "stderr_values": [
+            "==10==",
+            "==10==",
+            "pid=10",
+            "0x5555569e66c0",
+            "T5",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe66db",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e66c0",
+            "T4",
+            "0xe65ba",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6689",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e6698",
+            "0x647c7",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6738",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T5",
+            "tid=16",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6791",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T4",
+            "tid=15",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe676f",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38"
+          ]
+        },
+        "aggregate_3:2": {
+          "fingerprint": "48033c6072f25f09",
+          "stdout_values": [],
+          "stderr_values": [
+            "==18==",
+            "==18==",
+            "pid=18",
+            "0x5555569e66c0",
+            "T5",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe66db",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e66c0",
+            "T4",
+            "0xe65ba",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6689",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e6698",
+            "0x647c7",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6738",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T5",
+            "tid=24",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6791",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T4",
+            "tid=23",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe676f",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38"
+          ]
+        },
+        "aggregate_3:3": {
+          "fingerprint": "48033c6072f25f09",
+          "stdout_values": [],
+          "stderr_values": [
+            "==26==",
+            "==26==",
+            "pid=26",
+            "0x5555569e66c0",
+            "T5",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe66db",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e66c0",
+            "T4",
+            "0xe65ba",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6689",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x62cdb",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x5555569e6698",
+            "0x647c7",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6738",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T5",
+            "tid=32",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe6791",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "T4",
+            "tid=31",
+            "0x62d85",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0xe676f",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38",
+            "0x29ca7",
+            "BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc",
+            "0xe6619",
+            "BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38"
+          ]
+        }
+      },
+      "lossless": true
+    }
+  },
+  "regressions": [
+    "Required semantic invariant failed"
+  ],
+  "note": "Representative runs are those the verifier retained; full raw records remain on disk.",
+  "bytes": 8344
+}

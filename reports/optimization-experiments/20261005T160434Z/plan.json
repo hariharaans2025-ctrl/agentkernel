@@ -1,0 +1,48 @@
+{
+  "version": "optimization-v1",
+  "model_calls": 0,
+  "fixture": "race_002",
+  "candidate_origin": "preserved adaptive Super repair",
+  "candidate_sha256": {
+    "main.c": "62c288103bf1fea229fe33d7ae2677f6cf0511ab69e91ec95d5c5bbf930981ed"
+  },
+  "image": "agentkernel-clang:20261003122908",
+  "batch_size": 10,
+  "verification_configuration": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": false,
+    "original_test_commands": [],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Balance 1000 and 10000 operations per worker",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "limitations": [
+    "One fixture, single serial-then-batch pair; order and service load confounded.",
+    "Batch shares one remote instance per chunk; scheduling environment may differ.",
+    "Compression measurements are evidence bytes, not exact prompt/model token counts."
+  ]
+}

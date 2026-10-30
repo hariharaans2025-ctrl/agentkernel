@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-pair_snapshot",
+  "arm": "few_shot",
+  "outcome": "rejected",
+  "false_fix": true,
+  "tokens": 5889,
+  "inference_ms": 6717.483000014909,
+  "verification_ms": 27105.51799996756,
+  "end_to_end_ms": 39318.71030002367,
+  "model_calls": 1,
+  "input_tokens": 5614,
+  "output_tokens": 275,
+  "inference_cost_usd": 0.0006439,
+  "stress_passed": 0,
+  "semantic_passed": false,
+  "tsan_passed": false
+}

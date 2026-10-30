@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "state": "PLANNED_NOT_EXECUTED",
+  "contract": {
+    "schema_version": 1,
+    "project": "inventory_stock",
+    "description": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+    "origin": "synthetic_example",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "solution.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "run_command": [
+      "./app"
+    ],
+    "binary_path": "app",
+    "expected_behavior": "PASS",
+    "compile_timeout_seconds": 30,
+    "max_runtime_seconds": 2,
+    "baseline_runs": 3,
+    "verification": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "solution.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "budgets": {
+      "max_model_calls": 3,
+      "max_total_tokens": 150144,
+      "max_input_tokens_per_call": 48000,
+      "max_output_tokens_per_call": 2048,
+      "max_wall_seconds": 1800
+    },
+    "execution_backend": "nebius",
+    "max_upload_bytes": 2000000
+  },
+  "plan_sha256": "6b8730d763941594680bcd51f9ea08adae5a2afaa6dbec79a8136fa06b720ae3",
+  "files": {
+    "solution.c": {
+      "sha256": "e4b2ca1dbd01f1c3a5d0e3c34292643d0482b7133651e9f547719f431a7f7c10",
+      "bytes": 270,
+      "editable": true
+    },
+    "state.h": {
+      "sha256": "507e2da9f71f0eed1798f17470665257f51dcd8180273962c50bb9f78c8156dd",
+      "bytes": 190,
+      "editable": false
+    },
+    "oracle.c": {
+      "sha256": "82141d4e37ad17f0f48b5ab731c535ea5d1c242547d81285a696f15d7b8da2ee",
+      "bytes": 1217,
+      "editable": false
+    }
+  },
+  "upload_bytes": 1677,
+  "task": {
+    "task_id": "inventory_stock",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\adaptive-v2\\holdout-v3\\inventory_stock",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "solution.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "solution.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "origin": "synthetic_example",
+      "repository_workflow_version": 1
+    }
+  },
+  "execution_backend": "nebius",
+  "model_calls": 0,
+  "metrics": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "inference_ms": null,
+    "verification_ms": null,
+    "end_to_end_ms": null,
+    "verified": null,
+    "semantic_passed": null,
+    "tsan_passed": null
+  },
+  "limitations": [
+    "Budgets are a contract; production runtime integration is not enabled.",
+    "Commands require review before execution. A valid plan is not permission to execute.",
+    "File identity is content-based; no Git checkout or commit verification is performed."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "zero_shot-pair_snapshot",
+  "arm": "zero_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 2069,
+  "inference_ms": 15852.191100013442,
+  "verification_ms": 27866.844000003766,
+  "end_to_end_ms": 49885.06979995873,
+  "model_calls": 1,
+  "input_tokens": 1435,
+  "output_tokens": 634,
+  "inference_cost_usd": 0.0003337,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

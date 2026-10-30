@@ -1,0 +1,23 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "missing_sync.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 166.94168799999997,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "bcc2fabc-626f-435a-9b76-d480371e613a",
+    "transport_wall_ms": 5609.1582000372
+  },
+  "success": true
+}

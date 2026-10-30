@@ -1,0 +1,459 @@
+{
+  "correction_model": {
+    "calls": 1,
+    "input_tokens": 1035,
+    "output_tokens": 339,
+    "tokens": 1374,
+    "inference_ms": 13747.541600023396,
+    "cost_usd": 0.0002052
+  },
+  "variants": {
+    "mutex": {
+      "verified": true,
+      "verification_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\atomic-pair-experiment\\20261011T115849Z\\mutex\\verification.json",
+      "samples": 10,
+      "lock_free": null,
+      "timing_summary": {
+        "single_ns_per_op": {
+          "median": 6.5516000000000005,
+          "min": 6.5459,
+          "max": 6.5844
+        },
+        "writer_ns_per_op": {
+          "median": 35.4978,
+          "min": 24.3282,
+          "max": 66.5633
+        },
+        "reader_ns_per_op": {
+          "median": 36.20925,
+          "min": 28.5358,
+          "max": 67.2777
+        },
+        "concurrent_wall_ns_per_op": {
+          "median": 18.63185,
+          "min": 14.376,
+          "max": 33.6723
+        }
+      }
+    },
+    "exchange": {
+      "verified": true,
+      "verification_ms": 31337.562300032005,
+      "samples": 10,
+      "lock_free": true,
+      "timing_summary": {
+        "single_ns_per_op": {
+          "median": 1.2313,
+          "min": 1.2233,
+          "max": 1.3606
+        },
+        "writer_ns_per_op": {
+          "median": 5.6272,
+          "min": 5.3188,
+          "max": 5.8963
+        },
+        "reader_ns_per_op": {
+          "median": 4.08145,
+          "min": 3.9242,
+          "max": 4.6624
+        },
+        "concurrent_wall_ns_per_op": {
+          "median": 2.9099500000000003,
+          "min": 2.7395,
+          "max": 3.0418
+        }
+      }
+    },
+    "store": {
+      "verified": true,
+      "verification_ms": 31998.488300014287,
+      "samples": 10,
+      "lock_free": true,
+      "timing_summary": {
+        "single_ns_per_op": {
+          "median": 1.23065,
+          "min": 1.2234,
+          "max": 1.423
+        },
+        "writer_ns_per_op": {
+          "median": 3.40425,
+          "min": 3.1063,
+          "max": 4.6051
+        },
+        "reader_ns_per_op": {
+          "median": 3.5161,
+          "min": 3.2114,
+          "max": 5.2996
+        },
+        "concurrent_wall_ns_per_op": {
+          "median": 1.84115,
+          "min": 1.7532,
+          "max": 2.9745
+        }
+      }
+    }
+  },
+  "timings": [
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5617,
+      "writer_ns_per_op": 36.1399,
+      "reader_ns_per_op": 37.7934,
+      "concurrent_wall_ns_per_op": 18.9739,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 1
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2233,
+      "writer_ns_per_op": 5.7218,
+      "reader_ns_per_op": 4.4964,
+      "concurrent_wall_ns_per_op": 2.9726,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 1
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2234,
+      "writer_ns_per_op": 3.5135,
+      "reader_ns_per_op": 3.5331,
+      "concurrent_wall_ns_per_op": 1.8503,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 1
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2315,
+      "writer_ns_per_op": 5.3188,
+      "reader_ns_per_op": 3.9371,
+      "concurrent_wall_ns_per_op": 2.7395,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 2
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.231,
+      "writer_ns_per_op": 3.3969,
+      "reader_ns_per_op": 3.3148,
+      "concurrent_wall_ns_per_op": 1.7675,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 2
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5628,
+      "writer_ns_per_op": 46.0729,
+      "reader_ns_per_op": 45.0881,
+      "concurrent_wall_ns_per_op": 23.1741,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 2
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2243,
+      "writer_ns_per_op": 3.471,
+      "reader_ns_per_op": 3.4116,
+      "concurrent_wall_ns_per_op": 1.8234,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 3
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5844,
+      "writer_ns_per_op": 31.6972,
+      "reader_ns_per_op": 35.4654,
+      "concurrent_wall_ns_per_op": 17.7868,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 3
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.226,
+      "writer_ns_per_op": 5.4785,
+      "reader_ns_per_op": 4.0117,
+      "concurrent_wall_ns_per_op": 2.8276,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 3
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5459,
+      "writer_ns_per_op": 24.3282,
+      "reader_ns_per_op": 28.5358,
+      "concurrent_wall_ns_per_op": 14.376,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 4
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2502,
+      "writer_ns_per_op": 5.3933,
+      "reader_ns_per_op": 4.0293,
+      "concurrent_wall_ns_per_op": 2.7572,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 4
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2303,
+      "writer_ns_per_op": 3.4607,
+      "reader_ns_per_op": 3.6711,
+      "concurrent_wall_ns_per_op": 1.9098,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 4
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2365,
+      "writer_ns_per_op": 5.4517,
+      "reader_ns_per_op": 3.9242,
+      "concurrent_wall_ns_per_op": 2.8081,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 5
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.423,
+      "writer_ns_per_op": 4.6051,
+      "reader_ns_per_op": 5.2996,
+      "concurrent_wall_ns_per_op": 2.9745,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 5
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5538,
+      "writer_ns_per_op": 43.5296,
+      "reader_ns_per_op": 42.0108,
+      "concurrent_wall_ns_per_op": 21.8967,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 5
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2263,
+      "writer_ns_per_op": 3.1063,
+      "reader_ns_per_op": 3.6314,
+      "concurrent_wall_ns_per_op": 1.9241,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 6
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5472,
+      "writer_ns_per_op": 26.0342,
+      "reader_ns_per_op": 29.4201,
+      "concurrent_wall_ns_per_op": 14.8227,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 6
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2276,
+      "writer_ns_per_op": 5.8579,
+      "reader_ns_per_op": 4.4117,
+      "concurrent_wall_ns_per_op": 3.0205,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 6
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5565,
+      "writer_ns_per_op": 34.8557,
+      "reader_ns_per_op": 32.2665,
+      "concurrent_wall_ns_per_op": 17.5315,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 7
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2311,
+      "writer_ns_per_op": 5.5326,
+      "reader_ns_per_op": 4.0294,
+      "concurrent_wall_ns_per_op": 2.8473,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 7
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.3037,
+      "writer_ns_per_op": 3.197,
+      "reader_ns_per_op": 3.4991,
+      "concurrent_wall_ns_per_op": 1.832,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 7
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.229,
+      "writer_ns_per_op": 5.8223,
+      "reader_ns_per_op": 4.1335,
+      "concurrent_wall_ns_per_op": 3.0061,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 8
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2234,
+      "writer_ns_per_op": 3.3471,
+      "reader_ns_per_op": 3.2114,
+      "concurrent_wall_ns_per_op": 1.7532,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 8
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5494,
+      "writer_ns_per_op": 38.7814,
+      "reader_ns_per_op": 36.0716,
+      "concurrent_wall_ns_per_op": 19.5606,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 8
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2362,
+      "writer_ns_per_op": 3.4116,
+      "reader_ns_per_op": 3.2519,
+      "concurrent_wall_ns_per_op": 1.7992,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 9
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5489,
+      "writer_ns_per_op": 32.5348,
+      "reader_ns_per_op": 36.3469,
+      "concurrent_wall_ns_per_op": 18.2898,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 9
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2608,
+      "writer_ns_per_op": 5.7818,
+      "reader_ns_per_op": 4.2447,
+      "concurrent_wall_ns_per_op": 2.973,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 9
+    },
+    {
+      "mode": 0,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 6.5463,
+      "writer_ns_per_op": 66.5633,
+      "reader_ns_per_op": 67.2777,
+      "concurrent_wall_ns_per_op": 33.6723,
+      "clock_resolution_ns": 1,
+      "variant": "mutex",
+      "round": 10
+    },
+    {
+      "mode": 1,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.3606,
+      "writer_ns_per_op": 5.8963,
+      "reader_ns_per_op": 4.6624,
+      "concurrent_wall_ns_per_op": 3.0418,
+      "clock_resolution_ns": 1,
+      "variant": "exchange",
+      "round": 10
+    },
+    {
+      "mode": 2,
+      "lock_free": 1,
+      "iterations": 500000,
+      "single_ns_per_op": 1.2618,
+      "writer_ns_per_op": 3.3545,
+      "reader_ns_per_op": 3.6867,
+      "concurrent_wall_ns_per_op": 1.9065,
+      "clock_resolution_ns": 1,
+      "variant": "store",
+      "round": 10
+    }
+  ],
+  "duration_ms": 185204.1709999903
+}

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "writer.c",
+    "reader.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 267.007792,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "75f97cc8-262c-46f8-b390-3b49f3dd26bb",
+    "transport_wall_ms": 2121.128200000385
+  },
+  "success": true
+}

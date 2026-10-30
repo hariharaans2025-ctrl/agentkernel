@@ -1,0 +1,73 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "outcome": "passed",
+      "duration_s": 0.04491874000000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "outcome": "passed",
+      "duration_s": 0.0017042179999999796,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.040311515000000075,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.004267635000000047,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003395899999999452,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007957740000000824,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005812229999999641,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00032722099999993315,
+      "details": null
+    }
+  ]
+}

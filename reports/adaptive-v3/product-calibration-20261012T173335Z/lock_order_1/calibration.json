@@ -1,0 +1,28 @@
+{
+  "case": "lock_order_1",
+  "split": "train",
+  "family": "lock_order",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "forward.c": "9d5d280618e442fb95bc42dd4e7b54e0555d418783367505edd67f2df13c649a",
+    "reverse.c": "26f5c29f6b1d7583b757d5dd1866453e0a269c470999b5a8949ccad55a37d1d7"
+  },
+  "source_sha256": {
+    "forward.c": "a270ec6daaeef1f4275245dddf7f078deff7a3cef72686717c27b0eeab4d36a8",
+    "reverse.c": "f256092deb1995d9a40757b472379544905fa66841d7b3f1a124f6c3f8871e1d"
+  },
+  "support_sha256": {
+    "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+    "oracle.c": "8d90ef9825157594c25e7d39e4c14c0b3d56badb248a98518b538f0b2d0b7c74"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 67.55379360000006
+}

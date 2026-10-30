@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    sched_yield();\n    meet(cache);\n    cache->value = 42;\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n"
+}

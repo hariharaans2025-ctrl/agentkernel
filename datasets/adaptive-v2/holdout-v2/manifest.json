@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "id": "ticket_office",
+      "source_sha256": "083ba97ad7ecb2932f0e4623ee592ee1b3b03af42fb3d4206e220c35967fae49",
+      "support_sha256": {
+        "state.h": "a6a486fa8f2263f0856d55d55147a1952acc0c0d7feb58f950a604e6f1cb08b1",
+        "oracle.c": "d2b81dd7acedc1b51e202f1cc1f93553bba5127162744ce166db943a6b1857f1"
+      },
+      "description": "Allocate all 400 tickets exactly once, with no duplicates or missing values. Synchronize allocation and concurrent count readers; retain every scheduling hook."
+    },
+    {
+      "id": "version_stamp",
+      "source_sha256": "6553704356425da5b623bb384ec2021d6b126ec264ac6ea9c07f48be67864e76",
+      "support_sha256": {
+        "state.h": "30e4201c8f4c9b17ad941a2c3b969caa9a64b865cd25b4fc5491a04bf44ae29e",
+        "oracle.c": "f8faf467a8296ac175ed7242532c7abb4cac4b561384ba46f4749f2693137799"
+      },
+      "description": "Publish and read a generation/checksum pair consistently. Every checksum must equal generation XOR 0x5a5a, and the final generation must remain 12000. Retain every scheduling hook."
+    }
+  ],
+  "targets_in_training": false,
+  "scope": "New final programs within familiar bug families; previous pilot programs are development-seen."
+}

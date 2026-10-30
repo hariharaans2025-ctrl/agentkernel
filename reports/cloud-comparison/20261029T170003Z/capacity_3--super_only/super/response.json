@@ -1,0 +1,54 @@
+{
+  "id": "chatcmpl-bed6db8ef7b67fa7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"edits\": [{\"file\": \"acquire.c\", \"start_line\": 1, \"end_line\": 1, \"replacement_lines\": [\"#include 'state.h'\"]}, {\"file\": \"acquire.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\"]}]}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1793293320,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g5001743e3-tp2-05adddbc",
+  "usage": {
+    "completion_tokens": 136,
+    "prompt_tokens": 1433,
+    "total_tokens": 1569,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1433
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

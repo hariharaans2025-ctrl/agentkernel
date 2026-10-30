@@ -1,0 +1,108 @@
+{
+  "failed_candidate_files": {
+    "publish.c": "#include \"state.h\"\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n",
+    "observe.c": "#include \"state.h\"\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n"
+  },
+  "canonical_patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+  "build": {
+    "success": true,
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "original_tests": [
+    {
+      "exit_code": -9,
+      "timed_out": true,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "stress": {
+    "counts": {
+      "TIMEOUT": 100
+    },
+    "total_runs": 100,
+    "fingerprint": "TIMEOUT:100",
+    "failing_runs": {
+      "records": {
+        "d16e05d4656e4634": {
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "stdout_template": "",
+          "stderr_template": "",
+          "tsan_conflicts": []
+        }
+      },
+      "runs": {
+        "rendezvous_3:1": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "rendezvous_3:2": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "rendezvous_3:3": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        }
+      },
+      "lossless": true
+    }
+  },
+  "semantics": [
+    {
+      "requirement": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+      "required": true,
+      "passed": false,
+      "stdout": ""
+    }
+  ],
+  "tsan": {
+    "status": "failed",
+    "counts": {
+      "TIMEOUT": 3
+    },
+    "fingerprint": "TIMEOUT:3",
+    "failing_runs": {
+      "records": {
+        "d16e05d4656e4634": {
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "stdout_template": "",
+          "stderr_template": "",
+          "tsan_conflicts": []
+        }
+      },
+      "runs": {
+        "rendezvous_3:1": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "rendezvous_3:2": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "rendezvous_3:3": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        }
+      },
+      "lossless": true
+    }
+  },
+  "regressions": [
+    "Original test requirements failed",
+    "Required semantic invariant failed"
+  ],
+  "note": "Representative runs are those the verifier retained; full raw records remain on disk.",
+  "bytes": 3193
+}

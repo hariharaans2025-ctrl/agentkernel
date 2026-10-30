@@ -1,0 +1,1810 @@
+{
+  "task_id": "github_mbrossard_threadpool",
+  "runs": [
+    {
+      "run_id": "github_mbrossard_threadpool:1",
+      "start_time": "2026-10-12T17:41:51.689037Z",
+      "duration_ms": 5.316722000000052,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:2",
+      "start_time": "2026-10-12T17:41:51.734155Z",
+      "duration_ms": 4.695989999999983,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:3",
+      "start_time": "2026-10-12T17:41:51.770007Z",
+      "duration_ms": 4.73170500000003,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:4",
+      "start_time": "2026-10-12T17:41:51.805682Z",
+      "duration_ms": 4.709289999999977,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:5",
+      "start_time": "2026-10-12T17:41:51.841622Z",
+      "duration_ms": 4.696851999999973,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:6",
+      "start_time": "2026-10-12T17:41:51.877159Z",
+      "duration_ms": 4.884814000000015,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:7",
+      "start_time": "2026-10-12T17:41:51.912918Z",
+      "duration_ms": 4.813595999999976,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:8",
+      "start_time": "2026-10-12T17:41:51.948434Z",
+      "duration_ms": 4.8470080000000415,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:9",
+      "start_time": "2026-10-12T17:41:51.985981Z",
+      "duration_ms": 17.101154999999977,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2315.5246999995143
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:10",
+      "start_time": "2026-10-12T17:41:53.782560Z",
+      "duration_ms": 5.60720800000003,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:11",
+      "start_time": "2026-10-12T17:41:53.828141Z",
+      "duration_ms": 4.7814189999999535,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:12",
+      "start_time": "2026-10-12T17:41:53.864215Z",
+      "duration_ms": 4.758604,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:13",
+      "start_time": "2026-10-12T17:41:53.900061Z",
+      "duration_ms": 4.768849000000019,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:14",
+      "start_time": "2026-10-12T17:41:53.935764Z",
+      "duration_ms": 4.778454999999959,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:15",
+      "start_time": "2026-10-12T17:41:53.971658Z",
+      "duration_ms": 4.809449999999993,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:16",
+      "start_time": "2026-10-12T17:41:54.008523Z",
+      "duration_ms": 4.754617999999988,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:17",
+      "start_time": "2026-10-12T17:41:54.044562Z",
+      "duration_ms": 4.823151000000081,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:18",
+      "start_time": "2026-10-12T17:41:54.080262Z",
+      "duration_ms": 4.767418000000023,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1685.171299999638
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:19",
+      "start_time": "2026-10-12T17:41:55.397855Z",
+      "duration_ms": 5.564053000000014,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:20",
+      "start_time": "2026-10-12T17:41:55.443729Z",
+      "duration_ms": 4.75825299999999,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:21",
+      "start_time": "2026-10-12T17:41:55.480575Z",
+      "duration_ms": 4.814019000000003,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:22",
+      "start_time": "2026-10-12T17:41:55.520412Z",
+      "duration_ms": 4.813798000000036,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:23",
+      "start_time": "2026-10-12T17:41:55.557232Z",
+      "duration_ms": 4.744362000000002,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:24",
+      "start_time": "2026-10-12T17:41:55.593195Z",
+      "duration_ms": 4.782029999999993,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:25",
+      "start_time": "2026-10-12T17:41:55.629004Z",
+      "duration_ms": 4.803841999999947,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:26",
+      "start_time": "2026-10-12T17:41:55.666042Z",
+      "duration_ms": 4.7423999999999245,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:27",
+      "start_time": "2026-10-12T17:41:55.703751Z",
+      "duration_ms": 4.752606000000048,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1699.2069999996602
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:28",
+      "start_time": "2026-10-12T17:41:57.104045Z",
+      "duration_ms": 5.578024000000015,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:29",
+      "start_time": "2026-10-12T17:41:57.150638Z",
+      "duration_ms": 4.938894000000027,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:30",
+      "start_time": "2026-10-12T17:41:57.186918Z",
+      "duration_ms": 4.879765999999952,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:31",
+      "start_time": "2026-10-12T17:41:57.224109Z",
+      "duration_ms": 4.880748000000046,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:32",
+      "start_time": "2026-10-12T17:41:57.262334Z",
+      "duration_ms": 4.914416999999949,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:33",
+      "start_time": "2026-10-12T17:41:57.299396Z",
+      "duration_ms": 4.861108000000003,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:34",
+      "start_time": "2026-10-12T17:41:57.337231Z",
+      "duration_ms": 4.8747399999999885,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:35",
+      "start_time": "2026-10-12T17:41:57.374882Z",
+      "duration_ms": 4.879246000000004,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:36",
+      "start_time": "2026-10-12T17:41:57.412671Z",
+      "duration_ms": 4.863541999999943,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1693.4225999993942
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:37",
+      "start_time": "2026-10-12T17:41:58.864923Z",
+      "duration_ms": 5.572807000000013,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:38",
+      "start_time": "2026-10-12T17:41:58.911295Z",
+      "duration_ms": 4.765703999999982,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:39",
+      "start_time": "2026-10-12T17:41:58.948170Z",
+      "duration_ms": 4.769520999999999,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:40",
+      "start_time": "2026-10-12T17:41:58.984618Z",
+      "duration_ms": 4.785694999999979,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:41",
+      "start_time": "2026-10-12T17:41:59.020958Z",
+      "duration_ms": 4.760135999999971,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:42",
+      "start_time": "2026-10-12T17:41:59.056693Z",
+      "duration_ms": 4.787749000000008,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:43",
+      "start_time": "2026-10-12T17:41:59.092647Z",
+      "duration_ms": 4.780777000000014,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:44",
+      "start_time": "2026-10-12T17:41:59.129407Z",
+      "duration_ms": 4.7454550000000095,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:45",
+      "start_time": "2026-10-12T17:41:59.166928Z",
+      "duration_ms": 4.797112999999964,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1792.7192999995896
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:46",
+      "start_time": "2026-10-12T17:42:00.622369Z",
+      "duration_ms": 5.5791270000000175,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:47",
+      "start_time": "2026-10-12T17:42:00.667744Z",
+      "duration_ms": 4.817442000000005,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:48",
+      "start_time": "2026-10-12T17:42:00.703770Z",
+      "duration_ms": 4.759264999999957,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:49",
+      "start_time": "2026-10-12T17:42:00.739505Z",
+      "duration_ms": 4.88559500000002,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:50",
+      "start_time": "2026-10-12T17:42:00.775232Z",
+      "duration_ms": 4.745633999999999,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:51",
+      "start_time": "2026-10-12T17:42:00.811951Z",
+      "duration_ms": 4.845725999999995,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:52",
+      "start_time": "2026-10-12T17:42:00.851624Z",
+      "duration_ms": 4.704313999999932,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:53",
+      "start_time": "2026-10-12T17:42:00.888879Z",
+      "duration_ms": 4.734397999999973,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:54",
+      "start_time": "2026-10-12T17:42:00.925604Z",
+      "duration_ms": 4.72209899999998,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1815.850599999976
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:55",
+      "start_time": "2026-10-12T17:42:02.525866Z",
+      "duration_ms": 5.7408499999999645,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:56",
+      "start_time": "2026-10-12T17:42:02.571620Z",
+      "duration_ms": 4.764274000000013,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:57",
+      "start_time": "2026-10-12T17:42:02.609261Z",
+      "duration_ms": 4.882429999999993,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:58",
+      "start_time": "2026-10-12T17:42:02.645611Z",
+      "duration_ms": 4.781727999999985,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:59",
+      "start_time": "2026-10-12T17:42:02.682346Z",
+      "duration_ms": 4.729972000000027,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:60",
+      "start_time": "2026-10-12T17:42:02.718661Z",
+      "duration_ms": 4.760936999999965,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:61",
+      "start_time": "2026-10-12T17:42:02.754678Z",
+      "duration_ms": 4.870593000000034,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:62",
+      "start_time": "2026-10-12T17:42:02.791274Z",
+      "duration_ms": 4.714949000000024,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:63",
+      "start_time": "2026-10-12T17:42:02.827350Z",
+      "duration_ms": 4.85228400000004,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2249.0844000003563
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:64",
+      "start_time": "2026-10-12T17:42:04.787538Z",
+      "duration_ms": 5.6197170000000245,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:65",
+      "start_time": "2026-10-12T17:42:04.833363Z",
+      "duration_ms": 4.73726200000002,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:66",
+      "start_time": "2026-10-12T17:42:04.870028Z",
+      "duration_ms": 4.775549999999962,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:67",
+      "start_time": "2026-10-12T17:42:04.906569Z",
+      "duration_ms": 4.836020000000052,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:68",
+      "start_time": "2026-10-12T17:42:04.942255Z",
+      "duration_ms": 4.714807999999959,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:69",
+      "start_time": "2026-10-12T17:42:04.978130Z",
+      "duration_ms": 4.7678190000000065,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:70",
+      "start_time": "2026-10-12T17:42:05.013760Z",
+      "duration_ms": 4.755739999999897,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:71",
+      "start_time": "2026-10-12T17:42:05.049886Z",
+      "duration_ms": 4.8173320000000075,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:72",
+      "start_time": "2026-10-12T17:42:05.085956Z",
+      "duration_ms": 4.872285000000032,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2526.9170999999915
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:73",
+      "start_time": "2026-10-12T17:42:07.715249Z",
+      "duration_ms": 5.598484999999986,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:74",
+      "start_time": "2026-10-12T17:42:07.761153Z",
+      "duration_ms": 4.807918000000022,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:75",
+      "start_time": "2026-10-12T17:42:07.797759Z",
+      "duration_ms": 4.807517000000039,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:76",
+      "start_time": "2026-10-12T17:42:07.836576Z",
+      "duration_ms": 4.784364000000041,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:77",
+      "start_time": "2026-10-12T17:42:07.873254Z",
+      "duration_ms": 4.717433000000049,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:78",
+      "start_time": "2026-10-12T17:42:07.909645Z",
+      "duration_ms": 4.767187999999978,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:79",
+      "start_time": "2026-10-12T17:42:07.945678Z",
+      "duration_ms": 4.755418999999983,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:80",
+      "start_time": "2026-10-12T17:42:07.981256Z",
+      "duration_ms": 4.77071200000001,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:81",
+      "start_time": "2026-10-12T17:42:08.017292Z",
+      "duration_ms": 4.800376999999911,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2297.2710999983974
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:82",
+      "start_time": "2026-10-12T17:42:09.640514Z",
+      "duration_ms": 5.611093000000011,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:83",
+      "start_time": "2026-10-12T17:42:09.693739Z",
+      "duration_ms": 4.7666970000000415,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:84",
+      "start_time": "2026-10-12T17:42:09.730420Z",
+      "duration_ms": 4.892135000000019,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:85",
+      "start_time": "2026-10-12T17:42:09.767848Z",
+      "duration_ms": 4.748178999999963,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:86",
+      "start_time": "2026-10-12T17:42:09.803491Z",
+      "duration_ms": 4.752885999999956,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:87",
+      "start_time": "2026-10-12T17:42:09.839240Z",
+      "duration_ms": 4.74318099999993,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:88",
+      "start_time": "2026-10-12T17:42:09.874996Z",
+      "duration_ms": 4.885825999999982,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:89",
+      "start_time": "2026-10-12T17:42:09.910981Z",
+      "duration_ms": 4.743802999999991,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:90",
+      "start_time": "2026-10-12T17:42:09.946617Z",
+      "duration_ms": 4.862699999999998,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1740.9338999987085
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:91",
+      "start_time": "2026-10-12T17:42:12.598591Z",
+      "duration_ms": 5.566667000000026,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:92",
+      "start_time": "2026-10-12T17:42:12.644598Z",
+      "duration_ms": 4.744423999999969,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:93",
+      "start_time": "2026-10-12T17:42:12.680333Z",
+      "duration_ms": 4.725484000000002,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:94",
+      "start_time": "2026-10-12T17:42:12.715987Z",
+      "duration_ms": 4.769020000000013,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:95",
+      "start_time": "2026-10-12T17:42:12.751681Z",
+      "duration_ms": 4.751114000000001,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:96",
+      "start_time": "2026-10-12T17:42:12.787236Z",
+      "duration_ms": 4.872664999999998,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:97",
+      "start_time": "2026-10-12T17:42:12.823898Z",
+      "duration_ms": 4.90537499999999,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:98",
+      "start_time": "2026-10-12T17:42:12.859592Z",
+      "duration_ms": 4.709611000000002,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:99",
+      "start_time": "2026-10-12T17:42:12.895719Z",
+      "duration_ms": 4.71453799999999,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 2859.879899999214
+      }
+    },
+    {
+      "run_id": "github_mbrossard_threadpool:100",
+      "start_time": "2026-10-12T17:42:14.305269Z",
+      "duration_ms": 5.6588160000000105,
+      "exit_code": 0,
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a88c63fd-1141-45c1-98c3-77c7219071f0",
+        "batch_transport_wall_ms": 1598.3756999994512
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 100
+  },
+  "duration_ms": 24389.73370000167,
+  "requested_runs": 100
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 34%]\n........................................................................ [ 68%]\n.................................................................        [100%]\n209 passed, 8 deselected in 5.14s\n",
+  "stderr": "",
+  "duration_ms": 5785.959769,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "bb1b014d-6920-41dd-800d-1711cc00755c",
+    "transport_wall_ms": 9437.230199982878
+  }
+}

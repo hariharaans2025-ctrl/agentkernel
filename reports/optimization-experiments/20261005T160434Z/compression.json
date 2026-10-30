@@ -1,0 +1,75 @@
+{
+  "unit": "utf8_bytes_not_tokens",
+  "rows": [
+    {
+      "fixture": "deadlock_001",
+      "original_bytes": 9232,
+      "minified_bytes": 8845,
+      "deduplicated_bytes": 8903,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "deadlock_002",
+      "original_bytes": 12224,
+      "minified_bytes": 11711,
+      "deduplicated_bytes": 11769,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "deadlock_003",
+      "original_bytes": 1763,
+      "minified_bytes": 1648,
+      "deduplicated_bytes": 1706,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "deadlock_004",
+      "original_bytes": 10265,
+      "minified_bytes": 9878,
+      "deduplicated_bytes": 9936,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "deadlock_005",
+      "original_bytes": 8684,
+      "minified_bytes": 8303,
+      "deduplicated_bytes": 8361,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "race_001",
+      "original_bytes": 13694,
+      "minified_bytes": 13428,
+      "deduplicated_bytes": 13486,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "race_002",
+      "original_bytes": 20046,
+      "minified_bytes": 19581,
+      "deduplicated_bytes": 16384,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "race_003",
+      "original_bytes": 19587,
+      "minified_bytes": 19122,
+      "deduplicated_bytes": 15923,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "race_004",
+      "original_bytes": 19352,
+      "minified_bytes": 18887,
+      "deduplicated_bytes": 15690,
+      "round_trip_equal": true
+    },
+    {
+      "fixture": "race_005",
+      "original_bytes": 10502,
+      "minified_bytes": 10321,
+      "deduplicated_bytes": 7722,
+      "round_trip_equal": true
+    }
+  ]
+}

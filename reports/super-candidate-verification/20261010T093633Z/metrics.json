@@ -1,0 +1,19 @@
+{
+  "new_model_calls": 0,
+  "new_tokens": 0,
+  "origin_model_calls": 1,
+  "origin_tokens": 6062,
+  "end_to_end_ms": 74950.55830001365,
+  "outcome": "rejected",
+  "verification_ms": 61127.89150001481,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "original_tests_passed": true,
+  "semantic_passed": true,
+  "tsan_passed": false,
+  "false_fix": true,
+  "semantic_regression": false,
+  "races": 3,
+  "deadlocks": 0,
+  "infrastructure_failures": 0
+}

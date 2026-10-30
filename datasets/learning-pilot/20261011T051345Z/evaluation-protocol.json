@@ -1,0 +1,34 @@
+{
+  "arms": [
+    "base",
+    "fine_tuned"
+  ],
+  "pairs": [
+    "rwlock_mode",
+    "wake_all"
+  ],
+  "attempts_per_case_per_arm": 1,
+  "max_output_tokens": 2048,
+  "temperature": 0,
+  "correction_calls": 0,
+  "escalation": false,
+  "execution_backend": "nebius",
+  "image": "agentkernel-clang:20261003122908",
+  "mandatory_verifier": true,
+  "required_checks": [
+    "fresh build",
+    "protected original tests",
+    "100 stress executions",
+    "semantic oracle",
+    "3 TSan executions"
+  ],
+  "holdout_policy": "Freeze before training; never use test answers or test outcomes for checkpoint selection. Changes after inspection require a new unseen test set.",
+  "metrics": {
+    "verified_repairs": "count of complete verifier passes",
+    "false_fixes": "applied candidates rejected by real program verification, excluding infrastructure interruptions",
+    "tokens_per_verified_repair": "all evaluation input+output tokens, including failed attempts, divided by verified repairs; null when zero or usage missing",
+    "latency": "record inference, verification and end-to-end separately; report each case and median; setup/training/deployment separate",
+    "unknown": "report separately, never convert infrastructure errors into successes or program failures"
+  },
+  "promotion": "A tuned response never bypasses strict patch application, protected-file checks or real execution verification."
+}

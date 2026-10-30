@@ -1,0 +1,23 @@
+{
+  "command": [
+    "clang",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-fsanitize=thread",
+    "race.c",
+    "-o",
+    "race_racy"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 668.1924909999999,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "57a4a145-273c-44a8-b00c-6f8ac149ec5a",
+    "transport_wall_ms": 2984.8912000015844
+  }
+}

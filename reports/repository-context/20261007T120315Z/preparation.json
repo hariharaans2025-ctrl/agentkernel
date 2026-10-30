@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "scripts/prepare_context_remote.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"full\": {\n    \"input_tokens\": 5299,\n    \"message_content_bytes\": 15620,\n    \"rendered_sha256\": \"7959b00fdc054368e545baf861f398f63a24bba7a5a2b14848315fbb66a6c32a\",\n    \"tokenization_ms\": 35.39355799999999\n  },\n  \"minified_full\": {\n    \"input_tokens\": 5122,\n    \"message_content_bytes\": 15348,\n    \"rendered_sha256\": \"d833065f024471b4983275e5503d64efd871534843c3049f0764371a95e51215\",\n    \"tokenization_ms\": 4.941908999999356\n  },\n  \"selected_grouped\": {\n    \"input_tokens\": 4384,\n    \"message_content_bytes\": 12776,\n    \"rendered_sha256\": \"f9bcfa9506ef1bda9ad510dc15e9e5107ce8b89c284281a6230145d3e7083613\",\n    \"tokenization_ms\": 3.975549999999828\n  }\n}\n",
+  "stderr": "None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.\n",
+  "duration_ms": 4825.899233,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "28790baf-9457-4cbc-a503-bdc1b33e2965",
+    "transport_wall_ms": 8541.0586999933
+  }
+}

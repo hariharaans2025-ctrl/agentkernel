@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_repository_context.py"
+  ],
+  "exit_code": 0,
+  "stdout": "......                                                                   [100%]\n6 passed in 0.03s\n",
+  "stderr": "",
+  "duration_ms": 432.416769,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "ae21757c-4c9c-4e5b-8a64-303ef5725438",
+    "transport_wall_ms": 3151.9307999988087
+  }
+}

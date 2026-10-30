@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-wake_all",
+  "arm": "few_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 7522,
+  "inference_ms": 7680.806699965615,
+  "verification_ms": 27976.53139999602,
+  "end_to_end_ms": 40947.37690000329,
+  "model_calls": 1,
+  "input_tokens": 7317,
+  "output_tokens": 205,
+  "inference_cost_usd": 0.0007932,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

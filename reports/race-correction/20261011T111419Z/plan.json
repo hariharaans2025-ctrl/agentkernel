@@ -1,0 +1,106 @@
+{
+  "original_case": "few_shot-pair_snapshot",
+  "original_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\few_shot-pair_snapshot",
+  "first_attempt_metrics": {
+    "id": "few_shot-pair_snapshot",
+    "arm": "few_shot",
+    "outcome": "rejected",
+    "false_fix": true,
+    "tokens": 5889,
+    "inference_ms": 6717.483000014909,
+    "verification_ms": 27105.51799996756,
+    "end_to_end_ms": 39318.71030002367,
+    "model_calls": 1,
+    "input_tokens": 5614,
+    "output_tokens": 275,
+    "inference_cost_usd": 0.0006439,
+    "stress_passed": 0,
+    "semantic_passed": false,
+    "tsan_passed": false
+  },
+  "task": {
+    "task_id": "pair_snapshot",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\race-correction\\20261011T111419Z\\failed-candidate",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "oracle.c",
+      "state.h"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "oracle.c",
+      "solution.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Protected completion/value invariant",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "oracle.c",
+            "solution.c",
+            "-o",
+            "semantic"
+          ],
+          "run_command": [
+            "./semantic"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {}
+  },
+  "max_calls": 1,
+  "max_output_tokens": 2048,
+  "input_token_reservation": 262144,
+  "max_cost_usd": "0.03",
+  "inference_bound_usd": "0.0268288",
+  "sandbox_cost_usd": 0,
+  "sandbox_basis": "User confirmed free beta access",
+  "trigger": "Actual recorded TSan data race on the applied failed candidate",
+  "payload_sha256": "652ce7ffc3a2587168480d3a5002e08dd6711c047c859dbd34021093e5e94716",
+  "controller_sha256": "e6eac29e6723d558a917f5253963a52a789783c4bf9b8d5f3cbfaa54fd650ddf",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "retries": 0,
+  "separate_critique_calls": 0,
+  "image": "agentkernel-clang:20261003122908",
+  "reference_repairs_in_prompt": false,
+  "training": false
+}

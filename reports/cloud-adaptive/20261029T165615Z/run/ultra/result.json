@@ -1,0 +1,30 @@
+{
+  "stage": "ultra",
+  "outcome": "verified",
+  "model_calls": 1,
+  "tokens": 1770,
+  "cost_usd": 0.002246,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "369676ce1abe438582f5e1223d08fd8d",
+  "input_tokens": 1532,
+  "output_tokens": 238,
+  "reasoning_tokens": 0,
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"solution.c\",\n      \"start_line\": 1,\n      \"end_line\": 12,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"#include <sched.h>\",\n        \"int take_item(Inventory *stock) {\",\n        \"    pthread_mutex_lock(&stock->mutex);\",\n        \"    int old = stock->remaining;\",\n        \"    if (old == 0) {\",\n        \"        pthread_mutex_unlock(&stock->mutex);\",\n        \"        return 0;\",\n        \"    }\",\n        \"    sched_yield();\",\n        \"    stock->remaining = old - 1;\",\n        \"    pthread_mutex_unlock(&stock->mutex);\",\n        \"    return 1;\",\n        \"}\",\n        \"int remaining_stock(Inventory *stock) {\",\n        \"    pthread_mutex_lock(&stock->mutex);\",\n        \"    int rem = stock->remaining;\",\n        \"    pthread_mutex_unlock(&stock->mutex);\",\n        \"    return rem;\",\n        \"}\"\n      ]\n    }\n  ]\n}",
+  "error_code": null,
+  "validation": [],
+  "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    int old = stock->remaining;\\n    if (old == 0) return 0;\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    return stock->remaining;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    pthread_mutex_lock(&stock->mutex);\\n    int old = stock->remaining;\\n    if (old == 0) {\\n        pthread_mutex_unlock(&stock->mutex);\\n        return 0;\\n    }\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    pthread_mutex_unlock(&stock->mutex);\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    pthread_mutex_lock(&stock->mutex);\\n    int rem = stock->remaining;\\n    pthread_mutex_unlock(&stock->mutex);\\n    return rem;\\n}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+  "inference_ms": 1662.1006000204943,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,12 +1,20 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n-    return stock->remaining;\n+    pthread_mutex_lock(&stock->mutex);\n+    int rem = stock->remaining;\n+    pthread_mutex_unlock(&stock->mutex);\n+    return rem;\n }\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 18105.93149997294
+}

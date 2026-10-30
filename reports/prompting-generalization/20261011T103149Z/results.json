@@ -1,0 +1,190 @@
+{
+  "jobs": [
+    {
+      "id": "zero_shot-pair_snapshot",
+      "arm": "zero_shot",
+      "outcome": "verified",
+      "false_fix": false,
+      "tokens": 2069,
+      "inference_ms": 15852.191100013442,
+      "verification_ms": 27866.844000003766,
+      "end_to_end_ms": 49885.06979995873,
+      "model_calls": 1,
+      "input_tokens": 1435,
+      "output_tokens": 634,
+      "inference_cost_usd": 0.0003337,
+      "stress_passed": 100,
+      "semantic_passed": true,
+      "tsan_passed": true
+    },
+    {
+      "id": "few_shot-pair_snapshot",
+      "arm": "few_shot",
+      "outcome": "rejected",
+      "false_fix": true,
+      "tokens": 5889,
+      "inference_ms": 6717.483000014909,
+      "verification_ms": 27105.51799996756,
+      "end_to_end_ms": 39318.71030002367,
+      "model_calls": 1,
+      "input_tokens": 5614,
+      "output_tokens": 275,
+      "inference_cost_usd": 0.0006439,
+      "stress_passed": 0,
+      "semantic_passed": false,
+      "tsan_passed": false
+    },
+    {
+      "id": "few_shot-inventory_balance",
+      "arm": "few_shot",
+      "outcome": "verified",
+      "false_fix": false,
+      "tokens": 5901,
+      "inference_ms": 10281.691200041678,
+      "verification_ms": 27983.52830001386,
+      "end_to_end_ms": 43814.086099970154,
+      "model_calls": 1,
+      "input_tokens": 5616,
+      "output_tokens": 285,
+      "inference_cost_usd": 0.0006471,
+      "stress_passed": 100,
+      "semantic_passed": true,
+      "tsan_passed": true
+    },
+    {
+      "id": "zero_shot-inventory_balance",
+      "arm": "zero_shot",
+      "outcome": "rejected",
+      "false_fix": true,
+      "tokens": 2100,
+      "inference_ms": 16917.961500003003,
+      "verification_ms": 28468.061799998395,
+      "end_to_end_ms": 51296.796899987385,
+      "model_calls": 1,
+      "input_tokens": 1437,
+      "output_tokens": 663,
+      "inference_cost_usd": 0.0003426,
+      "stress_passed": 0,
+      "semantic_passed": false,
+      "tsan_passed": false
+    },
+    {
+      "id": "zero_shot-nested_credit",
+      "arm": "zero_shot",
+      "outcome": "verified",
+      "false_fix": false,
+      "tokens": 1953,
+      "inference_ms": 13056.65380001301,
+      "verification_ms": 30262.619100045413,
+      "end_to_end_ms": 49029.025299998466,
+      "model_calls": 1,
+      "input_tokens": 1319,
+      "output_tokens": 634,
+      "inference_cost_usd": 0.0003221,
+      "stress_passed": 100,
+      "semantic_passed": true,
+      "tsan_passed": true
+    },
+    {
+      "id": "few_shot-nested_credit",
+      "arm": "few_shot",
+      "outcome": "verified",
+      "false_fix": false,
+      "tokens": 7522,
+      "inference_ms": 6205.053700017743,
+      "verification_ms": 28837.340800033417,
+      "end_to_end_ms": 40679.925800010096,
+      "model_calls": 1,
+      "input_tokens": 7277,
+      "output_tokens": 245,
+      "inference_cost_usd": 0.0008012,
+      "stress_passed": 100,
+      "semantic_passed": true,
+      "tsan_passed": true
+    },
+    {
+      "id": "few_shot-empty_queue_return",
+      "arm": "few_shot",
+      "outcome": "verified",
+      "false_fix": false,
+      "tokens": 7675,
+      "inference_ms": 7246.299599995837,
+      "verification_ms": 26995.574400003534,
+      "end_to_end_ms": 40089.36929999618,
+      "model_calls": 1,
+      "input_tokens": 7373,
+      "output_tokens": 302,
+      "inference_cost_usd": 0.0008279,
+      "stress_passed": 100,
+      "semantic_passed": true,
+      "tsan_passed": true
+    },
+    {
+      "id": "zero_shot-empty_queue_return",
+      "arm": "zero_shot",
+      "outcome": "rejected",
+      "false_fix": false,
+      "tokens": 2757,
+      "inference_ms": 31074.72759997472,
+      "verification_ms": null,
+      "end_to_end_ms": 31079.255799995735,
+      "model_calls": 1,
+      "input_tokens": 1415,
+      "output_tokens": 1342,
+      "inference_cost_usd": 0.0005441,
+      "invalid_output": true
+    }
+  ],
+  "arms": {
+    "zero_shot": {
+      "jobs": 4,
+      "verified_repairs": 2,
+      "verified_rate": 0.5,
+      "unknown": 0,
+      "false_fixes": 1,
+      "tokens": 8879,
+      "tokens_per_verified_repair": 4439.5,
+      "inference_latency": {
+        "observations": 4,
+        "median_ms": 16385.076300008222,
+        "total_ms": 76901.53400000418
+      },
+      "verification_latency": {
+        "observations": 3,
+        "median_ms": 28468.061799998395,
+        "total_ms": null
+      },
+      "end_to_end_latency": {
+        "observations": 4,
+        "median_ms": 49457.0475499786,
+        "total_ms": 181290.1477999403
+      }
+    },
+    "few_shot": {
+      "jobs": 4,
+      "verified_repairs": 3,
+      "verified_rate": 0.75,
+      "unknown": 0,
+      "false_fixes": 1,
+      "tokens": 26987,
+      "tokens_per_verified_repair": 8995.666666666666,
+      "inference_latency": {
+        "observations": 4,
+        "median_ms": 6981.891300005373,
+        "total_ms": 30450.527500070166
+      },
+      "verification_latency": {
+        "observations": 4,
+        "median_ms": 27544.52314999071,
+        "total_ms": 110921.96150001837
+      },
+      "end_to_end_latency": {
+        "observations": 4,
+        "median_ms": 40384.64755000314,
+        "total_ms": 163902.0915000001
+      }
+    }
+  },
+  "planned_jobs": 8,
+  "completed_jobs": 8
+}

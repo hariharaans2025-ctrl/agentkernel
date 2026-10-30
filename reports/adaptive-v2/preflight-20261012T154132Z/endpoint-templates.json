@@ -1,0 +1,2334 @@
+{
+  "data": [
+    {
+      "name": "BAAI/bge-en-icl",
+      "type": "embedding",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/BAAI/bge-en-icl",
+        "vendor": "BAAI",
+        "context_window_k": 32,
+        "embedding_dimensions": 4096,
+        "size_b": 7.11,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "classification",
+            "clustering",
+            "retrieval"
+          ],
+          "tags": [
+            "32K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "BAAI/bge-multilingual-gemma2",
+      "type": "embedding",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/BAAI/bge-multilingual-gemma2",
+        "vendor": "BAAI",
+        "context_window_k": 8,
+        "embedding_dimensions": 3584,
+        "size_b": 9.2,
+        "license": {
+          "url": "https://ai.google.dev/gemma/terms",
+          "name": "Gemma License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "classification",
+            "multilingual"
+          ],
+          "tags": [
+            "8K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "MiniMaxAI/MiniMax-M2.1",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
+        "vendor": "MiniMaxAI",
+        "context_window_k": 196,
+        "size_b": 229.0,
+        "license": {
+          "url": "https://github.com/MiniMax-AI/MiniMax-M2.1/blob/main/LICENSE",
+          "name": "Modified-MIT license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "reasoning",
+            "function_calling",
+            "code",
+            "context_and_rag"
+          ],
+          "tags": [
+            "196K context"
+          ],
+          "base_model_slug": "MiniMaxAI/MiniMax-M2.1-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "NousResearch/Hermes-4-405B",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/NousResearch/Hermes-4-405B",
+        "vendor": "NousResearch",
+        "context_window_k": 128,
+        "size_b": 405.0,
+        "license": {
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+          "name": "Llama 3.1 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "complex_writing",
+            "context_and_rag",
+            "function_calling",
+            "reasoning",
+            "summarization",
+            "responses_api"
+          ],
+          "tags": [
+            "128K context",
+            "JSON mode"
+          ],
+          "base_model_slug": "NousResearch/Hermes-4-405B-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "NousResearch/Hermes-4-70B",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/NousResearch/Hermes-4-70B",
+        "vendor": "NousResearch",
+        "context_window_k": 128,
+        "size_b": 70.0,
+        "license": {
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+          "name": "Llama 3.1 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "complex_writing",
+            "context_and_rag",
+            "function_calling",
+            "reasoning",
+            "summarization",
+            "responses_api"
+          ],
+          "tags": [
+            "128K context",
+            "JSON mode"
+          ],
+          "base_model_slug": "NousResearch/Hermes-4-70B-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PrimeIntellect/INTELLECT-3",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/PrimeIntellect/INTELLECT-3-FP8",
+        "vendor": "PrimeIntellect",
+        "context_window_k": 128,
+        "size_b": 111.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "reasoning",
+            "responses_api"
+          ],
+          "tags": [
+            "128K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": "PrimeIntellect/INTELLECT-3-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen2.5-Coder-7B-fast",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B",
+        "vendor": "Qwen",
+        "context_window_k": 32,
+        "size_b": 7.62,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code"
+          ],
+          "tags": [
+            "32K context",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+        "vendor": "Qwen",
+        "context_window_k": 32,
+        "size_b": 72.0,
+        "license": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct/blob/main/LICENSE",
+          "name": "Qwen License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "image",
+            "responses_api"
+          ],
+          "tags": [
+            "32K context"
+          ],
+          "base_model_slug": "Qwen/Qwen2.5-VL-72B-Instruct-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 235.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "context_and_rag"
+          ],
+          "tags": [
+            "262K context",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 235.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling",
+            "context_and_rag"
+          ],
+          "tags": [
+            "262K context",
+            "reasoning",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 30.5,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "context_and_rag",
+            "fine_tune",
+            "responses_api"
+          ],
+          "tags": [
+            "262K context",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-30B-A3B-Thinking-2507",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-Thinking-2507",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 30.5,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling",
+            "context_and_rag"
+          ],
+          "tags": [
+            "262K context",
+            "reasoning",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-32B",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-32B",
+        "vendor": "Qwen",
+        "context_window_k": 41,
+        "size_b": 32.8,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling",
+            "context_and_rag",
+            "fine_tune",
+            "responses_api"
+          ],
+          "tags": [
+            "41K context",
+            "reasoning",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": "Qwen/Qwen3-32B-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        },
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling",
+            "context_and_rag",
+            "fine_tune"
+          ],
+          "tags": [
+            "41K context",
+            "reasoning",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 30.5,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "context_and_rag",
+            "fine_tune"
+          ],
+          "tags": [
+            "262K context",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+        "vendor": "Qwen",
+        "context_window_k": 262,
+        "size_b": 480.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "context_and_rag",
+            "fine_tune"
+          ],
+          "tags": [
+            "262K context",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-Embedding-8B",
+      "type": "embedding",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+        "vendor": "Qwen",
+        "context_window_k": 41,
+        "embedding_dimensions": 4096,
+        "size_b": 8.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "pair classification",
+            "reranking",
+            "multilabel classification",
+            "multilingual",
+            "classification",
+            "clustering",
+            "retrieval"
+          ],
+          "tags": [
+            "32K context"
+          ],
+          "base_model_slug": "Qwen/Qwen3-Embedding-8B-FP16",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking",
+        "vendor": "Qwen",
+        "context_window_k": 128,
+        "size_b": 81.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling",
+            "context_and_rag"
+          ],
+          "tags": [
+            "128K context",
+            "reasoning",
+            "code",
+            "math",
+            "JSON mode"
+          ],
+          "base_model_slug": "Qwen/Qwen3-Next-80B-A3B-Thinking-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1-0528",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+        "vendor": "deepseek",
+        "context_window_k": 32,
+        "size_b": 685.0,
+        "license": {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/blob/main/LICENSE",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "reasoning",
+            "function_calling"
+          ],
+          "tags": [
+            "164K context"
+          ],
+          "base_model_slug": "deepseek-ai/DeepSeek-R1-0528-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3-0324",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+        "vendor": "deepseek",
+        "context_window_k": 32,
+        "size_b": 685.0,
+        "license": {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+          "name": "DeepSeek License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "function_calling",
+            "code",
+            "fine_tune"
+          ],
+          "tags": [
+            "128K context"
+          ],
+          "base_model_slug": "deepseek-ai/DeepSeek-V3-0324-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "google/gemma-2-2b-it",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/google/gemma-2-2b-it",
+        "vendor": "google",
+        "context_window_k": 8,
+        "size_b": 2.61,
+        "license": {
+          "url": "https://ai.google.dev/gemma/terms",
+          "name": "Gemma"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "text",
+            "fast_and_cost_efficient"
+          ],
+          "tags": [
+            "8K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "google/gemma-2-9b-it-fast",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/google/gemma-2-9b-it",
+        "vendor": "google",
+        "context_window_k": 8,
+        "size_b": 9.24,
+        "license": {
+          "url": "https://ai.google.dev/gemma/terms",
+          "name": "Gemma"
+        }
+      },
+      "flavors": {
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "fast_and_cost_efficient"
+          ],
+          "tags": [
+            "8K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "google/gemma-3-27b-it",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/google/gemma-3-27b-it",
+        "vendor": "google",
+        "context_window_k": 110,
+        "size_b": 27.0,
+        "license": {
+          "url": "https://ai.google.dev/gemma/terms",
+          "name": "Gemma License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "image"
+          ],
+          "tags": [
+            "131K context"
+          ],
+          "base_model_slug": "google/gemma-3-27b-it-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        },
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "image"
+          ],
+          "tags": [
+            "131K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "intfloat/e5-mistral-7b-instruct",
+      "type": "embedding",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/intfloat/e5-mistral-7b-instruct",
+        "vendor": "intfloat",
+        "context_window_k": 32,
+        "embedding_dimensions": 4096,
+        "size_b": 7.11,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "pair classification",
+            "reranking",
+            "multilabel classification"
+          ],
+          "tags": [
+            "32K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "meta-llama/Llama-3.3-70B-Instruct",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+        "vendor": "meta",
+        "context_window_k": 128,
+        "size_b": 70.6,
+        "license": {
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/LICENSE",
+          "name": "Llama 3.3 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "summarization",
+            "context_and_rag",
+            "code",
+            "function_calling",
+            "fine_tune",
+            "responses_api"
+          ],
+          "tags": [
+            "128K context"
+          ],
+          "base_model_slug": "meta-llama/Llama-3.3-70B-Instruct-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        },
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "summarization",
+            "context_and_rag",
+            "code",
+            "function_calling",
+            "fine_tune"
+          ],
+          "tags": [
+            "128K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "meta-llama/Llama-Guard-3-8B",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B",
+        "vendor": "meta",
+        "context_window_k": 128,
+        "size_b": 8.0,
+        "license": {
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+          "name": "Llama 3.1 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "text",
+            "guardrails"
+          ],
+          "tags": [
+            "128K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "meta-llama/Meta-Llama-3.1-8B-Instruct-fast",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "vendor": "meta",
+        "context_window_k": 128,
+        "size_b": 8.03,
+        "license": {
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+          "name": "Llama 3.1 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "summarization",
+            "context_and_rag",
+            "fast_and_cost_efficient",
+            "function_calling"
+          ],
+          "tags": [
+            "128K context",
+            "small",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-l40s-d": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        },
+        "fast": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "summarization",
+            "context_and_rag",
+            "fast_and_cost_efficient",
+            "function_calling"
+          ],
+          "tags": [
+            "128K context",
+            "small",
+            "JSON mode"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "moonshotai/Kimi-K2-Instruct",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+        "vendor": "moonshotai",
+        "context_window_k": 131,
+        "size_b": 1026.0,
+        "license": {
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE",
+          "name": "mit"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp4",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling"
+          ],
+          "tags": [
+            "131K context"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "moonshotai/Kimi-K2-Thinking",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking",
+        "vendor": "moonshotai",
+        "context_window_k": 262,
+        "size_b": 1026.0,
+        "license": {
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/main/LICENSE",
+          "name": "mit"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "int4",
+          "use_cases": [
+            "text",
+            "code",
+            "complex_writing",
+            "context_and_rag",
+            "function_calling",
+            "reasoning",
+            "summarization"
+          ],
+          "tags": [
+            "262K context",
+            "reasoning",
+            "code",
+            "JSON mode",
+            "math"
+          ],
+          "base_model_slug": "moonshotai/Kimi-K2-Thinking-INT4",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "moonshotai/Kimi-K2.5",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "vendor": "moonshotai",
+        "context_window_k": 256,
+        "size_b": 1026.0,
+        "license": {
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE",
+          "name": "mit"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "int4",
+          "use_cases": [
+            "text",
+            "image",
+            "code",
+            "complex_writing",
+            "context_and_rag",
+            "function_calling",
+            "reasoning",
+            "summarization",
+            "responses_api"
+          ],
+          "tags": [
+            "256K context",
+            "reasoning",
+            "code",
+            "JSON mode",
+            "math"
+          ],
+          "base_model_slug": "moonshotai/Kimi-K2.5-INT4",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "nvidia/Cosmos3-Super-Reasoner",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/nvidia-cosmos-ea/Cosmos3-Super-Reasoner",
+        "vendor": "nvidia",
+        "context_window_k": 256,
+        "size_b": 33.0,
+        "license": {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+          "name": "nvidia-open-model-license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "text",
+            "image",
+            "video",
+            "summarization",
+            "context_and_rag",
+            "reasoning",
+            "function_calling"
+          ],
+          "tags": [
+            "reasoning",
+            "JSON mode"
+          ],
+          "base_model_slug": "nvidia/Cosmos3-Super-Reasoner-FP16",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+        "vendor": "nvidia",
+        "context_window_k": 128,
+        "size_b": 253.0,
+        "license": {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+          "name": "nvidia-open-model-license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "summarization",
+            "context_and_rag",
+            "code",
+            "reasoning",
+            "complex_writing"
+          ],
+          "tags": [
+            "128K context",
+            "JSON mode"
+          ],
+          "base_model_slug": "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8",
+        "vendor": "nvidia",
+        "context_window_k": 262,
+        "size_b": 30.0,
+        "license": {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+          "name": "nvidia-open-model-license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "reasoning",
+            "function_calling",
+            "code",
+            "context_and_rag",
+            "responses_api"
+          ],
+          "tags": [
+            "262K context"
+          ],
+          "base_model_slug": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4
+                ],
+                "max_replicas_allowed": 4
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "nvidia/Nemotron-3-Nano-Omni",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8",
+        "vendor": "nvidia",
+        "context_window_k": 262,
+        "size_b": 30.0,
+        "license": {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+          "name": "nvidia-open-model-license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "image",
+            "reasoning",
+            "function_calling",
+            "code",
+            "context_and_rag",
+            "responses_api"
+          ],
+          "tags": [
+            "reasoning",
+            "JSON mode"
+          ],
+          "base_model_slug": "nvidia/Nemotron-3-Nano-Omni-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "nvidia/Nemotron-Nano-V2-12b",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/placeholder",
+        "vendor": "nvidia",
+        "context_window_k": 128,
+        "size_b": 12.0,
+        "license": {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+          "name": "nvidia-open-model-license"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "bf16",
+          "use_cases": [
+            "text",
+            "image",
+            "video",
+            "reasoning"
+          ],
+          "tags": [
+            "128K context"
+          ],
+          "base_model_slug": "nvidia/Nemotron-Nano-V2-12b-BF16",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "openai/gpt-oss-120b",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/openai/gpt-oss-120b",
+        "vendor": "openai",
+        "context_window_k": 131,
+        "size_b": 120.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp4",
+          "use_cases": [
+            "text",
+            "code",
+            "fine_tune",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "131K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": "openai/gpt-oss-120b-FP4",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        },
+        "fast": {
+          "quantization": "fp4",
+          "use_cases": [
+            "text",
+            "code",
+            "fine_tune",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "131K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 8
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "openai/gpt-oss-20b",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/openai/gpt-oss-20b",
+        "vendor": "openai",
+        "context_window_k": 131,
+        "size_b": 20.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp4",
+          "use_cases": [
+            "text",
+            "code",
+            "fine_tune",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "131K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": "openai/gpt-oss-20b-FP4",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "openbmb/MiniCPM-V-4_5",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/openbmb/MiniCPM-V-4_5",
+        "vendor": "openbmb",
+        "context_window_k": 32,
+        "size_b": 8.0,
+        "license": {
+          "url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/LICENSE",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp16",
+          "use_cases": [
+            "text",
+            "image",
+            "summarization",
+            "context_and_rag"
+          ],
+          "tags": [
+            "JSON mode"
+          ],
+          "base_model_slug": "openbmb/MiniCPM-V-4_5-FP16",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen/qwen3-vl-32b",
+      "type": "image2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct",
+        "vendor": "Qwen",
+        "context_window_k": 256,
+        "size_b": 32.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "name": "Apache 2.0 License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "image"
+          ],
+          "tags": [
+            "256K context",
+            "image"
+          ],
+          "base_model_slug": "Qwen/Qwen3-VL-32B-Instruct-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  1
+                ],
+                "max_replicas_allowed": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "zai-org/GLM-4.5",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/zai-org/GLM-4.5",
+        "vendor": "zai-org",
+        "context_window_k": 128,
+        "size_b": 358.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "128K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": "zai-org/GLM-4.5-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "zai-org/GLM-4.5-Air",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/zai-org/GLM-4.5-Air",
+        "vendor": "zai-org",
+        "context_window_k": 128,
+        "size_b": 111.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "128K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": "zai-org/GLM-4.5-Air-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  2,
+                  4,
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "zai-org/GLM-4.7-FP8",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/zai-org/GLM-4.7-FP8",
+        "vendor": "zai-org",
+        "context_window_k": 200,
+        "size_b": 358.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "code",
+            "function_calling",
+            "reasoning"
+          ],
+          "tags": [
+            "200K context",
+            "code",
+            "JSON mode",
+            "math",
+            "reasoning"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h100-sxm": {
+                "allowed_regions": [
+                  "eu-north1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              },
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "zai-org/GLM-5.1",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/zai-org/GLM-5.1",
+        "vendor": "zai-org",
+        "context_window_k": 200,
+        "size_b": 750.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "reasoning",
+            "function_calling",
+            "context_and_rag",
+            "code",
+            "responses_api"
+          ],
+          "tags": [
+            "long context",
+            "reasoning",
+            "code",
+            "JSON mode",
+            "math"
+          ],
+          "base_model_slug": "zai-org/GLM-5.1-FP8",
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "zai-org/GLM-5.2",
+      "type": "text2text",
+      "metadata": {
+        "huggingface_url": "https://huggingface.co/zai-org/GLM-5.2",
+        "vendor": "zai-org",
+        "context_window_k": 432,
+        "size_b": 750.0,
+        "license": {
+          "url": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md",
+          "name": "MIT License"
+        }
+      },
+      "flavors": {
+        "base": {
+          "quantization": "fp8",
+          "use_cases": [
+            "text",
+            "reasoning",
+            "function_calling",
+            "context_and_rag",
+            "code"
+          ],
+          "tags": [
+            "long context",
+            "reasoning",
+            "code",
+            "JSON mode",
+            "math"
+          ],
+          "base_model_slug": null,
+          "available_configurations": {
+            "gpu_configurations": {
+              "gpu-h200-sxm": {
+                "allowed_regions": [
+                  "us-central1"
+                ],
+                "allowed_gpu_counts": [
+                  8
+                ],
+                "max_replicas_allowed": 32
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "object": "list"
+}

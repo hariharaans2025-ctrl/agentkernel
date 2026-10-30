@@ -1,0 +1,239 @@
+{
+  "original": {
+    "schema_version": 1,
+    "source_sha256": "5e8cfcca6a08d5468b68181fa33732e1a8f66389ae428ee4bfef061c1d558faa",
+    "findings": [
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->queue_lock",
+        "wait": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 17,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 15,
+          "text": "pthread_mutex_lock(&q->queue_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->queue_lock",
+            "function": "queue_inspect",
+            "file": "src/queue.c",
+            "line": 37,
+            "text": "pthread_mutex_lock(&q->queue_lock)"
+          }
+        ],
+        "fingerprint": "ad23967428e4161d859dc2a0f5ab4db2609fcf226cc8fad30ca08835d0cf6200"
+      },
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->stats_lock",
+        "wait": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 35,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 34,
+          "text": "pthread_mutex_lock(&q->stats_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->stats_lock",
+            "function": "queue_process_one",
+            "file": "src/queue.c",
+            "line": 19,
+            "text": "pthread_mutex_lock(&q->stats_lock)"
+          }
+        ],
+        "fingerprint": "06e7eda9fe520f565327306af6e8edb7326aa88dcc002998a85e8930e9b71563"
+      }
+    ],
+    "coverage_gaps": [
+      {
+        "function": "queue_init",
+        "reason": "Unsupported control flow: ForStmt"
+      }
+    ],
+    "interpretation": "Advisory possible paths, not proof of deadlock or safety. Matching expressions across functions require the same runtime object and concurrent barrier participants.",
+    "limitations": [
+      "Direct pthread calls only; no interprocedural or pointer-alias analysis.",
+      "Assumes successful mutex lock/unlock; branch feasibility and barrier counts are not solved.",
+      "Unsupported control flow and nested/indirect calls are reported as coverage gaps.",
+      "No findings does not mean safe. Runtime verification remains required."
+    ]
+  },
+  "failed_full": {
+    "schema_version": 1,
+    "source_sha256": "fb6c5bedd03baa5c9a21fef98cf78c5f01cfd5f2cdcf7bb610d5dbe791b4feea",
+    "findings": [
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->queue_lock",
+        "wait": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 17,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 15,
+          "text": "pthread_mutex_lock(&q->queue_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->queue_lock",
+            "function": "queue_inspect",
+            "file": "src/queue.c",
+            "line": 34,
+            "text": "pthread_mutex_lock(&q->queue_lock)"
+          }
+        ],
+        "fingerprint": "567ff5b5828567fee4bf024f7d0a6ad458e0e80e221efa49626d5f56d3e89e63"
+      },
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->queue_lock",
+        "wait": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 35,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 34,
+          "text": "pthread_mutex_lock(&q->queue_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->queue_lock",
+            "function": "queue_process_one",
+            "file": "src/queue.c",
+            "line": 15,
+            "text": "pthread_mutex_lock(&q->queue_lock)"
+          }
+        ],
+        "fingerprint": "10ce53b6588417782d9b720fe04bf6c6489b503bae23e219ab671bc9d7d728e6"
+      }
+    ],
+    "coverage_gaps": [
+      {
+        "function": "queue_init",
+        "reason": "Unsupported control flow: ForStmt"
+      }
+    ],
+    "interpretation": "Advisory possible paths, not proof of deadlock or safety. Matching expressions across functions require the same runtime object and concurrent barrier participants.",
+    "limitations": [
+      "Direct pthread calls only; no interprocedural or pointer-alias analysis.",
+      "Assumes successful mutex lock/unlock; branch feasibility and barrier counts are not solved.",
+      "Unsupported control flow and nested/indirect calls are reported as coverage gaps.",
+      "No findings does not mean safe. Runtime verification remains required."
+    ]
+  },
+  "failed_compact": {
+    "schema_version": 1,
+    "source_sha256": "fb6c5bedd03baa5c9a21fef98cf78c5f01cfd5f2cdcf7bb610d5dbe791b4feea",
+    "findings": [
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->queue_lock",
+        "wait": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 17,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_process_one",
+          "file": "src/queue.c",
+          "line": 15,
+          "text": "pthread_mutex_lock(&q->queue_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->queue_lock",
+            "function": "queue_inspect",
+            "file": "src/queue.c",
+            "line": 34,
+            "text": "pthread_mutex_lock(&q->queue_lock)"
+          }
+        ],
+        "fingerprint": "567ff5b5828567fee4bf024f7d0a6ad458e0e80e221efa49626d5f56d3e89e63"
+      },
+      {
+        "kind": "possible_barrier_wait_while_holding_mutex",
+        "barrier": "q->reproduce_barrier",
+        "mutex": "q->queue_lock",
+        "wait": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 35,
+          "text": "pthread_barrier_wait(&q->reproduce_barrier)"
+        },
+        "acquisition": {
+          "function": "queue_inspect",
+          "file": "src/queue.c",
+          "line": 34,
+          "text": "pthread_mutex_lock(&q->queue_lock)"
+        },
+        "possible_other_participant_acquisitions": [
+          {
+            "object": "q->queue_lock",
+            "function": "queue_process_one",
+            "file": "src/queue.c",
+            "line": 15,
+            "text": "pthread_mutex_lock(&q->queue_lock)"
+          }
+        ],
+        "fingerprint": "10ce53b6588417782d9b720fe04bf6c6489b503bae23e219ab671bc9d7d728e6"
+      }
+    ],
+    "coverage_gaps": [
+      {
+        "function": "queue_init",
+        "reason": "Unsupported control flow: ForStmt"
+      }
+    ],
+    "interpretation": "Advisory possible paths, not proof of deadlock or safety. Matching expressions across functions require the same runtime object and concurrent barrier participants.",
+    "limitations": [
+      "Direct pthread calls only; no interprocedural or pointer-alias analysis.",
+      "Assumes successful mutex lock/unlock; branch feasibility and barrier counts are not solved.",
+      "Unsupported control flow and nested/indirect calls are reported as coverage gaps.",
+      "No findings does not mean safe. Runtime verification remains required."
+    ]
+  },
+  "verified_manual": {
+    "schema_version": 1,
+    "source_sha256": "4d8f486a9d92e595ae5ff4a4ad9b437196c5727043c16ba4a6fc52d92db981cd",
+    "findings": [],
+    "coverage_gaps": [
+      {
+        "function": "queue_init",
+        "reason": "Unsupported control flow: ForStmt"
+      }
+    ],
+    "interpretation": "Advisory possible paths, not proof of deadlock or safety. Matching expressions across functions require the same runtime object and concurrent barrier participants.",
+    "limitations": [
+      "Direct pthread calls only; no interprocedural or pointer-alias analysis.",
+      "Assumes successful mutex lock/unlock; branch feasibility and barrier counts are not solved.",
+      "Unsupported control flow and nested/indirect calls are reported as coverage gaps.",
+      "No findings does not mean safe. Runtime verification remains required."
+    ]
+  }
+}

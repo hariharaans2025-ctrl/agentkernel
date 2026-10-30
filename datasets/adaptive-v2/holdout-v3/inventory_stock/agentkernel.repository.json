@@ -1,0 +1,71 @@
+{
+  "source_files": [
+    "solution.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "solution.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "schema_version": 1,
+  "project": "inventory_stock",
+  "description": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+  "origin": "synthetic_example",
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "solution.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "budgets": {
+    "max_model_calls": 3,
+    "max_total_tokens": 150144,
+    "max_input_tokens_per_call": 48000,
+    "max_output_tokens_per_call": 2048,
+    "max_wall_seconds": 1800
+  }
+}

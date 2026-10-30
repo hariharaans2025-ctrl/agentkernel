@@ -1,0 +1,65 @@
+[
+  {
+    "kind": "data_race",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [
+      {
+        "type": "data_race",
+        "severity": "error",
+        "file": null,
+        "line": null,
+        "thread_a": "T1",
+        "thread_b": "T2",
+        "memory_location": "0x5555569e66b8",
+        "raw_summary": "WARNING: ThreadSanitizer: data race (pid=9)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=11, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=12, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n\n"
+      }
+    ],
+    "fingerprint": "70a93cf3807283f265e0e0750cdb667691c6fa3d69f052f98f5be4b3b659c92a",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "data_race",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [
+      {
+        "type": "data_race",
+        "severity": "error",
+        "file": null,
+        "line": null,
+        "thread_a": "T1",
+        "thread_b": "T2",
+        "memory_location": "0x5555569e66b8",
+        "raw_summary": "WARNING: ThreadSanitizer: data race (pid=9)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=11, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=12, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n\n"
+      }
+    ],
+    "fingerprint": "70a93cf3807283f265e0e0750cdb667691c6fa3d69f052f98f5be4b3b659c92a",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "data_race",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [
+      {
+        "type": "data_race",
+        "severity": "error",
+        "file": null,
+        "line": null,
+        "thread_a": "T1",
+        "thread_b": "T2",
+        "memory_location": "0x5555569e66b8",
+        "raw_summary": "WARNING: ThreadSanitizer: data race (pid=9)\n  Write of size 4 at 0x5555569e66b8 by thread T1:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Previous write of size 4 at 0x5555569e66b8 by thread T2:\n    #0 <null> <null> (race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0x62cdb) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n\n  Thread T1 (tid=11, running) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe659b) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=12, finished) created by main thread at:\n    #0 <null> <null> (race_racy+0x62d85) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #1 <null> <null> (race_racy+0xe65b2) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/race_racy+0xe6671) (BuildId: b8a7bcac500cc892cb1ddb328cec711058692ff6) \n==================\n\n"
+      }
+    ],
+    "fingerprint": "70a93cf3807283f265e0e0750cdb667691c6fa3d69f052f98f5be4b3b659c92a",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  }
+]

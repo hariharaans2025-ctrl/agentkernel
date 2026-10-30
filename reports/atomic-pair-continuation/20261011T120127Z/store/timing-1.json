@@ -1,0 +1,17 @@
+{
+  "command": [
+    "./bench_store",
+    "bench"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"mode\":2,\"lock_free\":1,\"iterations\":500000,\"single_ns_per_op\":1.2234,\"writer_ns_per_op\":3.5135,\"reader_ns_per_op\":3.5331,\"concurrent_wall_ns_per_op\":1.8503,\"clock_resolution_ns\":1}\n",
+  "stderr": "",
+  "duration_ms": 9.722436999999973,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "84459e36-0e6d-4226-a5e1-e5b3b7e5ded3",
+    "transport_wall_ms": 1623.5521000344306
+  }
+}

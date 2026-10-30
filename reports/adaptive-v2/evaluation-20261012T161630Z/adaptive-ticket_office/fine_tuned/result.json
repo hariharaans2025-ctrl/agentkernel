@@ -1,0 +1,16 @@
+{
+  "stage": "fine_tuned",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 493,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 352,
+  "output_tokens": 141,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct + AgentKernel LoRA",
+  "adapter_sha256": "2891d74130cea2b0d690be2c8048267234030e64199613a97b29a046926b2c94",
+  "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int value = office->next_ticket;\\n    sched_yield();\\n    pthread_mutex_unlock(&office->mutex);\\n    return value;\\n}\\n\"}}",
+  "error": "ValueError",
+  "inference_ms": 21663.09319999982
+}

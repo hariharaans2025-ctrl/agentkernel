@@ -1,0 +1,257 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 0,
+  "failed_runs": 100,
+  "race_count": 0,
+  "deadlock_count": 100,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 103,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 255859.70540000015,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "-Iinclude",
+        "src/main.c",
+        "src/queue.c",
+        "-o",
+        "job_service"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 216.882597,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+        "transport_wall_ms": 2410.4951999997866
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./job_service",
+            "--smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=1 checksum=1 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.4192350000000205,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+            "transport_wall_ms": 4020.3089999999975
+          }
+        },
+        {
+          "command": [
+            "./job_service",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.3132740000000327,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+            "transport_wall_ms": 1811.569899999995
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 100,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "POSSIBLE_DEADLOCK": 100
+      },
+      "duration_ms": 233544.6482000002,
+      "representative_runs": [
+        {
+          "run_id": "job-queue-service:1",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+            "batch_transport_wall_ms": 23290.42100000015
+          },
+          "stdout": "",
+          "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n"
+        },
+        {
+          "run_id": "job-queue-service:2",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+            "batch_transport_wall_ms": 23290.42100000015
+          },
+          "stdout": "",
+          "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n"
+        },
+        {
+          "run_id": "job-queue-service:3",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "38c3b7cf-440e-4191-beb1-6642bf6e2af6",
+            "batch_transport_wall_ms": 23290.42100000015
+          },
+          "stdout": "",
+          "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n"
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "100 jobs exactly once, checksum 5050, queue drained",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "-Iinclude",
+              "src/main.c",
+              "src/queue.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.769367,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "a54428b8-d9e1-471b-9d83-e5826ed9ac08",
+              "transport_wall_ms": 2301.9626000000244
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.4966799999999743,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "a54428b8-d9e1-471b-9d83-e5826ed9ac08",
+              "transport_wall_ms": 1693.9477999999326
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "failed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 3,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "POSSIBLE_DEADLOCK": 3
+        },
+        "duration_ms": 7803.973099999894,
+        "representative_runs": [
+          {
+            "run_id": "job-queue-service:1",
+            "classification": "POSSIBLE_DEADLOCK",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+              "batch_transport_wall_ms": 7801.580800000011
+            },
+            "stdout": "",
+            "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n"
+          },
+          {
+            "run_id": "job-queue-service:2",
+            "classification": "POSSIBLE_DEADLOCK",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+              "batch_transport_wall_ms": 7801.580800000011
+            },
+            "stdout": "",
+            "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n"
+          },
+          {
+            "run_id": "job-queue-service:3",
+            "classification": "POSSIBLE_DEADLOCK",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+              "batch_transport_wall_ms": 7801.580800000011
+            },
+            "stdout": "",
+            "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n"
+          }
+        ]
+      }
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": true,
+  "sanitizer_passed": false,
+  "semantic_regression": false,
+  "false_fix": true
+}

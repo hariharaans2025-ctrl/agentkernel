@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 0,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 19932.59979999857,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "writer.c",
+        "reader.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 217.795676,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "33503d16-0f5c-4e04-b116-c444d41645c2",
+        "transport_wall_ms": 1436.4415000309236
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.665822999999957,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "33503d16-0f5c-4e04-b116-c444d41645c2",
+            "transport_wall_ms": 1814.0590999973938
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 7835.4703999939375,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "writer.c",
+              "reader.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.62206499999996,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "c0e255d6-ceb7-45ac-a678-33a64ee02b7d",
+              "transport_wall_ms": 1464.4813000340946
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.388616000000011,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "c0e255d6-ceb7-45ac-a678-33a64ee02b7d",
+              "transport_wall_ms": 2015.3945999918506
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "passed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 3
+        },
+        "duration_ms": 3015.695100009907,
+        "representative_runs": []
+      }
+    }
+  },
+  "reason": "The patch passed the configured verification campaign.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": true,
+  "semantic_regression": false,
+  "false_fix": false
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "account_inversion.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 166.434947,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "79077cd9-c2a0-4e10-9658-5a5c42a1c2c5",
+    "transport_wall_ms": 17656.41490003327
+  },
+  "success": true
+}

@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 0,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 30181.17230000007,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "solution.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 216.84202600000003,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9cad2c18-7f84-488b-89eb-f1774417366d",
+        "transport_wall_ms": 2173.631099999511
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 5.549442999999988,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9cad2c18-7f84-488b-89eb-f1774417366d",
+            "transport_wall_ms": 1638.9567000005627
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 17497.28270000014,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Publish and read a generation/checksum pair consistently. Every checksum must equal generation XOR 0x5a5a, and the final generation must remain 12000. Retain every scheduling hook.",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "solution.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.99637600000005,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "1af7cfc0-5da9-410a-ba7e-a2d12bac1e78",
+              "transport_wall_ms": 2216.998799999601
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 5.722192000000015,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "1af7cfc0-5da9-410a-ba7e-a2d12bac1e78",
+              "transport_wall_ms": 1672.4425000002157
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "passed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 3
+        },
+        "duration_ms": 2729.7316000003775,
+        "representative_runs": []
+      }
+    }
+  },
+  "reason": "The patch passed the configured verification campaign.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": true,
+  "semantic_regression": false,
+  "false_fix": false
+}

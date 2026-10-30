@@ -1,0 +1,99 @@
+{
+  "mode": "adaptive",
+  "status": "verified",
+  "attempts": [
+    {
+      "stage": "fine_tuned",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 387,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": false,
+      "input_tokens": 273,
+      "output_tokens": 114,
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+      "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+      "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    pthread_mutex_lock(&account->mutex);\\n    observed += amount;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}}",
+      "error": "ValueError",
+      "inference_ms": 16805.957799999305
+    },
+    {
+      "stage": "super",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 5015,
+      "cost_usd": 0.0017805,
+      "reserved_usd": 0.0162432,
+      "false_fix": true,
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "training_examples": [
+        "deadlock_004"
+      ],
+      "input_tokens": 4555,
+      "output_tokens": 460,
+      "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+      "inference_ms": 3202.2139000000607,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,15 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n-    sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": false
+      },
+      "verification_ms": 28357.32299999927
+    },
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 6902,
+      "cost_usd": 0.01044,
+      "reserved_usd": 0.054144,
+      "false_fix": false,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "training_examples": [
+        "deadlock_004"
+      ],
+      "input_tokens": 5133,
+      "output_tokens": 1769,
+      "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access while preserving the sched_yield hook for testing.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    sched_yield();\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+      "inference_ms": 7076.661000000058,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n     sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 81617.76939999982
+    }
+  ],
+  "tokens": 12304,
+  "cost_usd": 0.012220499999999999,
+  "reserved_usd": 0.0703872,
+  "model_calls": 3,
+  "remote_model_calls": 2,
+  "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "end_to_end_ms": 173304.88129999957,
+  "false_fix": true,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n     sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+  "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access while preserving the sched_yield hook for testing.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    sched_yield();\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "inference_ms": 27084.832699999424,
+  "verification_ms": 109975.09239999909
+}

@@ -1,0 +1,73 @@
+{
+  "task_id": "audit_1",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\adaptive-v3\\product-v1\\tasks\\audit_1",
+  "source_files": [
+    "commit.c",
+    "read.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "commit.c",
+    "read.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "stress_runs": 3,
+  "max_runtime_seconds": 2,
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Each of 160 updates increments value and invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "Each of 160 updates increments value and invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+    "split": "train",
+    "family": "audit",
+    "variant": 1
+  }
+}

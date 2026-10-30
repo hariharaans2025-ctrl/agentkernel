@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\nvoid update_pair(int n) {\n    pthread_mutex_lock(&guard);\n    left = n;\n    right = -n;\n    pthread_mutex_unlock(&guard);\n}\nint snapshot_ok(void) {\n    pthread_mutex_lock(&guard);\n    int a = left;\n    int b = right;\n    pthread_mutex_unlock(&guard);\n    return a + b == 0;\n}\n"
+}

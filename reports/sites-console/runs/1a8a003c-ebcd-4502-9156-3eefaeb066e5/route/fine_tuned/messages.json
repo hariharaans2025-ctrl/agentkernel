@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Repair C/pthreads synchronization. Preserve all original functional work, interfaces and scheduling hooks. Return ONLY complete corrected editable files using exactly this format:\n<<<FILE:filename.c>>>\nraw C source with actual newlines\n<<<END_FILE>>>\nDo not JSON-encode the source, do not escape quotes/newlines, and do not use Markdown. Do not add or remove sched_yield calls. Never modify protected headers or tests."
+  },
+  {
+    "role": "user",
+    "content": "Task: Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.\nRequirements: Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.\nEditable ORIGINAL files:\n<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield();\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n<<<END_FILE>>>\nRequired sched_yield call count for solution.c: 2\nProtected header state.h:\n#ifndef STATE_H\n#define STATE_H\n#include <pthread.h>\n#include <stdatomic.h>\ntypedef struct { pthread_mutex_t mutex; pthread_barrier_t barrier; _Atomic int arrivals; int value; int observed; } Cache;\nvoid meet(Cache *);\nvoid publish_cache(Cache *);\nvoid observe_cache(Cache *);\n#endif\n\n"
+  }
+]

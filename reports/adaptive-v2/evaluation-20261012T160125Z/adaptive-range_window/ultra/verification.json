@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 0,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 50687.583599999925,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "solution.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 217.022435,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "787cc162-aaf5-4451-8bb4-ceacc0d1aa63",
+        "transport_wall_ms": 3711.017399999946
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.6612770000000183,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "787cc162-aaf5-4451-8bb4-ceacc0d1aa63",
+            "transport_wall_ms": 3786.8853999998464
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 29820.22490000054,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Publish and read both range endpoints as one consistent snapshot. Every observed window must have width 16; final window is 10000..10016.",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "solution.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.57123800000005,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "dc5f21de-bfb1-4087-87bd-0fd8c170bf4a",
+              "transport_wall_ms": 3707.8140999992684
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.5659830000000503,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "dc5f21de-bfb1-4087-87bd-0fd8c170bf4a",
+              "transport_wall_ms": 3708.7258999999904
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "passed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 3
+        },
+        "duration_ms": 2278.476700000283,
+        "representative_runs": []
+      }
+    }
+  },
+  "reason": "The patch passed the configured verification campaign.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": true,
+  "semantic_regression": false,
+  "false_fix": false
+}

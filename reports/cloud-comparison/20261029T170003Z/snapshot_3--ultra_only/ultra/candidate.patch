@@ -1,0 +1,12 @@
+--- a/publisher.c
++++ b/publisher.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }
++void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }
+--- a/snapshot.c
++++ b/snapshot.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }
++int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }

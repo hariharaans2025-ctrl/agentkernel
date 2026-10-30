@@ -1,0 +1,21 @@
+{
+  "stage": "ultra",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1331,
+  "cost_usd": 0.001589,
+  "false_fix": false,
+  "recovery": null,
+  "reserved_usd": 0.036576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "7fd022aebdfd489fb58872b60ba75d54",
+  "inference_ms": 1422.2735999996985,
+  "input_tokens": 1202,
+  "output_tokens": 129,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END\n@@ REPLACE inspect.c 2-2\nint inspect(State*s){pthread_mutex_lock(&s->mutex);s->cancelled++;int n=s->reserved;pthread_mutex_unlock(&s->mutex);return n;}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": "block_no_change",
+  "category": "schema",
+  "parse_notes": null
+}

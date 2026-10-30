@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "project": "github_mbrossard_threadpool",
+  "description": "Preserve this public thread-pool implementation's API, license and original tests. Two concurrent producers submit 256 uniquely identified jobs to four workers; every callback must execute exactly once, with correct totals. Repeat pool creation and complete graceful/waited destruction safely. Repair observed races, invalid mutex lifecycle, deadlock or lost work without removing functional work or synchronization. Only the listed implementation source is editable; headers, upstream tests and acceptance harness are protected.",
+  "origin": "user_repository",
+  "source_files": [
+    "src/threadpool.c"
+  ],
+  "support_files": [
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "acceptance/semantics.c",
+    "acceptance/upstream_tests.py",
+    "package.json",
+    "src/threadpool.h",
+    "tests/heavy.c",
+    "tests/shutdown.c",
+    "tests/thrdtest.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-std=gnu11",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-Isrc",
+    "-I.",
+    "src/threadpool.c",
+    "acceptance/semantics.c",
+    "-o",
+    "acceptance_app"
+  ],
+  "run_command": [
+    "./acceptance_app"
+  ],
+  "binary_path": "acceptance_app",
+  "expected_behavior": "PASS",
+  "compile_timeout_seconds": 30,
+  "max_runtime_seconds": 15,
+  "baseline_runs": 3,
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "python3",
+        "acceptance/upstream_tests.py",
+        "mbrossard"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+        "build_command": [
+          "gcc",
+          "-std=gnu11",
+          "-pthread",
+          "-g",
+          "-O1",
+          "-Isrc",
+          "-I.",
+          "src/threadpool.c",
+          "acceptance/semantics.c",
+          "-o",
+          "acceptance_app"
+        ],
+        "run_command": [
+          "./acceptance_app"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "budgets": {
+    "max_model_calls": 3,
+    "max_total_tokens": 160000,
+    "max_input_tokens_per_call": 48000,
+    "max_output_tokens_per_call": 8192,
+    "max_wall_seconds": 1800
+  },
+  "execution_backend": "nebius",
+  "max_upload_bytes": 20000000
+}

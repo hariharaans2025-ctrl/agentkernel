@@ -1,0 +1,73 @@
+{
+  "task_id": "snapshot_1",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\adaptive-v3\\product-v1\\tasks\\snapshot_1",
+  "source_files": [
+    "publisher.c",
+    "snapshot.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "publisher.c",
+    "snapshot.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "stress_runs": 3,
+  "max_runtime_seconds": 2,
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Publish generation tags and XOR checksums atomically; each snapshot must observe a consistent pair. Preserve all source work and both yield hooks.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "Publish generation tags and XOR checksums atomically; each snapshot must observe a consistent pair. Preserve all source work and both yield hooks.",
+    "split": "train",
+    "family": "snapshot",
+    "variant": 1
+  }
+}

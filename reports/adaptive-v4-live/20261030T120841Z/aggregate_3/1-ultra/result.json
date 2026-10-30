@@ -1,0 +1,57 @@
+{
+  "stage": "ultra",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1265,
+  "cost_usd": 0.001431,
+  "false_fix": true,
+  "recovery": null,
+  "reserved_usd": 0.036576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "324e8039cd894073bdc232e411be83ad",
+  "inference_ms": 1313.7347000001682,
+  "input_tokens": 1182,
+  "output_tokens": 83,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE record.c 1-2\n#include \"state.h\"\nvoid record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "blocks": [
+      {
+        "file": "record.c",
+        "start": 1,
+        "end": 2,
+        "replacement_lines": 2
+      }
+    ]
+  },
+  "patch": "--- a/record.c\n+++ b/record.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}\n+void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n",
+  "verification_phases_ms": {
+    "apply": 3387.0514000000185,
+    "build": 2298.6869000001207,
+    "stress": 9547.788899999887,
+    "tsan_build": 2322.0062999998845,
+    "original_tests_and_semantics": 5955.749100000048
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 97,
+    "total_runs": 100,
+    "semantic_passed": false,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 20124.23119999994,
+  "taxonomy": {
+    "primary": "stress",
+    "gates": [
+      "stress",
+      "semantics",
+      "tsan"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+--- a/solution.c
++++ b/solution.c
+@@ -3,14 +3,12 @@
+ void set_window(Window *window, int lower, int upper) {
+     pthread_mutex_lock(&window->mutex);
+     window->lower = lower;
+-    pthread_mutex_unlock(&window->mutex);
+-    sched_yield();
+-    pthread_mutex_lock(&window->mutex);
+     window->upper = upper;
+     pthread_mutex_unlock(&window->mutex);
+ }
+ void get_window(Window *window, int *lower, int *upper) {
++    pthread_mutex_lock(&window->mutex);
+     *lower = window->lower;
+-    sched_yield();
+     *upper = window->upper;
++    pthread_mutex_unlock(&window->mutex);
+ }

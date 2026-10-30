@@ -1,0 +1,16 @@
+{
+  "stage": "base",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 499,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 352,
+  "output_tokens": 147,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+  "adapter_sha256": null,
+  "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int count = office->next_ticket;\\n    pthread_mutex_unlock(&office->mutex);\\n    return count;\\n}\\n\"\n  }\n}\n```",
+  "error": "JSONDecodeError",
+  "inference_ms": 18130.21149999986
+}

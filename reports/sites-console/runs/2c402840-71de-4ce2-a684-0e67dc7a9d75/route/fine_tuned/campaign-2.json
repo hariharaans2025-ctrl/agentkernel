@@ -1,0 +1,64 @@
+{
+  "task_id": "inventory_stock",
+  "runs": [
+    {
+      "run_id": "inventory_stock:1",
+      "start_time": "2026-10-12T16:51:19.449046Z",
+      "duration_ms": 17.93047000000003,
+      "exit_code": 0,
+      "stdout": "PASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "0b8823ec-9974-4f4a-8479-e3cb63646b57",
+        "batch_transport_wall_ms": 1419.8776000012003
+      }
+    },
+    {
+      "run_id": "inventory_stock:2",
+      "start_time": "2026-10-12T16:51:19.507924Z",
+      "duration_ms": 17.05300300000001,
+      "exit_code": 0,
+      "stdout": "PASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "0b8823ec-9974-4f4a-8479-e3cb63646b57",
+        "batch_transport_wall_ms": 1419.8776000012003
+      }
+    },
+    {
+      "run_id": "inventory_stock:3",
+      "start_time": "2026-10-12T16:51:19.556883Z",
+      "duration_ms": 16.920033,
+      "exit_code": 0,
+      "stdout": "PASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "0b8823ec-9974-4f4a-8479-e3cb63646b57",
+        "batch_transport_wall_ms": 1419.8776000012003
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 3
+  },
+  "duration_ms": 1422.4054999995133,
+  "requested_runs": 3
+}

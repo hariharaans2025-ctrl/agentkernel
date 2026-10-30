@@ -1,0 +1,19 @@
+{
+  "id": "smoke",
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "usage": {
+    "prompt_tokens": 100,
+    "completion_tokens": 50,
+    "total_tokens": 150
+  },
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n@@ END"
+      }
+    }
+  ]
+}

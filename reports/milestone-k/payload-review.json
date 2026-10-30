@@ -1,0 +1,19 @@
+{
+  "destination": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+  "scope": "One deadlock_001 fixture; real Super probe and one end-to-end attempt",
+  "source_files": {
+    "main.c": "#include <pthread.h>\n#include <stdio.h>\n#include <stdint.h>\n\nstatic pthread_mutex_t a = PTHREAD_MUTEX_INITIALIZER;\nstatic pthread_mutex_t b = PTHREAD_MUTEX_INITIALIZER;\nstatic pthread_barrier_t ready;\n\nstatic void *worker(void *arg) {\n    int id = (int)(intptr_t)arg;\n    pthread_mutex_t *first = id == 1 ? &a : &b;\n    pthread_mutex_t *second = id == 1 ? &b : &a;\n    pthread_mutex_lock(first);\n    printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n    pthread_barrier_wait(&ready);\n    printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n    pthread_mutex_lock(second);\n    pthread_mutex_unlock(second);\n    pthread_mutex_unlock(first);\n    return NULL;\n}\n\nint main(void) {\n    pthread_t t1, t2;\n    setvbuf(stdout, NULL, _IONBF, 0);\n    pthread_barrier_init(&ready, NULL, 2);\n    pthread_create(&t1, NULL, worker, (void *)(intptr_t)1);\n    pthread_create(&t2, NULL, worker, (void *)(intptr_t)2);\n    pthread_join(t1, NULL);\n    pthread_join(t2, NULL);\n    pthread_barrier_destroy(&ready);\n    puts(\"PASS\");\n    return 0;\n}\n"
+  },
+  "source_sha256": "0de854b650e07a1dc7e9ef0baa0d8e1f86b0e352473054d3f5a57042027b48b2",
+  "additional_data": "Compressed execution counts, representative lock logs, fingerprints, Nano summary, and prior repair/verification evidence if escalation is needed",
+  "excluded_data": [
+    "API keys",
+    "environment dumps",
+    "unlisted repository files"
+  ],
+  "tiers": [
+    "NANO",
+    "SUPER",
+    "ULTRA only if repair verification fails"
+  ]
+}

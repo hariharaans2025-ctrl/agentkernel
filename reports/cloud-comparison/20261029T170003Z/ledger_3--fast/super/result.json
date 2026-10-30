@@ -1,0 +1,18 @@
+{
+  "stage": "super",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1522,
+  "cost_usd": 0.000522,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "652356075a674d5ba1aa81ea73320689",
+  "input_tokens": 1413,
+  "output_tokens": 109,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"writer.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include <pthread.h>\", \"#include <stdatomic.h>\"]}, {\"file\": \"writer.c\", \"start_line\": 3, \"end_line\": 3, \"replacement_lines\": [\"void update(State*s,int step) { long p;s->produced+=2; sched_yield(); s->consumed+=1; }\"]}]}",
+  "error_code": "line_range_out_of_bounds",
+  "validation": [],
+  "inference_ms": 1778.3359999884851
+}

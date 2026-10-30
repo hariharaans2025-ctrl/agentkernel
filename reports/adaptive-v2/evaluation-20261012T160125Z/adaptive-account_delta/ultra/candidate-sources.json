@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\n#include <sched.h>\nvoid deposit(Account *account, int amount) {\n    pthread_mutex_lock(&account->mutex);\n    long observed = account->balance;\n    sched_yield();\n    observed += amount;\n    account->balance = observed;\n    pthread_mutex_unlock(&account->mutex);\n}\nlong read_balance(Account *account) {\n    pthread_mutex_lock(&account->mutex);\n    long observed = account->balance;\n    pthread_mutex_unlock(&account->mutex);\n    return observed;\n}\n"
+}

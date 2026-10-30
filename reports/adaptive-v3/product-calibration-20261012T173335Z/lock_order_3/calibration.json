@@ -1,0 +1,28 @@
+{
+  "case": "lock_order_3",
+  "split": "test",
+  "family": "lock_order",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "forward.c": "be4cbd4c6e983280ef51260d380062011e56fc59a4522ee3df5ee645d8a2f9f0",
+    "reverse.c": "33b33bb37fd79ec87e209f810d584517442a83bf5e5264a04956e9f8de5e6466"
+  },
+  "source_sha256": {
+    "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+    "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6"
+  },
+  "support_sha256": {
+    "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+    "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 67.7910394999999
+}

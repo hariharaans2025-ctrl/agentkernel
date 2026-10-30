@@ -1,0 +1,18 @@
+{
+  "model": {
+    "model_calls": 1,
+    "inference_ms": 7280.494100006763,
+    "input_tokens": 327,
+    "output_tokens": 175,
+    "total_tokens": 502,
+    "cost_usd": 8.52e-05
+  },
+  "variants": {
+    "mutex": {
+      "verified": true,
+      "verification_ms": 33584.279600006994
+    }
+  },
+  "timings": [],
+  "whole_experiment_ms": 52315.78880001325
+}

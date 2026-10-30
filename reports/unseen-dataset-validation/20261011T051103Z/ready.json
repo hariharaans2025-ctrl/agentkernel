@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "rwlock_mode",
+      "verified_reference": true,
+      "stress": 100,
+      "tsan": true
+    },
+    {
+      "id": "wake_all",
+      "verified_reference": true,
+      "stress": 100,
+      "tsan": true
+    }
+  ],
+  "target_model_calls": 0,
+  "unseen_scope": "New programs not used in this project training or prior target-model calls; base-model pretraining exposure cannot be proven.",
+  "references": "Reference answers remain outside train/validation and model prompts. Test set is never a training validation_file.",
+  "mandatory_verifier": true
+}

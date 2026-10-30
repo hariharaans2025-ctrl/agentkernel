@@ -1,0 +1,13 @@
+{
+  "text": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    pthread_mutex_lock(&account->mutex);\\n    observed += amount;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}}",
+  "input_tokens": 273,
+  "output_tokens": 114,
+  "finish_reason": "stop",
+  "generation_ms": 18859.504399999423,
+  "latency_ms": 20781.05780000078,
+  "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+  "base_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

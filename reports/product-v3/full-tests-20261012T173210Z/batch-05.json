@@ -1,0 +1,234 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "outcome": "passed",
+      "duration_s": 0.03436017800000013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "outcome": "passed",
+      "duration_s": 0.002116307000000095,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "outcome": "passed",
+      "duration_s": 0.0019883840000001207,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "outcome": "passed",
+      "duration_s": 0.0020973590000000764,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "outcome": "passed",
+      "duration_s": 0.0020278059999999654,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "outcome": "passed",
+      "duration_s": 0.008911157000000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "outcome": "passed",
+      "duration_s": 0.002260825000000022,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.03178054400000008,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.002038641000000063,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0005409929999999896,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005490340000000593,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001093592000000032,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00047368100000000357,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005661100000000641,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009947930000000493,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042748100000000733,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005639969999999828,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010978980000000416,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043546400000005203,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005634159999999833,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010040390000000121,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046035099999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.003955107000000013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.004508358000000046,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000447691999999944,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010906480000000274,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007542819999999395,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00041589500000005497,
+      "details": null
+    }
+  ]
+}

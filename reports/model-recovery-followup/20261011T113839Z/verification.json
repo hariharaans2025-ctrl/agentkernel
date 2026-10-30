@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 0,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 28662.700799992308,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "oracle.c",
+        "solution.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 166.420635,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "18872f0a-d415-4f38-910a-2a8d0dac4ef1",
+        "transport_wall_ms": 1407.4157000286505
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\nPASS\n",
+          "stderr": "",
+          "duration_ms": 3.3125629999999906,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "18872f0a-d415-4f38-910a-2a8d0dac4ef1",
+            "transport_wall_ms": 1761.3387999590486
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 17735.776599962264,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Protected completion/value invariant",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "solution.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 217.24825499999994,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "28d26289-3948-4042-b1f8-65fbeef19022",
+              "transport_wall_ms": 2234.301900025457
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\nPASS\n",
+            "stderr": "",
+            "duration_ms": 3.613695000000028,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "28d26289-3948-4042-b1f8-65fbeef19022",
+              "transport_wall_ms": 1790.9312000265345
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "passed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 3
+        },
+        "duration_ms": 1402.4653999949805,
+        "representative_runs": []
+      }
+    }
+  },
+  "reason": "The patch passed the configured verification campaign.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": true,
+  "semantic_regression": false,
+  "false_fix": false
+}

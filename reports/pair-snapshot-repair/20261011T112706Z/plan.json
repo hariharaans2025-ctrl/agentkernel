@@ -1,0 +1,81 @@
+{
+  "origin": "direct_source_repair_not_target_model_success",
+  "prior_correction": "reports\\race-correction\\20261011T111419Z",
+  "model_calls": 0,
+  "model_tokens": 0,
+  "model_cost_usd": 0,
+  "sandbox_cost_basis": "User confirmed free beta access",
+  "change": "One guard critical section for the paired write and another for the paired read. Restore writer scheduling hook.",
+  "task": {
+    "task_id": "pair_snapshot",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\pair-snapshot-repair\\20261011T112706Z\\failed-candidate",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "oracle.c",
+      "state.h"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "oracle.c",
+      "solution.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Protected completion/value invariant",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "oracle.c",
+            "solution.c",
+            "-o",
+            "semantic"
+          ],
+          "run_command": [
+            "./semantic"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {}
+  },
+  "image": "agentkernel-clang:20261003122908",
+  "prior_candidate_sha256": "023e43879a3d48b7e7f204dffdc1be9e976debb6b3107467d0f1fdb2fc4482e1",
+  "candidate_sha256": "7a942087f68b6679059861ec9e91119f7bbdf03fa356ee74cb2ed733f032a8aa"
+}

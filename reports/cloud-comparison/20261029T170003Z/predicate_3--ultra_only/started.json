@@ -1,0 +1,99 @@
+{
+  "profile": "ultra_only",
+  "max_calls": 1,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+    "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f",
+    "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+    "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+  },
+  "task": {
+    "task_id": "predicate_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\predicate_3--ultra_only\\input",
+    "source_files": [
+      "await.c",
+      "complete.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "await.c",
+      "complete.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "await.c",
+            "complete.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "split": "test",
+      "family": "predicate",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

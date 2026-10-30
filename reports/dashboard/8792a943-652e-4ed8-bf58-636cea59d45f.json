@@ -1,0 +1,299 @@
+{
+  "id": "8792a943-652e-4ed8-bf58-636cea59d45f",
+  "fixture": "audit_3",
+  "tiers": [
+    "ADAPTIVE_V4"
+  ],
+  "created_at": "2026-10-30T12:45:05.434385+00:00",
+  "status": "completed",
+  "provenance": "real",
+  "verification_runs": 100,
+  "baseline_runs": 3,
+  "stop_requested": false,
+  "events": [
+    {
+      "at": "2026-10-30T12:45:05.476516+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Starting sandbox"
+    },
+    {
+      "at": "2026-10-30T12:45:06.217555+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Reproducing bug"
+    },
+    {
+      "at": "2026-10-30T12:45:21.687418+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Baseline reproduced; routing"
+    },
+    {
+      "at": "2026-10-30T12:45:21.691882+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Call 1: ultra"
+    },
+    {
+      "at": "2026-10-30T12:45:23.108595+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Verifying ultra candidate: build, tests, 100 stress, semantics, 3 TSan"
+    },
+    {
+      "at": "2026-10-30T12:45:46.284696+00:00",
+      "tier": "ADAPTIVE_V4",
+      "message": "Completed"
+    }
+  ],
+  "limits": {
+    "max_output_tokens_per_model": 8192,
+    "max_input_bytes_per_model": 36000,
+    "max_combined_output_tokens": 16384,
+    "requests_per_model": 2
+  },
+  "note": "Adaptive v4: Ultra repair, plus one Ultra correction carrying the failed candidate and verifier evidence only if execution rejects it. Development-seen product-v1 case; not an unseen benchmark.",
+  "results": {
+    "ADAPTIVE_V4": {
+      "status": "completed",
+      "stage": "Completed",
+      "model": "Adaptive v4 \u00b7 Nemotron Ultra + one evidence-directed Ultra correction",
+      "started_at": "2026-10-30T12:45:05.476343+00:00",
+      "reserved_ceiling_usd": 0.121152,
+      "finished_at": "2026-10-30T12:45:46.284423+00:00",
+      "job": {
+        "status": "verified",
+        "cost_usd": 0.001411,
+        "route": [
+          "ULTRA"
+        ],
+        "verification": {
+          "build_passed": true,
+          "original_tests_passed": true,
+          "passed_runs": 100,
+          "total_runs": 100,
+          "execution_passed": true,
+          "semantic_passed": true,
+          "sanitizer_passed": true,
+          "scheduling_hooks_preserved": true
+        },
+        "model_calls": {
+          "ULTRA": 1,
+          "SUPER": 0
+        },
+        "repairs": [
+          {
+            "tier": "ULTRA",
+            "proposal": {
+              "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n"
+            },
+            "patch": {
+              "success": true
+            },
+            "false_fix": false,
+            "verification": {
+              "build_passed": true,
+              "original_tests_passed": true,
+              "passed_runs": 100,
+              "total_runs": 100,
+              "execution_passed": true,
+              "semantic_passed": true,
+              "sanitizer_passed": true,
+              "scheduling_hooks_preserved": true
+            }
+          }
+        ],
+        "metadata": {
+          "pricing_authoritative": true,
+          "final_tier": "ULTRA",
+          "model_attempts": [
+            {
+              "stage": "ultra",
+              "outcome": "verified",
+              "recovery": null,
+              "category": null,
+              "error_code": null,
+              "tokens": 1295,
+              "cost_usd": 0.001411,
+              "taxonomy": {
+                "primary": "verified",
+                "gates": []
+              }
+            }
+          ]
+        },
+        "v4": {
+          "route_decision": {
+            "policy": "adaptive-v4-router-3",
+            "stages": [
+              "ultra",
+              "ultra"
+            ],
+            "features": {
+              "source_bytes": 234,
+              "editable_files": 2,
+              "editable_lines": 4,
+              "header_bytes": 421,
+              "primitives": {
+                "mutex_lock": 1,
+                "cond_wait": 0,
+                "barrier_wait": 0,
+                "rwlock": 0,
+                "semaphore": 0,
+                "atomic": 1,
+                "join": 0
+              },
+              "distinct_mutexes": 1,
+              "blocking_helper_in_protected_header": true,
+              "baseline_fingerprint": "TIMEOUT:3",
+              "sanitizer_fingerprint": null
+            },
+            "bucket": "protected_blocking_helper",
+            "skip_reasons": {
+              "super": "protocol_capability_not_demonstrated"
+            },
+            "expected": {
+              "p_super_lower": 0.0,
+              "ultra_direct_usd": 0.002438,
+              "ultra_direct_s": 31.6,
+              "super_then_ultra_usd": 0.0031694,
+              "super_then_ultra_s": 63.2,
+              "latency_source": "default_equal_uncalibrated",
+              "correction_stage": "ultra"
+            },
+            "overhead_ms": 0.011799999811046291
+          },
+          "recoveries": {
+            "format": 0,
+            "verifier": 0
+          },
+          "phases_ms": {
+            "queue": 0.0,
+            "sandbox_create": 1565.9304999999222,
+            "upload": 2466.053699999975,
+            "baseline_build": 1541.0062999999354,
+            "baseline_stress": 9877.712399999837,
+            "inference": 1405.437699999311,
+            "verify_apply": 3137.94820000021,
+            "verify_build": 2313.8694999997824,
+            "verify_stress": 9490.84909999874,
+            "verify_tsan_build": 2266.617799999949,
+            "verify_original_tests_and_semantics": 5958.508700001403,
+            "e2e": 40063.45489999967
+          },
+          "stop_reason": null,
+          "tokens": 1295,
+          "end_to_end_ms": 40063.45489999967,
+          "error": null
+        }
+      },
+      "inferences": [
+        {
+          "tier": "ULTRA",
+          "latency_ms": 1405.437699999311,
+          "output_text": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n@@ END",
+          "metadata": {
+            "actual_input_tokens": 1237,
+            "actual_output_tokens": 58,
+            "actual_reasoning_tokens": 0,
+            "requested_max_output_tokens": 8192,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        }
+      ],
+      "inference": {
+        "tier": "ULTRA",
+        "latency_ms": 1405.437699999311,
+        "output_text": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n@@ END",
+        "metadata": {
+          "actual_input_tokens": 1237,
+          "actual_output_tokens": 58,
+          "actual_reasoning_tokens": 0,
+          "requested_max_output_tokens": 8192,
+          "finish_reason": "stop",
+          "error_code": null
+        }
+      },
+      "response": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n@@ END"
+    }
+  },
+  "benchmark": {
+    "individual": {
+      "ADAPTIVE_V4": {
+        "input_tokens": 1237,
+        "output_tokens": 58,
+        "total_tokens": 1295,
+        "reasoning_tokens": 0,
+        "output_budget_utilization": 0.007080078125,
+        "inference_ms": 1405.437699999311,
+        "effective_output_tokens_per_second": 41.26828247173705,
+        "end_to_end_ms": 40808.079999999994,
+        "baseline_ms": null,
+        "baseline_runs": null,
+        "baseline_failures": null,
+        "patch_accepted": true,
+        "patch_added_lines": 1,
+        "patch_removed_lines": 1,
+        "build_passed": true,
+        "execution_passed": true,
+        "semantic_passed": true,
+        "sanitizer_passed": true,
+        "false_fix": false,
+        "final_tier": "ULTRA",
+        "nano_calls": null,
+        "super_calls": 0,
+        "ultra_calls": 1,
+        "verification_ms": null,
+        "verification_runs": 100,
+        "verification_passes": 100,
+        "verification_pass_rate": 1.0,
+        "deadlocks": null,
+        "races": null,
+        "crashes": null,
+        "infrastructure_failures": null,
+        "verified": true,
+        "estimated_inference_cost_usd": null,
+        "finish_reason": "stop",
+        "error_code": null,
+        "sanitizer_status": "not_measured"
+      }
+    },
+    "combined": {
+      "selected_models": 1,
+      "verified_models": 1,
+      "end_to_end_ms": 40852.527,
+      "input_tokens": 1237,
+      "input_tokens_known_subtotal": 1237,
+      "output_tokens": 58,
+      "output_tokens_known_subtotal": 58,
+      "total_tokens": 1295,
+      "total_tokens_known_subtotal": 1295,
+      "inference_ms": 1405.437699999311,
+      "inference_ms_known_subtotal": 1405.437699999311,
+      "estimated_inference_cost_usd": null,
+      "estimated_inference_cost_usd_known_subtotal": null,
+      "models_with_verification": 1,
+      "verification_runs": 100,
+      "verification_passes": 100,
+      "verification_pass_rate": 1.0,
+      "verification_ms": null,
+      "deadlocks": null,
+      "races": null,
+      "crashes": null,
+      "infrastructure_failures": null,
+      "patches_accepted": 1,
+      "verified_model_rate": 1.0
+    },
+    "notes": [
+      "One attempt per model on one fixture; not a statistical model ranking.",
+      "Effective token rate includes catalog check and request overhead; it is not decode throughput.",
+      "Combined metrics aggregate independent runs, not an ensemble.",
+      "Unknown usage/cost is null; known subtotals are explicitly labeled. Sandbox cost is excluded.",
+      "A passing campaign does not establish semantic equivalence."
+    ]
+  },
+  "source_sha256": {
+    "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+    "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8",
+    "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+    "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+  },
+  "finished_at": "2026-10-30T12:45:46.286912+00:00"
+}

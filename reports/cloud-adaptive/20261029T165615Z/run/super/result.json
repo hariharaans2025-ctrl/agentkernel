@@ -1,0 +1,30 @@
+{
+  "stage": "super",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1578,
+  "cost_usd": 0.0005562,
+  "reserved_usd": 0.0072864,
+  "false_fix": true,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "881396c732634b3886dc567ed98868e1",
+  "input_tokens": 1440,
+  "output_tokens": 138,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"solution.c\", \"start_line\": 3, \"end_line\": 9, \"replacement_lines\": [\"int take_item(Inventory *stock) {\", \"    pthread_mutex_lock(&stock->mutex);\", \"    int old = stock->remaining;\", \"    if (old == 0) {\", \"        pthread_mutex_unlock(&stock->mutex);\", \"        return 0;\", \"    }\", \"    sched_yield();\", \"    stock->remaining = old - 1;\", \"    pthread_mutex_unlock(&stock->mutex);\", \"    return 1;\", \"}\"]}]}",
+  "error_code": null,
+  "validation": [],
+  "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    int old = stock->remaining;\\n    if (old == 0) return 0;\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    return stock->remaining;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    pthread_mutex_lock(&stock->mutex);\\n    int old = stock->remaining;\\n    if (old == 0) {\\n        pthread_mutex_unlock(&stock->mutex);\\n        return 0;\\n    }\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    pthread_mutex_unlock(&stock->mutex);\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    return stock->remaining;\\n}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+  "inference_ms": 1655.783900001552,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,15 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 17863.491499971133
+}

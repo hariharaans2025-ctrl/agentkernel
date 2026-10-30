@@ -1,0 +1,139 @@
+{
+  "case": "predicate_3",
+  "status": "verified",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1376,
+      "cost_usd": 0.001516,
+      "false_fix": false,
+      "recovery": null,
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "7b41c7ef32f0483fa5f11c62371d9db1",
+      "inference_ms": 1574.921799999629,
+      "input_tokens": 1306,
+      "output_tokens": 70,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE await.c 2-2\nint await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "await.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+      "verification_phases_ms": {
+        "apply": 3226.2501000000157,
+        "build": 2426.4776999998503,
+        "stress": 9148.619799999778,
+        "tsan_build": 2410.4495999999926,
+        "original_tests_and_semantics": 6154.871100000037
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 20140.418199999658,
+      "taxonomy": {
+        "primary": "verified",
+        "gates": []
+      }
+    }
+  ],
+  "model_calls": 1,
+  "calls_by_model": {
+    "ultra": 1
+  },
+  "tokens": 1376,
+  "cost_usd": 0.001516,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 391,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 435,
+      "primitives": {
+        "mutex_lock": 2,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": true,
+      "baseline_fingerprint": "UNKNOWN_FAILURE:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "protected_blocking_helper",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002514,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0032682,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.005700000201613875
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 0
+  },
+  "end_to_end_ms": 31525.094699999954,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1329.494799999793,
+    "upload": 2069.1027000002578,
+    "baseline_build": 1501.4264000001276,
+    "baseline_stress": 1657.3763999999755,
+    "inference": 1574.921799999629,
+    "verify_apply": 3226.2501000000157,
+    "verify_build": 2426.4776999998503,
+    "verify_stress": 9148.619799999778,
+    "verify_tsan_build": 2410.4495999999926,
+    "verify_original_tests_and_semantics": 6154.871100000037,
+    "e2e": 31525.094699999954
+  },
+  "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

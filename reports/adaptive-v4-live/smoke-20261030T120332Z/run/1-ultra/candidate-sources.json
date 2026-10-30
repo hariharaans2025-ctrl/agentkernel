@@ -1,0 +1,4 @@
+{
+  "commit.c": "#include \"state.h\"\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);} /* smoke: deliberately not a fix */\n",
+  "read.c": "#include \"state.h\"\nint count_audits(State*s){return atomic_load(&s->audits);}\n"
+}

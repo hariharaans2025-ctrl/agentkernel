@@ -1,0 +1,56 @@
+{
+  "status": "rejected",
+  "profile": "ultra_only",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 1731,
+      "cost_usd": 0.002199,
+      "reserved_usd": 0.036576,
+      "false_fix": true,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "257561f0bdcd4934a2e460e26b60855b",
+      "input_tokens": 1497,
+      "output_tokens": 234,
+      "reasoning_tokens": 0,
+      "response": "{\n  \"edits\": [\n    {\n      \"file\": \"publish.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\"\n      ]\n    },\n    {\n      \"file\": \"observe.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\"\n      ]\n    }\n  ]\n}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"publish.c\", \"search\": \"#include \\\"state.h\\\"\\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\\n\"}, {\"file\": \"observe.c\", \"search\": \"#include \\\"state.h\\\"\\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1414.9576000054367,
+      "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 241910.88179999497
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1731,
+  "cost_usd": 0.002199,
+  "reserved_usd": 0.036576,
+  "false_fix": true,
+  "end_to_end_ms": 270272.7519000182,
+  "inference_ms": 1414.9576000054367,
+  "verification_ms": 241910.88179999497,
+  "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"publish.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\"\n      ]\n    },\n    {\n      \"file\": \"observe.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\"\n      ]\n    }\n  ]\n}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": false,
+    "passed_runs": 0,
+    "total_runs": 100,
+    "semantic_passed": false,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  }
+}

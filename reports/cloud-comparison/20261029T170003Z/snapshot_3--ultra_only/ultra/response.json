@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-bf46b41d941ee369",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"edits\": [\n    {\n      \"file\": \"publisher.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\"\n      ]\n    },\n    {\n      \"file\": \"snapshot.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1793293259,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 213,
+    "prompt_tokens": 1291,
+    "total_tokens": 1504,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1291
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

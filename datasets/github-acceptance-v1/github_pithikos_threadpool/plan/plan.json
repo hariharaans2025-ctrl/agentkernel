@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "state": "PLANNED_NOT_EXECUTED",
+  "contract": {
+    "schema_version": 1,
+    "project": "github_pithikos_threadpool",
+    "description": "Preserve this public thread-pool implementation's API, license and original tests. Two concurrent producers submit 256 uniquely identified jobs to four workers; every callback must execute exactly once, with correct totals. Repeat pool creation and complete graceful/waited destruction safely. Repair observed races, invalid mutex lifecycle, deadlock or lost work without removing functional work or synchronization. Only the listed implementation source is editable; headers, upstream tests and acceptance harness are protected.",
+    "origin": "user_repository",
+    "source_files": [
+      "thpool.c"
+    ],
+    "support_files": [
+      "LICENSE",
+      "README.md",
+      "acceptance/semantics.c",
+      "acceptance/upstream_tests.py",
+      "docs/Design.md",
+      "docs/FAQ.md",
+      "example.c",
+      "tests/README.md",
+      "tests/api.sh",
+      "tests/ext_bugs/memleak.c",
+      "tests/funcs.sh",
+      "tests/heap_stack_garbage.sh",
+      "tests/memleaks.sh",
+      "tests/normal_compile.sh",
+      "tests/optimized_compile.sh",
+      "tests/pause_resume.sh",
+      "tests/src/api.c",
+      "tests/src/conc_increment.c",
+      "tests/src/no_work.c",
+      "tests/src/nonzero_heap_stack.c",
+      "tests/src/pause_resume.c",
+      "tests/src/wait.c",
+      "tests/threadpool.sh",
+      "tests/wait.sh",
+      "thpool.h"
+    ],
+    "build_command": [
+      "gcc",
+      "-std=gnu11",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-I.",
+      "-I.",
+      "thpool.c",
+      "acceptance/semantics.c",
+      "-o",
+      "acceptance_app"
+    ],
+    "run_command": [
+      "./acceptance_app"
+    ],
+    "binary_path": "acceptance_app",
+    "expected_behavior": "PASS",
+    "compile_timeout_seconds": 30,
+    "max_runtime_seconds": 15,
+    "baseline_runs": 3,
+    "verification": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "python3",
+          "acceptance/upstream_tests.py",
+          "pithikos"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+          "build_command": [
+            "gcc",
+            "-std=gnu11",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-I.",
+            "-I.",
+            "thpool.c",
+            "acceptance/semantics.c",
+            "-o",
+            "acceptance_app"
+          ],
+          "run_command": [
+            "./acceptance_app"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "budgets": {
+      "max_model_calls": 3,
+      "max_total_tokens": 160000,
+      "max_input_tokens_per_call": 48000,
+      "max_output_tokens_per_call": 8192,
+      "max_wall_seconds": 1800
+    },
+    "execution_backend": "nebius",
+    "max_upload_bytes": 20000000
+  },
+  "plan_sha256": "ed3f971b3e22ce07d1a49da270c7eb669334d24d2359ea9cef4cb32b14ef74db",
+  "files": {
+    "thpool.c": {
+      "sha256": "74be2a6efcbc27f93c378d6feedad2b4c56b490d4cddc5dad01e3dfdb12dd255",
+      "bytes": 13843,
+      "editable": true
+    },
+    "LICENSE": {
+      "sha256": "d337bd233b4c785953abf6090165bc56e366cb58c386f7a68323459dd9c4fe8d",
+      "bytes": 1090,
+      "editable": false
+    },
+    "README.md": {
+      "sha256": "6d56034339a1c092127bb33b61788e3e9c7780bd7643f40c5db2b78217d73b64",
+      "bytes": 4080,
+      "editable": false
+    },
+    "acceptance/semantics.c": {
+      "sha256": "ff98c19717f74ef714c3265b6ca73d42298d56f76646e719483477638a3ca3a8",
+      "bytes": 1715,
+      "editable": false
+    },
+    "acceptance/upstream_tests.py": {
+      "sha256": "1a00a3c4688a3c6e844ea2f368edcd7f056411090cf8eed5f9acdadcc8fbc620",
+      "bytes": 2244,
+      "editable": false
+    },
+    "docs/Design.md": {
+      "sha256": "97635293d16a9ca069ee0f22a997af5d0ec4cabb0e198a683365f8249d684aa4",
+      "bytes": 2142,
+      "editable": false
+    },
+    "docs/FAQ.md": {
+      "sha256": "74fafa429595cef0202c590d3b6101d153115eddd85a1c9c98263cbe715b18ae",
+      "bytes": 2159,
+      "editable": false
+    },
+    "example.c": {
+      "sha256": "c62b069c95eba16fe49484ad3bc19b90f322f8efa0b7039ba7246c456484dd7c",
+      "bytes": 1010,
+      "editable": false
+    },
+    "tests/README.md": {
+      "sha256": "1d1f757674424b31489164100252e712586ae4394d3b35dd83426a2e5eedfde7",
+      "bytes": 1042,
+      "editable": false
+    },
+    "tests/api.sh": {
+      "sha256": "a35fc5a23836c4da9dd831ab4f2786bcfc9c32782c557ad52169c5da76800e5c",
+      "bytes": 395,
+      "editable": false
+    },
+    "tests/ext_bugs/memleak.c": {
+      "sha256": "54ebdf76d9c3eb3796e02b3110090d8fc76cd6c5bd8925a451ad64c6e34a0474",
+      "bytes": 960,
+      "editable": false
+    },
+    "tests/funcs.sh": {
+      "sha256": "c96ad3feffaea88a117dd816314e83008620ed9beb23f841d04d6a14e65c4790",
+      "bytes": 1004,
+      "editable": false
+    },
+    "tests/heap_stack_garbage.sh": {
+      "sha256": "a496c883f277c160dc15e3e30b0d3e4833b0e051639a2487029a892c44f6a12a",
+      "bytes": 480,
+      "editable": false
+    },
+    "tests/memleaks.sh": {
+      "sha256": "5eaa6b8a5935e216b63aaa8ae9572a9ba4dd7027f73b386b5ed89824ac5e9132",
+      "bytes": 2417,
+      "editable": false
+    },
+    "tests/normal_compile.sh": {
+      "sha256": "02e93cc8eabf84cce2b69be67fa413ae7988db384ab98b5247a0e651ab433852",
+      "bytes": 255,
+      "editable": false
+    },
+    "tests/optimized_compile.sh": {
+      "sha256": "dcbdccbee0e3830a7476a22881dc84e2e0ff3e0130f0b09d9aa82c41d8042d3c",
+      "bytes": 271,
+      "editable": false
+    },
+    "tests/pause_resume.sh": {
+      "sha256": "fa6b92bdd8c17fed3dba3929728f03eec9b723db043b0a3010064e9ec06361fc",
+      "bytes": 684,
+      "editable": false
+    },
+    "tests/src/api.c": {
+      "sha256": "30c9fffa2c910dffdc553b7f27542bf3786fd2c0a1a34011f348ea5a19be6846",
+      "bytes": 1122,
+      "editable": false
+    },
+    "tests/src/conc_increment.c": {
+      "sha256": "4be589a25eff072072dc6708e6ad83f84647922c28092d8fc7e63c9498aad87d",
+      "bytes": 701,
+      "editable": false
+    },
+    "tests/src/no_work.c": {
+      "sha256": "e3378fc4a32073a7d69c84e73ec4822d939914e49c29fa11f44365ba0d6f545a",
+      "bytes": 437,
+      "editable": false
+    },
+    "tests/src/nonzero_heap_stack.c": {
+      "sha256": "4ec1199ee798c3640e910f7062ee634b7af1ea5944e4d83258e7ba4fe6f6db78",
+      "bytes": 898,
+      "editable": false
+    },
+    "tests/src/pause_resume.c": {
+      "sha256": "60270d6532b2f5b151ad43666e7cc269e85186ed8280f42c3671c48ecfa3f218",
+      "bytes": 1040,
+      "editable": false
+    },
+    "tests/src/wait.c": {
+      "sha256": "338ee22bbf2079aa2c036889c2b139cd00a99865a03302768f13846eb556b967",
+      "bytes": 1089,
+      "editable": false
+    },
+    "tests/threadpool.sh": {
+      "sha256": "2124aa9342f701f0038b4fd38d487e4d3bbf4122461c912c84994ff4133289a3",
+      "bytes": 521,
+      "editable": false
+    },
+    "tests/wait.sh": {
+      "sha256": "b2110257fa3c0dc9605f126daf321bd8c30c977af15c40f4371c6220bca6dc93",
+      "bytes": 1237,
+      "editable": false
+    },
+    "thpool.h": {
+      "sha256": "f34afa340172aa24d6373d66a854adef14e35589b4ea14c2288204d491c9282b",
+      "bytes": 4636,
+      "editable": false
+    }
+  },
+  "upload_bytes": 47472,
+  "task": {
+    "task_id": "github_pithikos_threadpool",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\github-acceptance-v1\\github_pithikos_threadpool",
+    "source_files": [
+      "thpool.c"
+    ],
+    "support_files": [
+      "LICENSE",
+      "README.md",
+      "acceptance/semantics.c",
+      "acceptance/upstream_tests.py",
+      "docs/Design.md",
+      "docs/FAQ.md",
+      "example.c",
+      "tests/README.md",
+      "tests/api.sh",
+      "tests/ext_bugs/memleak.c",
+      "tests/funcs.sh",
+      "tests/heap_stack_garbage.sh",
+      "tests/memleaks.sh",
+      "tests/normal_compile.sh",
+      "tests/optimized_compile.sh",
+      "tests/pause_resume.sh",
+      "tests/src/api.c",
+      "tests/src/conc_increment.c",
+      "tests/src/no_work.c",
+      "tests/src/nonzero_heap_stack.c",
+      "tests/src/pause_resume.c",
+      "tests/src/wait.c",
+      "tests/threadpool.sh",
+      "tests/wait.sh",
+      "thpool.h"
+    ],
+    "build_command": [
+      "gcc",
+      "-std=gnu11",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-I.",
+      "-I.",
+      "thpool.c",
+      "acceptance/semantics.c",
+      "-o",
+      "acceptance_app"
+    ],
+    "binary_path": "acceptance_app",
+    "run_command": [
+      "./acceptance_app"
+    ],
+    "max_runtime_seconds": 15.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "python3",
+          "acceptance/upstream_tests.py",
+          "pithikos"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+          "build_command": [
+            "gcc",
+            "-std=gnu11",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-I.",
+            "-I.",
+            "thpool.c",
+            "acceptance/semantics.c",
+            "-o",
+            "acceptance_app"
+          ],
+          "run_command": [
+            "./acceptance_app"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "origin": "user_repository",
+      "repository_workflow_version": 1
+    }
+  },
+  "execution_backend": "nebius",
+  "model_calls": 0,
+  "metrics": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "inference_ms": null,
+    "verification_ms": null,
+    "end_to_end_ms": null,
+    "verified": null,
+    "semantic_passed": null,
+    "tsan_passed": null
+  },
+  "limitations": [
+    "Budgets are a contract; production runtime integration is not enabled.",
+    "Commands require review before execution. A valid plan is not permission to execute.",
+    "File identity is content-based; no Git checkout or commit verification is performed."
+  ]
+}

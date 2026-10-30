@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-empty_queue_return",
+  "arm": "few_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 7675,
+  "inference_ms": 7246.299599995837,
+  "verification_ms": 26995.574400003534,
+  "end_to_end_ms": 40089.36929999618,
+  "model_calls": 1,
+  "input_tokens": 7373,
+  "output_tokens": 302,
+  "inference_cost_usd": 0.0008279,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

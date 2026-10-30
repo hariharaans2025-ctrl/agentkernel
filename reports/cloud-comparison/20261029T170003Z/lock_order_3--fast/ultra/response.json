@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-af908a712982837a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"edits\": [\n    {\n      \"file\": \"forward.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void forward(State*s){ready(s);pthread_mutex_lock(&s->left);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\"\n      ]\n    },\n    {\n      \"file\": \"reverse.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void reverse(State*s){ready(s);pthread_mutex_lock(&s->left);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1793293792,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 274,
+    "prompt_tokens": 1645,
+    "total_tokens": 1919,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1645
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

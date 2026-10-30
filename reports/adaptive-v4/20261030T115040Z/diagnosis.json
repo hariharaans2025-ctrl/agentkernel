@@ -1,0 +1,499 @@
+{
+  "source": "reports\\cloud-comparison\\20261029T170003Z",
+  "rows": [
+    {
+      "case": "aggregate_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "invalid_line_repair_contract",
+      "primary": "truncation",
+      "gates": [
+        "invalid_line_repair_contract"
+      ],
+      "signature": "string_closed_at_unescaped_quote",
+      "tokens": 1327,
+      "cost_usd": 0.0004215,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1549,
+      "cost_usd": 0.001997,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "compilation",
+      "gates": [
+        "compilation"
+      ],
+      "tokens": 1533,
+      "cost_usd": 0.0005259,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1653,
+      "cost_usd": 0.002101,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "audit_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "invalid_line_repair_contract",
+      "primary": "truncation",
+      "gates": [
+        "invalid_line_repair_contract"
+      ],
+      "signature": "string_closed_at_unescaped_quote",
+      "tokens": 1514,
+      "cost_usd": 0.0004776,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "audit_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "stress",
+      "gates": [
+        "stress",
+        "tsan"
+      ],
+      "tokens": 1589,
+      "cost_usd": 0.001743,
+      "include_line_rewritten": false,
+      "quote_substituted": false
+    },
+    {
+      "case": "audit_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "compilation",
+      "gates": [
+        "compilation"
+      ],
+      "tokens": 1556,
+      "cost_usd": 0.000519,
+      "include_line_rewritten": true,
+      "quote_substituted": true
+    },
+    {
+      "case": "audit_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "original_tests",
+      "gates": [
+        "original_tests",
+        "stress",
+        "tsan"
+      ],
+      "tokens": 1553,
+      "cost_usd": 0.001723,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "capacity_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "compilation",
+      "gates": [
+        "compilation"
+      ],
+      "tokens": 1567,
+      "cost_usd": 0.0005523,
+      "include_line_rewritten": true,
+      "quote_substituted": true
+    },
+    {
+      "case": "capacity_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1641,
+      "cost_usd": 0.001887,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "capacity_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "compilation",
+      "gates": [
+        "compilation"
+      ],
+      "tokens": 1569,
+      "cost_usd": 0.0005523,
+      "include_line_rewritten": true,
+      "quote_substituted": true
+    },
+    {
+      "case": "capacity_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1549,
+      "cost_usd": 0.001795,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "ledger_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "line_range_out_of_bounds",
+      "primary": "line_mapping",
+      "gates": [
+        "line_range_out_of_bounds"
+      ],
+      "tokens": 1522,
+      "cost_usd": 0.000522,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "ledger_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1655,
+      "cost_usd": 0.002065,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "ledger_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "invalid_line_repair_contract",
+      "primary": "truncation",
+      "gates": [
+        "invalid_line_repair_contract"
+      ],
+      "signature": "string_closed_at_unescaped_quote",
+      "tokens": 1440,
+      "cost_usd": 0.0004554,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "ledger_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1606,
+      "cost_usd": 0.002016,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "original_tests",
+      "gates": [
+        "original_tests",
+        "stress",
+        "semantics",
+        "tsan"
+      ],
+      "tokens": 1786,
+      "cost_usd": 0.000675,
+      "include_line_rewritten": false,
+      "quote_substituted": false
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1919,
+      "cost_usd": 0.002467,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "compilation",
+      "gates": [
+        "compilation"
+      ],
+      "tokens": 1865,
+      "cost_usd": 0.0007419,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1816,
+      "cost_usd": 0.002332,
+      "include_line_rewritten": false,
+      "quote_substituted": false
+    },
+    {
+      "case": "predicate_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "line_range_out_of_bounds",
+      "primary": "line_mapping",
+      "gates": [
+        "line_range_out_of_bounds"
+      ],
+      "tokens": 1706,
+      "cost_usd": 0.0006114,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "predicate_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1685,
+      "cost_usd": 0.001901,
+      "include_line_rewritten": false,
+      "quote_substituted": false
+    },
+    {
+      "case": "predicate_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "invalid_line_repair_contract",
+      "primary": "truncation",
+      "gates": [
+        "invalid_line_repair_contract"
+      ],
+      "signature": "string_closed_at_unescaped_quote",
+      "tokens": 1578,
+      "cost_usd": 0.0004968,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "predicate_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1643,
+      "cost_usd": 0.001859,
+      "include_line_rewritten": false,
+      "quote_substituted": false
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "line_ranges_overlap",
+      "primary": "line_mapping",
+      "gates": [
+        "line_ranges_overlap"
+      ],
+      "tokens": 1706,
+      "cost_usd": 0.0006486,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "original_tests",
+      "gates": [
+        "original_tests",
+        "stress",
+        "semantics",
+        "tsan"
+      ],
+      "tokens": 1748,
+      "cost_usd": 0.002216,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "invalid_line_repair_contract",
+      "primary": "truncation",
+      "gates": [
+        "invalid_line_repair_contract"
+      ],
+      "signature": "string_closed_at_unescaped_quote",
+      "tokens": 1539,
+      "cost_usd": 0.0004851,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "rejected",
+      "error_code": null,
+      "primary": "original_tests",
+      "gates": [
+        "original_tests",
+        "stress",
+        "semantics",
+        "tsan"
+      ],
+      "tokens": 1731,
+      "cost_usd": 0.002199,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "fast",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "line_range_out_of_bounds",
+      "primary": "line_mapping",
+      "gates": [
+        "line_range_out_of_bounds"
+      ],
+      "tokens": 1420,
+      "cost_usd": 0.0005826,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "fast",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1409,
+      "cost_usd": 0.001835,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "super_only",
+      "stage": "super",
+      "outcome": "invalid_output",
+      "error_code": "line_range_out_of_bounds",
+      "primary": "line_mapping",
+      "gates": [
+        "line_range_out_of_bounds"
+      ],
+      "tokens": 1416,
+      "cost_usd": 0.0005814,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "ultra_only",
+      "stage": "ultra",
+      "outcome": "verified",
+      "error_code": null,
+      "primary": "verified",
+      "gates": [],
+      "tokens": 1504,
+      "cost_usd": 0.00193,
+      "include_line_rewritten": true,
+      "quote_substituted": false
+    }
+  ],
+  "by_stage_primary": {
+    "super": {
+      "truncation": 5,
+      "compilation": 5,
+      "line_mapping": 5,
+      "original_tests": 1
+    },
+    "ultra": {
+      "verified": 12,
+      "stress": 1,
+      "original_tests": 3
+    }
+  },
+  "findings": {
+    "super_attempts": 16,
+    "super_rewrote_include_line": 15,
+    "super_quote_closure_truncations": 5,
+    "super_single_quote_include_substitution": 3,
+    "interpretation": "Super failures concentrate on rewriting the unchanged #include \"state.h\" line under a strict JSON schema; the unescaped quote closes the JSON string (contract defect), or the include is replaced and later line numbers shift. Remaining Super candidates failed real verifier gates. Unresolved Ultra cases: audit_3 removed the lock (TSan race, unsymbolized stacks); rendezvous_3 kept barrier waits inside the mutex (100/100 TIMEOUT). v3 fallback received only outcome summaries, not candidate evidence."
+  },
+  "scope": "Development-seen diagnosis only; not evaluation evidence."
+}

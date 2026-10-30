@@ -1,0 +1,20 @@
+--- a/src/queue.c
++++ b/src/queue.c
+@@ -31,13 +31,13 @@
+ 
+ int queue_inspect(JobQueue *q, int force_overlap) {
+     /* Intentional fault: monitoring acquires the same locks in reverse order. */
++    pthread_mutex_lock(&q->queue_lock);
++    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
++    if (force_overlap) fprintf(stderr, "MONITOR HOLD queue WAIT stats\n");
+     pthread_mutex_lock(&q->stats_lock);
+-    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+-    if (force_overlap) fprintf(stderr, "MONITOR HOLD stats WAIT queue\n");
+-    pthread_mutex_lock(&q->queue_lock);
+     int outstanding = q->length - q->completed;
++    pthread_mutex_unlock(&q->stats_lock);
+     pthread_mutex_unlock(&q->queue_lock);
+-    pthread_mutex_unlock(&q->stats_lock);
+     return outstanding;
+ }
+ 

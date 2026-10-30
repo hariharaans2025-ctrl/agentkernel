@@ -1,0 +1,25 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,12 +1,20 @@
+ #include "state.h"
+ #include <sched.h>
+ int take_item(Inventory *stock) {
++    pthread_mutex_lock(&stock->mutex);
+     int old = stock->remaining;
+-    if (old == 0) return 0;
++    if (old == 0) {
++        pthread_mutex_unlock(&stock->mutex);
++        return 0;
++    }
+     sched_yield();
+     stock->remaining = old - 1;
++    pthread_mutex_unlock(&stock->mutex);
+     return 1;
+ }
+ int remaining_stock(Inventory *stock) {
+-    return stock->remaining;
++    pthread_mutex_lock(&stock->mutex);
++    int value = stock->remaining;
++    pthread_mutex_unlock(&stock->mutex);
++    return value;
+ }

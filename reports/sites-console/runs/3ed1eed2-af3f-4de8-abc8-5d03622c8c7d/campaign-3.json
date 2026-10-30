@@ -1,0 +1,64 @@
+{
+  "task_id": "job-queue-service",
+  "runs": [
+    {
+      "run_id": "job-queue-service:1",
+      "start_time": "2026-10-12T15:23:52.170654Z",
+      "duration_ms": 2003.717339,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+        "batch_transport_wall_ms": 7801.580800000011
+      }
+    },
+    {
+      "run_id": "job-queue-service:2",
+      "start_time": "2026-10-12T15:23:54.213368Z",
+      "duration_ms": 2002.67843,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+        "batch_transport_wall_ms": 7801.580800000011
+      }
+    },
+    {
+      "run_id": "job-queue-service:3",
+      "start_time": "2026-10-12T15:23:56.246697Z",
+      "duration_ms": 2002.6523129999996,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "2ad6eda7-71e1-4766-abc5-2eca04affd7f",
+        "batch_transport_wall_ms": 7801.580800000011
+      }
+    }
+  ],
+  "counts": {
+    "POSSIBLE_DEADLOCK": 3
+  },
+  "duration_ms": 7803.973099999894,
+  "requested_runs": 3
+}

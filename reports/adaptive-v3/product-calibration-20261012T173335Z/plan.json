@@ -1,0 +1,32 @@
+{
+  "manifest_sha256": "fa1db6fb64928b7de0d73b8227a078858880fff1349f40b3643f7b42bc2c8ff1",
+  "dataset": "datasets\\adaptive-v3\\product-v1",
+  "cases": [
+    "ledger_1",
+    "ledger_2",
+    "ledger_3",
+    "snapshot_1",
+    "snapshot_2",
+    "snapshot_3",
+    "capacity_1",
+    "capacity_2",
+    "capacity_3",
+    "rendezvous_1",
+    "rendezvous_2",
+    "rendezvous_3",
+    "lock_order_1",
+    "lock_order_2",
+    "lock_order_3",
+    "predicate_1",
+    "predicate_2",
+    "predicate_3",
+    "audit_1",
+    "audit_2",
+    "audit_3",
+    "aggregate_1",
+    "aggregate_2",
+    "aggregate_3"
+  ],
+  "model_calls": 0,
+  "policy": "No local C execution; no retries; protected references excluded from runtime context."
+}

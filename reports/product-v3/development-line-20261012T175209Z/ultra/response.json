@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-8afaebd4d05ca65d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"edits\": [\n    {\n      \"file\": \"solution.c\",\n      \"start_line\": 3,\n      \"end_line\": 9,\n      \"replacement_lines\": [\n        \"void publish_cache(Cache *cache) {\",\n        \"    pthread_mutex_lock(&cache->mutex);\",\n        \"    sched_yield();\",\n        \"    cache->value = 42;\",\n        \"    pthread_mutex_unlock(&cache->mutex);\",\n        \"    meet(cache);\",\n        \"}\"\n      ]\n    },\n    {\n      \"file\": \"solution.c\",\n      \"start_line\": 10,\n      \"end_line\": 16,\n      \"replacement_lines\": [\n        \"void observe_cache(Cache *cache) {\",\n        \"    pthread_mutex_lock(&cache->mutex);\",\n        \"    sched_yield();\",\n        \"    cache->observed = cache->value;\",\n        \"    pthread_mutex_unlock(&cache->mutex);\",\n        \"    meet(cache);\",\n        \"}\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1791827582,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 220,
+    "prompt_tokens": 1631,
+    "total_tokens": 1851,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1631
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

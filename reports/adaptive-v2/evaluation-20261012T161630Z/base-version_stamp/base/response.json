@@ -1,0 +1,13 @@
+{
+  "text": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_stamp(Stamp *stamp,int generation) {\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->generation=generation;\\n    pthread_mutex_unlock(&stamp->mutex);\\n    // Synchronize all readers before publishing\\n    pthread_cond_broadcast(&stamp->cond);\\n    sched_yield();\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->checksum=generation ^ 0x5a5a;\\n    pthread_mutex_unlock(&stamp->mutex);\\n}\\nvoid read_stamp(Stamp *stamp,int *generation,int *checksum) {\\n    *generation=stamp->generation;\\n    // Synchronize all readers before reading\\n    pthread_cond_wait(&stamp->cond, &stamp->mutex);\\n    *checksum=stamp->checksum;\\n}\"\n  }\n}\n```",
+  "input_tokens": 441,
+  "output_tokens": 194,
+  "finish_reason": "stop",
+  "generation_ms": 7586.962700000186,
+  "latency_ms": 11385.86530000066,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+  "base_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "adapter_sha256": null,
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

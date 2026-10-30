@@ -1,0 +1,32 @@
+[
+  {
+    "kind": "timeout_unexplained",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "456fb52929a400c1e3639fe688d411a4ea77bac0df42eb1572da2949cfbcd540",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "timeout_unexplained",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "456fb52929a400c1e3639fe688d411a4ea77bac0df42eb1572da2949cfbcd540",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "timeout_unexplained",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "456fb52929a400c1e3639fe688d411a4ea77bac0df42eb1572da2949cfbcd540",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  }
+]

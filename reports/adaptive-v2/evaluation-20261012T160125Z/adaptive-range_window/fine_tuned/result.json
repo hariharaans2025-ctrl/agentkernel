@@ -1,0 +1,16 @@
+{
+  "stage": "fine_tuned",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 512,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 369,
+  "output_tokens": 143,
+  "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+  "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+  "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    pthread_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    pthread_yield();\\n    *upper = window->upper;\\n}\\n\"}}",
+  "error": "ValueError",
+  "inference_ms": 18732.4966999995
+}

@@ -1,0 +1,13 @@
+{
+  "text": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    pthread_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    pthread_yield();\\n    *upper = window->upper;\\n}\\n\"}}",
+  "input_tokens": 369,
+  "output_tokens": 143,
+  "finish_reason": "stop",
+  "generation_ms": 9056.424200000038,
+  "latency_ms": 10955.245199999808,
+  "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+  "base_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

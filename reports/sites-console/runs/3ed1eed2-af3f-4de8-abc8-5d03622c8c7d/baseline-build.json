@@ -1,0 +1,25 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-Iinclude",
+    "src/main.c",
+    "src/queue.c",
+    "-o",
+    "job_service"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 216.583788,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "e5bd61d3-75bf-4feb-96f3-8b2b1ad0c4ba",
+    "transport_wall_ms": 3554.6893000000637
+  },
+  "success": true
+}

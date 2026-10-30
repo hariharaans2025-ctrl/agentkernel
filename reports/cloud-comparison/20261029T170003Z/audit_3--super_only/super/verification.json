@@ -1,0 +1,49 @@
+{
+  "passed": false,
+  "build_passed": false,
+  "total_runs": 0,
+  "passed_runs": 0,
+  "failed_runs": 0,
+  "race_count": null,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 1483.1663999939337,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "commit.c",
+        "read.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "commit.c:1:10: error: #include expects \"FILENAME\" or <FILENAME>\n    1 | #include 'state.h'\n      |          ^~~~~~~~~\ncommit.c:2:13: error: unknown type name ‘State’\n    2 | void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n      |             ^~~~~\n",
+      "duration_ms": 166.87052000000003,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "97618110-6502-4dd1-8cfb-39e8bf945185",
+        "transport_wall_ms": 1483.0696999561042
+      },
+      "success": false
+    },
+    "execution_blocked": false
+  },
+  "reason": "Rebuild failed; no verification binary was executed.",
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_regression": false,
+  "false_fix": true
+}

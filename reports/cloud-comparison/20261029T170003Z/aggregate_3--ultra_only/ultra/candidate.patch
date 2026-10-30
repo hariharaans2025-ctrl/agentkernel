@@ -1,0 +1,12 @@
+--- a/record.c
++++ b/record.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}
++void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}
+--- a/read.c
++++ b/read.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-int consistent(State*s){int a=s->parity[0],b=s->parity[1],t=s->total;return a+b==t;}
++int consistent(State*s){pthread_mutex_lock(&s->mutex);int a=s->parity[0],b=s->parity[1],t=s->total;pthread_mutex_unlock(&s->mutex);return a+b==t;}

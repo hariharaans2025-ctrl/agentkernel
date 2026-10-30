@@ -1,0 +1,24 @@
+{
+  "command": [
+    "gdb",
+    "--batch",
+    "--quiet",
+    "--nx",
+    "-x",
+    "capture.gdb.py",
+    "--args",
+    "./job_service",
+    "--stress"
+  ],
+  "exit_code": 0,
+  "stdout": "[Thread debugging using libthread_db enabled]\nUsing host libthread_db library \"/lib/x86_64-linux-gnu/libthread_db.so.1\".\n[New Thread 0x7ffff7dbd6c0 (LWP 19)]\n[New Thread 0x7ffff75bc6c0 (LWP 20)]\n\nThread 1 \"job_service\" received signal SIGINT, Interrupt.\n0x00007ffff7e5b72e in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n\nThread 3 (Thread 0x7ffff75bc6c0 (LWP 20) \"job_service\"):\n#0  0x00007ffff7e50bbb in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#1  0x00007ffff7e56cb2 in pthread_mutex_lock () from /lib/x86_64-linux-gnu/libc.so.6\n#2  0x0000555555555667 in queue_inspect (q=0x7fffffffe7c0, force_overlap=1) at src/queue.c:37\n#3  0x000055555555520f in monitor (opaque=<optimized out>) at src/main.c:17\n#4  0x00007ffff7e538bb in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#5  0x00007ffff7ed1538 in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n\nThread 2 (Thread 0x7ffff7dbd6c0 (LWP 19) \"job_service\"):\n#0  0x00007ffff7e50bbb in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#1  0x00007ffff7e56cb2 in pthread_mutex_lock () from /lib/x86_64-linux-gnu/libc.so.6\n#2  0x00005555555555c5 in queue_process_one (q=0x7fffffffe7c0, force_overlap=<optimized out>) at src/queue.c:19\n#3  0x0000555555555236 in worker (opaque=0x7fffffffe7b0) at src/main.c:11\n#4  0x00007ffff7e538bb in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#5  0x00007ffff7ed1538 in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n\nThread 1 (Thread 0x7ffff7dbe780 (LWP 16) \"job_service\"):\n#0  0x00007ffff7e5b72e in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#1  0x00007ffff7e50388 in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#2  0x00007ffff7e509ac in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#3  0x00007ffff7e554b4 in ?? () from /lib/x86_64-linux-gnu/libc.so.6\n#4  0x00005555555553d3 in main (argc=<optimized out>, argv=<optimized out>) at src/main.c:31\n[Inferior 1 (process 16) killed]\n",
+  "stderr": "gdb: warning: Couldn't determine a path for the index cache directory.\nMONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+  "duration_ms": 2273.014686,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "588fe838-b20b-4045-9e2e-bb8b3e4af9fd",
+    "transport_wall_ms": 5682.568799995352
+  }
+}

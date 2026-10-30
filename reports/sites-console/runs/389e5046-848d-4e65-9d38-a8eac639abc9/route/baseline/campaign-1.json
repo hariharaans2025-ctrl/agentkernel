@@ -1,0 +1,64 @@
+{
+  "task_id": "inventory_stock",
+  "runs": [
+    {
+      "run_id": "inventory_stock:1",
+      "start_time": "2026-10-30T13:09:10.354575Z",
+      "duration_ms": 5.389460000000012,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "UNKNOWN_FAILURE",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "e2c148ac-3035-4f56-ae47-b326257500cf",
+        "batch_transport_wall_ms": 1477.1537000005992
+      }
+    },
+    {
+      "run_id": "inventory_stock:2",
+      "start_time": "2026-10-30T13:09:10.400687Z",
+      "duration_ms": 5.056730000000009,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "UNKNOWN_FAILURE",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "e2c148ac-3035-4f56-ae47-b326257500cf",
+        "batch_transport_wall_ms": 1477.1537000005992
+      }
+    },
+    {
+      "run_id": "inventory_stock:3",
+      "start_time": "2026-10-30T13:09:10.440325Z",
+      "duration_ms": 4.834806999999996,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "UNKNOWN_FAILURE",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "e2c148ac-3035-4f56-ae47-b326257500cf",
+        "batch_transport_wall_ms": 1477.1537000005992
+      }
+    }
+  ],
+  "counts": {
+    "UNKNOWN_FAILURE": 3
+  },
+  "duration_ms": 1480.262799999764,
+  "requested_runs": 3
+}

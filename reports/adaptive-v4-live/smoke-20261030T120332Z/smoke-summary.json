@@ -1,0 +1,45 @@
+{
+  "case": "audit_3",
+  "status": "verified",
+  "stages": [
+    "ultra",
+    "ultra"
+  ],
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "recovery": null,
+      "category": null,
+      "error_code": "invalid_repair_contract"
+    },
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "recovery": "verifier",
+      "category": null,
+      "error_code": "invalid_repair_contract"
+    }
+  ],
+  "recoveries": {
+    "format": 0,
+    "verifier": 1
+  },
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1695.7208999999693,
+    "upload": 2018.118799999911,
+    "baseline_build": 1520.5387000000883,
+    "baseline_stress": 12294.582600000012,
+    "inference": 3.926600000113467,
+    "verify_apply": 6698.766700000078,
+    "verify_build": 3030.8661000001393,
+    "verify_stress": 237234.24520000027,
+    "verify_tsan_build": 5980.600200000026,
+    "verify_original_tests_and_semantics": 15217.222499999227,
+    "e2e": 285753.3859
+  },
+  "error": null,
+  "scope": "Plumbing smoke: real Nebius Sandbox build/verify; scripted replies (second is the private reference repair). Not a model result; never counted.",
+  "provider_calls": 0
+}

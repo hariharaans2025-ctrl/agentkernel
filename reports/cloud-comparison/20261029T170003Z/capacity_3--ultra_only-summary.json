@@ -1,0 +1,58 @@
+{
+  "case": "capacity_3",
+  "arm": "ultra_only",
+  "status": "verified",
+  "profile": "ultra_only",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1549,
+      "cost_usd": 0.001795,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "b7b3b8e506e14366b97fbc2a51720fb5",
+      "input_tokens": 1426,
+      "output_tokens": 123,
+      "reasoning_tokens": 0,
+      "response": "{\n  \"edits\": [\n    {\n      \"file\": \"acquire.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\"\n      ]\n    }\n  ]\n}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"acquire.c\", \"search\": \"#include \\\"state.h\\\"\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1477.795300015714,
+      "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 17480.559499992523
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1549,
+  "cost_usd": 0.001795,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "end_to_end_ms": 41896.56439999817,
+  "inference_ms": 1477.795300015714,
+  "verification_ms": 17480.559499992523,
+  "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"acquire.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\"\n      ]\n    }\n  ]\n}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

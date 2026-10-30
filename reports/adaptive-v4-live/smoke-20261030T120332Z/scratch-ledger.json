@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "total_usd": 1.0,
+  "opening_reservation_usd": 0.0,
+  "authorization": "Smoke only: scripted replies, no provider inference.",
+  "created_at": "2026-10-30T12:03:32.795809+00:00",
+  "calls": [
+    {
+      "id": "5ea112419ea848ec957af98562cf2343",
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\adaptive-v4-live\\smoke-20261030T120332Z\\run\\1-ultra",
+      "reserved_usd": 0.036576,
+      "actual_usd": 0.00025,
+      "status": "received",
+      "created_at": "2026-10-30T12:03:50.346283+00:00",
+      "input_tokens": 100,
+      "output_tokens": 50
+    },
+    {
+      "id": "64ea8a15d7c54bfd96b6e6d99f273eaa",
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\adaptive-v4-live\\smoke-20261030T120332Z\\run\\2-ultra",
+      "reserved_usd": 0.036576,
+      "actual_usd": 0.00025,
+      "status": "received",
+      "created_at": "2026-10-30T12:07:53.245654+00:00",
+      "input_tokens": 100,
+      "output_tokens": 50
+    }
+  ]
+}

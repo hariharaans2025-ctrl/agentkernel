@@ -1,0 +1,245 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 100,
+  "failed_runs": 0,
+  "race_count": 3,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 3,
+  "sanitizer_findings": [
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T2",
+      "thread_b": "T1",
+      "memory_location": "0x7fffffffea00",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=10)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=13, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T1 (tid=12, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6640) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189) \n==================\n"
+    },
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T2",
+      "thread_b": "T1",
+      "memory_location": "0x7fffffffea00",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=15)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=18, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T1 (tid=17, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6640) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189) \n==================\n"
+    },
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T2",
+      "thread_b": "T1",
+      "memory_location": "0x7fffffffea00",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=20)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=23, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T1 (tid=22, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6640) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189) \n==================\n"
+    }
+  ],
+  "regressions": [],
+  "duration_ms": 61127.89150001481,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "-Iinclude",
+        "src/main.c",
+        "src/queue.c",
+        "-o",
+        "job_service"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 216.634704,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "3228dbc3-6b02-4a65-9ad5-59c3dec9cb2e",
+        "transport_wall_ms": 2306.981200003065
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./job_service",
+            "--smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=1 checksum=1 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.2642599999999633,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "3228dbc3-6b02-4a65-9ad5-59c3dec9cb2e",
+            "transport_wall_ms": 1621.5978999971412
+          }
+        },
+        {
+          "command": [
+            "./job_service",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.4538150000000267,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "3228dbc3-6b02-4a65-9ad5-59c3dec9cb2e",
+            "transport_wall_ms": 3786.6094000055455
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 0,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 100
+      },
+      "duration_ms": 41041.86119994847,
+      "representative_runs": []
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "100 jobs exactly once, checksum 5050, queue drained",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "-Iinclude",
+              "src/main.c",
+              "src/queue.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 266.97073700000004,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "a7f76472-7e60-4744-a7a3-ec9f5d05a261",
+              "transport_wall_ms": 3653.8827999611385
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.6830290000000043,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "a7f76472-7e60-4744-a7a3-ec9f5d05a261",
+              "transport_wall_ms": 1739.8381999810226
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "failed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 3,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "RACE_DETECTED": 3
+        },
+        "duration_ms": 3339.7014000220224,
+        "representative_runs": [
+          {
+            "run_id": "job-queue-service:1",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "525b8e3e-17da-4d4c-bbfd-f73a411af7b5",
+              "batch_transport_wall_ms": 3336.8681999854743
+            },
+            "stdout": "",
+            "stderr": "==10==WARNING: invalid path to external symbolizer!\n==10==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=10)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=13, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007"
+          },
+          {
+            "run_id": "job-queue-service:2",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "525b8e3e-17da-4d4c-bbfd-f73a411af7b5",
+              "batch_transport_wall_ms": 3336.8681999854743
+            },
+            "stdout": "",
+            "stderr": "==15==WARNING: invalid path to external symbolizer!\n==15==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=15)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=18, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007"
+          },
+          {
+            "run_id": "job-queue-service:3",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "525b8e3e-17da-4d4c-bbfd-f73a411af7b5",
+              "batch_transport_wall_ms": 3336.8681999854743
+            },
+            "stdout": "",
+            "stderr": "==20==WARNING: invalid path to external symbolizer!\n==20==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=20)\n  Read of size 4 at 0x7fffffffea00 by thread T2 (mutexes: write M0):\n    #0 <null> <null> (job_service+0xe6a81) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe683f) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Previous write of size 4 at 0x7fffffffea00 by thread T1 (mutexes: write M1):\n    #0 <null> <null> (job_service+0xe69c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe67d9) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0x62cdb) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n\n  Location is stack of main thread.\n\n  Mutex M0 (0x7fffffffe7b0) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe6899) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M1 (0x7fffffffe788) created at:\n    #0 <null> <null> (job_service+0x647c7) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe688e) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #2 <null> <null> (job_service+0xe6614) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T2 (tid=23, running) created by main thread at:\n    #0 <null> <null> (job_service+0x62d85) (BuildId: 9f3407cfeab0553deb9007a6a7e9d5a6a7743189)\n    #1 <null> <null> (job_service+0xe674a) (BuildId: 9f3407cfeab0553deb9007"
+          }
+        ]
+      }
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": false,
+  "semantic_regression": false,
+  "false_fix": true
+}

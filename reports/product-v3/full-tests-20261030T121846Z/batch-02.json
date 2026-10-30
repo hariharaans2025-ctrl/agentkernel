@@ -1,0 +1,1574 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "outcome": "passed",
+      "duration_s": 0.0021252780000000637,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "outcome": "passed",
+      "duration_s": 0.0013272309999999843,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "outcome": "passed",
+      "duration_s": 0.0011728709999999642,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "outcome": "passed",
+      "duration_s": 0.0959320680000002,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "outcome": "passed",
+      "duration_s": 0.024366251000000227,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "outcome": "passed",
+      "duration_s": 0.004184661999999895,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "outcome": "passed",
+      "duration_s": 0.0012559659999999973,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "outcome": "passed",
+      "duration_s": 0.001277487000000077,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "outcome": "passed",
+      "duration_s": 0.0012257490000000537,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "outcome": "passed",
+      "duration_s": 0.0012086940000000101,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "outcome": "passed",
+      "duration_s": 0.0015688549999999246,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "outcome": "passed",
+      "duration_s": 0.0015620650000001124,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "outcome": "passed",
+      "duration_s": 0.002414723999999868,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "outcome": "passed",
+      "duration_s": 0.0021654390000001023,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "outcome": "passed",
+      "duration_s": 0.0009747020000001605,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "outcome": "passed",
+      "duration_s": 0.0008517989999998754,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "outcome": "passed",
+      "duration_s": 6.462872382,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "outcome": "passed",
+      "duration_s": 2.6179045299999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "outcome": "passed",
+      "duration_s": 0.0026267630000003095,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "outcome": "passed",
+      "duration_s": 0.0017940440000003832,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "outcome": "passed",
+      "duration_s": 0.0012553640000003696,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "outcome": "passed",
+      "duration_s": 1.5044835090000017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "outcome": "passed",
+      "duration_s": 0.0014144130000008914,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "outcome": "passed",
+      "duration_s": 1.5039799129999984,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "outcome": "passed",
+      "duration_s": 0.0016950140000009384,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "outcome": "passed",
+      "duration_s": 0.0012656790000011853,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "outcome": "passed",
+      "duration_s": 0.0008730310000011343,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "outcome": "passed",
+      "duration_s": 0.0020628170000005497,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "outcome": "passed",
+      "duration_s": 0.011820451000001952,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "outcome": "passed",
+      "duration_s": 0.0020115790000012623,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "outcome": "passed",
+      "duration_s": 0.0020328520000010286,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "outcome": "passed",
+      "duration_s": 0.002430778999999106,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "outcome": "passed",
+      "duration_s": 0.002347672999999162,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "outcome": "passed",
+      "duration_s": 0.0008309369999981442,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "outcome": "passed",
+      "duration_s": 0.02834916100000129,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "outcome": "passed",
+      "duration_s": 10.751323107999998,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "outcome": "passed",
+      "duration_s": 1.4008909129999978,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "outcome": "passed",
+      "duration_s": 0.03398090300000334,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "outcome": "passed",
+      "duration_s": 0.003738480999999183,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "outcome": "passed",
+      "duration_s": 0.002725560999998322,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "outcome": "passed",
+      "duration_s": 0.10938402899999744,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "outcome": "passed",
+      "duration_s": 0.006380427000006961,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "outcome": "passed",
+      "duration_s": 0.0006097260000004212,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "outcome": "passed",
+      "duration_s": 0.0011718989999991436,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "outcome": "passed",
+      "duration_s": 0.0012464110000003359,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "outcome": "passed",
+      "duration_s": 0.0009577169999985813,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "outcome": "passed",
+      "duration_s": 0.00270269600000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "outcome": "passed",
+      "duration_s": 0.0009995210000006693,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "outcome": "passed",
+      "duration_s": 0.006158374000001743,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011005910000000396,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005925989999999715,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043208800000005265,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00038441600000005405,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006316180000000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003111969999999298,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00033098599999992206,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005626450000000283,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002792400000000139,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0034718699999999325,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.09212132900000014,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003388690000001304,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008747530000001724,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.02318598999999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003055080000000654,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008279929999999158,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0031037789999999177,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002528900000000611,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007499460000000013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00026816300000009896,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00023785699999989696,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007735909999999624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024642000000008046,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00025747600000003423,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007676520000001741,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002273109999999523,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00023078599999992733,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007463999999999249,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022846300000001207,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00023383100000007317,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007617429999999814,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005597299999999805,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002473819999999627,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007411930000000844,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005652879999999971,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002555840000000309,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006564249999998495,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0015223150000001073,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00023598399999991138,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00030341499999986254,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016083440000000948,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002536800000001449,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003102759999999982,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00042126200000014435,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024316400000001792,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002954539999999728,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003405709999999562,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002157739999999464,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006632549999998627,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 6.4618959469999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000313180000000024,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008268710000001178,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 2.616617677999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004599810000005533,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005223839999999313,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018228669999995617,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00028151200000081644,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003726400000001462,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001141133000000849,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000280270999999388,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000385629000000165,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006256590000006668,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024407599999953788,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00038831300000019553,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 1.5037003130000013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003948830000002346,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000482614000000936,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006713180000001984,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026048099999975705,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003971160000002527,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 1.5031987609999984,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00038403599999981,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004713269999996328,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009404320000001576,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000283255000001148,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00038841300000136414,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006123989999995416,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002648670000002795,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000313700999999611,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00033176800000056517,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00022756200000095816,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0009974970000001804,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007966560000003398,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026866400000002955,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003141910000010739,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.011233471000000605,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027278900000027306,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000777175999999713,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009926400000015434,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024176300000000595,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008255889999997379,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009374680000000524,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026979500000123835,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007725299999989943,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0013947129999998253,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002635360000002862,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007865299999991748,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012961049999997698,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026503800000021727,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00030386599999943087,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003012219999991572,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002258489999995561,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006983179999995315,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.02734496400000097,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00030587900000078605,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003515769999999918,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 10.750681726,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002898049999977559,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00036867299999698844,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 1.4002938369999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002284030000012649,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008126500000003034,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03291703600000062,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00025121700000241276,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006906969999995738,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0028109190000016326,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002368649999979766,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00030982499999865354,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0021668119999986857,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002489240000009829,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006410629999997752,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.10847256099999925,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027040499999841927,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00032162200000129815,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0058720740000026694,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00018673100000299314,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002707470000018475,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00018698099999880924,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0001519979999997645,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006142520000018692,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00036832300000000373,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00018932399999727068,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000625258999999545,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004577969999992604,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00016335500000153047,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00023068600000186734,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005490639999976565,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0001779669999990574,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000560992000000482,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001973942999999423,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00016776100000015504,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00025087699999915003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005699459999988221,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0001786980000026972,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00023484300000120584,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.005692804999998913,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00023072600000162424,
+      "details": null
+    }
+  ]
+}

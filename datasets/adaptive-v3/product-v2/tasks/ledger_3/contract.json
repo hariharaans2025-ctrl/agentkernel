@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "project": "ledger_3",
+  "description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+  "origin": "synthetic_example",
+  "source_files": [
+    "writer.c",
+    "reader.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "writer.c",
+    "reader.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "compile_timeout_seconds": 30,
+  "max_runtime_seconds": 2,
+  "baseline_runs": 3,
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "budgets": {
+    "max_model_calls": 3,
+    "max_total_tokens": 240000,
+    "max_input_tokens_per_call": 48000,
+    "max_output_tokens_per_call": 8192,
+    "max_wall_seconds": 1800
+  },
+  "execution_backend": "nebius",
+  "max_upload_bytes": 2000000
+}

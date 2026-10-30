@@ -1,0 +1,27 @@
+{
+  "task_id": "job-queue-selected_grouped",
+  "provider": "NEBIUS",
+  "tier": "SUPER",
+  "output_text": "{\"diagnosis\": \"Lock inversion between queue_lock and stats_lock due to opposite acquisition order in worker and monitor threads under forced overlap via barrier.\", \"root_cause\": \"Worker acquires queue_lock then stats_lock; monitor acquires stats_lock then queue_lock. When both hold their first lock and synchronize at the barrier, each waits for the other's lock, causing deadlock.\", \"confidence\": 0.95, \"reasoning_summary\": \"Deadlock occurs because worker and monitor acquire two mutexes in opposite order when force_overlap is true, and the barrier ensures they hold the first lock while waiting for the second.\", \"expected_effect\": \"Eliminates lock inversion by ensuring both functions acquire locks in the same order (queue_lock before stats_lock) even during overlap.\", \"risk_notes\": [\"Changing lock order in queue_inspect may affect monitoring semantics if stats are accessed inconsistently with queue state, but since inspect only reads outstanding counts and does not modify state, and queue_lock protects the same data as stats_lock in this context, the change is safe.\"], \"edits\": [{\"file\": \"src/queue.c\", \"search\": \"int queue_inspect(JobQueue *q, int force_overlap) {\\n    /* Intentional fault: monitoring acquires the same locks in reverse order. */\\n    pthread_mutex_lock(&q->stats_lock);\\n    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);\\n    if (force_overlap) fprintf(stderr, \\\"MONITOR HOLD stats WAIT queue\\\\n\\\");\\n    pthread_mutex_lock(&q->queue_lock);\\n    int outstanding = q->length - q->completed;\\n    pthread_mutex_unlock(&q->queue_lock);\\n    pthread_mutex_unlock(&q->stats_lock);\\n    return outstanding;\\n}\", \"replacement\": \"int queue_inspect(JobQueue *q, int force_overlap) {\\n    /* Intentional fault: monitoring acquires the same locks in reverse order. */\\n    pthread_mutex_lock(&q->queue_lock);\\n    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);\\n    if (force_overlap) fprintf(stderr, \\\"MONITOR HOLD queue WAIT stats\\\\n\\\");\\n    pthread_mutex_lock(&q->stats_lock);\\n    int outstanding = q->length - q->completed;\\n    pthread_mutex_unlock(&q->stats_lock);\\n    pthread_mutex_unlock(&q->queue_lock);\\n    return outstanding;\\n}\"}]}",
+  "status": "SUCCESS",
+  "latency_ms": 5263.900799996918,
+  "input_tokens": 4384,
+  "output_tokens": 549,
+  "estimated_cost_usd": null,
+  "metadata": {
+    "execution_mode": "real",
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "backend": "nebius_token_factory",
+    "requested_max_output_tokens": 2048,
+    "input_content_bytes": 12776,
+    "requested_enable_thinking": false,
+    "actual_reasoning_tokens": 0,
+    "actual_input_tokens": 4384,
+    "actual_output_tokens": 549,
+    "finish_reason": "stop",
+    "request_id": "d9cb177846a10494641a3a09a081f7c3",
+    "retry_count": 0,
+    "usage_available": true,
+    "latency_source": "wall_clock_including_catalog_check"
+  }
+}

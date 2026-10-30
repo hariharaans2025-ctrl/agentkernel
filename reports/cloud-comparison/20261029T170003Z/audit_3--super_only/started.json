@@ -1,0 +1,99 @@
+{
+  "profile": "super_only",
+  "max_calls": 1,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+    "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8",
+    "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+    "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+  },
+  "task": {
+    "task_id": "audit_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\audit_3--super_only\\input",
+    "source_files": [
+      "commit.c",
+      "read.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "commit.c",
+      "read.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "commit.c",
+            "read.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "split": "test",
+      "family": "audit",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

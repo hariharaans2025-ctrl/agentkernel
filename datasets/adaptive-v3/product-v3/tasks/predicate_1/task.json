@@ -1,0 +1,73 @@
+{
+  "task_id": "predicate_1",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\adaptive-v3\\product-v3\\tasks\\predicate_1",
+  "source_files": [
+    "await.c",
+    "complete.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "await.c",
+    "complete.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "stress_runs": 3,
+  "max_runtime_seconds": 2,
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "A queue consumer must wait until one item is ready even after an empty broadcast, consume exactly one value 42 and clear readiness. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "A queue consumer must wait until one item is ready even after an empty broadcast, consume exactly one value 42 and clear readiness. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+    "split": "train",
+    "family": "predicate",
+    "variant": 1
+  }
+}

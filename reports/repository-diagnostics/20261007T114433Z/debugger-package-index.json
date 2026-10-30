@@ -1,0 +1,17 @@
+{
+  "command": [
+    "apt-get",
+    "update"
+  ],
+  "exit_code": 0,
+  "stdout": "Hit:1 http://deb.debian.org/debian trixie InRelease\nGet:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\nGet:4 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [264 kB]\nFetched 355 kB in 1s (422 kB/s)\nReading package lists...\n",
+  "stderr": "",
+  "duration_ms": 1318.781772,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "acc2cb81-aa99-456e-8a66-28f89518f85a",
+    "transport_wall_ms": 4885.95370000985
+  }
+}

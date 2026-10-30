@@ -1,0 +1,93 @@
+{
+  "task_id": "github_mbrossard_threadpool",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\github-acceptance-v1\\github_mbrossard_threadpool",
+  "source_files": [
+    "src/threadpool.c"
+  ],
+  "support_files": [
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "acceptance/semantics.c",
+    "acceptance/upstream_tests.py",
+    "package.json",
+    "src/threadpool.h",
+    "tests/heavy.c",
+    "tests/shutdown.c",
+    "tests/thrdtest.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-std=gnu11",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-Isrc",
+    "-I.",
+    "src/threadpool.c",
+    "acceptance/semantics.c",
+    "-o",
+    "acceptance_app"
+  ],
+  "binary_path": "acceptance_app",
+  "run_command": [
+    "./acceptance_app"
+  ],
+  "max_runtime_seconds": 15.0,
+  "compile_timeout_seconds": 30.0,
+  "stress_runs": 3,
+  "environment": {},
+  "expected_behavior": "PASS",
+  "expected_bug_category": "unknown",
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "python3",
+        "acceptance/upstream_tests.py",
+        "mbrossard"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+        "build_command": [
+          "gcc",
+          "-std=gnu11",
+          "-pthread",
+          "-g",
+          "-O1",
+          "-Isrc",
+          "-I.",
+          "src/threadpool.c",
+          "acceptance/semantics.c",
+          "-o",
+          "acceptance_app"
+        ],
+        "run_command": [
+          "./acceptance_app"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "origin": "user_repository",
+    "repository_workflow_version": 1,
+    "fixture_description": "Preserve this public thread-pool implementation's API, license and original tests. Two concurrent producers submit 256 uniquely identified jobs to four workers; every callback must execute exactly once, with correct totals. Repeat pool creation and complete graceful/waited destruction safely. Repair observed races, invalid mutex lifecycle, deadlock or lost work without removing functional work or synchronization. Only the listed implementation source is editable; headers, upstream tests and acceptance harness are protected.",
+    "github_url": "https://github.com/mbrossard/threadpool",
+    "git_revision": "9f7df71c1274fbb6af5a25a1d190044d9c1eda08",
+    "seeded_regression": false,
+    "split": "public-github-acceptance-v1"
+  }
+}

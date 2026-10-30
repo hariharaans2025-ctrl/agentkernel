@@ -1,0 +1,13 @@
+{
+  "text": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int value = office->next_ticket;\\n    sched_yield();\\n    pthread_mutex_unlock(&office->mutex);\\n    return value;\\n}\\n\"}}",
+  "input_tokens": 352,
+  "output_tokens": 141,
+  "finish_reason": "stop",
+  "generation_ms": 10658.984599999712,
+  "latency_ms": 14749.698400000852,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct + AgentKernel LoRA",
+  "base_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "adapter_sha256": "2891d74130cea2b0d690be2c8048267234030e64199613a97b29a046926b2c94",
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

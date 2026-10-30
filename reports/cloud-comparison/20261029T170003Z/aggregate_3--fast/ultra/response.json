@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-9c0f3812aa676596",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"edits\": [\n    {\n      \"file\": \"record.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\"\n      ]\n    },\n    {\n      \"file\": \"read.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int consistent(State*s){pthread_mutex_lock(&s->mutex);int a=s->parity[0],b=s->parity[1],t=s->total;pthread_mutex_unlock(&s->mutex);return a+b==t;}\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1793293889,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 1325,
+    "total_tokens": 1549,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1325
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

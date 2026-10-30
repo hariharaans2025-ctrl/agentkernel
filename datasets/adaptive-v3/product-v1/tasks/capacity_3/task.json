@@ -1,0 +1,73 @@
+{
+  "task_id": "capacity_3",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\adaptive-v3\\product-v1\\tasks\\capacity_3",
+  "source_files": [
+    "acquire.c",
+    "inspect.c"
+  ],
+  "support_files": [
+    "state.h",
+    "oracle.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "acquire.c",
+    "inspect.c",
+    "oracle.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "stress_runs": 3,
+  "max_runtime_seconds": 2,
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "run_command": [
+          "./app",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+    "split": "test",
+    "family": "capacity",
+    "variant": 3
+  }
+}

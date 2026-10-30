@@ -1,0 +1,19 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-12T17:43:12.319391+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "47097178-c971-45dd-a6ff-ef9a7be5f736",
+        "batch_transport_wall_ms": 2618.9823000004253
+      },
+      "stdout": "PASS SEMANTIC_PASS: 512 jobs exactly once; concurrent producers; safe repeated shutdown\n",
+      "stderr": "",
+      "duration_ms": 8.016416000000026
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "forward.c",
+    "reverse.c",
+    "api_oracle.c",
+    "-o",
+    "api_checks"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 267.017907,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "fff0e785-03ef-44d0-873f-bfa6f724486a",
+    "transport_wall_ms": 3730.3422999993927
+  },
+  "success": true
+}

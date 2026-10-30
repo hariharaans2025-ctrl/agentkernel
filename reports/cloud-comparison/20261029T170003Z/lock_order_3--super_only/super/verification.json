@@ -1,0 +1,49 @@
+{
+  "passed": false,
+  "build_passed": false,
+  "total_runs": 0,
+  "passed_runs": 0,
+  "failed_runs": 0,
+  "race_count": null,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 1505.334599991329,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "forward.c",
+        "reverse.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "forward.c:2:14: error: unknown type name ‘State’\n    2 | void forward(State*s){ready(s);pthread_mutex_lock(&s->left);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n      |              ^~~~~\nreverse.c:2:14: error: unknown type name ‘State’\n    2 | void reverse(State*s){ready(s);pthread_mutex_lock(&s->right);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}\n      |              ^~~~~\n",
+      "duration_ms": 166.85632,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "addc41e5-aa56-423d-83ba-46e694a62923",
+        "transport_wall_ms": 1505.2380000124685
+      },
+      "success": false
+    },
+    "execution_blocked": false
+  },
+  "reason": "Rebuild failed; no verification binary was executed.",
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_regression": false,
+  "false_fix": true
+}

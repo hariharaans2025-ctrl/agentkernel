@@ -1,0 +1,18 @@
+{
+  "stage": "super",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1578,
+  "cost_usd": 0.0004968,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "8b95064f0dd941979a6d7aa07a30f63e",
+  "input_tokens": 1539,
+  "output_tokens": 39,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"await.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include \"]}]}",
+  "error_code": "invalid_line_repair_contract",
+  "validation": [],
+  "inference_ms": 1360.59060000116
+}

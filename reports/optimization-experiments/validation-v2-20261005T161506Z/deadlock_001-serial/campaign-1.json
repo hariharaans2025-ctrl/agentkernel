@@ -1,0 +1,1811 @@
+{
+  "task_id": "deadlock_001",
+  "runs": [
+    {
+      "run_id": "deadlock_001:1",
+      "start_time": "2026-10-05T16:18:56.438281Z",
+      "duration_ms": 3.348909000000011,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1631.3063999987207
+      }
+    },
+    {
+      "run_id": "deadlock_001:2",
+      "start_time": "2026-10-05T16:18:58.070915Z",
+      "duration_ms": 5.392656999999968,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1660.7571000349708
+      }
+    },
+    {
+      "run_id": "deadlock_001:3",
+      "start_time": "2026-10-05T16:18:59.739843Z",
+      "duration_ms": 5.467399000000012,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1662.8347999649122
+      }
+    },
+    {
+      "run_id": "deadlock_001:4",
+      "start_time": "2026-10-05T16:19:01.403634Z",
+      "duration_ms": 3.159983999999949,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1703.2280000275932
+      }
+    },
+    {
+      "run_id": "deadlock_001:5",
+      "start_time": "2026-10-05T16:19:03.107990Z",
+      "duration_ms": 3.2372099999999904,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1744.7429000167176
+      }
+    },
+    {
+      "run_id": "deadlock_001:6",
+      "start_time": "2026-10-05T16:19:04.853602Z",
+      "duration_ms": 3.349468999999994,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1670.063500001561
+      }
+    },
+    {
+      "run_id": "deadlock_001:7",
+      "start_time": "2026-10-05T16:19:06.524919Z",
+      "duration_ms": 3.3408360000000137,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1724.3224999983795
+      }
+    },
+    {
+      "run_id": "deadlock_001:8",
+      "start_time": "2026-10-05T16:19:08.250205Z",
+      "duration_ms": 3.339193000000018,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1650.3131000208668
+      }
+    },
+    {
+      "run_id": "deadlock_001:9",
+      "start_time": "2026-10-05T16:19:09.901456Z",
+      "duration_ms": 3.295769000000004,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1635.675000026822
+      }
+    },
+    {
+      "run_id": "deadlock_001:10",
+      "start_time": "2026-10-05T16:19:11.538056Z",
+      "duration_ms": 3.2649009999999867,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1624.1330999764614
+      }
+    },
+    {
+      "run_id": "deadlock_001:11",
+      "start_time": "2026-10-05T16:19:13.163100Z",
+      "duration_ms": 3.311582000000035,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1626.7441000090912
+      }
+    },
+    {
+      "run_id": "deadlock_001:12",
+      "start_time": "2026-10-05T16:19:14.791203Z",
+      "duration_ms": 3.2932649999999897,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1596.774000034202
+      }
+    },
+    {
+      "run_id": "deadlock_001:13",
+      "start_time": "2026-10-05T16:19:16.389141Z",
+      "duration_ms": 5.504585000000006,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1704.8669999931008
+      }
+    },
+    {
+      "run_id": "deadlock_001:14",
+      "start_time": "2026-10-05T16:19:18.094925Z",
+      "duration_ms": 3.3797540000000126,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1642.1310000005178
+      }
+    },
+    {
+      "run_id": "deadlock_001:15",
+      "start_time": "2026-10-05T16:19:19.738121Z",
+      "duration_ms": 3.32495200000002,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1688.663499953691
+      }
+    },
+    {
+      "run_id": "deadlock_001:16",
+      "start_time": "2026-10-05T16:19:21.427713Z",
+      "duration_ms": 3.070318999999988,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1700.7799999555573
+      }
+    },
+    {
+      "run_id": "deadlock_001:17",
+      "start_time": "2026-10-05T16:19:23.129407Z",
+      "duration_ms": 3.322117999999985,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1617.5335999578238
+      }
+    },
+    {
+      "run_id": "deadlock_001:18",
+      "start_time": "2026-10-05T16:19:24.747813Z",
+      "duration_ms": 3.3095089999999883,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1619.9719000142068
+      }
+    },
+    {
+      "run_id": "deadlock_001:19",
+      "start_time": "2026-10-05T16:19:26.368668Z",
+      "duration_ms": 5.617974999999998,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1702.4698000168428
+      }
+    },
+    {
+      "run_id": "deadlock_001:20",
+      "start_time": "2026-10-05T16:19:28.072046Z",
+      "duration_ms": 5.5755510000000115,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1602.4323999881744
+      }
+    },
+    {
+      "run_id": "deadlock_001:21",
+      "start_time": "2026-10-05T16:19:29.675603Z",
+      "duration_ms": 3.3071749999999955,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1665.6769000110216
+      }
+    },
+    {
+      "run_id": "deadlock_001:22",
+      "start_time": "2026-10-05T16:19:31.342208Z",
+      "duration_ms": 3.2848209999999933,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1652.7815000154078
+      }
+    },
+    {
+      "run_id": "deadlock_001:23",
+      "start_time": "2026-10-05T16:19:32.995859Z",
+      "duration_ms": 3.3294789999999965,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1727.7602999820374
+      }
+    },
+    {
+      "run_id": "deadlock_001:24",
+      "start_time": "2026-10-05T16:19:34.724500Z",
+      "duration_ms": 5.6434419999999985,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1672.2373000229709
+      }
+    },
+    {
+      "run_id": "deadlock_001:25",
+      "start_time": "2026-10-05T16:19:36.397651Z",
+      "duration_ms": 5.697764999999966,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1609.1612000018358
+      }
+    },
+    {
+      "run_id": "deadlock_001:26",
+      "start_time": "2026-10-05T16:19:38.007691Z",
+      "duration_ms": 3.3497879999999647,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1613.190600008238
+      }
+    },
+    {
+      "run_id": "deadlock_001:27",
+      "start_time": "2026-10-05T16:19:39.621792Z",
+      "duration_ms": 5.601729,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1689.6161999902688
+      }
+    },
+    {
+      "run_id": "deadlock_001:28",
+      "start_time": "2026-10-05T16:19:41.312414Z",
+      "duration_ms": 3.330921000000042,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1714.680600038264
+      }
+    },
+    {
+      "run_id": "deadlock_001:29",
+      "start_time": "2026-10-05T16:19:43.028010Z",
+      "duration_ms": 3.2876870000000116,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1606.895600038115
+      }
+    },
+    {
+      "run_id": "deadlock_001:30",
+      "start_time": "2026-10-05T16:19:44.636073Z",
+      "duration_ms": 5.571805999999957,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1616.8752000085078
+      }
+    },
+    {
+      "run_id": "deadlock_001:31",
+      "start_time": "2026-10-05T16:19:46.253836Z",
+      "duration_ms": 5.626696999999958,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1705.3700999822468
+      }
+    },
+    {
+      "run_id": "deadlock_001:32",
+      "start_time": "2026-10-05T16:19:47.960085Z",
+      "duration_ms": 3.3138550000000047,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1677.2831999696791
+      }
+    },
+    {
+      "run_id": "deadlock_001:33",
+      "start_time": "2026-10-05T16:19:49.638248Z",
+      "duration_ms": 3.4319019999999867,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1636.9703999953344
+      }
+    },
+    {
+      "run_id": "deadlock_001:34",
+      "start_time": "2026-10-05T16:19:51.276089Z",
+      "duration_ms": 5.6747509999999775,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1693.0922999745235
+      }
+    },
+    {
+      "run_id": "deadlock_001:35",
+      "start_time": "2026-10-05T16:19:52.970143Z",
+      "duration_ms": 3.2520340000000147,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1621.9427000032738
+      }
+    },
+    {
+      "run_id": "deadlock_001:36",
+      "start_time": "2026-10-05T16:19:54.593026Z",
+      "duration_ms": 3.319132999999974,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1678.4298999700695
+      }
+    },
+    {
+      "run_id": "deadlock_001:37",
+      "start_time": "2026-10-05T16:19:56.272441Z",
+      "duration_ms": 5.903434000000041,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1616.5234000072815
+      }
+    },
+    {
+      "run_id": "deadlock_001:38",
+      "start_time": "2026-10-05T16:19:57.889906Z",
+      "duration_ms": 5.603824000000035,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1671.9484000350349
+      }
+    },
+    {
+      "run_id": "deadlock_001:39",
+      "start_time": "2026-10-05T16:19:59.563020Z",
+      "duration_ms": 3.3414969999999986,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1732.8940000152215
+      }
+    },
+    {
+      "run_id": "deadlock_001:40",
+      "start_time": "2026-10-05T16:20:01.297386Z",
+      "duration_ms": 3.271081000000009,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1630.9589000302367
+      }
+    },
+    {
+      "run_id": "deadlock_001:41",
+      "start_time": "2026-10-05T16:20:02.929533Z",
+      "duration_ms": 5.655972000000009,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1819.661499990616
+      }
+    },
+    {
+      "run_id": "deadlock_001:42",
+      "start_time": "2026-10-05T16:20:04.750151Z",
+      "duration_ms": 3.3256440000000165,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1703.2012999989092
+      }
+    },
+    {
+      "run_id": "deadlock_001:43",
+      "start_time": "2026-10-05T16:20:06.454260Z",
+      "duration_ms": 3.231552999999998,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1736.1269000102766
+      }
+    },
+    {
+      "run_id": "deadlock_001:44",
+      "start_time": "2026-10-05T16:20:08.191671Z",
+      "duration_ms": 5.594388000000006,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1677.7265999699011
+      }
+    },
+    {
+      "run_id": "deadlock_001:45",
+      "start_time": "2026-10-05T16:20:09.870312Z",
+      "duration_ms": 3.3799440000000236,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1700.1189000438899
+      }
+    },
+    {
+      "run_id": "deadlock_001:46",
+      "start_time": "2026-10-05T16:20:11.571355Z",
+      "duration_ms": 3.1907200000000357,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1738.3645999943838
+      }
+    },
+    {
+      "run_id": "deadlock_001:47",
+      "start_time": "2026-10-05T16:20:13.310737Z",
+      "duration_ms": 5.3721050000000155,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1610.092099988833
+      }
+    },
+    {
+      "run_id": "deadlock_001:48",
+      "start_time": "2026-10-05T16:20:14.921566Z",
+      "duration_ms": 3.2853219999999794,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1668.7785999965854
+      }
+    },
+    {
+      "run_id": "deadlock_001:49",
+      "start_time": "2026-10-05T16:20:16.591134Z",
+      "duration_ms": 3.2421779999999845,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1667.2041999991052
+      }
+    },
+    {
+      "run_id": "deadlock_001:50",
+      "start_time": "2026-10-05T16:20:18.259395Z",
+      "duration_ms": 3.2556579999999946,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1627.1563000045717
+      }
+    },
+    {
+      "run_id": "deadlock_001:51",
+      "start_time": "2026-10-05T16:20:19.887423Z",
+      "duration_ms": 3.32485099999999,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1658.9396999916062
+      }
+    },
+    {
+      "run_id": "deadlock_001:52",
+      "start_time": "2026-10-05T16:20:21.547334Z",
+      "duration_ms": 3.3314110000000063,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1671.532800013665
+      }
+    },
+    {
+      "run_id": "deadlock_001:53",
+      "start_time": "2026-10-05T16:20:23.219807Z",
+      "duration_ms": 3.310400999999991,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1688.195499998983
+      }
+    },
+    {
+      "run_id": "deadlock_001:54",
+      "start_time": "2026-10-05T16:20:24.908907Z",
+      "duration_ms": 5.433937999999971,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1700.2968000015244
+      }
+    },
+    {
+      "run_id": "deadlock_001:55",
+      "start_time": "2026-10-05T16:20:26.610173Z",
+      "duration_ms": 2003.2192100000002,
+      "exit_code": -9,
+      "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 3515.0741999968886
+      }
+    },
+    {
+      "run_id": "deadlock_001:56",
+      "start_time": "2026-10-05T16:20:30.126190Z",
+      "duration_ms": 3.4450920000000105,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1627.310999960173
+      }
+    },
+    {
+      "run_id": "deadlock_001:57",
+      "start_time": "2026-10-05T16:20:31.754574Z",
+      "duration_ms": 3.315236999999971,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1686.5422000410035
+      }
+    },
+    {
+      "run_id": "deadlock_001:58",
+      "start_time": "2026-10-05T16:20:33.441991Z",
+      "duration_ms": 3.3315219999999757,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1638.845700013917
+      }
+    },
+    {
+      "run_id": "deadlock_001:59",
+      "start_time": "2026-10-05T16:20:35.081755Z",
+      "duration_ms": 3.3370199999999683,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1576.7375000286847
+      }
+    },
+    {
+      "run_id": "deadlock_001:60",
+      "start_time": "2026-10-05T16:20:36.659409Z",
+      "duration_ms": 3.182388000000036,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1639.435200020671
+      }
+    },
+    {
+      "run_id": "deadlock_001:61",
+      "start_time": "2026-10-05T16:20:38.299784Z",
+      "duration_ms": 5.701720999999993,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1706.0329000232741
+      }
+    },
+    {
+      "run_id": "deadlock_001:62",
+      "start_time": "2026-10-05T16:20:40.006795Z",
+      "duration_ms": 3.313383999999975,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1658.6155999684706
+      }
+    },
+    {
+      "run_id": "deadlock_001:63",
+      "start_time": "2026-10-05T16:20:41.666312Z",
+      "duration_ms": 5.422429999999978,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1673.6435000202619
+      }
+    },
+    {
+      "run_id": "deadlock_001:64",
+      "start_time": "2026-10-05T16:20:43.340852Z",
+      "duration_ms": 3.2426479999999867,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1635.7271000160836
+      }
+    },
+    {
+      "run_id": "deadlock_001:65",
+      "start_time": "2026-10-05T16:20:44.977520Z",
+      "duration_ms": 3.305172000000023,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1670.4289999906905
+      }
+    },
+    {
+      "run_id": "deadlock_001:66",
+      "start_time": "2026-10-05T16:20:46.648856Z",
+      "duration_ms": 3.23990399999996,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1703.1983000342734
+      }
+    },
+    {
+      "run_id": "deadlock_001:67",
+      "start_time": "2026-10-05T16:20:48.352955Z",
+      "duration_ms": 3.3427380000000118,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1611.7387000122108
+      }
+    },
+    {
+      "run_id": "deadlock_001:68",
+      "start_time": "2026-10-05T16:20:49.965775Z",
+      "duration_ms": 5.618104999999984,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1720.8754000021145
+      }
+    },
+    {
+      "run_id": "deadlock_001:69",
+      "start_time": "2026-10-05T16:20:51.687658Z",
+      "duration_ms": 3.7315119999999924,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1714.18300003279
+      }
+    },
+    {
+      "run_id": "deadlock_001:70",
+      "start_time": "2026-10-05T16:20:53.402766Z",
+      "duration_ms": 3.2759890000000347,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1670.4846000066027
+      }
+    },
+    {
+      "run_id": "deadlock_001:71",
+      "start_time": "2026-10-05T16:20:55.074228Z",
+      "duration_ms": 3.3322620000000303,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1621.900399972219
+      }
+    },
+    {
+      "run_id": "deadlock_001:72",
+      "start_time": "2026-10-05T16:20:56.697082Z",
+      "duration_ms": 5.569040999999997,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1617.756300023757
+      }
+    },
+    {
+      "run_id": "deadlock_001:73",
+      "start_time": "2026-10-05T16:20:58.316132Z",
+      "duration_ms": 3.329607999999984,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1731.9980000029318
+      }
+    },
+    {
+      "run_id": "deadlock_001:74",
+      "start_time": "2026-10-05T16:21:00.049258Z",
+      "duration_ms": 5.630663000000036,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1669.0664000343531
+      }
+    },
+    {
+      "run_id": "deadlock_001:75",
+      "start_time": "2026-10-05T16:21:01.719307Z",
+      "duration_ms": 3.2999739999999833,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1683.501499996055
+      }
+    },
+    {
+      "run_id": "deadlock_001:76",
+      "start_time": "2026-10-05T16:21:03.403768Z",
+      "duration_ms": 5.639106000000005,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1649.8794999788515
+      }
+    },
+    {
+      "run_id": "deadlock_001:77",
+      "start_time": "2026-10-05T16:21:05.054534Z",
+      "duration_ms": 5.66966200000002,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1673.4805000014603
+      }
+    },
+    {
+      "run_id": "deadlock_001:78",
+      "start_time": "2026-10-05T16:21:06.729449Z",
+      "duration_ms": 3.114736000000007,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1710.021400009282
+      }
+    },
+    {
+      "run_id": "deadlock_001:79",
+      "start_time": "2026-10-05T16:21:08.440333Z",
+      "duration_ms": 3.281866999999994,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1681.8908999557607
+      }
+    },
+    {
+      "run_id": "deadlock_001:80",
+      "start_time": "2026-10-05T16:21:10.123092Z",
+      "duration_ms": 3.304793000000028,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1599.1709000081755
+      }
+    },
+    {
+      "run_id": "deadlock_001:81",
+      "start_time": "2026-10-05T16:21:11.723178Z",
+      "duration_ms": 3.215076000000039,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1673.0143999448046
+      }
+    },
+    {
+      "run_id": "deadlock_001:82",
+      "start_time": "2026-10-05T16:21:13.397162Z",
+      "duration_ms": 3.5002550000000077,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1662.8582999692298
+      }
+    },
+    {
+      "run_id": "deadlock_001:83",
+      "start_time": "2026-10-05T16:21:15.061149Z",
+      "duration_ms": 5.4834530000000274,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1652.8906000312418
+      }
+    },
+    {
+      "run_id": "deadlock_001:84",
+      "start_time": "2026-10-05T16:21:16.714920Z",
+      "duration_ms": 5.50883000000002,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1593.6661000014283
+      }
+    },
+    {
+      "run_id": "deadlock_001:85",
+      "start_time": "2026-10-05T16:21:18.309636Z",
+      "duration_ms": 3.2497690000000135,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1672.6972999749705
+      }
+    },
+    {
+      "run_id": "deadlock_001:86",
+      "start_time": "2026-10-05T16:21:19.983249Z",
+      "duration_ms": 3.3289680000000432,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1596.5597999747843
+      }
+    },
+    {
+      "run_id": "deadlock_001:87",
+      "start_time": "2026-10-05T16:21:21.580668Z",
+      "duration_ms": 3.3343860000000225,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1670.315199997276
+      }
+    },
+    {
+      "run_id": "deadlock_001:88",
+      "start_time": "2026-10-05T16:21:23.252027Z",
+      "duration_ms": 3.342118000000005,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1609.5782999764197
+      }
+    },
+    {
+      "run_id": "deadlock_001:89",
+      "start_time": "2026-10-05T16:21:24.862609Z",
+      "duration_ms": 3.417341000000018,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1647.3962999880314
+      }
+    },
+    {
+      "run_id": "deadlock_001:90",
+      "start_time": "2026-10-05T16:21:26.511100Z",
+      "duration_ms": 5.422982000000021,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1738.218999991659
+      }
+    },
+    {
+      "run_id": "deadlock_001:91",
+      "start_time": "2026-10-05T16:21:28.250517Z",
+      "duration_ms": 5.523873999999984,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1696.6616000281647
+      }
+    },
+    {
+      "run_id": "deadlock_001:92",
+      "start_time": "2026-10-05T16:21:29.948128Z",
+      "duration_ms": 3.3582719999999955,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1835.6539999949746
+      }
+    },
+    {
+      "run_id": "deadlock_001:93",
+      "start_time": "2026-10-05T16:21:31.785315Z",
+      "duration_ms": 3.277531,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1657.0713999681175
+      }
+    },
+    {
+      "run_id": "deadlock_001:94",
+      "start_time": "2026-10-05T16:21:33.443170Z",
+      "duration_ms": 3.279684000000005,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1630.8251999435015
+      }
+    },
+    {
+      "run_id": "deadlock_001:95",
+      "start_time": "2026-10-05T16:21:35.074763Z",
+      "duration_ms": 3.32494099999997,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1645.5265000113286
+      }
+    },
+    {
+      "run_id": "deadlock_001:96",
+      "start_time": "2026-10-05T16:21:36.721188Z",
+      "duration_ms": 5.665726999999954,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1655.2732000127435
+      }
+    },
+    {
+      "run_id": "deadlock_001:97",
+      "start_time": "2026-10-05T16:21:38.377314Z",
+      "duration_ms": 3.35258300000002,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1668.4877999941818
+      }
+    },
+    {
+      "run_id": "deadlock_001:98",
+      "start_time": "2026-10-05T16:21:40.046879Z",
+      "duration_ms": 3.2973010000000027,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1669.12889998639
+      }
+    },
+    {
+      "run_id": "deadlock_001:99",
+      "start_time": "2026-10-05T16:21:41.716886Z",
+      "duration_ms": 3.301437000000018,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1632.9769000294618
+      }
+    },
+    {
+      "run_id": "deadlock_001:100",
+      "start_time": "2026-10-05T16:21:43.351185Z",
+      "duration_ms": 3.2918819999999682,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "dc6fad0c-2228-48e0-aed0-c71e22a35de0",
+        "transport_wall_ms": 1650.857199972961
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 99,
+    "POSSIBLE_DEADLOCK": 1
+  },
+  "duration_ms": 168564.83899999876,
+  "requested_runs": 100
+}

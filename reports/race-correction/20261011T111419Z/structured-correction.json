@@ -1,0 +1,18 @@
+{
+  "conflicting_accesses": [
+    {
+      "first_access": "Write of size 4 at 0x5555569e66c0 by thread T1",
+      "second_access": "Previous read of size 4 at 0x5555569e66c0 by thread T2",
+      "observed_evidence": "ThreadSanitizer: data race (pid=10) on memory location 0x5555569e66c0 (right) in update_pair and snapshot_ok; T1 writes right = -n after unlocking guard, T2 reads right during snapshot_ok; both access right without mutual exclusion, despite guard being held in update_pair only for left assignment."
+    }
+  ],
+  "missing_synchronization": "The write to 'right' in update_pair is not protected by the mutex; the mutex is released after writing 'left' and reacquired before writing 'right', leaving a window where 'right' is accessible without synchronization. The read in snapshot_ok is unprotected, violating mutual exclusion with concurrent writes.",
+  "invariant_to_preserve": "The invariant a + b == 0 in snapshot_ok must hold for all consistent snapshots; this requires that both 'left' and 'right' be read atomically under the same mutex, and that updates to both fields be atomic under the same mutex.",
+  "edits": [
+    {
+      "file": "solution.c",
+      "search": "void update_pair(int n) {\n    pthread_mutex_lock(&guard);\n    left = n;\n    pthread_mutex_unlock(&guard);\n    sched_yield();\n    pthread_mutex_lock(&guard);\n    right = -n;\n    pthread_mutex_unlock(&guard);\n}",
+      "replacement": "void update_pair(int n) {\n    pthread_mutex_lock(&guard);\n    left = n;\n    right = -n;\n    pthread_mutex_unlock(&guard);\n}"
+    }
+  ]
+}

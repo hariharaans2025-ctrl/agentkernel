@@ -1,0 +1,434 @@
+{
+  "rows": [
+    {
+      "mode": "base",
+      "status": "rejected",
+      "attempts": [
+        {
+          "stage": "base",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 360,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 273,
+          "output_tokens": 87,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct [base]",
+          "adapter_sha256": null,
+          "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\"}\n}\n```",
+          "error": "JSONDecodeError",
+          "inference_ms": 27352.060600000186
+        }
+      ],
+      "tokens": 360,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "model_calls": 1,
+      "remote_model_calls": 0,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 34544.09399999986,
+      "false_fix": false,
+      "patch": null,
+      "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\"}\n}\n```",
+      "verification": null,
+      "inference_ms": 27352.060600000186,
+      "verification_ms": 0,
+      "case": "account_delta",
+      "outcome": "rejected",
+      "arm": "base"
+    },
+    {
+      "mode": "base",
+      "status": "rejected",
+      "attempts": [
+        {
+          "stage": "base",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 522,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 369,
+          "output_tokens": 153,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct [base]",
+          "adapter_sha256": null,
+          "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\"}\n}\n```",
+          "error": "JSONDecodeError",
+          "inference_ms": 29107.992500000364
+        }
+      ],
+      "tokens": 522,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "model_calls": 1,
+      "remote_model_calls": 0,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 35854.93079999924,
+      "false_fix": false,
+      "patch": null,
+      "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\"}\n}\n```",
+      "verification": null,
+      "inference_ms": 29107.992500000364,
+      "verification_ms": 0,
+      "case": "range_window",
+      "outcome": "rejected",
+      "arm": "base"
+    },
+    {
+      "mode": "fine_tuned",
+      "status": "rejected",
+      "attempts": [
+        {
+          "stage": "fine_tuned",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 387,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 273,
+          "output_tokens": 114,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+          "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+          "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    pthread_mutex_lock(&account->mutex);\\n    observed += amount;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}}",
+          "error": "ValueError",
+          "inference_ms": 28421.61980000037
+        }
+      ],
+      "tokens": 387,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "model_calls": 1,
+      "remote_model_calls": 0,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 35023.81740000055,
+      "false_fix": false,
+      "patch": null,
+      "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    pthread_mutex_lock(&account->mutex);\\n    observed += amount;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}}",
+      "verification": null,
+      "inference_ms": 28421.61980000037,
+      "verification_ms": 0,
+      "case": "account_delta",
+      "outcome": "rejected",
+      "arm": "fine_tuned"
+    },
+    {
+      "mode": "fine_tuned",
+      "status": "rejected",
+      "attempts": [
+        {
+          "stage": "fine_tuned",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 512,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 369,
+          "output_tokens": 143,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+          "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+          "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    pthread_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    pthread_yield();\\n    *upper = window->upper;\\n}\\n\"}}",
+          "error": "ValueError",
+          "inference_ms": 19322.81309999962
+        }
+      ],
+      "tokens": 512,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "model_calls": 1,
+      "remote_model_calls": 0,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 26574.493099999927,
+      "false_fix": false,
+      "patch": null,
+      "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    pthread_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    pthread_yield();\\n    *upper = window->upper;\\n}\\n\"}}",
+      "verification": null,
+      "inference_ms": 19322.81309999962,
+      "verification_ms": 0,
+      "case": "range_window",
+      "outcome": "rejected",
+      "arm": "fine_tuned"
+    },
+    {
+      "mode": "adaptive",
+      "status": "verified",
+      "attempts": [
+        {
+          "stage": "fine_tuned",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 387,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 273,
+          "output_tokens": 114,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+          "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+          "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    pthread_mutex_lock(&account->mutex);\\n    observed += amount;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}}",
+          "error": "ValueError",
+          "inference_ms": 16805.957799999305
+        },
+        {
+          "stage": "super",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 5015,
+          "cost_usd": 0.0017805,
+          "reserved_usd": 0.0162432,
+          "false_fix": true,
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "training_examples": [
+            "deadlock_004"
+          ],
+          "input_tokens": 4555,
+          "output_tokens": 460,
+          "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+          "inference_ms": 3202.2139000000607,
+          "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,15 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n-    sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": false
+          },
+          "verification_ms": 28357.32299999927
+        },
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 6902,
+          "cost_usd": 0.01044,
+          "reserved_usd": 0.054144,
+          "false_fix": false,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "training_examples": [
+            "deadlock_004"
+          ],
+          "input_tokens": 5133,
+          "output_tokens": 1769,
+          "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access while preserving the sched_yield hook for testing.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    sched_yield();\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+          "inference_ms": 7076.661000000058,
+          "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n     sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 81617.76939999982
+        }
+      ],
+      "tokens": 12304,
+      "cost_usd": 0.012220499999999999,
+      "reserved_usd": 0.0703872,
+      "model_calls": 3,
+      "remote_model_calls": 2,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 173304.88129999957,
+      "false_fix": true,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,10 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n void deposit(Account *account, int amount) {\n+    pthread_mutex_lock(&account->mutex);\n     long observed = account->balance;\n     sched_yield();\n-    account->balance = observed + amount;\n+    observed += amount;\n+    account->balance = observed;\n+    pthread_mutex_unlock(&account->mutex);\n }\n long read_balance(Account *account) {\n-    return account->balance;\n+    pthread_mutex_lock(&account->mutex);\n+    long observed = account->balance;\n+    pthread_mutex_unlock(&account->mutex);\n+    return observed;\n }\n",
+      "response": "{\"diagnosis\": \"Race conditions on shared balance due to missing mutual exclusion in deposit and read_balance functions. Writers perform non-atomic read-modify-write operations without locking, leading to lost updates. Reader may observe stale or intermediate values. No synchronization ensures atomicity or visibility across threads.\", \"root_cause\": \"The deposit function reads account->balance into a local variable, yields, then writes back without holding the mutex, allowing interleaving that loses updates. The read_balance function returns balance without synchronization, violating visibility guarantees. Both must protect all accesses with the account's mutex.\", \"confidence\": 0.95, \"reasoning_summary\": \"All runs show incorrect final balances (<3000), indicating lost deposits. The deposit function's read-modify-write is not atomic, and read_balance lacks synchronization. Fix requires using the mutex in state.h to serialize access while preserving the sched_yield hook for testing.\", \"expected_effect\": \"Deposit becomes atomic; read_balance observes consistent state; total balance equals sum of deposits (3000) under all interleavings.\", \"risk_notes\": [\"Over-locking could reduce concurrency but is necessary here for correctness. Ensure mutex is properly initialized in Account before use.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    sched_yield();\\n    observed += amount;\\n    account->balance = observed;\\n    pthread_mutex_unlock(&account->mutex);\\n}\\nlong read_balance(Account *account) {\\n    pthread_mutex_lock(&account->mutex);\\n    long observed = account->balance;\\n    pthread_mutex_unlock(&account->mutex);\\n    return observed;\\n}\\n\"}]}",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "inference_ms": 27084.832699999424,
+      "verification_ms": 109975.09239999909,
+      "case": "account_delta",
+      "outcome": "verified",
+      "arm": "adaptive"
+    },
+    {
+      "mode": "adaptive",
+      "status": "rejected",
+      "attempts": [
+        {
+          "stage": "fine_tuned",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 512,
+          "cost_usd": 0,
+          "reserved_usd": 0,
+          "false_fix": false,
+          "input_tokens": 369,
+          "output_tokens": 143,
+          "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct + AgentKernel LoRA",
+          "adapter_sha256": "2c38a5dfd8c21da411a896554a1c8d1dcb8b7b2ac311d8dbb6eb56b78ffe869b",
+          "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    pthread_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    pthread_yield();\\n    *upper = window->upper;\\n}\\n\"}}",
+          "error": "ValueError",
+          "inference_ms": 18732.4966999995
+        },
+        {
+          "stage": "super",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 5253,
+          "cost_usd": 0.0019305,
+          "reserved_usd": 0.0162432,
+          "false_fix": true,
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "training_examples": [
+            "deadlock_004"
+          ],
+          "input_tokens": 4662,
+          "output_tokens": 591,
+          "response": "{\"diagnosis\": \"The current implementation allows reading inconsistent snapshots because the getter does not hold the mutex while accessing both fields, enabling a race where lower and upper can be updated between reads. Additionally, the setter releases the mutex before updating the upper bound, creating a window where concurrent readers may observe a new lower bound with the old upper bound, violating consistency. To guarantee atomic snapshot semantics, both fields must be accessed under a single mutex acquisition in both setter and getter. Scheduler yields do not contribute to correctness and should be removed to avoid unnecessary delays. The fix ensures that any observer sees either both old values or both new values, preserving the invariant that the window width remains constant (16) and the final window matches 10000..10016.\", \"root_cause\": \"Getter lacks mutex protection during read of both fields; setter splits critical section, allowing inconsistent snapshots.\", \"confidence\": 0.9, \"reasoning_summary\": \"Move mutex to cover full read/write of both fields in getter and setter to ensure atomic snapshot. Remove non-essential scheduler yields.\", \"expected_effect\": \"Guarantee consistent snapshots; eliminate race conditions on window bounds; satisfy semantic check requiring width 16 and final window 10000..10016.\", \"risk_notes\": [\"Assumes mutex is properly initialized in state.h; incorrect initialization would cause undefined behavior.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    *lower = window->lower;\\n    *upper = window->upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\n\"}]}",
+          "inference_ms": 4061.6701000008106,
+          "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -3,14 +3,12 @@\n void set_window(Window *window, int lower, int upper) {\n     pthread_mutex_lock(&window->mutex);\n     window->lower = lower;\n-    pthread_mutex_unlock(&window->mutex);\n-    sched_yield();\n-    pthread_mutex_lock(&window->mutex);\n     window->upper = upper;\n     pthread_mutex_unlock(&window->mutex);\n }\n void get_window(Window *window, int *lower, int *upper) {\n+    pthread_mutex_lock(&window->mutex);\n     *lower = window->lower;\n-    sched_yield();\n     *upper = window->upper;\n+    pthread_mutex_unlock(&window->mutex);\n }\n",
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": false
+          },
+          "verification_ms": 51305.121999999756
+        },
+        {
+          "stage": "ultra",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 6559,
+          "cost_usd": 0.008935,
+          "reserved_usd": 0.054144,
+          "false_fix": true,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "training_examples": [
+            "deadlock_004"
+          ],
+          "input_tokens": 5371,
+          "output_tokens": 1188,
+          "response": "{\"diagnosis\": \"The getter and setter do not provide atomic snapshot of window bounds, allowing inconsistent reads and writes.\", \"root_cause\": \"Setter releases mutex between updating lower and upper; getter reads both fields without mutex protection.\", \"confidence\": 0.95, \"reasoning_summary\": \"Move mutex to cover full read/write of both fields in getter and setter to ensure atomic snapshot. Remove non-essential scheduler yields.\", \"expected_effect\": \"Guarantee consistent snapshots; eliminate race conditions on window bounds; satisfy semantic check requiring width 16 and final window 10000..10016.\", \"risk_notes\": [\"Assumes mutex is properly initialized in state.h; incorrect initialization would cause undefined behavior.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    *lower = window->lower;\\n    *upper = window->upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\"}]}",
+          "inference_ms": 4262.963799999852,
+          "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -3,14 +3,12 @@\n void set_window(Window *window, int lower, int upper) {\n     pthread_mutex_lock(&window->mutex);\n     window->lower = lower;\n-    pthread_mutex_unlock(&window->mutex);\n-    sched_yield();\n-    pthread_mutex_lock(&window->mutex);\n     window->upper = upper;\n     pthread_mutex_unlock(&window->mutex);\n }\n void get_window(Window *window, int *lower, int *upper) {\n+    pthread_mutex_lock(&window->mutex);\n     *lower = window->lower;\n-    sched_yield();\n     *upper = window->upper;\n+    pthread_mutex_unlock(&window->mutex);\n }\n",
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": false
+          },
+          "verification_ms": 50687.583599999925
+        }
+      ],
+      "tokens": 12324,
+      "cost_usd": 0.0108655,
+      "reserved_usd": 0.0703872,
+      "model_calls": 3,
+      "remote_model_calls": 2,
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "end_to_end_ms": 169441.67870000002,
+      "false_fix": true,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -3,14 +3,12 @@\n void set_window(Window *window, int lower, int upper) {\n     pthread_mutex_lock(&window->mutex);\n     window->lower = lower;\n-    pthread_mutex_unlock(&window->mutex);\n-    sched_yield();\n-    pthread_mutex_lock(&window->mutex);\n     window->upper = upper;\n     pthread_mutex_unlock(&window->mutex);\n }\n void get_window(Window *window, int *lower, int *upper) {\n+    pthread_mutex_lock(&window->mutex);\n     *lower = window->lower;\n-    sched_yield();\n     *upper = window->upper;\n+    pthread_mutex_unlock(&window->mutex);\n }\n",
+      "response": "{\"diagnosis\": \"The getter and setter do not provide atomic snapshot of window bounds, allowing inconsistent reads and writes.\", \"root_cause\": \"Setter releases mutex between updating lower and upper; getter reads both fields without mutex protection.\", \"confidence\": 0.95, \"reasoning_summary\": \"Move mutex to cover full read/write of both fields in getter and setter to ensure atomic snapshot. Remove non-essential scheduler yields.\", \"expected_effect\": \"Guarantee consistent snapshots; eliminate race conditions on window bounds; satisfy semantic check requiring width 16 and final window 10000..10016.\", \"risk_notes\": [\"Assumes mutex is properly initialized in state.h; incorrect initialization would cause undefined behavior.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    *lower = window->lower;\\n    *upper = window->upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\"}]}",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": false
+      },
+      "inference_ms": 27057.130600000164,
+      "verification_ms": 101992.70559999968,
+      "case": "range_window",
+      "outcome": "rejected",
+      "arm": "adaptive"
+    }
+  ],
+  "arms": {
+    "base": {
+      "jobs": 2,
+      "verified_repairs": 0,
+      "verified_rate": 0.0,
+      "unknown": 0,
+      "false_fixes": 0,
+      "tokens": 882,
+      "tokens_per_verified_repair": null,
+      "inference_latency": {
+        "observations": 2,
+        "median_ms": 28230.026550000275,
+        "total_ms": 56460.05310000055
+      },
+      "verification_latency": {
+        "observations": 2,
+        "median_ms": 0.0,
+        "total_ms": 0
+      },
+      "end_to_end_latency": {
+        "observations": 2,
+        "median_ms": 35199.51239999955,
+        "total_ms": 70399.0247999991
+      }
+    },
+    "fine_tuned": {
+      "jobs": 2,
+      "verified_repairs": 0,
+      "verified_rate": 0.0,
+      "unknown": 0,
+      "false_fixes": 0,
+      "tokens": 899,
+      "tokens_per_verified_repair": null,
+      "inference_latency": {
+        "observations": 2,
+        "median_ms": 23872.216449999996,
+        "total_ms": 47744.43289999999
+      },
+      "verification_latency": {
+        "observations": 2,
+        "median_ms": 0.0,
+        "total_ms": 0
+      },
+      "end_to_end_latency": {
+        "observations": 2,
+        "median_ms": 30799.15525000024,
+        "total_ms": 61598.31050000048
+      }
+    },
+    "adaptive": {
+      "jobs": 2,
+      "verified_repairs": 1,
+      "verified_rate": 0.5,
+      "unknown": 0,
+      "false_fixes": 2,
+      "tokens": 24628,
+      "tokens_per_verified_repair": 24628.0,
+      "inference_latency": {
+        "observations": 2,
+        "median_ms": 27070.981649999794,
+        "total_ms": 54141.96329999959
+      },
+      "verification_latency": {
+        "observations": 2,
+        "median_ms": 105983.8989999994,
+        "total_ms": 211967.7979999988
+      },
+      "end_to_end_latency": {
+        "observations": 2,
+        "median_ms": 171373.2799999998,
+        "total_ms": 342746.5599999996
+      }
+    }
+  }
+}

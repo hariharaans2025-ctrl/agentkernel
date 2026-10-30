@@ -1,0 +1,99 @@
+{
+  "profile": "super_only",
+  "max_calls": 1,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+    "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6",
+    "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+    "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+  },
+  "task": {
+    "task_id": "lock_order_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\lock_order_3--super_only\\input",
+    "source_files": [
+      "forward.c",
+      "reverse.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "forward.c",
+      "reverse.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "forward.c",
+            "reverse.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+      "split": "test",
+      "family": "lock_order",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

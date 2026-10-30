@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-b65bd54252e5a01e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "@@ REPLACE writer.c 1-2\n#include \"state.h\"\nvoid update(State*s,int step) { pthread_mutex_lock(&s->mutex); long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; pthread_mutex_unlock(&s->mutex); }\n@@ END\n@@ REPLACE reader.c 1-2\n#include \"state.h\"\nlong snapshot(State*s) { pthread_mutex_lock(&s->mutex); long result=s->produced-2*s->consumed; pthread_mutex_unlock(&s->mutex); return result; }\n@@ END",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1793362141,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 134,
+    "prompt_tokens": 1176,
+    "total_tokens": 1310,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1176
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

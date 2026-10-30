@@ -1,0 +1,55 @@
+{
+  "jobs": 24,
+  "paid_calls": 32,
+  "known_cost_usd": 0.0409148,
+  "unknown_cost_exists": false,
+  "adaptive_stopped_at_super": [],
+  "adaptive_recovered_by_ultra": [
+    "ledger_3",
+    "snapshot_3",
+    "capacity_3",
+    "lock_order_3",
+    "predicate_3",
+    "aggregate_3"
+  ],
+  "adaptive_unresolved": [
+    "rendezvous_3",
+    "audit_3"
+  ],
+  "unnecessary_ultra_calls": [],
+  "adaptive_cheaper_than_ultra_cases": [],
+  "adaptive_more_expensive_than_ultra_cases": [
+    "ledger_3",
+    "snapshot_3",
+    "capacity_3",
+    "rendezvous_3",
+    "lock_order_3",
+    "predicate_3",
+    "audit_3",
+    "aggregate_3"
+  ],
+  "stress_and_semantics_pass_but_tsan_fail": [],
+  "verified_outputs_audited": true,
+  "economics": {
+    "super_only": {
+      "tokens_per_verified": null,
+      "cost_per_verified_usd": null,
+      "calls_per_verified": null
+    },
+    "ultra_only": {
+      "tokens_per_verified": 2175.8333333333335,
+      "cost_per_verified_usd": 0.002659166666666667,
+      "calls_per_verified": 1.3333333333333333
+    },
+    "fast": {
+      "tokens_per_verified": 4290.5,
+      "cost_per_verified_usd": 0.0034336666666666665,
+      "calls_per_verified": 2.6666666666666665
+    }
+  },
+  "supported_suite_claims": [
+    "On this suite adaptive verified 6/8 versus Super-only 0/8.",
+    "Adaptive cost more than Ultra-only in this run; a cost-saving claim is unsupported."
+  ],
+  "conclusion_policy": "Describe suite tradeoffs. Do not claim adaptive is universally cheaper, faster or more accurate."
+}

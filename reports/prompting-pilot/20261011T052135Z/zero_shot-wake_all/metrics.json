@@ -1,0 +1,17 @@
+{
+  "id": "zero_shot-wake_all",
+  "arm": "zero_shot",
+  "outcome": "rejected",
+  "false_fix": true,
+  "tokens": 2062,
+  "inference_ms": 27134.02130000759,
+  "verification_ms": 252691.07980001718,
+  "end_to_end_ms": 285601.39909997815,
+  "model_calls": 1,
+  "input_tokens": 1359,
+  "output_tokens": 703,
+  "inference_cost_usd": 0.0003468,
+  "stress_passed": 0,
+  "semantic_passed": false,
+  "tsan_passed": false
+}

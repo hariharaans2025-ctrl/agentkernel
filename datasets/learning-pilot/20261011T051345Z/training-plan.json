@@ -1,0 +1,30 @@
+{
+  "request_template": {
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "suffix": "agentkernel-verified-pilot",
+    "hyperparameters": {
+      "batch_size": 1,
+      "learning_rate": 1e-05,
+      "n_epochs": 1,
+      "lora": true,
+      "lora_r": 8,
+      "lora_alpha": 8,
+      "lora_dropout": 0.05,
+      "packing": true,
+      "context_length": 8192
+    },
+    "seed": 42
+  },
+  "upload_only": [
+    "train.jsonl",
+    "validation.jsonl"
+  ],
+  "never_upload_for_training": [
+    "test.jsonl",
+    "reference.patch"
+  ],
+  "max_pilot_spend_usd": 10,
+  "submitted": false,
+  "job_id": null,
+  "blocking_reason": "No verified training + dedicated deployment cost bound within $10. Training tokenizer limits also require preflight before upload."
+}

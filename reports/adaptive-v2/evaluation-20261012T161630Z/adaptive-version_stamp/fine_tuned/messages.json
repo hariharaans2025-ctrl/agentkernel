@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Repair C/pthreads synchronization while preserving all original work, scheduling hooks, interfaces and protected tests. Return ONLY a JSON object with one key \"files\": an object mapping each editable filename to its complete corrected source. Do not include Markdown, explanations, commands, tests, or new files. JSON-encode each source string exactly once: source newlines become JSON \\n escapes, and quotes/backslashes must decode to the original C syntax. Put the lock before the shared read, preserve the shared write, and synchronize all readers. Never replace sched_yield with another API."
+  },
+  {
+    "role": "user",
+    "content": "{\"task\": \"Publish and read a generation/checksum pair consistently. Every checksum must equal generation XOR 0x5a5a, and the final generation must remain 12000. Retain every scheduling hook.\", \"editable_files\": [\"solution.c\"], \"sources\": {\"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_stamp(Stamp *stamp,int generation) {\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->generation=generation;\\n    pthread_mutex_unlock(&stamp->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->checksum=generation ^ 0x5a5a;\\n    pthread_mutex_unlock(&stamp->mutex);\\n}\\nvoid read_stamp(Stamp *stamp,int *generation,int *checksum) {\\n    *generation=stamp->generation;\\n    sched_yield();\\n    *checksum=stamp->checksum;\\n}\\n\"}, \"headers\": {\"state.h\": \"#ifndef STATE_H\\n#define STATE_H\\n#include <pthread.h>\\ntypedef struct { pthread_mutex_t mutex; int generation; int checksum; } Stamp;\\nvoid publish_stamp(Stamp *,int);\\nvoid read_stamp(Stamp *,int *,int *);\\n#endif\\n\"}, \"requirements\": [\"Publish and read a generation/checksum pair consistently. Every checksum must equal generation XOR 0x5a5a, and the final generation must remain 12000. Retain every scheduling hook.\"]}"
+  }
+]

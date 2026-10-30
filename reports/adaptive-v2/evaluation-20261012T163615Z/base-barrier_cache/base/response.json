@@ -1,0 +1,13 @@
+{
+  "text": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n<<<END_FILE>>>",
+  "input_tokens": 425,
+  "output_tokens": 125,
+  "finish_reason": "stop",
+  "generation_ms": 5216.584199999488,
+  "latency_ms": 9041.838799999823,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+  "base_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "adapter_sha256": null,
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

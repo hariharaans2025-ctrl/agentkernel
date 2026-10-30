@@ -1,0 +1,30 @@
+{
+  "stage": "super",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1556,
+  "cost_usd": 0.000519,
+  "reserved_usd": 0.0072864,
+  "false_fix": true,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "691830980a7a450a92638e9b900282c0",
+  "input_tokens": 1469,
+  "output_tokens": 87,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"commit.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include 'state.h'\", \"void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\"]}]}",
+  "error_code": null,
+  "validation": [],
+  "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"commit.c\", \"search\": \"#include \\\"state.h\\\"\\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\\n\", \"replacement\": \"#include 'state.h'\\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+  "inference_ms": 1678.4645000007004,
+  "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n-#include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+#include 'state.h'\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n",
+  "verification": {
+    "build_passed": false,
+    "original_tests_passed": null,
+    "passed_runs": 0,
+    "total_runs": 0,
+    "semantic_passed": null,
+    "tsan_passed": null,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 1483.1663999939337
+}

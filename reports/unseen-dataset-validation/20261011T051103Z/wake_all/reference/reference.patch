@@ -1,0 +1,10 @@
+--- a/solution.c
++++ b/solution.c
+@@ -3,6 +3,6 @@
+     pthread_mutex_lock(&guard);
+     while (waiting != 2) pthread_cond_wait(&arrived,&guard);
+     ready = 1;
+-    pthread_cond_signal(&available);
++    pthread_cond_broadcast(&available);
+     pthread_mutex_unlock(&guard);
+ }

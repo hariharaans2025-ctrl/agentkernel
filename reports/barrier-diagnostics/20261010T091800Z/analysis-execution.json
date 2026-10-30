@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "analyze_variants.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"original\": 2, \"failed_full\": 2, \"failed_compact\": 2, \"verified_manual\": 0}\n",
+  "stderr": "",
+  "duration_ms": 612.3593860000001,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "1492a784-79d7-472e-a3e6-2bde621013bd",
+    "transport_wall_ms": 5301.7737999907695
+  }
+}

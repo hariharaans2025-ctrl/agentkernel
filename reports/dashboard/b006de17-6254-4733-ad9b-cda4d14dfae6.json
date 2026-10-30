@@ -1,0 +1,360 @@
+{
+  "id": "b006de17-6254-4733-ad9b-cda4d14dfae6",
+  "fixture": "deadlock_001",
+  "tiers": [
+    "NANO"
+  ],
+  "created_at": "2026-09-30T04:45:57.464110+00:00",
+  "status": "completed",
+  "provenance": "real",
+  "verification_runs": 100,
+  "baseline_runs": 3,
+  "stop_requested": false,
+  "events": [
+    {
+      "at": "2026-09-30T04:45:57.494856+00:00",
+      "tier": "NANO",
+      "message": "Starting sandbox"
+    },
+    {
+      "at": "2026-09-30T04:46:00.928185+00:00",
+      "tier": "NANO",
+      "message": "Compiling baseline"
+    },
+    {
+      "at": "2026-09-30T04:46:02.947662+00:00",
+      "tier": "NANO",
+      "message": "Reproducing bug"
+    },
+    {
+      "at": "2026-09-30T04:46:19.895110+00:00",
+      "tier": "NANO",
+      "message": "Requesting model"
+    },
+    {
+      "at": "2026-09-30T04:46:34.369957+00:00",
+      "tier": "NANO",
+      "message": "Checking response"
+    },
+    {
+      "at": "2026-09-30T04:46:49.346584+00:00",
+      "tier": "NANO",
+      "message": "Completed"
+    }
+  ],
+  "note": "Same frozen source and verification settings. Separate baseline measurements per model.",
+  "results": {
+    "NANO": {
+      "status": "completed",
+      "stage": "Completed",
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "started_at": "2026-09-30T04:45:57.494656+00:00",
+      "request_started_at": "2026-09-30T04:46:19.894995+00:00",
+      "response": "Nebius inference unavailable: incomplete_response",
+      "inference": {
+        "task_id": "deadlock_001",
+        "provider": "NEBIUS",
+        "tier": "NANO",
+        "output_text": "Nebius inference unavailable: incomplete_response",
+        "status": "FAILED",
+        "latency_ms": 14472.391600022092,
+        "input_tokens": 2030,
+        "output_tokens": 4096,
+        "estimated_cost_usd": null,
+        "metadata": {
+          "execution_mode": "real",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+          "error_code": "incomplete_response",
+          "requested_max_output_tokens": 4096,
+          "actual_reasoning_tokens": null,
+          "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+          "usage_unknown": false,
+          "retry_count": 0,
+          "request_id": "41c8d0f92fdcc3c1cb90f675d8818e5b",
+          "retryable": false,
+          "finish_reason": "length",
+          "actual_input_tokens": 2030,
+          "actual_output_tokens": 4096
+        }
+      },
+      "finished_at": "2026-09-30T04:46:49.346144+00:00",
+      "job": {
+        "task": "deadlock_001",
+        "status": "unresolved",
+        "route": [
+          "NANO"
+        ],
+        "ultra_avoided": true,
+        "baseline": {
+          "build_passed": true,
+          "total_runs": 3,
+          "failed_runs": 3,
+          "infrastructure_failures": 0,
+          "requested_runs": 3,
+          "execution_blocked": false,
+          "counts": {
+            "POSSIBLE_DEADLOCK": 3
+          },
+          "duration_ms": 16913.155399961397,
+          "representative_runs": [
+            {
+              "run_id": "deadlock_001:1",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "b94be398-dc87-49a1-8376-866aac3b84d8",
+                "transport_wall_ms": 5764.896500040777
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:2",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "b94be398-dc87-49a1-8376-866aac3b84d8",
+                "transport_wall_ms": 5940.141900093295
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:3",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "b94be398-dc87-49a1-8376-866aac3b84d8",
+                "transport_wall_ms": 5207.548700040206
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            }
+          ],
+          "sanitizer": {
+            "status": "not_configured"
+          },
+          "fingerprints": [
+            {
+              "fingerprint_id": "4b4c8f316a845e49",
+              "pattern": "cyclic_lock_wait",
+              "threads": [
+                "T1",
+                "T2"
+              ],
+              "lock_orders": [
+                [
+                  "A",
+                  "B"
+                ],
+                [
+                  "B",
+                  "A"
+                ]
+              ],
+              "confidence": 0.9,
+              "occurrences": 3,
+              "representative_runs": [
+                "deadlock_001:1",
+                "deadlock_001:2",
+                "deadlock_001:3"
+              ],
+              "evidence": {
+                "edges": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "cycle": [
+                  "A",
+                  "B",
+                  "A"
+                ],
+                "finding_locations": []
+              }
+            }
+          ]
+        },
+        "verification": null,
+        "repairs": [],
+        "triage": null,
+        "stopped_reason": "verification_not_retryable",
+        "total_time_ms": 36872.73820000701,
+        "inference_latency_ms": 14472.391600022092,
+        "execution_latency_ms": 17080.843497961396,
+        "inference_tokens": 6126,
+        "cost_usd": null,
+        "inference_mode": "real",
+        "model_calls": {
+          "LOCAL": 0,
+          "NANO": 1,
+          "SUPER": 0,
+          "ULTRA": 0
+        },
+        "metadata": {
+          "execution_backend": "nebius",
+          "models": [
+            "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+          ],
+          "starting_tier": "NANO",
+          "final_tier": "NANO",
+          "escalations": 0,
+          "routing_reasons": [
+            "Fixed-tier evaluation policy: NANO."
+          ],
+          "usage_available": true,
+          "inference_measurement": "measured",
+          "patch_attempts": 0,
+          "model_attempts": [
+            {
+              "tier": "NANO",
+              "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+              "input_tokens": 2030,
+              "output_tokens": 4096,
+              "latency_ms": 14472.391600022092,
+              "retry_count": 0,
+              "reasoning_tokens": null,
+              "requested_max_output_tokens": 4096,
+              "requested_enable_thinking": null,
+              "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+              "finish_reason": "length",
+              "request_id": "41c8d0f92fdcc3c1cb90f675d8818e5b",
+              "error_code": "incomplete_response",
+              "verification_reason": "Inference failed. Inference failed; no patch was applied."
+            }
+          ],
+          "observability": {
+            "backend": "langsmith",
+            "project": "concurrency-bug-hunter",
+            "status": "confirmed",
+            "spans_submitted": 5,
+            "spans_observed": [
+              {
+                "id": "bc7c52eb-6325-4812-97ec-55a0e064c387",
+                "name": "ConcurrencyBugHunterJob",
+                "parent_id": null
+              },
+              {
+                "id": "47c65633-0e05-4c6e-b172-d398ed52e68d",
+                "name": "baseline_compile",
+                "parent_id": "bc7c52eb-6325-4812-97ec-55a0e064c387"
+              },
+              {
+                "id": "f6caf203-c543-4e1b-b061-c7b598ea2ee5",
+                "name": "baseline_stress_campaign",
+                "parent_id": "bc7c52eb-6325-4812-97ec-55a0e064c387"
+              },
+              {
+                "id": "56c80683-8846-4682-9278-e184d84470eb",
+                "name": "fingerprint_analysis",
+                "parent_id": "bc7c52eb-6325-4812-97ec-55a0e064c387"
+              },
+              {
+                "id": "116f02ee-f0ec-4786-8e82-24b65edcebdd",
+                "name": "nano_diagnosis",
+                "parent_id": "bc7c52eb-6325-4812-97ec-55a0e064c387"
+              }
+            ],
+            "feedback_submitted": 5,
+            "trace_ids": [
+              "bc7c52eb-6325-4812-97ec-55a0e064c387"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "main.c": "0de854b650e07a1dc7e9ef0baa0d8e1f86b0e352473054d3f5a57042027b48b2"
+  },
+  "finished_at": "2026-09-30T04:46:49.351933+00:00",
+  "benchmark": {
+    "individual": {
+      "NANO": {
+        "input_tokens": 2030,
+        "output_tokens": 4096,
+        "total_tokens": 6126,
+        "reasoning_tokens": null,
+        "output_budget_utilization": 1.0,
+        "inference_ms": 14472.391600022092,
+        "effective_output_tokens_per_second": 283.02163962960674,
+        "end_to_end_ms": 51851.488000000005,
+        "baseline_ms": 16913.155399961397,
+        "baseline_runs": 3,
+        "baseline_failures": 3,
+        "patch_accepted": false,
+        "patch_added_lines": null,
+        "patch_removed_lines": null,
+        "build_passed": null,
+        "execution_passed": null,
+        "semantic_passed": null,
+        "sanitizer_passed": null,
+        "false_fix": false,
+        "final_tier": "NANO",
+        "nano_calls": 1,
+        "super_calls": 0,
+        "ultra_calls": 0,
+        "verification_ms": null,
+        "verification_runs": null,
+        "verification_passes": null,
+        "verification_pass_rate": null,
+        "deadlocks": null,
+        "races": null,
+        "crashes": null,
+        "infrastructure_failures": null,
+        "verified": false,
+        "estimated_inference_cost_usd": null,
+        "finish_reason": "length",
+        "error_code": "incomplete_response",
+        "sanitizer_status": "not_measured"
+      }
+    },
+    "combined": {
+      "selected_models": 1,
+      "verified_models": 0,
+      "end_to_end_ms": 51887.823,
+      "input_tokens": 2030,
+      "input_tokens_known_subtotal": 2030,
+      "output_tokens": 4096,
+      "output_tokens_known_subtotal": 4096,
+      "total_tokens": 6126,
+      "total_tokens_known_subtotal": 6126,
+      "inference_ms": 14472.391600022092,
+      "inference_ms_known_subtotal": 14472.391600022092,
+      "estimated_inference_cost_usd": null,
+      "estimated_inference_cost_usd_known_subtotal": null,
+      "models_with_verification": 0,
+      "verification_runs": 0,
+      "verification_passes": 0,
+      "verification_pass_rate": null,
+      "verification_ms": null,
+      "deadlocks": null,
+      "races": null,
+      "crashes": null,
+      "infrastructure_failures": null,
+      "patches_accepted": 0,
+      "verified_model_rate": 0.0
+    },
+    "notes": [
+      "One attempt per model on one fixture; not a statistical model ranking.",
+      "Effective token rate includes catalog check and request overhead; it is not decode throughput.",
+      "Combined metrics aggregate independent runs, not an ensemble.",
+      "Unknown usage/cost is null; known subtotals are explicitly labeled. Sandbox cost is excluded.",
+      "A passing campaign does not establish semantic equivalence."
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "account_delta",
+      "source_sha256": "a9e262fe9d1afdd2c16c12b6ccc17f5cf0df14a71ffa88648e9597d4336081f5",
+      "support_sha256": {
+        "state.h": "59c2d78cead7a24dc64710e8acf7be8388c8e45d55f28b099a17294f959c2372",
+        "oracle.c": "f2c296d29593821e6d2cc6c35861f45586efbe4feb32014dda56b886d8eb0832"
+      },
+      "description": "Four writers apply distinct deposits; all 3000 units must be retained. A concurrent reader must be synchronized with all writers."
+    },
+    {
+      "id": "range_window",
+      "source_sha256": "cb8c6ef49d0f14c3b30623edbdc1f0f472b468970182052d53379824fb3cca39",
+      "support_sha256": {
+        "state.h": "885caf1d4e6847b6634b4df84406400fb4f807ec94b8399cf6aba0fff0625231",
+        "oracle.c": "ab539e71999ad5c34dc30f936d51d3fea64b5ba4ddaf1f2b45a6084b28554209"
+      },
+      "description": "Publish and read both range endpoints as one consistent snapshot. Every observed window must have width 16; final window is 10000..10016."
+    }
+  ],
+  "targets_in_training": false,
+  "selection": "Frozen before SFT; no holdout outcomes for checkpoint selection.",
+  "scope": "New programs; transfers within known bug families, not a family-disjoint production benchmark."
+}

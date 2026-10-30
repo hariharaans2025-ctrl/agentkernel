@@ -1,0 +1,45 @@
+{
+  "scope": "Repeated-input proposal reuse, not unseen evaluation or matched latency benchmark",
+  "historical": {
+    "status": "verified",
+    "tokens": 502,
+    "model_calls": 1,
+    "cost_usd": 0,
+    "end_to_end_ms": 91613.25489999945
+  },
+  "reuse": {
+    "status": "verified",
+    "attempts": [],
+    "model_calls": 0,
+    "remote_model_calls": 0,
+    "tokens": 0,
+    "cost_usd": 0,
+    "reserved_usd": 0,
+    "inference_ms": 0,
+    "false_fix": false,
+    "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,12 +1,20 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n-    return stock->remaining;\n+    pthread_mutex_lock(&stock->mutex);\n+    int value = stock->remaining;\n+    pthread_mutex_unlock(&stock->mutex);\n+    return value;\n }\n",
+    "response": null,
+    "candidate_reuse": {
+      "hit": true,
+      "lookup_ms": 11.399700015317649,
+      "key": "450aacd18d2d7fbe8e9c5fa7b22835e06f108196757661c243a13b91342b4e23",
+      "origin_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\sites-console\\runs\\2c402840-71de-4ce2-a684-0e67dc7a9d75",
+      "verdict_reused": false
+    },
+    "verification_ms": 30298.390900017694,
+    "verification": {
+      "build_passed": true,
+      "original_tests_passed": true,
+      "passed_runs": 100,
+      "total_runs": 100,
+      "semantic_passed": true,
+      "tsan_passed": true,
+      "scheduling_hooks_preserved": true
+    },
+    "end_to_end_ms": 38558.91680001514,
+    "created_at": "2026-10-29T16:50:39.140208+00:00"
+  },
+  "original_evidence_unchanged": true,
+  "new_paid_model_calls": 0,
+  "latency_caveat": "Historical runs differ in time/network conditions. No statistical or causal speedup claim."
+}

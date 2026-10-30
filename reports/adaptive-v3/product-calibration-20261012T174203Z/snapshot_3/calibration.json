@@ -1,0 +1,28 @@
+{
+  "case": "snapshot_3",
+  "split": "test",
+  "family": "snapshot",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 1,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "publisher.c": "b9e1604fe3bea735cbf6414f95f5e59c06e1d2a78815b3b3f5916314770c962b",
+    "snapshot.c": "2872750f40e60aaa0b9f233bad2137624eebc5daadda3383e088be762f178115"
+  },
+  "source_sha256": {
+    "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+    "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343"
+  },
+  "support_sha256": {
+    "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+    "oracle.c": "dd6f776bac13536428c96d4e957a61ed2edc12866286fc5eceedd780be84d357"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 61.432166999999026
+}

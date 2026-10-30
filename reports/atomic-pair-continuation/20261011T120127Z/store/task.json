@@ -1,0 +1,73 @@
+{
+  "task_id": "atomic_store",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\atomic-pair-continuation\\20261011T120127Z\\store",
+  "source_files": [
+    "pair.c"
+  ],
+  "support_files": [
+    "pair.h",
+    "harness.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-std=c11",
+    "-pthread",
+    "-O1",
+    "-g",
+    "-DMODE=2",
+    "harness.c",
+    "pair.c",
+    "-o",
+    "app"
+  ],
+  "binary_path": "app",
+  "run_command": [
+    "./app"
+  ],
+  "max_runtime_seconds": 2.0,
+  "compile_timeout_seconds": 30.0,
+  "stress_runs": 3,
+  "environment": {},
+  "expected_behavior": "PASS",
+  "expected_bug_category": "unknown",
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Paired-value and completion invariants",
+        "build_command": [
+          "gcc",
+          "-std=c11",
+          "-pthread",
+          "-O1",
+          "-g",
+          "-DMODE=2",
+          "harness.c",
+          "pair.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {}
+}

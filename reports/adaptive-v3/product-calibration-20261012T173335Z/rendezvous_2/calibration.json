@@ -1,0 +1,28 @@
+{
+  "case": "rendezvous_2",
+  "split": "train",
+  "family": "rendezvous",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "publish.c": "a5523ed77b3354510c31e521a08950ae9824a8b564ff8ef2b9a825d1d5eb6b32",
+    "observe.c": "964259d3aa33f8ff928e1e061419de77087094827a9bc5b4371fbae1de538075"
+  },
+  "source_sha256": {
+    "publish.c": "0ae9be0c5383571803f5f424ccc4e0d02c5d772482b76800c3f14298e682f9e2",
+    "observe.c": "26b51d25a4d7fa77daa057ecbc21cf655ab87f9d32a0d09869ae66f1f9221dda"
+  },
+  "support_sha256": {
+    "state.h": "b30b66dcf83495f757b774c20e6152d90aa5ac4bbe43dcccdfad32e6a0275fb9",
+    "oracle.c": "2a25e304284767518b05940d4914783353cf5e67bc9ec73763e8544a17a78881"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 67.839568899999
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_barrier_diagnostics.py"
+  ],
+  "exit_code": 0,
+  "stdout": "........                                                                 [100%]\n8 passed in 0.63s\n",
+  "stderr": "",
+  "duration_ms": 1019.255058,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "f722aaae-3d9d-47e4-ab57-b02f71fc26e8",
+    "transport_wall_ms": 3904.2902999790385
+  }
+}

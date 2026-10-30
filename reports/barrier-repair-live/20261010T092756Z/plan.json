@@ -1,0 +1,60 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "max_model_calls": 1,
+  "max_input_tokens": 6000,
+  "max_output_tokens": 2048,
+  "max_total_tokens": 8048,
+  "max_wall_seconds": 1800,
+  "retries": 0,
+  "image": "agentkernel-clang:20261003122908",
+  "payload_sha256": "aaf356b240e3508cce1f77209b3618b1286bbd166a664ae4aebbefea0dd280ef",
+  "controller_sha256": "bb49eb13c84d0171f1616846b31ba7d1375c388f46bb6a056a58232b41638a60",
+  "token_count_sha256": "ef99740f8fc968d5b640d88885f2233b788d9f997868f9a9398efaebfdb025f1",
+  "public_tokenizer_input_tokens": 5022,
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./job_service",
+        "--smoke"
+      ],
+      [
+        "./job_service",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "100 jobs exactly once, checksum 5050, queue drained",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "-Iinclude",
+          "src/main.c",
+          "src/queue.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+  "scope": "Original synthetic queue source, original runtime evidence and new original-source static diagnostic only. No known-good repair, keys or environment dumps. No retries, corrections, substitutions or escalation."
+}

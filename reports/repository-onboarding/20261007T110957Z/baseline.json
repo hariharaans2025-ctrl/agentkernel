@@ -1,0 +1,64 @@
+{
+  "task_id": "job-queue-service",
+  "runs": [
+    {
+      "run_id": "job-queue-service:1",
+      "start_time": "2026-10-07T11:10:15.066872Z",
+      "duration_ms": 2003.032659,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9f7c2eb3-b714-47bf-875e-bb3b407925bb",
+        "transport_wall_ms": 4562.485699992976
+      }
+    },
+    {
+      "run_id": "job-queue-service:2",
+      "start_time": "2026-10-07T11:10:19.629470Z",
+      "duration_ms": 2003.3339430000003,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9f7c2eb3-b714-47bf-875e-bb3b407925bb",
+        "transport_wall_ms": 4812.730100005865
+      }
+    },
+    {
+      "run_id": "job-queue-service:3",
+      "start_time": "2026-10-07T11:10:24.442279Z",
+      "duration_ms": 2003.3721709999998,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9f7c2eb3-b714-47bf-875e-bb3b407925bb",
+        "transport_wall_ms": 4428.47410000104
+      }
+    }
+  ],
+  "counts": {
+    "POSSIBLE_DEADLOCK": 3
+  },
+  "duration_ms": 13804.147500006366,
+  "requested_runs": 3
+}

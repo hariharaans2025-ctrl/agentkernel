@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "count_tokens.py"
+  ],
+  "exit_code": 0,
+  "stdout": "Input tokens: 5022\n",
+  "stderr": "None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.\n",
+  "duration_ms": 4227.6195450000005,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "f7f2470b-4b8f-4097-a65a-3bea33e554b0",
+    "transport_wall_ms": 7357.840300013777
+  }
+}

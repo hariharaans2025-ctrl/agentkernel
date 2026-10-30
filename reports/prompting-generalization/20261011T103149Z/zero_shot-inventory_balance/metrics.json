@@ -1,0 +1,17 @@
+{
+  "id": "zero_shot-inventory_balance",
+  "arm": "zero_shot",
+  "outcome": "rejected",
+  "false_fix": true,
+  "tokens": 2100,
+  "inference_ms": 16917.961500003003,
+  "verification_ms": 28468.061799998395,
+  "end_to_end_ms": 51296.796899987385,
+  "model_calls": 1,
+  "input_tokens": 1437,
+  "output_tokens": 663,
+  "inference_cost_usd": 0.0003426,
+  "stress_passed": 0,
+  "semantic_passed": false,
+  "tsan_passed": false
+}

@@ -1,0 +1,28 @@
+{
+  "case": "aggregate_2",
+  "split": "validation",
+  "family": "aggregate",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "record.c": "848bbd1eb5d56aa6f1c9ff05128ad4040155a229388a74bdddc1750064e6ebab",
+    "read.c": "0ad6ff0e62d03b68787bc0d51a06b08fbb8a9ff545f032a3af6c1f8f246c039a"
+  },
+  "source_sha256": {
+    "record.c": "edcf4a1d2391f8a86384b18915b09bcf8fc0bb456e92a8b57acac537233a3e96",
+    "read.c": "adfbd56f6386ad7b19665a970a2cf1a1e18637590d82929192c0f310effc73b8"
+  },
+  "support_sha256": {
+    "state.h": "e8b71bce365ce4d80496efc0753018c08db0f724e85712e29e919b16b95b3519",
+    "oracle.c": "6657c303af75149cfcd0156eb8d34f2d1e2da992807ca8f8c920a0137f8e2705"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 59.51709870000013
+}

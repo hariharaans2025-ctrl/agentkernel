@@ -1,0 +1,61 @@
+{
+  "source_files": [
+    "solution.c"
+  ],
+  "support_files": [
+    "oracle.c",
+    "state.h"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "oracle.c",
+    "solution.c",
+    "-o",
+    "app"
+  ],
+  "run_command": [
+    "./app"
+  ],
+  "binary_path": "app",
+  "expected_behavior": "PASS",
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./app"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "Protected completion/value invariant",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  }
+}

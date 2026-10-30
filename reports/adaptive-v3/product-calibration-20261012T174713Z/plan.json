@@ -1,0 +1,14 @@
+{
+  "manifest_sha256": "a38ef5e3a1448740bfdef2d146c97aab5f50b14db9bb4e93d5cebb8f10863cad",
+  "dataset": "datasets\\adaptive-v3\\product-v3",
+  "cases": [
+    "ledger_1",
+    "ledger_2",
+    "ledger_3",
+    "capacity_1",
+    "capacity_2",
+    "capacity_3"
+  ],
+  "model_calls": 0,
+  "policy": "No local C execution; no retries; protected references excluded from runtime context."
+}

@@ -1,0 +1,164 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 0,
+  "failed_runs": 100,
+  "race_count": null,
+  "deadlock_count": 100,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 100,
+  "sanitizer_findings": [],
+  "regressions": [
+    "Required semantic invariant failed"
+  ],
+  "duration_ms": 397087.5958999968,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "main.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 166.728348,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "522e07c2-9594-484f-8535-a9fc24f7167a",
+        "transport_wall_ms": 1488.9007000019774
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [],
+      "configured": false
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 100,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "POSSIBLE_DEADLOCK": 100
+      },
+      "duration_ms": 390265.0263000396,
+      "representative_runs": [
+        {
+          "run_id": "deadlock_002:1",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "522e07c2-9594-484f-8535-a9fc24f7167a",
+            "transport_wall_ms": 3889.052600017749
+          },
+          "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+          "stderr": ""
+        },
+        {
+          "run_id": "deadlock_002:2",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "522e07c2-9594-484f-8535-a9fc24f7167a",
+            "transport_wall_ms": 3813.509800005704
+          },
+          "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+          "stderr": ""
+        },
+        {
+          "run_id": "deadlock_002:3",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "522e07c2-9594-484f-8535-a9fc24f7167a",
+            "transport_wall_ms": 3756.548799981829
+          },
+          "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+          "stderr": ""
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": false,
+      "required_passed": false,
+      "regression": true,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Total 2000; A=950, B=1050; two transfers",
+          "required": true,
+          "passed": false,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 166.652874,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "ee2cf0ca-354c-436a-9c7d-372c8cd64947",
+              "transport_wall_ms": 1492.7357999840751
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic"
+            ],
+            "exit_code": -9,
+            "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+            "stderr": "",
+            "duration_ms": 2002.930016,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "ee2cf0ca-354c-436a-9c7d-372c8cd64947",
+              "transport_wall_ms": 3838.7454000185244
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "not_configured"
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": false,
+  "sanitizer_passed": null,
+  "semantic_regression": true,
+  "false_fix": true
+}

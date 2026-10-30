@@ -1,0 +1,40 @@
+{
+  "policy": "adaptive-v4-router-3",
+  "stages": [
+    "ultra",
+    "ultra"
+  ],
+  "features": {
+    "source_bytes": 403,
+    "editable_files": 1,
+    "editable_lines": 16,
+    "header_bytes": 284,
+    "primitives": {
+      "mutex_lock": 2,
+      "cond_wait": 0,
+      "barrier_wait": 0,
+      "rwlock": 0,
+      "semaphore": 0,
+      "atomic": 0,
+      "join": 0
+    },
+    "distinct_mutexes": 1,
+    "blocking_helper_in_protected_header": false,
+    "baseline_fingerprint": "TIMEOUT:3",
+    "sanitizer_fingerprint": null
+  },
+  "bucket": "hang",
+  "skip_reasons": {
+    "super": "protocol_capability_not_demonstrated"
+  },
+  "expected": {
+    "p_super_lower": 0.0,
+    "ultra_direct_usd": 0.002486,
+    "ultra_direct_s": 31.6,
+    "super_then_ultra_usd": 0.0032318,
+    "super_then_ultra_s": 63.2,
+    "latency_source": "default_equal_uncalibrated",
+    "correction_stage": "ultra"
+  },
+  "overhead_ms": 0.03529999958118424
+}

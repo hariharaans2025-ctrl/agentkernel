@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-rwlock_mode",
+  "arm": "few_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 5912,
+  "inference_ms": 17884.280600002967,
+  "verification_ms": 28600.52880004514,
+  "end_to_end_ms": 57627.29410000611,
+  "model_calls": 1,
+  "input_tokens": 5506,
+  "output_tokens": 406,
+  "inference_cost_usd": 0.0006724,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

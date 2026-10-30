@@ -1,0 +1,93 @@
+{
+  "profile": "fast",
+  "max_calls": 2,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.0906624,
+  "max_total_tokens": 180224,
+  "source_hashes": {
+    "solution.c": "196671378405c8be376a08ec29949888460b0cf3a6b80bd9e2202a7d0221de5d",
+    "state.h": "073e4016bb1bee99074f95aa0d18e12f93bb71b295c5f39c31ba684af6342f28",
+    "oracle.c": "a321338ae0adfaf64a7bc675b88b9e09b6ae4d52b569358e2a6e9da97ec75178"
+  },
+  "task": {
+    "task_id": "barrier_cache",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\development-line-20261012T175209Z\\input",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "solution.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "solution.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.",
+      "split": "heldout-v3"
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

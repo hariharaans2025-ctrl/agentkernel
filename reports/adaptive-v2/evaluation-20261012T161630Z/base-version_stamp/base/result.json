@@ -1,0 +1,16 @@
+{
+  "stage": "base",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 635,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 441,
+  "output_tokens": 194,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+  "adapter_sha256": null,
+  "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_stamp(Stamp *stamp,int generation) {\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->generation=generation;\\n    pthread_mutex_unlock(&stamp->mutex);\\n    // Synchronize all readers before publishing\\n    pthread_cond_broadcast(&stamp->cond);\\n    sched_yield();\\n    pthread_mutex_lock(&stamp->mutex);\\n    stamp->checksum=generation ^ 0x5a5a;\\n    pthread_mutex_unlock(&stamp->mutex);\\n}\\nvoid read_stamp(Stamp *stamp,int *generation,int *checksum) {\\n    *generation=stamp->generation;\\n    // Synchronize all readers before reading\\n    pthread_cond_wait(&stamp->cond, &stamp->mutex);\\n    *checksum=stamp->checksum;\\n}\"\n  }\n}\n```",
+  "error": "JSONDecodeError",
+  "inference_ms": 19712.769499999922
+}

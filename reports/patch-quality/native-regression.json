@@ -1,0 +1,424 @@
+{
+  "task": "deadlock_001",
+  "status": "verified",
+  "route": [
+    "NANO",
+    "SUPER",
+    "SUPER"
+  ],
+  "ultra_avoided": true,
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 1,
+    "failed_runs": 1,
+    "infrastructure_failures": 0,
+    "requested_runs": 1,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 1
+    },
+    "duration_ms": 4211.350700003095,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_001:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "4b4c8f316a845e49",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 1,
+        "representative_runs": [
+          "deadlock_001:1"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "A"
+            ]
+          ],
+          "cycle": [
+            "A",
+            "B",
+            "A"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "build_passed": true,
+    "total_runs": 10,
+    "passed_runs": 10,
+    "failed_runs": 0,
+    "race_count": 0,
+    "deadlock_count": 0,
+    "crash_count": 0,
+    "infrastructure_failures": 0,
+    "observed_program_failures": 0,
+    "sanitizer_findings": [],
+    "regressions": [],
+    "duration_ms": 4029.608399956487,
+    "evidence": {
+      "build": {
+        "command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "duration_ms": 513.0217000260018,
+        "timed_out": false,
+        "metadata": {
+          "output_truncated": false
+        },
+        "success": true
+      },
+      "original_tests": {
+        "passed": true,
+        "results": [],
+        "configured": false
+      },
+      "campaign": {
+        "total_runs": 10,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 10,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 10
+        },
+        "duration_ms": 3516.2352999905124,
+        "representative_runs": []
+      },
+      "sanitizer": {
+        "status": "not_configured"
+      }
+    },
+    "reason": "The patch passed the configured verification campaign."
+  },
+  "repairs": [
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "Candidate for execution testing",
+        "root_cause": "Blocking synchronization",
+        "confidence": 0.9,
+        "reasoning_summary": "",
+        "expected_effect": "Complete without blocking",
+        "risk_notes": [],
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,8 +8,8 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n     pthread_barrier_wait(&ready);\n"
+      },
+      "patch": {
+        "success": true,
+        "files_changed": [
+          "main.c"
+        ],
+        "rejected_paths": [],
+        "error": null,
+        "error_code": null,
+        "repair_hint": null,
+        "source_line": null,
+        "patch_hash": "bd26877414aaa84e245f86b6007877179d60954b89453102240ebbe8e2e7e687"
+      },
+      "verification": {
+        "passed": false,
+        "build_passed": true,
+        "total_runs": 10,
+        "passed_runs": 0,
+        "failed_runs": 10,
+        "race_count": 0,
+        "deadlock_count": 10,
+        "crash_count": 0,
+        "infrastructure_failures": 0,
+        "observed_program_failures": 10,
+        "sanitizer_findings": [],
+        "regressions": [
+          "New failure class: TIMEOUT"
+        ],
+        "duration_ms": 31062.427799974103,
+        "evidence": {
+          "build": {
+            "command": [
+              "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+              "-static",
+              "-pthread",
+              "-g",
+              "-O1",
+              "main.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 2419.65870000422,
+            "timed_out": false,
+            "metadata": {
+              "output_truncated": false
+            },
+            "success": true
+          },
+          "original_tests": {
+            "passed": true,
+            "results": [],
+            "configured": false
+          },
+          "campaign": {
+            "total_runs": 10,
+            "failed_runs": 10,
+            "infrastructure_failures": 0,
+            "requested_runs": 10,
+            "execution_blocked": false,
+            "counts": {
+              "TIMEOUT": 10
+            },
+            "duration_ms": 28642.216600012034,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_001:1",
+                "classification": "TIMEOUT",
+                "exit_code": 1,
+                "timed_out": true,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "stdout": "T2 LOCK A\r\n",
+                "stderr": ""
+              },
+              {
+                "run_id": "deadlock_001:2",
+                "classification": "TIMEOUT",
+                "exit_code": 1,
+                "timed_out": true,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "stdout": "T2 LOCK A\r\n",
+                "stderr": ""
+              },
+              {
+                "run_id": "deadlock_001:3",
+                "classification": "TIMEOUT",
+                "exit_code": 1,
+                "timed_out": true,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "stdout": "T1 LOCK A\r\n",
+                "stderr": ""
+              }
+            ]
+          },
+          "sanitizer": {
+            "status": "not_configured"
+          }
+        },
+        "reason": "The patch failed the configured verification campaign; inspect execution evidence."
+      }
+    },
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "Candidate for execution testing",
+        "root_cause": "Blocking synchronization",
+        "confidence": 0.9,
+        "reasoning_summary": "",
+        "expected_effect": "Complete without blocking",
+        "risk_notes": [],
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n"
+      },
+      "patch": {
+        "success": true,
+        "files_changed": [
+          "main.c"
+        ],
+        "rejected_paths": [],
+        "error": null,
+        "error_code": null,
+        "repair_hint": null,
+        "source_line": null,
+        "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+      },
+      "verification": {
+        "passed": true,
+        "build_passed": true,
+        "total_runs": 10,
+        "passed_runs": 10,
+        "failed_runs": 0,
+        "race_count": 0,
+        "deadlock_count": 0,
+        "crash_count": 0,
+        "infrastructure_failures": 0,
+        "observed_program_failures": 0,
+        "sanitizer_findings": [],
+        "regressions": [],
+        "duration_ms": 4029.608399956487,
+        "evidence": {
+          "build": {
+            "command": [
+              "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+              "-static",
+              "-pthread",
+              "-g",
+              "-O1",
+              "main.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 513.0217000260018,
+            "timed_out": false,
+            "metadata": {
+              "output_truncated": false
+            },
+            "success": true
+          },
+          "original_tests": {
+            "passed": true,
+            "results": [],
+            "configured": false
+          },
+          "campaign": {
+            "total_runs": 10,
+            "failed_runs": 0,
+            "infrastructure_failures": 0,
+            "requested_runs": 10,
+            "execution_blocked": false,
+            "counts": {
+              "PASS": 10
+            },
+            "duration_ms": 3516.2352999905124,
+            "representative_runs": []
+          },
+          "sanitizer": {
+            "status": "not_configured"
+          }
+        },
+        "reason": "The patch passed the configured verification campaign."
+      }
+    }
+  ],
+  "triage": {
+    "dominant_failure": "cyclic_lock_wait",
+    "failed_runs": 1,
+    "pass_runs": 0,
+    "representative_runs": [
+      "deadlock_001:1"
+    ],
+    "confidence": 0.8,
+    "requires_deeper_reasoning": true,
+    "summary": ""
+  },
+  "stopped_reason": "verification_passed",
+  "total_time_ms": 47941.7369000148,
+  "inference_latency_ms": 480.0,
+  "execution_latency_ms": 47914.91469996981,
+  "inference_tokens": 4990,
+  "cost_usd": 0.0011,
+  "inference_mode": "mock",
+  "model_calls": {
+    "LOCAL": 0,
+    "NANO": 1,
+    "SUPER": 2,
+    "ULTRA": 0
+  },
+  "metadata": {
+    "models": [],
+    "starting_tier": "NANO",
+    "final_tier": "SUPER",
+    "escalations": 1,
+    "routing_reasons": [
+      "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+      "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+      "Retrying SUPER after verification failure: The patch failed the configured verification campaign; inspect execution evidence."
+    ],
+    "usage_available": true,
+    "inference_measurement": "simulated",
+    "patch_attempts": 2,
+    "model_attempts": [
+      {
+        "tier": "NANO",
+        "model_id": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "latency_ms": 80.0,
+        "retry_count": 0,
+        "finish_reason": null,
+        "request_id": null,
+        "error_code": null,
+        "verification_reason": "Structured triage validated against execution counts."
+      },
+      {
+        "tier": "SUPER",
+        "model_id": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "latency_ms": 200.0,
+        "retry_count": 0,
+        "finish_reason": null,
+        "request_id": null,
+        "error_code": null,
+        "verification_reason": "The patch failed the configured verification campaign; inspect execution evidence."
+      },
+      {
+        "tier": "SUPER",
+        "model_id": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "latency_ms": 200.0,
+        "retry_count": 0,
+        "finish_reason": null,
+        "request_id": null,
+        "error_code": null,
+        "verification_reason": "The patch passed the configured verification campaign."
+      }
+    ],
+    "observability": {
+      "backend": "none",
+      "status": "disabled"
+    }
+  }
+}

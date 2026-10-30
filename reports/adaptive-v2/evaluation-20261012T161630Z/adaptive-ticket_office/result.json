@@ -1,0 +1,90 @@
+{
+  "mode": "adaptive",
+  "status": "verified",
+  "attempts": [
+    {
+      "stage": "fine_tuned",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 493,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": false,
+      "input_tokens": 352,
+      "output_tokens": 141,
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct + AgentKernel LoRA",
+      "adapter_sha256": "2891d74130cea2b0d690be2c8048267234030e64199613a97b29a046926b2c94",
+      "response": "{\"files\":{\"solution.c\":\"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int value = office->next_ticket;\\n    sched_yield();\\n    pthread_mutex_unlock(&office->mutex);\\n    return value;\\n}\\n\"}}",
+      "error": "ValueError",
+      "inference_ms": 21663.09319999982
+    },
+    {
+      "stage": "super",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 4898,
+      "cost_usd": 0.0016326,
+      "reserved_usd": 0.0162432,
+      "false_fix": false,
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "training_examples": [
+        "deadlock_004"
+      ],
+      "input_tokens": 4626,
+      "output_tokens": 272,
+      "response": "{\"diagnosis\": \"The current implementation lacks proper mutual exclusion on shared state `office->next_ticket`, leading to race conditions during ticket allocation and counting under concurrent access.\\n\\nRoot cause: Multiple threads can concurrently read and update `office->next_ticket` without synchronization, causing lost updates, duplicate ticket values, or incorrect counts. Although each function contains a `sched_yield()`, it does not provide synchronization and merely hints at rescheduling, leaving the critical section unprotected.\\n\\nEvidence: The baseline shows consistent `UNKNOWN_FAILURE` across runs, indicating semantic violations such as duplicate or missing tickets, or incorrect counts, which align with unsynchronized access to shared mutable state.\\n\\nFix: Protect both `reserve_ticket` and `issued_count` functions with the existing mutex in `TicketOffice` to ensure atomic read-modify-write operations and consistent reads. The `sched_yield()` calls are retained exactly as placed to preserve any intended scheduling behavior.\\n\\nThis ensures:\\n- Each ticket is allocated exactly once in sequence.\\n- Concurrent readers see a consistent value of `next_ticket`.\\n- No functional work is removed; all original logic and scheduling hooks are preserved.\\n\\nVerification will confirm correct allocation of all 400 tickets without duplicates or gaps under stress.\"}",
+      "error": "ValidationError",
+      "inference_ms": 2586.1203000004025
+    },
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 6116,
+      "cost_usd": 0.008468,
+      "reserved_usd": 0.054144,
+      "false_fix": false,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "training_examples": [
+        "deadlock_004"
+      ],
+      "input_tokens": 4940,
+      "output_tokens": 1176,
+      "response": "{\"diagnosis\": \"The ticket allocation and count functions lack mutual exclusion on shared mutable state, causing race conditions under concurrent access.\", \"root_cause\": \"Concurrent unsynchronized access to office->next_ticket leads to lost updates, duplicate tickets, and incorrect counts. The existing sched_yield() in reserve_ticket does not provide synchronization.\", \"confidence\": 0.95, \"reasoning_summary\": \"Protect both reserve_ticket and issued_count with the mutex in TicketOffice to ensure atomic read-modify-write and consistent reads. Retain the existing sched_yield() in reserve_ticket exactly as placed; do not add new scheduling hooks.\", \"expected_effect\": \"All 400 tickets allocated exactly once with no duplicates or missing values; concurrent readers see a consistent count; all original logic and scheduling hooks preserved.\", \"risk_notes\": [\"Mutex contention may increase latency but ensures correctness.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    return office->next_ticket;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int value = office->next_ticket;\\n    pthread_mutex_unlock(&office->mutex);\\n    return value;\\n}\\n\"}]}",
+      "inference_ms": 5455.080400000043,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,11 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n int reserve_ticket(TicketOffice *office) {\n+    pthread_mutex_lock(&office->mutex);\n     int ticket = office->next_ticket;\n     sched_yield();\n     office->next_ticket = ticket + 1;\n+    pthread_mutex_unlock(&office->mutex);\n     return ticket;\n }\n int issued_count(TicketOffice *office) {\n-    return office->next_ticket;\n+    pthread_mutex_lock(&office->mutex);\n+    int value = office->next_ticket;\n+    pthread_mutex_unlock(&office->mutex);\n+    return value;\n }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 29887.44349999979
+    }
+  ],
+  "tokens": 11507,
+  "cost_usd": 0.0101006,
+  "reserved_usd": 0.0703872,
+  "model_calls": 3,
+  "remote_model_calls": 2,
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "adapter_sha256": "2891d74130cea2b0d690be2c8048267234030e64199613a97b29a046926b2c94",
+  "end_to_end_ms": 72409.78050000012,
+  "false_fix": false,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,11 +1,16 @@\n #include \"state.h\"\n #include <sched.h>\n int reserve_ticket(TicketOffice *office) {\n+    pthread_mutex_lock(&office->mutex);\n     int ticket = office->next_ticket;\n     sched_yield();\n     office->next_ticket = ticket + 1;\n+    pthread_mutex_unlock(&office->mutex);\n     return ticket;\n }\n int issued_count(TicketOffice *office) {\n-    return office->next_ticket;\n+    pthread_mutex_lock(&office->mutex);\n+    int value = office->next_ticket;\n+    pthread_mutex_unlock(&office->mutex);\n+    return value;\n }\n",
+  "response": "{\"diagnosis\": \"The ticket allocation and count functions lack mutual exclusion on shared mutable state, causing race conditions under concurrent access.\", \"root_cause\": \"Concurrent unsynchronized access to office->next_ticket leads to lost updates, duplicate tickets, and incorrect counts. The existing sched_yield() in reserve_ticket does not provide synchronization.\", \"confidence\": 0.95, \"reasoning_summary\": \"Protect both reserve_ticket and issued_count with the mutex in TicketOffice to ensure atomic read-modify-write and consistent reads. Retain the existing sched_yield() in reserve_ticket exactly as placed; do not add new scheduling hooks.\", \"expected_effect\": \"All 400 tickets allocated exactly once with no duplicates or missing values; concurrent readers see a consistent count; all original logic and scheduling hooks preserved.\", \"risk_notes\": [\"Mutex contention may increase latency but ensures correctness.\"], \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    return office->next_ticket;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint reserve_ticket(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int ticket = office->next_ticket;\\n    sched_yield();\\n    office->next_ticket = ticket + 1;\\n    pthread_mutex_unlock(&office->mutex);\\n    return ticket;\\n}\\nint issued_count(TicketOffice *office) {\\n    pthread_mutex_lock(&office->mutex);\\n    int value = office->next_ticket;\\n    pthread_mutex_unlock(&office->mutex);\\n    return value;\\n}\\n\"}]}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "inference_ms": 29704.293900000266,
+  "verification_ms": 29887.44349999979
+}

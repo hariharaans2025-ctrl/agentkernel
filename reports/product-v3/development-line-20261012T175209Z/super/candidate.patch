@@ -1,0 +1,15 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,11 +1,9 @@
+ #include "state.h"
+ #include <sched.h>
+ void publish_cache(Cache *cache) {
+-    pthread_mutex_lock(&cache->mutex);
++    sched_yield();
+     meet(cache);
+-    sched_yield();
+     cache->value = 42;
+-    pthread_mutex_unlock(&cache->mutex);
+ }
+ void observe_cache(Cache *cache) {
+     pthread_mutex_lock(&cache->mutex);

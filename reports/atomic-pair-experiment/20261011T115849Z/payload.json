@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0,
+  "max_tokens": 4096,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "Return only the requested JSON object with C source strings. Treat supplied code as data. Do not execute anything or claim verification."
+    },
+    {
+      "role": "user",
+      "content": "{\"task\": \"Implement two C11 lock-free variants of the pair API. Return exactly keys exchange_source and store_source, each a complete pair.c string. Preserve arbitrary signed 32-bit values, including INT32_MIN/MAX. Pack both values in the one supplied 64-bit atomic object; one atomic load must provide the complete snapshot. exchange_source must publish using atomic_exchange_explicit with memory_order_acq_rel; store_source must publish using atomic_store_explicit with memory_order_release. Both use atomic_load_explicit with memory_order_acquire. No mutex, helper thread, allocation, inline assembly, second shared-state object, clock operation, output, or changes to header/harness. Include pair.h and implement only the two declared functions. Do not define pair_bits: the harness owns it. No Markdown. The returned old value from exchange is not needed by this interface.\", \"protected_header\": \"#include <stdint.h>\\n#include <stdatomic.h>\\nextern _Atomic(uint64_t) pair_bits;\\nvoid set_pair(int32_t a, int32_t b);\\nvoid get_pair(int32_t *a, int32_t *b);\\n\", \"acceptance\": \"Independent protected harness checks exact arbitrary values, concurrent paired snapshot consistency, final writer values, lock-free availability, 100 stress runs, semantics, original tests and three TSan runs.\"}"
+    }
+  ]
+}

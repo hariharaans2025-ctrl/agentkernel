@@ -1,0 +1,59 @@
+{
+  "stage": "ultra",
+  "outcome": "verified",
+  "model_calls": 1,
+  "tokens": 1521,
+  "cost_usd": 0.001907,
+  "false_fix": false,
+  "recovery": null,
+  "reserved_usd": 0.036576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "c017ae9578644873a0e679b83bfdba8d",
+  "inference_ms": 1624.799200000325,
+  "input_tokens": 1328,
+  "output_tokens": 193,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE forward.c 2-2\nvoid forward(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n@@ END\n@@ REPLACE reverse.c 2-2\nvoid reverse(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "blocks": [
+      {
+        "file": "forward.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      },
+      {
+        "file": "reverse.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      }
+    ]
+  },
+  "patch": "--- a/forward.c\n+++ b/forward.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void forward(State*s){pthread_mutex_lock(&s->left);ready(s);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n+void forward(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n--- a/reverse.c\n+++ b/reverse.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void reverse(State*s){pthread_mutex_lock(&s->right);ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}\n+void reverse(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n",
+  "verification_phases_ms": {
+    "apply": 3938.6521000001267,
+    "build": 2324.045599999863,
+    "stress": 9588.569100000313,
+    "tsan_build": 2351.745100000244,
+    "original_tests_and_semantics": 5992.865399999573
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 20257.225199999993,
+  "taxonomy": {
+    "primary": "verified",
+    "gates": []
+  }
+}

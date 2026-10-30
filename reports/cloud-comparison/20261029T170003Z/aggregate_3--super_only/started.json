@@ -1,0 +1,99 @@
+{
+  "profile": "super_only",
+  "max_calls": 1,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+    "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d",
+    "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+    "oracle.c": "c916a7242393db367d8ef147266a18461e7f4c0b444d928eec586c4d4887f8cb"
+  },
+  "task": {
+    "task_id": "aggregate_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\aggregate_3--super_only\\input",
+    "source_files": [
+      "record.c",
+      "read.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "record.c",
+      "read.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "record.c",
+            "read.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+      "split": "test",
+      "family": "aggregate",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

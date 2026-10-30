@@ -1,0 +1,53 @@
+{
+  "task_id": "deadlock_001",
+  "source_files": [
+    "main.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "main.c",
+    "-o",
+    "app"
+  ],
+  "binary_path": "app",
+  "run_command": [
+    "./app"
+  ],
+  "max_runtime_seconds": 2,
+  "stress_runs": 3,
+  "expected_behavior": "PASS",
+  "expected_bug_category": "deadlock",
+  "verification_config": {
+    "stress_runs": 100,
+    "sanitizer_enabled": false,
+    "semantic_checks": [
+      {
+        "name": "Both workers complete and perform their mutex acquisitions",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "required": true
+      }
+    ]
+  },
+  "support_files": [
+    "oracle.c"
+  ],
+  "metadata": {
+    "fixture_description": "Basic lock inversion",
+    "semantic_invariant": "Both workers complete and perform their mutex acquisitions",
+    "fixture_version": 2
+  }
+}

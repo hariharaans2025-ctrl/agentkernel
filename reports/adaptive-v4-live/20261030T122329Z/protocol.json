@@ -1,0 +1,209 @@
+{
+  "frozen_utc": "2026-10-30T12:23:29.136028+00:00",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "router": "adaptive-v4-router-3",
+  "contract": "agentkernel_line_blocks_v4_1",
+  "system_prompt_sha256": "0299b33fbdee5ae3b49b8dcd831c7578abeaab96f6803429dc6ae86c3672e8f4",
+  "cases": [
+    "capacity_3",
+    "aggregate_3"
+  ],
+  "case_order": "manifest order, all test cases, no selection",
+  "concurrency": 1,
+  "models": {
+    "super": {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "name": "Nemotron-3-Super-120b-a12b",
+      "created": 1773187200,
+      "description": "Nemotron 3 Super is a 120B hybrid MoE model optimized for efficient multi-agent AI and complex reasoning tasks.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.0000003",
+        "input_cache_read": "0.00000006",
+        "completion": "0.0000009",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 1000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    },
+    "ultra": {
+      "id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "name": "Nemotron-3-Ultra-550b-a55b",
+      "created": 1780531200,
+      "description": "Nemotron 3 Ultra is a 550B hybrid MoE model from NVIDIA, optimized for the most demanding multi-agent AI and complex reasoning tasks.",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.000001",
+        "input_cache_read": "0.00000012",
+        "completion": "0.000003",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 2000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    }
+  },
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "input_cap": 36000,
+  "max_calls_per_job": 2,
+  "image": "agentkernel-clang:20261003122908",
+  "per_job_max_usd": 0.121152,
+  "run_max_calls": 4,
+  "run_max_incremental_usd": 0.36,
+  "purpose": "Post-fix regression check of v4.1 parser (no-op blocks) and 36k input cap, on the two cases those defects lost in pilot 20261030T120841Z. Selected BY defect; not a fresh comparison and never merged into the pilot score.",
+  "calibration": "none (no v4 development calibration exists) -> router selects Ultra; correction stage is Ultra",
+  "baseline_for_comparison": "reports\\cloud-comparison\\20261029T170003Z\\comparison-view.json",
+  "case_hashes": {
+    "capacity_3": {
+      "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+      "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf",
+      "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+      "oracle.c": "8b100cec261e0ba2fa564c5f3133e506bcf2e57537ae5b356f99a97862686688"
+    },
+    "aggregate_3": {
+      "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+      "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d",
+      "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+      "oracle.c": "c916a7242393db367d8ef147266a18461e7f4c0b444d928eec586c4d4887f8cb"
+    }
+  },
+  "implementation_sha256": {
+    "scripts/live_adaptive_v4.py": "10edcd92868d979fc5a38261f58cfd47425450c537a4b76f67915a54e59d283f",
+    "src/agentkernel/concurrency/__init__.py": "57940d15763ce48b61a3ba211ad21d5c82054f91058871e55164fdc39fc01785",
+    "src/agentkernel/concurrency/analyzer/__init__.py": "878545e64cd7983b46129df24de66660d04249b0c4cf2a9d4f440648575afa8b",
+    "src/agentkernel/concurrency/analyzer/classifier.py": "ca7851ed177b15e03773b5279215dbfa9d3e5aa096a26b9e7653095d83b15d89",
+    "src/agentkernel/concurrency/analyzer/fingerprints.py": "50ad39ec7c08801eefc51d97e5f9ebc088a46a9ec3f8bc15f21fec92d16e455d",
+    "src/agentkernel/concurrency/analyzer/routing.py": "ad55f4b5776c7b0ebd49c663a90b577709f62d3d2c2c33321645d560968368b2",
+    "src/agentkernel/concurrency/analyzer/trace_parser.py": "fd6b3ba23604d35a1940268590e7900ab49e951d9231f7ea96b1e9e4403ca0e0",
+    "src/agentkernel/concurrency/app.py": "a34a86f7d53ae474a11b348da1157a58d1fe0c9b6eaf59e148908166e11c484d",
+    "src/agentkernel/concurrency/benchmark/__init__.py": "64b9c9f3fbdb6aae91d2caeeb4b4c94ea4a3c97d22cfda6b5b85212439f1d44e",
+    "src/agentkernel/concurrency/benchmark/evaluator.py": "12a90262ee435d2dc73a8c3ad2154fd103189c9209a776d9a5574641ea42e69a",
+    "src/agentkernel/concurrency/benchmark/loader.py": "d411b8af2864ef3fef5ea21e1bc01226484240b33aebcecb21e0ae3f1f676622",
+    "src/agentkernel/concurrency/benchmark/metrics.py": "c640222334c07c78ff3d807e3bf7b8a4c81b5b77b7dd55a012ed150b1aff1ff1",
+    "src/agentkernel/concurrency/benchmark/report.py": "d2246c479a9b696fae56261a71a0326a1b7d4209f7c82151b8c1c4bb6b5ec2b7",
+    "src/agentkernel/concurrency/campaign/__init__.py": "dad857e9f3a357178543caa26d2005c4145efb37149b8ef22047e1caad4078e9",
+    "src/agentkernel/concurrency/campaign/manager.py": "95c94465486c53116caae1d73668ce542286f5bca828a724ce5133ea244a407e",
+    "src/agentkernel/concurrency/campaign/models.py": "12f64969a5d196ee9793b6d95c856e96abca258e28d3b380666e70ceb01096c3",
+    "src/agentkernel/concurrency/campaign/scheduler.py": "bde47aae558f9efbba89b9a8697dc40c89d8750f0b5bde3947efc5a9c1940032",
+    "src/agentkernel/concurrency/cli.py": "84453d144ed84ad98a3b3e814ed0c85219e8d537d7baa09cca4a4c98d5f04363",
+    "src/agentkernel/concurrency/compile/__init__.py": "32594a1363713da9d6ca446eb9ae1566e807b6c22026badefb392fe56e00c89a",
+    "src/agentkernel/concurrency/compile/compiler.py": "10c50a08a526e7a3b36d937166587c3073bdad4ff4af1f302a34b59a4b7e0178",
+    "src/agentkernel/concurrency/compile/models.py": "60473c9a78671a84b384e880bb23e7f333b5f0d221564db94f84ba2d1e89714b",
+    "src/agentkernel/concurrency/execution/__init__.py": "56a745085405e475a114eae9030aafb94ed08a5ffe9edfb80f30a9d8556305ee",
+    "src/agentkernel/concurrency/execution/models.py": "968b2ec34c05203f1096620e0030e6e02bc93dd4c9a2f20eac742764fa751032",
+    "src/agentkernel/concurrency/execution/runner.py": "5864081d1f57268a40a4d905bd64a299f6ba5138a1a95bc75224746e41e8ebed",
+    "src/agentkernel/concurrency/final_benchmark.py": "5a186f96c3c3bea216c922f73d87f46e7afbe38ed30c6921561d92175a007402",
+    "src/agentkernel/concurrency/human_review.py": "2f9b84d1a8a7c854e716cce17ec041550fc2d075bc47224de361a35181fb8d4b",
+    "src/agentkernel/concurrency/instrumentation/__init__.py": "4de5d12311f095a5c0bd20ece4cc373f3d00fefad74ffbad5471d09430b8bc09",
+    "src/agentkernel/concurrency/instrumentation/sanitizer.py": "a35bbef29684ea76b005b893cb92cf6d558afb64432eed794d0701615177081e",
+    "src/agentkernel/concurrency/mock_inference.py": "e4a9fbd1b3cf629810d832814f24d06d31966e921698fc976e6a36e23b67f662",
+    "src/agentkernel/concurrency/models.py": "28161b9b7d26a07dcf6b664a7c75f8c5d364792819160744d53f298f1bfd6df5",
+    "src/agentkernel/concurrency/progress.py": "2af129af639f78ee855845920f46146c7d8153e0d3aae899022c839f43438064",
+    "src/agentkernel/concurrency/repair/__init__.py": "6c7d9ea99e1d1ef0df7daa007052c17f1440d41c4e9c06c31fbfaf157db6e30a",
+    "src/agentkernel/concurrency/repair/patch_applier.py": "265daae052bef153bd74eabeeb83c6933d45af6c562626ffbbfcce55678c1a59",
+    "src/agentkernel/concurrency/repair/patch_parser.py": "7ab835b7c508f68269388d706916d0f2798c8284f94b5a81bce5c073688cffdb",
+    "src/agentkernel/concurrency/repair/prompts.py": "2720e93c7a682d567defaca104bffa1ffa9ee07e9908affada7cdccc53c79766",
+    "src/agentkernel/concurrency/repair/source_edits.py": "bc057813fb6290c92ee5386e4eba08dee090027d6c4ccbe8c42f0168f6936b63",
+    "src/agentkernel/concurrency/sandbox/__init__.py": "7468b522b93aeb4e2597bd3b5617f1554177680b1ac46a584f7fd8861b6d8c14",
+    "src/agentkernel/concurrency/sandbox/base.py": "0c5fadc33626c168b14fe1d133032147cc342ebe7bf5c6180691a55bb1cb896e",
+    "src/agentkernel/concurrency/sandbox/local.py": "bcfe088fd717fdb8f333fe100fd7dca67b187dcc698e801b6e8d9cba2f7be610",
+    "src/agentkernel/concurrency/sandbox/nebius.py": "438090f1908c11f79094a0e5f2308cce9748134f2a8126374369aa0f672722b3",
+    "src/agentkernel/concurrency/smoke.py": "e67007c9b0e2e120360c072922873d7dd4e78a65908c709fc7f521fde5fc83e7",
+    "src/agentkernel/concurrency/verification/__init__.py": "686726ea1fb55ee44483093cb93b9a908f061b5d0ab7eb216ce7236254f5a019",
+    "src/agentkernel/concurrency/verification/concurrency_verifier.py": "dcce6ca0534d9c7e1286c5cec18392c595a6a14c7d9e3ecb62af44b028d0e5ed",
+    "src/agentkernel/concurrency/verification/repair_verifier.py": "5001048bc464d0a54c932891b3c7e7464994ce00ee851477bb6fd7d74cf52a44",
+    "src/agentkernel/concurrency/verification/semantics.py": "a271eac6ce6b9ab9064a5cef5bf49f62f64446e118e15d9e50d394b305915464",
+    "src/agentkernel/repository/__init__.py": "40faa733a0b14709acea54355bf24a53f32f5d67f940da5e5cd5858db138f109",
+    "src/agentkernel/repository/__main__.py": "f7072d32b586db027e912eeb7f101f2a4eed4c55381f04de321a9224423fba61",
+    "src/agentkernel/repository/adaptive.py": "8b7c13308b9080b7001465472eb6a40191a39a3a7b0a34c274546fb46baecf58",
+    "src/agentkernel/repository/adaptive_v3.py": "88456e60c20e455bcb5f66f577005233408cf943765846afb4990a59a7cbd4ef",
+    "src/agentkernel/repository/adaptive_v4.py": "15c3e236e3185fb0026c98bc6ed9a210ba1e08ee28db0cb837173b17ea9875f4",
+    "src/agentkernel/repository/adaptive_v4_core.py": "1706df5937bd7bbfdf51929643a9d1217df425bee379dda5a2758bcb1369df8c",
+    "src/agentkernel/repository/barrier_diagnostics.py": "46da8a9bfba5e79cab5de9e0a676d4bff3954384271da154ae2fa3743a3de86f",
+    "src/agentkernel/repository/budget.py": "240eb23b9a7ac1749a369cff7d3f85edce4d6f4d49c25486faabbc15d6ee07c3",
+    "src/agentkernel/repository/candidate_reuse.py": "1c9decc2359820c4254a64c5561cb0b43937183c951159f94c53606dfa7cf9f5",
+    "src/agentkernel/repository/context.py": "29a4fb9413bb98ac1ed912aa2f7a05c2e74b67158d8d3057576d8b6cc4342a7a",
+    "src/agentkernel/repository/diagnostics.py": "6afb2d7fc737f76e61a42685a413c19e8744bba467a0d1ff4cbc3de3100dec8c",
+    "src/agentkernel/repository/evidence_correction.py": "f6fc01f209d52843f7c5f35607608f5e02f2aa240199b9326056ff4fa764adfa",
+    "src/agentkernel/repository/learning.py": "e0f62329c494f89492a29c70d591ec09b2791b3a2e5ccd476a18861db298799b",
+    "src/agentkernel/repository/line_repair.py": "96be7475b1fe3ca4cd9e8e22b1f0ea9f85694f02a4023709b5cee0dfc7c8c10f",
+    "src/agentkernel/repository/metrics.py": "7224cc00489b86811278acdc290708de4742e23a0cba39322a2794185c928585",
+    "src/agentkernel/repository/onboarding.py": "fc92cf79bf79ab09834570d2deb93f05fd2bcc1a2bcee52c9859478a84f041aa",
+    "src/agentkernel/repository/product_campaign.py": "c4b59e81508d18cb9f76b2a539b07af45d4aa1198b05b09a660c2bd447579461",
+    "src/agentkernel/repository/remote_repair.py": "7d6dcfd2c425c8f1c035d28dd62abdbc0e68881a2e2fb83acbf56668e7072dd7",
+    "src/agentkernel/repository/specialist.py": "c37fd7b2d57be761fff853c886cd2042b61516a55203be78a20b08f1fcd543a1"
+  },
+  "automatic_replay": false,
+  "cache_used": false,
+  "disclosure": "Cases are development-seen; v4 prompt includes lessons from their v3 failures. Not unseen evaluation.",
+  "ledger_at_freeze": {
+    "committed_usd": 0.2406862999999982,
+    "unknown_calls": 0
+  }
+}

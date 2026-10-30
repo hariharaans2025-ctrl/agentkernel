@@ -1,0 +1,1322 @@
+{
+  "schema_version": 2,
+  "output_format": "tagged_source",
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "split_unit": "whole program design",
+  "train_programs": 12,
+  "validation_programs": 4,
+  "test_programs": 8,
+  "cases": [
+    {
+      "id": "ledger_1",
+      "split": "train",
+      "family": "ledger",
+      "variant": 1,
+      "task": "tasks/ledger_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "7a8387e1911b46fdb5fe4a8e8617d9c771022ff3a88103cb56763d2bea137bde",
+        "reader.c": "d5f1f630f84bc35a38bee3e41336eea79afaf23601769f3cf07bfce5e00e7071"
+      },
+      "support_sha256": {
+        "state.h": "74b008dfd8bf9701e625f1b2a7cbbd84ebd3e19e2eac30ee911c5faa440b7dd3",
+        "oracle.c": "f39639a968554612140773ba4c750ec4c913bd66716547e004008b56e266dbbc"
+      },
+      "reference_sha256": {
+        "writer.c": "bd5ba3d7401e1b1b4599326a0fb1b70047d05cbca92aba8cd21e096dd6610550",
+        "reader.c": "1ff190c088c126c6c1229778b855e6044f3d0f3014fc0e801ab8ccc1f96f87a2"
+      },
+      "description": "Concurrent ledger credits must accumulate exactly 960. Readers must use the same synchronization as writers. Retain the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "ledger_2",
+      "split": "train",
+      "family": "ledger",
+      "variant": 2,
+      "task": "tasks/ledger_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "d309a94abe3b7ca4d5942a62940c2edba179feab42206fd542e19980a0fcdf2f",
+        "reader.c": "1470989646aebfc49754edbbcc2d80296451fbd2e30992b23b7fd88239554875"
+      },
+      "support_sha256": {
+        "state.h": "de1425df7670f51fc36273cf0ec30230a5beb6944bf79ad778b8e2bba400641b",
+        "oracle.c": "4e630beeb032e722a2fbe412682a0a1f964f0700007c9e9a30f95ba4ad3016b3"
+      },
+      "reference_sha256": {
+        "writer.c": "3627d7be29180d30f87435995f0e43f5b7985f1ddd924a0d60ffe2e7939e1289",
+        "reader.c": "6a1477ca56e51c0373927fe65681e0be0fcac221150945f77121b4a0809181e5"
+      },
+      "description": "Four workers alternate between two histogram buckets. Preserve all 320 increments and synchronized total snapshots of both buckets.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "ledger_3",
+      "split": "test",
+      "family": "ledger",
+      "variant": 3,
+      "task": "tasks/ledger_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065"
+      },
+      "support_sha256": {
+        "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+        "oracle.c": "9e478c2e91bb1d0a212f47016b8a49fe4b84576e3d793ba03a66db247bf9b35f"
+      },
+      "reference_sha256": {
+        "writer.c": "93af70ceff86ea1b78ca61e9168c3d780b2a5cc7b739df7ada4553c955716f64",
+        "reader.c": "320eb118ed9cca5de109569dfebe23ad3745446ab86cf84603259f5a845f7c04"
+      },
+      "description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_1",
+      "split": "train",
+      "family": "snapshot",
+      "variant": 1,
+      "task": "tasks/snapshot_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "1e41cb1e9922353490fef0d1f9c2d28fb5f43f8fe11afae0a22d232cdb380db0",
+        "snapshot.c": "57321e0f4cbcea8f4b6faef34aaf06cf77fe2b3c5955ef07451ad46f80e32f66"
+      },
+      "support_sha256": {
+        "state.h": "8e335536361ca05b5037e5878ee62ddc1076d0e1b88957a4f83819e51f9954bb",
+        "oracle.c": "4ca44300cb74230eece42a1d43552cd6b8547a21f36f3929ad85a74f2ee2309d"
+      },
+      "reference_sha256": {
+        "publisher.c": "5388e5af3b68bb2fad0750e265104a8e87f592fc40eea03f55957f7c2274bae6",
+        "snapshot.c": "8a9a23599038feb32d7c18f32ce766ad5afd9d12dbfe16ee4862b52f2b49f725"
+      },
+      "description": "Publish generation tags and XOR checksums atomically; each snapshot must observe a consistent pair. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_2",
+      "split": "train",
+      "family": "snapshot",
+      "variant": 2,
+      "task": "tasks/snapshot_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "385b5ee2f4345b2724866008a395fc55eb9f056d100de617d4fc44d8468d98ec",
+        "snapshot.c": "e3c15a1dbaaa68110964beb3dc1bdbc8498279b729e9f16e40bb010499accc1b"
+      },
+      "support_sha256": {
+        "state.h": "146de4a48911198f71857eab344bf60bbdea67cd30205cf8d29d28a87f2b150b",
+        "oracle.c": "37f80548cbf0d9886dab4dbcdc90ede4d6daf1ab0a457d4b1613ad235c5cd6ae"
+      },
+      "reference_sha256": {
+        "publisher.c": "4b2248ba86a18436e48ea32516d63adb16cbb8cec1a60d86800390aa14aecb00",
+        "snapshot.c": "abc14a02218156f0d4ba2d305dfd09ffdefcf12c31affdb36806dceb4207e39b"
+      },
+      "description": "Publish lower and upper range bounds atomically; every reader must see a width of seven. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_3",
+      "split": "test",
+      "family": "snapshot",
+      "variant": 3,
+      "task": "tasks/snapshot_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343"
+      },
+      "support_sha256": {
+        "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+        "oracle.c": "dd6f776bac13536428c96d4e957a61ed2edc12866286fc5eceedd780be84d357"
+      },
+      "reference_sha256": {
+        "publisher.c": "b9e1604fe3bea735cbf6414f95f5e59c06e1d2a78815b3b3f5916314770c962b",
+        "snapshot.c": "2872750f40e60aaa0b9f233bad2137624eebc5daadda3383e088be762f178115"
+      },
+      "description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_1",
+      "split": "train",
+      "family": "capacity",
+      "variant": 1,
+      "task": "tasks/capacity_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "d74ac1e35dd5a0c338bb9d7049522b65df513630e888887f48b5cc58ebe337b2",
+        "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+      },
+      "support_sha256": {
+        "state.h": "1d2eaf951a25109b4626e821088706c3b36f598e87abf1394834eab201f28ec5",
+        "oracle.c": "471fde4b76937a894cb3ac4c6ab208278a783bafa7022a42974412dd80bfd709"
+      },
+      "reference_sha256": {
+        "acquire.c": "b94265534803b7a173f8df7797860dce2e92415ad9da6e385f9a97376da7a583",
+        "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+      },
+      "description": "Empty capacity must return zero while releasing the shared mutex. Preserve ten successful claims and 280 failure calls.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_2",
+      "split": "train",
+      "family": "capacity",
+      "variant": 2,
+      "task": "tasks/capacity_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "3f1b7b0e921479b31a327951d746f0b306f6c4fb8c3f97281bed1bad5e139817",
+        "inspect.c": "12da925b1f01f2996f62d0d72fd7f9f939c4cfa8da3a62605bf9390a83097f5d"
+      },
+      "support_sha256": {
+        "state.h": "231a188eb82de71dbdac3ebeba701d2a9b9b1d45e4e362a8a4033ac307c51fa3",
+        "oracle.c": "f13f87848fd11c8b8eaba820ea1073cf334833718ac60747ffcd40fbb980aaff"
+      },
+      "reference_sha256": {
+        "acquire.c": "67ee972e39545b7d976b7047c81d7be442142fe6d42f8d0a808fd98ea771e234",
+        "inspect.c": "12da925b1f01f2996f62d0d72fd7f9f939c4cfa8da3a62605bf9390a83097f5d"
+      },
+      "description": "Insufficient funds or nonpositive withdrawal must release the mutex on every path. Preserve ten withdrawals of two and 280 rejected requests.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_3",
+      "split": "test",
+      "family": "capacity",
+      "variant": 3,
+      "task": "tasks/capacity_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+      },
+      "support_sha256": {
+        "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+        "oracle.c": "0b2164593e10fab5e62a075074adcc4d69dbdd5188512dadd6d0919fb0f1e542"
+      },
+      "reference_sha256": {
+        "acquire.c": "ebc1f565e1cc028db339a35b043934228d409e84b2d529d2efe8a6944ad4e6af",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+      },
+      "description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_1",
+      "split": "train",
+      "family": "rendezvous",
+      "variant": 1,
+      "task": "tasks/rendezvous_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "c44519440e90b938b228ab2a7460f8788101e7be536f9f09db112e36854ae12e",
+        "observe.c": "7bfb2c759ab9a300dba0a3cdbf1c3354610614cb9f7ba4ad57a5f8d6f1e5e6d7"
+      },
+      "support_sha256": {
+        "state.h": "04c8e2d34f3f845c47d5345fb76bc395c33e982e3cced25032cf4c0fe26638c3",
+        "oracle.c": "bbf61d8f048341bb7191885bc6dfbe7c2e144199fb738a46d3d6965fc8babea6"
+      },
+      "reference_sha256": {
+        "publish.c": "2ddda9c06350608bfa1c272719b9b713b4cbdc26f1a6636254ac8798b0034536",
+        "observe.c": "d23a6f48b2bc280c2e188da2a9180dd8f294d5da93c4d8050ccaac02619ae41d"
+      },
+      "description": "Both participants must rendezvous once without holding their shared mutex, then preserve publication of 27 and an observation of zero or 27. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_2",
+      "split": "train",
+      "family": "rendezvous",
+      "variant": 2,
+      "task": "tasks/rendezvous_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "0ae9be0c5383571803f5f424ccc4e0d02c5d772482b76800c3f14298e682f9e2",
+        "observe.c": "26b51d25a4d7fa77daa057ecbc21cf655ab87f9d32a0d09869ae66f1f9221dda"
+      },
+      "support_sha256": {
+        "state.h": "b30b66dcf83495f757b774c20e6152d90aa5ac4bbe43dcccdfad32e6a0275fb9",
+        "oracle.c": "2a25e304284767518b05940d4914783353cf5e67bc9ec73763e8544a17a78881"
+      },
+      "reference_sha256": {
+        "publish.c": "a5523ed77b3354510c31e521a08950ae9824a8b564ff8ef2b9a825d1d5eb6b32",
+        "observe.c": "964259d3aa33f8ff928e1e061419de77087094827a9bc5b4371fbae1de538075"
+      },
+      "description": "The protected exchange helper waits for two participants. Publish both slots as one transaction and observe a sum of zero or thirteen; no rendezvous may hold the common lock. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_3",
+      "split": "test",
+      "family": "rendezvous",
+      "variant": 3,
+      "task": "tasks/rendezvous_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a"
+      },
+      "support_sha256": {
+        "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+        "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+      },
+      "reference_sha256": {
+        "publish.c": "788758290dac7a1d996084169da531316dc13c03eeda8ebaa6f3b608c399e61b",
+        "observe.c": "ccdd4382c812d20f35e374fc63d19ef766779331d001ed0030aa8b8aa2c42991"
+      },
+      "description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_1",
+      "split": "train",
+      "family": "lock_order",
+      "variant": 1,
+      "task": "tasks/lock_order_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "a270ec6daaeef1f4275245dddf7f078deff7a3cef72686717c27b0eeab4d36a8",
+        "reverse.c": "f256092deb1995d9a40757b472379544905fa66841d7b3f1a124f6c3f8871e1d"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "8d90ef9825157594c25e7d39e4c14c0b3d56badb248a98518b538f0b2d0b7c74"
+      },
+      "reference_sha256": {
+        "forward.c": "9d5d280618e442fb95bc42dd4e7b54e0555d418783367505edd67f2df13c649a",
+        "reverse.c": "26f5c29f6b1d7583b757d5dd1866453e0a269c470999b5a8949ccad55a37d1d7"
+      },
+      "description": "Both workers must rendezvous before locking, then acquire left before right and preserve all eight/eighteen increments. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_2",
+      "split": "validation",
+      "family": "lock_order",
+      "variant": 2,
+      "task": "tasks/lock_order_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "7a8e180afb72bf5712637d3bd4e8a905419882712641994f1e9020bd208e4c0b",
+        "reverse.c": "1b4a9d6f6a6ae7b1979607efb123e1678b1e0583e6e39bd7903547d0c7833652"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "fa8cd41e71eb4af2d0c96452f3d90c0aa98d2acca4b81103fadcc3dcf51e0abf"
+      },
+      "reference_sha256": {
+        "forward.c": "f72ea04ae483392362c7ed6c2b9fa64a3977c41859426cb74fd1806bf7a23168",
+        "reverse.c": "03b6c7cc6db660ea6d2c8b29dd68cc256515221d8475d5822ae6d7a4cfba35a8"
+      },
+      "description": "Opposite-direction transfers must preserve total money forty, each exact transfer and arrival helper. Use a single lock order and do not rendezvous while holding either lock. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_3",
+      "split": "test",
+      "family": "lock_order",
+      "variant": 3,
+      "task": "tasks/lock_order_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+      },
+      "reference_sha256": {
+        "forward.c": "be4cbd4c6e983280ef51260d380062011e56fc59a4522ee3df5ee645d8a2f9f0",
+        "reverse.c": "33b33bb37fd79ec87e209f810d584517442a83bf5e5264a04956e9f8de5e6466"
+      },
+      "description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_1",
+      "split": "train",
+      "family": "predicate",
+      "variant": 1,
+      "task": "tasks/predicate_1/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "a8d7f0b1e6da3a9add69fc66c97a831e8e696d1e279846792bdda67143ec100f",
+        "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+      },
+      "support_sha256": {
+        "state.h": "b33f1dfe97104219d3483a46f36c46caf3b3529001492217a6a4ec614279a9fd",
+        "oracle.c": "ec4ca9286695de3e431fc11d0075814b7beffade6bf16a9d0300a2ebdbe170d4"
+      },
+      "reference_sha256": {
+        "await.c": "3d844127ca5941875f265f50c251ba84c53e536ca37439b70e241e4bf4ef8be9",
+        "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+      },
+      "description": "A queue consumer must wait until one item is ready even after an empty broadcast, consume exactly one value 42 and clear readiness. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_2",
+      "split": "validation",
+      "family": "predicate",
+      "variant": 2,
+      "task": "tasks/predicate_2/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "9c22c917415d5ff207d7ad0de2dcc74029e575311a21180cfaa1da806ef1d779",
+        "complete.c": "cdb7303fd19e536cac7860b45d9b23bd9f6fe713a472ef8e20250270e0b6b92a"
+      },
+      "support_sha256": {
+        "state.h": "be3f9ee383cf46d49811da7014f5c51137e2ae7134a4d10ae509db9d74c849d1",
+        "oracle.c": "e707f9bacbcf73bc225b188f41c060714197bbfd2b1a290bd86866d8129dda72"
+      },
+      "reference_sha256": {
+        "await.c": "49bae389b300555e1fa1a01b2b64419fdaa282d62a586f318ea6689eee829639",
+        "complete.c": "cdb7303fd19e536cac7860b45d9b23bd9f6fe713a472ef8e20250270e0b6b92a"
+      },
+      "description": "A result waiter must recheck its done predicate after every condition wakeup; preserve result 73 and consume completion exactly once. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_3",
+      "split": "test",
+      "family": "predicate",
+      "variant": 3,
+      "task": "tasks/predicate_3/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f"
+      },
+      "support_sha256": {
+        "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+        "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+      },
+      "reference_sha256": {
+        "await.c": "9fe447a309480749e5d634d86a815930dc56e9edcfc457a1740ef1fc6dbbaba9",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f"
+      },
+      "description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_1",
+      "split": "train",
+      "family": "audit",
+      "variant": 1,
+      "task": "tasks/audit_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "90f94d1f65a1dd7e3e41df132876b50edeb7337d5256c3f4634ff81d620a509a",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "d8fb2b38355c2c364b71ee9053b741853145d16a00685e1cccd1d55159f3f7d4",
+        "oracle.c": "fca850c2c85f56dcdee074275afbfbb041246c07ce311218df1b3a14b4e44813"
+      },
+      "reference_sha256": {
+        "commit.c": "de1eedf7ef686d724fcc373050e1ebdb51ea60560ebcd6670da5f2fecef54ffb",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 updates increments value and invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_2",
+      "split": "validation",
+      "family": "audit",
+      "variant": 2,
+      "task": "tasks/audit_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "ffdaea19c145d024d7cfb9d7c377d9b034f374eaa97ee395a35e79f0b50a7a22",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "d20da8d6f0960b3b18d581d41b641259663fb3fe2a7caa462b0b1a7218208977",
+        "oracle.c": "1c9a12adce13ee8f894b9c1cc48f938de77b7ea4dedf1bc0fa5aeb8d8ea76ba8"
+      },
+      "reference_sha256": {
+        "commit.c": "97ec6e689a3e6c3d88c26eb1e98a1c5a8c6d914ab36ca6bba288582c2d43a005",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 updates increments count and adds six to sum, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_3",
+      "split": "test",
+      "family": "audit",
+      "variant": 3,
+      "task": "tasks/audit_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+        "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+      },
+      "reference_sha256": {
+        "commit.c": "ab51b30319c12432f12de583b21f1514ca52b58ef209ba9e986d3b2a55482122",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_1",
+      "split": "train",
+      "family": "aggregate",
+      "variant": 1,
+      "task": "tasks/aggregate_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "f429211d8dd167b4a4ceee305b0fad6ba57bb7411f9c34c6a649d1de27b097c9",
+        "read.c": "02420dd66f843898aa68571b33cf825e3658a58c7295ed87e41bd5eb00d7cdcb"
+      },
+      "support_sha256": {
+        "state.h": "12f9e576ee83282b382ad4e007ccb26f6b5bda0dcf60c81b1c5ce91b4c279738",
+        "oracle.c": "cbaa942ceb33fe74bb9e02b2123f137e2859864567f45b7088e76f1931dd9485"
+      },
+      "reference_sha256": {
+        "record.c": "15d1cd00d3760451350d64af29cb0ef87ca24ef2d2b3b9e6ee31cd3cc5ebfc60",
+        "read.c": "fda4a98fa4598de7c47b2398b0d04f58d2d3c9ec6be581d692e8860f69878ae1"
+      },
+      "description": "Every record adds one count and five sum units; all concurrent readers must observe that invariant. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_2",
+      "split": "validation",
+      "family": "aggregate",
+      "variant": 2,
+      "task": "tasks/aggregate_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "edcf4a1d2391f8a86384b18915b09bcf8fc0bb456e92a8b57acac537233a3e96",
+        "read.c": "adfbd56f6386ad7b19665a970a2cf1a1e18637590d82929192c0f310effc73b8"
+      },
+      "support_sha256": {
+        "state.h": "e8b71bce365ce4d80496efc0753018c08db0f724e85712e29e919b16b95b3519",
+        "oracle.c": "6657c303af75149cfcd0156eb8d34f2d1e2da992807ca8f8c920a0137f8e2705"
+      },
+      "reference_sha256": {
+        "record.c": "848bbd1eb5d56aa6f1c9ff05128ad4040155a229388a74bdddc1750064e6ebab",
+        "read.c": "0ad6ff0e62d03b68787bc0d51a06b08fbb8a9ff545f032a3af6c1f8f246c039a"
+      },
+      "description": "Every record increments total and exactly one of accepted or rejected according to step modulo three; preserve counts 320, 212 and 108 and consistent snapshots. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_3",
+      "split": "test",
+      "family": "aggregate",
+      "variant": 3,
+      "task": "tasks/aggregate_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d"
+      },
+      "support_sha256": {
+        "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+        "oracle.c": "de9b42f89fd3c58acbf02fcb67fd3ff852114a179fd27edc64ffa4323de7e218"
+      },
+      "reference_sha256": {
+        "record.c": "7e0ca24ece8435c8cdeebad3f78db8850c5bb6e6cccbb0b774818bb8fe64efc2",
+        "read.c": "0af978d577201c445e43c3778db5ffde296cef1112e5543c350fc779f0f957ea"
+      },
+      "description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "ledger_1",
+      "split": "train",
+      "family": "ledger",
+      "variant": 1,
+      "task": "tasks/ledger_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "7a8387e1911b46fdb5fe4a8e8617d9c771022ff3a88103cb56763d2bea137bde",
+        "reader.c": "d5f1f630f84bc35a38bee3e41336eea79afaf23601769f3cf07bfce5e00e7071"
+      },
+      "support_sha256": {
+        "state.h": "74b008dfd8bf9701e625f1b2a7cbbd84ebd3e19e2eac30ee911c5faa440b7dd3",
+        "oracle.c": "f39639a968554612140773ba4c750ec4c913bd66716547e004008b56e266dbbc"
+      },
+      "reference_sha256": {
+        "writer.c": "bd5ba3d7401e1b1b4599326a0fb1b70047d05cbca92aba8cd21e096dd6610550",
+        "reader.c": "1ff190c088c126c6c1229778b855e6044f3d0f3014fc0e801ab8ccc1f96f87a2"
+      },
+      "description": "Concurrent ledger credits must accumulate exactly 960. Readers must use the same synchronization as writers. Retain the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "ledger_2",
+      "split": "train",
+      "family": "ledger",
+      "variant": 2,
+      "task": "tasks/ledger_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "d309a94abe3b7ca4d5942a62940c2edba179feab42206fd542e19980a0fcdf2f",
+        "reader.c": "1470989646aebfc49754edbbcc2d80296451fbd2e30992b23b7fd88239554875"
+      },
+      "support_sha256": {
+        "state.h": "de1425df7670f51fc36273cf0ec30230a5beb6944bf79ad778b8e2bba400641b",
+        "oracle.c": "4e630beeb032e722a2fbe412682a0a1f964f0700007c9e9a30f95ba4ad3016b3"
+      },
+      "reference_sha256": {
+        "writer.c": "3627d7be29180d30f87435995f0e43f5b7985f1ddd924a0d60ffe2e7939e1289",
+        "reader.c": "6a1477ca56e51c0373927fe65681e0be0fcac221150945f77121b4a0809181e5"
+      },
+      "description": "Four workers alternate between two histogram buckets. Preserve all 320 increments and synchronized total snapshots of both buckets.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "ledger_3",
+      "split": "test",
+      "family": "ledger",
+      "variant": 3,
+      "task": "tasks/ledger_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065"
+      },
+      "support_sha256": {
+        "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+        "oracle.c": "9e478c2e91bb1d0a212f47016b8a49fe4b84576e3d793ba03a66db247bf9b35f"
+      },
+      "reference_sha256": {
+        "writer.c": "93af70ceff86ea1b78ca61e9168c3d780b2a5cc7b739df7ada4553c955716f64",
+        "reader.c": "320eb118ed9cca5de109569dfebe23ad3745446ab86cf84603259f5a845f7c04"
+      },
+      "description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_1",
+      "split": "train",
+      "family": "snapshot",
+      "variant": 1,
+      "task": "tasks/snapshot_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "1e41cb1e9922353490fef0d1f9c2d28fb5f43f8fe11afae0a22d232cdb380db0",
+        "snapshot.c": "57321e0f4cbcea8f4b6faef34aaf06cf77fe2b3c5955ef07451ad46f80e32f66"
+      },
+      "support_sha256": {
+        "state.h": "8e335536361ca05b5037e5878ee62ddc1076d0e1b88957a4f83819e51f9954bb",
+        "oracle.c": "4ca44300cb74230eece42a1d43552cd6b8547a21f36f3929ad85a74f2ee2309d"
+      },
+      "reference_sha256": {
+        "publisher.c": "5388e5af3b68bb2fad0750e265104a8e87f592fc40eea03f55957f7c2274bae6",
+        "snapshot.c": "8a9a23599038feb32d7c18f32ce766ad5afd9d12dbfe16ee4862b52f2b49f725"
+      },
+      "description": "Publish generation tags and XOR checksums atomically; each snapshot must observe a consistent pair. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_2",
+      "split": "train",
+      "family": "snapshot",
+      "variant": 2,
+      "task": "tasks/snapshot_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "385b5ee2f4345b2724866008a395fc55eb9f056d100de617d4fc44d8468d98ec",
+        "snapshot.c": "e3c15a1dbaaa68110964beb3dc1bdbc8498279b729e9f16e40bb010499accc1b"
+      },
+      "support_sha256": {
+        "state.h": "146de4a48911198f71857eab344bf60bbdea67cd30205cf8d29d28a87f2b150b",
+        "oracle.c": "37f80548cbf0d9886dab4dbcdc90ede4d6daf1ab0a457d4b1613ad235c5cd6ae"
+      },
+      "reference_sha256": {
+        "publisher.c": "4b2248ba86a18436e48ea32516d63adb16cbb8cec1a60d86800390aa14aecb00",
+        "snapshot.c": "abc14a02218156f0d4ba2d305dfd09ffdefcf12c31affdb36806dceb4207e39b"
+      },
+      "description": "Publish lower and upper range bounds atomically; every reader must see a width of seven. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "snapshot_3",
+      "split": "test",
+      "family": "snapshot",
+      "variant": 3,
+      "task": "tasks/snapshot_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343"
+      },
+      "support_sha256": {
+        "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+        "oracle.c": "dd6f776bac13536428c96d4e957a61ed2edc12866286fc5eceedd780be84d357"
+      },
+      "reference_sha256": {
+        "publisher.c": "b9e1604fe3bea735cbf6414f95f5e59c06e1d2a78815b3b3f5916314770c962b",
+        "snapshot.c": "2872750f40e60aaa0b9f233bad2137624eebc5daadda3383e088be762f178115"
+      },
+      "description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_1",
+      "split": "train",
+      "family": "capacity",
+      "variant": 1,
+      "task": "tasks/capacity_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "d74ac1e35dd5a0c338bb9d7049522b65df513630e888887f48b5cc58ebe337b2",
+        "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+      },
+      "support_sha256": {
+        "state.h": "1d2eaf951a25109b4626e821088706c3b36f598e87abf1394834eab201f28ec5",
+        "oracle.c": "471fde4b76937a894cb3ac4c6ab208278a783bafa7022a42974412dd80bfd709"
+      },
+      "reference_sha256": {
+        "acquire.c": "b94265534803b7a173f8df7797860dce2e92415ad9da6e385f9a97376da7a583",
+        "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+      },
+      "description": "Empty capacity must return zero while releasing the shared mutex. Preserve ten successful claims and 280 failure calls.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_2",
+      "split": "train",
+      "family": "capacity",
+      "variant": 2,
+      "task": "tasks/capacity_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "3f1b7b0e921479b31a327951d746f0b306f6c4fb8c3f97281bed1bad5e139817",
+        "inspect.c": "12da925b1f01f2996f62d0d72fd7f9f939c4cfa8da3a62605bf9390a83097f5d"
+      },
+      "support_sha256": {
+        "state.h": "231a188eb82de71dbdac3ebeba701d2a9b9b1d45e4e362a8a4033ac307c51fa3",
+        "oracle.c": "f13f87848fd11c8b8eaba820ea1073cf334833718ac60747ffcd40fbb980aaff"
+      },
+      "reference_sha256": {
+        "acquire.c": "67ee972e39545b7d976b7047c81d7be442142fe6d42f8d0a808fd98ea771e234",
+        "inspect.c": "12da925b1f01f2996f62d0d72fd7f9f939c4cfa8da3a62605bf9390a83097f5d"
+      },
+      "description": "Insufficient funds or nonpositive withdrawal must release the mutex on every path. Preserve ten withdrawals of two and 280 rejected requests.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "capacity_3",
+      "split": "test",
+      "family": "capacity",
+      "variant": 3,
+      "task": "tasks/capacity_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+      },
+      "support_sha256": {
+        "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+        "oracle.c": "0b2164593e10fab5e62a075074adcc4d69dbdd5188512dadd6d0919fb0f1e542"
+      },
+      "reference_sha256": {
+        "acquire.c": "ebc1f565e1cc028db339a35b043934228d409e84b2d529d2efe8a6944ad4e6af",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+      },
+      "description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_1",
+      "split": "train",
+      "family": "rendezvous",
+      "variant": 1,
+      "task": "tasks/rendezvous_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "c44519440e90b938b228ab2a7460f8788101e7be536f9f09db112e36854ae12e",
+        "observe.c": "7bfb2c759ab9a300dba0a3cdbf1c3354610614cb9f7ba4ad57a5f8d6f1e5e6d7"
+      },
+      "support_sha256": {
+        "state.h": "04c8e2d34f3f845c47d5345fb76bc395c33e982e3cced25032cf4c0fe26638c3",
+        "oracle.c": "bbf61d8f048341bb7191885bc6dfbe7c2e144199fb738a46d3d6965fc8babea6"
+      },
+      "reference_sha256": {
+        "publish.c": "2ddda9c06350608bfa1c272719b9b713b4cbdc26f1a6636254ac8798b0034536",
+        "observe.c": "d23a6f48b2bc280c2e188da2a9180dd8f294d5da93c4d8050ccaac02619ae41d"
+      },
+      "description": "Both participants must rendezvous once without holding their shared mutex, then preserve publication of 27 and an observation of zero or 27. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_2",
+      "split": "train",
+      "family": "rendezvous",
+      "variant": 2,
+      "task": "tasks/rendezvous_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "0ae9be0c5383571803f5f424ccc4e0d02c5d772482b76800c3f14298e682f9e2",
+        "observe.c": "26b51d25a4d7fa77daa057ecbc21cf655ab87f9d32a0d09869ae66f1f9221dda"
+      },
+      "support_sha256": {
+        "state.h": "b30b66dcf83495f757b774c20e6152d90aa5ac4bbe43dcccdfad32e6a0275fb9",
+        "oracle.c": "2a25e304284767518b05940d4914783353cf5e67bc9ec73763e8544a17a78881"
+      },
+      "reference_sha256": {
+        "publish.c": "a5523ed77b3354510c31e521a08950ae9824a8b564ff8ef2b9a825d1d5eb6b32",
+        "observe.c": "964259d3aa33f8ff928e1e061419de77087094827a9bc5b4371fbae1de538075"
+      },
+      "description": "The protected exchange helper waits for two participants. Publish both slots as one transaction and observe a sum of zero or thirteen; no rendezvous may hold the common lock. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "rendezvous_3",
+      "split": "test",
+      "family": "rendezvous",
+      "variant": 3,
+      "task": "tasks/rendezvous_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a"
+      },
+      "support_sha256": {
+        "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+        "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+      },
+      "reference_sha256": {
+        "publish.c": "788758290dac7a1d996084169da531316dc13c03eeda8ebaa6f3b608c399e61b",
+        "observe.c": "ccdd4382c812d20f35e374fc63d19ef766779331d001ed0030aa8b8aa2c42991"
+      },
+      "description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_1",
+      "split": "train",
+      "family": "lock_order",
+      "variant": 1,
+      "task": "tasks/lock_order_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "a270ec6daaeef1f4275245dddf7f078deff7a3cef72686717c27b0eeab4d36a8",
+        "reverse.c": "f256092deb1995d9a40757b472379544905fa66841d7b3f1a124f6c3f8871e1d"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "8d90ef9825157594c25e7d39e4c14c0b3d56badb248a98518b538f0b2d0b7c74"
+      },
+      "reference_sha256": {
+        "forward.c": "9d5d280618e442fb95bc42dd4e7b54e0555d418783367505edd67f2df13c649a",
+        "reverse.c": "26f5c29f6b1d7583b757d5dd1866453e0a269c470999b5a8949ccad55a37d1d7"
+      },
+      "description": "Both workers must rendezvous before locking, then acquire left before right and preserve all eight/eighteen increments. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_2",
+      "split": "validation",
+      "family": "lock_order",
+      "variant": 2,
+      "task": "tasks/lock_order_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "7a8e180afb72bf5712637d3bd4e8a905419882712641994f1e9020bd208e4c0b",
+        "reverse.c": "1b4a9d6f6a6ae7b1979607efb123e1678b1e0583e6e39bd7903547d0c7833652"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "fa8cd41e71eb4af2d0c96452f3d90c0aa98d2acca4b81103fadcc3dcf51e0abf"
+      },
+      "reference_sha256": {
+        "forward.c": "f72ea04ae483392362c7ed6c2b9fa64a3977c41859426cb74fd1806bf7a23168",
+        "reverse.c": "03b6c7cc6db660ea6d2c8b29dd68cc256515221d8475d5822ae6d7a4cfba35a8"
+      },
+      "description": "Opposite-direction transfers must preserve total money forty, each exact transfer and arrival helper. Use a single lock order and do not rendezvous while holding either lock. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "lock_order_3",
+      "split": "test",
+      "family": "lock_order",
+      "variant": 3,
+      "task": "tasks/lock_order_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6"
+      },
+      "support_sha256": {
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+      },
+      "reference_sha256": {
+        "forward.c": "be4cbd4c6e983280ef51260d380062011e56fc59a4522ee3df5ee645d8a2f9f0",
+        "reverse.c": "33b33bb37fd79ec87e209f810d584517442a83bf5e5264a04956e9f8de5e6466"
+      },
+      "description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_1",
+      "split": "train",
+      "family": "predicate",
+      "variant": 1,
+      "task": "tasks/predicate_1/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "a8d7f0b1e6da3a9add69fc66c97a831e8e696d1e279846792bdda67143ec100f",
+        "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+      },
+      "support_sha256": {
+        "state.h": "b33f1dfe97104219d3483a46f36c46caf3b3529001492217a6a4ec614279a9fd",
+        "oracle.c": "ec4ca9286695de3e431fc11d0075814b7beffade6bf16a9d0300a2ebdbe170d4"
+      },
+      "reference_sha256": {
+        "await.c": "3d844127ca5941875f265f50c251ba84c53e536ca37439b70e241e4bf4ef8be9",
+        "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+      },
+      "description": "A queue consumer must wait until one item is ready even after an empty broadcast, consume exactly one value 42 and clear readiness. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_2",
+      "split": "validation",
+      "family": "predicate",
+      "variant": 2,
+      "task": "tasks/predicate_2/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "9c22c917415d5ff207d7ad0de2dcc74029e575311a21180cfaa1da806ef1d779",
+        "complete.c": "cdb7303fd19e536cac7860b45d9b23bd9f6fe713a472ef8e20250270e0b6b92a"
+      },
+      "support_sha256": {
+        "state.h": "be3f9ee383cf46d49811da7014f5c51137e2ae7134a4d10ae509db9d74c849d1",
+        "oracle.c": "e707f9bacbcf73bc225b188f41c060714197bbfd2b1a290bd86866d8129dda72"
+      },
+      "reference_sha256": {
+        "await.c": "49bae389b300555e1fa1a01b2b64419fdaa282d62a586f318ea6689eee829639",
+        "complete.c": "cdb7303fd19e536cac7860b45d9b23bd9f6fe713a472ef8e20250270e0b6b92a"
+      },
+      "description": "A result waiter must recheck its done predicate after every condition wakeup; preserve result 73 and consume completion exactly once. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "predicate_3",
+      "split": "test",
+      "family": "predicate",
+      "variant": 3,
+      "task": "tasks/predicate_3/task.json",
+      "negative_control": "semantic",
+      "source_sha256": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f"
+      },
+      "support_sha256": {
+        "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+        "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+      },
+      "reference_sha256": {
+        "await.c": "9fe447a309480749e5d634d86a815930dc56e9edcfc457a1740ef1fc6dbbaba9",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f"
+      },
+      "description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_1",
+      "split": "train",
+      "family": "audit",
+      "variant": 1,
+      "task": "tasks/audit_1/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "90f94d1f65a1dd7e3e41df132876b50edeb7337d5256c3f4634ff81d620a509a",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "d8fb2b38355c2c364b71ee9053b741853145d16a00685e1cccd1d55159f3f7d4",
+        "oracle.c": "fca850c2c85f56dcdee074275afbfbb041246c07ce311218df1b3a14b4e44813"
+      },
+      "reference_sha256": {
+        "commit.c": "de1eedf7ef686d724fcc373050e1ebdb51ea60560ebcd6670da5f2fecef54ffb",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 updates increments value and invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_2",
+      "split": "validation",
+      "family": "audit",
+      "variant": 2,
+      "task": "tasks/audit_2/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "ffdaea19c145d024d7cfb9d7c377d9b034f374eaa97ee395a35e79f0b50a7a22",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "d20da8d6f0960b3b18d581d41b641259663fb3fe2a7caa462b0b1a7218208977",
+        "oracle.c": "1c9a12adce13ee8f894b9c1cc48f938de77b7ea4dedf1bc0fa5aeb8d8ea76ba8"
+      },
+      "reference_sha256": {
+        "commit.c": "97ec6e689a3e6c3d88c26eb1e98a1c5a8c6d914ab36ca6bba288582c2d43a005",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 updates increments count and adds six to sum, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "audit_3",
+      "split": "test",
+      "family": "audit",
+      "variant": 3,
+      "task": "tasks/audit_3/task.json",
+      "negative_control": "deadlock",
+      "source_sha256": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "support_sha256": {
+        "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+        "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+      },
+      "reference_sha256": {
+        "commit.c": "ab51b30319c12432f12de583b21f1514ca52b58ef209ba9e986d3b2a55482122",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_1",
+      "split": "train",
+      "family": "aggregate",
+      "variant": 1,
+      "task": "tasks/aggregate_1/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "f429211d8dd167b4a4ceee305b0fad6ba57bb7411f9c34c6a649d1de27b097c9",
+        "read.c": "02420dd66f843898aa68571b33cf825e3658a58c7295ed87e41bd5eb00d7cdcb"
+      },
+      "support_sha256": {
+        "state.h": "12f9e576ee83282b382ad4e007ccb26f6b5bda0dcf60c81b1c5ce91b4c279738",
+        "oracle.c": "cbaa942ceb33fe74bb9e02b2123f137e2859864567f45b7088e76f1931dd9485"
+      },
+      "reference_sha256": {
+        "record.c": "15d1cd00d3760451350d64af29cb0ef87ca24ef2d2b3b9e6ee31cd3cc5ebfc60",
+        "read.c": "fda4a98fa4598de7c47b2398b0d04f58d2d3c9ec6be581d692e8860f69878ae1"
+      },
+      "description": "Every record adds one count and five sum units; all concurrent readers must observe that invariant. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_2",
+      "split": "validation",
+      "family": "aggregate",
+      "variant": 2,
+      "task": "tasks/aggregate_2/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "edcf4a1d2391f8a86384b18915b09bcf8fc0bb456e92a8b57acac537233a3e96",
+        "read.c": "adfbd56f6386ad7b19665a970a2cf1a1e18637590d82929192c0f310effc73b8"
+      },
+      "support_sha256": {
+        "state.h": "e8b71bce365ce4d80496efc0753018c08db0f724e85712e29e919b16b95b3519",
+        "oracle.c": "6657c303af75149cfcd0156eb8d34f2d1e2da992807ca8f8c920a0137f8e2705"
+      },
+      "reference_sha256": {
+        "record.c": "848bbd1eb5d56aa6f1c9ff05128ad4040155a229388a74bdddc1750064e6ebab",
+        "read.c": "0ad6ff0e62d03b68787bc0d51a06b08fbb8a9ff545f032a3af6c1f8f246c039a"
+      },
+      "description": "Every record increments total and exactly one of accepted or rejected according to step modulo three; preserve counts 320, 212 and 108 and consistent snapshots. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    },
+    {
+      "id": "aggregate_3",
+      "split": "test",
+      "family": "aggregate",
+      "variant": 3,
+      "task": "tasks/aggregate_3/task.json",
+      "negative_control": "race",
+      "source_sha256": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d"
+      },
+      "support_sha256": {
+        "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+        "oracle.c": "de9b42f89fd3c58acbf02fcb67fd3ff852114a179fd27edc64ffa4323de7e218"
+      },
+      "reference_sha256": {
+        "record.c": "7e0ca24ece8435c8cdeebad3f78db8850c5bb6e6cccbb0b774818bb8fe64efc2",
+        "read.c": "0af978d577201c445e43c3778db5ffde296cef1112e5543c350fc779f0f957ea"
+      },
+      "description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+      "runtime_context_files": [
+        "state.h"
+      ],
+      "protected_oracle_files": [
+        "oracle.c"
+      ]
+    }
+  ],
+  "test_source": "datasets/adaptive-v3/product-v3",
+  "training_files": [
+    "train.jsonl",
+    "validation.jsonl"
+  ],
+  "status": "frozen_pending_remote_calibration",
+  "test_targets_in_training": false,
+  "limitations": [
+    "Synthetic pthreads programs, not real-repository accuracy evidence.",
+    "Synchronization families occur across splits; held-out implementations use different field invariants and control flow.",
+    "Targets require fresh remote calibration before training."
+  ],
+  "design_policy": "Splits frozen before first calibration. Any failed fixture remains immutable; corrected designs require a new version."
+}

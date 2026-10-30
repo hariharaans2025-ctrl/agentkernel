@@ -1,0 +1,32 @@
+[
+  {
+    "kind": "process_failure",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "dc4364dff80393f1aabf194d830a2bb292e7b94eed7d1e768e0e30743a85a171",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "completed_not_verified",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "a343c09f34868e22ebf94d8270d12e0bcec892a0afe0f41dcacc7b3670c2989b",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "process_failure",
+    "observed_waits": [],
+    "thread_wait_edges": {},
+    "cycles": [],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "f01e968e371748233a8e0e998fa2f55c504d68da19a9fde58736a2cb9416c2c6",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "case": "ledger_1",
+  "split": "train",
+  "family": "ledger",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "writer.c": "bd5ba3d7401e1b1b4599326a0fb1b70047d05cbca92aba8cd21e096dd6610550",
+    "reader.c": "1ff190c088c126c6c1229778b855e6044f3d0f3014fc0e801ab8ccc1f96f87a2"
+  },
+  "source_sha256": {
+    "writer.c": "7a8387e1911b46fdb5fe4a8e8617d9c771022ff3a88103cb56763d2bea137bde",
+    "reader.c": "d5f1f630f84bc35a38bee3e41336eea79afaf23601769f3cf07bfce5e00e7071"
+  },
+  "support_sha256": {
+    "state.h": "74b008dfd8bf9701e625f1b2a7cbbd84ebd3e19e2eac30ee911c5faa440b7dd3",
+    "oracle.c": "b0a77ac60f2d7c24967ee463f275a06768a86a7115874bd6c0ae626483b831e0"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 59.720815000000584
+}

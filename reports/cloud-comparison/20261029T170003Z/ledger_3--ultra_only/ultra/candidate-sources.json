@@ -1,0 +1,4 @@
+{
+  "writer.c": "#include \"state.h\"\nvoid update(State*s,int step) { pthread_mutex_lock(&s->mutex); long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; pthread_mutex_unlock(&s->mutex); }\n",
+  "reader.c": "#include \"state.h\"\nlong snapshot(State*s) { pthread_mutex_lock(&s->mutex); long result=s->produced-2*s->consumed; pthread_mutex_unlock(&s->mutex); return result; }\n"
+}

@@ -1,0 +1,64 @@
+{
+  "task_id": "atomic_store",
+  "runs": [
+    {
+      "run_id": "atomic_store:1",
+      "start_time": "2026-10-11T12:03:35.910552Z",
+      "duration_ms": 18.053524999999958,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "eec9af23-3bb1-497c-89d6-7cafa8ede730",
+        "batch_transport_wall_ms": 1421.7295999987982
+      }
+    },
+    {
+      "run_id": "atomic_store:2",
+      "start_time": "2026-10-11T12:03:35.968994Z",
+      "duration_ms": 16.96740400000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "eec9af23-3bb1-497c-89d6-7cafa8ede730",
+        "batch_transport_wall_ms": 1421.7295999987982
+      }
+    },
+    {
+      "run_id": "atomic_store:3",
+      "start_time": "2026-10-11T12:03:36.017860Z",
+      "duration_ms": 17.002147000000022,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "eec9af23-3bb1-497c-89d6-7cafa8ede730",
+        "batch_transport_wall_ms": 1421.7295999987982
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 3
+  },
+  "duration_ms": 1424.3590999976732,
+  "requested_runs": 3
+}

@@ -1,0 +1,18 @@
+{
+  "public_tokenizer_input_tokens": 5022,
+  "tokenizer": {
+    "repository": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+    "revision": "2dc98e2afe4face0e4ce40972a915c45368bd34a",
+    "asset_sha256": {
+      "tokenizer.json": "623c34567aebb18582765289fbe23d901c62704d6518d71866e0e58db892b5b7",
+      "tokenizer_config.json": "10f93eabcb9b1602fbb991d6308e787ce1df28ee9cd7a1c6d1e8c3f338b957bc",
+      "special_tokens_map.json": "e9435fefd6d838fd9fcbbc44b97a8e3ff322be7f6dfb7e4fd2468586574bb52b",
+      "chat_template.jinja": "575fb74f54ed264df9047d0ecce3c98938aae953fb4f50356675706264cbb68a",
+      "config.json": "699f34f0fc645d29ebffa5767fb59e6ae6ec98e3a4605485eb9913256d0df7e6"
+    },
+    "transformers_version": "4.57.1",
+    "enable_thinking": false,
+    "add_generation_prompt": true,
+    "trust_remote_code": false
+  }
+}

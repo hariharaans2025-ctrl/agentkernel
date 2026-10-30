@@ -1,0 +1,22 @@
+.venv/
+.training-venv/
+models/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.env
+telemetry/*.jsonl
+build/
+dist/
+# Local runtime state, caches and logs
+node_modules/
+work/
+*.log
+.claude/
+reports/sites-console/state.json
+reports/**/*.lock
+reports/**/repositories/
+reports/**/checkouts/
+# Hosted console: a separate repository used by the Sites deployment (source ships in the release zip)
+sites/agentkernel-console/

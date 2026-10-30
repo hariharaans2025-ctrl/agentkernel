@@ -1,0 +1,17 @@
+--- a/main.c
++++ b/main.c
+@@ -8,11 +8,11 @@
+ 
+ static void *worker(void *arg) {
+     int id = (int)(intptr_t)arg;
+-    pthread_mutex_t *first = id == 1 ? &a : &b;
+-    pthread_mutex_t *second = id == 1 ? &b : &a;
++    pthread_mutex_t *first = &a;
++    pthread_mutex_t *second = &b;
++    pthread_barrier_wait(&ready);
+     pthread_mutex_lock(first);
+     printf("T%d LOCK %s\n", id, first == &a ? "A" : "B");
+-    pthread_barrier_wait(&ready);
+     printf("T%d WAIT %s\n", id, second == &a ? "A" : "B");
+     pthread_mutex_lock(second);
+     pthread_mutex_unlock(second);

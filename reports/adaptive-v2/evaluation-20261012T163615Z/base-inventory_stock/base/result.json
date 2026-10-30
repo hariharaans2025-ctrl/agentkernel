@@ -1,0 +1,16 @@
+{
+  "stage": "base",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 525,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "input_tokens": 359,
+  "output_tokens": 166,
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+  "adapter_sha256": null,
+  "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nint take_item(Inventory *stock) {\n    int old = stock->remaining;\n    if (old == 0) return 0;\n    pthread_mutex_lock(&stock->mutex);\n    if (old == 0) {\n        pthread_mutex_unlock(&stock->mutex);\n        return 0;\n    }\n    sched_yield();\n    stock->remaining = old - 1;\n    pthread_mutex_unlock(&stock->mutex);\n    return 1;\n}\nint remaining_stock(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int result = stock->remaining;\n    pthread_mutex_unlock(&stock->mutex);\n    return result;\n}\n<<<END_FILE>>>\n\nRequired sched_yield call count for solution.c: 2",
+  "error": "ValueError",
+  "inference_ms": 20565.47010000031
+}

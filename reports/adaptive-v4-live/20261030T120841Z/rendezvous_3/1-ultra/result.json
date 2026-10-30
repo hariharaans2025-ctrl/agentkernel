@@ -1,0 +1,64 @@
+{
+  "stage": "ultra",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1409,
+  "cost_usd": 0.001713,
+  "false_fix": true,
+  "recovery": null,
+  "reserved_usd": 0.036576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "de7a58e08a304884bd423db3b664aa8b",
+  "inference_ms": 1434.798199999932,
+  "input_tokens": 1257,
+  "output_tokens": 152,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE publish.c 2-2\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE observe.c 2-2\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "blocks": [
+      {
+        "file": "publish.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      },
+      {
+        "file": "observe.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      }
+    ]
+  },
+  "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+  "verification_phases_ms": {
+    "apply": 6461.3303000001,
+    "build": 3642.6501000000826,
+    "stress": 229181.2457000001,
+    "tsan_build": 2464.8580000002767,
+    "original_tests_and_semantics": 13317.993199999339
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": false,
+    "passed_runs": 0,
+    "total_runs": 100,
+    "semantic_passed": false,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 248606.7469999998,
+  "taxonomy": {
+    "primary": "original_tests",
+    "gates": [
+      "original_tests",
+      "stress",
+      "semantics",
+      "tsan"
+    ]
+  }
+}

@@ -1,0 +1,1406 @@
+{
+  "id": "3c1104de-f8ca-4af9-83a5-c4598eacfc25",
+  "fixture": "deadlock_001",
+  "tiers": [
+    "NANO",
+    "SUPER",
+    "ULTRA"
+  ],
+  "created_at": "2026-10-03T11:42:06.365127+00:00",
+  "status": "completed",
+  "provenance": "real",
+  "verification_runs": 100,
+  "baseline_runs": 3,
+  "stop_requested": false,
+  "events": [
+    {
+      "at": "2026-10-03T11:42:06.379700+00:00",
+      "tier": "NANO",
+      "message": "Starting sandbox"
+    },
+    {
+      "at": "2026-10-03T11:42:10.349528+00:00",
+      "tier": "NANO",
+      "message": "Compiling baseline"
+    },
+    {
+      "at": "2026-10-03T11:42:12.602357+00:00",
+      "tier": "NANO",
+      "message": "Reproducing bug"
+    },
+    {
+      "at": "2026-10-03T11:42:23.623837+00:00",
+      "tier": "NANO",
+      "message": "Requesting model"
+    },
+    {
+      "at": "2026-10-03T11:42:37.996427+00:00",
+      "tier": "NANO",
+      "message": "Checking response"
+    },
+    {
+      "at": "2026-10-03T11:42:53.551160+00:00",
+      "tier": "NANO",
+      "message": "Completed"
+    },
+    {
+      "at": "2026-10-03T11:42:53.555686+00:00",
+      "tier": "SUPER",
+      "message": "Starting sandbox"
+    },
+    {
+      "at": "2026-10-03T11:42:57.657549+00:00",
+      "tier": "SUPER",
+      "message": "Compiling baseline"
+    },
+    {
+      "at": "2026-10-03T11:42:59.991855+00:00",
+      "tier": "SUPER",
+      "message": "Reproducing bug"
+    },
+    {
+      "at": "2026-10-03T11:43:11.789504+00:00",
+      "tier": "SUPER",
+      "message": "Requesting model"
+    },
+    {
+      "at": "2026-10-03T11:43:16.457020+00:00",
+      "tier": "SUPER",
+      "message": "Checking response"
+    },
+    {
+      "at": "2026-10-03T11:43:20.578147+00:00",
+      "tier": "SUPER",
+      "message": "Applying candidate"
+    },
+    {
+      "at": "2026-10-03T11:43:23.137647+00:00",
+      "tier": "SUPER",
+      "message": "Verifying in sandbox"
+    },
+    {
+      "at": "2026-10-03T11:50:10.146783+00:00",
+      "tier": "SUPER",
+      "message": "Completed"
+    },
+    {
+      "at": "2026-10-03T11:50:10.154166+00:00",
+      "tier": "ULTRA",
+      "message": "Starting sandbox"
+    },
+    {
+      "at": "2026-10-03T11:50:13.893628+00:00",
+      "tier": "ULTRA",
+      "message": "Compiling baseline"
+    },
+    {
+      "at": "2026-10-03T11:50:16.421405+00:00",
+      "tier": "ULTRA",
+      "message": "Reproducing bug"
+    },
+    {
+      "at": "2026-10-03T11:50:27.897419+00:00",
+      "tier": "ULTRA",
+      "message": "Requesting model"
+    },
+    {
+      "at": "2026-10-03T11:50:36.287584+00:00",
+      "tier": "ULTRA",
+      "message": "Checking response"
+    },
+    {
+      "at": "2026-10-03T11:50:40.536549+00:00",
+      "tier": "ULTRA",
+      "message": "Applying candidate"
+    },
+    {
+      "at": "2026-10-03T11:50:42.804815+00:00",
+      "tier": "ULTRA",
+      "message": "Verifying in sandbox"
+    },
+    {
+      "at": "2026-10-03T11:54:23.484814+00:00",
+      "tier": "ULTRA",
+      "message": "Completed"
+    }
+  ],
+  "limits": {
+    "max_output_tokens_per_model": 2048,
+    "max_input_bytes_per_model": 12000,
+    "max_combined_output_tokens": 6144,
+    "requests_per_model": 1
+  },
+  "note": "Same frozen source and verification settings. Separate baseline measurements per model.",
+  "results": {
+    "NANO": {
+      "status": "completed",
+      "stage": "Completed",
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "started_at": "2026-10-03T11:42:06.379565+00:00",
+      "request_started_at": "2026-10-03T11:42:23.623713+00:00",
+      "response": "Nebius inference unavailable: incomplete_response",
+      "inference": {
+        "task_id": "deadlock_001",
+        "provider": "NEBIUS",
+        "tier": "NANO",
+        "output_text": "Nebius inference unavailable: incomplete_response",
+        "status": "FAILED",
+        "latency_ms": 14369.772099991678,
+        "input_tokens": 2025,
+        "output_tokens": 2048,
+        "estimated_cost_usd": null,
+        "metadata": {
+          "execution_mode": "real",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+          "error_code": "incomplete_response",
+          "requested_max_output_tokens": 2048,
+          "input_content_bytes": 6290,
+          "requested_max_input_bytes": 12000,
+          "actual_reasoning_tokens": null,
+          "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+          "usage_unknown": false,
+          "retry_count": 0,
+          "request_id": "23946504b9c21804586bb149e51e0296",
+          "retryable": false,
+          "finish_reason": "length",
+          "actual_input_tokens": 2025,
+          "actual_output_tokens": 2048
+        }
+      },
+      "finished_at": "2026-10-03T11:42:53.550755+00:00",
+      "job": {
+        "task": "deadlock_001",
+        "status": "unresolved",
+        "route": [
+          "NANO"
+        ],
+        "ultra_avoided": true,
+        "baseline": {
+          "build_passed": true,
+          "total_runs": 3,
+          "failed_runs": 3,
+          "infrastructure_failures": 0,
+          "requested_runs": 3,
+          "execution_blocked": false,
+          "counts": {
+            "POSSIBLE_DEADLOCK": 3
+          },
+          "duration_ms": 10996.278899998288,
+          "representative_runs": [
+            {
+              "run_id": "deadlock_001:1",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "30c5a130-56ad-44fb-ab3f-3384e4b672af",
+                "transport_wall_ms": 3567.0853999909014
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:2",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "30c5a130-56ad-44fb-ab3f-3384e4b672af",
+                "transport_wall_ms": 3537.470099996426
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:3",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "30c5a130-56ad-44fb-ab3f-3384e4b672af",
+                "transport_wall_ms": 3891.223800004809
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            }
+          ],
+          "sanitizer": {
+            "status": "not_configured"
+          },
+          "fingerprints": [
+            {
+              "fingerprint_id": "4b4c8f316a845e49",
+              "pattern": "cyclic_lock_wait",
+              "threads": [
+                "T1",
+                "T2"
+              ],
+              "lock_orders": [
+                [
+                  "A",
+                  "B"
+                ],
+                [
+                  "B",
+                  "A"
+                ]
+              ],
+              "confidence": 0.9,
+              "occurrences": 3,
+              "representative_runs": [
+                "deadlock_001:1",
+                "deadlock_001:2",
+                "deadlock_001:3"
+              ],
+              "evidence": {
+                "edges": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "cycle": [
+                  "A",
+                  "B",
+                  "A"
+                ],
+                "finding_locations": []
+              }
+            }
+          ]
+        },
+        "verification": null,
+        "repairs": [],
+        "triage": null,
+        "stopped_reason": "verification_not_retryable",
+        "total_time_ms": 31617.91380000068,
+        "inference_latency_ms": 14369.772099991678,
+        "execution_latency_ms": 11162.814488998287,
+        "inference_tokens": 4073,
+        "cost_usd": null,
+        "inference_mode": "real",
+        "model_calls": {
+          "LOCAL": 0,
+          "NANO": 1,
+          "SUPER": 0,
+          "ULTRA": 0
+        },
+        "metadata": {
+          "execution_backend": "nebius",
+          "models": [
+            "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+          ],
+          "starting_tier": "NANO",
+          "final_tier": "NANO",
+          "escalations": 0,
+          "routing_reasons": [
+            "Fixed-tier evaluation policy: NANO."
+          ],
+          "usage_available": true,
+          "inference_measurement": "measured",
+          "patch_attempts": 0,
+          "model_attempts": [
+            {
+              "tier": "NANO",
+              "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+              "input_tokens": 2025,
+              "output_tokens": 2048,
+              "latency_ms": 14369.772099991678,
+              "retry_count": 0,
+              "reasoning_tokens": null,
+              "requested_max_output_tokens": 2048,
+              "requested_enable_thinking": null,
+              "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+              "finish_reason": "length",
+              "request_id": "23946504b9c21804586bb149e51e0296",
+              "error_code": "incomplete_response",
+              "verification_reason": "Inference failed. Inference failed; no patch was applied."
+            }
+          ],
+          "observability": {
+            "backend": "langsmith",
+            "project": "concurrency-bug-hunter",
+            "status": "confirmed",
+            "spans_submitted": 5,
+            "spans_observed": [
+              {
+                "id": "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c",
+                "name": "ConcurrencyBugHunterJob",
+                "parent_id": null
+              },
+              {
+                "id": "f7738e34-d5bc-47fa-9f75-0669c975ae57",
+                "name": "baseline_compile",
+                "parent_id": "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c"
+              },
+              {
+                "id": "b72fed2f-46f2-4543-aed3-f6c4999ba38e",
+                "name": "baseline_stress_campaign",
+                "parent_id": "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c"
+              },
+              {
+                "id": "53045f6f-aa33-49c6-85af-2c0184f1a6be",
+                "name": "fingerprint_analysis",
+                "parent_id": "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c"
+              },
+              {
+                "id": "e458751e-03d7-4e8e-b96b-78ba89c1eebb",
+                "name": "nano_diagnosis",
+                "parent_id": "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c"
+              }
+            ],
+            "feedback_submitted": 5,
+            "trace_ids": [
+              "330ff2ce-6ade-42d5-a9b2-0b90c76cf17c"
+            ]
+          }
+        }
+      }
+    },
+    "SUPER": {
+      "status": "completed",
+      "stage": "Completed",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "started_at": "2026-10-03T11:42:53.555557+00:00",
+      "request_started_at": "2026-10-03T11:43:11.789413+00:00",
+      "response": "{\"diagnosis\": \"Circular wait deadlock due to inconsistent lock ordering combined with a barrier held while locks are acquired. Thread T1 locks A then waits at barrier before locking B; Thread T2 locks B then waits at same barrier before locking A. Both threads hold their first lock while waiting at the barrier, preventing the other from acquiring its first lock, resulting in circular dependency.\", \"root_cause\": \"Threads acquire locks in opposite order (T1: A\u2192B, T2: B\u2192A) and then wait at a barrier while still holding the first lock. This creates a hold-and-wait condition where each thread holds a resource needed by the other to progress past the barrier, causing deadlock.\", \"confidence\": 0.95, \"reasoning_summary\": \"All three runs show identical output: T1 locks A, T2 locks B, then both wait for each other's lock after the barrier. The barrier synchronization occurs while each thread holds its first mutex, preventing the other from acquiring its first lock and progressing. Lock graph confirms cyclic dependency A\u2192B and B\u2192A.\", \"expected_effect\": \"Eliminates circular wait by ensuring barrier wait occurs before any lock acquisition, removing hold-and-wait during synchronization. Threads will rendezvous at barrier without holding locks, then acquire locks in consistent global order (e.g., always A then B).\", \"edits\": [{\"file\": \"main.c\", \"search\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\", \"replacement\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_barrier_wait(&ready);\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\"}], \"risk_notes\": [\"Moving barrier before locks may affect correctness if worker logic depended on holding locks during barrier wait\u2014no such dependency exists in this code.\", \"Consistent lock ordering (A then B) must be enforced; current ternary setup already ensures this after barrier move.\"]}",
+      "inference": {
+        "task_id": "deadlock_001",
+        "provider": "NEBIUS",
+        "tier": "SUPER",
+        "output_text": "{\"diagnosis\": \"Circular wait deadlock due to inconsistent lock ordering combined with a barrier held while locks are acquired. Thread T1 locks A then waits at barrier before locking B; Thread T2 locks B then waits at same barrier before locking A. Both threads hold their first lock while waiting at the barrier, preventing the other from acquiring its first lock, resulting in circular dependency.\", \"root_cause\": \"Threads acquire locks in opposite order (T1: A\u2192B, T2: B\u2192A) and then wait at a barrier while still holding the first lock. This creates a hold-and-wait condition where each thread holds a resource needed by the other to progress past the barrier, causing deadlock.\", \"confidence\": 0.95, \"reasoning_summary\": \"All three runs show identical output: T1 locks A, T2 locks B, then both wait for each other's lock after the barrier. The barrier synchronization occurs while each thread holds its first mutex, preventing the other from acquiring its first lock and progressing. Lock graph confirms cyclic dependency A\u2192B and B\u2192A.\", \"expected_effect\": \"Eliminates circular wait by ensuring barrier wait occurs before any lock acquisition, removing hold-and-wait during synchronization. Threads will rendezvous at barrier without holding locks, then acquire locks in consistent global order (e.g., always A then B).\", \"edits\": [{\"file\": \"main.c\", \"search\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\", \"replacement\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_barrier_wait(&ready);\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\"}], \"risk_notes\": [\"Moving barrier before locks may affect correctness if worker logic depended on holding locks during barrier wait\u2014no such dependency exists in this code.\", \"Consistent lock ordering (A then B) must be enforced; current ternary setup already ensures this after barrier move.\"]}",
+        "status": "SUCCESS",
+        "latency_ms": 4664.984399991226,
+        "input_tokens": 2021,
+        "output_tokens": 704,
+        "estimated_cost_usd": null,
+        "metadata": {
+          "execution_mode": "real",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "backend": "nebius_token_factory",
+          "requested_max_output_tokens": 2048,
+          "input_content_bytes": 6289,
+          "requested_max_input_bytes": 12000,
+          "requested_enable_thinking": false,
+          "actual_reasoning_tokens": 0,
+          "actual_input_tokens": 2021,
+          "actual_output_tokens": 704,
+          "finish_reason": "stop",
+          "request_id": "047ba7daa1238937cbdae60619d01ea8",
+          "retry_count": 0,
+          "usage_available": true,
+          "latency_source": "wall_clock_including_catalog_check"
+        }
+      },
+      "finished_at": "2026-10-03T11:50:10.145979+00:00",
+      "job": {
+        "task": "deadlock_001",
+        "status": "unresolved",
+        "route": [
+          "SUPER"
+        ],
+        "ultra_avoided": true,
+        "baseline": {
+          "build_passed": true,
+          "total_runs": 3,
+          "failed_runs": 3,
+          "infrastructure_failures": 0,
+          "requested_runs": 3,
+          "execution_blocked": false,
+          "counts": {
+            "POSSIBLE_DEADLOCK": 3
+          },
+          "duration_ms": 11786.939899990102,
+          "representative_runs": [
+            {
+              "run_id": "deadlock_001:1",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "582462ca-afca-4f88-b15f-4de6f60f0b59",
+                "transport_wall_ms": 3993.8399999955436
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:2",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "582462ca-afca-4f88-b15f-4de6f60f0b59",
+                "transport_wall_ms": 3651.702400005888
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:3",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "582462ca-afca-4f88-b15f-4de6f60f0b59",
+                "transport_wall_ms": 4141.09359998838
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            }
+          ],
+          "sanitizer": {
+            "status": "not_configured"
+          },
+          "fingerprints": [
+            {
+              "fingerprint_id": "4b4c8f316a845e49",
+              "pattern": "cyclic_lock_wait",
+              "threads": [
+                "T1",
+                "T2"
+              ],
+              "lock_orders": [
+                [
+                  "A",
+                  "B"
+                ],
+                [
+                  "B",
+                  "A"
+                ]
+              ],
+              "confidence": 0.9,
+              "occurrences": 3,
+              "representative_runs": [
+                "deadlock_001:1",
+                "deadlock_001:2",
+                "deadlock_001:3"
+              ],
+              "evidence": {
+                "edges": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "cycle": [
+                  "A",
+                  "B",
+                  "A"
+                ],
+                "finding_locations": []
+              }
+            }
+          ]
+        },
+        "verification": {
+          "passed": false,
+          "build_passed": true,
+          "total_runs": 100,
+          "passed_runs": 0,
+          "failed_runs": 100,
+          "race_count": 0,
+          "deadlock_count": 100,
+          "crash_count": 0,
+          "infrastructure_failures": 0,
+          "observed_program_failures": 100,
+          "sanitizer_findings": [],
+          "regressions": [],
+          "duration_ms": 387619.70689999,
+          "evidence": {
+            "build": {
+              "command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "main.c",
+                "-o",
+                "app"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "duration_ms": 166.56901800000006,
+              "timed_out": false,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                "transport_wall_ms": 2196.1062000045786
+              },
+              "success": true
+            },
+            "original_tests": {
+              "passed": true,
+              "results": [],
+              "configured": false
+            },
+            "campaign": {
+              "total_runs": 100,
+              "failed_runs": 100,
+              "infrastructure_failures": 0,
+              "requested_runs": 100,
+              "execution_blocked": false,
+              "counts": {
+                "POSSIBLE_DEADLOCK": 100
+              },
+              "duration_ms": 385422.78670000087,
+              "representative_runs": [
+                {
+                  "run_id": "deadlock_001:1",
+                  "classification": "POSSIBLE_DEADLOCK",
+                  "exit_code": -9,
+                  "timed_out": true,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                    "transport_wall_ms": 3932.335499994224
+                  },
+                  "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                  "stderr": ""
+                },
+                {
+                  "run_id": "deadlock_001:2",
+                  "classification": "POSSIBLE_DEADLOCK",
+                  "exit_code": -9,
+                  "timed_out": true,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                    "transport_wall_ms": 4054.973999998765
+                  },
+                  "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                  "stderr": ""
+                },
+                {
+                  "run_id": "deadlock_001:3",
+                  "classification": "POSSIBLE_DEADLOCK",
+                  "exit_code": -9,
+                  "timed_out": true,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                    "transport_wall_ms": 4159.471000006306
+                  },
+                  "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                  "stderr": ""
+                }
+              ]
+            },
+            "sanitizer": {
+              "status": "not_configured"
+            }
+          },
+          "reason": "The patch failed the configured verification campaign; inspect execution evidence."
+        },
+        "repairs": [
+          {
+            "tier": "SUPER",
+            "proposal": {
+              "diagnosis": "Circular wait deadlock due to inconsistent lock ordering combined with a barrier held while locks are acquired. Thread T1 locks A then waits at barrier before locking B; Thread T2 locks B then waits at same barrier before locking A. Both threads hold their first lock while waiting at the barrier, preventing the other from acquiring its first lock, resulting in circular dependency.",
+              "root_cause": "Threads acquire locks in opposite order (T1: A\u2192B, T2: B\u2192A) and then wait at a barrier while still holding the first lock. This creates a hold-and-wait condition where each thread holds a resource needed by the other to progress past the barrier, causing deadlock.",
+              "confidence": 0.95,
+              "reasoning_summary": "All three runs show identical output: T1 locks A, T2 locks B, then both wait for each other's lock after the barrier. The barrier synchronization occurs while each thread holds its first mutex, preventing the other from acquiring its first lock and progressing. Lock graph confirms cyclic dependency A\u2192B and B\u2192A.",
+              "expected_effect": "Eliminates circular wait by ensuring barrier wait occurs before any lock acquisition, removing hold-and-wait during synchronization. Threads will rendezvous at barrier without holding locks, then acquire locks in consistent global order (e.g., always A then B).",
+              "risk_notes": [
+                "Moving barrier before locks may affect correctness if worker logic depended on holding locks during barrier wait\u2014no such dependency exists in this code.",
+                "Consistent lock ordering (A then B) must be enforced; current ternary setup already ensures this after barrier move."
+              ],
+              "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_t *first = id == 1 ? &a : &b;\n     pthread_mutex_t *second = id == 1 ? &b : &a;\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n"
+            },
+            "patch": {
+              "success": true,
+              "files_changed": [
+                "main.c"
+              ],
+              "rejected_paths": [],
+              "error": null,
+              "error_code": null,
+              "repair_hint": null,
+              "source_line": null,
+              "patch_hash": "b6c9f791584ae92a6e11fce73cbbca36d64a17f65fde81f07dcd39822fa9d1a4"
+            },
+            "verification": {
+              "passed": false,
+              "build_passed": true,
+              "total_runs": 100,
+              "passed_runs": 0,
+              "failed_runs": 100,
+              "race_count": 0,
+              "deadlock_count": 100,
+              "crash_count": 0,
+              "infrastructure_failures": 0,
+              "observed_program_failures": 100,
+              "sanitizer_findings": [],
+              "regressions": [],
+              "duration_ms": 387619.70689999,
+              "evidence": {
+                "build": {
+                  "command": [
+                    "gcc",
+                    "-pthread",
+                    "-g",
+                    "-O1",
+                    "main.c",
+                    "-o",
+                    "app"
+                  ],
+                  "exit_code": 0,
+                  "stdout": "",
+                  "stderr": "",
+                  "duration_ms": 166.56901800000006,
+                  "timed_out": false,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                    "transport_wall_ms": 2196.1062000045786
+                  },
+                  "success": true
+                },
+                "original_tests": {
+                  "passed": true,
+                  "results": [],
+                  "configured": false
+                },
+                "campaign": {
+                  "total_runs": 100,
+                  "failed_runs": 100,
+                  "infrastructure_failures": 0,
+                  "requested_runs": 100,
+                  "execution_blocked": false,
+                  "counts": {
+                    "POSSIBLE_DEADLOCK": 100
+                  },
+                  "duration_ms": 385422.78670000087,
+                  "representative_runs": [
+                    {
+                      "run_id": "deadlock_001:1",
+                      "classification": "POSSIBLE_DEADLOCK",
+                      "exit_code": -9,
+                      "timed_out": true,
+                      "metadata": {
+                        "execution_backend": "nebius",
+                        "output_truncated": false,
+                        "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                        "transport_wall_ms": 3932.335499994224
+                      },
+                      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                      "stderr": ""
+                    },
+                    {
+                      "run_id": "deadlock_001:2",
+                      "classification": "POSSIBLE_DEADLOCK",
+                      "exit_code": -9,
+                      "timed_out": true,
+                      "metadata": {
+                        "execution_backend": "nebius",
+                        "output_truncated": false,
+                        "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                        "transport_wall_ms": 4054.973999998765
+                      },
+                      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                      "stderr": ""
+                    },
+                    {
+                      "run_id": "deadlock_001:3",
+                      "classification": "POSSIBLE_DEADLOCK",
+                      "exit_code": -9,
+                      "timed_out": true,
+                      "metadata": {
+                        "execution_backend": "nebius",
+                        "output_truncated": false,
+                        "remote_image_id": "9ec751cf-aa01-4e70-8018-b9d447de7f5b",
+                        "transport_wall_ms": 4159.471000006306
+                      },
+                      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\n",
+                      "stderr": ""
+                    }
+                  ]
+                },
+                "sanitizer": {
+                  "status": "not_configured"
+                }
+              },
+              "reason": "The patch failed the configured verification campaign; inspect execution evidence."
+            }
+          }
+        ],
+        "triage": null,
+        "stopped_reason": "attempts_exhausted",
+        "total_time_ms": 417204.8242000019,
+        "inference_latency_ms": 4664.984399991226,
+        "execution_latency_ms": 399573.45636898006,
+        "inference_tokens": 2725,
+        "cost_usd": null,
+        "inference_mode": "real",
+        "model_calls": {
+          "LOCAL": 0,
+          "NANO": 0,
+          "SUPER": 1,
+          "ULTRA": 0
+        },
+        "metadata": {
+          "execution_backend": "nebius",
+          "models": [
+            "nvidia/nemotron-3-super-120b-a12b"
+          ],
+          "starting_tier": "SUPER",
+          "final_tier": "SUPER",
+          "escalations": 0,
+          "routing_reasons": [
+            "Fixed-tier evaluation policy: SUPER."
+          ],
+          "usage_available": true,
+          "inference_measurement": "measured",
+          "patch_attempts": 1,
+          "model_attempts": [
+            {
+              "tier": "SUPER",
+              "model_id": "nvidia/nemotron-3-super-120b-a12b",
+              "input_tokens": 2021,
+              "output_tokens": 704,
+              "latency_ms": 4664.984399991226,
+              "retry_count": 0,
+              "reasoning_tokens": 0,
+              "requested_max_output_tokens": 2048,
+              "requested_enable_thinking": false,
+              "error_hint": null,
+              "finish_reason": "stop",
+              "request_id": "047ba7daa1238937cbdae60619d01ea8",
+              "error_code": null,
+              "verification_reason": "The patch failed the configured verification campaign; inspect execution evidence."
+            }
+          ],
+          "observability": {
+            "backend": "langsmith",
+            "project": "concurrency-bug-hunter",
+            "status": "confirmed",
+            "spans_submitted": 7,
+            "spans_observed": [
+              {
+                "id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1",
+                "name": "ConcurrencyBugHunterJob",
+                "parent_id": null
+              },
+              {
+                "id": "569e3a67-b118-482d-bb5a-0ce4e50cd453",
+                "name": "baseline_compile",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              },
+              {
+                "id": "541c6231-4204-4d5b-87da-0e0c675a9cf2",
+                "name": "baseline_stress_campaign",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              },
+              {
+                "id": "21996ccd-7e7c-446c-91a7-2ae98f2525e0",
+                "name": "fingerprint_analysis",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              },
+              {
+                "id": "e83479ad-4a37-4de9-89a9-4102a34e4438",
+                "name": "super_diagnosis",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              },
+              {
+                "id": "02ae0be4-e737-4f43-874c-c9ff7bc56f71",
+                "name": "patch_application",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              },
+              {
+                "id": "a5196bd8-c5c9-4a02-aad6-20c4e6702bb3",
+                "name": "verification_campaign",
+                "parent_id": "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+              }
+            ],
+            "feedback_submitted": 11,
+            "trace_ids": [
+              "fb18ed3a-f639-40d7-a747-488b24e0e1b1"
+            ]
+          }
+        }
+      }
+    },
+    "ULTRA": {
+      "status": "completed",
+      "stage": "Completed",
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "started_at": "2026-10-03T11:50:10.154020+00:00",
+      "request_started_at": "2026-10-03T11:50:27.897308+00:00",
+      "response": "{\"diagnosis\": \"Deadlock caused by threads holding mutexes across a barrier synchronization point. T1 locks A then waits at barrier while holding A; T2 locks B then waits at barrier while holding B. After barrier release, T1 tries to lock B (held by T2) and T2 tries to lock A (held by T1), creating a circular wait.\", \"root_cause\": \"Each thread acquires its first mutex, then calls pthread_barrier_wait() while still holding that mutex. The barrier requires both threads to arrive, which they do, but neither releases its mutex before waiting. After the barrier, each attempts to acquire the other's mutex, resulting in a classic lock-order inversion deadlock (A->B vs B->A) with the additional complication that the first mutex is held across the barrier rendezvous.\", \"confidence\": 0.95, \"reasoning_summary\": \"The fingerprint shows a cyclic lock wait with lock orders [A,B] and [B,A]. The stdout shows T1 holds A and waits for B, T2 holds B and waits for A. The source code confirms both threads hold their first mutex during pthread_barrier_wait(), preventing the other thread from ever acquiring it after the barrier.\", \"expected_effect\": \"Eliminate the deadlock by releasing the first mutex before the barrier wait, then acquiring both mutexes in a consistent global order (A then B) after the barrier. Threads still rendezvous at the barrier but no longer hold conflicting locks across it.\", \"risk_notes\": [\"Barrier synchronization semantics preserved; both threads still meet at the barrier.\", \"Mutex acquisition order after barrier is now globally consistent (A then B).\", \"No functional work is removed; only lock scope is changed.\", \"If the original intent was to hold the first mutex across the barrier for a critical section, that critical section is empty (only a printf), so the change is safe.\"], \"edits\": [{\"file\": \"main.c\", \"search\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\", \"replacement\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_unlock(first);\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(&a);\\n    pthread_mutex_lock(&b);\\n    pthread_mutex_unlock(&b);\\n    pthread_mutex_unlock(&a);\\n    return NULL;\\n}\"}]}",
+      "inference": {
+        "task_id": "deadlock_001",
+        "provider": "NEBIUS",
+        "tier": "ULTRA",
+        "output_text": "{\"diagnosis\": \"Deadlock caused by threads holding mutexes across a barrier synchronization point. T1 locks A then waits at barrier while holding A; T2 locks B then waits at barrier while holding B. After barrier release, T1 tries to lock B (held by T2) and T2 tries to lock A (held by T1), creating a circular wait.\", \"root_cause\": \"Each thread acquires its first mutex, then calls pthread_barrier_wait() while still holding that mutex. The barrier requires both threads to arrive, which they do, but neither releases its mutex before waiting. After the barrier, each attempts to acquire the other's mutex, resulting in a classic lock-order inversion deadlock (A->B vs B->A) with the additional complication that the first mutex is held across the barrier rendezvous.\", \"confidence\": 0.95, \"reasoning_summary\": \"The fingerprint shows a cyclic lock wait with lock orders [A,B] and [B,A]. The stdout shows T1 holds A and waits for B, T2 holds B and waits for A. The source code confirms both threads hold their first mutex during pthread_barrier_wait(), preventing the other thread from ever acquiring it after the barrier.\", \"expected_effect\": \"Eliminate the deadlock by releasing the first mutex before the barrier wait, then acquiring both mutexes in a consistent global order (A then B) after the barrier. Threads still rendezvous at the barrier but no longer hold conflicting locks across it.\", \"risk_notes\": [\"Barrier synchronization semantics preserved; both threads still meet at the barrier.\", \"Mutex acquisition order after barrier is now globally consistent (A then B).\", \"No functional work is removed; only lock scope is changed.\", \"If the original intent was to hold the first mutex across the barrier for a critical section, that critical section is empty (only a printf), so the change is safe.\"], \"edits\": [{\"file\": \"main.c\", \"search\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(second);\\n    pthread_mutex_unlock(second);\\n    pthread_mutex_unlock(first);\\n    return NULL;\\n}\", \"replacement\": \"static void *worker(void *arg) {\\n    int id = (int)(intptr_t)arg;\\n    pthread_mutex_t *first = id == 1 ? &a : &b;\\n    pthread_mutex_t *second = id == 1 ? &b : &a;\\n    pthread_mutex_lock(first);\\n    printf(\\\"T%d LOCK %s\\\\n\\\", id, first == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_unlock(first);\\n    pthread_barrier_wait(&ready);\\n    printf(\\\"T%d WAIT %s\\\\n\\\", id, second == &a ? \\\"A\\\" : \\\"B\\\");\\n    pthread_mutex_lock(&a);\\n    pthread_mutex_lock(&b);\\n    pthread_mutex_unlock(&b);\\n    pthread_mutex_unlock(&a);\\n    return NULL;\\n}\"}]}",
+        "status": "SUCCESS",
+        "latency_ms": 8386.518999992404,
+        "input_tokens": 2028,
+        "output_tokens": 1777,
+        "estimated_cost_usd": null,
+        "metadata": {
+          "execution_mode": "real",
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "backend": "nebius_token_factory",
+          "requested_max_output_tokens": 2048,
+          "input_content_bytes": 6290,
+          "requested_max_input_bytes": 12000,
+          "actual_reasoning_tokens": 995,
+          "actual_input_tokens": 2028,
+          "actual_output_tokens": 1777,
+          "finish_reason": "stop",
+          "request_id": "7048c1590d47cecc01ffabf3898936c8",
+          "retry_count": 0,
+          "usage_available": true,
+          "latency_source": "wall_clock_including_catalog_check"
+        }
+      },
+      "finished_at": "2026-10-03T11:54:23.484214+00:00",
+      "job": {
+        "task": "deadlock_001",
+        "status": "verified",
+        "route": [
+          "ULTRA"
+        ],
+        "ultra_avoided": false,
+        "baseline": {
+          "build_passed": true,
+          "total_runs": 3,
+          "failed_runs": 3,
+          "infrastructure_failures": 0,
+          "requested_runs": 3,
+          "execution_blocked": false,
+          "counts": {
+            "POSSIBLE_DEADLOCK": 3
+          },
+          "duration_ms": 11464.350299997022,
+          "representative_runs": [
+            {
+              "run_id": "deadlock_001:1",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "073dc504-8c38-40fe-b5e5-50710bc230d4",
+                "transport_wall_ms": 3997.806200000923
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:2",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "073dc504-8c38-40fe-b5e5-50710bc230d4",
+                "transport_wall_ms": 3631.5028999961214
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            },
+            {
+              "run_id": "deadlock_001:3",
+              "classification": "POSSIBLE_DEADLOCK",
+              "exit_code": -9,
+              "timed_out": true,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "073dc504-8c38-40fe-b5e5-50710bc230d4",
+                "transport_wall_ms": 3834.693299999344
+              },
+              "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+              "stderr": ""
+            }
+          ],
+          "sanitizer": {
+            "status": "not_configured"
+          },
+          "fingerprints": [
+            {
+              "fingerprint_id": "4b4c8f316a845e49",
+              "pattern": "cyclic_lock_wait",
+              "threads": [
+                "T1",
+                "T2"
+              ],
+              "lock_orders": [
+                [
+                  "A",
+                  "B"
+                ],
+                [
+                  "B",
+                  "A"
+                ]
+              ],
+              "confidence": 0.9,
+              "occurrences": 3,
+              "representative_runs": [
+                "deadlock_001:1",
+                "deadlock_001:2",
+                "deadlock_001:3"
+              ],
+              "evidence": {
+                "edges": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "cycle": [
+                  "A",
+                  "B",
+                  "A"
+                ],
+                "finding_locations": []
+              }
+            }
+          ]
+        },
+        "verification": {
+          "passed": true,
+          "build_passed": true,
+          "total_runs": 100,
+          "passed_runs": 100,
+          "failed_runs": 0,
+          "race_count": 0,
+          "deadlock_count": 0,
+          "crash_count": 0,
+          "infrastructure_failures": 0,
+          "observed_program_failures": 0,
+          "sanitizer_findings": [],
+          "regressions": [],
+          "duration_ms": 202269.73970000108,
+          "evidence": {
+            "build": {
+              "command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "main.c",
+                "-o",
+                "app"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "duration_ms": 167.46691699999994,
+              "timed_out": false,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "8ba49984-9d2f-4937-9595-08cc4eeb3dd3",
+                "transport_wall_ms": 2488.004099999671
+              },
+              "success": true
+            },
+            "original_tests": {
+              "passed": true,
+              "results": [],
+              "configured": false
+            },
+            "campaign": {
+              "total_runs": 100,
+              "failed_runs": 0,
+              "infrastructure_failures": 0,
+              "requested_runs": 100,
+              "execution_blocked": false,
+              "counts": {
+                "PASS": 100
+              },
+              "duration_ms": 199781.22269999585,
+              "representative_runs": []
+            },
+            "sanitizer": {
+              "status": "not_configured"
+            }
+          },
+          "reason": "The patch passed the configured verification campaign."
+        },
+        "repairs": [
+          {
+            "tier": "ULTRA",
+            "proposal": {
+              "diagnosis": "Deadlock caused by threads holding mutexes across a barrier synchronization point. T1 locks A then waits at barrier while holding A; T2 locks B then waits at barrier while holding B. After barrier release, T1 tries to lock B (held by T2) and T2 tries to lock A (held by T1), creating a circular wait.",
+              "root_cause": "Each thread acquires its first mutex, then calls pthread_barrier_wait() while still holding that mutex. The barrier requires both threads to arrive, which they do, but neither releases its mutex before waiting. After the barrier, each attempts to acquire the other's mutex, resulting in a classic lock-order inversion deadlock (A->B vs B->A) with the additional complication that the first mutex is held across the barrier rendezvous.",
+              "confidence": 0.95,
+              "reasoning_summary": "The fingerprint shows a cyclic lock wait with lock orders [A,B] and [B,A]. The stdout shows T1 holds A and waits for B, T2 holds B and waits for A. The source code confirms both threads hold their first mutex during pthread_barrier_wait(), preventing the other thread from ever acquiring it after the barrier.",
+              "expected_effect": "Eliminate the deadlock by releasing the first mutex before the barrier wait, then acquiring both mutexes in a consistent global order (A then B) after the barrier. Threads still rendezvous at the barrier but no longer hold conflicting locks across it.",
+              "risk_notes": [
+                "Barrier synchronization semantics preserved; both threads still meet at the barrier.",
+                "Mutex acquisition order after barrier is now globally consistent (A then B).",
+                "No functional work is removed; only lock scope is changed.",
+                "If the original intent was to hold the first mutex across the barrier for a critical section, that critical section is empty (only a printf), so the change is safe."
+              ],
+              "patch": "--- a/main.c\n+++ b/main.c\n@@ -12,11 +12,13 @@\n     pthread_mutex_t *second = id == 1 ? &b : &a;\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n+    pthread_mutex_unlock(first);\n     pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n-    pthread_mutex_lock(second);\n-    pthread_mutex_unlock(second);\n-    pthread_mutex_unlock(first);\n+    pthread_mutex_lock(&a);\n+    pthread_mutex_lock(&b);\n+    pthread_mutex_unlock(&b);\n+    pthread_mutex_unlock(&a);\n     return NULL;\n }\n \n"
+            },
+            "patch": {
+              "success": true,
+              "files_changed": [
+                "main.c"
+              ],
+              "rejected_paths": [],
+              "error": null,
+              "error_code": null,
+              "repair_hint": null,
+              "source_line": null,
+              "patch_hash": "4b0ba9c7718c6746731d3de9fce8f4fb796e037b346219a642562c1023daa171"
+            },
+            "verification": {
+              "passed": true,
+              "build_passed": true,
+              "total_runs": 100,
+              "passed_runs": 100,
+              "failed_runs": 0,
+              "race_count": 0,
+              "deadlock_count": 0,
+              "crash_count": 0,
+              "infrastructure_failures": 0,
+              "observed_program_failures": 0,
+              "sanitizer_findings": [],
+              "regressions": [],
+              "duration_ms": 202269.73970000108,
+              "evidence": {
+                "build": {
+                  "command": [
+                    "gcc",
+                    "-pthread",
+                    "-g",
+                    "-O1",
+                    "main.c",
+                    "-o",
+                    "app"
+                  ],
+                  "exit_code": 0,
+                  "stdout": "",
+                  "stderr": "",
+                  "duration_ms": 167.46691699999994,
+                  "timed_out": false,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "8ba49984-9d2f-4937-9595-08cc4eeb3dd3",
+                    "transport_wall_ms": 2488.004099999671
+                  },
+                  "success": true
+                },
+                "original_tests": {
+                  "passed": true,
+                  "results": [],
+                  "configured": false
+                },
+                "campaign": {
+                  "total_runs": 100,
+                  "failed_runs": 0,
+                  "infrastructure_failures": 0,
+                  "requested_runs": 100,
+                  "execution_blocked": false,
+                  "counts": {
+                    "PASS": 100
+                  },
+                  "duration_ms": 199781.22269999585,
+                  "representative_runs": []
+                },
+                "sanitizer": {
+                  "status": "not_configured"
+                }
+              },
+              "reason": "The patch passed the configured verification campaign."
+            }
+          }
+        ],
+        "triage": null,
+        "stopped_reason": "verification_passed",
+        "total_time_ms": 234923.17449999973,
+        "inference_latency_ms": 8386.518999992404,
+        "execution_latency_ms": 213900.56662899812,
+        "inference_tokens": 3805,
+        "cost_usd": null,
+        "inference_mode": "real",
+        "model_calls": {
+          "LOCAL": 0,
+          "NANO": 0,
+          "SUPER": 0,
+          "ULTRA": 1
+        },
+        "metadata": {
+          "execution_backend": "nebius",
+          "models": [
+            "nvidia/Nemotron-3-Ultra-550b-a55b"
+          ],
+          "starting_tier": "ULTRA",
+          "final_tier": "ULTRA",
+          "escalations": 0,
+          "routing_reasons": [
+            "Fixed-tier evaluation policy: ULTRA."
+          ],
+          "usage_available": true,
+          "inference_measurement": "measured",
+          "patch_attempts": 1,
+          "model_attempts": [
+            {
+              "tier": "ULTRA",
+              "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+              "input_tokens": 2028,
+              "output_tokens": 1777,
+              "latency_ms": 8386.518999992404,
+              "retry_count": 0,
+              "reasoning_tokens": 995,
+              "requested_max_output_tokens": 2048,
+              "requested_enable_thinking": null,
+              "error_hint": null,
+              "finish_reason": "stop",
+              "request_id": "7048c1590d47cecc01ffabf3898936c8",
+              "error_code": null,
+              "verification_reason": "The patch passed the configured verification campaign."
+            }
+          ],
+          "observability": {
+            "backend": "langsmith",
+            "project": "concurrency-bug-hunter",
+            "status": "confirmed",
+            "spans_submitted": 8,
+            "spans_observed": [
+              {
+                "id": "3b05099a-3097-4cfe-b71e-940e997ec66c",
+                "name": "ConcurrencyBugHunterJob",
+                "parent_id": null
+              },
+              {
+                "id": "e724baa3-71ab-412b-852a-48597e76a45b",
+                "name": "baseline_compile",
+                "parent_id": "3b05099a-3097-4cfe-b71e-940e997ec66c"
+              },
+              {
+                "id": "b94d16e6-352d-4579-8067-05782a4cff5d",
+                "name": "baseline_stress_campaign",
+                "parent_id": "3b05099a-3097-4cfe-b71e-940e997ec66c"
+              },
+              {
+                "id": "e3c15167-f1dd-446d-bcc8-e3498add7762",
+                "name": "fingerprint_analysis",
+                "parent_id": "3b05099a-3097-4cfe-b71e-940e997ec66c"
+              },
+              {
+                "id": "b045927d-4921-43f4-a5a6-6d2b353868e6",
+                "name": "ultra_escalation",
+                "parent_id": "3b05099a-3097-4cfe-b71e-940e997ec66c"
+              },
+              {
+                "id": "e9c79430-caee-46f8-bd35-04d76c57143c",
+                "name": "ultra_diagnosis",
+                "parent_id": "b045927d-4921-43f4-a5a6-6d2b353868e6"
+              },
+              {
+                "id": "8e950804-1310-4087-a34e-059dac4bb478",
+                "name": "patch_application",
+                "parent_id": "b045927d-4921-43f4-a5a6-6d2b353868e6"
+              },
+              {
+                "id": "d5bd5ddf-f6ee-4a3f-b80f-0717fa3ea84d",
+                "name": "verification_campaign",
+                "parent_id": "b045927d-4921-43f4-a5a6-6d2b353868e6"
+              }
+            ],
+            "feedback_submitted": 11,
+            "trace_ids": [
+              "3b05099a-3097-4cfe-b71e-940e997ec66c"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "individual": {
+      "NANO": {
+        "input_tokens": 2025,
+        "output_tokens": 2048,
+        "total_tokens": 4073,
+        "reasoning_tokens": null,
+        "output_budget_utilization": 1.0,
+        "inference_ms": 14369.772099991678,
+        "effective_output_tokens_per_second": 142.52139739927998,
+        "end_to_end_ms": 47171.19,
+        "baseline_ms": 10996.278899998288,
+        "baseline_runs": 3,
+        "baseline_failures": 3,
+        "patch_accepted": false,
+        "patch_added_lines": null,
+        "patch_removed_lines": null,
+        "build_passed": null,
+        "execution_passed": null,
+        "semantic_passed": null,
+        "sanitizer_passed": null,
+        "false_fix": false,
+        "final_tier": "NANO",
+        "nano_calls": 1,
+        "super_calls": 0,
+        "ultra_calls": 0,
+        "verification_ms": null,
+        "verification_runs": null,
+        "verification_passes": null,
+        "verification_pass_rate": null,
+        "deadlocks": null,
+        "races": null,
+        "crashes": null,
+        "infrastructure_failures": null,
+        "verified": false,
+        "estimated_inference_cost_usd": null,
+        "finish_reason": "length",
+        "error_code": "incomplete_response",
+        "sanitizer_status": "not_measured"
+      },
+      "SUPER": {
+        "input_tokens": 2021,
+        "output_tokens": 704,
+        "total_tokens": 2725,
+        "reasoning_tokens": 0,
+        "output_budget_utilization": 0.34375,
+        "inference_ms": 4664.984399991226,
+        "effective_output_tokens_per_second": 150.91154431327232,
+        "end_to_end_ms": 436590.42199999996,
+        "baseline_ms": 11786.939899990102,
+        "baseline_runs": 3,
+        "baseline_failures": 3,
+        "patch_accepted": true,
+        "patch_added_lines": 1,
+        "patch_removed_lines": 1,
+        "build_passed": true,
+        "execution_passed": null,
+        "semantic_passed": null,
+        "sanitizer_passed": null,
+        "false_fix": false,
+        "final_tier": "SUPER",
+        "nano_calls": 0,
+        "super_calls": 1,
+        "ultra_calls": 0,
+        "verification_ms": 387619.70689999,
+        "verification_runs": 100,
+        "verification_passes": 0,
+        "verification_pass_rate": 0.0,
+        "deadlocks": 100,
+        "races": null,
+        "crashes": 0,
+        "infrastructure_failures": 0,
+        "verified": false,
+        "estimated_inference_cost_usd": null,
+        "finish_reason": "stop",
+        "error_code": null,
+        "sanitizer_status": "not_configured"
+      },
+      "ULTRA": {
+        "input_tokens": 2028,
+        "output_tokens": 1777,
+        "total_tokens": 3805,
+        "reasoning_tokens": 995,
+        "output_budget_utilization": 0.86767578125,
+        "inference_ms": 8386.518999992404,
+        "effective_output_tokens_per_second": 211.88767353911788,
+        "end_to_end_ms": 253330.19400000002,
+        "baseline_ms": 11464.350299997022,
+        "baseline_runs": 3,
+        "baseline_failures": 3,
+        "patch_accepted": true,
+        "patch_added_lines": 5,
+        "patch_removed_lines": 3,
+        "build_passed": true,
+        "execution_passed": null,
+        "semantic_passed": null,
+        "sanitizer_passed": null,
+        "false_fix": false,
+        "final_tier": "ULTRA",
+        "nano_calls": 0,
+        "super_calls": 0,
+        "ultra_calls": 1,
+        "verification_ms": 202269.73970000108,
+        "verification_runs": 100,
+        "verification_passes": 100,
+        "verification_pass_rate": 1.0,
+        "deadlocks": 0,
+        "races": null,
+        "crashes": 0,
+        "infrastructure_failures": 0,
+        "verified": true,
+        "estimated_inference_cost_usd": null,
+        "finish_reason": "stop",
+        "error_code": null,
+        "sanitizer_status": "not_configured"
+      }
+    },
+    "combined": {
+      "selected_models": 3,
+      "verified_models": 1,
+      "end_to_end_ms": 737126.124,
+      "input_tokens": 6074,
+      "input_tokens_known_subtotal": 6074,
+      "output_tokens": 4529,
+      "output_tokens_known_subtotal": 4529,
+      "total_tokens": 10603,
+      "total_tokens_known_subtotal": 10603,
+      "inference_ms": 27421.27549997531,
+      "inference_ms_known_subtotal": 27421.27549997531,
+      "estimated_inference_cost_usd": null,
+      "estimated_inference_cost_usd_known_subtotal": null,
+      "models_with_verification": 2,
+      "verification_runs": 200,
+      "verification_passes": 100,
+      "verification_pass_rate": 0.5,
+      "verification_ms": 589889.4465999911,
+      "deadlocks": 100,
+      "races": null,
+      "crashes": 0,
+      "infrastructure_failures": 0,
+      "patches_accepted": 2,
+      "verified_model_rate": 0.3333333333333333
+    },
+    "notes": [
+      "One attempt per model on one fixture; not a statistical model ranking.",
+      "Effective token rate includes catalog check and request overhead; it is not decode throughput.",
+      "Combined metrics aggregate independent runs, not an ensemble.",
+      "Unknown usage/cost is null; known subtotals are explicitly labeled. Sandbox cost is excluded.",
+      "A passing campaign does not establish semantic equivalence."
+    ]
+  },
+  "source_sha256": {
+    "main.c": "0de854b650e07a1dc7e9ef0baa0d8e1f86b0e352473054d3f5a57042027b48b2"
+  },
+  "finished_at": "2026-10-03T11:54:23.491251+00:00"
+}

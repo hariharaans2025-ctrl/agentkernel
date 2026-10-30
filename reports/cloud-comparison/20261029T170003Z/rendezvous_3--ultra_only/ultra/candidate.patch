@@ -1,0 +1,12 @@
+--- a/publish.c
++++ b/publish.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}
++void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}
+--- a/observe.c
++++ b/observe.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}
++void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}

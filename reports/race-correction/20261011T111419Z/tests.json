@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_evidence_correction.py"
+  ],
+  "exit_code": 0,
+  "stdout": "......                                                                   [100%]\n6 passed in 0.11s\n",
+  "stderr": "",
+  "duration_ms": 516.679026,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "8ddfe90a-942b-4812-b6ba-0a861a07eed4",
+    "transport_wall_ms": 1994.8194999597035
+  }
+}

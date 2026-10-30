@@ -1,0 +1,753 @@
+{
+  "schema_version": 1,
+  "base_dataset": "datasets\\adaptive-v3\\product-v3",
+  "dataset_manifest_sha256": "a38ef5e3a1448740bfdef2d146c97aab5f50b14db9bb4e93d5cebb8f10863cad",
+  "cases": [
+    {
+      "id": "ledger_1",
+      "split": "train",
+      "family": "ledger",
+      "file": "ledger_1/api_oracle.c",
+      "sha256": "e495f29baa68cd6d35f3de73db15237f28f93c7abd3a14e8b6cbd361d12b66fe",
+      "source_sha256": {
+        "writer.c": "7a8387e1911b46fdb5fe4a8e8617d9c771022ff3a88103cb56763d2bea137bde",
+        "reader.c": "d5f1f630f84bc35a38bee3e41336eea79afaf23601769f3cf07bfce5e00e7071"
+      },
+      "runtime_header_sha256": "74b008dfd8bf9701e625f1b2a7cbbd84ebd3e19e2eac30ee911c5faa440b7dd3",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "ledger_2",
+      "split": "train",
+      "family": "ledger",
+      "file": "ledger_2/api_oracle.c",
+      "sha256": "aac684a78e1f7cba2948908c00d1fb76ef41ff9b9d204fe50a07eb4a52fe52f3",
+      "source_sha256": {
+        "writer.c": "d309a94abe3b7ca4d5942a62940c2edba179feab42206fd542e19980a0fcdf2f",
+        "reader.c": "1470989646aebfc49754edbbcc2d80296451fbd2e30992b23b7fd88239554875"
+      },
+      "runtime_header_sha256": "de1425df7670f51fc36273cf0ec30230a5beb6944bf79ad778b8e2bba400641b",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "ledger_3",
+      "split": "test",
+      "family": "ledger",
+      "file": "ledger_3/api_oracle.c",
+      "sha256": "cd3da0ab3cb6adc5ccef10ddc77a099aa4cb831be055eb80c0876f505414dea1",
+      "source_sha256": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065"
+      },
+      "runtime_header_sha256": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "snapshot_1",
+      "split": "train",
+      "family": "snapshot",
+      "file": "snapshot_1/api_oracle.c",
+      "sha256": "05c0febfdabb0c81e0b8a013f0ebc79012e64c15d91580ba631f1a62a08a4d83",
+      "source_sha256": {
+        "publisher.c": "1e41cb1e9922353490fef0d1f9c2d28fb5f43f8fe11afae0a22d232cdb380db0",
+        "snapshot.c": "57321e0f4cbcea8f4b6faef34aaf06cf77fe2b3c5955ef07451ad46f80e32f66"
+      },
+      "runtime_header_sha256": "8e335536361ca05b5037e5878ee62ddc1076d0e1b88957a4f83819e51f9954bb",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "snapshot_2",
+      "split": "train",
+      "family": "snapshot",
+      "file": "snapshot_2/api_oracle.c",
+      "sha256": "c462231ec7d35af5de4e0296c70f19e15b8318ae98542456d9114e430e90326b",
+      "source_sha256": {
+        "publisher.c": "385b5ee2f4345b2724866008a395fc55eb9f056d100de617d4fc44d8468d98ec",
+        "snapshot.c": "e3c15a1dbaaa68110964beb3dc1bdbc8498279b729e9f16e40bb010499accc1b"
+      },
+      "runtime_header_sha256": "146de4a48911198f71857eab344bf60bbdea67cd30205cf8d29d28a87f2b150b",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "snapshot_3",
+      "split": "test",
+      "family": "snapshot",
+      "file": "snapshot_3/api_oracle.c",
+      "sha256": "f3c689bdfaa285b07d015212eb45a7dcb701c49baf94ffb9d1010393a10ad89d",
+      "source_sha256": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343"
+      },
+      "runtime_header_sha256": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "capacity_1",
+      "split": "train",
+      "family": "capacity",
+      "file": "capacity_1/api_oracle.c",
+      "sha256": "85171ec93d925223fff23decd2aa53179a335a5884f185f64c430f651f9289b8",
+      "source_sha256": {
+        "acquire.c": "d74ac1e35dd5a0c338bb9d7049522b65df513630e888887f48b5cc58ebe337b2",
+        "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+      },
+      "runtime_header_sha256": "1d2eaf951a25109b4626e821088706c3b36f598e87abf1394834eab201f28ec5",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "capacity_2",
+      "split": "train",
+      "family": "capacity",
+      "file": "capacity_2/api_oracle.c",
+      "sha256": "cbe5cd5c10df5d08180b80d41dd54c68bb1bdc5f9e428e6faec2e032a4291835",
+      "source_sha256": {
+        "acquire.c": "3f1b7b0e921479b31a327951d746f0b306f6c4fb8c3f97281bed1bad5e139817",
+        "inspect.c": "12da925b1f01f2996f62d0d72fd7f9f939c4cfa8da3a62605bf9390a83097f5d"
+      },
+      "runtime_header_sha256": "231a188eb82de71dbdac3ebeba701d2a9b9b1d45e4e362a8a4033ac307c51fa3",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "capacity_3",
+      "split": "test",
+      "family": "capacity",
+      "file": "capacity_3/api_oracle.c",
+      "sha256": "27cadef4164be94b24ddcfa1fca066be189794cb19867d0487d8019e46bdb68a",
+      "source_sha256": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+      },
+      "runtime_header_sha256": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "rendezvous_1",
+      "split": "train",
+      "family": "rendezvous",
+      "file": "rendezvous_1/api_oracle.c",
+      "sha256": "c9959114ec9abe3525f25cc4cc905305de8473f36112dd3883c1363474d21ab8",
+      "source_sha256": {
+        "publish.c": "c44519440e90b938b228ab2a7460f8788101e7be536f9f09db112e36854ae12e",
+        "observe.c": "7bfb2c759ab9a300dba0a3cdbf1c3354610614cb9f7ba4ad57a5f8d6f1e5e6d7"
+      },
+      "runtime_header_sha256": "04c8e2d34f3f845c47d5345fb76bc395c33e982e3cced25032cf4c0fe26638c3",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "rendezvous_2",
+      "split": "train",
+      "family": "rendezvous",
+      "file": "rendezvous_2/api_oracle.c",
+      "sha256": "f54ee5ef7acd3a05826d133488eaf6e537ac1b392fb7ac1343a381a252cb533d",
+      "source_sha256": {
+        "publish.c": "0ae9be0c5383571803f5f424ccc4e0d02c5d772482b76800c3f14298e682f9e2",
+        "observe.c": "26b51d25a4d7fa77daa057ecbc21cf655ab87f9d32a0d09869ae66f1f9221dda"
+      },
+      "runtime_header_sha256": "b30b66dcf83495f757b774c20e6152d90aa5ac4bbe43dcccdfad32e6a0275fb9",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "rendezvous_3",
+      "split": "test",
+      "family": "rendezvous",
+      "file": "rendezvous_3/api_oracle.c",
+      "sha256": "d7822d52ce36e10464ba89622687c77c36c93e6f0e31e2156700530d2e8aae6a",
+      "source_sha256": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a"
+      },
+      "runtime_header_sha256": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "lock_order_1",
+      "split": "train",
+      "family": "lock_order",
+      "file": "lock_order_1/api_oracle.c",
+      "sha256": "0950d43e17a33b19bcf45fda55ac0cec164b5cb7aa9dd3418b7ebcec9cf2331e",
+      "source_sha256": {
+        "forward.c": "a270ec6daaeef1f4275245dddf7f078deff7a3cef72686717c27b0eeab4d36a8",
+        "reverse.c": "f256092deb1995d9a40757b472379544905fa66841d7b3f1a124f6c3f8871e1d"
+      },
+      "runtime_header_sha256": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "lock_order_2",
+      "split": "validation",
+      "family": "lock_order",
+      "file": "lock_order_2/api_oracle.c",
+      "sha256": "ea8439a475e45cce34dd4361c57516188833eeade9e82e9268c4ecc82b924b03",
+      "source_sha256": {
+        "forward.c": "7a8e180afb72bf5712637d3bd4e8a905419882712641994f1e9020bd208e4c0b",
+        "reverse.c": "1b4a9d6f6a6ae7b1979607efb123e1678b1e0583e6e39bd7903547d0c7833652"
+      },
+      "runtime_header_sha256": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "lock_order_3",
+      "split": "test",
+      "family": "lock_order",
+      "file": "lock_order_3/api_oracle.c",
+      "sha256": "9591cad083df54723cbb23197de375140c9d2d1348f12ffa1d60e39fe9939497",
+      "source_sha256": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6"
+      },
+      "runtime_header_sha256": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "predicate_1",
+      "split": "train",
+      "family": "predicate",
+      "file": "predicate_1/api_oracle.c",
+      "sha256": "bc48c251a435fab0b13873ba63a1caa8b694f535becd2562fa14fb28fca2c312",
+      "source_sha256": {
+        "await.c": "a8d7f0b1e6da3a9add69fc66c97a831e8e696d1e279846792bdda67143ec100f",
+        "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+      },
+      "runtime_header_sha256": "b33f1dfe97104219d3483a46f36c46caf3b3529001492217a6a4ec614279a9fd",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "predicate_2",
+      "split": "validation",
+      "family": "predicate",
+      "file": "predicate_2/api_oracle.c",
+      "sha256": "732e43f6d632b2b0067f718243cbb61bd61b20225e20485f11979f0305e94e01",
+      "source_sha256": {
+        "await.c": "9c22c917415d5ff207d7ad0de2dcc74029e575311a21180cfaa1da806ef1d779",
+        "complete.c": "cdb7303fd19e536cac7860b45d9b23bd9f6fe713a472ef8e20250270e0b6b92a"
+      },
+      "runtime_header_sha256": "be3f9ee383cf46d49811da7014f5c51137e2ae7134a4d10ae509db9d74c849d1",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "predicate_3",
+      "split": "test",
+      "family": "predicate",
+      "file": "predicate_3/api_oracle.c",
+      "sha256": "8be7f28803b8763357c29df16faa6174895aaec3783c0591534ec24fed090174",
+      "source_sha256": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f"
+      },
+      "runtime_header_sha256": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "audit_1",
+      "split": "train",
+      "family": "audit",
+      "file": "audit_1/api_oracle.c",
+      "sha256": "2f965ca3738e97e88880ae1626c0f8c1a1bbb333b33dbb731eb01a608d23266f",
+      "source_sha256": {
+        "commit.c": "90f94d1f65a1dd7e3e41df132876b50edeb7337d5256c3f4634ff81d620a509a",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "runtime_header_sha256": "d8fb2b38355c2c364b71ee9053b741853145d16a00685e1cccd1d55159f3f7d4",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "audit_2",
+      "split": "validation",
+      "family": "audit",
+      "file": "audit_2/api_oracle.c",
+      "sha256": "f592f3a89ca4b1be38127778ad34fd281b84b63b28d12f932a12d08a863b9767",
+      "source_sha256": {
+        "commit.c": "ffdaea19c145d024d7cfb9d7c377d9b034f374eaa97ee395a35e79f0b50a7a22",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "runtime_header_sha256": "d20da8d6f0960b3b18d581d41b641259663fb3fe2a7caa462b0b1a7218208977",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "audit_3",
+      "split": "test",
+      "family": "audit",
+      "file": "audit_3/api_oracle.c",
+      "sha256": "0d04947aac9dd9d29f6d32bb6dbbc93cd006f4503427612403b62db607957286",
+      "source_sha256": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8"
+      },
+      "runtime_header_sha256": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "aggregate_1",
+      "split": "train",
+      "family": "aggregate",
+      "file": "aggregate_1/api_oracle.c",
+      "sha256": "7779f38875dc6c321b18f71796397cee7e560f32063750639b6f5e2c389b06ca",
+      "source_sha256": {
+        "record.c": "f429211d8dd167b4a4ceee305b0fad6ba57bb7411f9c34c6a649d1de27b097c9",
+        "read.c": "02420dd66f843898aa68571b33cf825e3658a58c7295ed87e41bd5eb00d7cdcb"
+      },
+      "runtime_header_sha256": "12f9e576ee83282b382ad4e007ccb26f6b5bda0dcf60c81b1c5ce91b4c279738",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "aggregate_2",
+      "split": "validation",
+      "family": "aggregate",
+      "file": "aggregate_2/api_oracle.c",
+      "sha256": "4ba2da9785e9eb79e879ffde1aff678d1f1e012f2b08266e30255d259c72303e",
+      "source_sha256": {
+        "record.c": "edcf4a1d2391f8a86384b18915b09bcf8fc0bb456e92a8b57acac537233a3e96",
+        "read.c": "adfbd56f6386ad7b19665a970a2cf1a1e18637590d82929192c0f310effc73b8"
+      },
+      "runtime_header_sha256": "e8b71bce365ce4d80496efc0753018c08db0f724e85712e29e919b16b95b3519",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    },
+    {
+      "id": "aggregate_3",
+      "split": "test",
+      "family": "aggregate",
+      "file": "aggregate_3/api_oracle.c",
+      "sha256": "0903122685986fe49646b45ba3530acee1ebaa333ccd61cf1a8dc6d5fefddaaf",
+      "source_sha256": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d"
+      },
+      "runtime_header_sha256": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+      "semantic_check": {
+        "name": "Every exported API must preserve arbitrary input reads, single-call state changes and helper participation.",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "api_oracle.c",
+          "-o",
+          "api_checks"
+        ],
+        "run_command": [
+          "./api_checks"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    }
+  ],
+  "model_context": false,
+  "policy": "Append api_oracle.c to protected support_files and append the required semantic_check. Never expose oracle sources to repair models."
+}

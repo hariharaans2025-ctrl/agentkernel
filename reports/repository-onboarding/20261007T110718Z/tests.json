@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_repository_onboarding.py"
+  ],
+  "exit_code": 0,
+  "stdout": ".......................                                                  [100%]\n23 passed in 0.17s\n",
+  "stderr": "",
+  "duration_ms": 566.6949569999999,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "f8e39bed-fd07-46f7-9d30-6fb11e10d93d",
+    "transport_wall_ms": 2362.1888000052422
+  }
+}

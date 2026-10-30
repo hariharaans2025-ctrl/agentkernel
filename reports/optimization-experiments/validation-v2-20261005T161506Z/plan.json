@@ -1,0 +1,1953 @@
+{
+  "version": 2,
+  "model_calls": 0,
+  "cases": [
+    {
+      "fixture": "race_002",
+      "arms": [
+        "batch",
+        "serial"
+      ],
+      "source_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\continuation-20261004T104857Z\\race_002-adaptive.jsonl",
+      "source_evidence_sha256": "470341f2d2312080c5ad71e1b1db32483e33897d9662e9f36c6fd352ec73e415",
+      "prior_passed": true,
+      "prior_stress_passes": 100,
+      "candidate_sha256": {
+        "main.c": "62c288103bf1fea229fe33d7ae2677f6cf0511ab69e91ec95d5c5bbf930981ed"
+      },
+      "verification_config": {
+        "required_build_success": true,
+        "stress_runs": 100,
+        "allowed_deadlocks": 0,
+        "allowed_races": 0,
+        "allowed_crashes": 0,
+        "required_original_tests": false,
+        "original_test_commands": [],
+        "sanitizer_enabled": true,
+        "sanitizer_required": true,
+        "sanitizer_runs": 3,
+        "sanitizer_compiler": "clang",
+        "semantic_checks": [
+          {
+            "name": "Balance 1000 and 10000 operations per worker",
+            "build_command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "-o",
+              "semantic"
+            ],
+            "run_command": [
+              "./semantic"
+            ],
+            "expected_stdout": "SEMANTIC_PASS",
+            "required": true
+          }
+        ]
+      },
+      "stress_environments": [
+        {
+          "AK_SEED": "1654615998",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "577090037",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "15"
+        },
+        {
+          "AK_SEED": "242886303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "46"
+        },
+        {
+          "AK_SEED": "1022050301",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "77"
+        },
+        {
+          "AK_SEED": "1013818839",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "92"
+        },
+        {
+          "AK_SEED": "1097127993",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "346043753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "4"
+        },
+        {
+          "AK_SEED": "1390851128",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "973694259",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1988601454",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "139951793",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "73"
+        },
+        {
+          "AK_SEED": "1942955373",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "2038265566",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "18"
+        },
+        {
+          "AK_SEED": "1112433019",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "458825077",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "897563738",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "20"
+        },
+        {
+          "AK_SEED": "1552728491",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1778837931",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "37"
+        },
+        {
+          "AK_SEED": "778526663",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "42"
+        },
+        {
+          "AK_SEED": "185773678",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "50"
+        },
+        {
+          "AK_SEED": "649421745",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "708452615",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "602878526",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "78"
+        },
+        {
+          "AK_SEED": "1245182509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1644374017",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "1619040758",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "870815904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "2061077104",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "485147340",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "326915759",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "1242089248",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "52734659",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "97"
+        },
+        {
+          "AK_SEED": "332524003",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "718349404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "1533613005",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1440402319",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "1411758002",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "393430179",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "56"
+        },
+        {
+          "AK_SEED": "1808726707",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "901304238",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1969700810",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1636471393",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "478163327",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "165578901",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1754648232",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "48"
+        },
+        {
+          "AK_SEED": "1167696004",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "328063601",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1511168161",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "70"
+        },
+        {
+          "AK_SEED": "1354862962",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "64"
+        },
+        {
+          "AK_SEED": "287264509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "14"
+        },
+        {
+          "AK_SEED": "2136903265",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "1045900815",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "29"
+        },
+        {
+          "AK_SEED": "1152412589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "927942303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "91"
+        },
+        {
+          "AK_SEED": "590463589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "388006705",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "49376573",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "182818357",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "846782629",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "962869285",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "2"
+        },
+        {
+          "AK_SEED": "1322019967",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "2123807367",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "743144841",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1911858404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "2045084184",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "68"
+        },
+        {
+          "AK_SEED": "1781311907",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "304122021",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "321236752",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "2003028046",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "55"
+        },
+        {
+          "AK_SEED": "160222076",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "508668193",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "57"
+        },
+        {
+          "AK_SEED": "1390510041",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "315365087",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "89"
+        },
+        {
+          "AK_SEED": "1201798311",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "487954598",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "1936365093",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "1591528641",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "1085460482",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "30"
+        },
+        {
+          "AK_SEED": "805987788",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "85"
+        },
+        {
+          "AK_SEED": "624214061",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "1166045467",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "1946843032",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "621570035",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "22"
+        },
+        {
+          "AK_SEED": "2130974504",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1218001428",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "0"
+        },
+        {
+          "AK_SEED": "857226971",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "24"
+        },
+        {
+          "AK_SEED": "133288886",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "626871096",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "35"
+        },
+        {
+          "AK_SEED": "1707201716",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "23"
+        },
+        {
+          "AK_SEED": "348281753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "44"
+        },
+        {
+          "AK_SEED": "874757909",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "84"
+        },
+        {
+          "AK_SEED": "358717904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "51"
+        },
+        {
+          "AK_SEED": "1808372858",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "2123215989",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "784077459",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "551141640",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "1591690432",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "26"
+        },
+        {
+          "AK_SEED": "835531109",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "6"
+        },
+        {
+          "AK_SEED": "1530718643",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "53"
+        },
+        {
+          "AK_SEED": "1735072617",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        }
+      ]
+    },
+    {
+      "fixture": "deadlock_001",
+      "arms": [
+        "serial",
+        "batch"
+      ],
+      "source_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\deadlock_001-super_only.jsonl",
+      "source_evidence_sha256": "c628a768e35f800d160fa46070502dff369dbbfeb9595eebad7511ad362e3673",
+      "prior_passed": false,
+      "prior_stress_passes": 96,
+      "candidate_sha256": {
+        "main.c": "24c8ebaff56f1478b580da88038b467c12c21300d8ef9bdde7ccee42afeba9df"
+      },
+      "verification_config": {
+        "required_build_success": true,
+        "stress_runs": 100,
+        "allowed_deadlocks": 0,
+        "allowed_races": 0,
+        "allowed_crashes": 0,
+        "required_original_tests": false,
+        "original_test_commands": [],
+        "sanitizer_enabled": false,
+        "sanitizer_required": false,
+        "sanitizer_runs": 3,
+        "sanitizer_compiler": null,
+        "semantic_checks": [
+          {
+            "name": "Both workers complete and perform their mutex acquisitions",
+            "build_command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "-o",
+              "semantic"
+            ],
+            "run_command": [
+              "./semantic"
+            ],
+            "expected_stdout": "SEMANTIC_PASS",
+            "required": true
+          }
+        ]
+      },
+      "stress_environments": [
+        {
+          "AK_SEED": "1654615998",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "577090037",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "15"
+        },
+        {
+          "AK_SEED": "242886303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "46"
+        },
+        {
+          "AK_SEED": "1022050301",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "77"
+        },
+        {
+          "AK_SEED": "1013818839",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "92"
+        },
+        {
+          "AK_SEED": "1097127993",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "346043753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "4"
+        },
+        {
+          "AK_SEED": "1390851128",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "973694259",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1988601454",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "139951793",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "73"
+        },
+        {
+          "AK_SEED": "1942955373",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "2038265566",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "18"
+        },
+        {
+          "AK_SEED": "1112433019",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "458825077",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "897563738",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "20"
+        },
+        {
+          "AK_SEED": "1552728491",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1778837931",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "37"
+        },
+        {
+          "AK_SEED": "778526663",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "42"
+        },
+        {
+          "AK_SEED": "185773678",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "50"
+        },
+        {
+          "AK_SEED": "649421745",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "708452615",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "602878526",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "78"
+        },
+        {
+          "AK_SEED": "1245182509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1644374017",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "1619040758",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "870815904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "2061077104",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "485147340",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "326915759",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "1242089248",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "52734659",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "97"
+        },
+        {
+          "AK_SEED": "332524003",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "718349404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "1533613005",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1440402319",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "1411758002",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "393430179",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "56"
+        },
+        {
+          "AK_SEED": "1808726707",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "901304238",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1969700810",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1636471393",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "478163327",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "165578901",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1754648232",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "48"
+        },
+        {
+          "AK_SEED": "1167696004",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "328063601",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1511168161",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "70"
+        },
+        {
+          "AK_SEED": "1354862962",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "64"
+        },
+        {
+          "AK_SEED": "287264509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "14"
+        },
+        {
+          "AK_SEED": "2136903265",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "1045900815",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "29"
+        },
+        {
+          "AK_SEED": "1152412589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "927942303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "91"
+        },
+        {
+          "AK_SEED": "590463589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "388006705",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "49376573",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "182818357",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "846782629",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "962869285",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "2"
+        },
+        {
+          "AK_SEED": "1322019967",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "2123807367",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "743144841",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1911858404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "2045084184",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "68"
+        },
+        {
+          "AK_SEED": "1781311907",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "304122021",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "321236752",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "2003028046",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "55"
+        },
+        {
+          "AK_SEED": "160222076",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "508668193",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "57"
+        },
+        {
+          "AK_SEED": "1390510041",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "315365087",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "89"
+        },
+        {
+          "AK_SEED": "1201798311",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "487954598",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "1936365093",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "1591528641",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "1085460482",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "30"
+        },
+        {
+          "AK_SEED": "805987788",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "85"
+        },
+        {
+          "AK_SEED": "624214061",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "1166045467",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "1946843032",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "621570035",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "22"
+        },
+        {
+          "AK_SEED": "2130974504",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1218001428",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "0"
+        },
+        {
+          "AK_SEED": "857226971",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "24"
+        },
+        {
+          "AK_SEED": "133288886",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "626871096",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "35"
+        },
+        {
+          "AK_SEED": "1707201716",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "23"
+        },
+        {
+          "AK_SEED": "348281753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "44"
+        },
+        {
+          "AK_SEED": "874757909",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "84"
+        },
+        {
+          "AK_SEED": "358717904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "51"
+        },
+        {
+          "AK_SEED": "1808372858",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "2123215989",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "784077459",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "551141640",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "1591690432",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "26"
+        },
+        {
+          "AK_SEED": "835531109",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "6"
+        },
+        {
+          "AK_SEED": "1530718643",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "53"
+        },
+        {
+          "AK_SEED": "1735072617",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        }
+      ]
+    },
+    {
+      "fixture": "deadlock_002",
+      "arms": [
+        "batch",
+        "serial"
+      ],
+      "source_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\continuation-20261004T104857Z\\deadlock_002-adaptive.jsonl",
+      "source_evidence_sha256": "ce429fbfbf899495aa7c071f7c5123ceff2907c09c6bc43d6f90efbc4d59831a",
+      "prior_passed": false,
+      "prior_stress_passes": 0,
+      "candidate_sha256": {
+        "main.c": "9e90c8555e627efa384c479cd1de469722a2feae73292340c03c0739cbacce33"
+      },
+      "verification_config": {
+        "required_build_success": true,
+        "stress_runs": 100,
+        "allowed_deadlocks": 0,
+        "allowed_races": 0,
+        "allowed_crashes": 0,
+        "required_original_tests": false,
+        "original_test_commands": [],
+        "sanitizer_enabled": false,
+        "sanitizer_required": false,
+        "sanitizer_runs": 3,
+        "sanitizer_compiler": null,
+        "semantic_checks": [
+          {
+            "name": "Total 2000; A=950, B=1050; two transfers",
+            "build_command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "-o",
+              "semantic"
+            ],
+            "run_command": [
+              "./semantic"
+            ],
+            "expected_stdout": "SEMANTIC_PASS",
+            "required": true
+          }
+        ]
+      },
+      "stress_environments": [
+        {
+          "AK_SEED": "1654615998",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "577090037",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "15"
+        },
+        {
+          "AK_SEED": "242886303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "46"
+        },
+        {
+          "AK_SEED": "1022050301",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "77"
+        },
+        {
+          "AK_SEED": "1013818839",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "92"
+        },
+        {
+          "AK_SEED": "1097127993",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "346043753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "4"
+        },
+        {
+          "AK_SEED": "1390851128",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "973694259",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1988601454",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "139951793",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "73"
+        },
+        {
+          "AK_SEED": "1942955373",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "2038265566",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "18"
+        },
+        {
+          "AK_SEED": "1112433019",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "83"
+        },
+        {
+          "AK_SEED": "458825077",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "897563738",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "20"
+        },
+        {
+          "AK_SEED": "1552728491",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1778837931",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "37"
+        },
+        {
+          "AK_SEED": "778526663",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "42"
+        },
+        {
+          "AK_SEED": "185773678",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "50"
+        },
+        {
+          "AK_SEED": "649421745",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "708452615",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "602878526",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "78"
+        },
+        {
+          "AK_SEED": "1245182509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1644374017",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "1619040758",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "870815904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "2061077104",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "485147340",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "326915759",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "1242089248",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "52734659",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "97"
+        },
+        {
+          "AK_SEED": "332524003",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "718349404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "1533613005",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1440402319",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "1411758002",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "393430179",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "56"
+        },
+        {
+          "AK_SEED": "1808726707",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "901304238",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "3"
+        },
+        {
+          "AK_SEED": "1969700810",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "36"
+        },
+        {
+          "AK_SEED": "1636471393",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "21"
+        },
+        {
+          "AK_SEED": "478163327",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "165578901",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1754648232",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "48"
+        },
+        {
+          "AK_SEED": "1167696004",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "328063601",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "75"
+        },
+        {
+          "AK_SEED": "1511168161",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "70"
+        },
+        {
+          "AK_SEED": "1354862962",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "64"
+        },
+        {
+          "AK_SEED": "287264509",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "14"
+        },
+        {
+          "AK_SEED": "2136903265",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "81"
+        },
+        {
+          "AK_SEED": "1045900815",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "29"
+        },
+        {
+          "AK_SEED": "1152412589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "927942303",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "91"
+        },
+        {
+          "AK_SEED": "590463589",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "388006705",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "94"
+        },
+        {
+          "AK_SEED": "49376573",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "182818357",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "28"
+        },
+        {
+          "AK_SEED": "846782629",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "962869285",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "2"
+        },
+        {
+          "AK_SEED": "1322019967",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "33"
+        },
+        {
+          "AK_SEED": "2123807367",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "41"
+        },
+        {
+          "AK_SEED": "743144841",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "1911858404",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "32"
+        },
+        {
+          "AK_SEED": "2045084184",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "68"
+        },
+        {
+          "AK_SEED": "1781311907",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "65"
+        },
+        {
+          "AK_SEED": "304122021",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "31"
+        },
+        {
+          "AK_SEED": "321236752",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "59"
+        },
+        {
+          "AK_SEED": "2003028046",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "55"
+        },
+        {
+          "AK_SEED": "160222076",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "8"
+        },
+        {
+          "AK_SEED": "508668193",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "57"
+        },
+        {
+          "AK_SEED": "1390510041",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "19"
+        },
+        {
+          "AK_SEED": "315365087",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "89"
+        },
+        {
+          "AK_SEED": "1201798311",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "487954598",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "39"
+        },
+        {
+          "AK_SEED": "1936365093",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "5"
+        },
+        {
+          "AK_SEED": "1591528641",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "25"
+        },
+        {
+          "AK_SEED": "1085460482",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "30"
+        },
+        {
+          "AK_SEED": "805987788",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "85"
+        },
+        {
+          "AK_SEED": "624214061",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        },
+        {
+          "AK_SEED": "1166045467",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "47"
+        },
+        {
+          "AK_SEED": "1946843032",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "61"
+        },
+        {
+          "AK_SEED": "621570035",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "22"
+        },
+        {
+          "AK_SEED": "2130974504",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "16"
+        },
+        {
+          "AK_SEED": "1218001428",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "0"
+        },
+        {
+          "AK_SEED": "857226971",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "24"
+        },
+        {
+          "AK_SEED": "133288886",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "98"
+        },
+        {
+          "AK_SEED": "626871096",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "35"
+        },
+        {
+          "AK_SEED": "1707201716",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "23"
+        },
+        {
+          "AK_SEED": "348281753",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "44"
+        },
+        {
+          "AK_SEED": "874757909",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "84"
+        },
+        {
+          "AK_SEED": "358717904",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "51"
+        },
+        {
+          "AK_SEED": "1808372858",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "72"
+        },
+        {
+          "AK_SEED": "2123215989",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "11"
+        },
+        {
+          "AK_SEED": "784077459",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "38"
+        },
+        {
+          "AK_SEED": "551141640",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "17"
+        },
+        {
+          "AK_SEED": "1591690432",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "26"
+        },
+        {
+          "AK_SEED": "835531109",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "6"
+        },
+        {
+          "AK_SEED": "1530718643",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "53"
+        },
+        {
+          "AK_SEED": "1735072617",
+          "AK_WORKERS": "2",
+          "AK_WORKLOAD": "1000",
+          "AK_START_DELAY_US": "76"
+        }
+      ]
+    }
+  ],
+  "retry": false,
+  "image": "agentkernel-clang:20261003122908",
+  "batch_size": 10
+}

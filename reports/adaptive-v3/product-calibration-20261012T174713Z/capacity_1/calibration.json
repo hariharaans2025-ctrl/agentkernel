@@ -1,0 +1,28 @@
+{
+  "case": "capacity_1",
+  "split": "train",
+  "family": "capacity",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "acquire.c": "b94265534803b7a173f8df7797860dce2e92415ad9da6e385f9a97376da7a583",
+    "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+  },
+  "source_sha256": {
+    "acquire.c": "d74ac1e35dd5a0c338bb9d7049522b65df513630e888887f48b5cc58ebe337b2",
+    "inspect.c": "118c8e9476d8294c2b10d70f0101c60b49c3e26a8f9e12070547319a9b9e1562"
+  },
+  "support_sha256": {
+    "state.h": "1d2eaf951a25109b4626e821088706c3b36f598e87abf1394834eab201f28ec5",
+    "oracle.c": "471fde4b76937a894cb3ac4c6ab208278a783bafa7022a42974412dd80bfd709"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 77.39973439999994
+}

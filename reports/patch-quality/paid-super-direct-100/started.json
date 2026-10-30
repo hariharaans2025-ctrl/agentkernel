@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-09-26T13:23:40.983336+00:00",
+  "fixture": "deadlock_001",
+  "contract": "exact_source_edits",
+  "maximum_paid_requests": 1,
+  "http_retries": 0,
+  "model_attempts": 1,
+  "verification_runs": 100,
+  "baseline_runs": 3,
+  "execution_backend": "local",
+  "original_sha256": {
+    "main.c": "0de854b650e07a1dc7e9ef0baa0d8e1f86b0e352473054d3f5a57042027b48b2",
+    "task.json": "2237592488fbc55731132da0d14b59f50af521fdbf0400e53bea46483a05daf3"
+  }
+}

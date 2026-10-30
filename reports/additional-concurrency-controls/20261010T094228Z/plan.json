@@ -1,0 +1,16 @@
+{
+  "model_calls": 0,
+  "tokens": 0,
+  "cases": [
+    "lost_signal",
+    "missing_sync",
+    "account_inversion"
+  ],
+  "faulty_diagnostic_runs_per_case": 3,
+  "faulty_missing_sync_tsan_runs": 3,
+  "positive_control_stress_runs": 100,
+  "positive_control_tsan_runs": 3,
+  "image": "agentkernel-clang:20261003122908",
+  "origin": "Manually authored synthetic controls, not model repairs",
+  "policy": "No automatic workload retries; all native execution in Nebius Sandbox."
+}

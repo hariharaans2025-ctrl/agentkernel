@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "calls": 1,
+  "output_cap": 4096,
+  "input_reservation": 262144,
+  "inference_bound_usd": "0.0274432",
+  "sandbox_cost_usd": 0,
+  "sandbox_basis": "User confirmed free beta",
+  "variants": [
+    "mutex",
+    "exchange",
+    "store"
+  ],
+  "verification_each": {
+    "stress": 100,
+    "tsan": 3,
+    "semantics": true,
+    "original_tests": true
+  },
+  "performance": "GCC -O3 without TSan; 1 discarded warmup per variant; 10 interleaved measured rounds; 500000 writes and reads per phase; no scheduling hooks in timed phase for any variant.",
+  "scope": "Separate packed-pair API experiment. Not a drop-in replacement for frozen fixture exposing ordinary integers. No previous evidence or benchmark score changes.",
+  "payload_sha256": "1b7a8690ea75667432ab41b6c8702b13e68be5b26725fe2f4893a1fd318d2fbd"
+}

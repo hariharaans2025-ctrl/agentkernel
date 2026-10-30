@@ -1,0 +1,54 @@
+{
+  "stage": "ultra",
+  "outcome": "verified",
+  "model_calls": 1,
+  "tokens": 1269,
+  "cost_usd": 0.001423,
+  "false_fix": false,
+  "recovery": null,
+  "reserved_usd": 0.060576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "afdf9ff0cbaf49b9a2c599d2ed481312",
+  "inference_ms": 1467.1218999997109,
+  "input_tokens": 1192,
+  "output_tokens": 77,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "no_op_blocks_dropped": [],
+    "blocks": [
+      {
+        "file": "acquire.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      }
+    ]
+  },
+  "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+  "verification_phases_ms": {
+    "apply": 3460.866100000203,
+    "build": 1530.4317000000083,
+    "stress": 9118.9274999997,
+    "tsan_build": 2404.722100000072,
+    "original_tests_and_semantics": 6270.00980000048
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 19324.09110000026,
+  "taxonomy": {
+    "primary": "verified",
+    "gates": []
+  }
+}

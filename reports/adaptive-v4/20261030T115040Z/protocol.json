@@ -1,0 +1,173 @@
+{
+  "frozen_utc": "2026-10-30T11:50:41.677090+00:00",
+  "route": "agentkernel/adaptive-v4",
+  "contract": "agentkernel_line_blocks_v4",
+  "router": "adaptive-v4-router-1",
+  "system_prompt_sha256": "0299b33fbdee5ae3b49b8dcd831c7578abeaab96f6803429dc6ae86c3672e8f4",
+  "example_rule": "Fixed synthetic format example, not from any task:\n@@ REPLACE example.c 3-3\n    pthread_mutex_lock(&m); count++; pthread_mutex_unlock(&m);\n@@ END",
+  "models": {
+    "super": {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "name": "Nemotron-3-Super-120b-a12b",
+      "created": 1773187200,
+      "description": "Nemotron 3 Super is a 120B hybrid MoE model optimized for efficient multi-agent AI and complex reasoning tasks.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.0000003",
+        "input_cache_read": "0.00000006",
+        "completion": "0.0000009",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 1000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    },
+    "ultra": {
+      "id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "name": "Nemotron-3-Ultra-550b-a55b",
+      "created": 1780531200,
+      "description": "Nemotron 3 Ultra is a 550B hybrid MoE model from NVIDIA, optimized for the most demanding multi-agent AI and complex reasoning tasks.",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.000001",
+        "input_cache_read": "0.00000012",
+        "completion": "0.000003",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 2000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    }
+  },
+  "caps": {
+    "super": 4096,
+    "ultra": 8192
+  },
+  "input_cap": 12000,
+  "temperature": 0,
+  "thinking": false,
+  "attempts": {
+    "max_calls_per_job": 2,
+    "max_format_recoveries": 1,
+    "max_verifier_recoveries": 1
+  },
+  "no_retries": true,
+  "cache_used": false,
+  "image": "agentkernel-clang:20261003122908",
+  "verification": {
+    "stress_runs": 100,
+    "tsan_runs": 3,
+    "original_tests": true,
+    "semantics_required": true,
+    "majority_pass": false
+  },
+  "implementation_sha256": {
+    "src/agentkernel/repository/adaptive_v4_core.py": "ead7f2870ce88549fb9120d9c3c2733f7bfb7c02baf2a7fa2ee08b0b9035ea1c",
+    "src/agentkernel/repository/adaptive_v4.py": "f7f3a8b70a096157b8e4192bdb151192bfa7438668df89e6bbbd235761e3e771",
+    "scripts/run_adaptive_v4.py": "0ecdb934152579edc7b844aa42beee85882c733d44cc5003a297f82cc3cf5e0b"
+  },
+  "stage_A_development_pilot": {
+    "programs": [
+      "ledger_2",
+      "snapshot_2",
+      "capacity_2",
+      "predicate_2"
+    ],
+    "source": "datasets/adaptive-v3/product-v1 validation/train variants (families seen)",
+    "purpose": "compare v3 JSON vs v4 block contract on Super; calibrate router buckets",
+    "paid_calls_max": 12,
+    "calls": {
+      "super_v3_contract": 4,
+      "super_v4_contract": 4,
+      "ultra_v4_evidence_correction_max": 4
+    },
+    "reserved_usd_bound": 0.20459519999999998,
+    "within_delegated_cap": true
+  },
+  "stage_B_heldout_comparison": {
+    "design": "5 new whole-program families not in product-v1 (refcount, handoff, rwlock stats, relaxed-flag publish, lazy once-init); references kept outside model inputs",
+    "arms": {
+      "super_only": 5,
+      "ultra_only": 5,
+      "fixed_fallback_max": 10,
+      "v4_max": 10
+    },
+    "arm_order": "rotated per case (Latin square)",
+    "concurrency": 1,
+    "paid_calls_max": 30,
+    "reserved_usd_bound": 0.657936,
+    "within_delegated_cap": false,
+    "status": "REQUIRES EXPLICIT EXPANDED LIMIT; fixtures not yet built/validated"
+  },
+  "ledger": {
+    "committed_usd": 0.2233982999999982,
+    "unknown_calls": 0,
+    "conservative_ceiling_usd": 10.0,
+    "stored_total_is_not_permission": true
+  },
+  "targets": {
+    "verified_vs_ultra_only": ">= equal",
+    "hosted_spend_reduction": ">= 25%",
+    "median_e2e_reduction": ">= 20%"
+  }
+}

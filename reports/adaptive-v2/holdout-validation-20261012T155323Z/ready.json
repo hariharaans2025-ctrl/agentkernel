@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {
+      "case": "account_delta",
+      "broken_rejected": true,
+      "reference_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "range_window",
+      "broken_rejected": true,
+      "reference_verified": true,
+      "model_calls": 0
+    }
+  ],
+  "origin": "manual verifier calibration, not model repair success",
+  "test_targets_in_training": false
+}

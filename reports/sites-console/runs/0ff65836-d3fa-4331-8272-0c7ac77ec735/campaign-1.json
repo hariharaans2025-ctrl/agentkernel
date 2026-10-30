@@ -1,0 +1,64 @@
+{
+  "task_id": "job-queue-service",
+  "runs": [
+    {
+      "run_id": "job-queue-service:1",
+      "start_time": "2026-10-12T14:41:50.387494Z",
+      "duration_ms": 2002.85104,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "53f0a3fe-1970-4791-8b2f-fbe370b7685c",
+        "batch_transport_wall_ms": 8563.308400000096
+      }
+    },
+    {
+      "run_id": "job-queue-service:2",
+      "start_time": "2026-10-12T14:41:52.429686Z",
+      "duration_ms": 2002.3149900000003,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "53f0a3fe-1970-4791-8b2f-fbe370b7685c",
+        "batch_transport_wall_ms": 8563.308400000096
+      }
+    },
+    {
+      "run_id": "job-queue-service:3",
+      "start_time": "2026-10-12T14:41:54.463700Z",
+      "duration_ms": 2002.3929459999997,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "53f0a3fe-1970-4791-8b2f-fbe370b7685c",
+        "batch_transport_wall_ms": 8563.308400000096
+      }
+    }
+  ],
+  "counts": {
+    "POSSIBLE_DEADLOCK": 3
+  },
+  "duration_ms": 8567.253400000027,
+  "requested_runs": 3
+}

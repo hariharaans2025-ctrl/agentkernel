@@ -1,0 +1,53 @@
+{
+  "origin": "reports\\barrier-repair-live\\20261010T092756Z",
+  "new_model_calls": 0,
+  "new_tokens": 0,
+  "patch_sha256": "6238289cf868dff0cf7a0631c380ce009f9f12d5a90fd3b7f2dec4f6fa09bf4a",
+  "candidate_sha256": "7f18a6fa4c4447dd223e67d2c1351316c186ef6f8012a086d221696e5e96ea2b",
+  "verification": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "./job_service",
+        "--smoke"
+      ],
+      [
+        "./job_service",
+        "--check"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "100 jobs exactly once, checksum 5050, queue drained",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "-Iinclude",
+          "src/main.c",
+          "src/queue.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic",
+          "--check"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "image": "agentkernel-clang:20261003122908",
+  "policy": "Fresh, separately authorized verification-only campaign. Earlier interrupted outcome remains unknown; no model calls or patch changes. No automatic workload retries."
+}

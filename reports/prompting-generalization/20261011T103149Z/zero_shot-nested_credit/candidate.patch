@@ -1,0 +1,16 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,12 +1,10 @@
+ #include "state.h"
+ static void credit(int to) {
+-    pthread_mutex_lock(&ledger);
+     accounts[to] += 1;
+-    pthread_mutex_unlock(&ledger);
+ }
+ void transfer(int from, int to) {
+     pthread_mutex_lock(&ledger);
+     accounts[from] -= 1;
+-    credit(to);
++    accounts[to] += 1;
+     pthread_mutex_unlock(&ledger);
+ }

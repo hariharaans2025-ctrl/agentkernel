@@ -1,0 +1,55 @@
+{
+  "mode": "base",
+  "status": "rejected",
+  "attempts": [
+    {
+      "stage": "base",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 550,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": true,
+      "input_tokens": 425,
+      "output_tokens": 125,
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct [base]",
+      "adapter_sha256": null,
+      "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n<<<END_FILE>>>",
+      "canonical_response": "{\"diagnosis\": \"Local fine-tuned specialist proposal\", \"root_cause\": \"Synchronization change proposed; independent verification required.\", \"confidence\": 0.5, \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield();\\n    cache->value = 42;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\nvoid observe_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield();\\n    cache->observed = cache->value;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield(); // Required sched_yield call\\n    cache->value = 42;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\nvoid observe_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield(); // Required sched_yield call\\n    cache->observed = cache->value;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Not accepted until every mandatory execution check passes.\"]}",
+      "inference_ms": 16746.363199999905,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -3,14 +3,14 @@\n void publish_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n     meet(cache);\n-    sched_yield();\n+    sched_yield(); // Required sched_yield call\n     cache->value = 42;\n     pthread_mutex_unlock(&cache->mutex);\n }\n void observe_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n     meet(cache);\n-    sched_yield();\n+    sched_yield(); // Required sched_yield call\n     cache->observed = cache->value;\n     pthread_mutex_unlock(&cache->mutex);\n }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 248992.04529999953
+    }
+  ],
+  "tokens": 550,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "model_calls": 1,
+  "remote_model_calls": 0,
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6",
+  "end_to_end_ms": 285885.41010000155,
+  "false_fix": true,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -3,14 +3,14 @@\n void publish_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n     meet(cache);\n-    sched_yield();\n+    sched_yield(); // Required sched_yield call\n     cache->value = 42;\n     pthread_mutex_unlock(&cache->mutex);\n }\n void observe_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n     meet(cache);\n-    sched_yield();\n+    sched_yield(); // Required sched_yield call\n     cache->observed = cache->value;\n     pthread_mutex_unlock(&cache->mutex);\n }\n",
+  "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nvoid publish_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->value = 42;\n    pthread_mutex_unlock(&cache->mutex);\n}\nvoid observe_cache(Cache *cache) {\n    pthread_mutex_lock(&cache->mutex);\n    meet(cache);\n    sched_yield(); // Required sched_yield call\n    cache->observed = cache->value;\n    pthread_mutex_unlock(&cache->mutex);\n}\n<<<END_FILE>>>",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": false,
+    "passed_runs": 0,
+    "total_runs": 100,
+    "semantic_passed": false,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  },
+  "inference_ms": 16746.363199999905,
+  "verification_ms": 248992.04529999953
+}

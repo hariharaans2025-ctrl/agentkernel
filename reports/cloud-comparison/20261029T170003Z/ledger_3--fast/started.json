@@ -1,0 +1,99 @@
+{
+  "profile": "fast",
+  "max_calls": 2,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.043862399999999996,
+  "max_total_tokens": 36288,
+  "source_hashes": {
+    "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+    "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065",
+    "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+    "oracle.c": "6a42ad88a101ebbf024e91e6340b0c50d0577bef552ce981cb5a56f2271a0d15"
+  },
+  "task": {
+    "task_id": "ledger_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T170003Z\\ledger_3--fast\\input",
+    "source_files": [
+      "writer.c",
+      "reader.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "writer.c",
+      "reader.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "writer.c",
+            "reader.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+      "split": "test",
+      "family": "ledger",
+      "variant": 3
+    }
+  },
+  "automatic_replay": false,
+  "verification_transport": "journaled 40-run batches",
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

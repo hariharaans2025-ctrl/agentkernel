@@ -1,0 +1,13 @@
+{
+  "text": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid deposit(Account *account, int amount) {\\n    long observed = account->balance;\\n    sched_yield();\\n    account->balance = observed + amount;\\n}\\nlong read_balance(Account *account) {\\n    return account->balance;\\n}\\n\"}\n}\n```",
+  "input_tokens": 273,
+  "output_tokens": 87,
+  "finish_reason": "stop",
+  "generation_ms": 18038.195000000087,
+  "latency_ms": 19730.76309999942,
+  "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct [base]",
+  "base_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "adapter_sha256": null,
+  "cost_usd": 0,
+  "cost_basis": "No hosted inference charge; local electricity not measured."
+}

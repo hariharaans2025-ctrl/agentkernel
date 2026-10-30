@@ -1,0 +1,35 @@
+{
+  "mode": "base",
+  "status": "rejected",
+  "attempts": [
+    {
+      "stage": "base",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 522,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": false,
+      "input_tokens": 369,
+      "output_tokens": 153,
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct [base]",
+      "adapter_sha256": null,
+      "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\"}\n}\n```",
+      "error": "JSONDecodeError",
+      "inference_ms": 29107.992500000364
+    }
+  ],
+  "tokens": 522,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "model_calls": 1,
+  "remote_model_calls": 0,
+  "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "end_to_end_ms": 35854.93079999924,
+  "false_fix": false,
+  "patch": null,
+  "response": "```json\n{\n  \"files\": {\n    \"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\"}\n}\n```",
+  "verification": null,
+  "inference_ms": 29107.992500000364,
+  "verification_ms": 0
+}

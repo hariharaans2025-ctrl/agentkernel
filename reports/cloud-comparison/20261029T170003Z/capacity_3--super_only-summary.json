@@ -1,0 +1,58 @@
+{
+  "case": "capacity_3",
+  "arm": "super_only",
+  "status": "rejected",
+  "profile": "super_only",
+  "attempts": [
+    {
+      "stage": "super",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 1569,
+      "cost_usd": 0.0005523,
+      "reserved_usd": 0.0072864,
+      "false_fix": true,
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "ledger_call_id": "184d3f6f42164bdbb726817695189f78",
+      "input_tokens": 1433,
+      "output_tokens": 136,
+      "reasoning_tokens": 0,
+      "response": "{\"edits\": [{\"file\": \"acquire.c\", \"start_line\": 1, \"end_line\": 1, \"replacement_lines\": [\"#include 'state.h'\"]}, {\"file\": \"acquire.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\"]}]}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"acquire.c\", \"search\": \"#include \\\"state.h\\\"\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\\n\", \"replacement\": \"#include 'state.h'\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1433.4550999919884,
+      "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n-#include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+#include 'state.h'\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\n",
+      "verification": {
+        "build_passed": false,
+        "original_tests_passed": null,
+        "passed_runs": 0,
+        "total_runs": 0,
+        "semantic_passed": null,
+        "tsan_passed": null,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 1436.8386999703944
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1569,
+  "cost_usd": 0.0005523,
+  "reserved_usd": 0.0072864,
+  "false_fix": true,
+  "end_to_end_ms": 32696.910200000275,
+  "inference_ms": 1433.4550999919884,
+  "verification_ms": 1436.8386999703944,
+  "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n-#include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+#include 'state.h'\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\n",
+  "response": "{\"edits\": [{\"file\": \"acquire.c\", \"start_line\": 1, \"end_line\": 1, \"replacement_lines\": [\"#include 'state.h'\"]}, {\"file\": \"acquire.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;\"]}]}",
+  "verification": {
+    "build_passed": false,
+    "original_tests_passed": null,
+    "passed_runs": 0,
+    "total_runs": 0,
+    "semantic_passed": null,
+    "tsan_passed": null,
+    "scheduling_hooks_preserved": true
+  }
+}

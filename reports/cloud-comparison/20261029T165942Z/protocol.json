@@ -1,0 +1,2348 @@
+{
+  "jobs": [
+    {
+      "case": "ledger_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "ledger_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\ledger_3",
+        "source_files": [
+          "writer.c",
+          "reader.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "writer.c",
+                "reader.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+          "split": "test",
+          "family": "ledger",
+          "variant": 3
+        }
+      },
+      "files": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065",
+        "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+        "oracle.c": "6a42ad88a101ebbf024e91e6340b0c50d0577bef552ce981cb5a56f2271a0d15"
+      }
+    },
+    {
+      "case": "ledger_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "ledger_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\ledger_3",
+        "source_files": [
+          "writer.c",
+          "reader.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "writer.c",
+                "reader.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+          "split": "test",
+          "family": "ledger",
+          "variant": 3
+        }
+      },
+      "files": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065",
+        "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+        "oracle.c": "6a42ad88a101ebbf024e91e6340b0c50d0577bef552ce981cb5a56f2271a0d15"
+      }
+    },
+    {
+      "case": "ledger_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "ledger_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\ledger_3",
+        "source_files": [
+          "writer.c",
+          "reader.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "writer.c",
+          "reader.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "writer.c",
+                "reader.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Every update adds two produced units and one consumed unit as one transaction; concurrent snapshots must always have produced minus twice consumed equal zero.",
+          "split": "test",
+          "family": "ledger",
+          "variant": 3
+        }
+      },
+      "files": {
+        "writer.c": "16ca32b9e0676af46899a986283f094c59a62f58c2f818e095f79da96f57eeaf",
+        "reader.c": "1dd094fa84e56145012fd17d7a2e194a4e2a9e42af72ced2462e69c9e96b7065",
+        "state.h": "c9c9daf8022203751f55e86fd93fc239d58b0c1c5fff315fe1955c9e964743c0",
+        "oracle.c": "6a42ad88a101ebbf024e91e6340b0c50d0577bef552ce981cb5a56f2271a0d15"
+      }
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "snapshot_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\snapshot_3",
+        "source_files": [
+          "publisher.c",
+          "snapshot.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publisher.c",
+                "snapshot.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+          "split": "test",
+          "family": "snapshot",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343",
+        "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+        "oracle.c": "2ac5e63ca96f677cbce004beff6f9a58a9a1ce5d528c104b7ee8431c4202b228"
+      }
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "snapshot_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\snapshot_3",
+        "source_files": [
+          "publisher.c",
+          "snapshot.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publisher.c",
+                "snapshot.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+          "split": "test",
+          "family": "snapshot",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343",
+        "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+        "oracle.c": "2ac5e63ca96f677cbce004beff6f9a58a9a1ce5d528c104b7ee8431c4202b228"
+      }
+    },
+    {
+      "case": "snapshot_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "snapshot_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\snapshot_3",
+        "source_files": [
+          "publisher.c",
+          "snapshot.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publisher.c",
+          "snapshot.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publisher.c",
+                "snapshot.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+          "split": "test",
+          "family": "snapshot",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+        "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343",
+        "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+        "oracle.c": "2ac5e63ca96f677cbce004beff6f9a58a9a1ce5d528c104b7ee8431c4202b228"
+      }
+    },
+    {
+      "case": "capacity_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "capacity_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\capacity_3",
+        "source_files": [
+          "acquire.c",
+          "inspect.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "acquire.c",
+                "inspect.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+          "split": "test",
+          "family": "capacity",
+          "variant": 3
+        }
+      },
+      "files": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf",
+        "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+        "oracle.c": "8b100cec261e0ba2fa564c5f3133e506bcf2e57537ae5b356f99a97862686688"
+      }
+    },
+    {
+      "case": "capacity_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "capacity_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\capacity_3",
+        "source_files": [
+          "acquire.c",
+          "inspect.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "acquire.c",
+                "inspect.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+          "split": "test",
+          "family": "capacity",
+          "variant": 3
+        }
+      },
+      "files": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf",
+        "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+        "oracle.c": "8b100cec261e0ba2fa564c5f3133e506bcf2e57537ae5b356f99a97862686688"
+      }
+    },
+    {
+      "case": "capacity_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "capacity_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\capacity_3",
+        "source_files": [
+          "acquire.c",
+          "inspect.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "acquire.c",
+          "inspect.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "acquire.c",
+                "inspect.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "After ten reservations exhaust capacity, every rejected reservation still records its cancellation in inspect. Preserve 280 cancellations and release the mutex on early returns.",
+          "split": "test",
+          "family": "capacity",
+          "variant": 3
+        }
+      },
+      "files": {
+        "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+        "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf",
+        "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+        "oracle.c": "8b100cec261e0ba2fa564c5f3133e506bcf2e57537ae5b356f99a97862686688"
+      }
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "rendezvous_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\rendezvous_3",
+        "source_files": [
+          "publish.c",
+          "observe.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publish.c",
+                "observe.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+          "split": "test",
+          "family": "rendezvous",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a",
+        "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+        "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+      }
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "rendezvous_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\rendezvous_3",
+        "source_files": [
+          "publish.c",
+          "observe.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publish.c",
+                "observe.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+          "split": "test",
+          "family": "rendezvous",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a",
+        "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+        "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+      }
+    },
+    {
+      "case": "rendezvous_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "rendezvous_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\rendezvous_3",
+        "source_files": [
+          "publish.c",
+          "observe.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "publish.c",
+          "observe.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "publish.c",
+                "observe.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+          "split": "test",
+          "family": "rendezvous",
+          "variant": 3
+        }
+      },
+      "files": {
+        "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+        "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a",
+        "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+        "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+      }
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "lock_order_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\lock_order_3",
+        "source_files": [
+          "forward.c",
+          "reverse.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "forward.c",
+                "reverse.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+          "split": "test",
+          "family": "lock_order",
+          "variant": 3
+        }
+      },
+      "files": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6",
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+      }
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "lock_order_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\lock_order_3",
+        "source_files": [
+          "forward.c",
+          "reverse.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "forward.c",
+                "reverse.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+          "split": "test",
+          "family": "lock_order",
+          "variant": 3
+        }
+      },
+      "files": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6",
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+      }
+    },
+    {
+      "case": "lock_order_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "lock_order_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\lock_order_3",
+        "source_files": [
+          "forward.c",
+          "reverse.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "forward.c",
+          "reverse.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "forward.c",
+                "reverse.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Both workers update three related counters. Run the protected arrival helper before locking and use the order left, right, third; preserve final values five, seven and nine. Preserve the two yields.",
+          "split": "test",
+          "family": "lock_order",
+          "variant": 3
+        }
+      },
+      "files": {
+        "forward.c": "8fa4cf5661555a38b1efe309c34b3af154bd89bf6f7a2dbf110e717112a3552e",
+        "reverse.c": "8f49d013cd731877340ac9b5a8909c0b8cacffdbc6193333fddd4937cf5a87a6",
+        "state.h": "50f3421860dcc5b6ce6b0ffb6cef5ea30d4133c6e28bb878b4a5249b5a93d747",
+        "oracle.c": "ec1ed4a26e455fdf42a57abc0569a863b6a5f1ea59fe52e54bcdf0cb56a885d3"
+      }
+    },
+    {
+      "case": "predicate_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "predicate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\predicate_3",
+        "source_files": [
+          "await.c",
+          "complete.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "await.c",
+                "complete.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+          "split": "test",
+          "family": "predicate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f",
+        "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+        "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+      }
+    },
+    {
+      "case": "predicate_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "predicate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\predicate_3",
+        "source_files": [
+          "await.c",
+          "complete.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "await.c",
+                "complete.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+          "split": "test",
+          "family": "predicate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f",
+        "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+        "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+      }
+    },
+    {
+      "case": "predicate_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "predicate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\predicate_3",
+        "source_files": [
+          "await.c",
+          "complete.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "await.c",
+          "complete.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "await.c",
+                "complete.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "A generation waiter must remain blocked until generation reaches two even after an intermediate wakeup; then observe value 88 and mark generation three. The protected wait helper announces entry and records wakeups. Preserve both yields.",
+          "split": "test",
+          "family": "predicate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "await.c": "79406d1cdb654f93869983af9bc880af5c2337f993f4fae4bce273b0c8f194de",
+        "complete.c": "c333bcd14cacfa453a295ffb22dff8bcb189c340e1fe242f0f0d5198399e155f",
+        "state.h": "dbb7d1c0af5c0defc3268eeaa504bfbea2f88cf6acfbe333658dc8e2149fcc71",
+        "oracle.c": "ee27df52d9dea75cdb89bad7cece5830d3cb3826f0ce3ed8ce913e9a7b466c89"
+      }
+    },
+    {
+      "case": "audit_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "audit_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\audit_3",
+        "source_files": [
+          "commit.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "commit.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+          "split": "test",
+          "family": "audit",
+          "variant": 3
+        }
+      },
+      "files": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8",
+        "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+        "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+      }
+    },
+    {
+      "case": "audit_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "audit_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\audit_3",
+        "source_files": [
+          "commit.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "commit.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+          "split": "test",
+          "family": "audit",
+          "variant": 3
+        }
+      },
+      "files": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8",
+        "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+        "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+      }
+    },
+    {
+      "case": "audit_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "audit_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\audit_3",
+        "source_files": [
+          "commit.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "commit.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "commit.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+          "split": "test",
+          "family": "audit",
+          "variant": 3
+        }
+      },
+      "files": {
+        "commit.c": "63de80d696eaef3395e438c032dffa81cdc55dacf603bec5df41d287d244e921",
+        "read.c": "246601d64abc37da0858b431db4bcdd9b73cfdcb0f09c2c9151eebbd3df600f8",
+        "state.h": "6485971c1b91f2b940835b39cf8722c4e824007645be79045c7548b80a31e209",
+        "oracle.c": "a10b4db70e15a03828cdac9dcc7eb20f38e1c9539214638fa9a498a1ec35aebb"
+      }
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "ultra_only",
+      "task": {
+        "task_id": "aggregate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\aggregate_3",
+        "source_files": [
+          "record.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "record.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+          "split": "test",
+          "family": "aggregate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d",
+        "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+        "oracle.c": "c916a7242393db367d8ef147266a18461e7f4c0b444d928eec586c4d4887f8cb"
+      }
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "fast",
+      "task": {
+        "task_id": "aggregate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\aggregate_3",
+        "source_files": [
+          "record.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "record.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+          "split": "test",
+          "family": "aggregate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d",
+        "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+        "oracle.c": "c916a7242393db367d8ef147266a18461e7f4c0b444d928eec586c4d4887f8cb"
+      }
+    },
+    {
+      "case": "aggregate_3",
+      "arm": "super_only",
+      "task": {
+        "task_id": "aggregate_3",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\cloud-comparison\\20261029T165942Z\\inputs\\aggregate_3",
+        "source_files": [
+          "record.c",
+          "read.c"
+        ],
+        "support_files": [
+          "state.h",
+          "oracle.c"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "record.c",
+          "read.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app",
+              "--check"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "record.c",
+                "read.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "run_command": [
+                "./app",
+                "--check"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {
+          "fixture_description": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+          "split": "test",
+          "family": "aggregate",
+          "variant": 3
+        }
+      },
+      "files": {
+        "record.c": "ad88ae1f525faaed39bdf4ca9c82f5200055ab3142a8ce6ea86a131c3d7e7fa9",
+        "read.c": "c7f248072bc403dbd65abc6b04af63732e1de2e3c8d36cbdb25a8a1f6048222d",
+        "state.h": "51cb5ca9228d4087a554f42da0d82a87e34605f703018b021bc9c118098efd71",
+        "oracle.c": "c916a7242393db367d8ef147266a18461e7f4c0b444d928eec586c4d4887f8cb"
+      }
+    }
+  ],
+  "max_new_paid_calls": 32,
+  "maximum_incremental_usd": 0.7017983999999999,
+  "models": {
+    "super": {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "name": "Nemotron-3-Super-120b-a12b",
+      "created": 1773187200,
+      "description": "Nemotron 3 Super is a 120B hybrid MoE model optimized for efficient multi-agent AI and complex reasoning tasks.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.0000003",
+        "input_cache_read": "0.00000006",
+        "completion": "0.0000009",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 1000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    },
+    "ultra": {
+      "id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "name": "Nemotron-3-Ultra-550b-a55b",
+      "created": 1780531200,
+      "description": "Nemotron 3 Ultra is a 550B hybrid MoE model from NVIDIA, optimized for the most demanding multi-agent AI and complex reasoning tasks.",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "quantization": "fp4",
+      "pricing": {
+        "prompt": "0.000001",
+        "input_cache_read": "0.00000012",
+        "completion": "0.000003",
+        "image": "0",
+        "price_per_video_second": "0",
+        "request": "0",
+        "price_per_minute": "0"
+      },
+      "per_request_limits": {
+        "tokens_per_minute": 2000000.0,
+        "requests_per_minute": 1000.0,
+        "burst_ratio": 1.0
+      },
+      "object": "model",
+      "owned_by": "system",
+      "regions": [
+        {
+          "country_code": "US",
+          "name": "us-central1"
+        }
+      ],
+      "supported_features": [
+        "tools",
+        "reasoning"
+      ],
+      "supported_sampling_parameters": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "repetition_penalty",
+        "frequency_penalty",
+        "presence_penalty"
+      ]
+    }
+  },
+  "input_cap": 12000,
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "total_token_cap_per_job": 36288,
+  "concurrency": 2,
+  "no_retries": true,
+  "script_sha256": "5188d1b3910340ab65423553daf211f255105cf2211d3fe4030b31dd56366b3c",
+  "source_sha256": {
+    "src\\agentkernel\\cli.py": "44643ef05f25775c4e8b3bcf6e1b5e618cb345fd9120245fa842dd9131ec829a",
+    "src\\agentkernel\\config.py": "c9a4420560da97ae718efd568db0f3f9b4607934eb8cdabfd4600a0df21d4fc5",
+    "src\\agentkernel\\knowledge.py": "ff1ef4c46aefcef355fa84821ab20c336f909cc63c08d8a0ae84293e9163eacf",
+    "src\\agentkernel\\__init__.py": "ac802e2d99de34f30c0eee4cade433a86b928ddebfffb797d24779c08b869b21",
+    "src\\agentkernel\\concurrency\\app.py": "a34a86f7d53ae474a11b348da1157a58d1fe0c9b6eaf59e148908166e11c484d",
+    "src\\agentkernel\\concurrency\\cli.py": "84453d144ed84ad98a3b3e814ed0c85219e8d537d7baa09cca4a4c98d5f04363",
+    "src\\agentkernel\\concurrency\\final_benchmark.py": "5a186f96c3c3bea216c922f73d87f46e7afbe38ed30c6921561d92175a007402",
+    "src\\agentkernel\\concurrency\\human_review.py": "2f9b84d1a8a7c854e716cce17ec041550fc2d075bc47224de361a35181fb8d4b",
+    "src\\agentkernel\\concurrency\\mock_inference.py": "e4a9fbd1b3cf629810d832814f24d06d31966e921698fc976e6a36e23b67f662",
+    "src\\agentkernel\\concurrency\\models.py": "28161b9b7d26a07dcf6b664a7c75f8c5d364792819160744d53f298f1bfd6df5",
+    "src\\agentkernel\\concurrency\\progress.py": "2af129af639f78ee855845920f46146c7d8153e0d3aae899022c839f43438064",
+    "src\\agentkernel\\concurrency\\smoke.py": "e67007c9b0e2e120360c072922873d7dd4e78a65908c709fc7f521fde5fc83e7",
+    "src\\agentkernel\\concurrency\\__init__.py": "57940d15763ce48b61a3ba211ad21d5c82054f91058871e55164fdc39fc01785",
+    "src\\agentkernel\\core\\enums.py": "9f7e56e9a87a8364e623d808c93a03ae997628cbe143ba7696c957fb632a238d",
+    "src\\agentkernel\\core\\models.py": "d6fa762520d748a474389fe17a5cd4f81ca415cedc376e369971cb1b38cf422a",
+    "src\\agentkernel\\core\\__init__.py": "bce055d99eb968b50e4eb6998fe3ad432d663c04d2e1e30c3a9a1031e0fa2701",
+    "src\\agentkernel\\dashboard\\metrics.py": "40dc29a6ae82efd8b7cf9f59ef625c70ba13dcf6c82fb5b571d2be60da8d8fcd",
+    "src\\agentkernel\\dashboard\\server.py": "2a0f4af514191ec5041497b1f6c661e8b8e082a00655463c8c041ae1765699b8",
+    "src\\agentkernel\\dashboard\\service.py": "15f9ddd77401b66ac7ded5e553e0f6bddbd13a3b0ac129bd520ef1f77e3d98be",
+    "src\\agentkernel\\dashboard\\__init__.py": "aa8e10c9bd5321088ebce9258db9f9ddcb0ed9c4bd6c707cf5b80147818f996c",
+    "src\\agentkernel\\local\\base.py": "82ee510db791ec6fc8b9a699029c44862ef39e3d0f27cb4f85776380ecec9c3f",
+    "src\\agentkernel\\local\\ollama_backend.py": "a5a1c3aa9d9883c40307fd5db1b63b5492b6e3db3c4ca39d0416d6adf3cc90e1",
+    "src\\agentkernel\\local\\__init__.py": "f033f73d25d76624875e7a410773a8ac11f76620e19ea55f522041b5aa2034fe",
+    "src\\agentkernel\\observability\\base.py": "0a4822f11feb4a3c864e5f9bde418b1e4ee5ac0c504d170b3a0a5d9f5622e708",
+    "src\\agentkernel\\observability\\langsmith_observer.py": "e1805c4f90610e1f4ed316b6a0e7cf6582eb5f58199e68d2e3c0628e9fa81c72",
+    "src\\agentkernel\\observability\\noop.py": "cd8c00fe07062f245b3b1d4a5a230abab7b67525ab0c7852ecd9553bb4f65b88",
+    "src\\agentkernel\\observability\\safety.py": "1172bce48e2dd439c13d6b372c7aa9f2988652e8fdbfc69baea37786e79e209c",
+    "src\\agentkernel\\observability\\__init__.py": "4f87e8af87694eb602c55998c11b9dba4a70bf6f1f9f3af6128f58fe14c0e20c",
+    "src\\agentkernel\\providers\\base.py": "e8a08249941ea4493dacba500f3652c6cb555fff978e74a8a4a631ec15d72628",
+    "src\\agentkernel\\providers\\local_rtx.py": "8e8beadac0941acc32862c8db0e2c1d8dd3d0f8a55c6af3c00bf6f9dbc332b49",
+    "src\\agentkernel\\providers\\mock_nebius.py": "d855bc76cacb02eb2d8692196760fc9d7adb30299c5fc0cffeba739e4ad1dfff",
+    "src\\agentkernel\\providers\\nebius_token_factory.py": "7fb82ff0dfcfb6fa461b7e9c7fa33d9509660d3c6ce46595adbab1b81f61bf1e",
+    "src\\agentkernel\\providers\\__init__.py": "9c2fbbcf3cf4c9c4d5988a680e01e4cb13fe9c14f635e45af375fe07efe2f7d1",
+    "src\\agentkernel\\repository\\adaptive.py": "8b7c13308b9080b7001465472eb6a40191a39a3a7b0a34c274546fb46baecf58",
+    "src\\agentkernel\\repository\\adaptive_v3.py": "88456e60c20e455bcb5f66f577005233408cf943765846afb4990a59a7cbd4ef",
+    "src\\agentkernel\\repository\\barrier_diagnostics.py": "46da8a9bfba5e79cab5de9e0a676d4bff3954384271da154ae2fa3743a3de86f",
+    "src\\agentkernel\\repository\\budget.py": "240eb23b9a7ac1749a369cff7d3f85edce4d6f4d49c25486faabbc15d6ee07c3",
+    "src\\agentkernel\\repository\\candidate_reuse.py": "1c9decc2359820c4254a64c5561cb0b43937183c951159f94c53606dfa7cf9f5",
+    "src\\agentkernel\\repository\\context.py": "29a4fb9413bb98ac1ed912aa2f7a05c2e74b67158d8d3057576d8b6cc4342a7a",
+    "src\\agentkernel\\repository\\diagnostics.py": "6afb2d7fc737f76e61a42685a413c19e8744bba467a0d1ff4cbc3de3100dec8c",
+    "src\\agentkernel\\repository\\evidence_correction.py": "f6fc01f209d52843f7c5f35607608f5e02f2aa240199b9326056ff4fa764adfa",
+    "src\\agentkernel\\repository\\learning.py": "e0f62329c494f89492a29c70d591ec09b2791b3a2e5ccd476a18861db298799b",
+    "src\\agentkernel\\repository\\line_repair.py": "96be7475b1fe3ca4cd9e8e22b1f0ea9f85694f02a4023709b5cee0dfc7c8c10f",
+    "src\\agentkernel\\repository\\metrics.py": "7224cc00489b86811278acdc290708de4742e23a0cba39322a2794185c928585",
+    "src\\agentkernel\\repository\\onboarding.py": "fc92cf79bf79ab09834570d2deb93f05fd2bcc1a2bcee52c9859478a84f041aa",
+    "src\\agentkernel\\repository\\product_campaign.py": "c4b59e81508d18cb9f76b2a539b07af45d4aa1198b05b09a660c2bd447579461",
+    "src\\agentkernel\\repository\\remote_repair.py": "7d6dcfd2c425c8f1c035d28dd62abdbc0e68881a2e2fb83acbf56668e7072dd7",
+    "src\\agentkernel\\repository\\specialist.py": "c37fd7b2d57be761fff853c886cd2042b61516a55203be78a20b08f1fcd543a1",
+    "src\\agentkernel\\repository\\__init__.py": "40faa733a0b14709acea54355bf24a53f32f5d67f940da5e5cd5858db138f109",
+    "src\\agentkernel\\repository\\__main__.py": "f7072d32b586db027e912eeb7f101f2a4eed4c55381f04de321a9224423fba61",
+    "src\\agentkernel\\router\\base.py": "6183015291304d0d4c07c4fd20f18682804d61e32a7ce41167bae12347747f9b",
+    "src\\agentkernel\\router\\rule_router.py": "578dbe23d8b1d2c4b3a215e6b4ed1e94d3ce76c2155f8c79ac49db2d27b16d48",
+    "src\\agentkernel\\router\\__init__.py": "552cd275ba3b6bc9831b7215cb545e55b644f946da89b13c8b5a4519e04242ab",
+    "src\\agentkernel\\runtime\\evidence.py": "6d1339e47a92f2b2a50b6317736b65beea65bcce9bde9c714103ee2e632f922c",
+    "src\\agentkernel\\runtime\\kernel.py": "a42ead2d255fe1875e093e56077d1c405bc943cfd3493caac74b758ad2b449b5",
+    "src\\agentkernel\\runtime\\__init__.py": "b0568f9617d33bead634e09bb7cac16ac5c3f93b591d6bed330de45c7a31305a",
+    "src\\agentkernel\\telemetry\\events.py": "36f3e9140c1089d2c27b06bd10416695c0a5c30932775a089975262790f12d93",
+    "src\\agentkernel\\telemetry\\recorder.py": "eff514a694ccc7c1bf3e9b222b6fd837d80523e7926f92650a7bce493d980f2a",
+    "src\\agentkernel\\telemetry\\redaction.py": "1535e2170a9c8c734b8096710d6c7cf572ef15f2ce6731178381055139282b32",
+    "src\\agentkernel\\telemetry\\__init__.py": "319a4ad983f6d97a1e8c4129004e786046cdf54c54d9aedb1f0b993dcc38ecf8",
+    "src\\agentkernel\\verification\\base.py": "216f255bd001e5ee97950466cb9fc1224ebcbe0baa7e4f455e5c2cba4677cd15",
+    "src\\agentkernel\\verification\\mock_verifier.py": "037cb5cb02c4f487a2d9c01b11636af79c82ff0a8bc0aaaad5747066522fef33",
+    "src\\agentkernel\\verification\\__init__.py": "833e36e4e9a3cc7bfc2d785a77f4791f30b97fb930b603c6de4f8f21115a5e70",
+    "src\\agentkernel\\concurrency\\analyzer\\classifier.py": "ca7851ed177b15e03773b5279215dbfa9d3e5aa096a26b9e7653095d83b15d89",
+    "src\\agentkernel\\concurrency\\analyzer\\fingerprints.py": "50ad39ec7c08801eefc51d97e5f9ebc088a46a9ec3f8bc15f21fec92d16e455d",
+    "src\\agentkernel\\concurrency\\analyzer\\routing.py": "ad55f4b5776c7b0ebd49c663a90b577709f62d3d2c2c33321645d560968368b2",
+    "src\\agentkernel\\concurrency\\analyzer\\trace_parser.py": "fd6b3ba23604d35a1940268590e7900ab49e951d9231f7ea96b1e9e4403ca0e0",
+    "src\\agentkernel\\concurrency\\analyzer\\__init__.py": "878545e64cd7983b46129df24de66660d04249b0c4cf2a9d4f440648575afa8b",
+    "src\\agentkernel\\concurrency\\benchmark\\evaluator.py": "12a90262ee435d2dc73a8c3ad2154fd103189c9209a776d9a5574641ea42e69a",
+    "src\\agentkernel\\concurrency\\benchmark\\loader.py": "d411b8af2864ef3fef5ea21e1bc01226484240b33aebcecb21e0ae3f1f676622",
+    "src\\agentkernel\\concurrency\\benchmark\\metrics.py": "c640222334c07c78ff3d807e3bf7b8a4c81b5b77b7dd55a012ed150b1aff1ff1",
+    "src\\agentkernel\\concurrency\\benchmark\\report.py": "d2246c479a9b696fae56261a71a0326a1b7d4209f7c82151b8c1c4bb6b5ec2b7",
+    "src\\agentkernel\\concurrency\\benchmark\\__init__.py": "64b9c9f3fbdb6aae91d2caeeb4b4c94ea4a3c97d22cfda6b5b85212439f1d44e",
+    "src\\agentkernel\\concurrency\\campaign\\manager.py": "95c94465486c53116caae1d73668ce542286f5bca828a724ce5133ea244a407e",
+    "src\\agentkernel\\concurrency\\campaign\\models.py": "12f64969a5d196ee9793b6d95c856e96abca258e28d3b380666e70ceb01096c3",
+    "src\\agentkernel\\concurrency\\campaign\\scheduler.py": "bde47aae558f9efbba89b9a8697dc40c89d8750f0b5bde3947efc5a9c1940032",
+    "src\\agentkernel\\concurrency\\campaign\\__init__.py": "dad857e9f3a357178543caa26d2005c4145efb37149b8ef22047e1caad4078e9",
+    "src\\agentkernel\\concurrency\\compile\\compiler.py": "10c50a08a526e7a3b36d937166587c3073bdad4ff4af1f302a34b59a4b7e0178",
+    "src\\agentkernel\\concurrency\\compile\\models.py": "60473c9a78671a84b384e880bb23e7f333b5f0d221564db94f84ba2d1e89714b",
+    "src\\agentkernel\\concurrency\\compile\\__init__.py": "32594a1363713da9d6ca446eb9ae1566e807b6c22026badefb392fe56e00c89a",
+    "src\\agentkernel\\concurrency\\execution\\models.py": "968b2ec34c05203f1096620e0030e6e02bc93dd4c9a2f20eac742764fa751032",
+    "src\\agentkernel\\concurrency\\execution\\runner.py": "5864081d1f57268a40a4d905bd64a299f6ba5138a1a95bc75224746e41e8ebed",
+    "src\\agentkernel\\concurrency\\execution\\__init__.py": "56a745085405e475a114eae9030aafb94ed08a5ffe9edfb80f30a9d8556305ee",
+    "src\\agentkernel\\concurrency\\instrumentation\\sanitizer.py": "a35bbef29684ea76b005b893cb92cf6d558afb64432eed794d0701615177081e",
+    "src\\agentkernel\\concurrency\\instrumentation\\__init__.py": "4de5d12311f095a5c0bd20ece4cc373f3d00fefad74ffbad5471d09430b8bc09",
+    "src\\agentkernel\\concurrency\\repair\\patch_applier.py": "265daae052bef153bd74eabeeb83c6933d45af6c562626ffbbfcce55678c1a59",
+    "src\\agentkernel\\concurrency\\repair\\patch_parser.py": "7ab835b7c508f68269388d706916d0f2798c8284f94b5a81bce5c073688cffdb",
+    "src\\agentkernel\\concurrency\\repair\\prompts.py": "2720e93c7a682d567defaca104bffa1ffa9ee07e9908affada7cdccc53c79766",
+    "src\\agentkernel\\concurrency\\repair\\source_edits.py": "bc057813fb6290c92ee5386e4eba08dee090027d6c4ccbe8c42f0168f6936b63",
+    "src\\agentkernel\\concurrency\\repair\\__init__.py": "6c7d9ea99e1d1ef0df7daa007052c17f1440d41c4e9c06c31fbfaf157db6e30a",
+    "src\\agentkernel\\concurrency\\sandbox\\base.py": "0c5fadc33626c168b14fe1d133032147cc342ebe7bf5c6180691a55bb1cb896e",
+    "src\\agentkernel\\concurrency\\sandbox\\local.py": "bcfe088fd717fdb8f333fe100fd7dca67b187dcc698e801b6e8d9cba2f7be610",
+    "src\\agentkernel\\concurrency\\sandbox\\nebius.py": "438090f1908c11f79094a0e5f2308cce9748134f2a8126374369aa0f672722b3",
+    "src\\agentkernel\\concurrency\\sandbox\\__init__.py": "7468b522b93aeb4e2597bd3b5617f1554177680b1ac46a584f7fd8861b6d8c14",
+    "src\\agentkernel\\concurrency\\verification\\concurrency_verifier.py": "dcce6ca0534d9c7e1286c5cec18392c595a6a14c7d9e3ecb62af44b028d0e5ed",
+    "src\\agentkernel\\concurrency\\verification\\repair_verifier.py": "5001048bc464d0a54c932891b3c7e7464994ce00ee851477bb6fd7d74cf52a44",
+    "src\\agentkernel\\concurrency\\verification\\semantics.py": "a271eac6ce6b9ab9064a5cef5bf49f62f64446e118e15d9e50d394b305915464",
+    "src\\agentkernel\\concurrency\\verification\\__init__.py": "686726ea1fb55ee44483093cb93b9a908f061b5d0ab7eb216ce7236254f5a019"
+  },
+  "no_reference_repairs_in_prompts": true,
+  "sample_selection": "all eight pre-existing product-v1 test cases; no cherry picking"
+}

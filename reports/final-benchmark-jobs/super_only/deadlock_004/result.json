@@ -1,0 +1,525 @@
+{
+  "fixture": "deadlock_004",
+  "mode": "super_only",
+  "status": "verified",
+  "baseline_status": "failed",
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 10998.962999990908,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_004:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "baeb52aa-a307-404b-a139-bd62a87bacf0",
+          "transport_wall_ms": 3580.026600015117
+        },
+        "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_004:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "baeb52aa-a307-404b-a139-bd62a87bacf0",
+          "transport_wall_ms": 3533.012100000633
+        },
+        "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_004:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "baeb52aa-a307-404b-a139-bd62a87bacf0",
+          "transport_wall_ms": 3885.5130999872927
+        },
+        "stdout": "T1 LOCK cache\nT2 LOCK logger\nT2 WAIT cache\nT1 WAIT logger\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "62f1f413e2e94392",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "cache",
+            "logger"
+          ],
+          [
+            "logger",
+            "cache"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_004:1",
+          "deadlock_004:2",
+          "deadlock_004:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "cache",
+              "logger"
+            ],
+            [
+              "logger",
+              "cache"
+            ]
+          ],
+          "cycle": [
+            "cache",
+            "logger",
+            "cache"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "fingerprints": [
+    {
+      "fingerprint_id": "62f1f413e2e94392",
+      "pattern": "cyclic_lock_wait",
+      "threads": [
+        "T1",
+        "T2"
+      ],
+      "lock_orders": [
+        [
+          "cache",
+          "logger"
+        ],
+        [
+          "logger",
+          "cache"
+        ]
+      ],
+      "confidence": 0.9,
+      "occurrences": 3,
+      "representative_runs": [
+        "deadlock_004:1",
+        "deadlock_004:2",
+        "deadlock_004:3"
+      ],
+      "evidence": {
+        "edges": [
+          [
+            "cache",
+            "logger"
+          ],
+          [
+            "logger",
+            "cache"
+          ]
+        ],
+        "cycle": [
+          "cache",
+          "logger",
+          "cache"
+        ],
+        "finding_locations": []
+      }
+    }
+  ],
+  "route": [
+    "SUPER"
+  ],
+  "model_attempts": [
+    {
+      "tier": "SUPER",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "input_tokens": 2271,
+      "output_tokens": 756,
+      "latency_ms": 8092.540300014662,
+      "retry_count": 0,
+      "reasoning_tokens": 0,
+      "requested_max_output_tokens": 2048,
+      "requested_enable_thinking": false,
+      "error_hint": null,
+      "finish_reason": "stop",
+      "request_id": "909322cb3126f7e42e9762b960e0323f",
+      "error_code": null,
+      "verification_reason": "The patch passed the configured verification campaign."
+    }
+  ],
+  "repairs": [
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "Circular wait deadlock due to inconsistent lock ordering combined with barrier synchronization. Thread T1 holds cache_lock then waits at barrier before acquiring log_lock, while thread T2 holds log_lock then waits at same barrier before acquiring cache_lock. Both threads block at barrier waiting for each other, creating a deadlock cycle where neither can proceed to release their held lock.",
+        "root_cause": "Threads acquire locks in opposite order (cache then logger vs logger then cache) and then synchronize on a barrier while still holding their initial locks. This creates a classic circular wait condition: T1 holds cache_lock and waits for T2 to reach barrier, T2 holds log_lock and waits for T1 to reach barrier, but neither can proceed because each is waiting for the other to release their lock via barrier participation.",
+        "confidence": 0.95,
+        "reasoning_summary": "Evidence shows cyclic lock wait: T1 locks cache then waits for logger, T2 locks logger then waits for cache. Barrier synchronization occurs while locks are held, preventing progress. Fix releases locks before barrier to break circular wait while preserving synchronization semantics.",
+        "expected_effect": "Threads will acquire and release locks before barrier synchronization, eliminating circular wait. Both threads can reach barrier, proceed past it, then re-acquire locks in consistent order (cache then logger) to complete work without deadlock.",
+        "risk_notes": [
+          "Changed locking order may affect atomicity of cache_value reads if intermediate updates occur between unlock and relock",
+          "Barrier participation now occurs without holding locks, which may alter timing-dependent behavior"
+        ],
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -10,15 +10,17 @@\n static int cache_value=42, logged_value, logs, reads;\n static void *cache_reader(void *unused) {\n     (void)unused; pthread_mutex_lock(&cache_lock); puts(\"T1 LOCK cache\");\n+    pthread_mutex_unlock(&cache_lock);\n     pthread_barrier_wait(&ready); puts(\"T1 WAIT logger\"); pthread_mutex_lock(&log_lock);\n     logged_value=cache_value; reads++; logs++;\n-    pthread_mutex_unlock(&log_lock); pthread_mutex_unlock(&cache_lock); return NULL;\n+    pthread_mutex_unlock(&log_lock); return NULL;\n }\n static void *logger(void *unused) {\n     (void)unused; pthread_mutex_lock(&log_lock); puts(\"T2 LOCK logger\");\n+    pthread_mutex_unlock(&log_lock);\n     pthread_barrier_wait(&ready); puts(\"T2 WAIT cache\"); pthread_mutex_lock(&cache_lock);\n     logged_value=cache_value; reads++; logs++;\n-    pthread_mutex_unlock(&cache_lock); pthread_mutex_unlock(&log_lock); return NULL;\n+    pthread_mutex_unlock(&cache_lock); return NULL;\n }\n int main(void) {\n     pthread_t a,b; setvbuf(stdout,NULL,_IONBF,0); pthread_barrier_init(&ready,NULL,2);\n"
+      },
+      "patch": {
+        "success": true,
+        "files_changed": [
+          "main.c"
+        ],
+        "rejected_paths": [],
+        "error": null,
+        "error_code": null,
+        "repair_hint": null,
+        "source_line": null,
+        "patch_hash": "c0bacd2b6ad690f22675c9569a8e79463817e4c300533bb9e7e1bd533f2389cf"
+      },
+      "false_fix": false,
+      "verification": {
+        "passed": true,
+        "build_passed": true,
+        "total_runs": 100,
+        "passed_runs": 100,
+        "failed_runs": 0,
+        "race_count": null,
+        "deadlock_count": 0,
+        "crash_count": 0,
+        "infrastructure_failures": 0,
+        "observed_program_failures": 0,
+        "sanitizer_findings": [],
+        "regressions": [],
+        "duration_ms": 177330.70363798246,
+        "evidence": {
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "main.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 166.81543800000003,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "68137bc6-7f9c-45c7-96fb-fb6c029a521f",
+              "transport_wall_ms": 2329.0822000126354
+            },
+            "success": true
+          },
+          "original_tests": {
+            "passed": true,
+            "results": [],
+            "configured": false
+          },
+          "campaign": {
+            "total_runs": 100,
+            "failed_runs": 0,
+            "infrastructure_failures": 0,
+            "requested_runs": 100,
+            "execution_blocked": false,
+            "counts": {
+              "PASS": 100
+            },
+            "duration_ms": 173055.72830000892,
+            "representative_runs": []
+          },
+          "semantic": {
+            "configured": true,
+            "passed": true,
+            "required_passed": true,
+            "regression": false,
+            "infrastructure_failures": 0,
+            "checks": [
+              {
+                "name": "Two reads and log writes preserve cache value",
+                "required": true,
+                "passed": true,
+                "infrastructure_failure": false,
+                "build": {
+                  "command": [
+                    "gcc",
+                    "-pthread",
+                    "-g",
+                    "-O1",
+                    "oracle.c",
+                    "-o",
+                    "semantic"
+                  ],
+                  "exit_code": 0,
+                  "stdout": "",
+                  "stderr": "",
+                  "duration_ms": 166.63622900000001,
+                  "timed_out": false,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "53b9afa1-4abf-4b10-93a5-528e9fb51209",
+                    "transport_wall_ms": 2328.5009999817703
+                  }
+                },
+                "run": {
+                  "command": [
+                    "./semantic"
+                  ],
+                  "exit_code": 0,
+                  "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\nPASS\nSEMANTIC_PASS\n",
+                  "stderr": "",
+                  "duration_ms": 5.4379940000000015,
+                  "timed_out": false,
+                  "metadata": {
+                    "execution_backend": "nebius",
+                    "output_truncated": false,
+                    "remote_image_id": "53b9afa1-4abf-4b10-93a5-528e9fb51209",
+                    "transport_wall_ms": 1779.0281000197865
+                  }
+                }
+              }
+            ]
+          },
+          "sanitizer": {
+            "status": "not_configured"
+          }
+        },
+        "reason": "The patch passed the configured verification campaign.",
+        "execution_passed": true,
+        "semantic_passed": true,
+        "sanitizer_passed": null,
+        "semantic_regression": false,
+        "false_fix": false
+      },
+      "candidate_sources": {
+        "main.c": "#include <pthread.h>\n#include <stdio.h>\n#include <stdint.h>\n#include <assert.h>\n#include <stdatomic.h>\n#include \"stress.h\"\n\nstatic pthread_mutex_t cache_lock = PTHREAD_MUTEX_INITIALIZER, log_lock = PTHREAD_MUTEX_INITIALIZER;\nstatic pthread_barrier_t ready;\nstatic int cache_value=42, logged_value, logs, reads;\nstatic void *cache_reader(void *unused) {\n    (void)unused; pthread_mutex_lock(&cache_lock); puts(\"T1 LOCK cache\");\n    pthread_mutex_unlock(&cache_lock);\n    pthread_barrier_wait(&ready); puts(\"T1 WAIT logger\"); pthread_mutex_lock(&log_lock);\n    logged_value=cache_value; reads++; logs++;\n    pthread_mutex_unlock(&log_lock); return NULL;\n}\nstatic void *logger(void *unused) {\n    (void)unused; pthread_mutex_lock(&log_lock); puts(\"T2 LOCK logger\");\n    pthread_mutex_unlock(&log_lock);\n    pthread_barrier_wait(&ready); puts(\"T2 WAIT cache\"); pthread_mutex_lock(&cache_lock);\n    logged_value=cache_value; reads++; logs++;\n    pthread_mutex_unlock(&cache_lock); return NULL;\n}\nint main(void) {\n    pthread_t a,b; setvbuf(stdout,NULL,_IONBF,0); pthread_barrier_init(&ready,NULL,2);\n    pthread_create(&a,NULL,cache_reader,NULL); pthread_create(&b,NULL,logger,NULL);\n    pthread_join(a,NULL); pthread_join(b,NULL); pthread_barrier_destroy(&ready); puts(\"PASS\"); return 0;\n}\n"
+      }
+    }
+  ],
+  "patches": [
+    "--- a/main.c\n+++ b/main.c\n@@ -10,15 +10,17 @@\n static int cache_value=42, logged_value, logs, reads;\n static void *cache_reader(void *unused) {\n     (void)unused; pthread_mutex_lock(&cache_lock); puts(\"T1 LOCK cache\");\n+    pthread_mutex_unlock(&cache_lock);\n     pthread_barrier_wait(&ready); puts(\"T1 WAIT logger\"); pthread_mutex_lock(&log_lock);\n     logged_value=cache_value; reads++; logs++;\n-    pthread_mutex_unlock(&log_lock); pthread_mutex_unlock(&cache_lock); return NULL;\n+    pthread_mutex_unlock(&log_lock); return NULL;\n }\n static void *logger(void *unused) {\n     (void)unused; pthread_mutex_lock(&log_lock); puts(\"T2 LOCK logger\");\n+    pthread_mutex_unlock(&log_lock);\n     pthread_barrier_wait(&ready); puts(\"T2 WAIT cache\"); pthread_mutex_lock(&cache_lock);\n     logged_value=cache_value; reads++; logs++;\n-    pthread_mutex_unlock(&cache_lock); pthread_mutex_unlock(&log_lock); return NULL;\n+    pthread_mutex_unlock(&cache_lock); return NULL;\n }\n int main(void) {\n     pthread_t a,b; setvbuf(stdout,NULL,_IONBF,0); pthread_barrier_init(&ready,NULL,2);\n"
+  ],
+  "verification_progress": {
+    "completed": 100,
+    "required": 100
+  },
+  "execution_passed": true,
+  "semantic_passed": true,
+  "sanitizer_passed": null,
+  "semantic_checks": {
+    "configured": true,
+    "passed": true,
+    "required_passed": true,
+    "regression": false,
+    "infrastructure_failures": 0,
+    "checks": [
+      {
+        "name": "Two reads and log writes preserve cache value",
+        "required": true,
+        "passed": true,
+        "infrastructure_failure": false,
+        "build": {
+          "command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "oracle.c",
+            "-o",
+            "semantic"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "duration_ms": 166.63622900000001,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "53b9afa1-4abf-4b10-93a5-528e9fb51209",
+            "transport_wall_ms": 2328.5009999817703
+          }
+        },
+        "run": {
+          "command": [
+            "./semantic"
+          ],
+          "exit_code": 0,
+          "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\nPASS\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 5.4379940000000015,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "53b9afa1-4abf-4b10-93a5-528e9fb51209",
+            "transport_wall_ms": 1779.0281000197865
+          }
+        }
+      }
+    ]
+  },
+  "sanitizer_checks": {
+    "status": "not_configured"
+  },
+  "patch_accepted": true,
+  "build_passed": true,
+  "input_tokens": 2271,
+  "output_tokens": 756,
+  "reasoning_tokens": 0,
+  "inference_latency_ms": 8092.540300014662,
+  "execution_latency_ms": 188496.41644797337,
+  "end_to_end_latency_ms": 209846.95750000537,
+  "verification_runs": 100,
+  "passes": 100,
+  "deadlocks": 0,
+  "races": null,
+  "crashes": 0,
+  "infrastructure_failures": 0,
+  "false_fix": false,
+  "final_tier": "SUPER",
+  "format_rejections": 0,
+  "patch_rejections": 0,
+  "nano_calls": 0,
+  "super_calls": 1,
+  "ultra_calls": 0,
+  "cost_usd": null,
+  "grounding": {
+    "used": false,
+    "reason": null,
+    "status": "not_needed",
+    "results": []
+  },
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "confirmed",
+    "spans_submitted": 17,
+    "spans_observed": [
+      {
+        "id": "6723b97c-7202-4c56-bc78-04b19218fd95",
+        "name": "concurrency_job",
+        "parent_id": null
+      },
+      {
+        "id": "d1f57ccc-5272-40ee-8a50-f034cb125083",
+        "name": "baseline",
+        "parent_id": "6723b97c-7202-4c56-bc78-04b19218fd95"
+      },
+      {
+        "id": "01d4206e-9871-4e7f-abbf-efd914c92784",
+        "name": "compile",
+        "parent_id": "d1f57ccc-5272-40ee-8a50-f034cb125083"
+      },
+      {
+        "id": "f460b54a-e1c6-4335-8ace-2d87535e21f7",
+        "name": "baseline_compile",
+        "parent_id": "01d4206e-9871-4e7f-abbf-efd914c92784"
+      },
+      {
+        "id": "e1fd9f3d-1ee3-45d8-a2f7-11533c4343c9",
+        "name": "campaign",
+        "parent_id": "d1f57ccc-5272-40ee-8a50-f034cb125083"
+      },
+      {
+        "id": "cf6b197c-849c-4855-a1a4-d65ec465fa4d",
+        "name": "baseline_stress_campaign",
+        "parent_id": "e1fd9f3d-1ee3-45d8-a2f7-11533c4343c9"
+      },
+      {
+        "id": "3bfd0021-0c49-4b2b-835d-a4a12ea5cec0",
+        "name": "analysis",
+        "parent_id": "6723b97c-7202-4c56-bc78-04b19218fd95"
+      },
+      {
+        "id": "87bee4ac-c6cb-433f-8915-1c2ca3ba4efc",
+        "name": "fingerprint",
+        "parent_id": "3bfd0021-0c49-4b2b-835d-a4a12ea5cec0"
+      },
+      {
+        "id": "91606dc9-3ada-4e26-9471-c0d9e2b4cfad",
+        "name": "fingerprint_analysis",
+        "parent_id": "87bee4ac-c6cb-433f-8915-1c2ca3ba4efc"
+      },
+      {
+        "id": "261b40d5-a402-4e19-9195-40dd7624ff34",
+        "name": "repair_1",
+        "parent_id": "6723b97c-7202-4c56-bc78-04b19218fd95"
+      },
+      {
+        "id": "ef306ae7-203e-4008-a386-604299abc754",
+        "name": "super_diagnosis",
+        "parent_id": "261b40d5-a402-4e19-9195-40dd7624ff34"
+      },
+      {
+        "id": "9c0c2121-fd4b-4df6-b362-9716f9ced355",
+        "name": "patch",
+        "parent_id": "261b40d5-a402-4e19-9195-40dd7624ff34"
+      },
+      {
+        "id": "3964efc0-df2c-403f-8013-f6881e2b5b98",
+        "name": "patch_application",
+        "parent_id": "9c0c2121-fd4b-4df6-b362-9716f9ced355"
+      },
+      {
+        "id": "a711428b-777b-474e-8323-f8142c1afc89",
+        "name": "compile",
+        "parent_id": "261b40d5-a402-4e19-9195-40dd7624ff34"
+      },
+      {
+        "id": "9195c5fc-574a-45ee-9c03-88106b9ba150",
+        "name": "verification",
+        "parent_id": "261b40d5-a402-4e19-9195-40dd7624ff34"
+      },
+      {
+        "id": "8f819c02-e00c-46a9-b6d0-aed5b43be86a",
+        "name": "verification_campaign",
+        "parent_id": "9195c5fc-574a-45ee-9c03-88106b9ba150"
+      },
+      {
+        "id": "d416cfda-3b6d-41b5-afde-e0632cc2ab83",
+        "name": "feedback",
+        "parent_id": "261b40d5-a402-4e19-9195-40dd7624ff34"
+      }
+    ],
+    "feedback_submitted": 18,
+    "trace_ids": [
+      "6723b97c-7202-4c56-bc78-04b19218fd95"
+    ]
+  },
+  "source_sha256": {
+    "main.c": "72439596bce194f7ee08d9db67082889188605bd2a5e29529f7b5750ba09a437",
+    "oracle.c": "2c0a46fcb4663ba9173e3193ad281522bb5f6818b69232e379a93bb8ca1081e6",
+    "stress.h": "1a2ecf8f7805b0be74d4005282c9878ccb3cf56b323d2e752d2405902e220d48"
+  },
+  "inference_mode": "real"
+}

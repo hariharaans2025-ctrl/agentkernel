@@ -1,0 +1,17 @@
+{
+  "id": "zero_shot-rwlock_mode",
+  "arm": "zero_shot",
+  "outcome": "rejected",
+  "false_fix": true,
+  "tokens": 1906,
+  "inference_ms": 9661.93410003325,
+  "verification_ms": 1438.6051000328735,
+  "end_to_end_ms": 17510.73959999485,
+  "model_calls": 1,
+  "input_tokens": 1327,
+  "output_tokens": 579,
+  "inference_cost_usd": 0.0003064,
+  "stress_passed": 0,
+  "semantic_passed": null,
+  "tsan_passed": null
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="56" time="16.184" timestamp="2026-10-12T17:33:49.514687+00:00" hostname="hostname"><testcase classname="tests.test_concurrency_f" name="test_valid_patch_only_mutates_copy" time="0.008" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[../main.c]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[/tmp/main.c]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[C:/main.c]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[sub/../../main.c]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[.env]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_patch_rejects_untrusted_paths[tests.py]" time="0.002" /><testcase classname="tests.test_concurrency_f" name="test_context_mismatch_and_multi_file_atomicity" time="0.003" /><testcase classname="tests.test_concurrency_g" name="test_nano_contract_retry_once" time="0.003" /><testcase classname="tests.test_concurrency_g" name="test_super_default_ultra_for_complex_evidence" time="0.001" /><testcase classname="tests.test_concurrency_g" name="test_repair_rejects_model_commands" time="0.001" /><testcase classname="tests.test_concurrency_g" name="test_real_c_deadlock_repaired_and_ultra_has_evidence" time="6.149"><failure message="Failed: {&#10;  &quot;status&quot;: &quot;unresolved&quot;,&#10;  &quot;repairs&quot;: [&#10;    {&#10;      &quot;tier&quot;: &quot;SUPER&quot;,&#10;      &quot;proposal&quot;: {&#10;        &quot;diagnosis&quot;: &quot;Scripted demonstration hypothesis based on a recognized fixture shape.&quot;,&#10;        &quot;root_cause&quot;: &quot;Conflicting lock order or an unprotected counter increment.&quot;,&#10;        &quot;confidence&quot;: 0.8,&#10;        &quot;reasoning_summary&quot;: &quot;Mock candidate; real execution must determine acceptance.&quot;,&#10;        &quot;expected_effect&quot;: &quot;Consistent lock ordering or serialized shared updates.&quot;,&#10;        &quot;risk_notes&quot;: [&#10;          &quot;Scripted mock; not a claim about general model repair capability.&quot;&#10;        ],&#10;        &quot;patch&quot;: &quot;--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = 999;\n-    pthread_mutex_t *first = id == 1 ? &amp;a : &amp;b;\n-    pthread_mutex_t *second = id == 1 ? &amp;b : &amp;a;\n+    pthread_mutex_t *first = &amp;a;\n+    pthread_mutex_t *second = &amp;b;\n+    pthread_barrier_wait(&amp;ready);\n     pthread_mutex_lock(first);\n     printf(\&quot;T%d LOCK %s\\n\&quot;, id, first == &amp;a ? \&quot;A\&quot; : \&quot;B\&quot;);\n-    pthread_barrier_wait(&amp;ready);\n     printf(\&quot;T%d WAIT %s\\n\&quot;, id, second == &amp;a ? \&quot;A\&quot; : \&quot;B\&quot;);\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n&quot;&#10;      },&#10;      &quot;patch&quot;: {&#10;        &quot;success&quot;: false,&#10;        &quot;files_changed&quot;: [],&#10;        &quot;rejected_paths&quot;: [],&#10;        &quot;error&quot;: &quot;Patch context does not match original source&quot;,&#10;        &quot;error_code&quot;: &quot;context_mismatch&quot;,&#10;        &quot;repair_hint&quot;: &quot;Copy search blocks from ORIGINAL source, preserving whitespace, line endings and C escapes. Do not base edits on a rejected candidate.&quot;,&#10;        &quot;source_line&quot;: 10,&#10;        &quot;patch_hash&quot;: &quot;feb579ad13f8c4e02a990790030aa8f1cd901f64187defd942de4ea959c61753&quot;&#10;      },&#10;      &quot;false_fix&quot;: false&#10;    }&#10;  ]&#10;}">tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_real_c_deadlock_repaired_0')
+
+    @pytest.mark.integration
+    def test_real_c_deadlock_repaired_and_ultra_has_evidence(tmp_path: Path) -&gt; None:
+        compiler = os.getenv("AK_TEST_CC")
+        if not compiler:
+            pytest.skip("Set AK_TEST_CC to a gcc/clang executable")
+        data = json.loads((BENCHMARK / "task.json").read_text())
+        task = ConcurrencyTask(workspace=BENCHMARK, **data)
+        task.build_command[0] = compiler
+        if os.name == "nt":
+            task.build_command.insert(1, "-static")
+        snapshot = (BENCHMARK / "main.c").read_bytes()
+        calls = []
+        def response(request: TaskRequest, routing: object) -&gt; str:
+            calls.append(request)
+            output = mock_concurrency_response(request, routing)
+            if request.metadata["phase"] == "repair" and routing.selected_tier == InferenceTier.SUPER:
+                proposal = json.loads(output)
+                proposal["patch"] = proposal["patch"].replace("static pthread_barrier_t ready;", "not the original context")
+                # An invalid context is deterministic failure evidence for both SUPER attempts.
+                proposal["patch"] = proposal["patch"].replace("int id = (int)(intptr_t)arg;", "int id = 999;")
+                output = json.dumps(proposal)
+            return output
+        recorder = TelemetryRecorder()
+        app = ConcurrencyBugHunter(MockNebiusProvider(response), recorder, temporary_parent=tmp_path)
+        result = asyncio.run(app.run(task))
+        if result.status == "execution_blocked":
+            pytest.skip("Host Application Control blocked the generated program; native integration is unavailable")
+        if result.status != "verified":
+&gt;           pytest.fail(json.dumps({"status": result.status, "repairs": result.repairs}, indent=2))
+E           Failed: {
+E             "status": "unresolved",
+E             "repairs": [
+E               {
+E                 "tier": "SUPER",
+E                 "proposal": {
+E                   "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+E                   "root_cause": "Conflicting lock order or an unprotected counter increment.",
+E                   "confidence": 0.8,
+E                   "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+E                   "expected_effect": "Consistent lock ordering or serialized shared updates.",
+E                   "risk_notes": [
+E                     "Scripted mock; not a claim about general model repair capability."
+E                   ],
+E                   "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = 999;\n-    pthread_mutex_t *first = id == 1 ? &amp;a : &amp;b;\n-    pthread_mutex_t *second = id == 1 ? &amp;b : &amp;a;\n+    pthread_mutex_t *first = &amp;a;\n+    pthread_mutex_t *second = &amp;b;\n+    pthread_barrier_wait(&amp;ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &amp;a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&amp;ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &amp;a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n"
+E                 },
+E                 "patch": {
+E                   "success": false,
+E                   "files_changed": [],
+E                   "rejected_paths": [],
+E                   "error": "Patch context does not match original source",
+E                   "error_code": "context_mismatch",
+E                   "repair_hint": "Copy search blocks from ORIGINAL source, preserving whitespace, line endings and C escapes. Do not base edits on a rejected candidate.",
+E                   "source_line": 10,
+E                   "patch_hash": "feb579ad13f8c4e02a990790030aa8f1cd901f64187defd942de4ea959c61753"
+E                 },
+E                 "false_fix": false
+E               }
+E             ]
+E           }
+
+tests/test_concurrency_g.py:80: Failed</failure></testcase><testcase classname="tests.test_concurrency_g" name="test_applied_false_fix_executes_fails_then_ultra_repairs" time="2.477" /><testcase classname="tests.test_concurrency_h" name="test_real_provider_catalog_usage_nullable_cost[False]" time="0.003" /><testcase classname="tests.test_concurrency_h" name="test_real_provider_catalog_usage_nullable_cost[True]" time="0.002" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[unavailable-configured_model_unavailable]" time="0.002" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[429-rate_limited]" time="1.505" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[401-authentication_or_access_denied]" time="0.002" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[timeout-timeout]" time="1.504" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[malformed-malformed_response]" time="0.002" /><testcase classname="tests.test_concurrency_h" name="test_structured_provider_errors[bad_catalog-malformed_catalog]" time="0.001" /><testcase classname="tests.test_concurrency_h" name="test_no_key_no_network" time="0.001" /><testcase classname="tests.test_concurrency_h" name="test_redacted_telemetry" time="0.002" /><testcase classname="tests.test_concurrency_i" name="test_suite_has_five_distinct_races_and_deadlocks" time="0.011" /><testcase classname="tests.test_concurrency_i" name="test_loader_rejects_escape_and_evaluation_leaks[../escape.c]" time="0.002" /><testcase classname="tests.test_concurrency_i" name="test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]" time="0.002" /><testcase classname="tests.test_concurrency_i" name="test_loader_rejects_escape_and_evaluation_leaks[reference.patch]" time="0.002" /><testcase classname="tests.test_concurrency_i" name="test_loader_rejects_escape_and_evaluation_leaks[.env]" time="0.002" /><testcase classname="tests.test_concurrency_i" name="test_false_fix_metrics_and_mock_measurement_provenance" time="0.001" /><testcase classname="tests.test_concurrency_i" name="test_missing_required_sanitizer_cannot_be_verified" time="0.054" /><testcase classname="tests.test_concurrency_i" name="test_all_c_fixtures_compile_and_deadlocks_reproduce" time="2.078"><failure message="AssertionError: main.c:6:10: fatal error: stress.h: No such file or directory&#10;      6 | #include &quot;stress.h&quot;&#10;        |          ^~~~~~~~~~&#10;  compilation terminated.&#10;  &#10;assert False&#10; +  where False = CompileResult(command=['gcc', '-pthread', '-g', '-O1', 'main.c', '-o', 'app'], exit_code=1, stdout='', stderr='main.c:...n terminated.\n', duration_ms=20.301400000001024, timed_out=False, metadata={'output_truncated': False}, success=False).success">@pytest.mark.integration
+    def test_all_c_fixtures_compile_and_deadlocks_reproduce() -&gt; None:
+        compiler = os.getenv("AK_TEST_CC")
+        if not compiler:
+            pytest.skip("Set AK_TEST_CC to gcc/clang")
+        async def run() -&gt; None:
+            for folder in discover_tasks(ROOT):
+                task = load_task(folder, compiler=compiler, static=os.name == "nt", stress_runs=1)
+                async with LocalSandboxBackend() as sandbox:
+                    await sandbox.upload_project(task.workspace, task.source_files)
+                    build = await CCompiler().compile(task, sandbox)
+                    if build.metadata.get("execution_policy_blocked"):
+                        pytest.skip("Host execution policy blocks the compiler")
+                    assert build.success, build.stderr
+                    campaign = await StressCampaignManager().run(task, sandbox)
+                    if campaign.execution_blocked:
+                        pytest.skip("Host execution policy blocks generated native programs")
+                    if task.expected_bug_category == "deadlock":
+                        assert campaign.runs[0].timed_out
+&gt;       asyncio.run(run())
+
+tests/test_concurrency_i.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    async def run() -&gt; None:
+        for folder in discover_tasks(ROOT):
+            task = load_task(folder, compiler=compiler, static=os.name == "nt", stress_runs=1)
+            async with LocalSandboxBackend() as sandbox:
+                await sandbox.upload_project(task.workspace, task.source_files)
+                build = await CCompiler().compile(task, sandbox)
+                if build.metadata.get("execution_policy_blocked"):
+                    pytest.skip("Host execution policy blocks the compiler")
+&gt;               assert build.success, build.stderr
+E               AssertionError: main.c:6:10: fatal error: stress.h: No such file or directory
+E                     6 | #include "stress.h"
+E                       |          ^~~~~~~~~~
+E                 compilation terminated.
+E                 
+E               assert False
+E                +  where False = CompileResult(command=['gcc', '-pthread', '-g', '-O1', 'main.c', '-o', 'app'], exit_code=1, stdout='', stderr='main.c:...n terminated.\n', duration_ms=20.301400000001024, timed_out=False, metadata={'output_truncated': False}, success=False).success
+
+tests/test_concurrency_i.py:81: AssertionError</failure></testcase><testcase classname="tests.test_concurrency_i" name="test_real_tsan_counter_repair" time="1.232" /><testcase classname="tests.test_concurrency_j" name="test_cli_json_and_telemetry" time="0.034" /><testcase classname="tests.test_concurrency_j" name="test_cli_bad_config_structured_error" time="0.005" /><testcase classname="tests.test_concurrency_j" name="test_cli_models_no_key_no_network" time="0.004" /><testcase classname="tests.test_concurrency_j" name="test_cli_all_comparison_modes" time="0.109" /><testcase classname="tests.test_concurrency_j" name="test_deep_lock_graph_cycle_without_recursion_limit" time="0.007" /><testcase classname="tests.test_concurrency_j" name="test_false_fix_counts_instrumented_campaign_failure" time="0.001" /><testcase classname="tests.test_concurrency_policy_block" name="test_host_block_stops_campaign_without_retry" time="0.002" /><testcase classname="tests.test_concurrency_policy_block" name="test_infrastructure_failure_is_not_false_fix_or_regression" time="0.002" /><testcase classname="tests.test_concurrency_policy_block" name="test_nonretryable_verifier_stops_runtime" time="0.002" /><testcase classname="tests.test_concurrency_policy_block" name="test_blocked_compile_never_reaches_models" time="0.004" /><testcase classname="tests.test_concurrency_policy_block" name="test_os_policy_error_is_structured" time="0.002" /><testcase classname="tests.test_concurrency_policy_block" name="test_benchmark_stops_all_modes_after_host_policy_denial" time="0.007" /><testcase classname="tests.test_dashboard" name="test_real_job_wiring_frozen_source_budget_history" time="0.015" /><testcase classname="tests.test_dashboard" name="test_stop_after_current_model_and_busy_guard" time="0.014" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override0]" time="0.004" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override1]" time="0.004" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override2]" time="0.004" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override3]" time="0.004" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override4]" time="0.004" /><testcase classname="tests.test_dashboard" name="test_invalid_requests_never_start[override5]" time="0.003" /><testcase classname="tests.test_dashboard" name="test_restart_marks_interrupted_without_rerunning" time="0.005" /><testcase classname="tests.test_dashboard" name="test_loopback_http_csrf_static_and_no_secrets" time="0.553" /><testcase classname="tests.test_dashboard_metrics" name="test_combined_unknown_usage_and_weighted_verification" time="0.001" /><testcase classname="tests.test_dashboard_metrics" name="test_budget_is_enforced_on_actual_http_payload" time="0.002" /></testsuite></testsuites>

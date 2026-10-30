@@ -1,0 +1,38 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "-ra",
+    "-o",
+    "addopts=",
+    "-m",
+    "not nebius and not langsmith and not gpu",
+    "-p",
+    "scripts.remote_test_recorder",
+    "--ak-report",
+    "test-batch-02.json",
+    "--junitxml",
+    "test-batch-02.xml",
+    "tests/test_concurrency_f.py",
+    "tests/test_concurrency_g.py",
+    "tests/test_concurrency_h.py",
+    "tests/test_concurrency_i.py",
+    "tests/test_concurrency_j.py",
+    "tests/test_concurrency_policy_block.py",
+    "tests/test_dashboard.py",
+    "tests/test_dashboard_metrics.py"
+  ],
+  "exit_code": 0,
+  "stdout": "........................................................                 [100%]\n56 passed in 25.28s\n",
+  "stderr": "",
+  "duration_ms": 25703.129816,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "d1fb5414-7a45-4ea4-9464-65afd71e2bbf",
+    "transport_wall_ms": 32096.62969999954
+  }
+}

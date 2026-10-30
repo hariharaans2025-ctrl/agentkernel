@@ -1,0 +1,27 @@
+{
+  "command": [
+    "gcc",
+    "-std=gnu11",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-Isrc",
+    "-I.",
+    "src/threadpool.c",
+    "acceptance/semantics.c",
+    "-o",
+    "acceptance_app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 267.090887,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "c42ffa80-0937-4606-bfb2-61dc9a04f84b",
+    "transport_wall_ms": 2324.6350000008533
+  },
+  "success": true
+}

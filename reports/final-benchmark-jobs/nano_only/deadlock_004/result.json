@@ -1,0 +1,288 @@
+{
+  "fixture": "deadlock_004",
+  "mode": "nano_only",
+  "status": "unresolved",
+  "baseline_status": "failed",
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 14814.341099990997,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_004:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "15acdbb9-aa0a-467c-a8a6-f7e123185f87",
+          "transport_wall_ms": 3993.472300004214
+        },
+        "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_004:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "15acdbb9-aa0a-467c-a8a6-f7e123185f87",
+          "transport_wall_ms": 3584.489200002281
+        },
+        "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_004:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "15acdbb9-aa0a-467c-a8a6-f7e123185f87",
+          "transport_wall_ms": 7236.042600008659
+        },
+        "stdout": "T2 LOCK logger\nT1 LOCK cache\nT1 WAIT logger\nT2 WAIT cache\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "62f1f413e2e94392",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "cache",
+            "logger"
+          ],
+          [
+            "logger",
+            "cache"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_004:1",
+          "deadlock_004:2",
+          "deadlock_004:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "cache",
+              "logger"
+            ],
+            [
+              "logger",
+              "cache"
+            ]
+          ],
+          "cycle": [
+            "cache",
+            "logger",
+            "cache"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "fingerprints": [
+    {
+      "fingerprint_id": "62f1f413e2e94392",
+      "pattern": "cyclic_lock_wait",
+      "threads": [
+        "T1",
+        "T2"
+      ],
+      "lock_orders": [
+        [
+          "cache",
+          "logger"
+        ],
+        [
+          "logger",
+          "cache"
+        ]
+      ],
+      "confidence": 0.9,
+      "occurrences": 3,
+      "representative_runs": [
+        "deadlock_004:1",
+        "deadlock_004:2",
+        "deadlock_004:3"
+      ],
+      "evidence": {
+        "edges": [
+          [
+            "cache",
+            "logger"
+          ],
+          [
+            "logger",
+            "cache"
+          ]
+        ],
+        "cycle": [
+          "cache",
+          "logger",
+          "cache"
+        ],
+        "finding_locations": []
+      }
+    }
+  ],
+  "route": [
+    "NANO"
+  ],
+  "model_attempts": [
+    {
+      "tier": "NANO",
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "input_tokens": 2276,
+      "output_tokens": 2048,
+      "latency_ms": 7328.599700005725,
+      "retry_count": 0,
+      "reasoning_tokens": null,
+      "requested_max_output_tokens": 2048,
+      "requested_enable_thinking": null,
+      "error_hint": "The total output budget was exhausted before a complete answer was returned; inspect actual_reasoning_tokens and requested_enable_thinking. No partial response is accepted and no automatic retry is made.",
+      "finish_reason": "length",
+      "request_id": "e493c89e45635b8ccfe8189daed076dd",
+      "error_code": "incomplete_response",
+      "verification_reason": "Inference failed. Inference failed; no patch was applied."
+    }
+  ],
+  "repairs": [],
+  "patches": [],
+  "verification_progress": {
+    "completed": null,
+    "required": 100
+  },
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_checks": null,
+  "sanitizer_checks": null,
+  "patch_accepted": false,
+  "build_passed": null,
+  "input_tokens": 2276,
+  "output_tokens": 2048,
+  "reasoning_tokens": null,
+  "inference_latency_ms": 7328.599700005725,
+  "execution_latency_ms": 14981.061364990997,
+  "end_to_end_latency_ms": 29610.010600008536,
+  "verification_runs": null,
+  "passes": null,
+  "deadlocks": null,
+  "races": null,
+  "crashes": null,
+  "infrastructure_failures": null,
+  "false_fix": false,
+  "final_tier": "NANO",
+  "format_rejections": 0,
+  "patch_rejections": 0,
+  "nano_calls": 1,
+  "super_calls": 0,
+  "ultra_calls": 0,
+  "cost_usd": null,
+  "grounding": {
+    "used": false,
+    "reason": null,
+    "status": "not_needed",
+    "results": []
+  },
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "confirmed",
+    "spans_submitted": 11,
+    "spans_observed": [
+      {
+        "id": "a8d41aa4-a966-46b0-b6b7-8c892872733a",
+        "name": "concurrency_job",
+        "parent_id": null
+      },
+      {
+        "id": "74620064-30a3-49ee-923f-98b01fb8eb28",
+        "name": "baseline",
+        "parent_id": "a8d41aa4-a966-46b0-b6b7-8c892872733a"
+      },
+      {
+        "id": "cf1cc92e-6151-4e27-97f1-c4745f6d40f0",
+        "name": "compile",
+        "parent_id": "74620064-30a3-49ee-923f-98b01fb8eb28"
+      },
+      {
+        "id": "5bbeb6a9-52d3-4545-a530-c4180194bc47",
+        "name": "baseline_compile",
+        "parent_id": "cf1cc92e-6151-4e27-97f1-c4745f6d40f0"
+      },
+      {
+        "id": "f1f7eade-5b83-4caa-9ded-c33d144952ab",
+        "name": "campaign",
+        "parent_id": "74620064-30a3-49ee-923f-98b01fb8eb28"
+      },
+      {
+        "id": "3f6cef09-4477-41ea-946d-84e69d29b8ba",
+        "name": "baseline_stress_campaign",
+        "parent_id": "f1f7eade-5b83-4caa-9ded-c33d144952ab"
+      },
+      {
+        "id": "a683eb09-a8d7-4f98-8ef2-9077a71a8345",
+        "name": "analysis",
+        "parent_id": "a8d41aa4-a966-46b0-b6b7-8c892872733a"
+      },
+      {
+        "id": "20f434df-2b11-41ba-a20d-1600bb2756db",
+        "name": "fingerprint",
+        "parent_id": "a683eb09-a8d7-4f98-8ef2-9077a71a8345"
+      },
+      {
+        "id": "9bb7de5b-e56a-42c7-ab31-c2de500f01e2",
+        "name": "fingerprint_analysis",
+        "parent_id": "20f434df-2b11-41ba-a20d-1600bb2756db"
+      },
+      {
+        "id": "afc468ae-926f-4efe-8a62-386d4737bdc2",
+        "name": "repair_1",
+        "parent_id": "a8d41aa4-a966-46b0-b6b7-8c892872733a"
+      },
+      {
+        "id": "a89a943e-0df1-40c0-bea7-fcef5c155a0c",
+        "name": "nano_diagnosis",
+        "parent_id": "afc468ae-926f-4efe-8a62-386d4737bdc2"
+      }
+    ],
+    "feedback_submitted": 6,
+    "trace_ids": [
+      "a8d41aa4-a966-46b0-b6b7-8c892872733a"
+    ]
+  },
+  "source_sha256": {
+    "main.c": "72439596bce194f7ee08d9db67082889188605bd2a5e29529f7b5750ba09a437",
+    "oracle.c": "2c0a46fcb4663ba9173e3193ad281522bb5f6818b69232e379a93bb8ca1081e6",
+    "stress.h": "1a2ecf8f7805b0be74d4005282c9878ccb3cf56b323d2e752d2405902e220d48"
+  },
+  "inference_mode": "real"
+}

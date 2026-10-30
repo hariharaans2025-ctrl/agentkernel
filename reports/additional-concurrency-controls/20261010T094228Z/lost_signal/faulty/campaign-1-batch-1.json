@@ -1,0 +1,53 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-10T09:42:41.257889+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "1f2826c2-cdf7-41ba-8a0d-ba1dc83cb222",
+        "batch_transport_wall_ms": 8339.14240001468
+      },
+      "stdout": "",
+      "stderr": "CONSUMER unconditional wait after producer finished\n",
+      "duration_ms": 2011.402167
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-10T09:42:43.309682+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "1f2826c2-cdf7-41ba-8a0d-ba1dc83cb222",
+        "batch_transport_wall_ms": 8339.14240001468
+      },
+      "stdout": "",
+      "stderr": "CONSUMER unconditional wait after producer finished\n",
+      "duration_ms": 2002.2915450000003
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-10T09:42:45.342871+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "1f2826c2-cdf7-41ba-8a0d-ba1dc83cb222",
+        "batch_transport_wall_ms": 8339.14240001468
+      },
+      "stdout": "",
+      "stderr": "CONSUMER unconditional wait after producer finished\n",
+      "duration_ms": 2002.2284450000002
+    }
+  }
+]

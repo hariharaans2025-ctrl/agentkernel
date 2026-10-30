@@ -1,0 +1,4425 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_token_factory_catalog",
+      "markers": [
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_nano_structured_smoke",
+      "markers": [
+        "integration",
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_langsmith_span_delivery",
+      "markers": [
+        "langsmith"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "markers": []
+    }
+  ],
+  "deselected": [
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_token_factory_catalog",
+      "markers": [
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_nano_structured_smoke",
+      "markers": [
+        "integration",
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_langsmith_span_delivery",
+      "markers": [
+        "langsmith"
+      ]
+    }
+  ],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "outcome": "passed",
+      "duration_s": 0.003066221999999952,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "outcome": "passed",
+      "duration_s": 0.002715166999999963,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "outcome": "passed",
+      "duration_s": 0.0027832290000000537,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "outcome": "passed",
+      "duration_s": 0.0031309900000000557,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "outcome": "passed",
+      "duration_s": 0.0023967169999999927,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "outcome": "passed",
+      "duration_s": 0.0020663610000000165,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "outcome": "passed",
+      "duration_s": 0.003106684999999998,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "outcome": "passed",
+      "duration_s": 0.002644882000000015,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "outcome": "passed",
+      "duration_s": 0.0018618550000000234,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "outcome": "passed",
+      "duration_s": 0.002139872999999959,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "outcome": "passed",
+      "duration_s": 0.002406782999999857,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "outcome": "passed",
+      "duration_s": 0.0015457110000000052,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "outcome": "passed",
+      "duration_s": 0.0016599619999998483,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "outcome": "passed",
+      "duration_s": 0.001856838999999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "outcome": "passed",
+      "duration_s": 0.0028299890000000882,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "outcome": "passed",
+      "duration_s": 0.0017005939999999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "outcome": "passed",
+      "duration_s": 0.0019293559999999932,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "outcome": "passed",
+      "duration_s": 0.0021924110000002273,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "outcome": "passed",
+      "duration_s": 0.002496056999999885,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "outcome": "passed",
+      "duration_s": 0.0023562279999997937,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "outcome": "passed",
+      "duration_s": 0.0018788919999999099,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "outcome": "passed",
+      "duration_s": 0.001380201999999775,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "outcome": "passed",
+      "duration_s": 0.0013057610000000164,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "outcome": "passed",
+      "duration_s": 0.0012582089999997326,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "outcome": "passed",
+      "duration_s": 0.0012748149999999292,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "outcome": "passed",
+      "duration_s": 0.007344516000000079,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "outcome": "passed",
+      "duration_s": 0.0017994619999999184,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "outcome": "passed",
+      "duration_s": 0.0018776179999999698,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "outcome": "passed",
+      "duration_s": 0.0019401429999996722,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "outcome": "passed",
+      "duration_s": 0.0017596909999999522,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "outcome": "passed",
+      "duration_s": 0.0016954550000001234,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "outcome": "passed",
+      "duration_s": 0.0017315890000000334,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "outcome": "passed",
+      "duration_s": 0.0020789219999999276,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "outcome": "passed",
+      "duration_s": 0.0012334110000002951,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "outcome": "passed",
+      "duration_s": 0.0013126600000001876,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "outcome": "passed",
+      "duration_s": 0.0012846369999999219,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "outcome": "passed",
+      "duration_s": 0.0012657510000000372,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "outcome": "passed",
+      "duration_s": 0.001301182999999817,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "outcome": "passed",
+      "duration_s": 0.001828125999999708,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "outcome": "passed",
+      "duration_s": 0.17924477799999994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "outcome": "passed",
+      "duration_s": 0.10098160899999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "outcome": "passed",
+      "duration_s": 0.030486030000000053,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "outcome": "passed",
+      "duration_s": 0.0026029179999997876,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "outcome": "passed",
+      "duration_s": 0.0025613249999998366,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "outcome": "passed",
+      "duration_s": 0.0025800339999999533,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "outcome": "passed",
+      "duration_s": 0.001327133999999841,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "outcome": "passed",
+      "duration_s": 0.00137560499999978,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "outcome": "passed",
+      "duration_s": 0.001304487999999937,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "outcome": "passed",
+      "duration_s": 0.0013190210000000313,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "outcome": "passed",
+      "duration_s": 0.0013019050000002697,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "outcome": "passed",
+      "duration_s": 0.0013475839999999017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "outcome": "passed",
+      "duration_s": 0.0015003629999998935,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "outcome": "passed",
+      "duration_s": 0.0014417249999998383,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "outcome": "passed",
+      "duration_s": 0.0022028070000001954,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "outcome": "passed",
+      "duration_s": 0.03641464999999977,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "outcome": "passed",
+      "duration_s": 0.014453640999999795,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "outcome": "passed",
+      "duration_s": 0.0034454820000000552,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "outcome": "passed",
+      "duration_s": 0.728663378,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "outcome": "passed",
+      "duration_s": 0.9550268479999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "outcome": "passed",
+      "duration_s": 0.7181765230000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "outcome": "passed",
+      "duration_s": 0.6960940810000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "outcome": "passed",
+      "duration_s": 0.7059718000000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "outcome": "passed",
+      "duration_s": 0.700603752000001,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "outcome": "passed",
+      "duration_s": 0.1504555260000009,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "outcome": "passed",
+      "duration_s": 0.12999093199999923,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "outcome": "passed",
+      "duration_s": 0.13010475199999938,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "outcome": "passed",
+      "duration_s": 0.13135671099999957,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "outcome": "passed",
+      "duration_s": 0.12964960100000056,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "outcome": "passed",
+      "duration_s": 0.13956133000000026,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "outcome": "passed",
+      "duration_s": 0.14086246399999958,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "outcome": "passed",
+      "duration_s": 0.13473560499999948,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "outcome": "passed",
+      "duration_s": 0.13781343500000087,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "outcome": "passed",
+      "duration_s": 0.13620036499999966,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "outcome": "passed",
+      "duration_s": 0.0012393309999998436,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "outcome": "passed",
+      "duration_s": 0.0011561360000005294,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "outcome": "passed",
+      "duration_s": 0.0011013130000003812,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "outcome": "passed",
+      "duration_s": 0.0011091849999997905,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "outcome": "passed",
+      "duration_s": 0.001135564999999339,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "outcome": "passed",
+      "duration_s": 0.0018438280000001583,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "outcome": "passed",
+      "duration_s": 0.0019719410000007542,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "outcome": "passed",
+      "duration_s": 0.002376819000001973,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "outcome": "passed",
+      "duration_s": 0.0020735209999998006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "outcome": "passed",
+      "duration_s": 0.0021834290000004586,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "outcome": "passed",
+      "duration_s": 0.0021487860000002357,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "outcome": "passed",
+      "duration_s": 0.0016071029999995545,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "outcome": "passed",
+      "duration_s": 0.001554672999998452,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "outcome": "passed",
+      "duration_s": 0.00161421500000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "outcome": "passed",
+      "duration_s": 0.0015470229999987595,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "outcome": "passed",
+      "duration_s": 0.0015700670000002859,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "outcome": "passed",
+      "duration_s": 0.0015721000000006313,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "outcome": "passed",
+      "duration_s": 0.0016594330000003765,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "outcome": "passed",
+      "duration_s": 0.0015863720000002246,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "outcome": "passed",
+      "duration_s": 0.0015105960000001417,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "outcome": "passed",
+      "duration_s": 0.0015839679999993805,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "outcome": "passed",
+      "duration_s": 0.0016524900000005616,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "outcome": "passed",
+      "duration_s": 0.0016629670000005703,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "outcome": "passed",
+      "duration_s": 0.0016646009999989886,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "outcome": "passed",
+      "duration_s": 0.0016320710000004013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "outcome": "passed",
+      "duration_s": 0.0016567470000001805,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "outcome": "passed",
+      "duration_s": 0.0016606519999999847,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "outcome": "passed",
+      "duration_s": 0.0020049200000000766,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "outcome": "passed",
+      "duration_s": 0.0016802529999990767,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "outcome": "passed",
+      "duration_s": 0.0013950549999997008,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "outcome": "passed",
+      "duration_s": 0.0015354050000002673,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "outcome": "passed",
+      "duration_s": 0.001386300999999257,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "outcome": "passed",
+      "duration_s": 0.0014217650000007964,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "outcome": "passed",
+      "duration_s": 0.0014030560000000136,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "outcome": "passed",
+      "duration_s": 0.00144765200000041,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "outcome": "passed",
+      "duration_s": 0.002028655000000157,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "outcome": "passed",
+      "duration_s": 0.001866481999999614,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "outcome": "passed",
+      "duration_s": 0.0012151750000004569,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "outcome": "passed",
+      "duration_s": 0.0020828169999997925,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "outcome": "passed",
+      "duration_s": 0.002037288000000359,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "outcome": "passed",
+      "duration_s": 0.0020557469999999967,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "outcome": "passed",
+      "duration_s": 0.009372080999999532,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "outcome": "passed",
+      "duration_s": 0.0025642999999995197,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "outcome": "passed",
+      "duration_s": 0.0019473130000005057,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "outcome": "passed",
+      "duration_s": 0.001885489999999379,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "outcome": "passed",
+      "duration_s": 0.001840644000000502,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "outcome": "passed",
+      "duration_s": 0.001875185000000279,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "outcome": "passed",
+      "duration_s": 0.001867185000000049,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "outcome": "passed",
+      "duration_s": 0.0018489959999996586,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "outcome": "passed",
+      "duration_s": 0.0018911880000000991,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "outcome": "passed",
+      "duration_s": 0.0029591319999999754,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "outcome": "passed",
+      "duration_s": 0.003545151999999163,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "outcome": "passed",
+      "duration_s": 0.0017097159999996947,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "outcome": "passed",
+      "duration_s": 0.11581481800000049,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "outcome": "passed",
+      "duration_s": 0.0017266319999995616,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "outcome": "passed",
+      "duration_s": 0.0016280850000001124,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "outcome": "passed",
+      "duration_s": 0.004499205000000117,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "outcome": "passed",
+      "duration_s": 0.0022607539999999204,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "outcome": "passed",
+      "duration_s": 0.0025788930000008037,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "outcome": "passed",
+      "duration_s": 0.0026758479999999807,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "outcome": "passed",
+      "duration_s": 0.0022732529999993645,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "outcome": "passed",
+      "duration_s": 0.1065342849999995,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008166560000000267,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016756649999999373,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0005739009999999878,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006797910000000407,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0015660109999999783,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046936499999994385,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006642270000000172,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016600420000000282,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045896000000000825,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006426050000000183,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.002037768999999967,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004506160000000703,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006615429999999867,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012738519999999642,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046132200000004175,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006483130000000115,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009693550000000606,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004486929999999445,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006497349999999846,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018925519999999363,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000564398000000077,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005354039999999616,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016322410000000342,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00047723700000001923,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005836859999999167,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008521900000000304,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042597900000007627,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005769759999999513,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011232669999999834,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043963000000002417,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000573360999999939,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001393841999999923,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000439579999999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047184799999999694,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.000637577999999972,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043628500000003623,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046404599999994023,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007971369999999478,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039877899999996025,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004614629999999398,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009700870000000084,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004252890000000509,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004731300000000438,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0019213550000000135,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000435504000000031,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005206930000000165,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007802009999999804,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039970000000000283,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005176769999999387,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009859100000000343,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042576900000002027,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005151629999999852,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012335720000000716,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004436760000001705,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004968459999998842,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0015642479999999903,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004349630000000104,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00050847399999987,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0014454600000000095,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004022939999999142,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004722799999998806,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009839369999999903,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000422675000000039,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005175469999998406,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00046279500000001583,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003998599999999186,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004935510000001475,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003827649999998961,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042944499999997277,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004863899999998367,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003789990000000465,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003928199999998494,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004798210000001024,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00036756199999987693,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042743199999994985,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.004095760000000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0028034180000000575,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044533800000001733,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005006419999999956,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008699359999999601,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042888399999996274,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004754030000000409,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010012329999999903,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040098199999993867,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004799909999999574,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.000998949999999832,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046120199999988287,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004996100000000947,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008213929999998371,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004386880000000204,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005054090000000677,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007845170000000401,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040552900000001557,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005206509999999831,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007765060000000101,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004344320000000401,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004683439999999539,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011821450000000233,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004284329999999503,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004903760000001256,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00035560300000003764,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003874320000001319,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004895250000001017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00039399100000014897,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004291439999999369,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005077920000000624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00037346999999998687,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004033749999998726,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004791090000000331,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00038155299999997894,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004050890000000251,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000489664999999917,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003685529999999382,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044296499999996186,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044173400000002694,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009577379999998747,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042865399999980625,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011234659999999064,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.177601071,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0005202410000000324,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0012863410000001352,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0991998839999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004953839999999321,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0012031059999999538,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.028812928000000015,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046999600000008357,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0012402619999998254,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009113080000000551,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045134799999990705,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.001246250999999976,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008680229999999955,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004470509999998651,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.001249175999999963,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008776879999998766,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045317000000011376,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005618739999999622,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003566159999999208,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040864399999995804,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005882029999999538,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00035457199999999744,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043282999999982863,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005504569999998932,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00034922400000003684,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000404807000000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005501359999999789,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00034562000000004645,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000423265000000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005483830000001522,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003513280000000396,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004021940000000779,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005523100000000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003742120000000959,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00042106199999980554,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045336099999992996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006546629999999443,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003923390000000193,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045407199999991654,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005586989999999403,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004289539999999814,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045337100000009123,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0013230160000001767,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004264199999999274,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011145029999999334,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03480014699999989,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004999999999999449,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0012704269999999074,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.01273187599999992,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004513379999999678,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.001141824000000069,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018760060000000411,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004276519999999451,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047468200000011507,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.727749757,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043893899999991604,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005468109999999804,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.9539930759999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00048696100000000797,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005934500000002174,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.7171199480000001,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00046312500000000867,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005535910000000754,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.6950914159999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044907400000049336,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005542319999998213,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.7049634960000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004540720000001386,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005520280000004263,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.6995900310000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004616930000000963,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005523890000000975,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.14943544500000083,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000467691999999964,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005510679999991552,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.12899084000000016,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044902399999990905,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005619329999992928,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.1290879760000001,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045484299999998257,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005522589999999994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.1303538159999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045063600000005977,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005615030000001298,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.12864297900000032,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044511900000010485,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000550266000000299,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.13856366200000014,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004474019999998191,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005439369999997723,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.13986215200000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004563749999997313,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005518789999996443,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.13373423200000012,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004494939999997172,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006268110000000604,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.1367177600000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004688640000001243,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005625040000003523,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.1351942949999998,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00044356599999950674,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005212329999997323,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00035290900000006786,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003651890000000435,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004374970000000644,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003369860000006497,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003816529999998153,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00042088099999926243,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00032578900000057587,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00035464300000054294,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00041651500000039476,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003258289999994446,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003668409999999511,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00041173799999949523,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003408519999998916,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003829749999999521,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044317500000001786,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001011178000000612,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003894749999995284,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000444127000000627,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011374879999994647,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039032600000066253,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047998100000068433,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0014940830000007566,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000402755000000532,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00048069099999992204,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011899560000001586,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040287399999971996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005133010000006877,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001277328000000466,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003927999999993048,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005208119999995375,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012020950000000141,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000425879000000684,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004915780000001035,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007214529999997055,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003940719999997455,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004701049999997764,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007161349999993405,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003684329999993352,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000515083999999888,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007060299999999131,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039310100000022885,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047305099999928046,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006943319999992426,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037964000000023645,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004737410000004161,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007014930000002195,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039483299999965027,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046468700000001917,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007062800000001701,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040113300000044205,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046536900000049286,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008157759999996017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037828800000028195,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047088699999964234,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007269010000001686,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003885840000004137,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004627340000000757,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.000685117999999818,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000362744000000248,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004990799999999851,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006934709999999455,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003914169999994499,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00053820800000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007436759999999154,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037060600000060617,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005329000000005024,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007339919999997946,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003960750000002733,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005289140000002135,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007345129999993816,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004011739999993935,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005340920000005411,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007077130000006093,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003902659999992508,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005382780000005027,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007116979999999273,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004067709999997504,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000531037000000012,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007285230000002585,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040109199999971423,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0006906470000007658,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008397799999997346,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00047449299999957617,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005599599999994709,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007288750000000732,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039141799999953264,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005173059999998841,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005004919999995749,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037725700000024176,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004965860000005762,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006338809999997252,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004049379999999658,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004984379999992683,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005214230000003539,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036643999999963484,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005056489999999414,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005245680000003361,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003915480000005189,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047827800000010967,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004943119999998302,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043046600000007373,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004936410000002667,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005560239999997663,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003979870000003771,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005126390000000924,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011238269999997996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003921890000002648,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005107369999999278,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009544429999994719,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004013020000002143,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004439259999999834,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003991699999996712,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003720790000008023,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045799699999982124,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012198720000000662,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040494799999990505,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046688100000036314,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011774170000000694,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039298999999992645,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000479841000000647,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011751639999992847,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000400742000000065,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.007765288999999953,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001196385999999272,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00041040600000030736,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00048314499999957405,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016808340000000754,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040032099999987025,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004909270000004184,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010593099999995914,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003970760000004958,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047801799999991346,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001007441999999692,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004000299999997736,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00048080200000022444,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009785889999998076,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003812530000004699,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004890940000006339,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009825850000000358,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040350599999960934,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004752039999997848,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009906270000001882,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040135400000007593,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004411920000002567,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010405119999994383,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036729199999996354,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045573399999998543,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0010463400000002565,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003891139999998572,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0012152040000001918,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0013404819999998097,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000403445999999974,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00043832799999954375,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.002685841999999994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004209819999996256,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046864299999960224,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008467610000000292,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003943120000000633,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010978180000007498,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.11428737499999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000429624999999767,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046318600000017085,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009034259999998184,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036001999999957235,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00039760800000010477,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008760450000000475,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003544319999999601,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.001105008999999768,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0030355880000003665,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003586079999999825,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010860109999999423,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007989489999999932,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037579399999998486,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010927110000000795,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0011157050000001334,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003704770000005908,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011020039999998232,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0012079540000007327,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036588999999942473,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011088749999998981,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008061699999997174,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00035820799999974895,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003948529999995287,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.10566546100000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00047397099999990644,
+      "details": null
+    }
+  ]
+}

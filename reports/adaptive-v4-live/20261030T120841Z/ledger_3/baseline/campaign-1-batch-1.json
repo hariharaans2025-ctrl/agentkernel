@@ -1,0 +1,53 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-30T12:08:59.567115+00:00",
+    "result": {
+      "exit_code": 1,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "016ca05a-334a-4486-a457-d55d85c3b535",
+        "batch_transport_wall_ms": 1610.3825000000143
+      },
+      "stdout": "FAIL\n",
+      "stderr": "",
+      "duration_ms": 3.3866430000000225
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-30T12:08:59.611198+00:00",
+    "result": {
+      "exit_code": 1,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "016ca05a-334a-4486-a457-d55d85c3b535",
+        "batch_transport_wall_ms": 1610.3825000000143
+      },
+      "stdout": "FAIL\n",
+      "stderr": "",
+      "duration_ms": 5.116520000000014
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-30T12:08:59.648175+00:00",
+    "result": {
+      "exit_code": 1,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "016ca05a-334a-4486-a457-d55d85c3b535",
+        "batch_transport_wall_ms": 1610.3825000000143
+      },
+      "stdout": "FAIL\n",
+      "stderr": "",
+      "duration_ms": 2.6795310000000128
+    }
+  }
+]

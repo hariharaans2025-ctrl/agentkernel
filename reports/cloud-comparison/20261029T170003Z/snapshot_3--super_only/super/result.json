@@ -1,0 +1,18 @@
+{
+  "stage": "super",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1416,
+  "cost_usd": 0.0005814,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "8da9ffccc5f94f198730c40b77117707",
+  "input_tokens": 1155,
+  "output_tokens": 261,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"publisher.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include <pthread.h>\", \"#include <stdatomic.h>\"]}, {\"file\": \"publisher.c\", \"start_line\": 3, \"end_line\": 3, \"replacement_lines\": [\"void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\"]}, {\"file\": \"snapshot.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include <pthread.h>\", \"#include <stdatomic.h>\"]}, {\"file\": \"snapshot.c\", \"start_line\": 3, \"end_line\": 3, \"replacement_lines\": [\"int check_snapshot(State*s){ int valid,a,b; pthread_mutex_lock(&s->mutex); valid=s->valid; a=s->epoch; sched_yield(); b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\"]}]}",
+  "error_code": "line_range_out_of_bounds",
+  "validation": [],
+  "inference_ms": 2107.1424999972805
+}

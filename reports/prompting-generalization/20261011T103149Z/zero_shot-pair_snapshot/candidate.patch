@@ -1,0 +1,21 @@
+--- a/solution.c
++++ b/solution.c
+@@ -2,13 +2,14 @@
+ void update_pair(int n) {
+     pthread_mutex_lock(&guard);
+     left = n;
+-    sched_yield();
+     right = -n;
+     pthread_mutex_unlock(&guard);
+ }
+ int snapshot_ok(void) {
+-    int a = left;
+-    sched_yield();
+-    int b = right;
++    int a, b;
++    pthread_mutex_lock(&guard);
++    a = left;
++    b = right;
++    pthread_mutex_unlock(&guard);
+     return a + b == 0;
+ }

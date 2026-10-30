@@ -1,0 +1,64 @@
+{
+  "task_id": "rendezvous_3",
+  "runs": [
+    {
+      "run_id": "rendezvous_3:1",
+      "start_time": "2026-10-30T12:14:40.547215Z",
+      "duration_ms": 2003.990105,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "TIMEOUT",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "b93bdce7-30f7-4cf6-a0dc-30b17c4b4d63",
+        "batch_transport_wall_ms": 9925.715399999717
+      }
+    },
+    {
+      "run_id": "rendezvous_3:2",
+      "start_time": "2026-10-30T12:14:42.592202Z",
+      "duration_ms": 2002.8279009999999,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "TIMEOUT",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "b93bdce7-30f7-4cf6-a0dc-30b17c4b4d63",
+        "batch_transport_wall_ms": 9925.715399999717
+      }
+    },
+    {
+      "run_id": "rendezvous_3:3",
+      "start_time": "2026-10-30T12:14:44.627924Z",
+      "duration_ms": 2003.1648149999999,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "TIMEOUT",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "b93bdce7-30f7-4cf6-a0dc-30b17c4b4d63",
+        "batch_transport_wall_ms": 9925.715399999717
+      }
+    }
+  ],
+  "counts": {
+    "TIMEOUT": 3
+  },
+  "duration_ms": 9928.929900000185,
+  "requested_runs": 3
+}

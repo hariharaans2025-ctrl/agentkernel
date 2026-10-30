@@ -1,0 +1,23 @@
+{
+  "backend": "langsmith",
+  "project": "concurrency-bug-hunter",
+  "status": "confirmed",
+  "spans_submitted": 2,
+  "spans_observed": [
+    {
+      "id": "9c5ae6a6-5b75-4304-85e0-192f8ebed594",
+      "name": "LangSmithConnectivityVerified",
+      "parent_id": null
+    },
+    {
+      "id": "78f90ad6-6d55-455e-a322-f8a22d36417c",
+      "name": "transport_check",
+      "parent_id": "9c5ae6a6-5b75-4304-85e0-192f8ebed594"
+    }
+  ],
+  "feedback_submitted": 1,
+  "trace_ids": [
+    "9c5ae6a6-5b75-4304-85e0-192f8ebed594"
+  ],
+  "scope": "Metadata-only connectivity check; no Nebius inference or fixture execution"
+}

@@ -1,0 +1,42 @@
+{
+  "paid_calls": 0,
+  "checks": {
+    "credentials_present": {
+      "NEBIUS_API_KEY": true,
+      "NEBIUS_PROJECT_ID": true
+    },
+    "fixtures": [
+      "deadlock_001",
+      "deadlock_002",
+      "deadlock_003",
+      "deadlock_004",
+      "deadlock_005",
+      "race_001",
+      "race_002",
+      "race_003",
+      "race_004",
+      "race_005"
+    ],
+    "output_safe": true,
+    "catalog": {
+      "available": true,
+      "models": {
+        "NANO": true,
+        "SUPER": true,
+        "ULTRA": true
+      },
+      "configured_models": {
+        "NANO": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+        "SUPER": "nvidia/nemotron-3-super-120b-a12b",
+        "ULTRA": "nvidia/Nemotron-3-Ultra-550b-a55b"
+      }
+    },
+    "sandbox_image_usable": true,
+    "tests": {
+      "passed": 255,
+      "deselected": 8,
+      "evidence": "reports/nebius-sandbox/20261004T054834Z/tests.json"
+    }
+  },
+  "status": "passed"
+}

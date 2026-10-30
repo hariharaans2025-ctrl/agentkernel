@@ -1,0 +1,1811 @@
+{
+  "task_id": "deadlock_001",
+  "runs": [
+    {
+      "run_id": "deadlock_001:1",
+      "start_time": "2026-10-05T16:21:55.665821Z",
+      "duration_ms": 3.0703389999999775,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:2",
+      "start_time": "2026-10-05T16:21:55.707061Z",
+      "duration_ms": 2.628936000000026,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:3",
+      "start_time": "2026-10-05T16:21:55.739736Z",
+      "duration_ms": 2.4971890000000108,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:4",
+      "start_time": "2026-10-05T16:21:55.772015Z",
+      "duration_ms": 2.5084969999999984,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:5",
+      "start_time": "2026-10-05T16:21:55.804276Z",
+      "duration_ms": 2.5468140000000083,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:6",
+      "start_time": "2026-10-05T16:21:55.836351Z",
+      "duration_ms": 2.6159470000000073,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:7",
+      "start_time": "2026-10-05T16:21:55.868737Z",
+      "duration_ms": 2.4851809999999475,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:8",
+      "start_time": "2026-10-05T16:21:55.900748Z",
+      "duration_ms": 2.624320999999985,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:9",
+      "start_time": "2026-10-05T16:21:55.932849Z",
+      "duration_ms": 2.586333999999968,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:10",
+      "start_time": "2026-10-05T16:21:55.964990Z",
+      "duration_ms": 2.5289569999999983,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2004.2297000181861
+      }
+    },
+    {
+      "run_id": "deadlock_001:11",
+      "start_time": "2026-10-05T16:21:57.714187Z",
+      "duration_ms": 3.187175000000042,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:12",
+      "start_time": "2026-10-05T16:21:57.755255Z",
+      "duration_ms": 2.4669639999999604,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:13",
+      "start_time": "2026-10-05T16:21:57.787355Z",
+      "duration_ms": 2.4234389999999717,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:14",
+      "start_time": "2026-10-05T16:21:57.819010Z",
+      "duration_ms": 2.4556769999999895,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:15",
+      "start_time": "2026-10-05T16:21:57.850730Z",
+      "duration_ms": 2.451089999999989,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:16",
+      "start_time": "2026-10-05T16:21:57.882407Z",
+      "duration_ms": 2.461245000000001,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:17",
+      "start_time": "2026-10-05T16:21:57.913956Z",
+      "duration_ms": 2.4346860000000192,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:18",
+      "start_time": "2026-10-05T16:21:57.945814Z",
+      "duration_ms": 2.4570000000000425,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:19",
+      "start_time": "2026-10-05T16:21:57.977213Z",
+      "duration_ms": 2.4524309999999216,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:20",
+      "start_time": "2026-10-05T16:21:58.009542Z",
+      "duration_ms": 2.456708000000085,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.6680999672972
+      }
+    },
+    {
+      "run_id": "deadlock_001:21",
+      "start_time": "2026-10-05T16:21:59.109281Z",
+      "duration_ms": 3.142988000000013,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:22",
+      "start_time": "2026-10-05T16:21:59.149447Z",
+      "duration_ms": 2002.036403,
+      "exit_code": -9,
+      "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:23",
+      "start_time": "2026-10-05T16:22:01.182241Z",
+      "duration_ms": 2.4536440000000326,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:24",
+      "start_time": "2026-10-05T16:22:01.213799Z",
+      "duration_ms": 2.498510999999759,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:25",
+      "start_time": "2026-10-05T16:22:01.247348Z",
+      "duration_ms": 2.6692379999997407,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:26",
+      "start_time": "2026-10-05T16:22:01.279576Z",
+      "duration_ms": 2.4351349999998106,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:27",
+      "start_time": "2026-10-05T16:22:01.312766Z",
+      "duration_ms": 2.4997330000000595,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:28",
+      "start_time": "2026-10-05T16:22:01.345197Z",
+      "duration_ms": 2.486912999999813,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:29",
+      "start_time": "2026-10-05T16:22:01.376601Z",
+      "duration_ms": 2.520034999999865,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:30",
+      "start_time": "2026-10-05T16:22:01.410105Z",
+      "duration_ms": 2.4873240000000685,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3432.626500027254
+      }
+    },
+    {
+      "run_id": "deadlock_001:31",
+      "start_time": "2026-10-05T16:22:02.521485Z",
+      "duration_ms": 3.2313520000000207,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:32",
+      "start_time": "2026-10-05T16:22:02.562716Z",
+      "duration_ms": 2.534796000000006,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:33",
+      "start_time": "2026-10-05T16:22:02.594714Z",
+      "duration_ms": 2.5172689999999887,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:34",
+      "start_time": "2026-10-05T16:22:02.626599Z",
+      "duration_ms": 2.5217960000000206,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:35",
+      "start_time": "2026-10-05T16:22:02.658576Z",
+      "duration_ms": 2.522016000000016,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:36",
+      "start_time": "2026-10-05T16:22:02.690648Z",
+      "duration_ms": 2.537720999999993,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:37",
+      "start_time": "2026-10-05T16:22:02.722461Z",
+      "duration_ms": 2.510188999999996,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:38",
+      "start_time": "2026-10-05T16:22:02.754521Z",
+      "duration_ms": 2.550920000000012,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:39",
+      "start_time": "2026-10-05T16:22:02.786493Z",
+      "duration_ms": 2.503699000000026,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:40",
+      "start_time": "2026-10-05T16:22:02.818232Z",
+      "duration_ms": 2.5018359999999795,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1464.640199963469
+      }
+    },
+    {
+      "run_id": "deadlock_001:41",
+      "start_time": "2026-10-05T16:22:04.006187Z",
+      "duration_ms": 3.2959489999999647,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:42",
+      "start_time": "2026-10-05T16:22:04.047142Z",
+      "duration_ms": 2.5302480000000127,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:43",
+      "start_time": "2026-10-05T16:22:04.079794Z",
+      "duration_ms": 2.511870999999999,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:44",
+      "start_time": "2026-10-05T16:22:04.111891Z",
+      "duration_ms": 2.5008249999999843,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:45",
+      "start_time": "2026-10-05T16:22:04.144142Z",
+      "duration_ms": 2.5442209999999577,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:46",
+      "start_time": "2026-10-05T16:22:04.176632Z",
+      "duration_ms": 2.535537000000032,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:47",
+      "start_time": "2026-10-05T16:22:04.208824Z",
+      "duration_ms": 2.4932930000000075,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:48",
+      "start_time": "2026-10-05T16:22:04.241183Z",
+      "duration_ms": 2.489157000000075,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:49",
+      "start_time": "2026-10-05T16:22:04.273708Z",
+      "duration_ms": 2.486503999999945,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:50",
+      "start_time": "2026-10-05T16:22:04.305598Z",
+      "duration_ms": 2.4699590000000216,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1468.1185000226833
+      }
+    },
+    {
+      "run_id": "deadlock_001:51",
+      "start_time": "2026-10-05T16:22:05.467627Z",
+      "duration_ms": 3.250519999999979,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:52",
+      "start_time": "2026-10-05T16:22:05.508917Z",
+      "duration_ms": 2.495685999999997,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:53",
+      "start_time": "2026-10-05T16:22:05.541466Z",
+      "duration_ms": 2.529196999999983,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:54",
+      "start_time": "2026-10-05T16:22:05.575959Z",
+      "duration_ms": 2.518441000000038,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:55",
+      "start_time": "2026-10-05T16:22:05.608364Z",
+      "duration_ms": 2.491650000000012,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:56",
+      "start_time": "2026-10-05T16:22:05.640672Z",
+      "duration_ms": 2.479823999999964,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:57",
+      "start_time": "2026-10-05T16:22:05.673214Z",
+      "duration_ms": 2.4990929999999523,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:58",
+      "start_time": "2026-10-05T16:22:05.705229Z",
+      "duration_ms": 2.5077950000000904,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:59",
+      "start_time": "2026-10-05T16:22:05.738475Z",
+      "duration_ms": 2.3381509999998995,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:60",
+      "start_time": "2026-10-05T16:22:05.770875Z",
+      "duration_ms": 2.4980199999999897,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1431.2371000414714
+      }
+    },
+    {
+      "run_id": "deadlock_001:61",
+      "start_time": "2026-10-05T16:22:06.915193Z",
+      "duration_ms": 5.5516050000000146,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:62",
+      "start_time": "2026-10-05T16:22:06.961151Z",
+      "duration_ms": 2.674735000000039,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:63",
+      "start_time": "2026-10-05T16:22:06.994822Z",
+      "duration_ms": 2.703679999999986,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:64",
+      "start_time": "2026-10-05T16:22:07.028544Z",
+      "duration_ms": 2.6551560000000474,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:65",
+      "start_time": "2026-10-05T16:22:07.062506Z",
+      "duration_ms": 2.6769289999999946,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:66",
+      "start_time": "2026-10-05T16:22:07.095786Z",
+      "duration_ms": 2002.3801629999998,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A\nT2 LOCK B\nT2 WAIT A\nT1 WAIT B\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:67",
+      "start_time": "2026-10-05T16:22:09.130131Z",
+      "duration_ms": 2.8257819999999434,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:68",
+      "start_time": "2026-10-05T16:22:09.164580Z",
+      "duration_ms": 2.7140239999998705,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:69",
+      "start_time": "2026-10-05T16:22:09.198872Z",
+      "duration_ms": 2.6223569999999086,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:70",
+      "start_time": "2026-10-05T16:22:09.232152Z",
+      "duration_ms": 2.657609999999977,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 3628.848700027447
+      }
+    },
+    {
+      "run_id": "deadlock_001:71",
+      "start_time": "2026-10-05T16:22:10.508031Z",
+      "duration_ms": 3.2081170000000103,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:72",
+      "start_time": "2026-10-05T16:22:10.549166Z",
+      "duration_ms": 2.4863640000000187,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:73",
+      "start_time": "2026-10-05T16:22:10.581122Z",
+      "duration_ms": 2.4905090000000296,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:74",
+      "start_time": "2026-10-05T16:22:10.613152Z",
+      "duration_ms": 2.5019769999999886,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:75",
+      "start_time": "2026-10-05T16:22:10.645314Z",
+      "duration_ms": 2.490359000000053,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:76",
+      "start_time": "2026-10-05T16:22:10.677063Z",
+      "duration_ms": 2.51024900000002,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:77",
+      "start_time": "2026-10-05T16:22:10.709024Z",
+      "duration_ms": 2.4905789999999928,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:78",
+      "start_time": "2026-10-05T16:22:10.740812Z",
+      "duration_ms": 2.469797999999912,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:79",
+      "start_time": "2026-10-05T16:22:10.773828Z",
+      "duration_ms": 2.4690069999999675,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:80",
+      "start_time": "2026-10-05T16:22:10.805606Z",
+      "duration_ms": 2.48781500000006,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1440.5866999877617
+      }
+    },
+    {
+      "run_id": "deadlock_001:81",
+      "start_time": "2026-10-05T16:22:12.011909Z",
+      "duration_ms": 8.249233999999994,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:82",
+      "start_time": "2026-10-05T16:22:12.085153Z",
+      "duration_ms": 4.698853999999974,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:83",
+      "start_time": "2026-10-05T16:22:12.123419Z",
+      "duration_ms": 2.599582999999961,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:84",
+      "start_time": "2026-10-05T16:22:12.157066Z",
+      "duration_ms": 4.690560999999982,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:85",
+      "start_time": "2026-10-05T16:22:12.192190Z",
+      "duration_ms": 2.5939040000000357,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:86",
+      "start_time": "2026-10-05T16:22:12.225461Z",
+      "duration_ms": 2.6370390000000077,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:87",
+      "start_time": "2026-10-05T16:22:12.258431Z",
+      "duration_ms": 2.586402000000043,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:88",
+      "start_time": "2026-10-05T16:22:12.291432Z",
+      "duration_ms": 2.631290000000064,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:89",
+      "start_time": "2026-10-05T16:22:12.324965Z",
+      "duration_ms": 4.788989000000021,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:90",
+      "start_time": "2026-10-05T16:22:12.360088Z",
+      "duration_ms": 2.5952160000000113,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 2014.90880001802
+      }
+    },
+    {
+      "run_id": "deadlock_001:91",
+      "start_time": "2026-10-05T16:22:14.016143Z",
+      "duration_ms": 3.264301000000025,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:92",
+      "start_time": "2026-10-05T16:22:14.058361Z",
+      "duration_ms": 2.522646999999989,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:93",
+      "start_time": "2026-10-05T16:22:14.090130Z",
+      "duration_ms": 2.494755000000015,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:94",
+      "start_time": "2026-10-05T16:22:14.122569Z",
+      "duration_ms": 2.4993719999999997,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:95",
+      "start_time": "2026-10-05T16:22:14.154664Z",
+      "duration_ms": 2.5256120000000104,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:96",
+      "start_time": "2026-10-05T16:22:14.186577Z",
+      "duration_ms": 2.51259199999998,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:97",
+      "start_time": "2026-10-05T16:22:14.220408Z",
+      "duration_ms": 2.5190419999999714,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:98",
+      "start_time": "2026-10-05T16:22:14.252458Z",
+      "duration_ms": 2.5069039999999765,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:99",
+      "start_time": "2026-10-05T16:22:14.284576Z",
+      "duration_ms": 2.521737000000024,
+      "exit_code": 0,
+      "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    },
+    {
+      "run_id": "deadlock_001:100",
+      "start_time": "2026-10-05T16:22:14.316883Z",
+      "duration_ms": 2.5056919999999483,
+      "exit_code": 0,
+      "stdout": "T1 LOCK A\nT1 WAIT B\nT2 LOCK B\nT2 WAIT A\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+        "batch_transport_wall_ms": 1434.6684000338428
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 98,
+    "POSSIBLE_DEADLOCK": 2
+  },
+  "duration_ms": 19765.396400005557,
+  "requested_runs": 100
+}

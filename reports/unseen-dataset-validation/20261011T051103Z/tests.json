@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_learning.py"
+  ],
+  "exit_code": 0,
+  "stdout": ".....                                                                    [100%]\n5 passed in 0.02s\n",
+  "stderr": "",
+  "duration_ms": 416.58148400000005,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "e26f7eea-c9db-4574-8792-301f4c3444b8",
+    "transport_wall_ms": 2101.304700016044
+  }
+}

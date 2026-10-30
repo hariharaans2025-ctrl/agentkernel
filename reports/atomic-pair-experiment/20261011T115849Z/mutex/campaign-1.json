@@ -1,0 +1,1810 @@
+{
+  "task_id": "atomic_mutex",
+  "runs": [
+    {
+      "run_id": "atomic_mutex:1",
+      "start_time": "2026-10-11T11:59:11.684079Z",
+      "duration_ms": 5.24264999999996,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:2",
+      "start_time": "2026-10-11T11:59:11.727539Z",
+      "duration_ms": 4.623189999999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:3",
+      "start_time": "2026-10-11T11:59:11.762097Z",
+      "duration_ms": 4.568728999999994,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:4",
+      "start_time": "2026-10-11T11:59:11.796318Z",
+      "duration_ms": 4.623212000000043,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:5",
+      "start_time": "2026-10-11T11:59:11.830466Z",
+      "duration_ms": 4.598963999999983,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:6",
+      "start_time": "2026-10-11T11:59:11.864515Z",
+      "duration_ms": 4.595771000000026,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:7",
+      "start_time": "2026-10-11T11:59:11.898696Z",
+      "duration_ms": 4.587316000000008,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:8",
+      "start_time": "2026-10-11T11:59:11.932744Z",
+      "duration_ms": 4.609732000000033,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:9",
+      "start_time": "2026-10-11T11:59:11.966908Z",
+      "duration_ms": 4.576562000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:10",
+      "start_time": "2026-10-11T11:59:12.001270Z",
+      "duration_ms": 4.628698999999958,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1733.6310000391677
+      }
+    },
+    {
+      "run_id": "atomic_mutex:11",
+      "start_time": "2026-10-11T11:59:13.446256Z",
+      "duration_ms": 5.529852000000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:12",
+      "start_time": "2026-10-11T11:59:13.489642Z",
+      "duration_ms": 4.591513999999963,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:13",
+      "start_time": "2026-10-11T11:59:13.524467Z",
+      "duration_ms": 4.58597500000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:14",
+      "start_time": "2026-10-11T11:59:13.559035Z",
+      "duration_ms": 4.646807000000031,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:15",
+      "start_time": "2026-10-11T11:59:13.593322Z",
+      "duration_ms": 4.614677999999984,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:16",
+      "start_time": "2026-10-11T11:59:13.627809Z",
+      "duration_ms": 4.592986000000021,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:17",
+      "start_time": "2026-10-11T11:59:13.661997Z",
+      "duration_ms": 4.612045000000009,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:18",
+      "start_time": "2026-10-11T11:59:13.696405Z",
+      "duration_ms": 4.689029000000011,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:19",
+      "start_time": "2026-10-11T11:59:13.730641Z",
+      "duration_ms": 4.643572999999956,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:20",
+      "start_time": "2026-10-11T11:59:13.765002Z",
+      "duration_ms": 4.69445699999993,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1725.412799976766
+      }
+    },
+    {
+      "run_id": "atomic_mutex:21",
+      "start_time": "2026-10-11T11:59:15.174421Z",
+      "duration_ms": 5.452514999999991,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:22",
+      "start_time": "2026-10-11T11:59:15.217899Z",
+      "duration_ms": 4.610312000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:23",
+      "start_time": "2026-10-11T11:59:15.252568Z",
+      "duration_ms": 4.574818000000036,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:24",
+      "start_time": "2026-10-11T11:59:15.286572Z",
+      "duration_ms": 4.602108999999965,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:25",
+      "start_time": "2026-10-11T11:59:15.320705Z",
+      "duration_ms": 4.646304999999962,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:26",
+      "start_time": "2026-10-11T11:59:15.354847Z",
+      "duration_ms": 4.738163999999989,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:27",
+      "start_time": "2026-10-11T11:59:15.389717Z",
+      "duration_ms": 4.576360999999974,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:28",
+      "start_time": "2026-10-11T11:59:15.423952Z",
+      "duration_ms": 4.589729999999959,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:29",
+      "start_time": "2026-10-11T11:59:15.458117Z",
+      "duration_ms": 4.581499000000044,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:30",
+      "start_time": "2026-10-11T11:59:15.492226Z",
+      "duration_ms": 4.570140999999972,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1723.0589000391774
+      }
+    },
+    {
+      "run_id": "atomic_mutex:31",
+      "start_time": "2026-10-11T11:59:16.909135Z",
+      "duration_ms": 5.406146000000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:32",
+      "start_time": "2026-10-11T11:59:16.952162Z",
+      "duration_ms": 4.586134999999992,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:33",
+      "start_time": "2026-10-11T11:59:16.988145Z",
+      "duration_ms": 4.653987000000026,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:34",
+      "start_time": "2026-10-11T11:59:17.022671Z",
+      "duration_ms": 4.5762500000000035,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:35",
+      "start_time": "2026-10-11T11:59:17.057784Z",
+      "duration_ms": 4.59907399999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:36",
+      "start_time": "2026-10-11T11:59:17.092321Z",
+      "duration_ms": 4.558053000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:37",
+      "start_time": "2026-10-11T11:59:17.126969Z",
+      "duration_ms": 4.5847239999999845,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:38",
+      "start_time": "2026-10-11T11:59:17.161311Z",
+      "duration_ms": 4.600176000000067,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:39",
+      "start_time": "2026-10-11T11:59:17.195739Z",
+      "duration_ms": 4.577573000000057,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:40",
+      "start_time": "2026-10-11T11:59:17.230235Z",
+      "duration_ms": 4.716710999999929,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1735.432600020431
+      }
+    },
+    {
+      "run_id": "atomic_mutex:41",
+      "start_time": "2026-10-11T11:59:18.729604Z",
+      "duration_ms": 5.387978999999987,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:42",
+      "start_time": "2026-10-11T11:59:18.772737Z",
+      "duration_ms": 4.581167999999969,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:43",
+      "start_time": "2026-10-11T11:59:18.807567Z",
+      "duration_ms": 4.593105000000042,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:44",
+      "start_time": "2026-10-11T11:59:18.841615Z",
+      "duration_ms": 4.630891999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:45",
+      "start_time": "2026-10-11T11:59:18.875565Z",
+      "duration_ms": 4.615330000000029,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:46",
+      "start_time": "2026-10-11T11:59:18.909760Z",
+      "duration_ms": 4.5802859999999885,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:47",
+      "start_time": "2026-10-11T11:59:18.944414Z",
+      "duration_ms": 4.569649999999981,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:48",
+      "start_time": "2026-10-11T11:59:18.978952Z",
+      "duration_ms": 4.586014000000027,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:49",
+      "start_time": "2026-10-11T11:59:19.013014Z",
+      "duration_ms": 4.543180999999952,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:50",
+      "start_time": "2026-10-11T11:59:19.047666Z",
+      "duration_ms": 4.5625990000000005,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1731.7679999978282
+      }
+    },
+    {
+      "run_id": "atomic_mutex:51",
+      "start_time": "2026-10-11T11:59:20.420715Z",
+      "duration_ms": 5.769503000000009,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:52",
+      "start_time": "2026-10-11T11:59:20.481032Z",
+      "duration_ms": 4.469060999999996,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:53",
+      "start_time": "2026-10-11T11:59:20.516080Z",
+      "duration_ms": 4.484823000000027,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:54",
+      "start_time": "2026-10-11T11:59:20.549621Z",
+      "duration_ms": 4.511394000000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:55",
+      "start_time": "2026-10-11T11:59:20.585465Z",
+      "duration_ms": 4.4547690000000255,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:56",
+      "start_time": "2026-10-11T11:59:20.619048Z",
+      "duration_ms": 4.528588,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:57",
+      "start_time": "2026-10-11T11:59:20.652396Z",
+      "duration_ms": 4.497803999999994,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:58",
+      "start_time": "2026-10-11T11:59:20.685726Z",
+      "duration_ms": 4.485594000000037,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:59",
+      "start_time": "2026-10-11T11:59:20.719234Z",
+      "duration_ms": 4.481777999999936,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:60",
+      "start_time": "2026-10-11T11:59:20.752538Z",
+      "duration_ms": 4.492565000000059,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1743.1884999969043
+      }
+    },
+    {
+      "run_id": "atomic_mutex:61",
+      "start_time": "2026-10-11T11:59:22.241690Z",
+      "duration_ms": 5.604975000000012,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:62",
+      "start_time": "2026-10-11T11:59:22.287307Z",
+      "duration_ms": 4.87045199999997,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:63",
+      "start_time": "2026-10-11T11:59:22.324455Z",
+      "duration_ms": 5.019125000000013,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:64",
+      "start_time": "2026-10-11T11:59:22.364854Z",
+      "duration_ms": 14.00665000000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:65",
+      "start_time": "2026-10-11T11:59:22.421626Z",
+      "duration_ms": 4.774316999999972,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:66",
+      "start_time": "2026-10-11T11:59:22.481515Z",
+      "duration_ms": 4.700578000000011,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:67",
+      "start_time": "2026-10-11T11:59:22.516803Z",
+      "duration_ms": 4.685894000000079,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:68",
+      "start_time": "2026-10-11T11:59:22.551950Z",
+      "duration_ms": 4.719596999999909,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:69",
+      "start_time": "2026-10-11T11:59:22.587138Z",
+      "duration_ms": 4.675639999999981,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:70",
+      "start_time": "2026-10-11T11:59:22.621800Z",
+      "duration_ms": 4.67785300000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 2311.1867000116035
+      }
+    },
+    {
+      "run_id": "atomic_mutex:71",
+      "start_time": "2026-10-11T11:59:24.474995Z",
+      "duration_ms": 5.386946999999975,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:72",
+      "start_time": "2026-10-11T11:59:24.518686Z",
+      "duration_ms": 4.7386750000000255,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:73",
+      "start_time": "2026-10-11T11:59:24.553786Z",
+      "duration_ms": 4.626666000000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:74",
+      "start_time": "2026-10-11T11:59:24.588841Z",
+      "duration_ms": 4.602860999999958,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:75",
+      "start_time": "2026-10-11T11:59:24.623166Z",
+      "duration_ms": 4.738322999999989,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:76",
+      "start_time": "2026-10-11T11:59:24.657235Z",
+      "duration_ms": 4.606857000000019,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:77",
+      "start_time": "2026-10-11T11:59:24.691821Z",
+      "duration_ms": 4.592825999999994,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:78",
+      "start_time": "2026-10-11T11:59:24.726198Z",
+      "duration_ms": 4.62448400000004,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:79",
+      "start_time": "2026-10-11T11:59:24.760179Z",
+      "duration_ms": 4.8404269999999805,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:80",
+      "start_time": "2026-10-11T11:59:24.795037Z",
+      "duration_ms": 4.606726000000005,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1748.3745999634266
+      }
+    },
+    {
+      "run_id": "atomic_mutex:81",
+      "start_time": "2026-10-11T11:59:26.212520Z",
+      "duration_ms": 5.44809900000004,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:82",
+      "start_time": "2026-10-11T11:59:26.256108Z",
+      "duration_ms": 4.657974000000009,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:83",
+      "start_time": "2026-10-11T11:59:26.291189Z",
+      "duration_ms": 4.649079999999972,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:84",
+      "start_time": "2026-10-11T11:59:26.326253Z",
+      "duration_ms": 4.78440400000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:85",
+      "start_time": "2026-10-11T11:59:26.363360Z",
+      "duration_ms": 4.6405969999999686,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:86",
+      "start_time": "2026-10-11T11:59:26.398008Z",
+      "duration_ms": 4.653736999999991,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:87",
+      "start_time": "2026-10-11T11:59:26.433662Z",
+      "duration_ms": 4.624234000000005,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:88",
+      "start_time": "2026-10-11T11:59:26.468431Z",
+      "duration_ms": 4.643222000000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:89",
+      "start_time": "2026-10-11T11:59:26.503509Z",
+      "duration_ms": 4.647657999999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:90",
+      "start_time": "2026-10-11T11:59:26.538209Z",
+      "duration_ms": 4.688329000000047,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1718.683399958536
+      }
+    },
+    {
+      "run_id": "atomic_mutex:91",
+      "start_time": "2026-10-11T11:59:28.244477Z",
+      "duration_ms": 5.675219999999981,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:92",
+      "start_time": "2026-10-11T11:59:28.291578Z",
+      "duration_ms": 4.7971620000000215,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:93",
+      "start_time": "2026-10-11T11:59:28.327737Z",
+      "duration_ms": 4.801589999999967,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:94",
+      "start_time": "2026-10-11T11:59:28.364520Z",
+      "duration_ms": 4.930962999999955,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:95",
+      "start_time": "2026-10-11T11:59:28.401365Z",
+      "duration_ms": 4.781287999999995,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:96",
+      "start_time": "2026-10-11T11:59:28.438387Z",
+      "duration_ms": 4.837000999999952,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:97",
+      "start_time": "2026-10-11T11:59:28.475154Z",
+      "duration_ms": 5.043622999999942,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:98",
+      "start_time": "2026-10-11T11:59:28.512597Z",
+      "duration_ms": 4.79725200000003,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:99",
+      "start_time": "2026-10-11T11:59:28.550718Z",
+      "duration_ms": 4.831093000000064,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    },
+    {
+      "run_id": "atomic_mutex:100",
+      "start_time": "2026-10-11T11:59:28.588022Z",
+      "duration_ms": 4.812205000000014,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f59a8f45-85ad-487a-bf91-4ead10440d2f",
+        "batch_transport_wall_ms": 1722.2153000184335
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 100
+  },
+  "duration_ms": 17935.68580003921,
+  "requested_runs": 100
+}

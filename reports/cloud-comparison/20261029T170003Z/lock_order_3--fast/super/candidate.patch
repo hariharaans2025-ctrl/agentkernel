@@ -1,0 +1,12 @@
+--- a/forward.c
++++ b/forward.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void forward(State*s){pthread_mutex_lock(&s->left);ready(s);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}
++void forward(State*s){ready(s);pthread_mutex_lock(&s->left);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}
+--- a/reverse.c
++++ b/reverse.c
+@@ -1,2 +1,2 @@
+ #include "state.h"
+-void reverse(State*s){pthread_mutex_lock(&s->right);ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}
++void reverse(State*s){ready(s);pthread_mutex_lock(&s->right);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}

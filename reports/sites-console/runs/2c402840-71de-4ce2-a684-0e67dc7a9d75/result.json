@@ -1,0 +1,59 @@
+{
+  "id": "2c402840-71de-4ce2-a684-0e67dc7a9d75",
+  "repository_name": "inventory_stock",
+  "model": "agentkernel/adaptive-v2",
+  "model_name": "Adaptive v2 | Fine-tuned > Super > Ultra",
+  "created_at": "2026-10-12T16:49:48.244065+00:00",
+  "status": "verified",
+  "stage": "Complete",
+  "model_calls": 1,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "false_fix": false,
+  "attempts": [
+    {
+      "stage": "fine_tuned",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 502,
+      "cost_usd": 0,
+      "reserved_usd": 0,
+      "false_fix": false,
+      "input_tokens": 359,
+      "output_tokens": 143,
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct + AgentKernel LoRA",
+      "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6",
+      "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nint take_item(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int old = stock->remaining;\n    if (old == 0) {\n        pthread_mutex_unlock(&stock->mutex);\n        return 0;\n    }\n    sched_yield();\n    stock->remaining = old - 1;\n    pthread_mutex_unlock(&stock->mutex);\n    return 1;\n}\nint remaining_stock(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int value = stock->remaining;\n    pthread_mutex_unlock(&stock->mutex);\n    return value;\n}\n<<<END_FILE>>>\n",
+      "canonical_response": "{\"diagnosis\": \"Local fine-tuned specialist proposal\", \"root_cause\": \"Synchronization change proposed; independent verification required.\", \"confidence\": 0.5, \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    int old = stock->remaining;\\n    if (old == 0) return 0;\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    return stock->remaining;\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nint take_item(Inventory *stock) {\\n    pthread_mutex_lock(&stock->mutex);\\n    int old = stock->remaining;\\n    if (old == 0) {\\n        pthread_mutex_unlock(&stock->mutex);\\n        return 0;\\n    }\\n    sched_yield();\\n    stock->remaining = old - 1;\\n    pthread_mutex_unlock(&stock->mutex);\\n    return 1;\\n}\\nint remaining_stock(Inventory *stock) {\\n    pthread_mutex_lock(&stock->mutex);\\n    int value = stock->remaining;\\n    pthread_mutex_unlock(&stock->mutex);\\n    return value;\\n}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Not accepted until every mandatory execution check passes.\"]}",
+      "inference_ms": 46924.451599999884,
+      "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,12 +1,20 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n-    return stock->remaining;\n+    pthread_mutex_lock(&stock->mutex);\n+    int value = stock->remaining;\n+    pthread_mutex_unlock(&stock->mutex);\n+    return value;\n }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 31244.022900000346
+    }
+  ],
+  "tokens": 502,
+  "remote_model_calls": 0,
+  "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6",
+  "end_to_end_ms": 91613.25489999945,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,12 +1,20 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n-    return stock->remaining;\n+    pthread_mutex_lock(&stock->mutex);\n+    int value = stock->remaining;\n+    pthread_mutex_unlock(&stock->mutex);\n+    return value;\n }\n",
+  "response": "<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nint take_item(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int old = stock->remaining;\n    if (old == 0) {\n        pthread_mutex_unlock(&stock->mutex);\n        return 0;\n    }\n    sched_yield();\n    stock->remaining = old - 1;\n    pthread_mutex_unlock(&stock->mutex);\n    return 1;\n}\nint remaining_stock(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int value = stock->remaining;\n    pthread_mutex_unlock(&stock->mutex);\n    return value;\n}\n<<<END_FILE>>>\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "inference_ms": 46924.451599999884,
+  "verification_ms": 31244.022900000346
+}

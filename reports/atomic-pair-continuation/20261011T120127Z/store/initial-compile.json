@@ -1,0 +1,24 @@
+{
+  "command": [
+    "gcc",
+    "-std=c11",
+    "-pthread",
+    "-O1",
+    "-DMODE=2",
+    "harness.c",
+    "pair.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "/usr/bin/ld: /tmp/ccD5yOzR.o: in function `exact':\nharness.c:(.text+0x1a): undefined reference to `get_pair'\n/usr/bin/ld: /tmp/ccD5yOzR.o: in function `reader':\nharness.c:(.text+0xc2): undefined reference to `get_pair'\n/usr/bin/ld: /tmp/ccD5yOzR.o: in function `main':\nharness.c:(.text+0x301): undefined reference to `get_pair'\n/usr/bin/ld: harness.c:(.text+0x570): undefined reference to `get_pair'\ncollect2: error: ld returned 1 exit status\n",
+  "duration_ms": 268.35476499999993,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "f334416c-31d2-4be1-b7ce-5fe2f9534e36",
+    "transport_wall_ms": 3503.0954999965616
+  }
+}

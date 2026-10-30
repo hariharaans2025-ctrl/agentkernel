@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-6511d32f-c3ef-4366-af5b-3370a7a26dfb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"exchange_source\": \"#include \\\"pair.h\\\"\\n\\nvoid set_pair(int32_t a, int32_t b) {\\n    uint64_t packed = ((uint64_t)(uint32_t)a) | ((uint64_t)(uint32_t)b) << 32;\\n    atomic_exchange_explicit(&pair_bits, packed, memory_order_acq_rel);\\n}\\n\\nvoid get_pair(int32_t *a, int32_t *b) {\\n    uint64_t packed = atomic_load_explicit(&pair_bits, memory_order_acquire);\\n    *a = (int32_t)(uint32_t)packed;\\n    *b = (int32_t)(uint32_t)(packed >> 32);\\n}\\n\", \"store_source\": \"#include \\\"pair.h\\\"\\n\\nvoid set_pair(int32_t a, int32_t b) {\\n    uint64_t packed = ((uint64_t)(uint32_t)a) | ((uint64_t)(uint32_t)b) << 32;\\n    atomic_store_explicit(&pair_bits, packed, memory_order_release);\\n}\\n\\nvoid get_pair(int32_t *a, int32_t *b) {\\n    uint64_t packed = atomic_load_explicit(&pair_bits, memory_order_acquire);\\n    *a = (int32_t)(uint32_t)packed;\\n    *b = (int32_t)(uint32_t)(packed >> 32);\\n}\\n\"}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning": null
+      },
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "created": 1791720110,
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 339,
+    "prompt_tokens": 1035,
+    "total_tokens": 1374,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

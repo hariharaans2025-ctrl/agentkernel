@@ -1,0 +1,1810 @@
+{
+  "task_id": "atomic_exchange",
+  "runs": [
+    {
+      "run_id": "atomic_exchange:1",
+      "start_time": "2026-10-11T12:02:34.599293Z",
+      "duration_ms": 5.3923759999999765,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:2",
+      "start_time": "2026-10-11T12:02:34.648015Z",
+      "duration_ms": 4.760225999999978,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:3",
+      "start_time": "2026-10-11T12:02:34.684576Z",
+      "duration_ms": 4.768097999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:4",
+      "start_time": "2026-10-11T12:02:34.720543Z",
+      "duration_ms": 4.738594999999957,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:5",
+      "start_time": "2026-10-11T12:02:34.756662Z",
+      "duration_ms": 4.773246000000009,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:6",
+      "start_time": "2026-10-11T12:02:34.792950Z",
+      "duration_ms": 4.74722700000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:7",
+      "start_time": "2026-10-11T12:02:34.828821Z",
+      "duration_ms": 4.804774000000012,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:8",
+      "start_time": "2026-10-11T12:02:34.864536Z",
+      "duration_ms": 4.837942999999956,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:9",
+      "start_time": "2026-10-11T12:02:34.901041Z",
+      "duration_ms": 4.7600070000000105,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:10",
+      "start_time": "2026-10-11T12:02:34.936419Z",
+      "duration_ms": 4.914678000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 2389.1929000383243
+      }
+    },
+    {
+      "run_id": "atomic_exchange:11",
+      "start_time": "2026-10-11T12:02:36.605954Z",
+      "duration_ms": 5.578105,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:12",
+      "start_time": "2026-10-11T12:02:36.651797Z",
+      "duration_ms": 4.7639130000000085,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:13",
+      "start_time": "2026-10-11T12:02:36.687496Z",
+      "duration_ms": 4.797180999999984,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:14",
+      "start_time": "2026-10-11T12:02:36.723344Z",
+      "duration_ms": 4.830451999999985,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:15",
+      "start_time": "2026-10-11T12:02:36.759887Z",
+      "duration_ms": 4.762769999999971,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:16",
+      "start_time": "2026-10-11T12:02:36.795919Z",
+      "duration_ms": 4.804583000000029,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:17",
+      "start_time": "2026-10-11T12:02:36.831702Z",
+      "duration_ms": 4.789590999999982,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:18",
+      "start_time": "2026-10-11T12:02:36.867282Z",
+      "duration_ms": 4.792114000000014,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:19",
+      "start_time": "2026-10-11T12:02:36.904038Z",
+      "duration_ms": 4.750792000000059,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:20",
+      "start_time": "2026-10-11T12:02:36.940067Z",
+      "duration_ms": 4.786747000000036,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1816.9142000260763
+      }
+    },
+    {
+      "run_id": "atomic_exchange:21",
+      "start_time": "2026-10-11T12:02:38.390321Z",
+      "duration_ms": 5.582199999999982,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:22",
+      "start_time": "2026-10-11T12:02:38.435835Z",
+      "duration_ms": 4.768069000000041,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:23",
+      "start_time": "2026-10-11T12:02:38.471869Z",
+      "duration_ms": 4.893607999999993,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:24",
+      "start_time": "2026-10-11T12:02:38.508770Z",
+      "duration_ms": 4.7571909999999935,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:25",
+      "start_time": "2026-10-11T12:02:38.544945Z",
+      "duration_ms": 4.757073,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:26",
+      "start_time": "2026-10-11T12:02:38.581465Z",
+      "duration_ms": 4.760857000000007,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:27",
+      "start_time": "2026-10-11T12:02:38.617710Z",
+      "duration_ms": 4.767156999999966,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:28",
+      "start_time": "2026-10-11T12:02:38.653920Z",
+      "duration_ms": 4.793747999999987,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:29",
+      "start_time": "2026-10-11T12:02:38.690260Z",
+      "duration_ms": 4.809450999999965,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:30",
+      "start_time": "2026-10-11T12:02:38.726187Z",
+      "duration_ms": 4.776201000000091,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1529.8171000322327
+      }
+    },
+    {
+      "run_id": "atomic_exchange:31",
+      "start_time": "2026-10-11T12:02:39.898653Z",
+      "duration_ms": 5.602192000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:32",
+      "start_time": "2026-10-11T12:02:39.944719Z",
+      "duration_ms": 4.77725200000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:33",
+      "start_time": "2026-10-11T12:02:39.980677Z",
+      "duration_ms": 5.080396999999959,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:34",
+      "start_time": "2026-10-11T12:02:40.016639Z",
+      "duration_ms": 4.822290999999979,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:35",
+      "start_time": "2026-10-11T12:02:40.052555Z",
+      "duration_ms": 4.856369999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:36",
+      "start_time": "2026-10-11T12:02:40.089051Z",
+      "duration_ms": 4.789451,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:37",
+      "start_time": "2026-10-11T12:02:40.125396Z",
+      "duration_ms": 4.799376000000022,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:38",
+      "start_time": "2026-10-11T12:02:40.161305Z",
+      "duration_ms": 4.866765999999911,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:39",
+      "start_time": "2026-10-11T12:02:40.197222Z",
+      "duration_ms": 4.791403999999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:40",
+      "start_time": "2026-10-11T12:02:40.232892Z",
+      "duration_ms": 4.770531999999994,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1783.3064000005834
+      }
+    },
+    {
+      "run_id": "atomic_exchange:41",
+      "start_time": "2026-10-11T12:02:41.694581Z",
+      "duration_ms": 5.647538000000008,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:42",
+      "start_time": "2026-10-11T12:02:41.740568Z",
+      "duration_ms": 4.735228999999952,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:43",
+      "start_time": "2026-10-11T12:02:41.777328Z",
+      "duration_ms": 4.760447999999973,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:44",
+      "start_time": "2026-10-11T12:02:41.813736Z",
+      "duration_ms": 4.73527800000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:45",
+      "start_time": "2026-10-11T12:02:41.849435Z",
+      "duration_ms": 4.800747999999966,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:46",
+      "start_time": "2026-10-11T12:02:41.886227Z",
+      "duration_ms": 6.347649999999982,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:47",
+      "start_time": "2026-10-11T12:02:41.924698Z",
+      "duration_ms": 4.819246000000055,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:48",
+      "start_time": "2026-10-11T12:02:41.960704Z",
+      "duration_ms": 4.6571620000001035,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:49",
+      "start_time": "2026-10-11T12:02:41.996328Z",
+      "duration_ms": 4.5726950000000155,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:50",
+      "start_time": "2026-10-11T12:02:42.030201Z",
+      "duration_ms": 4.57138300000004,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1299.0595999872312
+      }
+    },
+    {
+      "run_id": "atomic_exchange:51",
+      "start_time": "2026-10-11T12:02:43.034766Z",
+      "duration_ms": 5.575700000000017,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:52",
+      "start_time": "2026-10-11T12:02:43.080031Z",
+      "duration_ms": 4.760748000000037,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:53",
+      "start_time": "2026-10-11T12:02:43.117187Z",
+      "duration_ms": 4.778104000000005,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:54",
+      "start_time": "2026-10-11T12:02:43.153786Z",
+      "duration_ms": 4.893745999999977,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:55",
+      "start_time": "2026-10-11T12:02:43.189751Z",
+      "duration_ms": 4.710954000000045,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:56",
+      "start_time": "2026-10-11T12:02:43.225694Z",
+      "duration_ms": 4.626845999999962,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:57",
+      "start_time": "2026-10-11T12:02:43.260916Z",
+      "duration_ms": 4.576311,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:58",
+      "start_time": "2026-10-11T12:02:43.297289Z",
+      "duration_ms": 4.531932999999988,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:59",
+      "start_time": "2026-10-11T12:02:43.331244Z",
+      "duration_ms": 4.534068000000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:60",
+      "start_time": "2026-10-11T12:02:43.364764Z",
+      "duration_ms": 4.562601000000055,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1820.1435999944806
+      }
+    },
+    {
+      "run_id": "atomic_exchange:61",
+      "start_time": "2026-10-11T12:02:45.100014Z",
+      "duration_ms": 5.552366000000031,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:62",
+      "start_time": "2026-10-11T12:02:45.145889Z",
+      "duration_ms": 4.791172999999982,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:63",
+      "start_time": "2026-10-11T12:02:45.182255Z",
+      "duration_ms": 4.789920999999975,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:64",
+      "start_time": "2026-10-11T12:02:45.218434Z",
+      "duration_ms": 4.7963220000000195,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:65",
+      "start_time": "2026-10-11T12:02:45.255476Z",
+      "duration_ms": 4.787709000000029,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:66",
+      "start_time": "2026-10-11T12:02:45.291552Z",
+      "duration_ms": 4.755019999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:67",
+      "start_time": "2026-10-11T12:02:45.327486Z",
+      "duration_ms": 4.830572000000033,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:68",
+      "start_time": "2026-10-11T12:02:45.363446Z",
+      "duration_ms": 4.811803000000059,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:69",
+      "start_time": "2026-10-11T12:02:45.399642Z",
+      "duration_ms": 4.832616000000067,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:70",
+      "start_time": "2026-10-11T12:02:45.435467Z",
+      "duration_ms": 4.763181000000061,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1833.2324999500997
+      }
+    },
+    {
+      "run_id": "atomic_exchange:71",
+      "start_time": "2026-10-11T12:02:46.664097Z",
+      "duration_ms": 5.580428999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:72",
+      "start_time": "2026-10-11T12:02:46.710601Z",
+      "duration_ms": 4.737382000000013,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:73",
+      "start_time": "2026-10-11T12:02:46.746734Z",
+      "duration_ms": 4.788728999999991,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:74",
+      "start_time": "2026-10-11T12:02:46.783289Z",
+      "duration_ms": 4.7821499999999855,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:75",
+      "start_time": "2026-10-11T12:02:46.819411Z",
+      "duration_ms": 4.814949000000013,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:76",
+      "start_time": "2026-10-11T12:02:46.855461Z",
+      "duration_ms": 4.751332999999969,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:77",
+      "start_time": "2026-10-11T12:02:46.891516Z",
+      "duration_ms": 4.771183999999984,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:78",
+      "start_time": "2026-10-11T12:02:46.927737Z",
+      "duration_ms": 4.782100000000011,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:79",
+      "start_time": "2026-10-11T12:02:46.963595Z",
+      "duration_ms": 4.78864999999995,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:80",
+      "start_time": "2026-10-11T12:02:46.999530Z",
+      "duration_ms": 4.780857999999943,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1880.9062999789603
+      }
+    },
+    {
+      "run_id": "atomic_exchange:81",
+      "start_time": "2026-10-11T12:02:48.639336Z",
+      "duration_ms": 5.541409999999969,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:82",
+      "start_time": "2026-10-11T12:02:48.685177Z",
+      "duration_ms": 4.83160399999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:83",
+      "start_time": "2026-10-11T12:02:48.721467Z",
+      "duration_ms": 4.738403999999974,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:84",
+      "start_time": "2026-10-11T12:02:48.757634Z",
+      "duration_ms": 4.786986999999964,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:85",
+      "start_time": "2026-10-11T12:02:48.793561Z",
+      "duration_ms": 4.790481000000013,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:86",
+      "start_time": "2026-10-11T12:02:48.829437Z",
+      "duration_ms": 4.7701319999999825,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:87",
+      "start_time": "2026-10-11T12:02:48.870650Z",
+      "duration_ms": 4.754678999999928,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:88",
+      "start_time": "2026-10-11T12:02:48.906207Z",
+      "duration_ms": 4.786025999999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:89",
+      "start_time": "2026-10-11T12:02:48.942791Z",
+      "duration_ms": 4.752133999999963,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:90",
+      "start_time": "2026-10-11T12:02:48.978915Z",
+      "duration_ms": 4.756141999999963,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1786.1015999806114
+      }
+    },
+    {
+      "run_id": "atomic_exchange:91",
+      "start_time": "2026-10-11T12:02:50.385950Z",
+      "duration_ms": 5.559596,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:92",
+      "start_time": "2026-10-11T12:02:50.431333Z",
+      "duration_ms": 4.763100999999992,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:93",
+      "start_time": "2026-10-11T12:02:50.467074Z",
+      "duration_ms": 4.7486190000000095,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:94",
+      "start_time": "2026-10-11T12:02:50.502583Z",
+      "duration_ms": 4.75732299999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:95",
+      "start_time": "2026-10-11T12:02:50.538164Z",
+      "duration_ms": 4.754417000000011,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:96",
+      "start_time": "2026-10-11T12:02:50.573698Z",
+      "duration_ms": 4.7763619999999785,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:97",
+      "start_time": "2026-10-11T12:02:50.609393Z",
+      "duration_ms": 4.772894999999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:98",
+      "start_time": "2026-10-11T12:02:50.644984Z",
+      "duration_ms": 4.746075000000016,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:99",
+      "start_time": "2026-10-11T12:02:50.680436Z",
+      "duration_ms": 4.751584000000086,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    },
+    {
+      "run_id": "atomic_exchange:100",
+      "start_time": "2026-10-11T12:02:50.715903Z",
+      "duration_ms": 4.725544000000026,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "9719836f-5a20-436e-a446-e3b90bb2275f",
+        "batch_transport_wall_ms": 1819.5948000065982
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 100
+  },
+  "duration_ms": 17997.260199976154,
+  "requested_runs": 100
+}

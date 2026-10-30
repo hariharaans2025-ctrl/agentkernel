@@ -1,0 +1,56 @@
+{
+  "status": "verified",
+  "profile": "ultra_only",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1504,
+      "cost_usd": 0.00193,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "8b4bd895f3e248e78737d7c89a00cd1c",
+      "input_tokens": 1291,
+      "output_tokens": 213,
+      "reasoning_tokens": 0,
+      "response": "{\n  \"edits\": [\n    {\n      \"file\": \"publisher.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\"\n      ]\n    },\n    {\n      \"file\": \"snapshot.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\"\n      ]\n    }\n  ]\n}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"publisher.c\", \"search\": \"#include \\\"state.h\\\"\\nvoid publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nvoid publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\\n\"}, {\"file\": \"snapshot.c\", \"search\": \"#include \\\"state.h\\\"\\nint check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nint check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1591.888699971605,
+      "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 22535.133800003678
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1504,
+  "cost_usd": 0.00193,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "end_to_end_ms": 39665.7776000211,
+  "inference_ms": 1591.888699971605,
+  "verification_ms": 22535.133800003678,
+  "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"publisher.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\"\n      ]\n    },\n    {\n      \"file\": \"snapshot.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\"\n      ]\n    }\n  ]\n}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

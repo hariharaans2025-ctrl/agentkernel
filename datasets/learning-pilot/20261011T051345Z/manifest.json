@@ -1,0 +1,16 @@
+{
+  "training_source": "datasets\\verified-repairs\\20261011T050956Z",
+  "reference_validation": "reports\\unseen-dataset-validation\\20261011T051103Z",
+  "train": 6,
+  "development_validation": 1,
+  "unseen_test": 2,
+  "test_target_model_exposures": 0,
+  "test_original_source_exact_overlap": false,
+  "split_unit": "whole original program; no variants split across train/test",
+  "limitations": [
+    "Only 6 training programs and 2 held-out programs: pipeline pilot, no robust generalization claim.",
+    "Unseen means not used in this project training/target-model requests, not guaranteed absent from base pretraining.",
+    "No automated semantic-clone proof; held-out tasks use newly authored rwlock-mode and multi-waiter notification structures.",
+    "Original deadlock training labels retain their historical non-TSan contract; all held-out evaluations require TSan."
+  ]
+}

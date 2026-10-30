@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "state": "PLANNED_NOT_EXECUTED",
+  "contract": {
+    "schema_version": 1,
+    "project": "job-queue-service",
+    "description": "Synthetic multi-file C/pthreads job queue: worker and monitoring lock inversion, with an explicit scheduling hook to reproduce it.",
+    "origin": "synthetic_example",
+    "source_files": [
+      "src/queue.c"
+    ],
+    "support_files": [
+      "src/main.c",
+      "include/queue.h",
+      "Makefile",
+      "README.md"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-Iinclude",
+      "src/main.c",
+      "src/queue.c",
+      "-o",
+      "job_service"
+    ],
+    "run_command": [
+      "./job_service",
+      "--stress"
+    ],
+    "binary_path": "job_service",
+    "expected_behavior": "PASS",
+    "compile_timeout_seconds": 30,
+    "max_runtime_seconds": 2,
+    "baseline_runs": 3,
+    "verification": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./job_service",
+          "--smoke"
+        ],
+        [
+          "./job_service",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "100 jobs exactly once, checksum 5050, queue drained",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-Iinclude",
+            "src/main.c",
+            "src/queue.c",
+            "-o",
+            "semantic"
+          ],
+          "run_command": [
+            "./semantic",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "budgets": {
+      "max_model_calls": 3,
+      "max_total_tokens": 150144,
+      "max_input_tokens_per_call": 48000,
+      "max_output_tokens_per_call": 2048,
+      "max_wall_seconds": 1800
+    },
+    "execution_backend": "nebius",
+    "max_upload_bytes": 2000000
+  },
+  "plan_sha256": "5fffca4000c1a219e9b11e6c7dec2d71c2f1ac29e8519bda54579575c9941d72",
+  "files": {
+    "src/queue.c": {
+      "sha256": "5e8cfcca6a08d5468b68181fa33732e1a8f66389ae428ee4bfef061c1d558faa",
+      "bytes": 1705,
+      "editable": true
+    },
+    "src/main.c": {
+      "sha256": "d8d4569a12cde1ab91a7fb10ac60625c024f43a9a7068719fc8bdecc3dedebe9",
+      "bytes": 1597,
+      "editable": false
+    },
+    "include/queue.h": {
+      "sha256": "c667e57b0b8fc1d6429b9b318ac674dd12dae0e3dafa8016e4c3bf5fa0547d29",
+      "bytes": 547,
+      "editable": false
+    },
+    "Makefile": {
+      "sha256": "9fa1bc9f2dab7f24ffa2b13691e193b6419c498a5f9f92aa16c4c6e257b6077d",
+      "bytes": 217,
+      "editable": false
+    },
+    "README.md": {
+      "sha256": "43db20e474ca732da8ae9ea2365e3456bc27cb3658152e1402d91e9ef6176d4e",
+      "bytes": 1371,
+      "editable": false
+    }
+  },
+  "upload_bytes": 5437,
+  "task": {
+    "task_id": "job-queue-service",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\examples\\job-queue-service",
+    "source_files": [
+      "src/queue.c"
+    ],
+    "support_files": [
+      "src/main.c",
+      "include/queue.h",
+      "Makefile",
+      "README.md"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-Iinclude",
+      "src/main.c",
+      "src/queue.c",
+      "-o",
+      "job_service"
+    ],
+    "binary_path": "job_service",
+    "run_command": [
+      "./job_service",
+      "--stress"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./job_service",
+          "--smoke"
+        ],
+        [
+          "./job_service",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "100 jobs exactly once, checksum 5050, queue drained",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-Iinclude",
+            "src/main.c",
+            "src/queue.c",
+            "-o",
+            "semantic"
+          ],
+          "run_command": [
+            "./semantic",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "origin": "synthetic_example",
+      "repository_workflow_version": 1
+    }
+  },
+  "execution_backend": "nebius",
+  "model_calls": 0,
+  "metrics": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "inference_ms": null,
+    "verification_ms": null,
+    "end_to_end_ms": null,
+    "verified": null,
+    "semantic_passed": null,
+    "tsan_passed": null
+  },
+  "limitations": [
+    "Budgets are a contract; production runtime integration is not enabled.",
+    "Commands require review before execution. A valid plan is not permission to execute.",
+    "File identity is content-based; no Git checkout or commit verification is performed."
+  ]
+}

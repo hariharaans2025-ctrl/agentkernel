@@ -1,0 +1,53 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-10T09:49:25.097270+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      },
+      "stdout": "",
+      "stderr": "RIGHT HOLD account_b WAIT account_a\nLEFT HOLD account_a WAIT account_b\n",
+      "duration_ms": 2002.2520309999998
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-10T09:49:27.136996+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      },
+      "stdout": "",
+      "stderr": "LEFT HOLD account_a WAIT account_b\nRIGHT HOLD account_b WAIT account_a\n",
+      "duration_ms": 2001.8692749999998
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-10T09:49:29.167477+00:00",
+    "result": {
+      "exit_code": -9,
+      "timed_out": true,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      },
+      "stdout": "",
+      "stderr": "LEFT HOLD account_a WAIT account_b\nRIGHT HOLD account_b WAIT account_a\n",
+      "duration_ms": 2004.181237
+    }
+  }
+]

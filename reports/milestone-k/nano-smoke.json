@@ -1,0 +1,47 @@
+{
+  "smoke": "nano",
+  "status": "passed",
+  "inference_mode": "real",
+  "calls": [
+    {
+      "tier": "NANO",
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "status": "SUCCESS",
+      "input_tokens": 275,
+      "output_tokens": 339,
+      "latency_ms": 4870.825400001195,
+      "retry_count": 0,
+      "request_id": "08b82a8399d6d58079ac40575c518980",
+      "finish_reason": "stop",
+      "cost_usd": null,
+      "error_code": null,
+      "structured_valid": true
+    }
+  ],
+  "candidate_execution_verified": false,
+  "stopped_reason": "verification_passed",
+  "structured_output": {
+    "dominant_failure": "TIMEOUT",
+    "failed_runs": 9,
+    "pass_runs": 91,
+    "representative_runs": [
+      "example:1"
+    ],
+    "confidence": 0.95,
+    "requires_deeper_reasoning": false,
+    "summary": "9 TIMEOUT failures observed; cyclic lock order inversion detected; synthetic evidence present."
+  },
+  "evidence_origin": "synthetic protocol example; no program executions claimed",
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "unavailable",
+    "spans_submitted": 0,
+    "spans_observed": [],
+    "feedback_submitted": 0,
+    "trace_ids": [
+      "14a5ef8a-0ca9-4230-958c-2eb434d1add4"
+    ],
+    "error_code": "langsmith_http_403"
+  }
+}

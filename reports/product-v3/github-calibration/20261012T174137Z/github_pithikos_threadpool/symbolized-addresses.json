@@ -1,0 +1,29 @@
+{
+  "binary_image": "6c1f0df6-83be-4259-b522-718b3ee47877",
+  "addresses": [
+    "0xe67e7",
+    "0xe6ff6"
+  ],
+  "result": {
+    "command": [
+      "addr2line",
+      "-e",
+      "acceptance_app",
+      "-f",
+      "-C",
+      "0xe67e7",
+      "0xe6ff6"
+    ],
+    "exit_code": 0,
+    "stdout": "thpool_init\n/workspace/thpool.c:188\nthread_do\n/workspace/thpool.c:368\n",
+    "stderr": "",
+    "duration_ms": 17.609627999999987,
+    "timed_out": false,
+    "metadata": {
+      "execution_backend": "nebius",
+      "output_truncated": false,
+      "remote_image_id": "6c1f0df6-83be-4259-b522-718b3ee47877",
+      "transport_wall_ms": 1496.82329999996
+    }
+  }
+}

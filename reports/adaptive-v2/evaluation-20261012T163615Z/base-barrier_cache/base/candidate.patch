@@ -1,0 +1,19 @@
+--- a/solution.c
++++ b/solution.c
+@@ -3,14 +3,14 @@
+ void publish_cache(Cache *cache) {
+     pthread_mutex_lock(&cache->mutex);
+     meet(cache);
+-    sched_yield();
++    sched_yield(); // Required sched_yield call
+     cache->value = 42;
+     pthread_mutex_unlock(&cache->mutex);
+ }
+ void observe_cache(Cache *cache) {
+     pthread_mutex_lock(&cache->mutex);
+     meet(cache);
+-    sched_yield();
++    sched_yield(); // Required sched_yield call
+     cache->observed = cache->value;
+     pthread_mutex_unlock(&cache->mutex);
+ }

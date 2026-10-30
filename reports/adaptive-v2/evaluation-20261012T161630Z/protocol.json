@@ -1,0 +1,27 @@
+{
+  "arms": [
+    "base",
+    "fine_tuned",
+    "adaptive"
+  ],
+  "cases": [
+    "ticket_office",
+    "version_stamp"
+  ],
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "base_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "adapter_sha256": "2891d74130cea2b0d690be2c8048267234030e64199613a97b29a046926b2c94",
+  "selected_epoch": 5,
+  "checkpoint_selection": "development validation only",
+  "max_total_remote_inference_usd": 0.1407744,
+  "max_remote_calls": 4,
+  "model_output_cap": 2048,
+  "execution": "Nebius Sandbox",
+  "sandbox_billing": "Existing owner-confirmed free beta",
+  "all_stress_runs": 100,
+  "tsan_runs": 3,
+  "no_test_labels_in_prompts": true,
+  "no_finetune_or_prompt_selection_from_test_outcomes": true,
+  "no_auto_replays": true,
+  "scope": "Small synthetic transfer pilot within familiar bug families; not a production-quality estimate."
+}

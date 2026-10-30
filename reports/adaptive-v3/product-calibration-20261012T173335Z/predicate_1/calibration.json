@@ -1,0 +1,28 @@
+{
+  "case": "predicate_1",
+  "split": "train",
+  "family": "predicate",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "await.c": "3d844127ca5941875f265f50c251ba84c53e536ca37439b70e241e4bf4ef8be9",
+    "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+  },
+  "source_sha256": {
+    "await.c": "a8d7f0b1e6da3a9add69fc66c97a831e8e696d1e279846792bdda67143ec100f",
+    "complete.c": "5d32d8766a186f4be01ed9a58295f00de0a1013c61ec9f2022eebdbd421c8417"
+  },
+  "support_sha256": {
+    "state.h": "b33f1dfe97104219d3483a46f36c46caf3b3529001492217a6a4ec614279a9fd",
+    "oracle.c": "ec4ca9286695de3e431fc11d0075814b7beffade6bf16a9d0300a2ebdbe170d4"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 58.65899179999906
+}

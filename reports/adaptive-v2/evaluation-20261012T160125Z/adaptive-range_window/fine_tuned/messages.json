@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Repair C/pthreads synchronization while preserving all original work, scheduling hooks, interfaces and protected tests. Return ONLY a JSON object with one key \"files\": an object mapping each editable filename to its complete corrected source. Do not include Markdown, explanations, commands, tests, or new files."
+  },
+  {
+    "role": "user",
+    "content": "{\"task\": \"Publish and read both range endpoints as one consistent snapshot. Every observed window must have width 16; final window is 10000..10016.\", \"editable_files\": [\"solution.c\"], \"sources\": {\"solution.c\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid set_window(Window *window, int lower, int upper) {\\n    pthread_mutex_lock(&window->mutex);\\n    window->lower = lower;\\n    pthread_mutex_unlock(&window->mutex);\\n    sched_yield();\\n    pthread_mutex_lock(&window->mutex);\\n    window->upper = upper;\\n    pthread_mutex_unlock(&window->mutex);\\n}\\nvoid get_window(Window *window, int *lower, int *upper) {\\n    *lower = window->lower;\\n    sched_yield();\\n    *upper = window->upper;\\n}\\n\"}, \"headers\": {\"state.h\": \"#ifndef STATE_H\\n#define STATE_H\\n#include <pthread.h>\\ntypedef struct { pthread_mutex_t mutex; int lower; int upper; } Window;\\nvoid set_window(Window *, int, int);\\nvoid get_window(Window *, int *, int *);\\n#endif\\n\"}, \"requirements\": [\"Publish and read both range endpoints as one consistent snapshot. Every observed window must have width 16; final window is 10000..10016.\"]}"
+  }
+]

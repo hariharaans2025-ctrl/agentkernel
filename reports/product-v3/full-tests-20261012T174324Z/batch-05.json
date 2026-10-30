@@ -1,0 +1,1004 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "outcome": "passed",
+      "duration_s": 0.01769658800000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "outcome": "passed",
+      "duration_s": 0.0015801130000000496,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "outcome": "passed",
+      "duration_s": 0.001603495999999871,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "outcome": "passed",
+      "duration_s": 0.0014357869999999107,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "outcome": "passed",
+      "duration_s": 0.0014276540000002225,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "outcome": "passed",
+      "duration_s": 0.0014227669999999915,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "outcome": "passed",
+      "duration_s": 0.001274062999999881,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "outcome": "passed",
+      "duration_s": 0.00129088799999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "outcome": "passed",
+      "duration_s": 0.0012766969999999933,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "outcome": "passed",
+      "duration_s": 0.0012945529999999206,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "outcome": "passed",
+      "duration_s": 0.0012664310000000123,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "outcome": "passed",
+      "duration_s": 0.0012424559999999474,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "outcome": "passed",
+      "duration_s": 0.0011213829999999758,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "outcome": "passed",
+      "duration_s": 0.002283449000000104,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "outcome": "passed",
+      "duration_s": 0.0018415360000001435,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "outcome": "passed",
+      "duration_s": 0.0017533009999999294,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "outcome": "passed",
+      "duration_s": 0.0017804820000000277,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "outcome": "passed",
+      "duration_s": 0.0016163169999999782,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "outcome": "passed",
+      "duration_s": 0.002296748000000015,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "outcome": "passed",
+      "duration_s": 0.00131322300000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "outcome": "passed",
+      "duration_s": 0.0016602619999999124,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "outcome": "passed",
+      "duration_s": 0.002441134999999983,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "outcome": "passed",
+      "duration_s": 0.02800198999999992,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "outcome": "passed",
+      "duration_s": 0.003806376999999972,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "outcome": "passed",
+      "duration_s": 0.002473903000000055,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "outcome": "passed",
+      "duration_s": 0.0017785309999999166,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "outcome": "passed",
+      "duration_s": 0.0018359149999999103,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "outcome": "passed",
+      "duration_s": 0.0018643680000001162,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "outcome": "passed",
+      "duration_s": 0.001800224000000017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "outcome": "passed",
+      "duration_s": 0.005561489000000086,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "outcome": "passed",
+      "duration_s": 0.0020509989999999423,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.016352471000000035,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008244370000000112,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0005196800000000223,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005599709999999369,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005850390000000649,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00043510300000004776,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005122589999999594,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006843069999999951,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004069299999999165,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000509415000000013,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005637669999999373,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003626049999999603,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004916890000000729,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005459600000000675,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003900050000000821,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005106870000000097,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.000538598999999973,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037348100000000883,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004270519999999278,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00046455699999992106,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00038245400000003205,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00047524300000001407,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004495549999999904,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003660899999999856,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046060200000008766,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00044727099999997133,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003688239999999343,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000460561000000026,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00045021599999994777,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003837759999999468,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00042891400000000246,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004629250000000029,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003745920000000069,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00041983999999994914,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00044835399999998415,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003742620000000141,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004196899999999726,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00034978499999993584,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003519080000000674,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000576796000000046,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0013022160000000227,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040443700000003524,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005409929999999896,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008968770000000736,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040366600000008024,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005507269999999176,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008343520000000382,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003682219999999736,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005552629999999725,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008273420000000087,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039787700000004644,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004569660000000031,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007703169999999648,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003890340000000103,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00043023600000002826,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0014748439999999752,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003916680000000117,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005359350000000429,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003924699999999781,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000384818000000009,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044504800000000344,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008495549999999463,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036565899999996265,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046510799999999186,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001585700999999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003903259999999964,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004635859999999603,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.027125465000000015,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00041293899999994554,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005950239999999996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0027998550000000177,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004114979999999546,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004527690000000195,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0016275639999999703,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00039357000000006526,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044666099999990383,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009525799999999807,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003792900000000321,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005108969999999546,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009195999999999094,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040541800000004624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005061600000000332,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009536010000000816,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00040460700000000127,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005088149999999958,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009108479999999641,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000380561000000057,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.002147163000000063,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0030065639999999894,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004077620000000337,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0009707889999999164,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006780570000000097,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0004021530000000162,
+      "details": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "adaptive",
+  "status": "unknown",
+  "attempts": [],
+  "tokens": 0,
+  "cost_usd": 0,
+  "reserved_usd": 0,
+  "model_calls": 0,
+  "remote_model_calls": 0,
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6",
+  "error": "ValueError: route stopped without automatic replay.",
+  "end_to_end_ms": 12554.597800015472,
+  "false_fix": false,
+  "patch": null,
+  "response": null,
+  "verification": null,
+  "inference_ms": 0,
+  "verification_ms": 0
+}

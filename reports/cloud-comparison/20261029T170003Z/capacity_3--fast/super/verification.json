@@ -1,0 +1,49 @@
+{
+  "passed": false,
+  "build_passed": false,
+  "total_runs": 0,
+  "passed_runs": 0,
+  "failed_runs": 0,
+  "race_count": null,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 1438.0970999482088,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "acquire.c",
+        "inspect.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "acquire.c:1:10: error: #include expects \"FILENAME\" or <FILENAME>\n    1 | #include 'state.h'\n      |          ^~~~~~~~~\nacquire.c:2:13: error: unknown type name ‘State’\n    2 | int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n      |             ^~~~~\n",
+      "duration_ms": 217.100754,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "73c6a4b7-157f-4565-9e0f-4030a022fef2",
+        "transport_wall_ms": 1438.0075000226498
+      },
+      "success": false
+    },
+    "execution_blocked": false
+  },
+  "reason": "Rebuild failed; no verification binary was executed.",
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_regression": false,
+  "false_fix": true
+}

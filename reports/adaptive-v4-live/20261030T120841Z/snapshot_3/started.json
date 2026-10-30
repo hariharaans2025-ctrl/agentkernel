@@ -1,0 +1,101 @@
+{
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "contract": "agentkernel_line_blocks_v4",
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.073152,
+  "max_calls": 2,
+  "max_verifier_recoveries": 1,
+  "max_format_recoveries": 1,
+  "source_hashes": {
+    "publisher.c": "bffcf11d7f4a95762f0260b36fb1e489d63b77e9d15d9941d538a183eea8d0d0",
+    "snapshot.c": "d17db9c704570d82dcdfc9be43504550fd7e71b0886217013855504bb87f5343",
+    "state.h": "b5624aa9726a598047c77e75308ab28aa7e20fe2afe63eacd0cef05c5233c07c",
+    "oracle.c": "2ac5e63ca96f677cbce004beff6f9a58a9a1ce5d528c104b7ee8431c4202b228"
+  },
+  "automatic_replay": false,
+  "task": {
+    "task_id": "snapshot_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\adaptive-v4-live\\20261030T120841Z\\snapshot_3\\input",
+    "source_files": [
+      "publisher.c",
+      "snapshot.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "publisher.c",
+      "snapshot.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "publisher.c",
+            "snapshot.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "Publish epoch, payload and validity as one transaction; a valid snapshot must contain payload equal to epoch times eleven. Preserve all source work and both yield hooks.",
+      "split": "test",
+      "family": "snapshot",
+      "variant": 3
+    }
+  },
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

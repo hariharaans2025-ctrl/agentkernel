@@ -1,0 +1,8 @@
+{
+  "model_calls": 0,
+  "tokens": 0,
+  "prior": "reports\\additional-concurrency-controls\\20261010T094228Z",
+  "missing_sync": "Reuse exact persisted 100 stress runs; fresh build/original test and semantic check after prior infrastructure interruption, followed by unstarted 3 TSan runs.",
+  "account_inversion": "Entirely unstarted: 3 faulty diagnostics then full fixed-control verification.",
+  "prior_interrupted_semantic_attempt": "UNKNOWN; not overwritten or counted as a pass"
+}

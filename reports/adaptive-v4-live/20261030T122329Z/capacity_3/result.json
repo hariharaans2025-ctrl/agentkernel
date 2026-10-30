@@ -1,0 +1,139 @@
+{
+  "status": "verified",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1269,
+      "cost_usd": 0.001423,
+      "false_fix": false,
+      "recovery": null,
+      "reserved_usd": 0.060576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "afdf9ff0cbaf49b9a2c599d2ed481312",
+      "inference_ms": 1467.1218999997109,
+      "input_tokens": 1192,
+      "output_tokens": 77,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "no_op_blocks_dropped": [],
+        "blocks": [
+          {
+            "file": "acquire.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+      "verification_phases_ms": {
+        "apply": 3460.866100000203,
+        "build": 1530.4317000000083,
+        "stress": 9118.9274999997,
+        "tsan_build": 2404.722100000072,
+        "original_tests_and_semantics": 6270.00980000048
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 19324.09110000026,
+      "taxonomy": {
+        "primary": "verified",
+        "gates": []
+      }
+    }
+  ],
+  "model_calls": 1,
+  "calls_by_model": {
+    "ultra": 1
+  },
+  "tokens": 1269,
+  "cost_usd": 0.001423,
+  "reserved_usd": 0.060576,
+  "false_fix": false,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 333,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 248,
+      "primitives": {
+        "mutex_lock": 2,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": false,
+      "baseline_fingerprint": "TIMEOUT:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "hang",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002376,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0030888,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.012200000128359534
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 0
+  },
+  "end_to_end_ms": 40815.34979999969,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1661.3290000000234,
+    "upload": 1923.6094000002595,
+    "baseline_build": 2385.9198999998625,
+    "baseline_stress": 10556.203900000128,
+    "inference": 1467.1218999997109,
+    "verify_apply": 3460.866100000203,
+    "verify_build": 1530.4317000000083,
+    "verify_stress": 9118.9274999997,
+    "verify_tsan_build": 2404.722100000072,
+    "verify_original_tests_and_semantics": 6270.00980000048,
+    "e2e": 40815.34979999969
+  },
+  "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

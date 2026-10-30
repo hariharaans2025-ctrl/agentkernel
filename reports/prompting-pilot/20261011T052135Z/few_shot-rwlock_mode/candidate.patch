@@ -1,0 +1,10 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,6 +1,6 @@
+ #include "state.h"
+ void update(void) {
+-    pthread_rwlock_rdlock(&guard);
++    pthread_rwlock_wrlock(&guard);
+     for (int i = 0; i < 2000; ++i) {
+         int prior = value;
+         sched_yield();

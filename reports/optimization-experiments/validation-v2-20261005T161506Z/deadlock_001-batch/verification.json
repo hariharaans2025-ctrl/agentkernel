@@ -1,0 +1,149 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 98,
+  "failed_runs": 2,
+  "race_count": null,
+  "deadlock_count": 2,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 2,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 24055.56260002777,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "main.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 166.54973900000002,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "e2bec8e2-0f8e-4c4e-810b-a4a849127fa4",
+        "transport_wall_ms": 1600.8494999841787
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [],
+      "configured": false
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 2,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 98,
+        "POSSIBLE_DEADLOCK": 2
+      },
+      "duration_ms": 19765.396400005557,
+      "representative_runs": [
+        {
+          "run_id": "deadlock_001:22",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+            "batch_transport_wall_ms": 3432.626500027254
+          },
+          "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+          "stderr": ""
+        },
+        {
+          "run_id": "deadlock_001:66",
+          "classification": "POSSIBLE_DEADLOCK",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "8bc05221-f861-4486-97c4-85c52c04a08b",
+            "batch_transport_wall_ms": 3628.848700027447
+          },
+          "stdout": "T1 LOCK A\nT2 LOCK B\nT2 WAIT A\nT1 WAIT B\n",
+          "stderr": ""
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Both workers complete and perform their mutex acquisitions",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "oracle.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 166.401207,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "0bd7c8f4-47ff-4998-8e20-189995e5d7d4",
+              "transport_wall_ms": 1575.1929000252858
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "T2 LOCK B\nT2 WAIT A\nT1 LOCK A\nT1 WAIT B\nPASS\nSEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.322106999999991,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "0bd7c8f4-47ff-4998-8e20-189995e5d7d4",
+              "transport_wall_ms": 1110.2562000160106
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "not_configured"
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": true,
+  "sanitizer_passed": null,
+  "semantic_regression": false,
+  "false_fix": true
+}

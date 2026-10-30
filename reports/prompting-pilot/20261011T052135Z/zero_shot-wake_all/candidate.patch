@@ -1,0 +1,15 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,8 +1,10 @@
+ #include "state.h"
+ void publish(void) {
+     pthread_mutex_lock(&guard);
+-    while (waiting != 2) pthread_cond_wait(&arrived,&guard);
++    while (waiting != 2) {
++        pthread_cond_wait(&arrived, &guard);
++    }
+     ready = 1;
++    pthread_mutex_unlock(&guard);
+     pthread_cond_signal(&available);
+-    pthread_mutex_unlock(&guard);
+ }

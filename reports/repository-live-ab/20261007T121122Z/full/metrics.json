@@ -1,0 +1,22 @@
+{
+  "arm": "full",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 5911,
+  "cost_usd": null,
+  "input_tokens": 5299,
+  "output_tokens": 612,
+  "inference_ms": 5618.897099979222,
+  "verification_ms": 254000.6992999988,
+  "end_to_end_ms": 273762.8550999798,
+  "public_tokenizer_input_tokens": 5299,
+  "provider_minus_public_tokens": 0,
+  "false_fix": true,
+  "semantic_regression": false,
+  "semantic_passed": true,
+  "tsan_passed": false,
+  "stress_passed": 0,
+  "stress_total": 100,
+  "deadlocks": 100,
+  "races": 0
+}

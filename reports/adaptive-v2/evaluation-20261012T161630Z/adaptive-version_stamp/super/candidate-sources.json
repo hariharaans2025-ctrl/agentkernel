@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\n#include <sched.h>\nvoid publish_stamp(Stamp *stamp,int generation) {\n    pthread_mutex_lock(&stamp->mutex);\n    stamp->generation=generation;\n    stamp->checksum=generation ^ 0x5a5a;\n    pthread_mutex_unlock(&stamp->mutex);\n    sched_yield();\n}\nvoid read_stamp(Stamp *stamp,int *generation,int *checksum) {\n    pthread_mutex_lock(&stamp->mutex);\n    *generation=stamp->generation;\n    sched_yield();\n    *checksum=stamp->checksum;\n    sched_yield();\n    pthread_mutex_unlock(&stamp->mutex);\n}\n"
+}

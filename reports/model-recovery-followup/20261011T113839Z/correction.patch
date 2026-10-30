@@ -1,0 +1,13 @@
+--- a/solution.c
++++ b/solution.c
+@@ -6,8 +6,9 @@
+     pthread_mutex_unlock(&guard);
+ }
+ int snapshot_ok(void) {
++    pthread_mutex_lock(&guard);
+     int a = left;
+-    sched_yield();
+     int b = right;
++    pthread_mutex_unlock(&guard);
+     return a + b == 0;
+ }

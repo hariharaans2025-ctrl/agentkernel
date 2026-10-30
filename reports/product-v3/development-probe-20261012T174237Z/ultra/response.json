@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-9d4174eb66a49442",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"edits\": [\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"void publish_cache(Cache *cache) {\",\n      \"replacement\": \"void publish_cache(Cache *cache) {\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    pthread_mutex_lock(&cache->mutex);\",\n      \"replacement\": \"    pthread_mutex_lock(&cache->mutex);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    meet(cache);\",\n      \"replacement\": \"    meet(cache);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    sched_yield();\",\n      \"replacement\": \"    sched_yield();\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    cache->value = 42;\",\n      \"replacement\": \"    cache->value = 42;\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    pthread_mutex_unlock(&cache->mutex);\",\n      \"replacement\": \"    pthread_mutex_unlock(&cache->mutex);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"}\",\n      \"replacement\": \"}\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"void observe_cache(Cache *cache) {\",\n      \"replacement\": \"void observe_cache(Cache *cache) {\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    pthread_mutex_lock(&cache->mutex);\",\n      \"replacement\": \"    pthread_mutex_lock(&cache->mutex);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    meet(cache);\",\n      \"replacement\": \"    meet(cache);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    sched_yield();\",\n      \"replacement\": \"    sched_yield();\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    cache->observed = cache->value;\",\n      \"replacement\": \"    cache->observed = cache->value;\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"    pthread_mutex_unlock(&cache->mutex);\",\n      \"replacement\": \"    pthread_mutex_unlock(&cache->mutex);\"\n    },\n    {\n      \"file\": \"solution.c\",\n      \"search\": \"}\",\n      \"replacement\": \"}\"\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": null
+      },
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "created": 1791826960,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g93e2486b7-tp8-062d09e8",
+  "usage": {
+    "completion_tokens": 541,
+    "prompt_tokens": 788,
+    "total_tokens": 1329,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 788
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "metrics": null
+}

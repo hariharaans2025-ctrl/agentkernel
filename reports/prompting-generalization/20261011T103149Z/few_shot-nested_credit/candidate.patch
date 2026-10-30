@@ -1,0 +1,10 @@
+--- a/solution.c
++++ b/solution.c
+@@ -7,6 +7,6 @@
+ void transfer(int from, int to) {
+     pthread_mutex_lock(&ledger);
+     accounts[from] -= 1;
++    pthread_mutex_unlock(&ledger);
+     credit(to);
+-    pthread_mutex_unlock(&ledger);
+ }

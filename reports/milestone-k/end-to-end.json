@@ -1,0 +1,285 @@
+{
+  "task": "deadlock_001",
+  "status": "unresolved",
+  "route": [
+    "NANO",
+    "SUPER",
+    "SUPER",
+    "ULTRA"
+  ],
+  "ultra_avoided": false,
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 6970.489099992847,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_001:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T2 LOCK B\r\nT1 LOCK A\r\nT1 WAIT B\r\nT2 WAIT A\r\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "4b4c8f316a845e49",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_001:1",
+          "deadlock_001:2",
+          "deadlock_001:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "A"
+            ]
+          ],
+          "cycle": [
+            "A",
+            "B",
+            "A"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "verification": null,
+  "repairs": [
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "The program deadlocks because the two threads acquire the mutexes in opposite order (T1 locks A then B, T2 locks B then A) and then wait at a barrier while each holds one mutex, creating a circular wait condition.",
+        "root_cause": "Inconsistent lock acquisition order: each thread locks its own 'first' mutex based on its ID before the barrier, then attempts to lock the other 'second' mutex after the barrier, leading to a lock order reversal between threads.",
+        "confidence": 0.95,
+        "patch": "--- a/main.c\n+++ b/main.c\n@@\n static void *worker(void *arg) {\n-    int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n-    pthread_mutex_lock(first);\n-    printf(\"T%d LOCK %s\\\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n-    printf(\"T%d WAIT %s\\\\n\", id, second == &a ? \"A\" : \"B\");\n-    pthread_mutex_lock(second);\n-    pthread_mutex_unlock(second);\n-    pthread_mutex_unlock(first);\n+    int id = (int)(intptr_t)arg;\n+    /* Lock in a consistent global order (A then B) to prevent deadlock */\n+    pthread_mutex_lock(&a);\n+    printf(\"T%d LOCK A\\\\n\", id);\n+    pthread_barrier_wait(&ready);\n+    printf(\"T%d WAIT B\\\\n\", id);\n+    pthread_mutex_lock(&b);\n+    pthread_mutex_unlock(&b);\n+    pthread_mutex_unlock(&a);\n     return NULL;\n }",
+        "reasoning_summary": "All three runs show the same cyclic lock wait pattern (A\u2192B, B\u2192A). Enforcing a global lock order (always A then B) eliminates the circular wait while preserving the barrier synchronization and logging.",
+        "expected_effect": "The program will no longer deadlock; both threads will acquire mutex A then B, pass the barrier, release locks, and print PASS.",
+        "risk_notes": [
+          "Alters which mutex each thread locks first (output order of lock messages changes).",
+          "Assumes locking A then B is acceptable for the program's correctness; if the algorithm relied on the original lock ordering, behavior may differ.",
+          "Potential minor performance impact due to always locking A first, but negligible."
+        ]
+      },
+      "patch": {
+        "success": false,
+        "files_changed": [],
+        "rejected_paths": [],
+        "error": "File has no hunks",
+        "patch_hash": "25110825f5a222423d03c3c09be3da3ac774449f0e6b1b9e4b5a1ba309889a50"
+      }
+    },
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "The program deadlocks because the two threads acquire the mutexes in opposite order (T1 locks A then B, T2 locks B then A) and then wait at a barrier while each holds one mutex, creating a circular wait condition.",
+        "root_cause": "Inconsistent lock acquisition order: each thread locks its own 'first' mutex based on its ID before the barrier, then attempts to lock the other 'second' mutex after the barrier, leading to a lock order reversal between threads.",
+        "confidence": 0.95,
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -9,13 +9,12 @@\n static void *worker(void *arg) {\n-    int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n-    pthread_mutex_lock(first);\n-    printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n-    printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n-    pthread_mutex_lock(second);\n-    pthread_mutex_unlock(second);\n-    pthread_mutex_unlock(first);\n+    int id = (int)(intptr_t)arg;\n+    /* Lock in a consistent global order (A then B) to prevent deadlock */\n+    pthread_mutex_lock(&a);\n+    printf(\"T%d LOCK A\\n\", id);\n+    pthread_barrier_wait(&ready);\n+    printf(\"T%d WAIT B\\n\", id);\n+    pthread_mutex_lock(&b);\n+    pthread_mutex_unlock(&b);\n+    pthread_mutex_unlock(&a);\n     return NULL;\n }",
+        "reasoning_summary": "All three runs show the same cyclic lock wait pattern (A\u2192B, B\u2192A). Enforcing a global lock order (always A then B) eliminates the circular wait while preserving the barrier synchronization and logging.",
+        "expected_effect": "The program will no longer deadlock; both threads will acquire mutex A then B, pass the barrier, release locks, and print PASS.",
+        "risk_notes": [
+          "Alters which mutex each thread locks first (output order of lock messages changes).",
+          "Assumes locking A then B is acceptable for the program's correctness; if the algorithm relied on the original lock ordering, behavior may differ.",
+          "Potential minor performance impact due to always locking A first, but negligible."
+        ]
+      },
+      "patch": {
+        "success": false,
+        "files_changed": [],
+        "rejected_paths": [],
+        "error": "Patch context does not match original source",
+        "patch_hash": "68cca5936d8dea47e59337ec72f1262b8b862a673e30145543eb80babf29cef0"
+      }
+    },
+    {
+      "tier": "ULTRA",
+      "proposal": {
+        "diagnosis": "The program deadlocks because two threads acquire mutexes A and B in opposite orders (T1 locks A then B, T2 locks B then A) while each holds one mutex and waits at a barrier, creating a circular wait condition.",
+        "root_cause": "Inconsistent lock acquisition order: each thread locks its own 'first' mutex based on its ID before the barrier, then attempts to lock the other 'second' mutex after the barrier, leading to a lock order reversal between threads.",
+        "confidence": 0.95,
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -9,13 +9,12 @@\n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n-    pthread_mutex_lock(first);\n-    printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n-    printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n-    pthread_mutex_lock(second);\n-    pthread_mutex_unlock(second);\n-    pthread_mutex_unlock(first);\n+    /* Lock in a consistent global order (A then B) to prevent deadlock */\n+    pthread_mutex_lock(&a);\n+    printf(\"T%d LOCK A\\n\", id);\n+    pthread_barrier_wait(&ready);\n+    printf(\"T%d WAIT B\\n\", id);\n+    pthread_mutex_lock(&b);\n+    pthread_mutex_unlock(&b);\n+    pthread_mutex_unlock(&a);\n     return NULL;\n }",
+        "reasoning_summary": "All three runs show the same cyclic lock wait pattern (A\u2192B, B\u2192A). Enforcing a global lock order (always A then B) eliminates the circular wait while preserving the barrier synchronization and logging.",
+        "expected_effect": "The program will no longer deadlock; both threads will acquire mutex A then B, pass the barrier, release locks, and print PASS.",
+        "risk_notes": [
+          "Alters which mutex each thread locks first (output order of lock messages changes).",
+          "Assumes locking A then B is acceptable for the program's correctness; if the algorithm relied on the original lock ordering, behavior may differ.",
+          "Potential minor performance impact due to always locking A first, but negligible."
+        ]
+      },
+      "patch": {
+        "success": false,
+        "files_changed": [],
+        "rejected_paths": [],
+        "error": "Patch context does not match original source",
+        "patch_hash": "31ffa9cd42bfd22011990717f2144d383cc7c1dcdfcb81003c8f2bd38afbdda2"
+      }
+    }
+  ],
+  "triage": {
+    "dominant_failure": "deadlock",
+    "failed_runs": 3,
+    "pass_runs": 0,
+    "representative_runs": [
+      "deadlock_001:1",
+      "deadlock_001:2",
+      "deadlock_001:3"
+    ],
+    "confidence": 0.95,
+    "requires_deeper_reasoning": false,
+    "summary": "All three runs failed with POSSIBLE_DEADLOCK, showing cyclic lock order A\u2194B and identical stack traces; no infrastructure failures."
+  },
+  "stopped_reason": "ultra_failed",
+  "total_time_ms": 49977.79889999947,
+  "inference_latency_ms": 42653.559700003825,
+  "execution_latency_ms": 7266.395399994508,
+  "inference_tokens": 18222,
+  "cost_usd": null,
+  "inference_mode": "real",
+  "model_calls": {
+    "LOCAL": 0,
+    "NANO": 1,
+    "SUPER": 2,
+    "ULTRA": 1
+  },
+  "metadata": {
+    "models": [
+      "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "nvidia/nemotron-3-super-120b-a12b"
+    ],
+    "starting_tier": "NANO",
+    "final_tier": "ULTRA",
+    "escalations": 2,
+    "routing_reasons": [
+      "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+      "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+      "Retrying SUPER after verification failure: Patch rejected: File has no hunks",
+      "Escalated from SUPER after verification failure: Patch rejected: Patch context does not match original source"
+    ],
+    "usage_available": true,
+    "inference_measurement": "measured",
+    "patch_attempts": 3,
+    "model_attempts": [
+      {
+        "tier": "NANO",
+        "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+        "input_tokens": 713,
+        "output_tokens": 460,
+        "latency_ms": 5925.783700004104,
+        "retry_count": 0,
+        "finish_reason": "stop",
+        "request_id": "8ddc5ac4a376741be8c6a24d7c6a8ee9",
+        "error_code": null,
+        "verification_reason": "Structured triage validated against execution counts."
+      },
+      {
+        "tier": "SUPER",
+        "model_id": "nvidia/nemotron-3-super-120b-a12b",
+        "input_tokens": 1669,
+        "output_tokens": 2852,
+        "latency_ms": 16669.843600000604,
+        "retry_count": 0,
+        "finish_reason": "stop",
+        "request_id": "02c4297f17dd26fdf4aa1cdde40726a7",
+        "error_code": null,
+        "verification_reason": "Patch rejected: File has no hunks"
+      },
+      {
+        "tier": "SUPER",
+        "model_id": "nvidia/nemotron-3-super-120b-a12b",
+        "input_tokens": 3163,
+        "output_tokens": 2485,
+        "latency_ms": 11050.926700001583,
+        "retry_count": 0,
+        "finish_reason": "stop",
+        "request_id": "0e18966d6a3f9faf29bd23463d9b857d",
+        "error_code": null,
+        "verification_reason": "Patch rejected: Patch context does not match original source"
+      },
+      {
+        "tier": "ULTRA",
+        "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+        "input_tokens": 3902,
+        "output_tokens": 2978,
+        "latency_ms": 9007.005699997535,
+        "retry_count": 0,
+        "finish_reason": "stop",
+        "request_id": "8b79ebd996cf1683ed27e55ed3d9f388",
+        "error_code": null,
+        "verification_reason": "Patch rejected: Patch context does not match original source"
+      }
+    ],
+    "observability": {
+      "backend": "langsmith",
+      "project": "concurrency-bug-hunter",
+      "status": "unavailable",
+      "spans_submitted": 0,
+      "spans_observed": [],
+      "feedback_submitted": 0,
+      "trace_ids": [
+        "87a9597e-f6e1-4cd2-8e96-551c1b16319b"
+      ],
+      "error_code": "langsmith_http_403"
+    }
+  }
+}

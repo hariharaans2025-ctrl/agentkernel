@@ -1,0 +1,172 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-10T09:37:24.612314+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 3.3701000000000425
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-10T09:37:24.654301+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 19.625575000000005
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-10T09:37:24.703256+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "duration_ms": 199.75054600000004
+    }
+  },
+  {
+    "index": 3,
+    "start_time": "2026-10-10T09:37:24.934210+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "duration_ms": 2.584640000000027
+    }
+  },
+  {
+    "index": 4,
+    "start_time": "2026-10-10T09:37:24.966901+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "duration_ms": 2.5008149999999896
+    }
+  },
+  {
+    "index": 5,
+    "start_time": "2026-10-10T09:37:24.998729+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 2.6130030000000026
+    }
+  },
+  {
+    "index": 6,
+    "start_time": "2026-10-10T09:37:25.031814+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 4.651151999999992
+    }
+  },
+  {
+    "index": 7,
+    "start_time": "2026-10-10T09:37:25.066679+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "WORKER HOLD queue WAIT stats\nMONITOR HOLD stats WAIT queue\n",
+      "duration_ms": 2.661395999999927
+    }
+  },
+  {
+    "index": 8,
+    "start_time": "2026-10-10T09:37:25.098763+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 2.5441600000000175
+    }
+  },
+  {
+    "index": 9,
+    "start_time": "2026-10-10T09:37:25.131873+00:00",
+    "result": {
+      "exit_code": 0,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "a714fb99-c662-445f-8544-499fc3ab80a6",
+        "batch_transport_wall_ms": 9174.63800002588
+      },
+      "stdout": "completed=100 checksum=5050 exactly_once=yes\nPASS\n",
+      "stderr": "MONITOR HOLD stats WAIT queue\nWORKER HOLD queue WAIT stats\n",
+      "duration_ms": 2.4982009999999777
+    }
+  }
+]

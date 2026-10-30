@@ -1,0 +1,34 @@
+--- a/src/queue.c
++++ b/src/queue.c
+@@ -12,9 +12,9 @@
+ }
+ 
+ int queue_process_one(JobQueue *q, int force_overlap) {
++    /* Both participants must reach the barrier before acquiring shared locks. */
++    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+     pthread_mutex_lock(&q->queue_lock);
+-    /* Test scheduling hook: overlap the two operations while holding first locks. */
+-    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+     if (force_overlap) fprintf(stderr, "WORKER HOLD queue WAIT stats\n");
+     pthread_mutex_lock(&q->stats_lock);
+     int available = q->next < q->length;
+@@ -30,14 +30,14 @@
+ }
+ 
+ int queue_inspect(JobQueue *q, int force_overlap) {
+-    /* Intentional fault: monitoring acquires the same locks in reverse order. */
++    /* Match the worker: rendezvous without locks, then queue before stats. */
++    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
++    pthread_mutex_lock(&q->queue_lock);
++    if (force_overlap) fprintf(stderr, "MONITOR HOLD queue WAIT stats\n");
+     pthread_mutex_lock(&q->stats_lock);
+-    if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+-    if (force_overlap) fprintf(stderr, "MONITOR HOLD stats WAIT queue\n");
+-    pthread_mutex_lock(&q->queue_lock);
+     int outstanding = q->length - q->completed;
++    pthread_mutex_unlock(&q->stats_lock);
+     pthread_mutex_unlock(&q->queue_lock);
+-    pthread_mutex_unlock(&q->stats_lock);
+     return outstanding;
+ }
+ 

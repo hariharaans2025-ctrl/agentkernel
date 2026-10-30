@@ -1,0 +1,36 @@
+{
+  "status": "rejected",
+  "profile": "super_only",
+  "attempts": [
+    {
+      "stage": "super",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 1539,
+      "cost_usd": 0.0004851,
+      "reserved_usd": 0.0072864,
+      "false_fix": false,
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "ledger_call_id": "ceaafda7697d4696ba15a15f5cf6ba73",
+      "input_tokens": 1500,
+      "output_tokens": 39,
+      "reasoning_tokens": 0,
+      "response": "{\"edits\": [{\"file\": \"publish.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include \"]}]}",
+      "error_code": "invalid_line_repair_contract",
+      "validation": [],
+      "inference_ms": 1045.1815000269562
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1539,
+  "cost_usd": 0.0004851,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "end_to_end_ms": 18568.88090004213,
+  "inference_ms": 1045.1815000269562,
+  "verification_ms": 0,
+  "patch": null,
+  "response": "{\"edits\": [{\"file\": \"publish.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include \"]}]}",
+  "verification": null
+}

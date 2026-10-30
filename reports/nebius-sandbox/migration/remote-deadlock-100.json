@@ -1,0 +1,356 @@
+{
+  "task": "deadlock_001",
+  "status": "verified",
+  "route": [
+    "SUPER"
+  ],
+  "ultra_avoided": true,
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 13705.801400006749,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_001:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "687295c8-6b2b-48ab-aab0-eaacf97ef85e",
+          "transport_wall_ms": 3894.1523999674246
+        },
+        "stdout": "T1 LOCK A\nT2 LOCK B\nT2 WAIT A\nT1 WAIT B\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "687295c8-6b2b-48ab-aab0-eaacf97ef85e",
+          "transport_wall_ms": 4707.929400028661
+        },
+        "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "687295c8-6b2b-48ab-aab0-eaacf97ef85e",
+          "transport_wall_ms": 5103.313300001901
+        },
+        "stdout": "T2 LOCK B\nT1 LOCK A\nT1 WAIT B\nT2 WAIT A\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "4b4c8f316a845e49",
+        "pattern": "cyclic_lock_wait",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "confidence": 0.9,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_001:1",
+          "deadlock_001:2",
+          "deadlock_001:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "A"
+            ]
+          ],
+          "cycle": [
+            "A",
+            "B",
+            "A"
+          ],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "build_passed": true,
+    "total_runs": 100,
+    "passed_runs": 100,
+    "failed_runs": 0,
+    "race_count": 0,
+    "deadlock_count": 0,
+    "crash_count": 0,
+    "infrastructure_failures": 0,
+    "observed_program_failures": 0,
+    "sanitizer_findings": [],
+    "regressions": [],
+    "duration_ms": 241784.12979998393,
+    "evidence": {
+      "build": {
+        "command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "duration_ms": 166.518131,
+        "timed_out": false,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "e7bb2e2a-20f8-45c7-b6ed-5d6f7f8dc686",
+          "transport_wall_ms": 3156.879099959042
+        },
+        "success": true
+      },
+      "original_tests": {
+        "passed": true,
+        "results": [],
+        "configured": false
+      },
+      "campaign": {
+        "total_runs": 100,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 100,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 100
+        },
+        "duration_ms": 238626.7106999876,
+        "representative_runs": []
+      },
+      "sanitizer": {
+        "status": "not_configured"
+      }
+    },
+    "reason": "The patch passed the configured verification campaign."
+  },
+  "repairs": [
+    {
+      "tier": "SUPER",
+      "proposal": {
+        "diagnosis": "Deadlock due to cyclic lock acquisition combined with a barrier held inside critical section causing threads to wait indefinitely for each other's locks.",
+        "root_cause": "Each thread acquires one mutex then waits at a barrier while still holding that mutex. Since threads acquire locks in opposite order (T1: A then B, T2: B then A), and both hold their first lock while waiting at the barrier, neither can proceed to acquire the second lock, resulting in deadlock.",
+        "confidence": 0.95,
+        "reasoning_summary": "Evidence shows consistent cyclic wait pattern: T1 locks A then waits for B, T2 locks B then waits for A. Barrier wait occurs after first lock but before second lock, blocking progress while holding locks. This creates a classic hold-and-wait deadlock scenario exacerbated by the barrier synchronizing threads while they hold conflicting locks.",
+        "expected_effect": "Moving the barrier wait outside the critical section (after releasing the first lock) allows threads to synchronize without holding locks, enabling them to proceed and acquire locks in a coordinated manner, breaking the deadlock cycle.",
+        "risk_notes": [
+          "Reordering lock acquisition/unlocking may introduce new race conditions if the program relies on the first lock being held during the barrier wait for correctness. Ensure no shared data accessed between unlock and relock requires protection."
+        ],
+        "patch": "--- a/main.c\n+++ b/main.c\n@@ -12,10 +12,12 @@\n     pthread_mutex_t *second = id == 1 ? &b : &a;\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n+    pthread_mutex_unlock(first);\n     pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n+    pthread_mutex_lock(first);\n     pthread_mutex_unlock(first);\n     return NULL;\n }\n"
+      },
+      "patch": {
+        "success": true,
+        "files_changed": [
+          "main.c"
+        ],
+        "rejected_paths": [],
+        "error": null,
+        "error_code": null,
+        "repair_hint": null,
+        "source_line": null,
+        "patch_hash": "42773c7367b1576362c488bb1161985d534ad68e61a9e1f8c8e3cd33868fd101"
+      },
+      "verification": {
+        "passed": true,
+        "build_passed": true,
+        "total_runs": 100,
+        "passed_runs": 100,
+        "failed_runs": 0,
+        "race_count": 0,
+        "deadlock_count": 0,
+        "crash_count": 0,
+        "infrastructure_failures": 0,
+        "observed_program_failures": 0,
+        "sanitizer_findings": [],
+        "regressions": [],
+        "duration_ms": 241784.12979998393,
+        "evidence": {
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "main.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 166.518131,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "e7bb2e2a-20f8-45c7-b6ed-5d6f7f8dc686",
+              "transport_wall_ms": 3156.879099959042
+            },
+            "success": true
+          },
+          "original_tests": {
+            "passed": true,
+            "results": [],
+            "configured": false
+          },
+          "campaign": {
+            "total_runs": 100,
+            "failed_runs": 0,
+            "infrastructure_failures": 0,
+            "requested_runs": 100,
+            "execution_blocked": false,
+            "counts": {
+              "PASS": 100
+            },
+            "duration_ms": 238626.7106999876,
+            "representative_runs": []
+          },
+          "sanitizer": {
+            "status": "not_configured"
+          }
+        },
+        "reason": "The patch passed the configured verification campaign."
+      }
+    }
+  ],
+  "triage": null,
+  "stopped_reason": "verification_passed",
+  "total_time_ms": 269276.755400002,
+  "inference_latency_ms": 200.0,
+  "execution_latency_ms": 255656.6975449907,
+  "inference_tokens": 1580,
+  "cost_usd": 0.0005,
+  "inference_mode": "mock",
+  "model_calls": {
+    "LOCAL": 0,
+    "NANO": 0,
+    "SUPER": 1,
+    "ULTRA": 0
+  },
+  "metadata": {
+    "execution_backend": "nebius",
+    "models": [],
+    "starting_tier": "SUPER",
+    "final_tier": "SUPER",
+    "escalations": 0,
+    "routing_reasons": [
+      "Fixed-tier evaluation policy: SUPER."
+    ],
+    "usage_available": true,
+    "inference_measurement": "simulated",
+    "patch_attempts": 1,
+    "model_attempts": [
+      {
+        "tier": "SUPER",
+        "model_id": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "latency_ms": 200.0,
+        "retry_count": 0,
+        "reasoning_tokens": null,
+        "requested_max_output_tokens": null,
+        "requested_enable_thinking": null,
+        "error_hint": null,
+        "finish_reason": null,
+        "request_id": null,
+        "error_code": null,
+        "verification_reason": "The patch passed the configured verification campaign."
+      }
+    ],
+    "observability": {
+      "backend": "langsmith",
+      "project": "concurrency-bug-hunter",
+      "status": "confirmed",
+      "spans_submitted": 7,
+      "spans_observed": [
+        {
+          "id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7",
+          "name": "ConcurrencyBugHunterJob",
+          "parent_id": null
+        },
+        {
+          "id": "5f8bd4a8-bae3-423b-ad6d-43ced6470a0f",
+          "name": "baseline_compile",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        },
+        {
+          "id": "a4129387-26cb-4ddc-bedd-caecbb4e09c8",
+          "name": "baseline_stress_campaign",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        },
+        {
+          "id": "9b83b968-324d-4018-b21e-4cc75e37ac8b",
+          "name": "fingerprint_analysis",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        },
+        {
+          "id": "91db3124-c31d-4f90-93f5-db654831d801",
+          "name": "super_diagnosis",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        },
+        {
+          "id": "2b6fd8db-a657-46ea-9e31-2717f58473ab",
+          "name": "patch_application",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        },
+        {
+          "id": "6e379d58-50b9-4093-9345-2417d06fe00e",
+          "name": "verification_campaign",
+          "parent_id": "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+        }
+      ],
+      "feedback_submitted": 11,
+      "trace_ids": [
+        "3a94bc32-b338-4acd-ac2e-32403b3d6ce7"
+      ]
+    },
+    "inference_source": "saved live Super edits replayed; no new inference",
+    "paid_model_requests": 0
+  }
+}

@@ -1,0 +1,2749 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[response2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[ledger_3-super_only]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[predicate_3-super_only]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[aggregate_3-fast]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_out_of_bounds_reproduced_by_v3_parser",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_rejected_candidates_categorized_by_gate",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_keeps_raw_quotes_and_line_endings",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[Here is the fix\\n@@ REPLACE writer.c 2-2\\nx; sched_yield();\\n@@ END-text_outside_blocks]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 3-3\\nx; sched_yield();\\n@@ END-line_range_out_of_bounds]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nx; sched_yield();-unterminated_block]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE other.c 1-1\\nx\\n@@ END-file_not_editable]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n000002|x; sched_yield();\\n@@ END-line_prefix_copied]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n#include \"state.h\"\\nx; sched_yield();\\n@@ END-ambiguous_neighbour_duplicated]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 1-2\\na\\n@@ END\\n@@ REPLACE writer.c 2-2\\nb\\n@@ END-line_ranges_overlap]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; }\\n@@ END-scheduling_hooks_changed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; sched_yield(); }\\n@@ END-no_change]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_no_op_block_beside_a_real_fix_is_dropped_and_recorded",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_live_capacity_3_reply_now_parses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_identity_is_exact_bytes_and_changes_are_rejected",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_whole_reply_fence_only_is_unwrapped",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_messages_number_lines_and_never_include_references",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_dedupe_is_lossless_and_keeps_reader_writer_conflict",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_evidence_packet_contains_required_fields_and_refuses_truncation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uncalibrated_goes_ultra_direct_with_logged_reason",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uses_super_first_only_when_calibrated_and_cheaper",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_accepted_false_fix_is_counted_and_skips_super",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_calibration_counts_only_super_rows_for_buckets",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_latency_uses_own_inference_plus_pooled_verification",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_latency_source_is_explicit_then_measured_then_default",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_correction_stage_added_only_to_single_tier_routes",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_input_cap_fits_prompt_plus_full_evidence_packet",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_context_capacity_and_blocking_helper_bucket",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_route_is_opt_in_and_v3_unchanged",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_identity_invalidates_for_source_protected_file_policy_and_config",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_only_fully_verified_entries_are_admitted",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_ttl_and_tampered_patch_are_misses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_weak_verification_is_rejected_before_cache_access",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[True-0-verified]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-0-rejected]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-1-unknown]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_miss_runs_the_original_route_once",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "outcome": "passed",
+      "duration_s": 0.011679540999999904,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "outcome": "passed",
+      "duration_s": 0.0009244180000000934,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "outcome": "passed",
+      "duration_s": 0.0013986190000000454,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "outcome": "passed",
+      "duration_s": 0.0008185280000000406,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "outcome": "passed",
+      "duration_s": 0.0007910589999999829,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "outcome": "passed",
+      "duration_s": 0.0009639569999998487,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "outcome": "passed",
+      "duration_s": 0.0007958540000000403,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "outcome": "passed",
+      "duration_s": 0.004457181000000032,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "outcome": "passed",
+      "duration_s": 0.0012155150000000559,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "outcome": "passed",
+      "duration_s": 0.0009529999999999816,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "outcome": "passed",
+      "duration_s": 0.0008572169999999657,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[response2]",
+      "outcome": "passed",
+      "duration_s": 0.0009178080000000755,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "outcome": "passed",
+      "duration_s": 0.0008632550000001737,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[ledger_3-super_only]",
+      "outcome": "skipped",
+      "duration_s": 0.0010119690000001125,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[predicate_3-super_only]",
+      "outcome": "skipped",
+      "duration_s": 0.001015634000000154,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[aggregate_3-fast]",
+      "outcome": "skipped",
+      "duration_s": 0.0009973690000000257,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_out_of_bounds_reproduced_by_v3_parser",
+      "outcome": "skipped",
+      "duration_s": 0.0008899459999999193,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_rejected_candidates_categorized_by_gate",
+      "outcome": "skipped",
+      "duration_s": 0.0008778470000000427,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_keeps_raw_quotes_and_line_endings",
+      "outcome": "passed",
+      "duration_s": 0.0008648870000000919,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[Here is the fix\\n@@ REPLACE writer.c 2-2\\nx; sched_yield();\\n@@ END-text_outside_blocks]",
+      "outcome": "passed",
+      "duration_s": 0.00087151799999996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 3-3\\nx; sched_yield();\\n@@ END-line_range_out_of_bounds]",
+      "outcome": "passed",
+      "duration_s": 0.00088983499999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nx; sched_yield();-unterminated_block]",
+      "outcome": "passed",
+      "duration_s": 0.0008658200000001282,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE other.c 1-1\\nx\\n@@ END-file_not_editable]",
+      "outcome": "passed",
+      "duration_s": 0.0008568860000000011,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n000002|x; sched_yield();\\n@@ END-line_prefix_copied]",
+      "outcome": "passed",
+      "duration_s": 0.0008717869999999017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n#include \"state.h\"\\nx; sched_yield();\\n@@ END-ambiguous_neighbour_duplicated]",
+      "outcome": "passed",
+      "duration_s": 0.0008805009999999225,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 1-2\\na\\n@@ END\\n@@ REPLACE writer.c 2-2\\nb\\n@@ END-line_ranges_overlap]",
+      "outcome": "passed",
+      "duration_s": 0.0009197910000000586,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; }\\n@@ END-scheduling_hooks_changed]",
+      "outcome": "passed",
+      "duration_s": 0.0010259999999999714,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; sched_yield(); }\\n@@ END-no_change]",
+      "outcome": "passed",
+      "duration_s": 0.0008885140000000069,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_no_op_block_beside_a_real_fix_is_dropped_and_recorded",
+      "outcome": "passed",
+      "duration_s": 0.0008446280000000694,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_live_capacity_3_reply_now_parses",
+      "outcome": "skipped",
+      "duration_s": 0.0008115079999999608,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 81, 'Skipped: live evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_identity_is_exact_bytes_and_changes_are_rejected",
+      "outcome": "passed",
+      "duration_s": 0.00083366099999993,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_whole_reply_fence_only_is_unwrapped",
+      "outcome": "passed",
+      "duration_s": 0.0008103769999999733,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_messages_number_lines_and_never_include_references",
+      "outcome": "passed",
+      "duration_s": 0.0007826449999999152,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_dedupe_is_lossless_and_keeps_reader_writer_conflict",
+      "outcome": "passed",
+      "duration_s": 0.0009657199999999477,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_evidence_packet_contains_required_fields_and_refuses_truncation",
+      "outcome": "passed",
+      "duration_s": 0.0011922299999999053,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uncalibrated_goes_ultra_direct_with_logged_reason",
+      "outcome": "passed",
+      "duration_s": 0.0012081529999999896,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uses_super_first_only_when_calibrated_and_cheaper",
+      "outcome": "passed",
+      "duration_s": 0.0008809520000000459,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_accepted_false_fix_is_counted_and_skips_super",
+      "outcome": "passed",
+      "duration_s": 0.0008019129999998764,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_calibration_counts_only_super_rows_for_buckets",
+      "outcome": "passed",
+      "duration_s": 0.0007589489999998422,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_latency_uses_own_inference_plus_pooled_verification",
+      "outcome": "passed",
+      "duration_s": 0.0008060909999998422,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_latency_source_is_explicit_then_measured_then_default",
+      "outcome": "passed",
+      "duration_s": 0.0035677249999999106,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_correction_stage_added_only_to_single_tier_routes",
+      "outcome": "passed",
+      "duration_s": 0.0008252189999999882,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_input_cap_fits_prompt_plus_full_evidence_packet",
+      "outcome": "passed",
+      "duration_s": 0.002503727000000011,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_context_capacity_and_blocking_helper_bucket",
+      "outcome": "passed",
+      "duration_s": 0.00097464199999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_route_is_opt_in_and_v3_unchanged",
+      "outcome": "passed",
+      "duration_s": 0.001365049000000007,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "outcome": "passed",
+      "duration_s": 0.25879378399999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "outcome": "passed",
+      "duration_s": 0.04454264500000016,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "outcome": "passed",
+      "duration_s": 0.04720025299999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "outcome": "passed",
+      "duration_s": 0.04153809499999994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "outcome": "passed",
+      "duration_s": 0.04074833999999994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "outcome": "passed",
+      "duration_s": 0.03989043300000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "outcome": "passed",
+      "duration_s": 0.04007247699999983,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "outcome": "passed",
+      "duration_s": 0.03985243599999966,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_identity_invalidates_for_source_protected_file_policy_and_config",
+      "outcome": "passed",
+      "duration_s": 0.06929350500000009,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_only_fully_verified_entries_are_admitted",
+      "outcome": "passed",
+      "duration_s": 0.012856576999999758,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_ttl_and_tampered_patch_are_misses",
+      "outcome": "passed",
+      "duration_s": 0.014310799999999846,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_weak_verification_is_rejected_before_cache_access",
+      "outcome": "passed",
+      "duration_s": 0.002909446999999954,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[True-0-verified]",
+      "outcome": "passed",
+      "duration_s": 0.026938261999999824,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-0-rejected]",
+      "outcome": "passed",
+      "duration_s": 0.026650981000000185,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-1-unknown]",
+      "outcome": "passed",
+      "duration_s": 0.02676517300000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_miss_runs_the_original_route_once",
+      "outcome": "passed",
+      "duration_s": 0.013421534999999984,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "outcome": "passed",
+      "duration_s": 0.0026130720000001606,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "outcome": "passed",
+      "duration_s": 0.0030463430000000624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "outcome": "passed",
+      "duration_s": 0.0017295660000000712,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "outcome": "passed",
+      "duration_s": 0.001729415000000012,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "outcome": "passed",
+      "duration_s": 0.013940743000000255,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "outcome": "passed",
+      "duration_s": 0.013899563000000281,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "outcome": "passed",
+      "duration_s": 0.504807974,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "outcome": "passed",
+      "duration_s": 0.01645632099999972,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "outcome": "passed",
+      "duration_s": 0.0013464220000001248,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "outcome": "passed",
+      "duration_s": 0.00133976100000055,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "outcome": "passed",
+      "duration_s": 0.0012797199999998732,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "outcome": "passed",
+      "duration_s": 0.0013380379999996528,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "outcome": "passed",
+      "duration_s": 0.0013331700000005497,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "outcome": "passed",
+      "duration_s": 0.0015442770000002604,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "outcome": "passed",
+      "duration_s": 0.0009663409999993711,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "outcome": "passed",
+      "duration_s": 0.0009843890000000854,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "outcome": "passed",
+      "duration_s": 0.0009229259999998796,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "outcome": "passed",
+      "duration_s": 0.0009199809999995701,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "outcome": "passed",
+      "duration_s": 0.0009808919999998444,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "outcome": "passed",
+      "duration_s": 0.0009298350000004341,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "outcome": "passed",
+      "duration_s": 0.0364270160000002,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "outcome": "passed",
+      "duration_s": 0.0008871610000000807,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "outcome": "passed",
+      "duration_s": 0.001212130000000311,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "outcome": "passed",
+      "duration_s": 0.0008186190000003535,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "outcome": "passed",
+      "duration_s": 0.0010920370000002677,
+      "details": null
+    }
+  ],
+  "phase_reports": [
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.010959839999999943,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003048380000000295,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00041486299999993204,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00036564900000002343,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00027131700000004866,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00028745200000002136,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003240170000000653,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0008121690000000292,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026243299999995084,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00032456700000005334,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002466199999999752,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000247341000000012,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031605499999998177,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002015929999999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002734110000000012,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003196099999999147,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0003975969999999718,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002467499999999623,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000323265000000017,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00021948900000001714,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002531000000000061,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0031693580000000665,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.001003886999999981,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00028393599999998465,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00034332600000008817,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006006520000000348,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027153699999993286,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003991989999999612,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002488930000000833,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003049079999999371,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003701350000000492,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002377569999999496,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024932499999996693,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[response2]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044423699999995847,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[response2]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022718100000007624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[response2]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024639000000004074,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003548720000000616,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023659500000006162,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027178800000005054,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[ledger_3-super_only]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000400170000000033,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[ledger_3-super_only]",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.00029631500000004696,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[ledger_3-super_only]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003154840000000325,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[predicate_3-super_only]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003976170000000723,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[predicate_3-super_only]",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.000296865000000035,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[predicate_3-super_only]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00032115200000004673,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[aggregate_3-fast]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004530209999999979,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[aggregate_3-fast]",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.00028689100000001133,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_quote_closure_reproduced[aggregate_3-fast]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002574570000000165,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_out_of_bounds_reproduced_by_v3_parser",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003258489999999892,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_out_of_bounds_reproduced_by_v3_parser",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.0002682029999999669,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_super_out_of_bounds_reproduced_by_v3_parser",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00029589399999996324,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_rejected_candidates_categorized_by_gate",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031961999999996493,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_rejected_candidates_categorized_by_gate",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.0002648570000000072,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 16, 'Skipped: frozen evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_rejected_candidates_categorized_by_gate",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002933700000000705,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_keeps_raw_quotes_and_line_endings",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031800700000006454,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_keeps_raw_quotes_and_line_endings",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002996189999999732,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_keeps_raw_quotes_and_line_endings",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024726100000005413,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[Here is the fix\\n@@ REPLACE writer.c 2-2\\nx; sched_yield();\\n@@ END-text_outside_blocks]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003849670000000138,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[Here is the fix\\n@@ REPLACE writer.c 2-2\\nx; sched_yield();\\n@@ END-text_outside_blocks]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022480800000002077,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[Here is the fix\\n@@ REPLACE writer.c 2-2\\nx; sched_yield();\\n@@ END-text_outside_blocks]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026174299999992545,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 3-3\\nx; sched_yield();\\n@@ END-line_range_out_of_bounds]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00037874800000003983,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 3-3\\nx; sched_yield();\\n@@ END-line_range_out_of_bounds]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023389099999993057,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 3-3\\nx; sched_yield();\\n@@ END-line_range_out_of_bounds]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027719599999997957,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nx; sched_yield();-unterminated_block]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00037312000000000456,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nx; sched_yield();-unterminated_block]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022618000000007576,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nx; sched_yield();-unterminated_block]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026652000000004783,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE other.c 1-1\\nx\\n@@ END-file_not_editable]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003712980000000199,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE other.c 1-1\\nx\\n@@ END-file_not_editable]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022905299999997908,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE other.c 1-1\\nx\\n@@ END-file_not_editable]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002565350000000022,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n000002|x; sched_yield();\\n@@ END-line_prefix_copied]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003619429999999202,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n000002|x; sched_yield();\\n@@ END-line_prefix_copied]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023300900000000624,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n000002|x; sched_yield();\\n@@ END-line_prefix_copied]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002768349999999753,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n#include \"state.h\"\\nx; sched_yield();\\n@@ END-ambiguous_neighbour_duplicated]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003804809999999881,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n#include \"state.h\"\\nx; sched_yield();\\n@@ END-ambiguous_neighbour_duplicated]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00025284899999999944,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\n#include \"state.h\"\\nx; sched_yield();\\n@@ END-ambiguous_neighbour_duplicated]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024717099999993497,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 1-2\\na\\n@@ END\\n@@ REPLACE writer.c 2-2\\nb\\n@@ END-line_ranges_overlap]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003889440000000022,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 1-2\\na\\n@@ END\\n@@ REPLACE writer.c 2-2\\nb\\n@@ END-line_ranges_overlap]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024737100000005174,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 1-2\\na\\n@@ END\\n@@ REPLACE writer.c 2-2\\nb\\n@@ END-line_ranges_overlap]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002834760000000047,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; }\\n@@ END-scheduling_hooks_changed]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0005148419999999598,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; }\\n@@ END-scheduling_hooks_changed]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024763199999999763,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; }\\n@@ END-scheduling_hooks_changed]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002635260000000139,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; sched_yield(); }\\n@@ END-no_change]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00038427699999998843,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; sched_yield(); }\\n@@ END-no_change]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00025237899999996927,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_block_contract_rejects_ambiguous_or_invalid[@@ REPLACE writer.c 2-2\\nvoid update(State*s){ s->n++; sched_yield(); }\\n@@ END-no_change]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002518580000000492,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_no_op_block_beside_a_real_fix_is_dropped_and_recorded",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000304637000000052,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_no_op_block_beside_a_real_fix_is_dropped_and_recorded",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002628350000000168,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_no_op_block_beside_a_real_fix_is_dropped_and_recorded",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002771560000000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_live_capacity_3_reply_now_parses",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002926289999999332,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_live_capacity_3_reply_now_parses",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_s": 0.00026305500000001203,
+      "details": "('/workspace/tests/test_adaptive_v4.py', 81, 'Skipped: live evidence not present')"
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_saved_live_capacity_3_reply_now_parses",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002558240000000156,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_identity_is_exact_bytes_and_changes_are_rejected",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002999000000000196,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_identity_is_exact_bytes_and_changes_are_rejected",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002912769999999787,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_identity_is_exact_bytes_and_changes_are_rejected",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024248399999993175,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_whole_reply_fence_only_is_unwrapped",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00029510300000001877,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_whole_reply_fence_only_is_unwrapped",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024116200000001697,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_whole_reply_fence_only_is_unwrapped",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002741119999999375,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_messages_number_lines_and_never_include_references",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002921579999999313,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_messages_number_lines_and_never_include_references",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024766300000000907,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_messages_number_lines_and_never_include_references",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024282399999997484,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_dedupe_is_lossless_and_keeps_reader_writer_conflict",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0002971459999999704,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_dedupe_is_lossless_and_keeps_reader_writer_conflict",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004267310000000135,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_dedupe_is_lossless_and_keeps_reader_writer_conflict",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024184299999996384,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_evidence_packet_contains_required_fields_and_refuses_truncation",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031932999999995104,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_evidence_packet_contains_required_fields_and_refuses_truncation",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0005964149999999613,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_evidence_packet_contains_required_fields_and_refuses_truncation",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000276484999999993,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uncalibrated_goes_ultra_direct_with_logged_reason",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003111470000000116,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uncalibrated_goes_ultra_direct_with_logged_reason",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006558039999999821,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uncalibrated_goes_ultra_direct_with_logged_reason",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00024120199999999592,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uses_super_first_only_when_calibrated_and_cheaper",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00032748199999999006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uses_super_first_only_when_calibrated_and_cheaper",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002838459999999765,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_uses_super_first_only_when_calibrated_and_cheaper",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026962400000007936,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_accepted_false_fix_is_counted_and_skips_super",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031550299999993925,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_accepted_false_fix_is_counted_and_skips_super",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023772599999993815,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_accepted_false_fix_is_counted_and_skips_super",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000248683999999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_calibration_counts_only_super_rows_for_buckets",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00030023999999995166,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_calibration_counts_only_super_rows_for_buckets",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00020343599999994577,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_calibration_counts_only_super_rows_for_buckets",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002552729999999448,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_latency_uses_own_inference_plus_pooled_verification",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003060489999999749,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_latency_uses_own_inference_plus_pooled_verification",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002363759999999271,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_latency_uses_own_inference_plus_pooled_verification",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002636659999999402,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_latency_source_is_explicit_then_measured_then_default",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003023439999999544,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_latency_source_is_explicit_then_measured_then_default",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0029768580000000266,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_latency_source_is_explicit_then_measured_then_default",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002885229999999295,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_correction_stage_added_only_to_single_tier_routes",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00033234900000000955,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_correction_stage_added_only_to_single_tier_routes",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002453279999999891,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_correction_stage_added_only_to_single_tier_routes",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002475419999999895,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_input_cap_fits_prompt_plus_full_evidence_packet",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003104059999999853,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_input_cap_fits_prompt_plus_full_evidence_packet",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018962150000000344,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_input_cap_fits_prompt_plus_full_evidence_packet",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00029710599999999143,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_context_capacity_and_blocking_helper_bucket",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003278620000000121,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_context_capacity_and_blocking_helper_bucket",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00039034599999998587,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_router_context_capacity_and_blocking_helper_bucket",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002564339999999721,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_route_is_opt_in_and_v3_unchanged",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00032825299999994506,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_route_is_opt_in_and_v3_unchanged",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0007549930000000371,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_adaptive_v4.py::test_v4_route_is_opt_in_and_v3_unchanged",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002818030000000249,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007881339999999959,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.25761037600000003,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003952739999999455,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008914680000000619,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.04319212800000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00045904900000004467,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0011314980000001196,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.04571387299999996,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003548819999998898,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008433150000000111,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.04034558599999993,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003491939999999971,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008615130000000359,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03952465400000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036217299999985464,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008404420000001078,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.038684522999999915,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00036546800000003543,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008585389999999915,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03883494899999995,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003789889999998852,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008620039999998053,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03861671099999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003737209999998825,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_identity_invalidates_for_source_protected_file_policy_and_config",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000856194999999893,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_identity_invalidates_for_source_protected_file_policy_and_config",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.06807763000000011,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_identity_invalidates_for_source_protected_file_policy_and_config",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003596800000000844,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_only_fully_verified_entries_are_admitted",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008775569999999178,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_only_fully_verified_entries_are_admitted",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.01161118800000005,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_only_fully_verified_entries_are_admitted",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003678319999997903,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_ttl_and_tampered_patch_are_misses",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007842869999998836,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_ttl_and_tampered_patch_are_misses",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.013230728999999997,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_ttl_and_tampered_patch_are_misses",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00029578399999996563,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_weak_verification_is_rejected_before_cache_access",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007629749999999991,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_weak_verification_is_rejected_before_cache_access",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018590099999999943,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_weak_verification_is_rejected_before_cache_access",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002874619999999606,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[True-0-verified]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008654790000000023,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[True-0-verified]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.025756027999999986,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[True-0-verified]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00031675499999983536,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-0-rejected]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0009688740000000085,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-0-rejected]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.02535875200000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-0-rejected]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00032335500000013617,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-1-unknown]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010053290000000548,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-1-unknown]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.02543273299999993,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_hit_runs_fresh_full_verifier_without_model[False-1-unknown]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00032711100000004656,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_miss_runs_the_original_route_once",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008657789999999554,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_miss_runs_the_original_route_once",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.012251389000000001,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_candidate_reuse.py::test_cache_miss_runs_the_original_route_once",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003043670000000276,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004637960000000163,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0018315690000001439,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003177070000000004,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00041884900000010994,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0023118709999998543,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00031562300000009813,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004630450000000508,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009530400000001826,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003134809999998378,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00044354499999998964,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0009659100000001253,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000319959999999897,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0009203210000001683,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.012699070000000034,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0003213520000000525,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010242580000001666,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.012556106000000122,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00031919899999999224,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010351439999998213,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.5034012619999999,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00037156800000026635,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000935605000000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.015221896999999984,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00029881899999972816,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008514189999999644,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023734600000002715,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00025765700000013325,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008295250000003307,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022774199999986422,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00028249400000035507,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008019639999998773,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022222299999974382,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00025553300000025203,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008251779999999265,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002210519999996663,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00029180800000006,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0008569460000003026,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00022153199999985773,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002546920000003894,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0010208519999999055,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00024113100000011656,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002822940000002383,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004782379999999087,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00023091699999966409,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002571859999997983,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0004728400000000299,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00021657500000005214,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002949740000000034,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00045191900000007834,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00020973499999987766,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00026127199999992357,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.000445928999999623,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00021789699999974488,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002561550000002022,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00048049099999980527,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00021275000000020583,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00028765099999983335,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00046287500000019577,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00020993499999999443,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00025702500000024386,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0007641469999999373,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.03533453600000014,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.000328333000000125,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003798700000001709,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0002605810000000375,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002467099999998723,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003253690000000198,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0006091640000001064,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00027759700000018483,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.00031823800000019276,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.00025315000000025734,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.0002472309999999034,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "phase": "setup",
+      "outcome": "passed",
+      "duration_s": 0.0003202700000000114,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_s": 0.0004255380000000031,
+      "details": null
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "phase": "teardown",
+      "outcome": "passed",
+      "duration_s": 0.00034622900000025325,
+      "details": null
+    }
+  ]
+}

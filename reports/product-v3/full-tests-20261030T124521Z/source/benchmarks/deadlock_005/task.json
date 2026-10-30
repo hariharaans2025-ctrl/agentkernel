@@ -1,0 +1,56 @@
+{
+  "task_id": "deadlock_005",
+  "source_files": [
+    "main.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "main.c",
+    "-o",
+    "app"
+  ],
+  "binary_path": "app",
+  "run_command": [
+    "./app"
+  ],
+  "max_runtime_seconds": 2,
+  "stress_runs": 3,
+  "expected_behavior": "PASS",
+  "expected_bug_category": "deadlock",
+  "verification_config": {
+    "stress_runs": 100,
+    "sanitizer_enabled": false,
+    "sanitizer_required": false,
+    "sanitizer_runs": 3,
+    "semantic_checks": [
+      {
+        "name": "Shutdown drains three pending jobs before return",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "Worker shutdown, join and lock",
+    "semantic_invariant": "Shutdown drains three pending jobs before return",
+    "fixture_version": 2
+  },
+  "support_files": [
+    "oracle.c",
+    "stress.h"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "train_programs": 6,
+  "validation_programs": 1,
+  "split_unit": "whole original program",
+  "records": [
+    {
+      "id": "deadlock_004",
+      "split": "train",
+      "source_hashes": {
+        "main.c": "72439596bce194f7ee08d9db67082889188605bd2a5e29529f7b5750ba09a437"
+      },
+      "target_hashes": {
+        "main.c": "90dd4ce695b7c175516435994869cf8f2bb32c27df0686359f71183043087e32"
+      },
+      "verification_provenance": {
+        "file": "reports\\final-benchmark-jobs\\super_only\\deadlock_004\\events.jsonl",
+        "sha256": "22c7ae2990852f09586bacdbe612591a639b1d3a63288edae542e21261b6fee3",
+        "patch_sha256": "c0bacd2b6ad690f22675c9569a8e79463817e4c300533bb9e7e1bd533f2389cf"
+      }
+    },
+    {
+      "id": "race_002",
+      "split": "train",
+      "source_hashes": {
+        "main.c": "72d39caad66703a25d4186d6a76ebb5461d9f425a4f38e2307ea8712bd977800"
+      },
+      "target_hashes": {
+        "main.c": "62c288103bf1fea229fe33d7ae2677f6cf0511ab69e91ec95d5c5bbf930981ed"
+      },
+      "verification_provenance": {
+        "file": "reports\\final-benchmark-jobs\\super_only\\race_002\\events.jsonl",
+        "sha256": "80bf4f39316ac0baa428f900706dc50a3917fd2224ba994c6de170d69fd5f521",
+        "patch_sha256": "b33186866f516cf8727863ded02ccb3331a0d180cd794e2ec0fb144be943577d"
+      }
+    },
+    {
+      "id": "race_003",
+      "split": "train",
+      "source_hashes": {
+        "main.c": "2788a40f4caf3fbb15dd661a1b2fc6e88b60a6d36070bdf7deb41086279d8526"
+      },
+      "target_hashes": {
+        "main.c": "b607a6df7a52068c14ad18b005fbf7b8a3c667d3e3984e416fae58c1ae150d16"
+      },
+      "verification_provenance": {
+        "file": "reports\\final-benchmark-jobs\\super_only\\race_003\\events.jsonl",
+        "sha256": "1c761c05bafc1135efff8786327b0d991f0cb0dcda3e8f1aa63e4164f97fe0bb",
+        "patch_sha256": "93988c9d78e7f5a66c91a231cd92af0e4d5a68bc49b0d4f395d61036430060c5"
+      }
+    },
+    {
+      "id": "race_004",
+      "split": "train",
+      "source_hashes": {
+        "main.c": "a68552e9ec29c05338ccfdf7c5fb7eed1323301a95a05f98dd4c592caa2d7778"
+      },
+      "target_hashes": {
+        "main.c": "04b984cf876e1aec1be5959be8fea7329100d1b82c98e555a848933426d167fa"
+      },
+      "verification_provenance": {
+        "file": "reports\\final-benchmark-jobs\\super_only\\race_004\\events.jsonl",
+        "sha256": "1508c742b19c6a1f0a9e27ce1e883972d9e4dffccb9fbde6f989deb782882974",
+        "patch_sha256": "721381f954bff07a1cdbae6adceae1b7acf5d301ba067fbff853d8313bf0a2ec"
+      }
+    },
+    {
+      "id": "deadlock_001",
+      "split": "train",
+      "source_hashes": {
+        "main.c": "0de854b650e07a1dc7e9ef0baa0d8e1f86b0e352473054d3f5a57042027b48b2"
+      },
+      "target_hashes": {
+        "main.c": "900c9579415a03a0006d8bb9aec3eeb01eecc57df08ef507f02e191ec09e0373"
+      },
+      "verification_provenance": {
+        "file": "reports\\continuation-20261004T104857Z\\deadlock_001-adaptive.jsonl",
+        "sha256": "c9cdfea9f5842a6683fe76a3c5d7885bd5d76cfcf8939b4a2849c41e2291a909",
+        "patch_sha256": "4524c79204d4dc06ed58196013782690d665cf64f01a4e7766fa16bd17b43539"
+      }
+    },
+    {
+      "id": "job_queue",
+      "split": "train",
+      "source_hashes": {
+        "src/queue.c": "5e8cfcca6a08d5468b68181fa33732e1a8f66389ae428ee4bfef061c1d558faa"
+      },
+      "target_hashes": {
+        "src/queue.c": "4d8f486a9d92e595ae5ff4a4ad9b437196c5727043c16ba4a6fc52d92db981cd"
+      },
+      "verification_provenance": {
+        "file": "reports\\repository-manual-repair\\20261009T110123Z\\verification.json",
+        "sha256": "adebf1fc52d0fb801ae3ee6b881982978b77bc7f3fa68f2cef5c5a11f7ffe400",
+        "origin": "manual"
+      }
+    },
+    {
+      "id": "deadlock_005",
+      "split": "validation",
+      "source_hashes": {
+        "main.c": "172271ccbc96ad9226da4c2f6668535f906e58d151ea96124ab6927bd67da45d"
+      },
+      "target_hashes": {
+        "main.c": "9ac02cb56b795f702757bdf61dc53280c558e6968bbd8bbbb944b8d718d7f7a1"
+      },
+      "verification_provenance": {
+        "file": "reports\\continuation-20261004T104857Z\\deadlock_005-adaptive.jsonl",
+        "sha256": "cceeb226fbf02c71cc09f71d28d33482154277a6553509372cd5e4a5b81f77e5",
+        "patch_sha256": "dae61cd8b55552468e89857850f45434e31b4829cef062a805d73fb77811f945"
+      }
+    }
+  ],
+  "source_dataset_sha256": "08003bbc398696f31d7159bfc971f34334c2e280d3d7e0c6d6c010fa7be45a20",
+  "training_files": [
+    "train.jsonl",
+    "validation.jsonl"
+  ],
+  "test_source": "datasets/adaptive-v2/holdout-v1",
+  "test_targets_in_training": false,
+  "limitations": [
+    "Small synthetic pilot; not production generalization evidence.",
+    "Historical training examples retain their original verification contracts; held-out evaluation requires TSan."
+  ],
+  "file_sha256": {
+    "train.jsonl": "27696d610219c82761c334d29763d51026ad265c622f594bf0618bd2d42132d1",
+    "validation.jsonl": "64b1716dcc31248345bba87793370755d70cf877e6af954320a6e400a966ff09"
+  }
+}

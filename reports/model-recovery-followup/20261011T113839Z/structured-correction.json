@@ -1,0 +1,18 @@
+{
+  "conflicting_accesses": [
+    {
+      "first_access": "Write to right at binary offset 0xe67ce in update_pair (thread T1)",
+      "second_access": "Read of right at binary offset 0xe681c in snapshot_ok (thread T2)",
+      "observed_evidence": "ThreadSanitizer detected a data race: write to right at 0x5555569e66c0 by T1 (mutex M0) and previous read of right at same location by T2. The write occurs after left is set but before right is set, and the read occurs after left is read but before right is read. The mutex guard is held during both accesses in update_pair, but the read in snapshot_ok is not protected by any synchronization."
+    }
+  ],
+  "missing_synchronization": "The read of right in snapshot_ok is not protected by the guard mutex. The write to right in update_pair is protected, but the read in snapshot_ok is not, creating a race on the right variable. The invariant that left + right == 0 must be preserved across all accesses, but the current unprotected read can observe a stale or inconsistent value.",
+  "invariant_to_preserve": "The invariant a + b == 0 must hold for any snapshot_ok call, where a is the value of left and b is the value of right at the time of the read. This requires both reads to be atomic and synchronized under the same mutex to prevent observing a partially updated state.",
+  "edits": [
+    {
+      "file": "solution.c",
+      "search": "int snapshot_ok(void) {\n    int a = left;\n    sched_yield();\n    int b = right;\n    return a + b == 0;\n}",
+      "replacement": "int snapshot_ok(void) {\n    pthread_mutex_lock(&guard);\n    int a = left;\n    int b = right;\n    pthread_mutex_unlock(&guard);\n    return a + b == 0;\n}"
+    }
+  ]
+}

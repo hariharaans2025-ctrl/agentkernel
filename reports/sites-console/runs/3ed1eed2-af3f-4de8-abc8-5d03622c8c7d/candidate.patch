@@ -1,0 +1,18 @@
+--- a/src/queue.c
++++ b/src/queue.c
+@@ -16,6 +16,7 @@
+     /* Test scheduling hook: overlap the two operations while holding first locks. */
+     if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+     if (force_overlap) fprintf(stderr, "WORKER HOLD queue WAIT stats\n");
++    /* Move barrier wait outside critical section to avoid blocking while holding queue_lock */
+     pthread_mutex_lock(&q->stats_lock);
+     int available = q->next < q->length;
+     if (available) {
+@@ -32,6 +33,7 @@
+ int queue_inspect(JobQueue *q, int force_overlap) {
+     /* Intentional fault: monitoring acquires the same locks in reverse order. */
+     pthread_mutex_lock(&q->stats_lock);
++    /* Move barrier wait outside critical section to avoid blocking while holding stats_lock */
+     if (force_overlap) pthread_barrier_wait(&q->reproduce_barrier);
+     if (force_overlap) fprintf(stderr, "MONITOR HOLD stats WAIT queue\n");
+     pthread_mutex_lock(&q->queue_lock);

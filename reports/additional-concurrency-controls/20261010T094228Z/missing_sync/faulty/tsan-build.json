@@ -1,0 +1,26 @@
+{
+  "command": [
+    "clang",
+    "-fsanitize=thread",
+    "-g",
+    "-O1",
+    "-pthread",
+    "-g",
+    "-O1",
+    "missing_sync.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 699.081666,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "9a434c5d-327d-454a-9ab4-9aa5ef5eccc0",
+    "transport_wall_ms": 12896.036799997091
+  },
+  "success": true
+}

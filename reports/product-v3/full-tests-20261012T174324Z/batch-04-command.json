@@ -1,0 +1,38 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "-ra",
+    "-o",
+    "addopts=",
+    "-m",
+    "not nebius and not langsmith and not gpu",
+    "-p",
+    "scripts.remote_test_recorder",
+    "--ak-report",
+    "test-batch-04.json",
+    "--junitxml",
+    "test-batch-04.xml",
+    "tests/test_patch_quality.py",
+    "tests/test_product_budget.py",
+    "tests/test_product_campaign.py",
+    "tests/test_product_profiles.py",
+    "tests/test_remote_repair.py",
+    "tests/test_repository_context.py",
+    "tests/test_repository_diagnostics.py",
+    "tests/test_repository_onboarding.py"
+  ],
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 64%]\n........................................                                 [100%]\n112 passed in 25.12s\n",
+  "stderr": "",
+  "duration_ms": 25565.187386999998,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "27075894-96ee-4e3a-bcca-94ec533568d9",
+    "transport_wall_ms": 26965.128999998342
+  }
+}

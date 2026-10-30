@@ -1,0 +1,49 @@
+{
+  "source_report": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\repository-diagnostics\\20261007T114433Z",
+  "raw_evidence_sha256": {
+    "clean-batch-diagnoses.json": "56d8ed5d9ceb7deef6ba8442a6de5f0b4b46ce4a012c14bb32595eeafc02548d",
+    "clean-batch-raw.json": "eb8bdd92a96ebcba1538aa1aca9df28cce0078858f9cfd1f56c90b9dd4aead37",
+    "clean-build.json": "ae88705ca723b56a1c91993bc6bc941e5d1e1710ee8c7f264d72562ba5559742",
+    "clean-serial-1.json": "981d7a9ff4b4104f055d740b871901273a72f0b021440bddc0441a9214a49a27",
+    "clean-serial-2.json": "d32a326ec15993bef1c660482cc7961eff20595ce682c39dcebd259334a44899",
+    "clean-serial-3.json": "39f44392a337d51bdfa316a8fc1e443221ad8a7851ec1d3859665e55946e35a0",
+    "clean-serial-diagnoses.json": "56d8ed5d9ceb7deef6ba8442a6de5f0b4b46ce4a012c14bb32595eeafc02548d",
+    "debugger-install.json": "9840edc281f6691eaa9d283e3edcecde21a13f8b09102275324f05a4cfe5f8bd",
+    "debugger-package-index.json": "86c8aeffc7d07bf4385b313a19c2dc56504775103bc30740e294a7f8c0507809",
+    "integrity.json": "f9aa49296e34c6a97abb9a7dc3a06a36b8b7a4e1bf92622cfe718d49e9fbcd6f",
+    "plan.json": "e4e6e788f6b499156ef1932b4423914b3ad665b83299747fbb8bfff1d39525e0",
+    "preserved-sha256.json": "861373fdb75b2b630372a9a0c35fbba93031ae01d75c00062a65864056c3e713",
+    "queue-build.json": "343c2685c9131487196efff10b9a4697b86fed7d4c8922f3d76f01f048af6c92",
+    "queue-campaign.json": "57acb96f6769e64ddf823a3df7f2beb7d60f0305a855fc6b96cb463bfa9cab30",
+    "queue-diagnoses.json": "80cada9e0ba983674227733ca46776baec5f3c3a7b23944cc5618c7602b6110d",
+    "racy-batch-diagnoses.json": "dd371720b8876e1e096c3a98312f21f491e14875b133a22c1767635622acd305",
+    "racy-batch-raw.json": "d38738342602763dfd80a818a9832ad506d0adfb9bbcb2593cf17a0756d23260",
+    "racy-build.json": "27a557cfd2a41affb0dfd7c1cfcb62bab1f01604b9afeb128d27f48530eb8237",
+    "racy-serial-1.json": "aaf2b0809b4d911e6dfacbe5cffa2d1f24b28925af82068103253b135d2fad3d",
+    "racy-serial-2.json": "41d4daaeee3043b0d3c09eeee42a10ddd70832589a6d5d17baa0e190eee5a932",
+    "racy-serial-3.json": "2dc5f9721dc90fe4e09bbdb392c16b7bd5021297eaed94ac2f2b82e4b89588f9",
+    "racy-serial-diagnoses.json": "54eeafdb81100cd09c431358ec151dcb7e594e7183545393e4117dfb0e5af3b6",
+    "REPORT.md": "5d5121c43e3bd8ad3572e89a6e486cc2505cf932fdc441e5dd60c74f46659303",
+    "tests.json": "0e6f87e42e0050901cd18dc2e1b0836dea0fdb2e3b37c5df6991551da9d3745a",
+    "thread-stacks.json": "d82627c99496064245aeab5ca25de63f544c1c84a9e8d55936e831d1c471c28b",
+    "toolchain.json": "674000250ccd0858c90f467c05ff16bb4f8721ba44dd896ec95407fdbe76d524"
+  },
+  "thread_count": 3,
+  "blocked_threads": [
+    {
+      "thread": 2,
+      "function": "queue_process_one",
+      "location": "src/queue.c:19"
+    },
+    {
+      "thread": 3,
+      "function": "queue_inspect",
+      "location": "src/queue.c:37"
+    }
+  ],
+  "user_stacks_captured": true,
+  "correction": "Initial gate incorrectly required a libc pthread_join symbol. Actual worker and monitor user-space stacks were captured successfully.",
+  "protected_files_unchanged": 430,
+  "additional_executions": 0,
+  "model_calls": 0
+}

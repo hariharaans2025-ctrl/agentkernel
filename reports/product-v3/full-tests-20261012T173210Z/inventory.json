@@ -1,0 +1,1770 @@
+{
+  "exitstatus": 0,
+  "collected": [
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_edit_protected_or_extra_files",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_cannot_remove_scheduling_hooks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_specialist_translates_exact_original_source_without_executing_it",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_malformed_or_fenced_specialist_responses_fail_closed",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_unknown_or_infrastructure_outcomes_never_buy_another_model_call",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_price_reservation_includes_full_allowed_input_output_and_request_charge",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_missing_configured_fallback_does_not_silently_substitute_a_model",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_model_pointer_cannot_escape_the_project",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_raw_source_markers_preserve_c_quotes_and_scheduling_hooks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[Explanation\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:oracle.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>\\n<<<FILE:solution.c>>>\\nsched_yield(); changed();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_adaptive_v2.py::test_marker_format_fails_closed_on_explanations_wrong_files_duplicates_and_removed_hooks[<<<FILE:solution.c>>>\\nchanged();\\n<<<END_FILE>>>]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_lock_at_barrier_has_locations_and_partner",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_release_before_barrier",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_barrier_before_lock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_conditional_unlock_does_not_hide_risk",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_mutually_exclusive_branch_no_false_held_lock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_comments_strings_are_not_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_unsupported_loop_is_explicit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_barrier_diagnostics.py::test_indirect_object_is_explicit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_mock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_real_missing_model",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_cli.py::test_cli_health[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[print('built')-True-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[raise SystemExit(2)-False-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_compile_process_outcomes[import time; time.sleep(5)-False-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_copy_cleanup_and_output_caps",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[../oops]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a/../../x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[/tmp/x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[C:\\\\temp\\\\x]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[a:stream]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_a.py::test_unsafe_workspace_paths[\\\\\\\\host\\\\share]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-PASS--False-PASS]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[-11---False-CRASH]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None---True-TIMEOUT]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[None-T1 WAIT A--True-POSSIBLE_DEADLOCK]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[1--assertion failed-False-ASSERTION_FAILURE]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_classification[0-wrong--False-UNKNOWN_FAILURE]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_real_repeated_runs",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_b.py::test_seeded_perturbation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_tsan_findings",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_sanitizer_environment_failure_is_not_clean",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_c.py::test_explicit_trace_only",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_cycle_and_unlock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_fingerprint_grouping",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_d.py::test_race_normalization_ignores_addresses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_real_verification_baseline_and_regression",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_e.py::test_required_tests_cannot_be_omitted",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_valid_patch_only_mutates_copy",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[/tmp/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[C:/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[sub/../../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_patch_rejects_untrusted_paths[tests.py]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_f.py::test_context_mismatch_and_multi_file_atomicity",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_nano_contract_retry_once",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_super_default_ultra_for_complex_evidence",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_repair_rejects_model_commands",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_real_c_deadlock_repaired_and_ultra_has_evidence",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_g.py::test_applied_false_fix_executes_fails_then_ultra_repairs",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_real_provider_catalog_usage_nullable_cost[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[unavailable-configured_model_unavailable]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[429-rate_limited]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[401-authentication_or_access_denied]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[timeout-timeout]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[malformed-malformed_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_structured_provider_errors[bad_catalog-malformed_catalog]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_no_key_no_network",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_h.py::test_redacted_telemetry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_suite_has_five_distinct_races_and_deadlocks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[../escape.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[C:/escape.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[reference.patch]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_loader_rejects_escape_and_evaluation_leaks[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_false_fix_metrics_and_mock_measurement_provenance",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_missing_required_sanitizer_cannot_be_verified",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_all_c_fixtures_compile_and_deadlocks_reproduce",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_i.py::test_real_tsan_counter_repair",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_json_and_telemetry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_bad_config_structured_error",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_models_no_key_no_network",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_cli_all_comparison_modes",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_deep_lock_graph_cycle_without_recursion_limit",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_j.py::test_false_fix_counts_instrumented_campaign_failure",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_host_block_stops_campaign_without_retry",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_infrastructure_failure_is_not_false_fix_or_regression",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_nonretryable_verifier_stops_runtime",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_blocked_compile_never_reaches_models",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_os_policy_error_is_structured",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_concurrency_policy_block.py::test_benchmark_stops_all_modes_after_host_policy_denial",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_real_job_wiring_frozen_source_budget_history",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_stop_after_current_model_and_busy_guard",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override3]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override4]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_invalid_requests_never_start[override5]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_restart_marks_interrupted_without_rerunning",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard.py::test_loopback_http_csrf_static_and_no_secrets",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard_metrics.py::test_combined_unknown_usage_and_weighted_verification",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_dashboard_metrics.py::test_budget_is_enforced_on_actual_http_payload",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan0-tiers0-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan1-tiers1-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan2-tiers2-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[ImportError-plan3-tiers3-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Deprecated API-plan4-tiers4-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Race condition-plan5-tiers5-False-ultra_failed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_escalation_ladder[Test failure-plan6-tiers6-True-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_failure_evidence_and_full_history_preserve_original",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0-1-budget_exceeded]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0001-2-budget_exceeded]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_stops_before_call[0.0006-3-verification_passed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_initial_budget_can_block_all_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_budget_uses_provider_configured_estimate",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_latency_counts_verifier_wall_time_not_mock_latency",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_synthetic_latency_does_not_spend_wall_time_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[3]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[4]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_max_attempts_bounds_loop[100]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_environment_max_attempts",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[-1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[text]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_max_attempts[1.5]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_totals_and_jsonl_summary",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_old_jsonl_attempt_still_parses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_error_fails_closed_and_propagates",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_provider_failure_cannot_be_verified_as_pass",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_invalid_mock_plan_fails_closed[plan2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_escalation.py::test_verifier_receives_original_task_and_prior_history",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_actual_race_qualifies",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[confidence_only]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[infrastructure]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[missing_raw]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_non_evidence_never_triggers[verified]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_evidence_correction.py::test_exact_candidate_edit_and_protected_interface",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_adaptive_semantics_escalation_context_and_success_gate[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_invalid_repair_does_not_spend_ultra",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[True-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_pass_fail_and_infrastructure[False-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[False-verification0-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification1-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification2-True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification3-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification4-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_false_fix_definition[True-verification5-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tsan_race_and_environment_failure_are_distinct",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_grounding_only_explicit_reason_and_one_call",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_tavily_http_is_bounded_and_excludes_source",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_observer_errors_never_abort_job",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_plan_outputs_and_human_review_gate",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_report_redacts_secrets_and_preserves_unknowns",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_all_trusted_oracles_compile_inside_remote_test_host",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_clang_tsan_detects_original_race_and_accepts_known_repair[race_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[deadlock_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_001]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_002]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_003]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_004]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_final_integration.py::test_semantic_oracle_accepts_working_repair_rejects_deleted_work[race_005]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_false_fix_with_all_stress_passes_cannot_enter_training",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_zero_verified_has_no_token_efficiency",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_failed_attempt_tokens_count_towards_success_cost",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_unknown_usage_and_latency_stay_unknown",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_learning.py::test_tsan_cannot_be_skipped_for_required_configuration",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_default_mock_never_calls_backend",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_success_real_metrics_and_request",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_real_telemetry_and_optional_tokens[True]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ConnectError-Could not connect to http://localhost:11434]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_network_errors[ReadTimeout-Ollama timed out]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data2]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data3]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data4]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data5]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data6]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data7]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data8]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_malformed_generation[data9]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[200-not json-malformed JSON]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[404-missing-ollama list]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_http_and_json_errors[500-failed-HTTP 500]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data0-True-None]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data1-False-not installed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data2-False-malformed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_health_model_availability[data3-False-malformed]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_missing_model_configuration",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_BACKEND-unsupported]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_OLLAMA_URL-https://example.com]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-nan]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_TIMEOUT_SECONDS-0]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MODEL-test-cloud]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_local.py::test_invalid_configuration_fails_without_network[AGENTKERNEL_LOCAL_MOCK-typo]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[length-incomplete_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_unusable_completion_preserves_returned_usage[stop-malformed_response]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_schema_diagnostics_do_not_echo_invalid_values",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[429]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[500]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[503]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[timeout]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_bounded_transient_retry_and_real_metadata[connection]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[400]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[401]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[403]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[404]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_permanent_errors_never_retry_or_escalate[422]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_catalog_discovery_and_unknown_usage",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_malformed_contract_gets_one_same_tier_correction_only",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_explicit_env_file_is_literal_and_does_not_echo_values",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_langsmith_hierarchy_redaction_feedback_and_confirmation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_observer_transport_failure_does_not_replace_execution_result",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k.py::test_full_trace_with_mock_models_and_real_offline_execution",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_token_factory_catalog",
+      "markers": [
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_nano_structured_smoke",
+      "markers": [
+        "integration",
+        "nebius"
+      ]
+    },
+    {
+      "nodeid": "tests/test_milestone_k_live.py::test_live_langsmith_span_delivery",
+      "markers": [
+        "langsmith"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_timeout_and_environment_isolation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_remote_failure_has_no_local_fallback",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_upload_patch_remote_read_and_cleanup",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[../outside]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[.git/config]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_forbidden_uploads[C:/secret]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_nebius_sandbox.py::test_credentials_required_no_fallback",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_generated_diff_roundtrips_exact_content_and_eof[printf(\"old\\\\n\");\\n-printf(\"new\\\\n\");\\n]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_generated_diff_roundtrips_exact_content_and_eof[first\\nlast-first\\nchanged]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_generated_diff_roundtrips_exact_content_and_eof[first\\nlast-first\\nchanged\\n]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_generated_diff_roundtrips_exact_content_and_eof[first\\nlast\\n-first\\nchanged]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_multiple_original_blocks_and_files_apply_atomically",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits0-sources0-edit_search_not_found]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits1-sources1-edit_search_ambiguous]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits2-sources2-edit_no_change]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits3-sources3-edit_overlap]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits4-sources4-edit_search_not_found]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_ambiguous_stale_overlapping_and_double_escaped_edits[edits5-sources5-edit_search_not_found]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[/tmp/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[C:/main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[sub/../main.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[x\\n.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_rejects_unsafe_edits_even_if_present_in_context[test.py]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_no_source_and_mixed_response_fail_closed",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_invalid_edits_correct_once_then_execute_with_original_evidence",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_recorded_failure_shapes_have_actionable_hints[@@\\n int n = 0;\\n-missing_hunks]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_recorded_failure_shapes_have_actionable_hints[@@ -1 +1 @@\\n-int n = 999;\\n+int n = 1;\\n-context_mismatch]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_smoke_rejects_diff_headers_without_hunks",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_patch_quality.py::test_native_barrier_false_fix_fails_then_exact_edits_pass",
+      "markers": [
+        "integration"
+      ]
+    },
+    {
+      "nodeid": "tests/test_product_budget.py::test_unknown_paid_call_keeps_reservation_and_cannot_replay",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_product_budget.py::test_actual_usage_releases_unused_reservation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_product_budget.py::test_exceeding_provider_charge_stops_without_losing_reservation",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_product_budget.py::test_new_process_cannot_reset_authorized_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_grouping_retains_distinct_failures_and_every_run_field",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_retrieval_includes_callers_function_pointers_and_headers",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_unknown_seed_fails_instead_of_empty_context",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_missing_header_stops_retrieval",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_index_does_not_include_system_header_definitions",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_context.py::test_invalid_clang_offsets_fail_closed",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_timeout_without_wait_evidence_is_not_deadlock",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_opposing_waits_support_deadlock_only_when_timed_out",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_conflicting_owners_do_not_prove_cycle",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_one_way_wait_does_not_prove_cycle",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_tsan_unavailable_is_infrastructure",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_race_fingerprint_ignores_runtime_addresses",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_nonzero_exit_alone_is_not_a_race",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_diagnostics.py::test_transport_error_is_not_program_failure",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_example_plan_is_readonly_and_distinguishes_protected_files",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[../x.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[/x.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[C:/x.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[.env]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[.git/config]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[secrets.json]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[id.key]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[src\\\\x.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_disallow_unsafe_or_secret_paths[a//b.c]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_prevent_editing_protected_test_by_case_alias",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[stress_runs-10]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[sanitizer_runs-1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[sanitizer_required-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[required_original_tests-False]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[allowed_deadlocks-1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reject_weakened_or_mistyped_verification[unknown_option-1]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_missing_file_leaves_no_output",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_link_escape_rejected",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_reservation_blocks_overbudget_and_concurrent_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_unknown_usage_stops_more_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_provider_overrun_preserves_usage_and_blocks_more_calls",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_repository_onboarding.py::test_metrics_include_failed_cost_and_preserve_unknown",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ModuleNotFoundError: No module named requests-LOCAL]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Race condition between worker threads-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Failed assertion in test-NANO]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[Dependency version conflict-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[File \"a.py\", line 1\\nFile \"b.py\", line 2-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_routing[ImportError caused by distributed deadlock-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_external_knowledge",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Test failure]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Deprecated SDK API]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_privacy_prefers_local[Something unfamiliar]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_router.py::test_hard_privacy_is_soft_preference",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_unknown_fallback",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_router.py::test_negative_budget_rejected",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[ImportError-LOCAL_RTX-LOCAL]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Test failure-NEBIUS-NANO]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Deprecated API-NEBIUS-SUPER]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_runtime_selects_exactly_one_provider[Race condition-NEBIUS-ULTRA]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_failed_call_records_event",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_runtime.py::test_mock_tiers_increase_latency_tokens_cost",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_bound_covers_input_reservation_and_output",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_rejects_escape_and_hidden_subdirectories",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_requires_review_before_any_run",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_seeding_preserves_originals_and_requires_all_gates",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_sites_connection.py::ConnectionTests::test_unknown_call_keeps_full_reservation_and_never_replays",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_super_repair_requests_direct_json_without_increasing_budget",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_reasoning_only_truncation_remains_rejected_and_never_retried",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[NANO-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[ULTRA-repair]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_super_response_budget.py::test_does_not_send_super_extension_to_other_models_or_phases[SUPER-triage]",
+      "markers": [
+        "parametrize"
+      ]
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_jsonl_export",
+      "markers": []
+    },
+    {
+      "nodeid": "tests/test_telemetry.py::test_empty_export",
+      "markers": []
+    }
+  ],
+  "deselected": [],
+  "collection_errors": [],
+  "outcomes": [],
+  "phase_reports": []
+}

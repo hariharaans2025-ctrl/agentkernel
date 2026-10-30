@@ -1,0 +1,135 @@
+{
+  "smoke": "super",
+  "status": "failed",
+  "inference_mode": "real",
+  "calls": [
+    {
+      "tier": "NANO",
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "status": "SUCCESS",
+      "input_tokens": 692,
+      "output_tokens": 634,
+      "latency_ms": 8170.521000000008,
+      "retry_count": 0,
+      "request_id": "fa2f02e25319abce2407cd2475bebbb4",
+      "finish_reason": "stop",
+      "cost_usd": null,
+      "error_code": null,
+      "structured_valid": true
+    },
+    {
+      "tier": "SUPER",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "status": "SUCCESS",
+      "input_tokens": 1343,
+      "output_tokens": 2160,
+      "latency_ms": 13007.99740000366,
+      "retry_count": 0,
+      "request_id": "92e192d3dc5604b88e3b006642c6a3b1",
+      "finish_reason": "stop",
+      "cost_usd": null,
+      "error_code": null,
+      "structured_valid": false
+    },
+    {
+      "tier": "SUPER",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "status": "FAILED",
+      "input_tokens": null,
+      "output_tokens": null,
+      "latency_ms": 22209.460099998978,
+      "retry_count": 0,
+      "request_id": "78217a5c7526a0ef79b8a824cb8dd098",
+      "finish_reason": null,
+      "cost_usd": null,
+      "error_code": "malformed_response",
+      "structured_valid": false
+    }
+  ],
+  "candidate_execution_verified": false,
+  "build": {
+    "command": [
+      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+      "-static",
+      "-pthread",
+      "-g",
+      "-O1",
+      "main.c",
+      "-o",
+      "app"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "duration_ms": 301.190600002883,
+    "timed_out": false,
+    "metadata": {
+      "output_truncated": false
+    },
+    "success": true
+  },
+  "baseline": {
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 7546.580499998527,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_001:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_001:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": 1,
+        "timed_out": true,
+        "metadata": {
+          "output_truncated": false
+        },
+        "stdout": "T2 LOCK B\r\nT1 LOCK A\r\nT1 WAIT B\r\nT2 WAIT A\r\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "stopped_reason": "invalid_model_output",
+  "structured_output": {
+    "error_code": "invalid_model_output",
+    "inference_error": "Nebius inference unavailable: malformed_response",
+    "error_type": null
+  },
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "unavailable",
+    "spans_submitted": 0,
+    "spans_observed": [],
+    "feedback_submitted": 0,
+    "trace_ids": [
+      "2161f8ba-991c-4eba-b281-db88d1f28857"
+    ],
+    "error_code": "langsmith_http_403"
+  }
+}

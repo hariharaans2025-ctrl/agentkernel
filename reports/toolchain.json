@@ -1,0 +1,44 @@
+{
+  "status": "ready",
+  "security_controls_changed": false,
+  "image": "agentkernel-clang:20261003122908",
+  "build": {
+    "command": [
+      "clang",
+      "-pthread",
+      "-fsanitize=thread",
+      "-g",
+      "-O1",
+      "tsan_probe.c",
+      "-o",
+      "tsan_probe"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "duration_ms": 617.5453309999999,
+    "timed_out": false,
+    "metadata": {
+      "execution_backend": "nebius",
+      "output_truncated": false,
+      "remote_image_id": "55166906-a3c3-4bbf-ac4c-88a2d75e38ae",
+      "transport_wall_ms": 2299.045499996282
+    }
+  },
+  "probe": {
+    "command": [
+      "./tsan_probe"
+    ],
+    "exit_code": 66,
+    "stdout": "",
+    "stderr": "==9==WARNING: invalid path to external symbolizer!\n==9==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=9)\n  Write of size 4 at 0x5555569e6698 by thread T2:\n    #0 <null> <null> (tsan_probe+0xe6583) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #1 <null> <null> (tsan_probe+0x62cdb) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n\n  Previous write of size 4 at 0x5555569e6698 by thread T1:\n    #0 <null> <null> (tsan_probe+0xe6583) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #1 <null> <null> (tsan_probe+0x62cdb) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n\n  Thread T2 (tid=12, running) created by main thread at:\n    #0 <null> <null> (tsan_probe+0x62d85) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #1 <null> <null> (tsan_probe+0xe65df) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T1 (tid=11, finished) created by main thread at:\n    #0 <null> <null> (tsan_probe+0x62d85) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #1 <null> <null> (tsan_probe+0xe65cd) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/tsan_probe+0xe6583) (BuildId: 68541d19203725ca60f444eb9c4c82aa0f723d4f) \n==================\n",
+    "duration_ms": 17.94461199999997,
+    "timed_out": false,
+    "metadata": {
+      "execution_backend": "nebius",
+      "output_truncated": false,
+      "remote_image_id": "55166906-a3c3-4bbf-ac4c-88a2d75e38ae",
+      "transport_wall_ms": 1516.656600011629
+    }
+  }
+}

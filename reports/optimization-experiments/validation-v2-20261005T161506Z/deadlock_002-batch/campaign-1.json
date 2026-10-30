@@ -1,0 +1,1810 @@
+{
+  "task_id": "deadlock_002",
+  "runs": [
+    {
+      "run_id": "deadlock_002:1",
+      "start_time": "2026-10-05T16:22:24.226493Z",
+      "duration_ms": 2003.0176870000003,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:2",
+      "start_time": "2026-10-05T16:22:26.270112Z",
+      "duration_ms": 2002.5577389999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:3",
+      "start_time": "2026-10-05T16:22:28.305401Z",
+      "duration_ms": 2002.6816750000007,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:4",
+      "start_time": "2026-10-05T16:22:30.340093Z",
+      "duration_ms": 2002.5427370000007,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:5",
+      "start_time": "2026-10-05T16:22:32.374773Z",
+      "duration_ms": 2002.339051,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:6",
+      "start_time": "2026-10-05T16:22:34.409408Z",
+      "duration_ms": 2002.5051689999991,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:7",
+      "start_time": "2026-10-05T16:22:36.444396Z",
+      "duration_ms": 2002.4520470000002,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:8",
+      "start_time": "2026-10-05T16:22:38.479683Z",
+      "duration_ms": 2002.742285,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:9",
+      "start_time": "2026-10-05T16:22:40.514789Z",
+      "duration_ms": 2002.7139359999992,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:10",
+      "start_time": "2026-10-05T16:22:42.550331Z",
+      "duration_ms": 2002.3607729999994,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24831.265099986922
+      }
+    },
+    {
+      "run_id": "deadlock_002:11",
+      "start_time": "2026-10-05T16:22:49.048377Z",
+      "duration_ms": 2002.9731440000003,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:12",
+      "start_time": "2026-10-05T16:22:51.089720Z",
+      "duration_ms": 2002.1331519999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:13",
+      "start_time": "2026-10-05T16:22:53.122880Z",
+      "duration_ms": 2002.3828960000003,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:14",
+      "start_time": "2026-10-05T16:22:55.156219Z",
+      "duration_ms": 2002.2359239999998,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:15",
+      "start_time": "2026-10-05T16:22:57.189582Z",
+      "duration_ms": 2002.2077829999994,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:16",
+      "start_time": "2026-10-05T16:22:59.222735Z",
+      "duration_ms": 2002.2583120000004,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:17",
+      "start_time": "2026-10-05T16:23:01.256695Z",
+      "duration_ms": 2002.3905679999991,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:18",
+      "start_time": "2026-10-05T16:23:03.290636Z",
+      "duration_ms": 2002.479172000001,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:19",
+      "start_time": "2026-10-05T16:23:05.323598Z",
+      "duration_ms": 2002.1223630000015,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:20",
+      "start_time": "2026-10-05T16:23:07.358299Z",
+      "duration_ms": 2002.3126309999989,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22331.445600022562
+      }
+    },
+    {
+      "run_id": "deadlock_002:21",
+      "start_time": "2026-10-05T16:23:11.398726Z",
+      "duration_ms": 2003.2727029999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:22",
+      "start_time": "2026-10-05T16:23:13.442403Z",
+      "duration_ms": 2002.7534820000005,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:23",
+      "start_time": "2026-10-05T16:23:15.477869Z",
+      "duration_ms": 2002.4278840000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:24",
+      "start_time": "2026-10-05T16:23:17.512991Z",
+      "duration_ms": 2002.4750730000003,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:25",
+      "start_time": "2026-10-05T16:23:19.548035Z",
+      "duration_ms": 2002.3409660000002,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:26",
+      "start_time": "2026-10-05T16:23:21.583803Z",
+      "duration_ms": 2002.6466109999994,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:27",
+      "start_time": "2026-10-05T16:23:23.619604Z",
+      "duration_ms": 2002.5002339999994,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:28",
+      "start_time": "2026-10-05T16:23:25.654451Z",
+      "duration_ms": 2002.6181699999981,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:29",
+      "start_time": "2026-10-05T16:23:27.692090Z",
+      "duration_ms": 2002.3790370000008,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:30",
+      "start_time": "2026-10-05T16:23:29.727040Z",
+      "duration_ms": 2002.4680749999995,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23580.72710002307
+      }
+    },
+    {
+      "run_id": "deadlock_002:31",
+      "start_time": "2026-10-05T16:23:34.959046Z",
+      "duration_ms": 2002.9019139999998,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:32",
+      "start_time": "2026-10-05T16:23:37.000384Z",
+      "duration_ms": 2002.4671809999998,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:33",
+      "start_time": "2026-10-05T16:23:39.034239Z",
+      "duration_ms": 2002.5730230000001,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:34",
+      "start_time": "2026-10-05T16:23:41.067494Z",
+      "duration_ms": 2002.4241600000003,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:35",
+      "start_time": "2026-10-05T16:23:43.101290Z",
+      "duration_ms": 2002.234844,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:36",
+      "start_time": "2026-10-05T16:23:45.135466Z",
+      "duration_ms": 2002.1449269999998,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:37",
+      "start_time": "2026-10-05T16:23:47.168622Z",
+      "duration_ms": 2002.2330929999991,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:38",
+      "start_time": "2026-10-05T16:23:49.201196Z",
+      "duration_ms": 2002.4434050000011,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:39",
+      "start_time": "2026-10-05T16:23:51.235000Z",
+      "duration_ms": 2002.3345660000018,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:40",
+      "start_time": "2026-10-05T16:23:53.268385Z",
+      "duration_ms": 2002.8392420000002,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22476.437199977227
+      }
+    },
+    {
+      "run_id": "deadlock_002:41",
+      "start_time": "2026-10-05T16:23:57.438379Z",
+      "duration_ms": 2003.8085350000001,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:42",
+      "start_time": "2026-10-05T16:23:59.483613Z",
+      "duration_ms": 2002.7818039999995,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:43",
+      "start_time": "2026-10-05T16:24:01.518966Z",
+      "duration_ms": 2002.4416579999995,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:44",
+      "start_time": "2026-10-05T16:24:03.554240Z",
+      "duration_ms": 2002.5664130000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:45",
+      "start_time": "2026-10-05T16:24:05.589367Z",
+      "duration_ms": 2002.5304290000001,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:46",
+      "start_time": "2026-10-05T16:24:07.625335Z",
+      "duration_ms": 2002.3946529999996,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:47",
+      "start_time": "2026-10-05T16:24:09.660325Z",
+      "duration_ms": 2002.5637179999994,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:48",
+      "start_time": "2026-10-05T16:24:11.696424Z",
+      "duration_ms": 2002.449356999998,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:49",
+      "start_time": "2026-10-05T16:24:13.731577Z",
+      "duration_ms": 2002.5645899999986,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:50",
+      "start_time": "2026-10-05T16:24:15.766317Z",
+      "duration_ms": 2002.4970189999997,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22001.37429998722
+      }
+    },
+    {
+      "run_id": "deadlock_002:51",
+      "start_time": "2026-10-05T16:24:19.429245Z",
+      "duration_ms": 2002.891381,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:52",
+      "start_time": "2026-10-05T16:24:21.470573Z",
+      "duration_ms": 2002.2057700000003,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:53",
+      "start_time": "2026-10-05T16:24:23.503319Z",
+      "duration_ms": 2002.1847079999998,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:54",
+      "start_time": "2026-10-05T16:24:25.536099Z",
+      "duration_ms": 2002.166733000001,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:55",
+      "start_time": "2026-10-05T16:24:27.569612Z",
+      "duration_ms": 2002.174794,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:56",
+      "start_time": "2026-10-05T16:24:29.603672Z",
+      "duration_ms": 2002.2335900000012,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:57",
+      "start_time": "2026-10-05T16:24:31.636733Z",
+      "duration_ms": 2002.4485550000009,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:58",
+      "start_time": "2026-10-05T16:24:33.669862Z",
+      "duration_ms": 2002.2159769999987,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:59",
+      "start_time": "2026-10-05T16:24:35.702619Z",
+      "duration_ms": 2002.294856999999,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:60",
+      "start_time": "2026-10-05T16:24:37.736619Z",
+      "duration_ms": 2002.1867800000023,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 22699.61869996041
+      }
+    },
+    {
+      "run_id": "deadlock_002:61",
+      "start_time": "2026-10-05T16:24:42.153015Z",
+      "duration_ms": 2002.752723,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:62",
+      "start_time": "2026-10-05T16:24:44.194684Z",
+      "duration_ms": 2002.1339120000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:63",
+      "start_time": "2026-10-05T16:24:46.227818Z",
+      "duration_ms": 2002.3771780000006,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:64",
+      "start_time": "2026-10-05T16:24:48.260505Z",
+      "duration_ms": 2002.1651389999988,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:65",
+      "start_time": "2026-10-05T16:24:50.293771Z",
+      "duration_ms": 2002.435856,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:66",
+      "start_time": "2026-10-05T16:24:52.327886Z",
+      "duration_ms": 2002.4256579999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:67",
+      "start_time": "2026-10-05T16:24:54.362786Z",
+      "duration_ms": 2002.2041799999997,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:68",
+      "start_time": "2026-10-05T16:24:56.396064Z",
+      "duration_ms": 2002.0420360000007,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:69",
+      "start_time": "2026-10-05T16:24:58.429053Z",
+      "duration_ms": 2002.0925110000007,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:70",
+      "start_time": "2026-10-05T16:25:00.461963Z",
+      "duration_ms": 2002.397976000001,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 24647.314900008496
+      }
+    },
+    {
+      "run_id": "deadlock_002:71",
+      "start_time": "2026-10-05T16:25:06.900166Z",
+      "duration_ms": 2003.5292390000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:72",
+      "start_time": "2026-10-05T16:25:08.944039Z",
+      "duration_ms": 2002.6169390000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:73",
+      "start_time": "2026-10-05T16:25:10.979396Z",
+      "duration_ms": 2002.7224960000005,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:74",
+      "start_time": "2026-10-05T16:25:13.014472Z",
+      "duration_ms": 2002.4987770000005,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:75",
+      "start_time": "2026-10-05T16:25:15.049210Z",
+      "duration_ms": 2002.438132,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:76",
+      "start_time": "2026-10-05T16:25:17.083597Z",
+      "duration_ms": 2002.6938219999995,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:77",
+      "start_time": "2026-10-05T16:25:19.119866Z",
+      "duration_ms": 2002.5448079999996,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:78",
+      "start_time": "2026-10-05T16:25:21.155697Z",
+      "duration_ms": 2002.6406449999995,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:79",
+      "start_time": "2026-10-05T16:25:23.191127Z",
+      "duration_ms": 2002.4027939999983,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:80",
+      "start_time": "2026-10-05T16:25:25.225923Z",
+      "duration_ms": 2002.3587800000016,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23761.794100049883
+      }
+    },
+    {
+      "run_id": "deadlock_002:81",
+      "start_time": "2026-10-05T16:25:30.709500Z",
+      "duration_ms": 2002.8490450000002,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:82",
+      "start_time": "2026-10-05T16:25:32.750807Z",
+      "duration_ms": 2002.1232859999998,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:83",
+      "start_time": "2026-10-05T16:25:34.784340Z",
+      "duration_ms": 2002.1372880000001,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:84",
+      "start_time": "2026-10-05T16:25:36.817114Z",
+      "duration_ms": 2002.251127,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:85",
+      "start_time": "2026-10-05T16:25:38.850153Z",
+      "duration_ms": 2002.445161999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:86",
+      "start_time": "2026-10-05T16:25:40.883303Z",
+      "duration_ms": 2002.147162,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:87",
+      "start_time": "2026-10-05T16:25:42.916438Z",
+      "duration_ms": 2002.194437,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:88",
+      "start_time": "2026-10-05T16:25:44.950010Z",
+      "duration_ms": 2002.530585999999,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:89",
+      "start_time": "2026-10-05T16:25:46.983333Z",
+      "duration_ms": 2002.2945740000005,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:90",
+      "start_time": "2026-10-05T16:25:49.016132Z",
+      "duration_ms": 2002.2402130000003,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23781.17959998781
+      }
+    },
+    {
+      "run_id": "deadlock_002:91",
+      "start_time": "2026-10-05T16:25:54.312071Z",
+      "duration_ms": 2002.931481,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:92",
+      "start_time": "2026-10-05T16:25:56.354052Z",
+      "duration_ms": 2002.6065799999997,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:93",
+      "start_time": "2026-10-05T16:25:58.387571Z",
+      "duration_ms": 2002.2180979999994,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:94",
+      "start_time": "2026-10-05T16:26:00.420430Z",
+      "duration_ms": 2002.191731,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:95",
+      "start_time": "2026-10-05T16:26:02.453695Z",
+      "duration_ms": 2002.2493350000002,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:96",
+      "start_time": "2026-10-05T16:26:04.486793Z",
+      "duration_ms": 2002.1970370000001,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:97",
+      "start_time": "2026-10-05T16:26:06.520187Z",
+      "duration_ms": 2002.288384,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:98",
+      "start_time": "2026-10-05T16:26:08.553892Z",
+      "duration_ms": 2002.297520999999,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:99",
+      "start_time": "2026-10-05T16:26:10.589067Z",
+      "duration_ms": 2002.283661,
+      "exit_code": -9,
+      "stdout": "T1 LOCK A1\nT1 WAIT A0\nT0 LOCK A0\nT0 WAIT A1\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    },
+    {
+      "run_id": "deadlock_002:100",
+      "start_time": "2026-10-05T16:26:12.622235Z",
+      "duration_ms": 2002.2317690000016,
+      "exit_code": -9,
+      "stdout": "T0 LOCK A0\nT0 WAIT A1\nT1 LOCK A1\nT1 WAIT A0\n",
+      "stderr": "",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "8aac7492-31b9-4bcd-b3d8-b2091a894b53",
+        "batch_transport_wall_ms": 23179.64650003705
+      }
+    }
+  ],
+  "counts": {
+    "POSSIBLE_DEADLOCK": 100
+  },
+  "duration_ms": 233295.76389997965,
+  "requested_runs": 100
+}

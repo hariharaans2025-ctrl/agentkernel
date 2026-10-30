@@ -1,0 +1,18 @@
+{
+  "stage": "super",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1706,
+  "cost_usd": 0.0006486,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "8b8066f84b9e4e3bba04ae604eb182df",
+  "input_tokens": 1478,
+  "output_tokens": 228,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"publish.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include \"]}, {\"file\": \"observe.c\", \"start_line\": 1, \"end_line\": 2, \"replacement_lines\": [\"#include \"]}, {\"file\": \"publish.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"void publish(State*s){checkpoint(s);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;s->visits++;pthread_mutex_unlock(&s->mutex);}\"]}, {\"file\": \"observe.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"void observe(State*s){checkpoint(s);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;s->visits++;pthread_mutex_unlock(&s->mutex);}\"]}]}",
+  "error_code": "line_ranges_overlap",
+  "validation": [],
+  "inference_ms": 2022.4673000047915
+}

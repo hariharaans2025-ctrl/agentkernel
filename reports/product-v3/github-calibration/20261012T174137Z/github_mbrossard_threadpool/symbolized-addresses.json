@@ -1,0 +1,29 @@
+{
+  "binary_image": "25a140c2-997b-45e0-8ad0-25a0f6b934a4",
+  "addresses": [
+    "0xe6a71",
+    "0xe6a69"
+  ],
+  "result": {
+    "command": [
+      "addr2line",
+      "-e",
+      "acceptance_app",
+      "-f",
+      "-C",
+      "0xe6a71",
+      "0xe6a69"
+    ],
+    "exit_code": 0,
+    "stdout": "threadpool_free\n/workspace/src/threadpool.c:258\nthreadpool_free\n/workspace/src/threadpool.c:257\n",
+    "stderr": "",
+    "duration_ms": 18.02749600000003,
+    "timed_out": false,
+    "metadata": {
+      "execution_backend": "nebius",
+      "output_truncated": false,
+      "remote_image_id": "25a140c2-997b-45e0-8ad0-25a0f6b934a4",
+      "transport_wall_ms": 1555.6120000001101
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "stage": "super",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1610,
+  "cost_usd": 0.0005256,
+  "reserved_usd": 0.0180864,
+  "false_fix": true,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "b490d3a2541a462ca7e8e4aca41a608a",
+  "input_tokens": 1539,
+  "output_tokens": 71,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"solution.c\", \"start_line\": 3, \"end_line\": 9, \"replacement_lines\": [\"void publish_cache(Cache *cache) {\", \"    sched_yield();\", \"    meet(cache);\", \"    cache->value = 42;\", \"}\"]}]}",
+  "error_code": null,
+  "validation": [],
+  "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"solution.c\", \"search\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield();\\n    cache->value = 42;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\nvoid observe_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield();\\n    cache->observed = cache->value;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\n#include <sched.h>\\nvoid publish_cache(Cache *cache) {\\n    sched_yield();\\n    meet(cache);\\n    cache->value = 42;\\n}\\nvoid observe_cache(Cache *cache) {\\n    pthread_mutex_lock(&cache->mutex);\\n    meet(cache);\\n    sched_yield();\\n    cache->observed = cache->value;\\n    pthread_mutex_unlock(&cache->mutex);\\n}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+  "inference_ms": 1398.1730000014068,
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,11 +1,9 @@\n #include \"state.h\"\n #include <sched.h>\n void publish_cache(Cache *cache) {\n-    pthread_mutex_lock(&cache->mutex);\n+    sched_yield();\n     meet(cache);\n-    sched_yield();\n     cache->value = 42;\n-    pthread_mutex_unlock(&cache->mutex);\n }\n void observe_cache(Cache *cache) {\n     pthread_mutex_lock(&cache->mutex);\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 25059.78850000065
+}

@@ -1,0 +1,38 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "-ra",
+    "-o",
+    "addopts=",
+    "-m",
+    "not nebius and not langsmith and not gpu",
+    "-p",
+    "scripts.remote_test_recorder",
+    "--ak-report",
+    "test-batch-04.json",
+    "--junitxml",
+    "test-batch-04.xml",
+    "tests/test_patch_quality.py",
+    "tests/test_product_budget.py",
+    "tests/test_repository_context.py",
+    "tests/test_repository_diagnostics.py",
+    "tests/test_repository_onboarding.py",
+    "tests/test_router.py",
+    "tests/test_runtime.py",
+    "tests/test_sites_connection.py"
+  ],
+  "exit_code": 1,
+  "stdout": ".......................F................................................ [ 80%]\n.................                                                        [100%]\n=================================== FAILURES ===================================\n__________ test_native_barrier_false_fix_fails_then_exact_edits_pass ___________\n\ntmp_path = PosixPath('/tmp/pytest-of-root/pytest-3/test_native_barrier_false_fix_0')\n\n    @pytest.mark.integration\n    def test_native_barrier_false_fix_fails_then_exact_edits_pass(tmp_path):\n        compiler = os.getenv(\"AK_TEST_CC\")\n        if not compiler:\n            pytest.skip(\"Set AK_TEST_CC for real native verification\")\n        benchmark = Path(__file__).parents[1] / \"benchmarks/deadlock_001\"\n        task = load_task(benchmark, compiler=compiler, static=os.name == \"nt\", stress_runs=1, verification_runs=10)\n        original = (benchmark / \"main.c\").read_text()\n        snapshot = (benchmark / \"main.c\").read_bytes()\n        calls = []\n        def model(request, route):\n            if request.metadata[\"phase\"] == \"triage\":\n                return mock_concurrency_response(request, route)\n            calls.append(request.prompt)\n            # First response repeats the historical semantic error despite valid formatting.\n            edits = [edit(\"pthread_mutex_t *first = id == 1 ? &a : &b;\", \"pthread_mutex_t *first = &a;\"),\n                     edit(\"pthread_mutex_t *second = id == 1 ? &b : &a;\", \"pthread_mutex_t *second = &b;\")]\n            if len(calls) > 1:\n                edits += [edit(\"    pthread_barrier_wait(&ready);\\n\", \"\"),\n                          edit(\"    pthread_mutex_lock(first);\", \"    pthread_barrier_wait(&ready);\\n    pthread_mutex_lock(first);\")]\n            return response(edits)\n        result = asyncio.run(ConcurrencyBugHunter(MockNebiusProvider(model), temporary_parent=tmp_path).run(task))\n        destination = os.getenv(\"AK_PATCH_QUALITY_REPORT\")\n        if destination:\n            Path(destination).write_text(result.model_dump_json(indent=2), encoding=\"utf-8\")\n        if result.status == \"execution_blocked\":\n            pytest.skip(\"Host policy blocked execution; no bypass or retry\")\n        assert result.status == \"verified\", result.model_dump_json()\n>       assert result.route == [\"NANO\", \"SUPER\", \"SUPER\"]\nE       AssertionError: assert ['NANO', 'SUPER', 'ULTRA'] == ['NANO', 'SUPER', 'SUPER']\nE         \nE         At index 2 diff: 'ULTRA' != 'SUPER'\nE         Use -v to get more diff\n\ntests/test_patch_quality.py:160: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_patch_quality.py::test_native_barrier_false_fix_fails_then_exact_edits_pass\n1 failed, 88 passed in 25.12s\n",
+  "stderr": "",
+  "duration_ms": 25589.857437,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "3ecbffe1-aea4-414e-aea1-d77a20c4ca61",
+    "transport_wall_ms": 29643.50999999988
+  }
+}

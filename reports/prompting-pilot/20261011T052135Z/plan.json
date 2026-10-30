@@ -1,0 +1,358 @@
+{
+  "jobs": [
+    {
+      "id": "zero_shot-rwlock_mode",
+      "arm": "zero_shot",
+      "fixture": "rwlock_mode",
+      "task": {
+        "task_id": "rwlock_mode",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\unseen-v1\\rwlock_mode",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "f16b1b55ff8348bb21e3797d373fd42096850f9f813e3f9d6e40230db397e2ae",
+        "oracle.c": "5ee97794af4ae5d14fe68d141ed6d9961c05d8224edfdb7c489675938efa6768",
+        "state.h": "3223d3e7d666e7d4da12198aa52f3ea67e41b32cfa442949b78928cd792dce6a"
+      },
+      "payload_sha256": "8d52b86a5a064c3dc2746f3cbc1d465534e983351ce9a247605b780068564769",
+      "training_ids": [],
+      "message_content_utf8_bytes": 5077
+    },
+    {
+      "id": "zero_shot-wake_all",
+      "arm": "zero_shot",
+      "fixture": "wake_all",
+      "task": {
+        "task_id": "wake_all",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\unseen-v1\\wake_all",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "fad4c14c6be4daa3142160bb4fc30c8df5b6af659ac0f5e1f13c42937634797c",
+        "oracle.c": "4b92d4979357b5ce2fe2b971f8e9d61eaaf312dab63db5e0726d7256870cde8d",
+        "state.h": "87e8b7b005817fcf4eafb556933e8ac94ab830be1ac90a716343ae9d713a9708"
+      },
+      "payload_sha256": "477975bcf7d1c537da9a227a019c16f8b3c97ac0d7c6a5806f8ecc45904293bb",
+      "training_ids": [],
+      "message_content_utf8_bytes": 5307
+    },
+    {
+      "id": "few_shot-rwlock_mode",
+      "arm": "few_shot",
+      "fixture": "rwlock_mode",
+      "task": {
+        "task_id": "rwlock_mode",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\unseen-v1\\rwlock_mode",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "f16b1b55ff8348bb21e3797d373fd42096850f9f813e3f9d6e40230db397e2ae",
+        "oracle.c": "5ee97794af4ae5d14fe68d141ed6d9961c05d8224edfdb7c489675938efa6768",
+        "state.h": "3223d3e7d666e7d4da12198aa52f3ea67e41b32cfa442949b78928cd792dce6a"
+      },
+      "payload_sha256": "bce6a27a24f6fd439ddfe5825d710f9ec5bd396799fb41688643aa231c2430e7",
+      "training_ids": [
+        "race_002",
+        "race_003"
+      ],
+      "message_content_utf8_bytes": 20188
+    },
+    {
+      "id": "few_shot-wake_all",
+      "arm": "few_shot",
+      "fixture": "wake_all",
+      "task": {
+        "task_id": "wake_all",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\unseen-v1\\wake_all",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "fad4c14c6be4daa3142160bb4fc30c8df5b6af659ac0f5e1f13c42937634797c",
+        "oracle.c": "4b92d4979357b5ce2fe2b971f8e9d61eaaf312dab63db5e0726d7256870cde8d",
+        "state.h": "87e8b7b005817fcf4eafb556933e8ac94ab830be1ac90a716343ae9d713a9708"
+      },
+      "payload_sha256": "77db206cd61faa077030823072f1f0a2426fe73909d3cbc9b5aeda58d79b46b6",
+      "training_ids": [
+        "deadlock_004",
+        "job_queue"
+      ],
+      "message_content_utf8_bytes": 27606
+    }
+  ],
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "max_model_calls": 4,
+  "attempts_per_job": 1,
+  "max_output_tokens": 2048,
+  "temperature": 0,
+  "model_retries": 0,
+  "correction_calls": 0,
+  "mandatory_verifier": true,
+  "training": false,
+  "image": "agentkernel-clang:20261003122908",
+  "max_pilot_spend_usd": 10,
+  "inference_bound_usd": "0.1073152",
+  "per_call_bound_usd": "0.0268288",
+  "input_reservation_tokens_per_call": 262144,
+  "sandbox_bound_usd": null,
+  "cost_gate": "BLOCKED_UNTIL_SANDBOX_RATE_OR_NO_CHARGE_ACCESS_CONFIRMED",
+  "price_basis": "Live per-token catalog rates; whole advertised context charged per call plus full output cap. No model retries.",
+  "example_selection": "Two training-only cases per fixture, selected before results. Shared-state examples for rwlock; lock/barrier liveness examples for wake_all. No direct condition-variable training example exists.",
+  "reference_isolation": "Reads only frozen test inference messages and task configs, never held-out reference patches or candidate sources.",
+  "controller_sha256": "a0b95c499dc149e3a143029d51779cd29ec0b7ac28e4055a4b78b0c4058df17b"
+}

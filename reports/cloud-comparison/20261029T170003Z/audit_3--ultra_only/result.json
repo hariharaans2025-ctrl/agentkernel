@@ -1,0 +1,56 @@
+{
+  "status": "rejected",
+  "profile": "ultra_only",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 1553,
+      "cost_usd": 0.001723,
+      "reserved_usd": 0.036576,
+      "false_fix": true,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "b3c3cb2cf2eb41b3b0db7971203448f8",
+      "input_tokens": 1468,
+      "output_tokens": 85,
+      "reasoning_tokens": 0,
+      "response": "{\n  \"edits\": [\n    {\n      \"file\": \"commit.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void commit(State*s){s->committed++;s->bytes+=13;sched_yield();audit(s);}\"\n      ]\n    }\n  ]\n}",
+      "error_code": null,
+      "validation": [],
+      "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"commit.c\", \"search\": \"#include \\\"state.h\\\"\\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\\n\", \"replacement\": \"#include \\\"state.h\\\"\\nvoid commit(State*s){s->committed++;s->bytes+=13;sched_yield();audit(s);}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+      "inference_ms": 1118.071599979885,
+      "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){s->committed++;s->bytes+=13;sched_yield();audit(s);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 89,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 20291.620399977546
+    }
+  ],
+  "model_calls": 1,
+  "remote_model_calls": 1,
+  "tokens": 1553,
+  "cost_usd": 0.001723,
+  "reserved_usd": 0.036576,
+  "false_fix": true,
+  "end_to_end_ms": 42921.15309997462,
+  "inference_ms": 1118.071599979885,
+  "verification_ms": 20291.620399977546,
+  "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){s->committed++;s->bytes+=13;sched_yield();audit(s);}\n",
+  "response": "{\n  \"edits\": [\n    {\n      \"file\": \"commit.c\",\n      \"start_line\": 1,\n      \"end_line\": 2,\n      \"replacement_lines\": [\n        \"#include \\\"state.h\\\"\",\n        \"void commit(State*s){s->committed++;s->bytes+=13;sched_yield();audit(s);}\"\n      ]\n    }\n  ]\n}",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": false,
+    "passed_runs": 89,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  }
+}

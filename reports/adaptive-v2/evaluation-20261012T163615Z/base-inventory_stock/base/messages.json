@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Repair C/pthreads synchronization. Preserve all original functional work, interfaces and scheduling hooks. Return ONLY complete corrected editable files using exactly this format:\n<<<FILE:filename.c>>>\nraw C source with actual newlines\n<<<END_FILE>>>\nDo not JSON-encode the source, do not escape quotes/newlines, and do not use Markdown. Do not add or remove sched_yield calls. Never modify protected headers or tests."
+  },
+  {
+    "role": "user",
+    "content": "Task: Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.\nRequirements: Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.\nEditable ORIGINAL files:\n<<<FILE:solution.c>>>\n#include \"state.h\"\n#include <sched.h>\nint take_item(Inventory *stock) {\n    int old = stock->remaining;\n    if (old == 0) return 0;\n    sched_yield();\n    stock->remaining = old - 1;\n    return 1;\n}\nint remaining_stock(Inventory *stock) {\n    return stock->remaining;\n}\n<<<END_FILE>>>\nRequired sched_yield call count for solution.c: 1\nProtected header state.h:\n#ifndef STATE_H\n#define STATE_H\n#include <pthread.h>\ntypedef struct { pthread_mutex_t mutex; int remaining; } Inventory;\nint take_item(Inventory *);\nint remaining_stock(Inventory *);\n#endif\n\n"
+  }
+]

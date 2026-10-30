@@ -1,0 +1,24 @@
+{
+  "command": [
+    "gcc",
+    "-std=c11",
+    "-pthread",
+    "-O3",
+    "-DMODE=0",
+    "harness.c",
+    "pair.c",
+    "-o",
+    "bench_mutex"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 318.148742,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "9b58abc8-9c7e-4034-a3d2-ba52e7f9c92a",
+    "transport_wall_ms": 12065.358699997887
+  }
+}

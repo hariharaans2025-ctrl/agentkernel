@@ -1,0 +1,14 @@
+{
+  "model_calls": 0,
+  "queue_baseline_runs": 3,
+  "tsan_controls": [
+    "unsynchronized_counter",
+    "mutex_protected_counter"
+  ],
+  "tsan_runs_per_control_per_method": 3,
+  "methods": [
+    "serial",
+    "batch"
+  ],
+  "note": "Diagnostic controls only; not a 100-run candidate verification or production rollout."
+}

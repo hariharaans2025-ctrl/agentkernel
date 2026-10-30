@@ -1,0 +1,108 @@
+{
+  "task_id": "github_pithikos_threadpool",
+  "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\github-acceptance-v1\\github_pithikos_threadpool",
+  "source_files": [
+    "thpool.c"
+  ],
+  "support_files": [
+    "LICENSE",
+    "README.md",
+    "acceptance/semantics.c",
+    "acceptance/upstream_tests.py",
+    "docs/Design.md",
+    "docs/FAQ.md",
+    "example.c",
+    "tests/README.md",
+    "tests/api.sh",
+    "tests/ext_bugs/memleak.c",
+    "tests/funcs.sh",
+    "tests/heap_stack_garbage.sh",
+    "tests/memleaks.sh",
+    "tests/normal_compile.sh",
+    "tests/optimized_compile.sh",
+    "tests/pause_resume.sh",
+    "tests/src/api.c",
+    "tests/src/conc_increment.c",
+    "tests/src/no_work.c",
+    "tests/src/nonzero_heap_stack.c",
+    "tests/src/pause_resume.c",
+    "tests/src/wait.c",
+    "tests/threadpool.sh",
+    "tests/wait.sh",
+    "thpool.h"
+  ],
+  "build_command": [
+    "gcc",
+    "-std=gnu11",
+    "-pthread",
+    "-g",
+    "-O1",
+    "-I.",
+    "-I.",
+    "thpool.c",
+    "acceptance/semantics.c",
+    "-o",
+    "acceptance_app"
+  ],
+  "binary_path": "acceptance_app",
+  "run_command": [
+    "./acceptance_app"
+  ],
+  "max_runtime_seconds": 15.0,
+  "compile_timeout_seconds": 30.0,
+  "stress_runs": 3,
+  "environment": {},
+  "expected_behavior": "PASS",
+  "expected_bug_category": "unknown",
+  "verification_config": {
+    "required_build_success": true,
+    "stress_runs": 100,
+    "allowed_deadlocks": 0,
+    "allowed_races": 0,
+    "allowed_crashes": 0,
+    "required_original_tests": true,
+    "original_test_commands": [
+      [
+        "python3",
+        "acceptance/upstream_tests.py",
+        "pithikos"
+      ]
+    ],
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "sanitizer_compiler": "clang",
+    "semantic_checks": [
+      {
+        "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+        "build_command": [
+          "gcc",
+          "-std=gnu11",
+          "-pthread",
+          "-g",
+          "-O1",
+          "-I.",
+          "-I.",
+          "thpool.c",
+          "acceptance/semantics.c",
+          "-o",
+          "acceptance_app"
+        ],
+        "run_command": [
+          "./acceptance_app"
+        ],
+        "expected_stdout": "SEMANTIC_PASS",
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "origin": "user_repository",
+    "repository_workflow_version": 1,
+    "fixture_description": "Preserve this public thread-pool implementation's API, license and original tests. Two concurrent producers submit 256 uniquely identified jobs to four workers; every callback must execute exactly once, with correct totals. Repeat pool creation and complete graceful/waited destruction safely. Repair observed races, invalid mutex lifecycle, deadlock or lost work without removing functional work or synchronization. Only the listed implementation source is editable; headers, upstream tests and acceptance harness are protected.",
+    "github_url": "https://github.com/Pithikos/C-Thread-Pool",
+    "git_revision": "2b56942a7347280ea4d0ede238cefacef96db4bb",
+    "seeded_regression": false,
+    "split": "public-github-acceptance-v1"
+  }
+}

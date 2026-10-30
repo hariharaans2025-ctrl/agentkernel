@@ -1,0 +1,259 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 0,
+  "failed_runs": 100,
+  "race_count": 0,
+  "deadlock_count": 100,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 103,
+  "sanitizer_findings": [],
+  "regressions": [
+    "New failure class: TIMEOUT"
+  ],
+  "duration_ms": 250812.14340002043,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "-Iinclude",
+        "src/main.c",
+        "src/queue.c",
+        "-o",
+        "job_service"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 216.298059,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "c36c2879-5c62-4274-b71c-f76935abfa62",
+        "transport_wall_ms": 1750.6470999796875
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./job_service",
+            "--smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=1 checksum=1 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.375177000000007,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "c36c2879-5c62-4274-b71c-f76935abfa62",
+            "transport_wall_ms": 2158.9074000075925
+          }
+        },
+        {
+          "command": [
+            "./job_service",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.2978509999999908,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "c36c2879-5c62-4274-b71c-f76935abfa62",
+            "transport_wall_ms": 2026.7047999950591
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 100,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "TIMEOUT": 100
+      },
+      "duration_ms": 229313.4510999953,
+      "representative_runs": [
+        {
+          "run_id": "job-queue-service:1",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "304ec714-7ff5-43c9-ae61-cf7c93a70d89",
+            "batch_transport_wall_ms": 23991.832100000465
+          },
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "run_id": "job-queue-service:2",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "304ec714-7ff5-43c9-ae61-cf7c93a70d89",
+            "batch_transport_wall_ms": 23991.832100000465
+          },
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "run_id": "job-queue-service:3",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "304ec714-7ff5-43c9-ae61-cf7c93a70d89",
+            "batch_transport_wall_ms": 23991.832100000465
+          },
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "100 jobs exactly once, checksum 5050, queue drained",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "-Iinclude",
+              "src/main.c",
+              "src/queue.c",
+              "-o",
+              "semantic"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.615665,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "64b535a8-0ff1-45af-a8eb-1e58ee9a35d4",
+              "transport_wall_ms": 1615.7072999922093
+            }
+          },
+          "run": {
+            "command": [
+              "./semantic",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "completed=100 checksum=5050 exactly_once=yes\nSEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.406704000000038,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "64b535a8-0ff1-45af-a8eb-1e58ee9a35d4",
+              "transport_wall_ms": 2129.8834000190254
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "failed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 3,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "TIMEOUT": 3
+        },
+        "duration_ms": 8943.268699978944,
+        "representative_runs": [
+          {
+            "run_id": "job-queue-service:1",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2e692fad-4a7f-4011-be83-d1a76956fda4",
+              "batch_transport_wall_ms": 8943.048100016313
+            },
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "run_id": "job-queue-service:2",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2e692fad-4a7f-4011-be83-d1a76956fda4",
+              "batch_transport_wall_ms": 8943.048100016313
+            },
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "run_id": "job-queue-service:3",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2e692fad-4a7f-4011-be83-d1a76956fda4",
+              "batch_transport_wall_ms": 8943.048100016313
+            },
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      }
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": true,
+  "sanitizer_passed": false,
+  "semantic_regression": false,
+  "false_fix": true
+}

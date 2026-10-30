@@ -1,0 +1,101 @@
+{
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "contract": "agentkernel_line_blocks_v4",
+  "caps": {
+    "fine_tuned": 2048,
+    "super": 4096,
+    "ultra": 8192
+  },
+  "max_cost_usd": 0.073152,
+  "max_calls": 2,
+  "max_verifier_recoveries": 1,
+  "max_format_recoveries": 1,
+  "source_hashes": {
+    "publish.c": "d61d5e8f49a75c410786f8131ad1f450f5bb7bb55c81452d5f4dd0cd1d7fe028",
+    "observe.c": "ece600a86e99f513437d166396247c2092077498249fba308f85583aeef5265a",
+    "state.h": "7a53ff276e73d62852f5257c1fb91d380059e4806789b12f63a21adc5fab202d",
+    "oracle.c": "43049946413221a29f81a816ed1c2095263ade0cc107fbd7f779099158b3dfad"
+  },
+  "automatic_replay": false,
+  "task": {
+    "task_id": "rendezvous_3",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\adaptive-v4-live\\20261030T120841Z\\rendezvous_3\\input",
+    "source_files": [
+      "publish.c",
+      "observe.c"
+    ],
+    "support_files": [
+      "state.h",
+      "oracle.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "publish.c",
+      "observe.c",
+      "oracle.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app",
+          "--check"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "publish.c",
+            "observe.c",
+            "oracle.c",
+            "-o",
+            "app"
+          ],
+          "run_command": [
+            "./app",
+            "--check"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "fixture_description": "The protected checkpoint helper waits at two barrier generations. Both functions must complete the helper outside the shared critical section, then record exactly two visits and publish 31. Retain both yield hooks.",
+      "split": "test",
+      "family": "rendezvous",
+      "variant": 3
+    }
+  },
+  "ledger": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\product-v3\\budget.json"
+}

@@ -1,0 +1,241 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 0,
+  "failed_runs": 100,
+  "race_count": 0,
+  "deadlock_count": 100,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 103,
+  "sanitizer_findings": [],
+  "regressions": [
+    "Original test requirements failed",
+    "Required semantic invariant failed"
+  ],
+  "duration_ms": 248992.04529999953,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "solution.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 216.96866600000004,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "15810545-e535-42ba-ac89-ba5a4b2d4b43",
+        "transport_wall_ms": 1470.5575999996654
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": false,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": -9,
+          "stdout": "",
+          "stderr": "",
+          "duration_ms": 2003.284768,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "15810545-e535-42ba-ac89-ba5a4b2d4b43",
+            "transport_wall_ms": 3734.1362000006484
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 100,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "TIMEOUT": 100
+      },
+      "duration_ms": 227743.03169999985,
+      "representative_runs": [
+        {
+          "run_id": "barrier_cache:1",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c8d662c-228b-46f8-a054-294b410ab8e8",
+            "batch_transport_wall_ms": 23400.43289999994
+          },
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "run_id": "barrier_cache:2",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c8d662c-228b-46f8-a054-294b410ab8e8",
+            "batch_transport_wall_ms": 23400.43289999994
+          },
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "run_id": "barrier_cache:3",
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c8d662c-228b-46f8-a054-294b410ab8e8",
+            "batch_transport_wall_ms": 23400.43289999994
+          },
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": false,
+      "required_passed": false,
+      "regression": true,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.",
+          "required": true,
+          "passed": false,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "solution.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.95070899999996,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2bb4a5af-08e5-4509-af2f-bc712a04b831",
+              "transport_wall_ms": 1460.0975000012113
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": -9,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 2003.3044270000003,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "2bb4a5af-08e5-4509-af2f-bc712a04b831",
+              "transport_wall_ms": 3643.9792000001034
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "failed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 3,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "TIMEOUT": 3
+        },
+        "duration_ms": 8646.872999999687,
+        "representative_runs": [
+          {
+            "run_id": "barrier_cache:1",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "99f4d617-ddce-4681-9630-fa2f3519851a",
+              "batch_transport_wall_ms": 8645.109600000069
+            },
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "run_id": "barrier_cache:2",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "99f4d617-ddce-4681-9630-fa2f3519851a",
+              "batch_transport_wall_ms": 8645.109600000069
+            },
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "run_id": "barrier_cache:3",
+            "classification": "TIMEOUT",
+            "exit_code": -9,
+            "timed_out": true,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "99f4d617-ddce-4681-9630-fa2f3519851a",
+              "batch_transport_wall_ms": 8645.109600000069
+            },
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      }
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": false,
+  "sanitizer_passed": false,
+  "semantic_regression": true,
+  "false_fix": true
+}

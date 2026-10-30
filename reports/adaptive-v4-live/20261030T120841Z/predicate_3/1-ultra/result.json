@@ -1,0 +1,53 @@
+{
+  "stage": "ultra",
+  "outcome": "verified",
+  "model_calls": 1,
+  "tokens": 1376,
+  "cost_usd": 0.001516,
+  "false_fix": false,
+  "recovery": null,
+  "reserved_usd": 0.036576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "7b41c7ef32f0483fa5f11c62371d9db1",
+  "inference_ms": 1574.921799999629,
+  "input_tokens": 1306,
+  "output_tokens": 70,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE await.c 2-2\nint await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "blocks": [
+      {
+        "file": "await.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      }
+    ]
+  },
+  "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+  "verification_phases_ms": {
+    "apply": 3226.2501000000157,
+    "build": 2426.4776999998503,
+    "stress": 9148.619799999778,
+    "tsan_build": 2410.4495999999926,
+    "original_tests_and_semantics": 6154.871100000037
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 20140.418199999658,
+  "taxonomy": {
+    "primary": "verified",
+    "gates": []
+  }
+}

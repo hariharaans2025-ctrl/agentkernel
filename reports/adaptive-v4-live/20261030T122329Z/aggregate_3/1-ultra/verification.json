@@ -1,0 +1,272 @@
+{
+  "passed": false,
+  "build_passed": true,
+  "total_runs": 100,
+  "passed_runs": 92,
+  "failed_runs": 8,
+  "race_count": 3,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 11,
+  "sanitizer_findings": [
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T5",
+      "thread_b": "T4",
+      "memory_location": "0x5555569e66c0",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=10)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=16, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=15, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+    },
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T5",
+      "thread_b": "T4",
+      "memory_location": "0x5555569e66c0",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=18)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=24, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=23, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+    },
+    {
+      "type": "data_race",
+      "severity": "error",
+      "file": null,
+      "line": null,
+      "thread_a": "T5",
+      "thread_b": "T4",
+      "memory_location": "0x5555569e66c0",
+      "raw_summary": "WARNING: ThreadSanitizer: data race (pid=26)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=32, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=31, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+    }
+  ],
+  "regressions": [],
+  "duration_ms": 20851.38119999965,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "record.c",
+        "read.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_ms": 266.881541,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "91f61cf8-93aa-4aaa-8eb1-44de60af3aff",
+        "transport_wall_ms": 2241.160300000047
+      },
+      "success": true
+    },
+    "original_tests": {
+      "passed": true,
+      "results": [
+        {
+          "command": [
+            "./app",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "SEMANTIC_PASS\n",
+          "stderr": "",
+          "duration_ms": 3.448577000000008,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "91f61cf8-93aa-4aaa-8eb1-44de60af3aff",
+            "transport_wall_ms": 1766.6339000002154
+          }
+        }
+      ],
+      "configured": true
+    },
+    "campaign": {
+      "total_runs": 100,
+      "failed_runs": 8,
+      "infrastructure_failures": 0,
+      "requested_runs": 100,
+      "execution_blocked": false,
+      "counts": {
+        "PASS": 92,
+        "UNKNOWN_FAILURE": 8
+      },
+      "duration_ms": 8538.01139999996,
+      "representative_runs": [
+        {
+          "run_id": "aggregate_3:3",
+          "classification": "UNKNOWN_FAILURE",
+          "exit_code": 1,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c234e17-c7f4-49c4-b38b-d8401900af07",
+            "batch_transport_wall_ms": 3310.9556000003977
+          },
+          "stdout": "FAIL\n",
+          "stderr": ""
+        },
+        {
+          "run_id": "aggregate_3:14",
+          "classification": "UNKNOWN_FAILURE",
+          "exit_code": 1,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c234e17-c7f4-49c4-b38b-d8401900af07",
+            "batch_transport_wall_ms": 3310.9556000003977
+          },
+          "stdout": "FAIL\n",
+          "stderr": ""
+        },
+        {
+          "run_id": "aggregate_3:27",
+          "classification": "UNKNOWN_FAILURE",
+          "exit_code": 1,
+          "timed_out": false,
+          "metadata": {
+            "execution_backend": "nebius",
+            "output_truncated": false,
+            "remote_image_id": "9c234e17-c7f4-49c4-b38b-d8401900af07",
+            "batch_transport_wall_ms": 3310.9556000003977
+          },
+          "stdout": "FAIL\n",
+          "stderr": ""
+        }
+      ]
+    },
+    "semantic": {
+      "configured": true,
+      "passed": true,
+      "required_passed": true,
+      "regression": false,
+      "infrastructure_failures": 0,
+      "checks": [
+        {
+          "name": "Each record increments one parity bucket and total as one transaction; both buckets must sum to total in every snapshot. Preserve all updates and the yield.",
+          "required": true,
+          "passed": true,
+          "infrastructure_failure": false,
+          "build": {
+            "command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "record.c",
+              "read.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "duration_ms": 216.66396700000004,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "08ecae4b-75da-4f83-bba4-b62f509f4e53",
+              "transport_wall_ms": 2636.851999999635
+            }
+          },
+          "run": {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 3.3731230000000334,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "08ecae4b-75da-4f83-bba4-b62f509f4e53",
+              "transport_wall_ms": 1653.7096000001839
+            }
+          }
+        }
+      ]
+    },
+    "sanitizer": {
+      "status": "failed",
+      "campaign": {
+        "total_runs": 3,
+        "failed_runs": 3,
+        "infrastructure_failures": 0,
+        "requested_runs": 3,
+        "execution_blocked": false,
+        "counts": {
+          "RACE_DETECTED": 3
+        },
+        "duration_ms": 1621.783399999913,
+        "representative_runs": [
+          {
+            "run_id": "aggregate_3:1",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "7676d09f-70d6-46c5-ae01-c4d41c7d031e",
+              "batch_transport_wall_ms": 1617.8617000000486
+            },
+            "stdout": "",
+            "stderr": "==10==WARNING: invalid path to external symbolizer!\n==10==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=10)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=16, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=15, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+          },
+          {
+            "run_id": "aggregate_3:2",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "7676d09f-70d6-46c5-ae01-c4d41c7d031e",
+              "batch_transport_wall_ms": 1617.8617000000486
+            },
+            "stdout": "",
+            "stderr": "==18==WARNING: invalid path to external symbolizer!\n==18==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=18)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=24, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=23, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+          },
+          {
+            "run_id": "aggregate_3:3",
+            "classification": "RACE_DETECTED",
+            "exit_code": 66,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "7676d09f-70d6-46c5-ae01-c4d41c7d031e",
+              "batch_transport_wall_ms": 1617.8617000000486
+            },
+            "stdout": "",
+            "stderr": "==26==WARNING: invalid path to external symbolizer!\n==26==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: data race (pid=26)\n  Read of size 4 at 0x5555569e66c0 by thread T5:\n    #0 <null> <null> (app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe66db) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Previous write of size 4 at 0x5555569e66c0 by thread T4 (mutexes: write M0):\n    #0 <null> <null> (app+0xe65ba) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6689) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (app+0x62cdb) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n\n  Mutex M0 (0x5555569e6698) created at:\n    #0 <null> <null> (app+0x647c7) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6738) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T5 (tid=32, running) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe6791) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Thread T4 (tid=31, finished) created by main thread at:\n    #0 <null> <null> (app+0x62d85) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #1 <null> <null> (app+0xe676f) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38)\n    #2 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: data race (/workspace/app+0xe6619) (BuildId: a28a24d7f73fca5f12c7071a6ef9dda6a55dde38) \n==================\n"
+          }
+        ]
+      }
+    }
+  },
+  "reason": "The patch failed the configured verification campaign; inspect execution evidence.",
+  "execution_passed": false,
+  "semantic_passed": true,
+  "sanitizer_passed": false,
+  "semantic_regression": false,
+  "false_fix": true
+}

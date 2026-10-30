@@ -1,0 +1,145 @@
+{
+  "case": "snapshot_3",
+  "status": "verified",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 1196,
+      "cost_usd": 0.001458,
+      "false_fix": false,
+      "recovery": null,
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "6a5a6cd1d48c4dce86cc39a0400121cc",
+      "inference_ms": 1491.1628999998356,
+      "input_tokens": 1065,
+      "output_tokens": 131,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE publisher.c 2-2\nvoid publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n@@ END\n@@ REPLACE snapshot.c 2-2\nint check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "publisher.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          },
+          {
+            "file": "snapshot.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+      "verification_phases_ms": {
+        "apply": 3715.584399999898,
+        "build": 2368.093499999759,
+        "stress": 9035.57899999987,
+        "tsan_build": 2523.5078000000613,
+        "original_tests_and_semantics": 5038.436700000602
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 18965.617000000293,
+      "taxonomy": {
+        "primary": "verified",
+        "gates": []
+      }
+    }
+  ],
+  "model_calls": 1,
+  "calls_by_model": {
+    "ultra": 1
+  },
+  "tokens": 1196,
+  "cost_usd": 0.001458,
+  "reserved_usd": 0.036576,
+  "false_fix": false,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 248,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 251,
+      "primitives": {
+        "mutex_lock": 0,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 0,
+      "blocking_helper_in_protected_header": false,
+      "baseline_fingerprint": "UNKNOWN_FAILURE:2",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "single_lock_invariant",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002262,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0029406000000000002,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.012699999842880061
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 0
+  },
+  "end_to_end_ms": 31457.295599999725,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1333.612500000072,
+    "upload": 2007.7134000002843,
+    "baseline_build": 2327.095399999962,
+    "baseline_stress": 1587.209399999665,
+    "inference": 1491.1628999998356,
+    "verify_apply": 3715.584399999898,
+    "verify_build": 2368.093499999759,
+    "verify_stress": 9035.57899999987,
+    "verify_tsan_build": 2523.5078000000613,
+    "verify_original_tests_and_semantics": 5038.436700000602,
+    "e2e": 31457.295599999725
+  },
+  "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "arm": "selected_grouped",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 4933,
+  "cost_usd": null,
+  "input_tokens": 4384,
+  "output_tokens": 549,
+  "inference_ms": 5263.900799996918,
+  "verification_ms": 250812.14340002043,
+  "end_to_end_ms": 263559.91959999665,
+  "public_tokenizer_input_tokens": 4384,
+  "provider_minus_public_tokens": 0,
+  "false_fix": true,
+  "semantic_regression": false,
+  "semantic_passed": true,
+  "tsan_passed": false,
+  "stress_passed": 0,
+  "stress_total": 100,
+  "deadlocks": 100,
+  "races": 0
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "state": "PLANNED_NOT_EXECUTED",
+  "contract": {
+    "schema_version": 1,
+    "project": "github_mbrossard_threadpool",
+    "description": "Preserve this public thread-pool implementation's API, license and original tests. Two concurrent producers submit 256 uniquely identified jobs to four workers; every callback must execute exactly once, with correct totals. Repeat pool creation and complete graceful/waited destruction safely. Repair observed races, invalid mutex lifecycle, deadlock or lost work without removing functional work or synchronization. Only the listed implementation source is editable; headers, upstream tests and acceptance harness are protected.",
+    "origin": "user_repository",
+    "source_files": [
+      "src/threadpool.c"
+    ],
+    "support_files": [
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "acceptance/semantics.c",
+      "acceptance/upstream_tests.py",
+      "package.json",
+      "src/threadpool.h",
+      "tests/heavy.c",
+      "tests/shutdown.c",
+      "tests/thrdtest.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-std=gnu11",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-Isrc",
+      "-I.",
+      "src/threadpool.c",
+      "acceptance/semantics.c",
+      "-o",
+      "acceptance_app"
+    ],
+    "run_command": [
+      "./acceptance_app"
+    ],
+    "binary_path": "acceptance_app",
+    "expected_behavior": "PASS",
+    "compile_timeout_seconds": 30,
+    "max_runtime_seconds": 15,
+    "baseline_runs": 3,
+    "verification": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "python3",
+          "acceptance/upstream_tests.py",
+          "mbrossard"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+          "build_command": [
+            "gcc",
+            "-std=gnu11",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-Isrc",
+            "-I.",
+            "src/threadpool.c",
+            "acceptance/semantics.c",
+            "-o",
+            "acceptance_app"
+          ],
+          "run_command": [
+            "./acceptance_app"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "budgets": {
+      "max_model_calls": 3,
+      "max_total_tokens": 160000,
+      "max_input_tokens_per_call": 48000,
+      "max_output_tokens_per_call": 8192,
+      "max_wall_seconds": 1800
+    },
+    "execution_backend": "nebius",
+    "max_upload_bytes": 20000000
+  },
+  "plan_sha256": "bf5882c86fcb1775e441132eed024b50ed926ae705b2a73288b80e227a57c2ba",
+  "files": {
+    "src/threadpool.c": {
+      "sha256": "3a5cbb5eb2228256d1505c0e285f9f8c47bb261b45b2ce59d8749b170f7be559",
+      "bytes": 8491,
+      "editable": true
+    },
+    "LICENSE": {
+      "sha256": "de5940fd130cddf0ee532971f4a1e1df1a3c46c3b2eac255610741896354a6cd",
+      "bytes": 1310,
+      "editable": false
+    },
+    "Makefile": {
+      "sha256": "59eddec34a1cc0940b539491ba19a9dac630a2cbeb20829989de793100370de8",
+      "bytes": 937,
+      "editable": false
+    },
+    "README.md": {
+      "sha256": "398f649112cb3f5a3ae0ca0c698149ca0e50fc09fb5f5a845524b9366da03b85",
+      "bytes": 897,
+      "editable": false
+    },
+    "acceptance/semantics.c": {
+      "sha256": "0abc45494a02477692cf8f0d540a32501889d56b596c82a646e2c21a1760e12e",
+      "bytes": 1835,
+      "editable": false
+    },
+    "acceptance/upstream_tests.py": {
+      "sha256": "1a00a3c4688a3c6e844ea2f368edcd7f056411090cf8eed5f9acdadcc8fbc620",
+      "bytes": 2244,
+      "editable": false
+    },
+    "package.json": {
+      "sha256": "3e691b4ad87ee182b488a2f8225dbca64f3e911cb17a85ca77966b5928eb9a39",
+      "bytes": 246,
+      "editable": false
+    },
+    "src/threadpool.h": {
+      "sha256": "eb5adbd14f798bd852ef15c58b1ff5b28548d8da3114ebdd25edc43613a5dcfe",
+      "bytes": 3368,
+      "editable": false
+    },
+    "tests/heavy.c": {
+      "sha256": "84da747b5869d070645a23e331a9f07841d7ca598a4438564ac235fedd092bfb",
+      "bytes": 1459,
+      "editable": false
+    },
+    "tests/shutdown.c": {
+      "sha256": "1373e68ee0919971ff0c50e85f83d6f9d5da865d776f53fdc6f4a719ccd5c927",
+      "bytes": 1033,
+      "editable": false
+    },
+    "tests/thrdtest.c": {
+      "sha256": "069ab88f4d05c59b06eb190c62973837db6c20ef0d10b251f320f769e8f9d046",
+      "bytes": 964,
+      "editable": false
+    }
+  },
+  "upload_bytes": 22784,
+  "task": {
+    "task_id": "github_mbrossard_threadpool",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\datasets\\github-acceptance-v1\\github_mbrossard_threadpool",
+    "source_files": [
+      "src/threadpool.c"
+    ],
+    "support_files": [
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "acceptance/semantics.c",
+      "acceptance/upstream_tests.py",
+      "package.json",
+      "src/threadpool.h",
+      "tests/heavy.c",
+      "tests/shutdown.c",
+      "tests/thrdtest.c"
+    ],
+    "build_command": [
+      "gcc",
+      "-std=gnu11",
+      "-pthread",
+      "-g",
+      "-O1",
+      "-Isrc",
+      "-I.",
+      "src/threadpool.c",
+      "acceptance/semantics.c",
+      "-o",
+      "acceptance_app"
+    ],
+    "binary_path": "acceptance_app",
+    "run_command": [
+      "./acceptance_app"
+    ],
+    "max_runtime_seconds": 15.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "python3",
+          "acceptance/upstream_tests.py",
+          "mbrossard"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "512 unique callbacks exactly once across concurrent producers and repeated safe pool shutdown",
+          "build_command": [
+            "gcc",
+            "-std=gnu11",
+            "-pthread",
+            "-g",
+            "-O1",
+            "-Isrc",
+            "-I.",
+            "src/threadpool.c",
+            "acceptance/semantics.c",
+            "-o",
+            "acceptance_app"
+          ],
+          "run_command": [
+            "./acceptance_app"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {
+      "origin": "user_repository",
+      "repository_workflow_version": 1
+    }
+  },
+  "execution_backend": "nebius",
+  "model_calls": 0,
+  "metrics": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "inference_ms": null,
+    "verification_ms": null,
+    "end_to_end_ms": null,
+    "verified": null,
+    "semantic_passed": null,
+    "tsan_passed": null
+  },
+  "limitations": [
+    "Budgets are a contract; production runtime integration is not enabled.",
+    "Commands require review before execution. A valid plan is not permission to execute.",
+    "File identity is content-based; no Git checkout or commit verification is performed."
+  ]
+}

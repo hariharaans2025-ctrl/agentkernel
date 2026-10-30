@@ -1,0 +1,11 @@
+--- a/solution.c
++++ b/solution.c
+@@ -1,7 +1,7 @@
+ #include "state.h"
+ int take(int *out) {
+     pthread_mutex_lock(&queue_guard);
+-    if (!occupied) return 0;
++    if (!occupied) { pthread_mutex_unlock(&queue_guard); return 0; }
+     *out = item;
+     occupied = 0;
+     pthread_mutex_unlock(&queue_guard);

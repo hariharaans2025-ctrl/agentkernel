@@ -1,0 +1,9 @@
+{
+  "max_correction_calls": 1,
+  "output_cap": 4096,
+  "bound_usd": "0.0274432",
+  "prior": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\atomic-pair-experiment\\20261011T115849Z",
+  "unchanged_verification": "100 stress + original tests + semantics + 3 TSan per variant",
+  "timing": "Same frozen harness, same 10-round interleaved timing plan; mutex verification reused from original evidence.",
+  "source_changes": "Model correction only for atomic variants; no assistant edits to model C source."
+}

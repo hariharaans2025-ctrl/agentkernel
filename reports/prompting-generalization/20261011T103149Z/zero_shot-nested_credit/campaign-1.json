@@ -1,0 +1,1810 @@
+{
+  "task_id": "nested_credit",
+  "runs": [
+    {
+      "run_id": "nested_credit:1",
+      "start_time": "2026-10-11T10:38:25.227860Z",
+      "duration_ms": 3.21993399999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:2",
+      "start_time": "2026-10-11T10:38:25.270970Z",
+      "duration_ms": 2.5876450000000273,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:3",
+      "start_time": "2026-10-11T10:38:25.304379Z",
+      "duration_ms": 2.668558000000043,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:4",
+      "start_time": "2026-10-11T10:38:25.338105Z",
+      "duration_ms": 4.73791200000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:5",
+      "start_time": "2026-10-11T10:38:25.373566Z",
+      "duration_ms": 2.646934000000045,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:6",
+      "start_time": "2026-10-11T10:38:25.408170Z",
+      "duration_ms": 2.6362580000000024,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:7",
+      "start_time": "2026-10-11T10:38:25.441832Z",
+      "duration_ms": 2.647956000000007,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:8",
+      "start_time": "2026-10-11T10:38:25.475843Z",
+      "duration_ms": 2.674555000000023,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:9",
+      "start_time": "2026-10-11T10:38:25.510114Z",
+      "duration_ms": 2.664259999999974,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:10",
+      "start_time": "2026-10-11T10:38:25.543210Z",
+      "duration_ms": 2.665892000000003,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1741.5297999978065
+      }
+    },
+    {
+      "run_id": "nested_credit:11",
+      "start_time": "2026-10-11T10:38:26.998811Z",
+      "duration_ms": 3.452522999999985,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:12",
+      "start_time": "2026-10-11T10:38:27.042525Z",
+      "duration_ms": 2.6771490000000453,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:13",
+      "start_time": "2026-10-11T10:38:27.076974Z",
+      "duration_ms": 2.680634000000015,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:14",
+      "start_time": "2026-10-11T10:38:27.112881Z",
+      "duration_ms": 2.674496000000026,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:15",
+      "start_time": "2026-10-11T10:38:27.146653Z",
+      "duration_ms": 2.69142,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:16",
+      "start_time": "2026-10-11T10:38:27.179943Z",
+      "duration_ms": 2.665972999999988,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:17",
+      "start_time": "2026-10-11T10:38:27.213230Z",
+      "duration_ms": 2.692291999999985,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:18",
+      "start_time": "2026-10-11T10:38:27.246243Z",
+      "duration_ms": 2.7764379999999367,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:19",
+      "start_time": "2026-10-11T10:38:27.279760Z",
+      "duration_ms": 2.7030379999999354,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:20",
+      "start_time": "2026-10-11T10:38:27.313037Z",
+      "duration_ms": 2.706384000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1886.8592000217177
+      }
+    },
+    {
+      "run_id": "nested_credit:21",
+      "start_time": "2026-10-11T10:38:28.861397Z",
+      "duration_ms": 3.4203359999999683,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:22",
+      "start_time": "2026-10-11T10:38:28.904337Z",
+      "duration_ms": 2.807314000000005,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:23",
+      "start_time": "2026-10-11T10:38:28.938984Z",
+      "duration_ms": 2.7025070000000206,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:24",
+      "start_time": "2026-10-11T10:38:28.973117Z",
+      "duration_ms": 2.657360000000053,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:25",
+      "start_time": "2026-10-11T10:38:29.007261Z",
+      "duration_ms": 2.6889259999999804,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:26",
+      "start_time": "2026-10-11T10:38:29.040709Z",
+      "duration_ms": 2.6732529999999866,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:27",
+      "start_time": "2026-10-11T10:38:29.074417Z",
+      "duration_ms": 2.6307799999999992,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:28",
+      "start_time": "2026-10-11T10:38:29.107679Z",
+      "duration_ms": 2.7100279999999755,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:29",
+      "start_time": "2026-10-11T10:38:29.141190Z",
+      "duration_ms": 2.672231000000025,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:30",
+      "start_time": "2026-10-11T10:38:29.174503Z",
+      "duration_ms": 2.6485759999999026,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1401.2926000286825
+      }
+    },
+    {
+      "run_id": "nested_credit:31",
+      "start_time": "2026-10-11T10:38:30.288948Z",
+      "duration_ms": 3.372343,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:32",
+      "start_time": "2026-10-11T10:38:30.331210Z",
+      "duration_ms": 2.610539000000023,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:33",
+      "start_time": "2026-10-11T10:38:30.363583Z",
+      "duration_ms": 2.6253119999999908,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:34",
+      "start_time": "2026-10-11T10:38:30.395987Z",
+      "duration_ms": 2.5735940000000124,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:35",
+      "start_time": "2026-10-11T10:38:30.428408Z",
+      "duration_ms": 2.6034179999999685,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:36",
+      "start_time": "2026-10-11T10:38:30.460667Z",
+      "duration_ms": 2.5629470000000376,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:37",
+      "start_time": "2026-10-11T10:38:30.492595Z",
+      "duration_ms": 2.558761999999992,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:38",
+      "start_time": "2026-10-11T10:38:30.524955Z",
+      "duration_ms": 2.589627999999955,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:39",
+      "start_time": "2026-10-11T10:38:30.557009Z",
+      "duration_ms": 2.5965580000000266,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:40",
+      "start_time": "2026-10-11T10:38:30.589243Z",
+      "duration_ms": 2.597718999999943,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1764.794599963352
+      }
+    },
+    {
+      "run_id": "nested_credit:41",
+      "start_time": "2026-10-11T10:38:32.113813Z",
+      "duration_ms": 3.5597350000000083,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:42",
+      "start_time": "2026-10-11T10:38:32.157557Z",
+      "duration_ms": 2.6504500000000264,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:43",
+      "start_time": "2026-10-11T10:38:32.191878Z",
+      "duration_ms": 2.6685559999999886,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:44",
+      "start_time": "2026-10-11T10:38:32.225877Z",
+      "duration_ms": 2.6562990000000286,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:45",
+      "start_time": "2026-10-11T10:38:32.259608Z",
+      "duration_ms": 2.682206999999992,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:46",
+      "start_time": "2026-10-11T10:38:32.293317Z",
+      "duration_ms": 2.6456630000000203,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:47",
+      "start_time": "2026-10-11T10:38:32.326797Z",
+      "duration_ms": 2.668006000000056,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:48",
+      "start_time": "2026-10-11T10:38:32.360420Z",
+      "duration_ms": 2.670068999999997,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:49",
+      "start_time": "2026-10-11T10:38:32.394112Z",
+      "duration_ms": 2.6676059999999335,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:50",
+      "start_time": "2026-10-11T10:38:32.427339Z",
+      "duration_ms": 2.677880999999993,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1767.934300005436
+      }
+    },
+    {
+      "run_id": "nested_credit:51",
+      "start_time": "2026-10-11T10:38:33.818689Z",
+      "duration_ms": 3.4186029999999645,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:52",
+      "start_time": "2026-10-11T10:38:33.861649Z",
+      "duration_ms": 2.6616859999999964,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:53",
+      "start_time": "2026-10-11T10:38:33.896121Z",
+      "duration_ms": 2.6277249999999697,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:54",
+      "start_time": "2026-10-11T10:38:33.929944Z",
+      "duration_ms": 2.657619,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:55",
+      "start_time": "2026-10-11T10:38:33.963426Z",
+      "duration_ms": 2.688917000000013,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:56",
+      "start_time": "2026-10-11T10:38:33.996553Z",
+      "duration_ms": 2.6649299999999543,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:57",
+      "start_time": "2026-10-11T10:38:34.030222Z",
+      "duration_ms": 2.677468999999988,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:58",
+      "start_time": "2026-10-11T10:38:34.063703Z",
+      "duration_ms": 2.642727999999983,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:59",
+      "start_time": "2026-10-11T10:38:34.098000Z",
+      "duration_ms": 2.6547260000000517,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:60",
+      "start_time": "2026-10-11T10:38:34.131650Z",
+      "duration_ms": 2.7010250000000235,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1775.0571999931708
+      }
+    },
+    {
+      "run_id": "nested_credit:61",
+      "start_time": "2026-10-11T10:38:35.604775Z",
+      "duration_ms": 3.6593550000000308,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:62",
+      "start_time": "2026-10-11T10:38:35.648805Z",
+      "duration_ms": 2.6675440000000217,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:63",
+      "start_time": "2026-10-11T10:38:35.682721Z",
+      "duration_ms": 2.759863000000029,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:64",
+      "start_time": "2026-10-11T10:38:35.716360Z",
+      "duration_ms": 2.6755769999999846,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:65",
+      "start_time": "2026-10-11T10:38:35.750232Z",
+      "duration_ms": 2.674524999999983,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:66",
+      "start_time": "2026-10-11T10:38:35.784083Z",
+      "duration_ms": 2.7409759999999506,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:67",
+      "start_time": "2026-10-11T10:38:35.817827Z",
+      "duration_ms": 2.824570999999998,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:68",
+      "start_time": "2026-10-11T10:38:35.852322Z",
+      "duration_ms": 2.662247000000062,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:69",
+      "start_time": "2026-10-11T10:38:35.886239Z",
+      "duration_ms": 2.6812669999999317,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:70",
+      "start_time": "2026-10-11T10:38:35.919908Z",
+      "duration_ms": 2.6877650000000086,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1796.4476000051945
+      }
+    },
+    {
+      "run_id": "nested_credit:71",
+      "start_time": "2026-10-11T10:38:37.423640Z",
+      "duration_ms": 3.4761289999999945,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:72",
+      "start_time": "2026-10-11T10:38:37.467639Z",
+      "duration_ms": 2.7352669999999857,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:73",
+      "start_time": "2026-10-11T10:38:37.502098Z",
+      "duration_ms": 2.714985999999975,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:74",
+      "start_time": "2026-10-11T10:38:37.536978Z",
+      "duration_ms": 2.723689000000029,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:75",
+      "start_time": "2026-10-11T10:38:37.570638Z",
+      "duration_ms": 2.6929830000000377,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:76",
+      "start_time": "2026-10-11T10:38:37.605279Z",
+      "duration_ms": 2.70499099999999,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:77",
+      "start_time": "2026-10-11T10:38:37.639063Z",
+      "duration_ms": 2.7509000000000006,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:78",
+      "start_time": "2026-10-11T10:38:37.672816Z",
+      "duration_ms": 2.694985999999955,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:79",
+      "start_time": "2026-10-11T10:38:37.707870Z",
+      "duration_ms": 2.7149370000000284,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:80",
+      "start_time": "2026-10-11T10:38:37.741875Z",
+      "duration_ms": 2.80327800000002,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1776.1102999793366
+      }
+    },
+    {
+      "run_id": "nested_credit:81",
+      "start_time": "2026-10-11T10:38:39.175487Z",
+      "duration_ms": 3.4728250000000127,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:82",
+      "start_time": "2026-10-11T10:38:39.218708Z",
+      "duration_ms": 2.678189999999969,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:83",
+      "start_time": "2026-10-11T10:38:39.253458Z",
+      "duration_ms": 2.675236999999997,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:84",
+      "start_time": "2026-10-11T10:38:39.286860Z",
+      "duration_ms": 2.6965789999999767,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:85",
+      "start_time": "2026-10-11T10:38:39.320234Z",
+      "duration_ms": 2.6537440000000134,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:86",
+      "start_time": "2026-10-11T10:38:39.353823Z",
+      "duration_ms": 2.6813759999999576,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:87",
+      "start_time": "2026-10-11T10:38:39.387195Z",
+      "duration_ms": 2.7368889999999646,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:88",
+      "start_time": "2026-10-11T10:38:39.420872Z",
+      "duration_ms": 2.722687999999973,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:89",
+      "start_time": "2026-10-11T10:38:39.454525Z",
+      "duration_ms": 2.679634000000042,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:90",
+      "start_time": "2026-10-11T10:38:39.488438Z",
+      "duration_ms": 2.6340639999999915,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1782.3515000054613
+      }
+    },
+    {
+      "run_id": "nested_credit:91",
+      "start_time": "2026-10-11T10:38:40.976143Z",
+      "duration_ms": 3.5555780000000037,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:92",
+      "start_time": "2026-10-11T10:38:41.019946Z",
+      "duration_ms": 2.691661000000012,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:93",
+      "start_time": "2026-10-11T10:38:41.053823Z",
+      "duration_ms": 2.6845300000000183,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:94",
+      "start_time": "2026-10-11T10:38:41.088358Z",
+      "duration_ms": 2.7040910000000196,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:95",
+      "start_time": "2026-10-11T10:38:41.122197Z",
+      "duration_ms": 2.6749360000000166,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:96",
+      "start_time": "2026-10-11T10:38:41.155748Z",
+      "duration_ms": 2.7346850000000145,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:97",
+      "start_time": "2026-10-11T10:38:41.189633Z",
+      "duration_ms": 2.748737000000001,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:98",
+      "start_time": "2026-10-11T10:38:41.223510Z",
+      "duration_ms": 2.6961879999999327,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:99",
+      "start_time": "2026-10-11T10:38:41.256826Z",
+      "duration_ms": 2.699734000000009,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    },
+    {
+      "run_id": "nested_credit:100",
+      "start_time": "2026-10-11T10:38:41.290484Z",
+      "duration_ms": 2.684651000000038,
+      "exit_code": 0,
+      "stdout": "SEMANTIC_PASS\nPASS\n",
+      "stderr": "",
+      "timed_out": false,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "PASS",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "555003c5-bb24-4474-b1bb-49ed5462d3b5",
+        "batch_transport_wall_ms": 1768.3656999724917
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 100
+  },
+  "duration_ms": 17497.124999994412,
+  "requested_runs": 100
+}

@@ -1,0 +1,56 @@
+{
+  "task_id": "deadlock_004",
+  "source_files": [
+    "main.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "main.c",
+    "-o",
+    "app"
+  ],
+  "binary_path": "app",
+  "run_command": [
+    "./app"
+  ],
+  "max_runtime_seconds": 2,
+  "stress_runs": 3,
+  "expected_behavior": "PASS",
+  "expected_bug_category": "deadlock",
+  "verification_config": {
+    "stress_runs": 100,
+    "sanitizer_enabled": false,
+    "sanitizer_required": false,
+    "sanitizer_runs": 3,
+    "semantic_checks": [
+      {
+        "name": "Two reads and log writes preserve cache value",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "required": true
+      }
+    ]
+  },
+  "metadata": {
+    "fixture_description": "Cache and logger nested locks",
+    "semantic_invariant": "Two reads and log writes preserve cache value",
+    "fixture_version": 2
+  },
+  "support_files": [
+    "oracle.c",
+    "stress.h"
+  ]
+}

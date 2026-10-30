@@ -1,0 +1,126 @@
+{
+  "status": "rejected",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 1331,
+      "cost_usd": 0.001589,
+      "false_fix": false,
+      "recovery": null,
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "7fd022aebdfd489fb58872b60ba75d54",
+      "inference_ms": 1422.2735999996985,
+      "input_tokens": 1202,
+      "output_tokens": 129,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END\n@@ REPLACE inspect.c 2-2\nint inspect(State*s){pthread_mutex_lock(&s->mutex);s->cancelled++;int n=s->reserved;pthread_mutex_unlock(&s->mutex);return n;}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": "block_no_change",
+      "category": "schema",
+      "parse_notes": null,
+      "taxonomy": {
+        "primary": "schema",
+        "gates": [
+          "block_no_change"
+        ]
+      }
+    },
+    {
+      "stage": "ultra",
+      "outcome": "invalid_output",
+      "model_calls": 1,
+      "tokens": 1534,
+      "cost_usd": 0.001792,
+      "false_fix": false,
+      "recovery": "format",
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "6496081fdf90470e829481ff7aa6a3df",
+      "inference_ms": 1471.8259999999646,
+      "input_tokens": 1405,
+      "output_tokens": 129,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END\n@@ REPLACE inspect.c 2-2\nint inspect(State*s){pthread_mutex_lock(&s->mutex);s->cancelled++;int n=s->reserved;pthread_mutex_unlock(&s->mutex);return n;}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": "block_no_change",
+      "category": "schema",
+      "parse_notes": null,
+      "taxonomy": {
+        "primary": "schema",
+        "gates": [
+          "block_no_change"
+        ]
+      }
+    }
+  ],
+  "model_calls": 2,
+  "calls_by_model": {
+    "ultra": 2
+  },
+  "tokens": 2865,
+  "cost_usd": 0.003381,
+  "reserved_usd": 0.073152,
+  "false_fix": false,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 333,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 248,
+      "primitives": {
+        "mutex_lock": 2,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": false,
+      "baseline_fingerprint": "TIMEOUT:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "hang",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002377,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0030901,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.011799999811046291
+  },
+  "recoveries": {
+    "format": 1,
+    "verifier": 0
+  },
+  "end_to_end_ms": 20238.455499999873,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1385.6043999999201,
+    "upload": 1969.186499999978,
+    "baseline_build": 1526.1461000000054,
+    "baseline_stress": 12431.165399999827,
+    "inference": 2894.099599999663,
+    "e2e": 20238.455499999873
+  },
+  "patch": null,
+  "verification": null
+}

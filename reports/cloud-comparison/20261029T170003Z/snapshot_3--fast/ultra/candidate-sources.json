@@ -1,0 +1,4 @@
+{
+  "publisher.c": "#include \"state.h\"\nvoid publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n",
+  "snapshot.c": "#include \"state.h\"\nint check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n"
+}

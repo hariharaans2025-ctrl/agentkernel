@@ -1,0 +1,108 @@
+{
+  "failed_candidate_files": {
+    "commit.c": "#include \"state.h\"\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);} /* smoke: deliberately not a fix */\n",
+    "read.c": "#include \"state.h\"\nint count_audits(State*s){return atomic_load(&s->audits);}\n"
+  },
+  "canonical_patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);} /* smoke: deliberately not a fix */\n",
+  "build": {
+    "success": true,
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "original_tests": [
+    {
+      "exit_code": -9,
+      "timed_out": true,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "stress": {
+    "counts": {
+      "TIMEOUT": 100
+    },
+    "total_runs": 100,
+    "fingerprint": "TIMEOUT:100",
+    "failing_runs": {
+      "records": {
+        "d16e05d4656e4634": {
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "stdout_template": "",
+          "stderr_template": "",
+          "tsan_conflicts": []
+        }
+      },
+      "runs": {
+        "audit_3:1": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "audit_3:2": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "audit_3:3": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        }
+      },
+      "lossless": true
+    }
+  },
+  "semantics": [
+    {
+      "requirement": "Each of 160 commits records one commit and thirteen bytes, then invokes audit exactly once. The protected audit helper acquires the shared mutex itself; avoid recursive acquisition while preserving synchronization, functional work and the yield.",
+      "required": true,
+      "passed": false,
+      "stdout": ""
+    }
+  ],
+  "tsan": {
+    "status": "failed",
+    "counts": {
+      "TIMEOUT": 3
+    },
+    "fingerprint": "TIMEOUT:3",
+    "failing_runs": {
+      "records": {
+        "d16e05d4656e4634": {
+          "classification": "TIMEOUT",
+          "exit_code": -9,
+          "timed_out": true,
+          "stdout_template": "",
+          "stderr_template": "",
+          "tsan_conflicts": []
+        }
+      },
+      "runs": {
+        "audit_3:1": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "audit_3:2": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        },
+        "audit_3:3": {
+          "fingerprint": "d16e05d4656e4634",
+          "stdout_values": [],
+          "stderr_values": []
+        }
+      },
+      "lossless": true
+    }
+  },
+  "regressions": [
+    "Original test requirements failed",
+    "Required semantic invariant failed"
+  ],
+  "note": "Representative runs are those the verifier retained; full raw records remain on disk.",
+  "bytes": 2558
+}

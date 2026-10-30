@@ -1,0 +1,9 @@
+{
+  "recovered_executions": 10,
+  "recovered_passes": 10,
+  "complete_100_run_evidence": false,
+  "verification_outcome": "UNKNOWN",
+  "additional_model_calls": 0,
+  "additional_workload_executions": 0,
+  "reason": "Earlier 90 results were in memory when transport failed; campaign file was not persisted. Semantic/TSan verification not reached."
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "langsmith",
+  "project": "concurrency-bug-hunter",
+  "status": "unavailable",
+  "spans_submitted": 2,
+  "spans_observed": [],
+  "feedback_submitted": 0,
+  "trace_ids": [
+    "8989a0cb-7990-49c9-bcb9-fc549a23e32f"
+  ],
+  "error_code": "langsmith_http_400",
+  "transport_checks": [
+    {
+      "method": "POST",
+      "status": 202,
+      "request_body_bytes": 398
+    },
+    {
+      "method": "POST",
+      "status": 202,
+      "request_body_bytes": 473
+    },
+    {
+      "method": "PATCH",
+      "status": 400,
+      "request_body_bytes": 245,
+      "detail": {
+        "error": "Bad request: invalid 'dotted_order': dotted_order must contain a single part for root runs for run_id:f09fd34e-013c-4801-9be3-41dc93f7566e trace_id:8989a0cb-7990-49c9-bcb9-fc549a23e32f dotted_order:20260920T071234433789Z8989a0cb-7990-49c9-bcb9-fc549a23e32f.20260920T071234434033Zf09fd34e-013c-4801-9be3-41dc93f7566e parent_run_id:<nil>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "fixture": "deadlock_003",
+  "mode": "super_only",
+  "status": "unresolved",
+  "baseline_status": "failed",
+  "baseline": {
+    "build_passed": true,
+    "total_runs": 3,
+    "failed_runs": 3,
+    "infrastructure_failures": 0,
+    "requested_runs": 3,
+    "execution_blocked": false,
+    "counts": {
+      "POSSIBLE_DEADLOCK": 3
+    },
+    "duration_ms": 11424.247499991907,
+    "representative_runs": [
+      {
+        "run_id": "deadlock_003:1",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "f78222d6-a5b4-4ec6-9c65-f75e4cda45ef",
+          "transport_wall_ms": 3546.8315000180155
+        },
+        "stdout": "T2 LOCK delivery\nT2 WAIT available\nT1 WAIT delivery\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_003:2",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "f78222d6-a5b4-4ec6-9c65-f75e4cda45ef",
+          "transport_wall_ms": 3756.2780999869574
+        },
+        "stdout": "T2 LOCK delivery\nT2 WAIT available\nT1 WAIT delivery\n",
+        "stderr": ""
+      },
+      {
+        "run_id": "deadlock_003:3",
+        "classification": "POSSIBLE_DEADLOCK",
+        "exit_code": -9,
+        "timed_out": true,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "f78222d6-a5b4-4ec6-9c65-f75e4cda45ef",
+          "transport_wall_ms": 4120.772299997043
+        },
+        "stdout": "T2 LOCK delivery\nT2 WAIT available\nT1 WAIT delivery\n",
+        "stderr": ""
+      }
+    ],
+    "sanitizer": {
+      "status": "not_configured"
+    },
+    "fingerprints": [
+      {
+        "fingerprint_id": "a57c5f20de8392e1",
+        "pattern": "timeout_unknown",
+        "threads": [
+          "T1",
+          "T2"
+        ],
+        "lock_orders": [
+          [
+            "delivery",
+            "available"
+          ]
+        ],
+        "confidence": 0.5,
+        "occurrences": 3,
+        "representative_runs": [
+          "deadlock_003:1",
+          "deadlock_003:2",
+          "deadlock_003:3"
+        ],
+        "evidence": {
+          "edges": [
+            [
+              "delivery",
+              "available"
+            ]
+          ],
+          "cycle": [],
+          "finding_locations": []
+        }
+      }
+    ]
+  },
+  "fingerprints": [
+    {
+      "fingerprint_id": "a57c5f20de8392e1",
+      "pattern": "timeout_unknown",
+      "threads": [
+        "T1",
+        "T2"
+      ],
+      "lock_orders": [
+        [
+          "delivery",
+          "available"
+        ]
+      ],
+      "confidence": 0.5,
+      "occurrences": 3,
+      "representative_runs": [
+        "deadlock_003:1",
+        "deadlock_003:2",
+        "deadlock_003:3"
+      ],
+      "evidence": {
+        "edges": [
+          [
+            "delivery",
+            "available"
+          ]
+        ],
+        "cycle": [],
+        "finding_locations": []
+      }
+    }
+  ],
+  "route": [
+    "SUPER"
+  ],
+  "model_attempts": [
+    {
+      "tier": "SUPER",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "input_tokens": 2258,
+      "output_tokens": 349,
+      "latency_ms": 5156.527299986919,
+      "retry_count": 0,
+      "reasoning_tokens": 0,
+      "requested_max_output_tokens": 2048,
+      "requested_enable_thinking": false,
+      "error_hint": null,
+      "finish_reason": "stop",
+      "request_id": "9d2d14ad885d030e7316a713c30ad7d2",
+      "error_code": null,
+      "verification_reason": "Invalid repair JSON or source edits. Return the requested edit contract using exact ORIGINAL source blocks; inspect validation_errors."
+    }
+  ],
+  "repairs": [],
+  "patches": [],
+  "verification_progress": {
+    "completed": null,
+    "required": 100
+  },
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_checks": null,
+  "sanitizer_checks": null,
+  "patch_accepted": false,
+  "build_passed": null,
+  "input_tokens": 2258,
+  "output_tokens": 349,
+  "reasoning_tokens": 0,
+  "inference_latency_ms": 5156.527299986919,
+  "execution_latency_ms": 11590.819853991907,
+  "end_to_end_latency_ms": 23920.506199996453,
+  "verification_runs": null,
+  "passes": null,
+  "deadlocks": null,
+  "races": null,
+  "crashes": null,
+  "infrastructure_failures": null,
+  "false_fix": false,
+  "final_tier": "SUPER",
+  "format_rejections": 1,
+  "patch_rejections": 0,
+  "nano_calls": 0,
+  "super_calls": 1,
+  "ultra_calls": 0,
+  "cost_usd": null,
+  "grounding": {
+    "used": false,
+    "reason": null,
+    "status": "not_needed",
+    "results": []
+  },
+  "observability": {
+    "backend": "langsmith",
+    "project": "concurrency-bug-hunter",
+    "status": "confirmed",
+    "spans_submitted": 11,
+    "spans_observed": [
+      {
+        "id": "047bdc25-3fc3-428b-af69-0a3304aa4d49",
+        "name": "concurrency_job",
+        "parent_id": null
+      },
+      {
+        "id": "ab9b2d17-7a67-4461-beda-2f95eedbfd86",
+        "name": "baseline",
+        "parent_id": "047bdc25-3fc3-428b-af69-0a3304aa4d49"
+      },
+      {
+        "id": "ff649131-7e8a-467e-a8b0-6e289da46fdd",
+        "name": "compile",
+        "parent_id": "ab9b2d17-7a67-4461-beda-2f95eedbfd86"
+      },
+      {
+        "id": "02e41a7e-f79f-4139-b04b-c259be68b214",
+        "name": "baseline_compile",
+        "parent_id": "ff649131-7e8a-467e-a8b0-6e289da46fdd"
+      },
+      {
+        "id": "e3123007-91db-4b2f-a716-d2977ff663a2",
+        "name": "campaign",
+        "parent_id": "ab9b2d17-7a67-4461-beda-2f95eedbfd86"
+      },
+      {
+        "id": "45959d93-22bb-48ed-b249-15ddada8a7dc",
+        "name": "baseline_stress_campaign",
+        "parent_id": "e3123007-91db-4b2f-a716-d2977ff663a2"
+      },
+      {
+        "id": "6649639d-bfcc-4e46-93dc-1d47a0c779ac",
+        "name": "analysis",
+        "parent_id": "047bdc25-3fc3-428b-af69-0a3304aa4d49"
+      },
+      {
+        "id": "eedb1c27-77a9-4e45-9600-e057f8c6bd4d",
+        "name": "fingerprint",
+        "parent_id": "6649639d-bfcc-4e46-93dc-1d47a0c779ac"
+      },
+      {
+        "id": "78585766-6b2a-4104-8e55-3b9c35da6201",
+        "name": "fingerprint_analysis",
+        "parent_id": "eedb1c27-77a9-4e45-9600-e057f8c6bd4d"
+      },
+      {
+        "id": "97e7dbec-2b4d-4bac-9cd1-6b36d0b9be45",
+        "name": "repair_1",
+        "parent_id": "047bdc25-3fc3-428b-af69-0a3304aa4d49"
+      },
+      {
+        "id": "b5eab4d5-0c6d-45f4-9f81-0d99583b2864",
+        "name": "super_diagnosis",
+        "parent_id": "97e7dbec-2b4d-4bac-9cd1-6b36d0b9be45"
+      }
+    ],
+    "feedback_submitted": 6,
+    "trace_ids": [
+      "047bdc25-3fc3-428b-af69-0a3304aa4d49"
+    ]
+  },
+  "source_sha256": {
+    "main.c": "5a9cea456c54df45e3b90e4cb5da247dd8b42557f991457bf6d2f9f7691e9d61",
+    "oracle.c": "05167761fb8c33a39c5c0b556209465204d644dae75ab3b2ffa7e9593a4a93d3",
+    "stress.h": "1a2ecf8f7805b0be74d4005282c9878ccb3cf56b323d2e752d2405902e220d48"
+  },
+  "inference_mode": "real"
+}

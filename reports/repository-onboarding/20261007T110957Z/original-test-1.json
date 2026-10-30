@@ -1,0 +1,17 @@
+{
+  "command": [
+    "./job_service",
+    "--smoke"
+  ],
+  "exit_code": 0,
+  "stdout": "completed=1 checksum=1 exactly_once=yes\nSEMANTIC_PASS\n",
+  "stderr": "",
+  "duration_ms": 3.4987639999999876,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "9f7c2eb3-b714-47bf-875e-bb3b407925bb",
+    "transport_wall_ms": 1817.0824999979232
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "project_id": "aiproject-e00z8mw0ggdmwn69nb",
+  "sdk_version": "0.3.6",
+  "checked_at": "2026-09-28T12:04:48.823338+00:00",
+  "execution_backend": "nebius",
+  "image": "python:3.12-slim",
+  "status": "passed",
+  "permissions": {
+    "import": true,
+    "spawn": true,
+    "spawn_disposable": true,
+    "list": true,
+    "cancel": true,
+    "set_image_tag": true
+  },
+  "exit_code": 0,
+  "stdout": "sum: 29\n",
+  "stderr": "",
+  "elapsed_ms": 3125.3402000293136
+}

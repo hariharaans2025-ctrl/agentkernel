@@ -1,0 +1,53 @@
+[
+  {
+    "index": 0,
+    "start_time": "2026-10-12T17:42:23.591516+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "25a140c2-997b-45e0-8ad0-25a0f6b934a4",
+        "batch_transport_wall_ms": 2922.9665999991994
+      },
+      "stdout": "",
+      "stderr": "==9==WARNING: invalid path to external symbolizer!\n==9==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: destroy of a locked mutex (pid=9)\n    #0 <null> <null> (acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a71) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  and:\n    #0 <null> <null> (acceptance_app+0x64b02) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a69) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Location is heap block of size 136 at 0x722400000000 allocated by main thread:\n    #0 <null> <null> (acceptance_app+0x611c4) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe65a7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M0 (0x722400000000) created at:\n    #0 <null> <null> (acceptance_app+0x647c7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe663f) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: destroy of a locked mutex (/workspace/acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694) \n==================\n",
+      "duration_ms": 17.921176000000038
+    }
+  },
+  {
+    "index": 1,
+    "start_time": "2026-10-12T17:42:23.649942+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "25a140c2-997b-45e0-8ad0-25a0f6b934a4",
+        "batch_transport_wall_ms": 2922.9665999991994
+      },
+      "stdout": "",
+      "stderr": "==18==WARNING: invalid path to external symbolizer!\n==18==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: destroy of a locked mutex (pid=18)\n    #0 <null> <null> (acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a71) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  and:\n    #0 <null> <null> (acceptance_app+0x64b02) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a69) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Location is heap block of size 136 at 0x722400000000 allocated by main thread:\n    #0 <null> <null> (acceptance_app+0x611c4) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe65a7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M0 (0x722400000000) created at:\n    #0 <null> <null> (acceptance_app+0x647c7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe663f) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: destroy of a locked mutex (/workspace/acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694) \n==================\n",
+      "duration_ms": 44.46520900000001
+    }
+  },
+  {
+    "index": 2,
+    "start_time": "2026-10-12T17:42:23.751754+00:00",
+    "result": {
+      "exit_code": 66,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "25a140c2-997b-45e0-8ad0-25a0f6b934a4",
+        "batch_transport_wall_ms": 2922.9665999991994
+      },
+      "stdout": "",
+      "stderr": "==27==WARNING: invalid path to external symbolizer!\n==27==WARNING: Failed to use and restart external symbolizer!\n==================\nWARNING: ThreadSanitizer: destroy of a locked mutex (pid=27)\n    #0 <null> <null> (acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a71) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  and:\n    #0 <null> <null> (acceptance_app+0x64b02) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe6a69) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6e64) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Location is heap block of size 136 at 0x722400000000 allocated by main thread:\n    #0 <null> <null> (acceptance_app+0x611c4) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe65a7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\n  Mutex M0 (0x722400000000) created at:\n    #0 <null> <null> (acceptance_app+0x647c7) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #1 <null> <null> (acceptance_app+0xe663f) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #2 <null> <null> (acceptance_app+0xe6d33) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694)\n    #3 <null> <null> (libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n\nSUMMARY: ThreadSanitizer: destroy of a locked mutex (/workspace/acceptance_app+0x64982) (BuildId: 7e8db6b435f3f09642019038daecbd112168e694) \n==================\n",
+      "duration_ms": 17.122787000000027
+    }
+  }
+]

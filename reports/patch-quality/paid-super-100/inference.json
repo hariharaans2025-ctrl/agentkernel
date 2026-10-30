@@ -1,0 +1,23 @@
+{
+  "task_id": "deadlock_001",
+  "provider": "NEBIUS",
+  "tier": "SUPER",
+  "output_text": "Nebius inference unavailable: incomplete_response",
+  "status": "FAILED",
+  "latency_ms": 21666.08629998518,
+  "input_tokens": 1890,
+  "output_tokens": 4096,
+  "estimated_cost_usd": null,
+  "metadata": {
+    "execution_mode": "real",
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "error_code": "incomplete_response",
+    "usage_unknown": false,
+    "retry_count": 0,
+    "request_id": "3b56399d58c5fbc9006fc42de0a6dccb",
+    "retryable": false,
+    "finish_reason": "length",
+    "actual_input_tokens": 1890,
+    "actual_output_tokens": 4096
+  }
+}

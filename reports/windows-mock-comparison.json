@@ -1,0 +1,4775 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-19T05:16:41.831270+00:00",
+  "scope": "Real local compilation/execution; model mode and measurement provenance are recorded per result.",
+  "limitations": "Scripted mock comparisons validate orchestration only, not model quality or cost savings. Passing runs are not proof of correctness.",
+  "configuration": {
+    "baseline_runs_override": 1,
+    "verification_runs_override": null,
+    "tasks": [
+      {
+        "task_id": "deadlock_001",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\deadlock_001",
+        "source_files": [
+          "main.c"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "deadlock",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": false,
+          "sanitizer_required": false,
+          "sanitizer_runs": 3
+        },
+        "metadata": {}
+      },
+      {
+        "task_id": "deadlock_002",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\deadlock_002",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "deadlock",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": false,
+          "sanitizer_required": false,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "missing_unlock"
+        }
+      },
+      {
+        "task_id": "deadlock_003",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\deadlock_003",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "deadlock",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": false,
+          "sanitizer_required": false,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "nested_double_lock"
+        }
+      },
+      {
+        "task_id": "deadlock_004",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\deadlock_004",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "deadlock",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": false,
+          "sanitizer_required": false,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "shutdown_join_while_locked"
+        }
+      },
+      {
+        "task_id": "deadlock_005",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\deadlock_005",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "deadlock",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": false,
+          "sanitizer_required": false,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "three_lock_cycle"
+        }
+      },
+      {
+        "task_id": "race_001",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\race_001",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "race",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "unsynchronized_counter"
+        }
+      },
+      {
+        "task_id": "race_002",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\race_002",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "race",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "shared_balance_update"
+        }
+      },
+      {
+        "task_id": "race_003",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\race_003",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "race",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "check_then_act"
+        }
+      },
+      {
+        "task_id": "race_004",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\race_004",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "race",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "producer_consumer_flag"
+        }
+      },
+      {
+        "task_id": "race_005",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\benchmarks\\race_005",
+        "source_files": [
+          "main.c",
+          "stress.h"
+        ],
+        "support_files": [],
+        "build_command": [
+          "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+          "-static",
+          "-pthread",
+          "-g",
+          "-O1",
+          "main.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 1,
+        "expected_behavior": "PASS",
+        "expected_bug_category": "race",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": false,
+          "original_test_commands": [],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3
+        },
+        "metadata": {
+          "fixture_description": "concurrent_list_insertion"
+        }
+      }
+    ]
+  },
+  "modes": {
+    "nano-only": {
+      "metrics": {
+        "tasks": 10,
+        "bugs_diagnosed": 1,
+        "diagnosis_definition": "Tasks with a structured diagnosis; correctness is not independently scored.",
+        "candidate_repairs_generated": 1,
+        "verified_repairs": 1,
+        "verified_repair_rate": 0.1,
+        "false_fixes": null,
+        "false_fix_rate": null,
+        "false_fix_denominator": "All schema-valid candidate repair proposals, including rejected patches",
+        "patches_rejected": 0,
+        "tooling_unavailable": 5,
+        "model_calls": {
+          "NANO": 17,
+          "SUPER": 0,
+          "ULTRA": 0
+        },
+        "average_model_calls": 1.7,
+        "inference_tokens": 19264,
+        "inference_latency_ms": 1360.0,
+        "inference_measurement": "simulated",
+        "execution_latency_ms": 53664.036000000575,
+        "total_time_ms": 53747.71050000026,
+        "average_time_to_verified_repair_ms": 25133.636800000204,
+        "cost_usd": null,
+        "cost_per_verified_repair_usd": null,
+        "inference_mode": "mock",
+        "false_fix_metric_status": "withdrawn_infrastructure_failures_not_separated"
+      },
+      "jobs": [
+        {
+          "task": "deadlock_001",
+          "status": "verified",
+          "route": [
+            "NANO"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3475.6148999999823,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_001:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "4b4c8f316a845e49",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_001:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "A",
+                      "B"
+                    ],
+                    [
+                      "B",
+                      "A"
+                    ]
+                  ],
+                  "cycle": [
+                    "A",
+                    "B",
+                    "A"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": {
+            "passed": true,
+            "build_passed": true,
+            "total_runs": 100,
+            "passed_runs": 100,
+            "failed_runs": 0,
+            "race_count": 0,
+            "deadlock_count": 0,
+            "crash_count": 0,
+            "sanitizer_findings": [],
+            "regressions": [],
+            "duration_ms": 21031.786699999884,
+            "evidence": {
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 0,
+                "stdout": "",
+                "stderr": "",
+                "duration_ms": 586.6990999998052,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": true
+              },
+              "original_tests": {
+                "passed": true,
+                "results": [],
+                "configured": false
+              },
+              "campaign": {
+                "total_runs": 100,
+                "failed_runs": 0,
+                "counts": {
+                  "PASS": 100
+                },
+                "duration_ms": 20444.6925000002,
+                "representative_runs": []
+              },
+              "sanitizer": {
+                "status": "not_configured"
+              }
+            },
+            "reason": "The patch passed the configured verification campaign."
+          },
+          "repairs": [
+            {
+              "tier": "NANO",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": true,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 100,
+                "failed_runs": 0,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [],
+                "duration_ms": 21031.786699999884,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 586.6990999998052,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 0,
+                    "counts": {
+                      "PASS": 100
+                    },
+                    "duration_ms": 20444.6925000002,
+                    "representative_runs": []
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch passed the configured verification campaign."
+              }
+            }
+          ],
+          "triage": null,
+          "stopped_reason": "verification_passed",
+          "total_time_ms": 25133.636800000204,
+          "inference_latency_ms": 80.0,
+          "execution_latency_ms": 25118.75599999985,
+          "inference_tokens": 694,
+          "cost_usd": 0.0001,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "NANO",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: NANO."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 1
+          }
+        },
+        {
+          "task": "deadlock_002",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "NANO",
+            "NANO",
+            "NANO"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3876.3668000001417,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_002:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 WAIT gate\r\nT1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_002:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 4504.136199999721,
+          "inference_latency_ms": 320.0,
+          "execution_latency_ms": 4495.405100000426,
+          "inference_tokens": 4553,
+          "cost_usd": 0.0004,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 4,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "NANO",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: NANO.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_003",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "NANO",
+            "NANO",
+            "NANO"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3058.39560000004,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_003:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_003:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 3665.9497999999076,
+          "inference_latency_ms": 320.0,
+          "execution_latency_ms": 3657.053700000233,
+          "inference_tokens": 4477,
+          "cost_usd": 0.0004,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 4,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "NANO",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: NANO.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_004",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "NANO",
+            "NANO",
+            "NANO"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 665.535699999964,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_004:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "7407b4f0a1ce7a5c",
+                "pattern": "unknown_failure",
+                "threads": [],
+                "lock_orders": [],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_004:1"
+                ],
+                "evidence": {
+                  "edges": [],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 1268.9929000002849,
+          "inference_latency_ms": 320.0,
+          "execution_latency_ms": 1257.9357999998138,
+          "inference_tokens": 4615,
+          "cost_usd": 0.0004,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 4,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "NANO",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: NANO.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_005",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "NANO",
+            "NANO",
+            "NANO"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3715.943100000004,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_005:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK L1\r\nT0 LOCK L0\r\nT2 LOCK L2\r\nT2 WAIT L0\r\nT0 WAIT L1\r\nT1 WAIT L2\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "cd3cb1c09c8b2f19",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T0",
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "L0",
+                    "L1"
+                  ],
+                  [
+                    "L1",
+                    "L2"
+                  ],
+                  [
+                    "L2",
+                    "L0"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_005:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "L0",
+                      "L1"
+                    ],
+                    [
+                      "L1",
+                      "L2"
+                    ],
+                    [
+                      "L2",
+                      "L0"
+                    ]
+                  ],
+                  "cycle": [
+                    "L0",
+                    "L1",
+                    "L2",
+                    "L0"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 4785.010000000057,
+          "inference_latency_ms": 320.0,
+          "execution_latency_ms": 4774.9760000001515,
+          "inference_tokens": 4925,
+          "cost_usd": 0.0004,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 4,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "NANO",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: NANO.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying NANO after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_001",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 721.2266999999883,
+            "representative_runs": [
+              {
+                "run_id": "race_001:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 279.45309999995516,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1587.1864000000642,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1581.1695000002146,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_002",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1597.1760000002178,
+            "representative_runs": [
+              {
+                "run_id": "race_002:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: balance == 1000, file main.c, line 24\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 300.9581999999682,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2522.730600000159,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2517.289400000209,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_003",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 978.9505999997345,
+            "representative_runs": [
+              {
+                "run_id": "race_003:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: awarded[0] + awarded[1] == 1 && tickets == 0, file main.c, line 22\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 298.5878999998022,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2309.472099999766,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2304.0580999995655,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_004",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 2177.0258000001377,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 316.3302999996631,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 3119.6844000000965,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 3113.4517999998934,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_005",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 3251.933300000019,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 344.84080000038375,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 4850.911300000007,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 4843.940600000224,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        }
+      ]
+    },
+    "super-only": {
+      "metrics": {
+        "tasks": 10,
+        "bugs_diagnosed": 1,
+        "diagnosis_definition": "Tasks with a structured diagnosis; correctness is not independently scored.",
+        "candidate_repairs_generated": 1,
+        "verified_repairs": 1,
+        "verified_repair_rate": 0.1,
+        "false_fixes": null,
+        "false_fix_rate": null,
+        "false_fix_denominator": "All schema-valid candidate repair proposals, including rejected patches",
+        "patches_rejected": 0,
+        "tooling_unavailable": 5,
+        "model_calls": {
+          "NANO": 0,
+          "SUPER": 17,
+          "ULTRA": 0
+        },
+        "average_model_calls": 1.7,
+        "inference_tokens": 20432,
+        "inference_latency_ms": 3400.0,
+        "inference_measurement": "simulated",
+        "execution_latency_ms": 54412.4855999994,
+        "total_time_ms": 54493.460999999574,
+        "average_time_to_verified_repair_ms": 25818.49850000026,
+        "cost_usd": null,
+        "cost_per_verified_repair_usd": null,
+        "inference_mode": "mock",
+        "false_fix_metric_status": "withdrawn_infrastructure_failures_not_separated"
+      },
+      "jobs": [
+        {
+          "task": "deadlock_001",
+          "status": "verified",
+          "route": [
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3767.5669999998718,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_001:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T2 LOCK B\r\nT1 LOCK A\r\nT1 WAIT B\r\nT2 WAIT A\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "4b4c8f316a845e49",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_001:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "A",
+                      "B"
+                    ],
+                    [
+                      "B",
+                      "A"
+                    ]
+                  ],
+                  "cycle": [
+                    "A",
+                    "B",
+                    "A"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": {
+            "passed": true,
+            "build_passed": true,
+            "total_runs": 100,
+            "passed_runs": 100,
+            "failed_runs": 0,
+            "race_count": 0,
+            "deadlock_count": 0,
+            "crash_count": 0,
+            "sanitizer_findings": [],
+            "regressions": [],
+            "duration_ms": 20872.165100000075,
+            "evidence": {
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 0,
+                "stdout": "",
+                "stderr": "",
+                "duration_ms": 653.7265000001753,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": true
+              },
+              "original_tests": {
+                "passed": true,
+                "results": [],
+                "configured": false
+              },
+              "campaign": {
+                "total_runs": 100,
+                "failed_runs": 0,
+                "counts": {
+                  "PASS": 100
+                },
+                "duration_ms": 20217.979800000194,
+                "representative_runs": []
+              },
+              "sanitizer": {
+                "status": "not_configured"
+              }
+            },
+            "reason": "The patch passed the configured verification campaign."
+          },
+          "repairs": [
+            {
+              "tier": "SUPER",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": true,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 100,
+                "failed_runs": 0,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [],
+                "duration_ms": 20872.165100000075,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 653.7265000001753,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 0,
+                    "counts": {
+                      "PASS": 100
+                    },
+                    "duration_ms": 20217.979800000194,
+                    "representative_runs": []
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch passed the configured verification campaign."
+              }
+            }
+          ],
+          "triage": null,
+          "stopped_reason": "verification_passed",
+          "total_time_ms": 25818.49850000026,
+          "inference_latency_ms": 200.0,
+          "execution_latency_ms": 25807.04280000009,
+          "inference_tokens": 758,
+          "cost_usd": 0.0005,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 1,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "SUPER",
+            "final_tier": "SUPER",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: SUPER."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 1
+          }
+        },
+        {
+          "task": "deadlock_002",
+          "status": "unresolved",
+          "route": [
+            "SUPER",
+            "SUPER",
+            "SUPER",
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 2807.772499999828,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_002:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 WAIT gate\r\nT1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_002:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 3838.0041000000347,
+          "inference_latency_ms": 800.0,
+          "execution_latency_ms": 3829.3235000001005,
+          "inference_tokens": 4811,
+          "cost_usd": 0.002,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 4,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "SUPER",
+            "final_tier": "SUPER",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: SUPER.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_003",
+          "status": "unresolved",
+          "route": [
+            "SUPER",
+            "SUPER",
+            "SUPER",
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3401.982500000031,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_003:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_003:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 4001.5575999996145,
+          "inference_latency_ms": 800.0,
+          "execution_latency_ms": 3993.4649000001627,
+          "inference_tokens": 4737,
+          "cost_usd": 0.002,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 4,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "SUPER",
+            "final_tier": "SUPER",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: SUPER.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_004",
+          "status": "unresolved",
+          "route": [
+            "SUPER",
+            "SUPER",
+            "SUPER",
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3086.6281999997227,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_004:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK state\r\nT2 WAIT state\r\nT1 WAIT worker_exit\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "490ca5eb99b9add5",
+                "pattern": "timeout_unknown",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "state",
+                    "worker_exit"
+                  ]
+                ],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_004:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "state",
+                      "worker_exit"
+                    ]
+                  ],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 3670.1450999998997,
+          "inference_latency_ms": 800.0,
+          "execution_latency_ms": 3658.7228999997023,
+          "inference_tokens": 4943,
+          "cost_usd": 0.002,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 4,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "SUPER",
+            "final_tier": "SUPER",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: SUPER.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_005",
+          "status": "unresolved",
+          "route": [
+            "SUPER",
+            "SUPER",
+            "SUPER",
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3976.4626999999564,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_005:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T0 LOCK L0\r\nT1 LOCK L1\r\nT2 LOCK L2\r\nT2 WAIT L0\r\nT1 WAIT L2\r\nT0 WAIT L1\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "cd3cb1c09c8b2f19",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T0",
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "L0",
+                    "L1"
+                  ],
+                  [
+                    "L1",
+                    "L2"
+                  ],
+                  [
+                    "L2",
+                    "L0"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_005:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "L0",
+                      "L1"
+                    ],
+                    [
+                      "L1",
+                      "L2"
+                    ],
+                    [
+                      "L2",
+                      "L0"
+                    ]
+                  ],
+                  "cycle": [
+                    "L0",
+                    "L1",
+                    "L2",
+                    "L0"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "attempts_exhausted",
+          "total_time_ms": 5085.887400000047,
+          "inference_latency_ms": 800.0,
+          "execution_latency_ms": 5077.09769999974,
+          "inference_tokens": 5183,
+          "cost_usd": 0.002,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 4,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "SUPER",
+            "final_tier": "SUPER",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: SUPER.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_001",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1881.867499999771,
+            "representative_runs": [
+              {
+                "run_id": "race_001:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: counter == (long)workers * workload, file main.c, line 27\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 269.6240000000216,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 3216.4723999999296,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 3210.8452000002217,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_002",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 696.9583000000057,
+            "representative_runs": [
+              {
+                "run_id": "race_002:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 685.1887999996507,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2007.2931999998218,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2000.771299999542,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_003",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 1810.1685999999972,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 308.0697999998847,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2746.572499999729,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2739.3644999997377,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_004",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 760.3146000001288,
+            "representative_runs": [
+              {
+                "run_id": "race_004:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 265.4413999998724,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1659.73780000013,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1653.7544000002526,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_005",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 1440.910299999814,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 393.887100000029,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2449.292400000104,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2442.09839999985,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        }
+      ]
+    },
+    "ultra-only": {
+      "metrics": {
+        "tasks": 10,
+        "bugs_diagnosed": 1,
+        "diagnosis_definition": "Tasks with a structured diagnosis; correctness is not independently scored.",
+        "candidate_repairs_generated": 2,
+        "verified_repairs": 1,
+        "verified_repair_rate": 0.1,
+        "false_fixes": null,
+        "false_fix_rate": null,
+        "false_fix_denominator": "All schema-valid candidate repair proposals, including rejected patches",
+        "patches_rejected": 0,
+        "tooling_unavailable": 5,
+        "model_calls": {
+          "NANO": 0,
+          "SUPER": 0,
+          "ULTRA": 18
+        },
+        "average_model_calls": 1.8,
+        "inference_tokens": 25127,
+        "inference_latency_ms": 9000.0,
+        "inference_measurement": "simulated",
+        "execution_latency_ms": 56821.25039999937,
+        "total_time_ms": 56917.88319999978,
+        "average_time_to_verified_repair_ms": 34851.44539999965,
+        "cost_usd": null,
+        "cost_per_verified_repair_usd": null,
+        "inference_mode": "mock",
+        "false_fix_metric_status": "withdrawn_infrastructure_failures_not_separated"
+      },
+      "jobs": [
+        {
+          "task": "deadlock_001",
+          "status": "verified",
+          "route": [
+            "ULTRA",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 5274.398900000051,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_001:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T2 LOCK B\r\nT1 LOCK A\r\nT1 WAIT B\r\nT2 WAIT A\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "4b4c8f316a845e49",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_001:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "A",
+                      "B"
+                    ],
+                    [
+                      "B",
+                      "A"
+                    ]
+                  ],
+                  "cycle": [
+                    "A",
+                    "B",
+                    "A"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": {
+            "passed": true,
+            "build_passed": true,
+            "total_runs": 100,
+            "passed_runs": 100,
+            "failed_runs": 0,
+            "race_count": 0,
+            "deadlock_count": 0,
+            "crash_count": 0,
+            "sanitizer_findings": [],
+            "regressions": [],
+            "duration_ms": 21950.887100000273,
+            "evidence": {
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 0,
+                "stdout": "",
+                "stderr": "",
+                "duration_ms": 992.558000000372,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": true
+              },
+              "original_tests": {
+                "passed": true,
+                "results": [],
+                "configured": false
+              },
+              "campaign": {
+                "total_runs": 100,
+                "failed_runs": 0,
+                "counts": {
+                  "PASS": 100
+                },
+                "duration_ms": 20957.964600000196,
+                "representative_runs": []
+              },
+              "sanitizer": {
+                "status": "not_configured"
+              }
+            },
+            "reason": "The patch passed the configured verification campaign."
+          },
+          "repairs": [
+            {
+              "tier": "ULTRA",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": false,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 0,
+                "failed_runs": 100,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [
+                  "New failure class: UNKNOWN_FAILURE"
+                ],
+                "duration_ms": 6433.976600000278,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 584.6376999998029,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 100,
+                    "counts": {
+                      "UNKNOWN_FAILURE": 100
+                    },
+                    "duration_ms": 5848.971299999903,
+                    "representative_runs": [
+                      {
+                        "run_id": "deadlock_001:1",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      },
+                      {
+                        "run_id": "deadlock_001:2",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      },
+                      {
+                        "run_id": "deadlock_001:3",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      }
+                    ]
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch failed the configured verification campaign; inspect execution evidence."
+              }
+            },
+            {
+              "tier": "ULTRA",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": true,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 100,
+                "failed_runs": 0,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [],
+                "duration_ms": 21950.887100000273,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 992.558000000372,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 0,
+                    "counts": {
+                      "PASS": 100
+                    },
+                    "duration_ms": 20957.964600000196,
+                    "representative_runs": []
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch passed the configured verification campaign."
+              }
+            }
+          ],
+          "triage": null,
+          "stopped_reason": "verification_passed",
+          "total_time_ms": 34851.44539999965,
+          "inference_latency_ms": 1000.0,
+          "execution_latency_ms": 34834.80200000031,
+          "inference_tokens": 3511,
+          "cost_usd": 0.004,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 2
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "ULTRA",
+            "final_tier": "ULTRA",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: ULTRA.",
+              "Retrying ULTRA after verification failure: The patch failed the configured verification campaign; inspect execution evidence."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 2
+          }
+        },
+        {
+          "task": "deadlock_002",
+          "status": "unresolved",
+          "route": [
+            "ULTRA",
+            "ULTRA",
+            "ULTRA",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 4067.555199999788,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_002:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 WAIT gate\r\nT1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_002:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 5164.6724000002,
+          "inference_latency_ms": 2000.0,
+          "execution_latency_ms": 5156.117699999868,
+          "inference_tokens": 5323,
+          "cost_usd": 0.008,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 4
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "ULTRA",
+            "final_tier": "ULTRA",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: ULTRA.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_003",
+          "status": "unresolved",
+          "route": [
+            "ULTRA",
+            "ULTRA",
+            "ULTRA",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 654.8609000001306,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_003:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "7407b4f0a1ce7a5c",
+                "pattern": "unknown_failure",
+                "threads": [],
+                "lock_orders": [],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_003:1"
+                ],
+                "evidence": {
+                  "edges": [],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 1242.0114999999896,
+          "inference_latency_ms": 2000.0,
+          "execution_latency_ms": 1233.0886000004284,
+          "inference_tokens": 5211,
+          "cost_usd": 0.008,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 4
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "ULTRA",
+            "final_tier": "ULTRA",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: ULTRA.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_004",
+          "status": "unresolved",
+          "route": [
+            "ULTRA",
+            "ULTRA",
+            "ULTRA",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 511.23039999993125,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_004:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "7407b4f0a1ce7a5c",
+                "pattern": "unknown_failure",
+                "threads": [],
+                "lock_orders": [],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_004:1"
+                ],
+                "evidence": {
+                  "edges": [],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 1619.1875999998047,
+          "inference_latency_ms": 2000.0,
+          "execution_latency_ms": 1606.238399999711,
+          "inference_tokens": 5387,
+          "cost_usd": 0.008,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 4
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "ULTRA",
+            "final_tier": "ULTRA",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: ULTRA.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_005",
+          "status": "unresolved",
+          "route": [
+            "ULTRA",
+            "ULTRA",
+            "ULTRA",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3055.573699999968,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_005:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T0 LOCK L0\r\nT1 LOCK L1\r\nT2 LOCK L2\r\nT2 WAIT L0\r\nT1 WAIT L2\r\nT0 WAIT L1\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "cd3cb1c09c8b2f19",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T0",
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "L0",
+                    "L1"
+                  ],
+                  [
+                    "L1",
+                    "L2"
+                  ],
+                  [
+                    "L2",
+                    "L0"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_005:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "L0",
+                      "L1"
+                    ],
+                    [
+                      "L1",
+                      "L2"
+                    ],
+                    [
+                      "L2",
+                      "L0"
+                    ]
+                  ],
+                  "cycle": [
+                    "L0",
+                    "L1",
+                    "L2",
+                    "L0"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 4098.8069,
+          "inference_latency_ms": 2000.0,
+          "execution_latency_ms": 4085.351300000184,
+          "inference_tokens": 5695,
+          "cost_usd": 0.008,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 4
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "ULTRA",
+            "final_tier": "ULTRA",
+            "escalations": 0,
+            "routing_reasons": [
+              "Fixed-tier evaluation policy: ULTRA.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Retrying ULTRA after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_001",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1863.3962999997493,
+            "representative_runs": [
+              {
+                "run_id": "race_001:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: counter == (long)workers * workload, file main.c, line 27\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 161.40360000008513,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 3090.540900000178,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 3083.460500000001,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_002",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 909.8146000001179,
+            "representative_runs": [
+              {
+                "run_id": "race_002:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: balance == 1000, file main.c, line 24\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 226.4433000000281,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1487.2135999999045,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1481.3367000001563,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_003",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 861.2712999997711,
+            "representative_runs": [
+              {
+                "run_id": "race_003:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: awarded[0] + awarded[1] == 1 && tickets == 0, file main.c, line 22\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 204.85629999984667,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1502.4355000000469,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1494.3749999993088,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_004",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 724.5058999997127,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 191.99849999995422,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1340.2485000001434,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1332.6437999994596,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_005",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1619.2293000003701,
+            "representative_runs": [
+              {
+                "run_id": "race_005:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: count == 2, file main.c, line 24\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 301.8515999997362,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2521.320899999864,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2513.8363999999456,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        }
+      ]
+    },
+    "adaptive": {
+      "metrics": {
+        "tasks": 10,
+        "bugs_diagnosed": 1,
+        "diagnosis_definition": "Tasks with a structured diagnosis; correctness is not independently scored.",
+        "candidate_repairs_generated": 2,
+        "verified_repairs": 1,
+        "verified_repair_rate": 0.1,
+        "false_fixes": null,
+        "false_fix_rate": null,
+        "false_fix_denominator": "All schema-valid candidate repair proposals, including rejected patches",
+        "patches_rejected": 0,
+        "tooling_unavailable": 5,
+        "model_calls": {
+          "NANO": 5,
+          "SUPER": 8,
+          "ULTRA": 4
+        },
+        "average_model_calls": 1.7,
+        "inference_tokens": 16776,
+        "inference_latency_ms": 4000.0,
+        "inference_measurement": "simulated",
+        "execution_latency_ms": 53212.05490000147,
+        "total_time_ms": 53336.26860000049,
+        "average_time_to_verified_repair_ms": 30408.115799999905,
+        "cost_usd": null,
+        "cost_per_verified_repair_usd": null,
+        "inference_mode": "mock",
+        "false_fix_metric_status": "withdrawn_infrastructure_failures_not_separated"
+      },
+      "jobs": [
+        {
+          "task": "deadlock_001",
+          "status": "verified",
+          "route": [
+            "NANO",
+            "SUPER",
+            "SUPER"
+          ],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 4396.934400000191,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_001:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK A\r\nT2 LOCK B\r\nT2 WAIT A\r\nT1 WAIT B\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "4b4c8f316a845e49",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "A",
+                    "B"
+                  ],
+                  [
+                    "B",
+                    "A"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_001:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "A",
+                      "B"
+                    ],
+                    [
+                      "B",
+                      "A"
+                    ]
+                  ],
+                  "cycle": [
+                    "A",
+                    "B",
+                    "A"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": {
+            "passed": true,
+            "build_passed": true,
+            "total_runs": 100,
+            "passed_runs": 100,
+            "failed_runs": 0,
+            "race_count": 0,
+            "deadlock_count": 0,
+            "crash_count": 0,
+            "sanitizer_findings": [],
+            "regressions": [],
+            "duration_ms": 17555.8345999998,
+            "evidence": {
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 0,
+                "stdout": "",
+                "stderr": "",
+                "duration_ms": 611.6725000001679,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": true
+              },
+              "original_tests": {
+                "passed": true,
+                "results": [],
+                "configured": false
+              },
+              "campaign": {
+                "total_runs": 100,
+                "failed_runs": 0,
+                "counts": {
+                  "PASS": 100
+                },
+                "duration_ms": 16943.729000000076,
+                "representative_runs": []
+              },
+              "sanitizer": {
+                "status": "not_configured"
+              }
+            },
+            "reason": "The patch passed the configured verification campaign."
+          },
+          "repairs": [
+            {
+              "tier": "SUPER",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": false,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 0,
+                "failed_runs": 100,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [
+                  "New failure class: UNKNOWN_FAILURE"
+                ],
+                "duration_ms": 7748.52379999993,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 627.4235999999291,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 100,
+                    "counts": {
+                      "UNKNOWN_FAILURE": 100
+                    },
+                    "duration_ms": 7120.568800000001,
+                    "representative_runs": [
+                      {
+                        "run_id": "deadlock_001:1",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      },
+                      {
+                        "run_id": "deadlock_001:2",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      },
+                      {
+                        "run_id": "deadlock_001:3",
+                        "classification": "UNKNOWN_FAILURE",
+                        "stdout": "",
+                        "stderr": "Executable unavailable or process could not start."
+                      }
+                    ]
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch failed the configured verification campaign; inspect execution evidence."
+              }
+            },
+            {
+              "tier": "SUPER",
+              "proposal": {
+                "diagnosis": "Scripted demonstration hypothesis based on a recognized fixture shape.",
+                "root_cause": "Conflicting lock order or an unprotected counter increment.",
+                "confidence": 0.8,
+                "patch": "--- a/main.c\n+++ b/main.c\n@@ -8,11 +8,11 @@\n \n static void *worker(void *arg) {\n     int id = (int)(intptr_t)arg;\n-    pthread_mutex_t *first = id == 1 ? &a : &b;\n-    pthread_mutex_t *second = id == 1 ? &b : &a;\n+    pthread_mutex_t *first = &a;\n+    pthread_mutex_t *second = &b;\n+    pthread_barrier_wait(&ready);\n     pthread_mutex_lock(first);\n     printf(\"T%d LOCK %s\\n\", id, first == &a ? \"A\" : \"B\");\n-    pthread_barrier_wait(&ready);\n     printf(\"T%d WAIT %s\\n\", id, second == &a ? \"A\" : \"B\");\n     pthread_mutex_lock(second);\n     pthread_mutex_unlock(second);\n",
+                "reasoning_summary": "Mock candidate; real execution must determine acceptance.",
+                "expected_effect": "Consistent lock ordering or serialized shared updates.",
+                "risk_notes": [
+                  "Scripted mock; not a claim about general model repair capability."
+                ]
+              },
+              "patch": {
+                "success": true,
+                "files_changed": [
+                  "main.c"
+                ],
+                "rejected_paths": [],
+                "error": null,
+                "patch_hash": "1b86af383e0dee320fc9290676efa2a37875adcfec898b0ac634267b0a6d6bdf"
+              },
+              "verification": {
+                "passed": true,
+                "build_passed": true,
+                "total_runs": 100,
+                "passed_runs": 100,
+                "failed_runs": 0,
+                "race_count": 0,
+                "deadlock_count": 0,
+                "crash_count": 0,
+                "sanitizer_findings": [],
+                "regressions": [],
+                "duration_ms": 17555.8345999998,
+                "evidence": {
+                  "build": {
+                    "command": [
+                      "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                      "-static",
+                      "-pthread",
+                      "-g",
+                      "-O1",
+                      "main.c",
+                      "-o",
+                      "app"
+                    ],
+                    "exit_code": 0,
+                    "stdout": "",
+                    "stderr": "",
+                    "duration_ms": 611.6725000001679,
+                    "timed_out": false,
+                    "metadata": {
+                      "output_truncated": false
+                    },
+                    "success": true
+                  },
+                  "original_tests": {
+                    "passed": true,
+                    "results": [],
+                    "configured": false
+                  },
+                  "campaign": {
+                    "total_runs": 100,
+                    "failed_runs": 0,
+                    "counts": {
+                      "PASS": 100
+                    },
+                    "duration_ms": 16943.729000000076,
+                    "representative_runs": []
+                  },
+                  "sanitizer": {
+                    "status": "not_configured"
+                  }
+                },
+                "reason": "The patch passed the configured verification campaign."
+              }
+            }
+          ],
+          "triage": {
+            "dominant_failure": "cyclic_lock_wait",
+            "failed_runs": 1,
+            "pass_runs": 0,
+            "representative_runs": [
+              "deadlock_001:1"
+            ],
+            "confidence": 0.8,
+            "requires_deeper_reasoning": true
+          },
+          "stopped_reason": "verification_passed",
+          "total_time_ms": 30408.115799999905,
+          "inference_latency_ms": 480.0,
+          "execution_latency_ms": 30386.738899999727,
+          "inference_tokens": 3652,
+          "cost_usd": 0.0011,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 2,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "SUPER",
+            "escalations": 1,
+            "routing_reasons": [
+              "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+              "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+              "Retrying SUPER after verification failure: The patch failed the configured verification campaign; inspect execution evidence."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 2
+          }
+        },
+        {
+          "task": "deadlock_002",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "SUPER",
+            "SUPER",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3188.991299999998,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_002:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 WAIT gate\r\nT1 LOCK gate\r\nT1 WAIT gate\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "34be9ed92ff516bb",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T1"
+                ],
+                "lock_orders": [
+                  [
+                    "gate",
+                    "gate"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_002:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "gate",
+                      "gate"
+                    ]
+                  ],
+                  "cycle": [
+                    "gate",
+                    "gate"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": {
+            "dominant_failure": "cyclic_lock_wait",
+            "failed_runs": 1,
+            "pass_runs": 0,
+            "representative_runs": [
+              "deadlock_002:1"
+            ],
+            "confidence": 0.8,
+            "requires_deeper_reasoning": true
+          },
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 3886.6290000000845,
+          "inference_latency_ms": 980.0,
+          "execution_latency_ms": 3872.882699999991,
+          "inference_tokens": 3898,
+          "cost_usd": 0.0031,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 2,
+            "ULTRA": 1
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "ULTRA",
+            "escalations": 2,
+            "routing_reasons": [
+              "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+              "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Escalated from SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_003",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "SUPER",
+            "SUPER",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "UNKNOWN_FAILURE": 1
+            },
+            "duration_ms": 694.1209000001436,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_003:1",
+                "classification": "UNKNOWN_FAILURE",
+                "stdout": "",
+                "stderr": "Executable unavailable or process could not start."
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "7407b4f0a1ce7a5c",
+                "pattern": "unknown_failure",
+                "threads": [],
+                "lock_orders": [],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_003:1"
+                ],
+                "evidence": {
+                  "edges": [],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": {
+            "dominant_failure": "unknown_failure",
+            "failed_runs": 1,
+            "pass_runs": 0,
+            "representative_runs": [
+              "deadlock_003:1"
+            ],
+            "confidence": 0.8,
+            "requires_deeper_reasoning": true
+          },
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 1340.856199999962,
+          "inference_latency_ms": 980.0,
+          "execution_latency_ms": 1329.4019000004482,
+          "inference_tokens": 3801,
+          "cost_usd": 0.0031,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 2,
+            "ULTRA": 1
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "ULTRA",
+            "escalations": 2,
+            "routing_reasons": [
+              "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+              "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Escalated from SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_004",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "SUPER",
+            "SUPER",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 3197.8837999999996,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_004:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T1 LOCK state\r\nT2 WAIT state\r\nT1 WAIT worker_exit\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "490ca5eb99b9add5",
+                "pattern": "timeout_unknown",
+                "threads": [
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "state",
+                    "worker_exit"
+                  ]
+                ],
+                "confidence": 0.5,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_004:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "state",
+                      "worker_exit"
+                    ]
+                  ],
+                  "cycle": [],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": {
+            "dominant_failure": "timeout_unknown",
+            "failed_runs": 1,
+            "pass_runs": 0,
+            "representative_runs": [
+              "deadlock_004:1"
+            ],
+            "confidence": 0.8,
+            "requires_deeper_reasoning": true
+          },
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 3906.7778999997245,
+          "inference_latency_ms": 980.0,
+          "execution_latency_ms": 3892.133400000148,
+          "inference_tokens": 4001,
+          "cost_usd": 0.0031,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 2,
+            "ULTRA": 1
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "ULTRA",
+            "escalations": 2,
+            "routing_reasons": [
+              "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+              "SUPER: reproducible execution failure with normalized evidence and no previous repair; primary repair tier.",
+              "Retrying SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only.",
+              "Escalated from SUPER after verification failure: Invalid repair JSON or unified diff. Return the requested repair contract only."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "deadlock_005",
+          "status": "unresolved",
+          "route": [
+            "NANO",
+            "ULTRA"
+          ],
+          "ultra_avoided": false,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "POSSIBLE_DEADLOCK": 1
+            },
+            "duration_ms": 2969.0365999999813,
+            "representative_runs": [
+              {
+                "run_id": "deadlock_005:1",
+                "classification": "POSSIBLE_DEADLOCK",
+                "stdout": "T0 LOCK L0\r\nT2 LOCK L2\r\nT1 LOCK L1\r\nT1 WAIT L2\r\nT2 WAIT L0\r\nT0 WAIT L1\r\n",
+                "stderr": ""
+              }
+            ],
+            "sanitizer": {
+              "status": "not_configured"
+            },
+            "fingerprints": [
+              {
+                "fingerprint_id": "cd3cb1c09c8b2f19",
+                "pattern": "cyclic_lock_wait",
+                "threads": [
+                  "T0",
+                  "T1",
+                  "T2"
+                ],
+                "lock_orders": [
+                  [
+                    "L0",
+                    "L1"
+                  ],
+                  [
+                    "L1",
+                    "L2"
+                  ],
+                  [
+                    "L2",
+                    "L0"
+                  ]
+                ],
+                "confidence": 0.9,
+                "occurrences": 1,
+                "representative_runs": [
+                  "deadlock_005:1"
+                ],
+                "evidence": {
+                  "edges": [
+                    [
+                      "L0",
+                      "L1"
+                    ],
+                    [
+                      "L1",
+                      "L2"
+                    ],
+                    [
+                      "L2",
+                      "L0"
+                    ]
+                  ],
+                  "cycle": [
+                    "L0",
+                    "L1",
+                    "L2",
+                    "L0"
+                  ],
+                  "finding_locations": []
+                }
+              }
+            ]
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": {
+            "dominant_failure": "cyclic_lock_wait",
+            "failed_runs": 1,
+            "pass_runs": 0,
+            "representative_runs": [
+              "deadlock_005:1"
+            ],
+            "confidence": 0.8,
+            "requires_deeper_reasoning": true
+          },
+          "stopped_reason": "ultra_failed",
+          "total_time_ms": 3627.420300000267,
+          "inference_latency_ms": 580.0,
+          "execution_latency_ms": 3613.017900000159,
+          "inference_tokens": 1424,
+          "cost_usd": 0.0021,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 1,
+            "SUPER": 0,
+            "ULTRA": 1
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": "NANO",
+            "final_tier": "ULTRA",
+            "escalations": 1,
+            "routing_reasons": [
+              "NANO summarizes compressed evidence; deterministic tooling already classifies clear failures.",
+              "ULTRA: high risk or more than two observed lock-order edges."
+            ],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_001",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1050.3249999997024,
+            "representative_runs": [
+              {
+                "run_id": "race_001:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: counter == (long)workers * workload, file main.c, line 27\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 344.68070000002626,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2068.4470000001056,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2057.6717999997527,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_002",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1084.717300000193,
+            "representative_runs": [
+              {
+                "run_id": "race_002:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: balance == 1000, file main.c, line 24\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 300.5519000003005,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2087.333200000103,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2077.223800000411,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_003",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 1244.4064999999682,
+            "representative_runs": [
+              {
+                "run_id": "race_003:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: awarded[0] + awarded[1] == 1 && tickets == 0, file main.c, line 22\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 322.7097000003596,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 2228.597499999978,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 2219.03440000051,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_004",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 0,
+            "counts": {
+              "PASS": 1
+            },
+            "duration_ms": 834.8338000000695,
+            "representative_runs": [],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 319.6930999997676,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1815.8016000002135,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1806.846200000109,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        },
+        {
+          "task": "race_005",
+          "status": "tooling_unavailable",
+          "route": [],
+          "ultra_avoided": true,
+          "baseline": {
+            "build_passed": true,
+            "total_runs": 1,
+            "failed_runs": 1,
+            "counts": {
+              "CRASH": 1
+            },
+            "duration_ms": 997.298199999932,
+            "representative_runs": [
+              {
+                "run_id": "race_005:1",
+                "classification": "CRASH",
+                "stdout": "",
+                "stderr": "Assertion failed: count == 2, file main.c, line 24\r\n"
+              }
+            ],
+            "sanitizer": {
+              "status": "unavailable",
+              "build": {
+                "command": [
+                  "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\work\\toolchain\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe",
+                  "-fsanitize=thread",
+                  "-g",
+                  "-O1",
+                  "-static",
+                  "-pthread",
+                  "-g",
+                  "-O1",
+                  "main.c",
+                  "-o",
+                  "app"
+                ],
+                "exit_code": 1,
+                "stdout": "",
+                "stderr": "clang-23: error: unsupported option '-fsanitize=thread' for target 'x86_64-w64-windows-gnu'\r\n",
+                "duration_ms": 297.24560000022393,
+                "timed_out": false,
+                "metadata": {
+                  "output_truncated": false
+                },
+                "success": false
+              }
+            }
+          },
+          "verification": null,
+          "repairs": [],
+          "triage": null,
+          "stopped_reason": "required_thread_sanitizer_unavailable",
+          "total_time_ms": 1966.2901000001511,
+          "inference_latency_ms": 0.0,
+          "execution_latency_ms": 1957.1039000002202,
+          "inference_tokens": 0,
+          "cost_usd": 0.0,
+          "inference_mode": "mock",
+          "model_calls": {
+            "LOCAL": 0,
+            "NANO": 0,
+            "SUPER": 0,
+            "ULTRA": 0
+          },
+          "metadata": {
+            "models": [],
+            "starting_tier": null,
+            "final_tier": null,
+            "escalations": 0,
+            "routing_reasons": [],
+            "usage_available": true,
+            "inference_measurement": "simulated",
+            "patch_attempts": 0
+          }
+        }
+      ]
+    }
+  },
+  "audit": {
+    "status": "Historical execution record, measured before the infrastructure-failure and stop-on-policy-block corrections.",
+    "false_fix_metric_valid": false,
+    "reason": "The original classifier mixed process-start failures with program failures. Full per-run infrastructure flags were not exported. These rates are withdrawn; no replacement numbers are inferred.",
+    "withdrawn_original_metrics": {
+      "nano-only": {
+        "false_fixes": 0,
+        "false_fix_rate": 0.0
+      },
+      "super-only": {
+        "false_fixes": 0,
+        "false_fix_rate": 0.0
+      },
+      "ultra-only": {
+        "false_fixes": 1,
+        "false_fix_rate": 0.5
+      },
+      "adaptive": {
+        "false_fixes": 1,
+        "false_fix_rate": 0.5
+      }
+    },
+    "followup_evidence": "A later integration run recorded Windows error 4551: An Application Control policy has blocked this file. Subsequent code stops a campaign, job and comparison on that denial.",
+    "limitations": "Scripted inference, native Windows, no supported ThreadSanitizer, one baseline run per fixture. This is not a model-quality or cost-savings study."
+  }
+}

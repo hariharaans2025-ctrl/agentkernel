@@ -1,0 +1,18 @@
+{
+  "stage": "super",
+  "outcome": "invalid_output",
+  "model_calls": 1,
+  "tokens": 1706,
+  "cost_usd": 0.0006114,
+  "reserved_usd": 0.0072864,
+  "false_fix": false,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "2087a778470d4c5a836b20c83506c4f6",
+  "input_tokens": 1540,
+  "output_tokens": 166,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"await.c\", \"start_line\": 1, \"end_line\": 1, \"replacement_lines\": [\"#include <stdio.h>\"]}, {\"file\": \"await.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();printf(\"]}, {\"file\": \"await.c\", \"start_line\": 3, \"end_line\": 3, \"replacement_lines\": [\"%d %d \", \");int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\"]}]}",
+  "error_code": "line_range_out_of_bounds",
+  "validation": [],
+  "inference_ms": 1667.2266999958083
+}

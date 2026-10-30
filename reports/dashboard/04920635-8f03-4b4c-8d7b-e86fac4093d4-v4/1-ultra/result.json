@@ -1,0 +1,56 @@
+{
+  "stage": "ultra",
+  "outcome": "unknown",
+  "model_calls": 1,
+  "tokens": 1291,
+  "cost_usd": 0.001407,
+  "false_fix": false,
+  "recovery": null,
+  "reserved_usd": 0.060576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "b5920355f1fc410aa0fdd8d8ac71afe0",
+  "inference_ms": 1375.3133000000162,
+  "input_tokens": 1233,
+  "output_tokens": 58,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "no_op_blocks_dropped": [],
+    "blocks": [
+      {
+        "file": "commit.c",
+        "start": 2,
+        "end": 2,
+        "replacement_lines": 1
+      }
+    ]
+  },
+  "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n",
+  "verification_phases_ms": {
+    "apply": 2966.3907000003746,
+    "build": 2457.553100000041,
+    "stress": 7442.163000000619,
+    "tsan_build": 1710.3328000002875,
+    "original_tests_and_semantics": 5206.3021999993
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": null,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 16816.351100000247,
+  "taxonomy": {
+    "primary": "unknown",
+    "gates": [
+      null
+    ]
+  }
+}

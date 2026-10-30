@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "paid_calls": 0,
+  "output_directory": "reports\\continuation-20261004T104857Z",
+  "checks": {
+    "credentials_present": true,
+    "changed_files": [],
+    "snapshot_reference": "3c07c464-96ec-48dd-9d71-3d4f8a0eebe9",
+    "snapshot_files_compared": 164,
+    "catalog": {
+      "available": true,
+      "models": {
+        "NANO": true,
+        "SUPER": true,
+        "ULTRA": true
+      },
+      "configured_models": {
+        "NANO": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+        "SUPER": "nvidia/nemotron-3-super-120b-a12b",
+        "ULTRA": "nvidia/Nemotron-3-Ultra-550b-a55b"
+      }
+    },
+    "prepared_image_usable": true
+  },
+  "plan": {
+    "fixtures": 10,
+    "modes": [
+      "ultra_only",
+      "adaptive"
+    ],
+    "paid_calls_max_by_mode": {
+      "ultra_only": 10,
+      "adaptive": 30
+    },
+    "paid_calls_max": 40,
+    "repair_attempts_max": 30,
+    "verification_stress_executions_max": 3000,
+    "semantic_executions_max": 30,
+    "sanitizer_verification_executions_max": 45,
+    "baseline_executions_max": 90,
+    "required_tsan": [
+      "race_001",
+      "race_002",
+      "race_003",
+      "race_004",
+      "race_005"
+    ],
+    "repair_output_token_cap": 2048,
+    "triage_output_token_cap": 768,
+    "max_output_tokens": 69120,
+    "retries": 0,
+    "semantic_conditions_required": true,
+    "note": "Upper bounds, not forecasts. Build failures, missing tools or successful Super verification reduce calls/executions."
+  }
+}

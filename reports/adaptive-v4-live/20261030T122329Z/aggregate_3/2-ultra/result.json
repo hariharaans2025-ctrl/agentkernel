@@ -1,0 +1,60 @@
+{
+  "stage": "ultra",
+  "outcome": "verified",
+  "model_calls": 1,
+  "tokens": 6190,
+  "cost_usd": 0.006504,
+  "false_fix": false,
+  "recovery": "verifier",
+  "reserved_usd": 0.060576,
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "ledger_call_id": "3d2c3269afb6493fb97119fcb837a59a",
+  "inference_ms": 2017.1164999997018,
+  "input_tokens": 6033,
+  "output_tokens": 157,
+  "reasoning_tokens": 0,
+  "response": "@@ REPLACE record.c 1-2\n#include \"state.h\"\nvoid record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE read.c 1-2\n#include \"state.h\"\nint consistent(State*s){pthread_mutex_lock(&s->mutex);int a=s->parity[0],b=s->parity[1],t=s->total;int r=a+b==t;pthread_mutex_unlock(&s->mutex);return r;}\n@@ END",
+  "finish_reason": "stop",
+  "error_code": null,
+  "category": null,
+  "parse_notes": {
+    "outer_fence_removed": false,
+    "no_op_blocks_dropped": [],
+    "blocks": [
+      {
+        "file": "record.c",
+        "start": 1,
+        "end": 2,
+        "replacement_lines": 2
+      },
+      {
+        "file": "read.c",
+        "start": 1,
+        "end": 2,
+        "replacement_lines": 2
+      }
+    ]
+  },
+  "patch": "--- a/record.c\n+++ b/record.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}\n+void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n--- a/read.c\n+++ b/read.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int consistent(State*s){int a=s->parity[0],b=s->parity[1],t=s->total;return a+b==t;}\n+int consistent(State*s){pthread_mutex_lock(&s->mutex);int a=s->parity[0],b=s->parity[1],t=s->total;int r=a+b==t;pthread_mutex_unlock(&s->mutex);return r;}\n",
+  "verification_phases_ms": {
+    "apply": 4215.02240000018,
+    "build": 2229.4323999999506,
+    "stress": 9429.589599999872,
+    "tsan_build": 2261.32779999989,
+    "original_tests_and_semantics": 5696.599300000344
+  },
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 19616.949100000056,
+  "taxonomy": {
+    "primary": "verified",
+    "gates": []
+  }
+}

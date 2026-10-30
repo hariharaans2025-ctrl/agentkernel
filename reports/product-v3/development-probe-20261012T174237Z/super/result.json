@@ -1,0 +1,15 @@
+{
+  "outcome": "invalid_output",
+  "error_code": "invalid_repair_contract",
+  "tokens": 1075,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.0004947,
+  "validation": [
+    {
+      "field": "edits.0",
+      "type": "edit_search_not_found",
+      "hint": "Copy search text exactly from ORIGINAL source. Preserve whitespace and C escapes; encode JSON once."
+    }
+  ],
+  "returned_model": "nvidia/nemotron-3-super-120b-a12b"
+}

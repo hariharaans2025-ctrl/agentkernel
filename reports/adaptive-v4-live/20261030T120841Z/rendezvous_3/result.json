@@ -1,0 +1,213 @@
+{
+  "status": "rejected",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 1409,
+      "cost_usd": 0.001713,
+      "false_fix": true,
+      "recovery": null,
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "de7a58e08a304884bd423db3b664aa8b",
+      "inference_ms": 1434.798199999932,
+      "input_tokens": 1257,
+      "output_tokens": 152,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE publish.c 2-2\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE observe.c 2-2\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "publish.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          },
+          {
+            "file": "observe.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+      "verification_phases_ms": {
+        "apply": 6461.3303000001,
+        "build": 3642.6501000000826,
+        "stress": 229181.2457000001,
+        "tsan_build": 2464.8580000002767,
+        "original_tests_and_semantics": 13317.993199999339
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 248606.7469999998,
+      "taxonomy": {
+        "primary": "original_tests",
+        "gates": [
+          "original_tests",
+          "stress",
+          "semantics",
+          "tsan"
+        ]
+      }
+    },
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 2588,
+      "cost_usd": 0.002892,
+      "false_fix": true,
+      "recovery": "verifier",
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "169fa25cea2344068235203c16e45af2",
+      "inference_ms": 1457.730999999967,
+      "input_tokens": 2436,
+      "output_tokens": 152,
+      "reasoning_tokens": 0,
+      "response": "@@ REPLACE publish.c 2-2\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE observe.c 2-2\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": null,
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "publish.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          },
+          {
+            "file": "observe.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+      "verification_phases_ms": {
+        "apply": 3786.0421000000315,
+        "build": 2309.0305999999146,
+        "stress": 236607.5108,
+        "tsan_build": 2462.4331999998503,
+        "original_tests_and_semantics": 9021.176000000221
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 250400.15059999996,
+      "taxonomy": {
+        "primary": "original_tests",
+        "gates": [
+          "original_tests",
+          "stress",
+          "semantics",
+          "tsan"
+        ]
+      }
+    }
+  ],
+  "model_calls": 2,
+  "calls_by_model": {
+    "ultra": 2
+  },
+  "tokens": 3997,
+  "cost_usd": 0.004605,
+  "reserved_usd": 0.073152,
+  "false_fix": true,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 320,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 417,
+      "primitives": {
+        "mutex_lock": 2,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 0,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": true,
+      "baseline_fingerprint": "TIMEOUT:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "protected_blocking_helper",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.002455,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.0031915,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.008099999831756577
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 1
+  },
+  "end_to_end_ms": 528936.0447,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1339.8706000002676,
+    "upload": 1981.691999999839,
+    "baseline_build": 2999.7528999997485,
+    "baseline_stress": 10417.525100000148,
+    "inference": 2892.529199999899,
+    "verify_apply": 10247.372400000131,
+    "verify_build": 5951.680699999997,
+    "verify_stress": 465788.7565000001,
+    "verify_tsan_build": 4927.291200000127,
+    "verify_original_tests_and_semantics": 22339.16919999956,
+    "e2e": 528936.0447
+  },
+  "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": false,
+    "passed_runs": 0,
+    "total_runs": 100,
+    "semantic_passed": false,
+    "tsan_passed": false,
+    "scheduling_hooks_preserved": true
+  }
+}

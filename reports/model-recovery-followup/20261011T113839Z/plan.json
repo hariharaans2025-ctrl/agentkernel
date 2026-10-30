@@ -1,0 +1,124 @@
+{
+  "original_case": "few_shot-pair_snapshot",
+  "original_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\race-correction\\20261011T111419Z",
+  "first_attempt_metrics": {
+    "id": "few_shot-pair_snapshot",
+    "arm": "few_shot",
+    "outcome": "rejected",
+    "false_fix": true,
+    "tokens": 5889,
+    "inference_ms": 6717.483000014909,
+    "verification_ms": 27105.51799996756,
+    "end_to_end_ms": 39318.71030002367,
+    "model_calls": 1,
+    "input_tokens": 5614,
+    "output_tokens": 275,
+    "inference_cost_usd": 0.0006439,
+    "stress_passed": 0,
+    "semantic_passed": false,
+    "tsan_passed": false
+  },
+  "task": {
+    "task_id": "pair_snapshot",
+    "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\model-recovery-followup\\20261011T113839Z\\failed-candidate",
+    "source_files": [
+      "solution.c"
+    ],
+    "support_files": [
+      "oracle.c",
+      "state.h"
+    ],
+    "build_command": [
+      "gcc",
+      "-pthread",
+      "-g",
+      "-O1",
+      "oracle.c",
+      "solution.c",
+      "-o",
+      "app"
+    ],
+    "binary_path": "app",
+    "run_command": [
+      "./app"
+    ],
+    "max_runtime_seconds": 2.0,
+    "compile_timeout_seconds": 30.0,
+    "stress_runs": 3,
+    "environment": {},
+    "expected_behavior": "PASS",
+    "expected_bug_category": "unknown",
+    "verification_config": {
+      "required_build_success": true,
+      "stress_runs": 100,
+      "allowed_deadlocks": 0,
+      "allowed_races": 0,
+      "allowed_crashes": 0,
+      "required_original_tests": true,
+      "original_test_commands": [
+        [
+          "./app"
+        ]
+      ],
+      "sanitizer_enabled": true,
+      "sanitizer_required": true,
+      "sanitizer_runs": 3,
+      "sanitizer_compiler": "clang",
+      "semantic_checks": [
+        {
+          "name": "Protected completion/value invariant",
+          "build_command": [
+            "gcc",
+            "-pthread",
+            "-g",
+            "-O1",
+            "oracle.c",
+            "solution.c",
+            "-o",
+            "semantic"
+          ],
+          "run_command": [
+            "./semantic"
+          ],
+          "expected_stdout": "SEMANTIC_PASS",
+          "required": true
+        }
+      ]
+    },
+    "metadata": {}
+  },
+  "max_calls": 1,
+  "max_output_tokens": 2048,
+  "input_token_reservation": 262144,
+  "max_cost_usd": "0.03",
+  "inference_bound_usd": "0.0268288",
+  "sandbox_cost_usd": 0,
+  "sandbox_basis": "User confirmed free beta access",
+  "trigger": "Actual TSan races remaining after the failed prior correction",
+  "payload_sha256": "85f3fb71a465e7cdf1d53f2333d1d3f2e9adb2b702bacadb3f9f409073e14bc9",
+  "controller_sha256": "9e9045d4a1134d8e68f92d2cf6ba098c21182578b223838feab6026bea300591",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "retries": 0,
+  "separate_critique_calls": 0,
+  "image": "agentkernel-clang:20261003122908",
+  "reference_repairs_in_prompt": false,
+  "training": false,
+  "previous_correction_metrics": {
+    "outcome": "rejected",
+    "extra_calls": 1,
+    "extra_tokens": 11923,
+    "inference_ms": 10069.94560000021,
+    "verification_ms": 28026.793600001838,
+    "end_to_end_ms": 44357.74770000717,
+    "false_fix": true,
+    "input_tokens": 11522,
+    "output_tokens": 401,
+    "cost_usd": 0.0012725,
+    "stress_passed": 0,
+    "semantic_passed": false,
+    "tsan_passed": false
+  },
+  "authorization": "New user request for the model to fix and verify; one additional call with full mandatory verification.",
+  "evaluation_scope": "Adapted recovery experiment on an already observed case, not fresh held-out evaluation.",
+  "reference_and_manual_repairs_excluded": true
+}

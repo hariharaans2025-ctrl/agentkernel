@@ -1,0 +1,687 @@
+{
+  "jobs": [
+    {
+      "id": "zero_shot-pair_snapshot",
+      "arm": "zero_shot",
+      "fixture": "pair_snapshot",
+      "family": "shared_state",
+      "task": {
+        "task_id": "pair_snapshot",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\pair_snapshot",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "877ef63583f866285898d810aed5818e69cd146807cdbbd25e739c0a12f708d3",
+        "oracle.c": "c1bfd078d4df6b5ee993e066d0d2b015840060835438aee026d934116a243cb2",
+        "state.h": "60d387615fac811b371c8ef2bc8da331e1d970f18cdc831c956ea0727a066cd6"
+      },
+      "training_ids": [],
+      "payload_sha256": "78fa88a070941c499b1fae5c656ee1be8ae2148fa95b384ada32100339076173"
+    },
+    {
+      "id": "few_shot-pair_snapshot",
+      "arm": "few_shot",
+      "fixture": "pair_snapshot",
+      "family": "shared_state",
+      "task": {
+        "task_id": "pair_snapshot",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\pair_snapshot",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "877ef63583f866285898d810aed5818e69cd146807cdbbd25e739c0a12f708d3",
+        "oracle.c": "c1bfd078d4df6b5ee993e066d0d2b015840060835438aee026d934116a243cb2",
+        "state.h": "60d387615fac811b371c8ef2bc8da331e1d970f18cdc831c956ea0727a066cd6"
+      },
+      "training_ids": [
+        "race_002",
+        "race_003"
+      ],
+      "payload_sha256": "d51e4849c9cf658666be85b98d41ffd5f25bd52d82f08a9aeb1faac7e90b67e5"
+    },
+    {
+      "id": "few_shot-inventory_balance",
+      "arm": "few_shot",
+      "fixture": "inventory_balance",
+      "family": "shared_state",
+      "task": {
+        "task_id": "inventory_balance",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\inventory_balance",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "e997b22a9c632031a98bfb6f5f9d0d16b9529c415e352f84eb558c80688bd6a9",
+        "oracle.c": "84248b7b5fa2228c0e66d8dbe99146623d00a7f089cc6352008c71687c58b69b",
+        "state.h": "2465864ba06f71ee636557e87f6cd426cfccb13235d3180803188d80b76ec091"
+      },
+      "training_ids": [
+        "race_002",
+        "race_003"
+      ],
+      "payload_sha256": "2b6e25b176c0d97d59150d3f9de4c05238dac5474b4e03db282ebb286d512222"
+    },
+    {
+      "id": "zero_shot-inventory_balance",
+      "arm": "zero_shot",
+      "fixture": "inventory_balance",
+      "family": "shared_state",
+      "task": {
+        "task_id": "inventory_balance",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\inventory_balance",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "e997b22a9c632031a98bfb6f5f9d0d16b9529c415e352f84eb558c80688bd6a9",
+        "oracle.c": "84248b7b5fa2228c0e66d8dbe99146623d00a7f089cc6352008c71687c58b69b",
+        "state.h": "2465864ba06f71ee636557e87f6cd426cfccb13235d3180803188d80b76ec091"
+      },
+      "training_ids": [],
+      "payload_sha256": "f5733164fdd6f63bf8a40f1ec69389d131b1748e26c479c9498d0ceaff40c224"
+    },
+    {
+      "id": "zero_shot-nested_credit",
+      "arm": "zero_shot",
+      "fixture": "nested_credit",
+      "family": "liveness",
+      "task": {
+        "task_id": "nested_credit",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\nested_credit",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "e32f4d87bb0b1d08a25ca1f871862a0701134afc2b2759f83d2fbebf195526e9",
+        "oracle.c": "fa3f35b2e5253591bc57718a955e46b47b06eb89f0aa778863f6151cbc5783b5",
+        "state.h": "7ae46d3b53397937193d5e8a46d0ee2ab0d552856fb5c844bdb82fbc6e4056aa"
+      },
+      "training_ids": [],
+      "payload_sha256": "1c512ccbeba89e33dcd15a41fd72d17036422abc939586a0bf464e593f0ae46b"
+    },
+    {
+      "id": "few_shot-nested_credit",
+      "arm": "few_shot",
+      "fixture": "nested_credit",
+      "family": "liveness",
+      "task": {
+        "task_id": "nested_credit",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\nested_credit",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "e32f4d87bb0b1d08a25ca1f871862a0701134afc2b2759f83d2fbebf195526e9",
+        "oracle.c": "fa3f35b2e5253591bc57718a955e46b47b06eb89f0aa778863f6151cbc5783b5",
+        "state.h": "7ae46d3b53397937193d5e8a46d0ee2ab0d552856fb5c844bdb82fbc6e4056aa"
+      },
+      "training_ids": [
+        "deadlock_004",
+        "job_queue"
+      ],
+      "payload_sha256": "6febfbd4187c870a10b0003748371129247617097f59519ea8feb330315ab056"
+    },
+    {
+      "id": "few_shot-empty_queue_return",
+      "arm": "few_shot",
+      "fixture": "empty_queue_return",
+      "family": "liveness",
+      "task": {
+        "task_id": "empty_queue_return",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\empty_queue_return",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "6b5cf48b49ddac807f13a9f2de4f6b9574933be2cc57674f6a38ef273680b93a",
+        "oracle.c": "c4760876f7b70d5c3569d39a855db36db37f67ddcbd400bfa5130e5e2629c01e",
+        "state.h": "9188e2fad5ca26d5a9d4049e2dca79a98a97b5985b200c56408c523e3373267c"
+      },
+      "training_ids": [
+        "deadlock_004",
+        "job_queue"
+      ],
+      "payload_sha256": "619352515a2dc8f293a131ec9b21fa59c758260cc205d0192c21bfce34917163"
+    },
+    {
+      "id": "zero_shot-empty_queue_return",
+      "arm": "zero_shot",
+      "fixture": "empty_queue_return",
+      "family": "liveness",
+      "task": {
+        "task_id": "empty_queue_return",
+        "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\prompting-generalization\\20261011T103149Z\\inputs\\empty_queue_return",
+        "source_files": [
+          "solution.c"
+        ],
+        "support_files": [
+          "oracle.c",
+          "state.h"
+        ],
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "solution.c",
+          "-o",
+          "app"
+        ],
+        "binary_path": "app",
+        "run_command": [
+          "./app"
+        ],
+        "max_runtime_seconds": 2.0,
+        "compile_timeout_seconds": 30.0,
+        "stress_runs": 3,
+        "environment": {},
+        "expected_behavior": "PASS",
+        "expected_bug_category": "unknown",
+        "verification_config": {
+          "required_build_success": true,
+          "stress_runs": 100,
+          "allowed_deadlocks": 0,
+          "allowed_races": 0,
+          "allowed_crashes": 0,
+          "required_original_tests": true,
+          "original_test_commands": [
+            [
+              "./app"
+            ]
+          ],
+          "sanitizer_enabled": true,
+          "sanitizer_required": true,
+          "sanitizer_runs": 3,
+          "sanitizer_compiler": "clang",
+          "semantic_checks": [
+            {
+              "name": "Protected completion/value invariant",
+              "build_command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "oracle.c",
+                "solution.c",
+                "-o",
+                "semantic"
+              ],
+              "run_command": [
+                "./semantic"
+              ],
+              "expected_stdout": "SEMANTIC_PASS",
+              "required": true
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      "source_sha256": {
+        "solution.c": "6b5cf48b49ddac807f13a9f2de4f6b9574933be2cc57674f6a38ef273680b93a",
+        "oracle.c": "c4760876f7b70d5c3569d39a855db36db37f67ddcbd400bfa5130e5e2629c01e",
+        "state.h": "9188e2fad5ca26d5a9d4049e2dca79a98a97b5985b200c56408c523e3373267c"
+      },
+      "training_ids": [],
+      "payload_sha256": "6d7fd9fb8839534d315218c6f23975fc7e6747cd90563281148700b20d75620e"
+    }
+  ],
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "max_model_calls": 8,
+  "attempts_per_job": 1,
+  "max_output_tokens": 2048,
+  "temperature": 0,
+  "model_retries": 0,
+  "correction_calls": 0,
+  "mandatory_verifier": true,
+  "training": false,
+  "image": "agentkernel-clang:20261003122908",
+  "max_pilot_spend_usd": 10,
+  "inference_bound_usd": "0.2146304",
+  "input_reservation_tokens_per_call": 262144,
+  "sandbox_bound_usd": 0,
+  "controller_sha256": "13df2dc7d5cd0278b3f3dbdaeec39ba76344a8e20471fc3ac4f660cf1c2751ae"
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "./bench_mutex",
+    "bench"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"mode\":0,\"lock_free\":1,\"iterations\":500000,\"single_ns_per_op\":6.5482,\"writer_ns_per_op\":33.6706,\"reader_ns_per_op\":35.8387,\"concurrent_wall_ns_per_op\":18.0085,\"clock_resolution_ns\":1}\n",
+  "stderr": "",
+  "duration_ms": 33.846545000000006,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "84459e36-0e6d-4226-a5e1-e5b3b7e5ded3",
+    "transport_wall_ms": 1591.823499999009
+  }
+}

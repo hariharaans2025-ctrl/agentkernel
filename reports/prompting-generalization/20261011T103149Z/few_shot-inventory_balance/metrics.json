@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-inventory_balance",
+  "arm": "few_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 5901,
+  "inference_ms": 10281.691200041678,
+  "verification_ms": 27983.52830001386,
+  "end_to_end_ms": 43814.086099970154,
+  "model_calls": 1,
+  "input_tokens": 5616,
+  "output_tokens": 285,
+  "inference_cost_usd": 0.0006471,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

@@ -1,0 +1,196 @@
+{
+  "status": "verified",
+  "route": "agentkernel/adaptive-v4",
+  "arm": "v4",
+  "attempts": [
+    {
+      "stage": "ultra",
+      "outcome": "rejected",
+      "model_calls": 1,
+      "tokens": 150,
+      "cost_usd": 0.00025,
+      "false_fix": true,
+      "recovery": null,
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "5ea112419ea848ec957af98562cf2343",
+      "inference_ms": 2.0341000001735665,
+      "input_tokens": 100,
+      "output_tokens": 50,
+      "reasoning_tokens": null,
+      "response": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);} /* smoke: deliberately not a fix */\n@@ END",
+      "finish_reason": "stop",
+      "error_code": "invalid_repair_contract",
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "commit.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);} /* smoke: deliberately not a fix */\n",
+      "verification_phases_ms": {
+        "apply": 3581.4484999998513,
+        "build": 1549.2839999999433,
+        "stress": 226230.46419999993,
+        "tsan_build": 2242.010299999947,
+        "original_tests_and_semantics": 9273.177600000256
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 239294.93610000008,
+      "taxonomy": {
+        "primary": "original_tests",
+        "gates": [
+          "original_tests",
+          "stress",
+          "semantics",
+          "tsan"
+        ]
+      }
+    },
+    {
+      "stage": "ultra",
+      "outcome": "verified",
+      "model_calls": 1,
+      "tokens": 150,
+      "cost_usd": 0.00025,
+      "false_fix": false,
+      "recovery": "verifier",
+      "reserved_usd": 0.036576,
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "ledger_call_id": "64ea8a15d7c54bfd96b6e6d99f273eaa",
+      "inference_ms": 1.8924999999399006,
+      "input_tokens": 100,
+      "output_tokens": 50,
+      "reasoning_tokens": null,
+      "response": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n@@ END",
+      "finish_reason": "stop",
+      "error_code": "invalid_repair_contract",
+      "category": null,
+      "parse_notes": {
+        "outer_fence_removed": false,
+        "blocks": [
+          {
+            "file": "commit.c",
+            "start": 2,
+            "end": 2,
+            "replacement_lines": 1
+          }
+        ]
+      },
+      "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n",
+      "verification_phases_ms": {
+        "apply": 3117.318200000227,
+        "build": 1481.582100000196,
+        "stress": 11003.781000000345,
+        "tsan_build": 3738.589900000079,
+        "original_tests_and_semantics": 5944.044899998971
+      },
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      },
+      "verification_ms": 22167.99789999959,
+      "taxonomy": {
+        "primary": "verified",
+        "gates": []
+      }
+    }
+  ],
+  "model_calls": 2,
+  "calls_by_model": {
+    "ultra": 2
+  },
+  "tokens": 300,
+  "cost_usd": 0.0005,
+  "reserved_usd": 0.073152,
+  "false_fix": true,
+  "cache_used": false,
+  "route_decision": {
+    "policy": "adaptive-v4-router-3",
+    "stages": [
+      "ultra",
+      "ultra"
+    ],
+    "features": {
+      "source_bytes": 234,
+      "editable_files": 2,
+      "editable_lines": 4,
+      "header_bytes": 421,
+      "primitives": {
+        "mutex_lock": 1,
+        "cond_wait": 0,
+        "barrier_wait": 0,
+        "rwlock": 0,
+        "semaphore": 0,
+        "atomic": 1,
+        "join": 0
+      },
+      "distinct_mutexes": 1,
+      "blocking_helper_in_protected_header": true,
+      "baseline_fingerprint": "TIMEOUT:3",
+      "sanitizer_fingerprint": null
+    },
+    "bucket": "protected_blocking_helper",
+    "skip_reasons": {
+      "super": "protocol_capability_not_demonstrated"
+    },
+    "expected": {
+      "p_super_lower": 0.0,
+      "ultra_direct_usd": 0.00244,
+      "ultra_direct_s": 31.6,
+      "super_then_ultra_usd": 0.003172,
+      "super_then_ultra_s": 63.2,
+      "latency_source": "default_equal_uncalibrated",
+      "correction_stage": "ultra"
+    },
+    "overhead_ms": 0.011899999890374602
+  },
+  "recoveries": {
+    "format": 0,
+    "verifier": 1
+  },
+  "end_to_end_ms": 285753.3859,
+  "phases_ms": {
+    "queue": 0.0,
+    "sandbox_create": 1695.7208999999693,
+    "upload": 2018.118799999911,
+    "baseline_build": 1520.5387000000883,
+    "baseline_stress": 12294.582600000012,
+    "inference": 3.926600000113467,
+    "verify_apply": 6698.766700000078,
+    "verify_build": 3030.8661000001393,
+    "verify_stress": 237234.24520000027,
+    "verify_tsan_build": 5980.600200000026,
+    "verify_original_tests_and_semantics": 15217.222499999227,
+    "e2e": 285753.3859
+  },
+  "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();pthread_mutex_unlock(&s->mutex);audit(s);}\n",
+  "verification": {
+    "build_passed": true,
+    "original_tests_passed": true,
+    "passed_runs": 100,
+    "total_runs": 100,
+    "semantic_passed": true,
+    "tsan_passed": true,
+    "scheduling_hooks_preserved": true
+  }
+}

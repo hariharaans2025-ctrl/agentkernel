@@ -1,0 +1,17 @@
+{
+  "id": "few_shot-nested_credit",
+  "arm": "few_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 7522,
+  "inference_ms": 6205.053700017743,
+  "verification_ms": 28837.340800033417,
+  "end_to_end_ms": 40679.925800010096,
+  "model_calls": 1,
+  "input_tokens": 7277,
+  "output_tokens": 245,
+  "inference_cost_usd": 0.0008012,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

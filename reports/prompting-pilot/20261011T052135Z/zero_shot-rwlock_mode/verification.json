@@ -1,0 +1,48 @@
+{
+  "passed": false,
+  "build_passed": false,
+  "total_runs": 0,
+  "passed_runs": 0,
+  "failed_runs": 0,
+  "race_count": null,
+  "deadlock_count": 0,
+  "crash_count": 0,
+  "infrastructure_failures": 0,
+  "observed_program_failures": 0,
+  "sanitizer_findings": [],
+  "regressions": [],
+  "duration_ms": 1438.6051000328735,
+  "evidence": {
+    "build": {
+      "command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "oracle.c",
+        "solution.c",
+        "-o",
+        "app"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "solution.c: In function ‘update’:\nsolution.c:8:71: error: ‘false’ undeclared (first use in this function)\n    8 |         } while (__atomic_compare_exchange_n(&value, &prior, new_val, false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST));\n      |                                                                       ^~~~~\nsolution.c:2:1: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’\n    1 | #include \"state.h\"\n  +++ |+#include <stdbool.h>\n    2 | void update(void) {\nsolution.c:8:71: note: each undeclared identifier is reported only once for each function it appears in\n    8 |         } while (__atomic_compare_exchange_n(&value, &prior, new_val, false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST));\n      |                                                                       ^~~~~\n",
+      "duration_ms": 166.50095600000003,
+      "timed_out": false,
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "f09d85d1-18cd-47bd-bf90-8fd76ae28e1f",
+        "transport_wall_ms": 1438.5114000178874
+      },
+      "success": false
+    },
+    "execution_blocked": false
+  },
+  "reason": "Rebuild failed; no verification binary was executed.",
+  "execution_passed": null,
+  "semantic_passed": null,
+  "sanitizer_passed": null,
+  "semantic_regression": false,
+  "false_fix": true
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "lost_signal.c",
+    "-o",
+    "app"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 189.00178699999998,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "d86ce895-7a55-4d8f-9492-8035a0617191",
+    "transport_wall_ms": 3525.665699969977
+  },
+  "success": true
+}

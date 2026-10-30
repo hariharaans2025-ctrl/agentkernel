@@ -1,0 +1,39 @@
+{
+  "first_attempt": {
+    "id": "few_shot-pair_snapshot",
+    "arm": "few_shot",
+    "outcome": "rejected",
+    "false_fix": true,
+    "tokens": 5889,
+    "inference_ms": 6717.483000014909,
+    "verification_ms": 27105.51799996756,
+    "end_to_end_ms": 39318.71030002367,
+    "model_calls": 1,
+    "input_tokens": 5614,
+    "output_tokens": 275,
+    "inference_cost_usd": 0.0006439,
+    "stress_passed": 0,
+    "semantic_passed": false,
+    "tsan_passed": false
+  },
+  "correction": {
+    "outcome": "verified",
+    "extra_calls": 1,
+    "extra_tokens": 11825,
+    "inference_ms": 12931.361299997661,
+    "verification_ms": 28662.700799992308,
+    "end_to_end_ms": 48002.91329994798,
+    "false_fix": false,
+    "input_tokens": 11387,
+    "output_tokens": 438,
+    "cost_usd": 0.0012701,
+    "stress_passed": 100,
+    "semantic_passed": true,
+    "tsan_passed": true
+  },
+  "recovered_after_correction": true,
+  "first_attempt_relabelled": false,
+  "combined_model_tokens": 17714,
+  "combined_active_end_to_end_ms": 87321.62359997164,
+  "timing_note": "Sum of separate attempt durations; excludes intervening human time and preparation."
+}

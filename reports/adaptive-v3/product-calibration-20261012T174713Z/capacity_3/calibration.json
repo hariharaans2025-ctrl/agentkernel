@@ -1,0 +1,28 @@
+{
+  "case": "capacity_3",
+  "split": "test",
+  "family": "capacity",
+  "broken_rejected": true,
+  "reference_verified": true,
+  "stress_passed": 100,
+  "stress_total": 100,
+  "tsan_passed": true,
+  "semantic_passed": true,
+  "original_tests_passed": true,
+  "baseline_failed_runs": 3,
+  "baseline_tsan_failed_runs": 3,
+  "reference_source_sha256": {
+    "acquire.c": "ebc1f565e1cc028db339a35b043934228d409e84b2d529d2efe8a6944ad4e6af",
+    "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+  },
+  "source_sha256": {
+    "acquire.c": "647df289d3ca1a1ab38287f65cc285d24e917a215a2b9ed23de67eb2314f8c2b",
+    "inspect.c": "ca76696f22fa90e6b966a4ca7cf101f78ab517881ce3da6e0dcd59560c051aaf"
+  },
+  "support_sha256": {
+    "state.h": "576d5510773e5d1ccafa8ff12f3c2d2bbbcccb24ba9d6b16c268c495c43a82c9",
+    "oracle.c": "0b2164593e10fab5e62a075074adcc4d69dbdd5188512dadd6d0919fb0f1e542"
+  },
+  "model_calls": 0,
+  "elapsed_seconds": 72.74877410000045
+}

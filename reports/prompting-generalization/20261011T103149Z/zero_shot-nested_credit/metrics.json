@@ -1,0 +1,17 @@
+{
+  "id": "zero_shot-nested_credit",
+  "arm": "zero_shot",
+  "outcome": "verified",
+  "false_fix": false,
+  "tokens": 1953,
+  "inference_ms": 13056.65380001301,
+  "verification_ms": 30262.619100045413,
+  "end_to_end_ms": 49029.025299998466,
+  "model_calls": 1,
+  "input_tokens": 1319,
+  "output_tokens": 634,
+  "inference_cost_usd": 0.0003221,
+  "stress_passed": 100,
+  "semantic_passed": true,
+  "tsan_passed": true
+}

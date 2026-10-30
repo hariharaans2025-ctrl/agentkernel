@@ -1,0 +1,43 @@
+{
+  "prior": "reports\\additional-concurrency-controls\\20261010T094228Z",
+  "model_calls": 0,
+  "tokens": 0,
+  "records": [
+    {
+      "case": "lost_signal",
+      "faulty_diagnoses": [
+        "timeout_unexplained",
+        "timeout_unexplained",
+        "timeout_unexplained"
+      ],
+      "verified": true,
+      "stress_passed": 100,
+      "stress_total": 100,
+      "semantic_passed": true,
+      "tsan_passed": true,
+      "original_tests_passed": true,
+      "verification_ms": 63281.34879999561,
+      "infrastructure_failures": 0
+    },
+    {
+      "case": "missing_sync",
+      "verified": true,
+      "stress_passed": 100,
+      "stress_total": 100,
+      "semantic_passed": true,
+      "tsan_passed": true,
+      "infrastructure_failures": 0,
+      "stress_reused": true
+    },
+    {
+      "case": "account_inversion",
+      "verified": true,
+      "stress_passed": 100,
+      "stress_total": 100,
+      "semantic_passed": true,
+      "tsan_passed": true,
+      "infrastructure_failures": 0,
+      "stress_reused": false
+    }
+  ]
+}

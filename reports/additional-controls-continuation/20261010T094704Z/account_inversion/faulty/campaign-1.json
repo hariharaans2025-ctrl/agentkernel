@@ -1,0 +1,64 @@
+{
+  "task_id": "account_inversion",
+  "runs": [
+    {
+      "run_id": "account_inversion:1",
+      "start_time": "2026-10-10T09:49:25.097270Z",
+      "duration_ms": 2002.2520309999998,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "RIGHT HOLD account_b WAIT account_a\nLEFT HOLD account_a WAIT account_b\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      }
+    },
+    {
+      "run_id": "account_inversion:2",
+      "start_time": "2026-10-10T09:49:27.136996Z",
+      "duration_ms": 2001.8692749999998,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "LEFT HOLD account_a WAIT account_b\nRIGHT HOLD account_b WAIT account_a\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      }
+    },
+    {
+      "run_id": "account_inversion:3",
+      "start_time": "2026-10-10T09:49:29.167477Z",
+      "duration_ms": 2004.181237,
+      "exit_code": -9,
+      "stdout": "",
+      "stderr": "LEFT HOLD account_a WAIT account_b\nRIGHT HOLD account_b WAIT account_a\n",
+      "timed_out": true,
+      "crashed": false,
+      "sanitizer_detected": false,
+      "classification": "POSSIBLE_DEADLOCK",
+      "metadata": {
+        "execution_backend": "nebius",
+        "output_truncated": false,
+        "remote_image_id": "405f3289-4042-41d2-b791-bc3392bce2f6",
+        "batch_transport_wall_ms": 11569.319000001997
+      }
+    }
+  ],
+  "counts": {
+    "POSSIBLE_DEADLOCK": 3
+  },
+  "duration_ms": 11571.342600043863,
+  "requested_runs": 3
+}

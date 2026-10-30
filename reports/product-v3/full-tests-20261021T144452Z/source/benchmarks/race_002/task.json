@@ -1,0 +1,57 @@
+{
+  "task_id": "race_002",
+  "source_files": [
+    "main.c"
+  ],
+  "build_command": [
+    "gcc",
+    "-pthread",
+    "-g",
+    "-O1",
+    "main.c",
+    "-o",
+    "app"
+  ],
+  "binary_path": "app",
+  "run_command": [
+    "./app"
+  ],
+  "max_runtime_seconds": 2,
+  "stress_runs": 3,
+  "expected_behavior": "PASS",
+  "expected_bug_category": "race",
+  "verification_config": {
+    "stress_runs": 100,
+    "sanitizer_enabled": true,
+    "sanitizer_required": true,
+    "sanitizer_runs": 3,
+    "semantic_checks": [
+      {
+        "name": "Balance 1000 and 10000 operations per worker",
+        "build_command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "oracle.c",
+          "-o",
+          "semantic"
+        ],
+        "run_command": [
+          "./semantic"
+        ],
+        "required": true
+      }
+    ],
+    "sanitizer_compiler": "clang"
+  },
+  "metadata": {
+    "fixture_description": "Balance updates",
+    "semantic_invariant": "Balance 1000 and 10000 operations per worker",
+    "fixture_version": 2
+  },
+  "support_files": [
+    "oracle.c",
+    "stress.h"
+  ]
+}

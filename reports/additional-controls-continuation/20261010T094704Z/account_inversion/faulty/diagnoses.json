@@ -1,0 +1,89 @@
+[
+  {
+    "kind": "deadlock_supported_by_wait_cycle",
+    "observed_waits": [
+      [
+        "LEFT",
+        "account_a",
+        "account_b"
+      ],
+      [
+        "RIGHT",
+        "account_b",
+        "account_a"
+      ]
+    ],
+    "thread_wait_edges": {
+      "LEFT": "RIGHT",
+      "RIGHT": "LEFT"
+    },
+    "cycles": [
+      [
+        "LEFT",
+        "RIGHT"
+      ]
+    ],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "7eff070f1c7f95a2d9c77c1f28fb7d1fc7af693a76f6506fdd7f7bf107f0d779",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "deadlock_supported_by_wait_cycle",
+    "observed_waits": [
+      [
+        "LEFT",
+        "account_a",
+        "account_b"
+      ],
+      [
+        "RIGHT",
+        "account_b",
+        "account_a"
+      ]
+    ],
+    "thread_wait_edges": {
+      "LEFT": "RIGHT",
+      "RIGHT": "LEFT"
+    },
+    "cycles": [
+      [
+        "LEFT",
+        "RIGHT"
+      ]
+    ],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "7eff070f1c7f95a2d9c77c1f28fb7d1fc7af693a76f6506fdd7f7bf107f0d779",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  },
+  {
+    "kind": "deadlock_supported_by_wait_cycle",
+    "observed_waits": [
+      [
+        "LEFT",
+        "account_a",
+        "account_b"
+      ],
+      [
+        "RIGHT",
+        "account_b",
+        "account_a"
+      ]
+    ],
+    "thread_wait_edges": {
+      "LEFT": "RIGHT",
+      "RIGHT": "LEFT"
+    },
+    "cycles": [
+      [
+        "LEFT",
+        "RIGHT"
+      ]
+    ],
+    "observations_consistent": true,
+    "sanitizer_findings": [],
+    "fingerprint": "7eff070f1c7f95a2d9c77c1f28fb7d1fc7af693a76f6506fdd7f7bf107f0d779",
+    "limitation": "Wait cycles are application-reported evidence, not a generic mutex ownership tracer. Completion is not verification."
+  }
+]

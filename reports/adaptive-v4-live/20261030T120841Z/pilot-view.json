@@ -1,0 +1,1257 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "case": "ledger_3",
+      "status": "verified",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 1310,
+          "cost_usd": 0.001578,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "181d779cabcc4f95a61e36aaa6f0d8f3",
+          "inference_ms": 1493.5817000000498,
+          "input_tokens": 1176,
+          "output_tokens": 134,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE writer.c 1-2\n#include \"state.h\"\nvoid update(State*s,int step) { pthread_mutex_lock(&s->mutex); long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; pthread_mutex_unlock(&s->mutex); }\n@@ END\n@@ REPLACE reader.c 1-2\n#include \"state.h\"\nlong snapshot(State*s) { pthread_mutex_lock(&s->mutex); long result=s->produced-2*s->consumed; pthread_mutex_unlock(&s->mutex); return result; }\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "writer.c",
+                "start": 1,
+                "end": 2,
+                "replacement_lines": 2
+              },
+              {
+                "file": "reader.c",
+                "start": 1,
+                "end": 2,
+                "replacement_lines": 2
+              }
+            ]
+          },
+          "patch": "--- a/writer.c\n+++ b/writer.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void update(State*s,int step) { long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; }\n+void update(State*s,int step) { pthread_mutex_lock(&s->mutex); long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; pthread_mutex_unlock(&s->mutex); }\n--- a/reader.c\n+++ b/reader.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-long snapshot(State*s) { long result=s->produced-2*s->consumed; return result; }\n+long snapshot(State*s) { pthread_mutex_lock(&s->mutex); long result=s->produced-2*s->consumed; pthread_mutex_unlock(&s->mutex); return result; }\n",
+          "verification_phases_ms": {
+            "apply": 3628.7873999999647,
+            "build": 1462.5037000000702,
+            "stress": 8989.532199999758,
+            "tsan_build": 2664.542799999708,
+            "original_tests_and_semantics": 5946.420800000851
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 19062.999500000387,
+          "taxonomy": {
+            "primary": "verified",
+            "gates": []
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1310,
+      "cost_usd": 0.001578,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 237,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 250,
+          "primitives": {
+            "mutex_lock": 0,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 0,
+          "blocking_helper_in_protected_header": false,
+          "baseline_fingerprint": "UNKNOWN_FAILURE:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "single_lock_invariant",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002345,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0030485,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.0113999999484804
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 0
+      },
+      "end_to_end_ms": 32060.282200000074,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1793.3957000000191,
+        "upload": 2080.789399999958,
+        "baseline_build": 2353.0405000001338,
+        "baseline_stress": 1615.004499999941,
+        "inference": 1493.5817000000498,
+        "verify_apply": 3628.7873999999647,
+        "verify_build": 1462.5037000000702,
+        "verify_stress": 8989.532199999758,
+        "verify_tsan_build": 2664.542799999708,
+        "verify_original_tests_and_semantics": 5946.420800000851,
+        "e2e": 32060.282200000074
+      },
+      "patch": "--- a/writer.c\n+++ b/writer.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void update(State*s,int step) { long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; }\n+void update(State*s,int step) { pthread_mutex_lock(&s->mutex); long p=s->produced,c=s->consumed; sched_yield(); s->produced=p+2; s->consumed=c+1; pthread_mutex_unlock(&s->mutex); }\n--- a/reader.c\n+++ b/reader.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-long snapshot(State*s) { long result=s->produced-2*s->consumed; return result; }\n+long snapshot(State*s) { pthread_mutex_lock(&s->mutex); long result=s->produced-2*s->consumed; pthread_mutex_unlock(&s->mutex); return result; }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "snapshot_3",
+      "status": "verified",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 1196,
+          "cost_usd": 0.001458,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "6a5a6cd1d48c4dce86cc39a0400121cc",
+          "inference_ms": 1491.1628999998356,
+          "input_tokens": 1065,
+          "output_tokens": 131,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE publisher.c 2-2\nvoid publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n@@ END\n@@ REPLACE snapshot.c 2-2\nint check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "publisher.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              },
+              {
+                "file": "snapshot.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+          "verification_phases_ms": {
+            "apply": 3715.584399999898,
+            "build": 2368.093499999759,
+            "stress": 9035.57899999987,
+            "tsan_build": 2523.5078000000613,
+            "original_tests_and_semantics": 5038.436700000602
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 18965.617000000293,
+          "taxonomy": {
+            "primary": "verified",
+            "gates": []
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1196,
+      "cost_usd": 0.001458,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 248,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 251,
+          "primitives": {
+            "mutex_lock": 0,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 0,
+          "blocking_helper_in_protected_header": false,
+          "baseline_fingerprint": "UNKNOWN_FAILURE:2",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "single_lock_invariant",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002262,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0029406000000000002,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.012699999842880061
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 0
+      },
+      "end_to_end_ms": 31457.295599999725,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1333.612500000072,
+        "upload": 2007.7134000002843,
+        "baseline_build": 2327.095399999962,
+        "baseline_stress": 1587.209399999665,
+        "inference": 1491.1628999998356,
+        "verify_apply": 3715.584399999898,
+        "verify_build": 2368.093499999759,
+        "verify_stress": 9035.57899999987,
+        "verify_tsan_build": 2523.5078000000613,
+        "verify_original_tests_and_semantics": 5038.436700000602,
+        "e2e": 31457.295599999725
+      },
+      "patch": "--- a/publisher.c\n+++ b/publisher.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s,int k){ s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; }\n+void publish(State*s,int k){ pthread_mutex_lock(&s->mutex); s->epoch=k; sched_yield(); s->payload=k*11; s->valid=1; pthread_mutex_unlock(&s->mutex); }\n--- a/snapshot.c\n+++ b/snapshot.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int check_snapshot(State*s){ int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; return !valid || b==a*11; }\n+int check_snapshot(State*s){ pthread_mutex_lock(&s->mutex); int valid=s->valid, a=s->epoch; sched_yield(); int b=s->payload; pthread_mutex_unlock(&s->mutex); return !valid || b==a*11; }\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "capacity_3",
+      "status": "rejected",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 1331,
+          "cost_usd": 0.001589,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "7fd022aebdfd489fb58872b60ba75d54",
+          "inference_ms": 1422.2735999996985,
+          "input_tokens": 1202,
+          "output_tokens": 129,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END\n@@ REPLACE inspect.c 2-2\nint inspect(State*s){pthread_mutex_lock(&s->mutex);s->cancelled++;int n=s->reserved;pthread_mutex_unlock(&s->mutex);return n;}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": "block_no_change",
+          "category": "schema",
+          "parse_notes": null,
+          "taxonomy": {
+            "primary": "schema",
+            "gates": [
+              "block_no_change"
+            ]
+          }
+        },
+        {
+          "stage": "ultra",
+          "outcome": "invalid_output",
+          "model_calls": 1,
+          "tokens": 1534,
+          "cost_usd": 0.001792,
+          "false_fix": false,
+          "recovery": "format",
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "6496081fdf90470e829481ff7aa6a3df",
+          "inference_ms": 1471.8259999999646,
+          "input_tokens": 1405,
+          "output_tokens": 129,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE acquire.c 2-2\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;}sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n@@ END\n@@ REPLACE inspect.c 2-2\nint inspect(State*s){pthread_mutex_lock(&s->mutex);s->cancelled++;int n=s->reserved;pthread_mutex_unlock(&s->mutex);return n;}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": "block_no_change",
+          "category": "schema",
+          "parse_notes": null,
+          "taxonomy": {
+            "primary": "schema",
+            "gates": [
+              "block_no_change"
+            ]
+          }
+        }
+      ],
+      "model_calls": 2,
+      "calls_by_model": {
+        "ultra": 2
+      },
+      "tokens": 2865,
+      "cost_usd": 0.003381,
+      "reserved_usd": 0.073152,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 333,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 248,
+          "primitives": {
+            "mutex_lock": 2,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 1,
+          "blocking_helper_in_protected_header": false,
+          "baseline_fingerprint": "TIMEOUT:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "hang",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002377,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0030901,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.011799999811046291
+      },
+      "recoveries": {
+        "format": 1,
+        "verifier": 0
+      },
+      "end_to_end_ms": 20238.455499999873,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1385.6043999999201,
+        "upload": 1969.186499999978,
+        "baseline_build": 1526.1461000000054,
+        "baseline_stress": 12431.165399999827,
+        "inference": 2894.099599999663,
+        "e2e": 20238.455499999873
+      },
+      "patch": null,
+      "verification": null
+    },
+    {
+      "case": "rendezvous_3",
+      "status": "rejected",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 1409,
+          "cost_usd": 0.001713,
+          "false_fix": true,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "de7a58e08a304884bd423db3b664aa8b",
+          "inference_ms": 1434.798199999932,
+          "input_tokens": 1257,
+          "output_tokens": 152,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE publish.c 2-2\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE observe.c 2-2\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "publish.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              },
+              {
+                "file": "observe.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+          "verification_phases_ms": {
+            "apply": 6461.3303000001,
+            "build": 3642.6501000000826,
+            "stress": 229181.2457000001,
+            "tsan_build": 2464.8580000002767,
+            "original_tests_and_semantics": 13317.993199999339
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": false,
+            "passed_runs": 0,
+            "total_runs": 100,
+            "semantic_passed": false,
+            "tsan_passed": false,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 248606.7469999998,
+          "taxonomy": {
+            "primary": "original_tests",
+            "gates": [
+              "original_tests",
+              "stress",
+              "semantics",
+              "tsan"
+            ]
+          }
+        },
+        {
+          "stage": "ultra",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 2588,
+          "cost_usd": 0.002892,
+          "false_fix": true,
+          "recovery": "verifier",
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "169fa25cea2344068235203c16e45af2",
+          "inference_ms": 1457.730999999967,
+          "input_tokens": 2436,
+          "output_tokens": 152,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE publish.c 2-2\nvoid publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n@@ END\n@@ REPLACE observe.c 2-2\nvoid observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "publish.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              },
+              {
+                "file": "observe.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+          "verification_phases_ms": {
+            "apply": 3786.0421000000315,
+            "build": 2309.0305999999146,
+            "stress": 236607.5108,
+            "tsan_build": 2462.4331999998503,
+            "original_tests_and_semantics": 9021.176000000221
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": false,
+            "passed_runs": 0,
+            "total_runs": 100,
+            "semantic_passed": false,
+            "tsan_passed": false,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 250400.15059999996,
+          "taxonomy": {
+            "primary": "original_tests",
+            "gates": [
+              "original_tests",
+              "stress",
+              "semantics",
+              "tsan"
+            ]
+          }
+        }
+      ],
+      "model_calls": 2,
+      "calls_by_model": {
+        "ultra": 2
+      },
+      "tokens": 3997,
+      "cost_usd": 0.004605,
+      "reserved_usd": 0.073152,
+      "false_fix": true,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 320,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 417,
+          "primitives": {
+            "mutex_lock": 2,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 1,
+          "blocking_helper_in_protected_header": true,
+          "baseline_fingerprint": "TIMEOUT:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "protected_blocking_helper",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002455,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0031915,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.008099999831756577
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 1
+      },
+      "end_to_end_ms": 528936.0447,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1339.8706000002676,
+        "upload": 1981.691999999839,
+        "baseline_build": 2999.7528999997485,
+        "baseline_stress": 10417.525100000148,
+        "inference": 2892.529199999899,
+        "verify_apply": 10247.372400000131,
+        "verify_build": 5951.680699999997,
+        "verify_stress": 465788.7565000001,
+        "verify_tsan_build": 4927.291200000127,
+        "verify_original_tests_and_semantics": 22339.16919999956,
+        "e2e": 528936.0447
+      },
+      "patch": "--- a/publish.c\n+++ b/publish.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n+void publish(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->value=31;pthread_mutex_unlock(&s->mutex);}\n--- a/observe.c\n+++ b/observe.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);sched_yield();s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n+void observe(State*s){pthread_mutex_lock(&s->mutex);checkpoint(s);pthread_mutex_unlock(&s->mutex);sched_yield();pthread_mutex_lock(&s->mutex);s->visits++;s->seen=s->value;pthread_mutex_unlock(&s->mutex);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": false,
+        "passed_runs": 0,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "lock_order_3",
+      "status": "verified",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 1521,
+          "cost_usd": 0.001907,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "c017ae9578644873a0e679b83bfdba8d",
+          "inference_ms": 1624.799200000325,
+          "input_tokens": 1328,
+          "output_tokens": 193,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE forward.c 2-2\nvoid forward(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n@@ END\n@@ REPLACE reverse.c 2-2\nvoid reverse(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "forward.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              },
+              {
+                "file": "reverse.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/forward.c\n+++ b/forward.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void forward(State*s){pthread_mutex_lock(&s->left);ready(s);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n+void forward(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n--- a/reverse.c\n+++ b/reverse.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void reverse(State*s){pthread_mutex_lock(&s->right);ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}\n+void reverse(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n",
+          "verification_phases_ms": {
+            "apply": 3938.6521000001267,
+            "build": 2324.045599999863,
+            "stress": 9588.569100000313,
+            "tsan_build": 2351.745100000244,
+            "original_tests_and_semantics": 5992.865399999573
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 20257.225199999993,
+          "taxonomy": {
+            "primary": "verified",
+            "gates": []
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1521,
+      "cost_usd": 0.001907,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 548,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 379,
+          "primitives": {
+            "mutex_lock": 6,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 3,
+          "blocking_helper_in_protected_header": true,
+          "baseline_fingerprint": "TIMEOUT:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "protected_blocking_helper",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002508,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0032603999999999997,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.009000000318337698
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 0
+      },
+      "end_to_end_ms": 41952.33290000033,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1294.7989999997844,
+        "upload": 2034.2549000001782,
+        "baseline_build": 2427.661899999748,
+        "baseline_stress": 10346.740899999986,
+        "inference": 1624.799200000325,
+        "verify_apply": 3938.6521000001267,
+        "verify_build": 2324.045599999863,
+        "verify_stress": 9588.569100000313,
+        "verify_tsan_build": 2351.745100000244,
+        "verify_original_tests_and_semantics": 5992.865399999573,
+        "e2e": 41952.33290000033
+      },
+      "patch": "--- a/forward.c\n+++ b/forward.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void forward(State*s){pthread_mutex_lock(&s->left);ready(s);sched_yield();pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n+void forward(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a++;s->b+=2;s->c+=3;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n--- a/reverse.c\n+++ b/reverse.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void reverse(State*s){pthread_mutex_lock(&s->right);ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->left);pthread_mutex_unlock(&s->right);}\n+void reverse(State*s){ready(s);sched_yield();pthread_mutex_lock(&s->left);pthread_mutex_lock(&s->right);pthread_mutex_lock(&s->third);s->a+=4;s->b+=5;s->c+=6;pthread_mutex_unlock(&s->third);pthread_mutex_unlock(&s->right);pthread_mutex_unlock(&s->left);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "predicate_3",
+      "status": "verified",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 1376,
+          "cost_usd": 0.001516,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "7b41c7ef32f0483fa5f11c62371d9db1",
+          "inference_ms": 1574.921799999629,
+          "input_tokens": 1306,
+          "output_tokens": 70,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE await.c 2-2\nint await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "await.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+          "verification_phases_ms": {
+            "apply": 3226.2501000000157,
+            "build": 2426.4776999998503,
+            "stress": 9148.619799999778,
+            "tsan_build": 2410.4495999999926,
+            "original_tests_and_semantics": 6154.871100000037
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 20140.418199999658,
+          "taxonomy": {
+            "primary": "verified",
+            "gates": []
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1376,
+      "cost_usd": 0.001516,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 391,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 435,
+          "primitives": {
+            "mutex_lock": 2,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 1,
+          "blocking_helper_in_protected_header": true,
+          "baseline_fingerprint": "UNKNOWN_FAILURE:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "protected_blocking_helper",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002514,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0032682,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.005700000201613875
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 0
+      },
+      "end_to_end_ms": 31525.094699999954,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1329.494799999793,
+        "upload": 2069.1027000002578,
+        "baseline_build": 1501.4264000001276,
+        "baseline_stress": 1657.3763999999755,
+        "inference": 1574.921799999629,
+        "verify_apply": 3226.2501000000157,
+        "verify_build": 2426.4776999998503,
+        "verify_stress": 9148.619799999778,
+        "verify_tsan_build": 2410.4495999999926,
+        "verify_original_tests_and_semantics": 6154.871100000037,
+        "e2e": 31525.094699999954
+      },
+      "patch": "--- a/await.c\n+++ b/await.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-int await_value(State*s){pthread_mutex_lock(&s->mutex);if(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n+int await_value(State*s){pthread_mutex_lock(&s->mutex);while(s->generation<2)wait_change(s);sched_yield();int result=s->value;s->generation=3;pthread_mutex_unlock(&s->mutex);return result;}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "audit_3",
+      "status": "verified",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "verified",
+          "model_calls": 1,
+          "tokens": 1296,
+          "cost_usd": 0.001412,
+          "false_fix": false,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "e9a53d013b844199b68eff9f3daeafd1",
+          "inference_ms": 1418.4173999997256,
+          "input_tokens": 1238,
+          "output_tokens": 58,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE commit.c 2-2\nvoid commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "commit.c",
+                "start": 2,
+                "end": 2,
+                "replacement_lines": 1
+              }
+            ]
+          },
+          "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n",
+          "verification_phases_ms": {
+            "apply": 4206.3044000001355,
+            "build": 1647.9064999998627,
+            "stress": 9957.957399999941,
+            "tsan_build": 2455.611399999725,
+            "original_tests_and_semantics": 5628.594500000418
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 100,
+            "total_runs": 100,
+            "semantic_passed": true,
+            "tsan_passed": true,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 19690.069799999947,
+          "taxonomy": {
+            "primary": "verified",
+            "gates": []
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1296,
+      "cost_usd": 0.001412,
+      "reserved_usd": 0.036576,
+      "false_fix": false,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 234,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 421,
+          "primitives": {
+            "mutex_lock": 1,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 1,
+            "join": 0
+          },
+          "distinct_mutexes": 1,
+          "blocking_helper_in_protected_header": true,
+          "baseline_fingerprint": "TIMEOUT:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "protected_blocking_helper",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002439,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0031707000000000003,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.006799999937356915
+      },
+      "recoveries": {
+        "format": 0,
+        "verifier": 0
+      },
+      "end_to_end_ms": 41162.97450000002,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1397.5651999999172,
+        "upload": 2034.6896000000925,
+        "baseline_build": 1593.9554999999928,
+        "baseline_stress": 10794.930800000202,
+        "inference": 1418.4173999997256,
+        "verify_apply": 4206.3044000001355,
+        "verify_build": 1647.9064999998627,
+        "verify_stress": 9957.957399999941,
+        "verify_tsan_build": 2455.611399999725,
+        "verify_original_tests_and_semantics": 5628.594500000418,
+        "e2e": 41162.97450000002
+      },
+      "patch": "--- a/commit.c\n+++ b/commit.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;sched_yield();audit(s);pthread_mutex_unlock(&s->mutex);}\n+void commit(State*s){pthread_mutex_lock(&s->mutex);s->committed++;s->bytes+=13;pthread_mutex_unlock(&s->mutex);sched_yield();audit(s);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 100,
+        "total_runs": 100,
+        "semantic_passed": true,
+        "tsan_passed": true,
+        "scheduling_hooks_preserved": true
+      }
+    },
+    {
+      "case": "aggregate_3",
+      "status": "unknown",
+      "route": "agentkernel/adaptive-v4",
+      "arm": "v4",
+      "attempts": [
+        {
+          "stage": "ultra",
+          "outcome": "rejected",
+          "model_calls": 1,
+          "tokens": 1265,
+          "cost_usd": 0.001431,
+          "false_fix": true,
+          "recovery": null,
+          "reserved_usd": 0.036576,
+          "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+          "ledger_call_id": "324e8039cd894073bdc232e411be83ad",
+          "inference_ms": 1313.7347000001682,
+          "input_tokens": 1182,
+          "output_tokens": 83,
+          "reasoning_tokens": 0,
+          "response": "@@ REPLACE record.c 1-2\n#include \"state.h\"\nvoid record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n@@ END",
+          "finish_reason": "stop",
+          "error_code": null,
+          "category": null,
+          "parse_notes": {
+            "outer_fence_removed": false,
+            "blocks": [
+              {
+                "file": "record.c",
+                "start": 1,
+                "end": 2,
+                "replacement_lines": 2
+              }
+            ]
+          },
+          "patch": "--- a/record.c\n+++ b/record.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}\n+void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n",
+          "verification_phases_ms": {
+            "apply": 3387.0514000000185,
+            "build": 2298.6869000001207,
+            "stress": 9547.788899999887,
+            "tsan_build": 2322.0062999998845,
+            "original_tests_and_semantics": 5955.749100000048
+          },
+          "verification": {
+            "build_passed": true,
+            "original_tests_passed": true,
+            "passed_runs": 97,
+            "total_runs": 100,
+            "semantic_passed": false,
+            "tsan_passed": false,
+            "scheduling_hooks_preserved": true
+          },
+          "verification_ms": 20124.23119999994,
+          "taxonomy": {
+            "primary": "stress",
+            "gates": [
+              "stress",
+              "semantics",
+              "tsan"
+            ]
+          }
+        },
+        {
+          "stage": "ultra",
+          "outcome": "unknown",
+          "model_calls": 0,
+          "tokens": null,
+          "cost_usd": null,
+          "false_fix": false,
+          "recovery": "verifier",
+          "taxonomy": {
+            "primary": "unknown",
+            "gates": [
+              null
+            ]
+          }
+        }
+      ],
+      "model_calls": 1,
+      "calls_by_model": {
+        "ultra": 1
+      },
+      "tokens": 1265,
+      "cost_usd": 0.001431,
+      "reserved_usd": 0.036576,
+      "false_fix": true,
+      "cache_used": false,
+      "route_decision": {
+        "policy": "adaptive-v4-router-3",
+        "stages": [
+          "ultra",
+          "ultra"
+        ],
+        "features": {
+          "source_bytes": 240,
+          "editable_files": 2,
+          "editable_lines": 4,
+          "header_bytes": 240,
+          "primitives": {
+            "mutex_lock": 0,
+            "cond_wait": 0,
+            "barrier_wait": 0,
+            "rwlock": 0,
+            "semaphore": 0,
+            "atomic": 0,
+            "join": 0
+          },
+          "distinct_mutexes": 0,
+          "blocking_helper_in_protected_header": false,
+          "baseline_fingerprint": "UNKNOWN_FAILURE:3",
+          "sanitizer_fingerprint": null
+        },
+        "bucket": "single_lock_invariant",
+        "skip_reasons": {
+          "super": "protocol_capability_not_demonstrated"
+        },
+        "expected": {
+          "p_super_lower": 0.0,
+          "ultra_direct_usd": 0.002342,
+          "ultra_direct_s": 31.6,
+          "super_then_ultra_usd": 0.0030445999999999997,
+          "super_then_ultra_s": 63.2,
+          "latency_source": "default_equal_uncalibrated",
+          "correction_stage": "ultra"
+        },
+        "overhead_ms": 0.006499999926745659
+      },
+      "error": "ContractError",
+      "stop_reason": "Stopped without automatic replay",
+      "recoveries": {
+        "format": 0,
+        "verifier": 1
+      },
+      "end_to_end_ms": 31663.45450000017,
+      "phases_ms": {
+        "queue": 0.0,
+        "sandbox_create": 1485.6094000001576,
+        "upload": 2109.7638999999617,
+        "baseline_build": 1499.3980999997802,
+        "baseline_stress": 1715.1554000001852,
+        "inference": 1313.7347000001682,
+        "verify_apply": 3387.0514000000185,
+        "verify_build": 2298.6869000001207,
+        "verify_stress": 9547.788899999887,
+        "verify_tsan_build": 2322.0062999998845,
+        "verify_original_tests_and_semantics": 5955.749100000048,
+        "e2e": 31663.45450000017
+      },
+      "patch": "--- a/record.c\n+++ b/record.c\n@@ -1,2 +1,2 @@\n #include \"state.h\"\n-void record(State*s,int step){int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;}\n+void record(State*s,int step){pthread_mutex_lock(&s->mutex);int n=s->parity[step&1],t=s->total;sched_yield();s->parity[step&1]=n+1;s->total=t+1;pthread_mutex_unlock(&s->mutex);}\n",
+      "verification": {
+        "build_passed": true,
+        "original_tests_passed": true,
+        "passed_runs": 97,
+        "total_runs": 100,
+        "semantic_passed": false,
+        "tsan_passed": false,
+        "scheduling_hooks_preserved": true
+      }
+    }
+  ],
+  "aggregates": {
+    "v4 (live)": {
+      "jobs": 8,
+      "verified": 5,
+      "calls": 10,
+      "tokens": 14826,
+      "cost_usd": 0.017288,
+      "usd_per_verified": 0.0034576000000000003,
+      "median_e2e_s": 31.86186835000012
+    },
+    "ultra_only": {
+      "jobs": 8,
+      "verified": 6,
+      "calls": 8,
+      "tokens": 13055,
+      "cost_usd": 0.015955,
+      "usd_per_verified": 0.002659166666666667,
+      "median_e2e_s": 40.781171000009635
+    },
+    "fast": {
+      "jobs": 8,
+      "verified": 6,
+      "calls": 16,
+      "tokens": 25743,
+      "cost_usd": 0.020602,
+      "usd_per_verified": 0.0034336666666666665,
+      "median_e2e_s": 43.553339799982496
+    },
+    "super_only": {
+      "jobs": 8,
+      "verified": 0,
+      "calls": 8,
+      "tokens": 12496,
+      "cost_usd": 0.0043578,
+      "usd_per_verified": null,
+      "median_e2e_s": 18.3816547000024
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "id": "inventory_stock",
+      "source_sha256": "e4b2ca1dbd01f1c3a5d0e3c34292643d0482b7133651e9f547719f431a7f7c10",
+      "support_sha256": {
+        "state.h": "507e2da9f71f0eed1798f17470665257f51dcd8180273962c50bb9f78c8156dd",
+        "oracle.c": "82141d4e37ad17f0f48b5ab731c535ea5d1c242547d81285a696f15d7b8da2ee"
+      },
+      "description": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+      "negative_control": "race"
+    },
+    {
+      "id": "barrier_cache",
+      "source_sha256": "196671378405c8be376a08ec29949888460b0cf3a6b80bd9e2202a7d0221de5d",
+      "support_sha256": {
+        "state.h": "073e4016bb1bee99074f95aa0d18e12f93bb71b295c5f39c31ba684af6342f28",
+        "oracle.c": "a321338ae0adfaf64a7bc675b88b9e09b6ae4d52b569358e2a6e9da97ec75178"
+      },
+      "description": "Both participants must call meet exactly once and finish. Preserve publication of value 42; the reader may observe either 0 or 42. The protected meet function rendezvous both participants on a barrier. Prevent waiting at this rendezvous while holding their shared mutex. Retain both original sched_yield calls.",
+      "negative_control": "deadlock"
+    }
+  ],
+  "targets_in_training": false,
+  "frozen_before_model_evaluation": true,
+  "scope": "Two fresh synthetic transfer programs; earlier pilot cases are development-seen. Not a production-quality estimate."
+}

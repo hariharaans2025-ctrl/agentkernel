@@ -1,0 +1,17 @@
+{
+  "command": [
+    "uname",
+    "-a"
+  ],
+  "exit_code": 0,
+  "stdout": "Linux hostname 7.0.6 #1 SMP PREEMPT_DYNAMIC Mon Aug 24 09:29:13 UTC 2026 x86_64 GNU/Linux\n",
+  "stderr": "",
+  "duration_ms": 9.669296999999965,
+  "timed_out": false,
+  "metadata": {
+    "execution_backend": "nebius",
+    "output_truncated": false,
+    "remote_image_id": "55166906-a3c3-4bbf-ac4c-88a2d75e38ae",
+    "transport_wall_ms": 1556.980699999258
+  }
+}

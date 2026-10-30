@@ -1,0 +1,3 @@
+{
+  "solution.c": "#include \"state.h\"\n#include <sched.h>\nint take_item(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int old = stock->remaining;\n    if (old == 0) {\n        pthread_mutex_unlock(&stock->mutex);\n        return 0;\n    }\n    sched_yield();\n    stock->remaining = old - 1;\n    pthread_mutex_unlock(&stock->mutex);\n    return 1;\n}\nint remaining_stock(Inventory *stock) {\n    pthread_mutex_lock(&stock->mutex);\n    int rem = stock->remaining;\n    pthread_mutex_unlock(&stock->mutex);\n    return rem;\n}\n"
+}

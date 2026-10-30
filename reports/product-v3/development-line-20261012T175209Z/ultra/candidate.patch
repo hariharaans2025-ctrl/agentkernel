@@ -1,0 +1,20 @@
+--- a/solution.c
++++ b/solution.c
+@@ -2,15 +2,15 @@
+ #include <sched.h>
+ void publish_cache(Cache *cache) {
+     pthread_mutex_lock(&cache->mutex);
+-    meet(cache);
+     sched_yield();
+     cache->value = 42;
+     pthread_mutex_unlock(&cache->mutex);
++    meet(cache);
+ }
+ void observe_cache(Cache *cache) {
+     pthread_mutex_lock(&cache->mutex);
+-    meet(cache);
+     sched_yield();
+     cache->observed = cache->value;
+     pthread_mutex_unlock(&cache->mutex);
++    meet(cache);
+ }

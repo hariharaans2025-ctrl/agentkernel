@@ -1,0 +1,19 @@
+{
+  "project_id": "aiproject-e00z8mw0ggdmwn69nb",
+  "sdk_version": "0.3.6",
+  "execution_backend": "nebius",
+  "image": "python:3.12-slim",
+  "status": "failed",
+  "permissions": {
+    "import": false,
+    "spawn": false,
+    "spawn_disposable": false,
+    "list": false,
+    "cancel": false,
+    "set_image_tag": false
+  },
+  "error_type": "ForbiddenError",
+  "http_status": 403,
+  "safe_error": "Insufficient permissions: spawn or spawn_disposable",
+  "elapsed_ms": 1068.5669999802485
+}

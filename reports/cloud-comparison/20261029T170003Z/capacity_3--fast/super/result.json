@@ -1,0 +1,30 @@
+{
+  "stage": "super",
+  "outcome": "rejected",
+  "model_calls": 1,
+  "tokens": 1567,
+  "cost_usd": 0.0005523,
+  "reserved_usd": 0.0072864,
+  "false_fix": true,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "ledger_call_id": "b5e647e6c5c34b55b8824a0111b80ae3",
+  "input_tokens": 1430,
+  "output_tokens": 137,
+  "reasoning_tokens": 0,
+  "response": "{\"edits\": [{\"file\": \"acquire.c\", \"start_line\": 1, \"end_line\": 1, \"replacement_lines\": [\"#include 'state.h'\"]}, {\"file\": \"acquire.c\", \"start_line\": 2, \"end_line\": 2, \"replacement_lines\": [\"int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\"]}]}",
+  "error_code": null,
+  "validation": [],
+  "canonical_response": "{\"diagnosis\": \"Numbered-line model repair proposal.\", \"root_cause\": \"Not separately asserted; independent verification required.\", \"confidence\": 0.0, \"edits\": [{\"file\": \"acquire.c\", \"search\": \"#include \\\"state.h\\\"\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\\n\", \"replacement\": \"#include 'state.h'\\nint acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\\n\"}], \"reasoning_summary\": \"\", \"expected_effect\": \"Preserve workload invariants.\", \"risk_notes\": [\"Controller metadata is not model confidence or execution evidence.\", \"Accept only after every mandatory execution check passes.\"]}",
+  "inference_ms": 1372.3339999560267,
+  "patch": "--- a/acquire.c\n+++ b/acquire.c\n@@ -1,2 +1,2 @@\n-#include \"state.h\"\n-int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0) return 0; sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n+#include 'state.h'\n+int acquire(State*s){pthread_mutex_lock(&s->mutex);if(s->available==0){pthread_mutex_unlock(&s->mutex);return 0;} sched_yield();s->available--;s->reserved++;pthread_mutex_unlock(&s->mutex);return 1;}\n",
+  "verification": {
+    "build_passed": false,
+    "original_tests_passed": null,
+    "passed_runs": 0,
+    "total_runs": 0,
+    "semantic_passed": null,
+    "tsan_passed": null,
+    "scheduling_hooks_preserved": true
+  },
+  "verification_ms": 1438.0970999482088
+}

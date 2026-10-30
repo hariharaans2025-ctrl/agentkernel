@@ -1,0 +1,292 @@
+{
+  "created": 1793292600.5797772,
+  "identity": {
+    "schema": 1,
+    "policy": {
+      "experiment": "exact saved model candidate; fresh verdict",
+      "adapter_sha256": "48127afc2c0ed2f988313c5acd9c919eb28b8eb9c25f6d77ccbf9ef1c48c18a6"
+    },
+    "task": {
+      "task_id": "inventory_stock",
+      "workspace": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\sites-console\\runs\\2c402840-71de-4ce2-a684-0e67dc7a9d75\\original",
+      "source_files": [
+        "solution.c"
+      ],
+      "support_files": [
+        "state.h",
+        "oracle.c"
+      ],
+      "build_command": [
+        "gcc",
+        "-pthread",
+        "-g",
+        "-O1",
+        "solution.c",
+        "oracle.c",
+        "-o",
+        "app"
+      ],
+      "binary_path": "app",
+      "run_command": [
+        "./app"
+      ],
+      "max_runtime_seconds": 2.0,
+      "compile_timeout_seconds": 30.0,
+      "stress_runs": 3,
+      "environment": {},
+      "expected_behavior": "PASS",
+      "expected_bug_category": "unknown",
+      "verification_config": {
+        "required_build_success": true,
+        "stress_runs": 100,
+        "allowed_deadlocks": 0,
+        "allowed_races": 0,
+        "allowed_crashes": 0,
+        "required_original_tests": true,
+        "original_test_commands": [
+          [
+            "./app",
+            "--check"
+          ]
+        ],
+        "sanitizer_enabled": true,
+        "sanitizer_required": true,
+        "sanitizer_runs": 3,
+        "sanitizer_compiler": "clang",
+        "semantic_checks": [
+          {
+            "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+            "build_command": [
+              "gcc",
+              "-pthread",
+              "-g",
+              "-O1",
+              "solution.c",
+              "oracle.c",
+              "-o",
+              "app"
+            ],
+            "run_command": [
+              "./app",
+              "--check"
+            ],
+            "expected_stdout": "SEMANTIC_PASS",
+            "required": true
+          }
+        ]
+      },
+      "metadata": {
+        "origin": "synthetic_example",
+        "repository_workflow_version": 1
+      }
+    },
+    "files": {
+      "solution.c": "e4b2ca1dbd01f1c3a5d0e3c34292643d0482b7133651e9f547719f431a7f7c10",
+      "state.h": "507e2da9f71f0eed1798f17470665257f51dcd8180273962c50bb9f78c8156dd",
+      "oracle.c": "82141d4e37ad17f0f48b5ab731c535ea5d1c242547d81285a696f15d7b8da2ee"
+    },
+    "verifier": {
+      "concurrency/app.py": "a34a86f7d53ae474a11b348da1157a58d1fe0c9b6eaf59e148908166e11c484d",
+      "concurrency/cli.py": "84453d144ed84ad98a3b3e814ed0c85219e8d537d7baa09cca4a4c98d5f04363",
+      "concurrency/final_benchmark.py": "5a186f96c3c3bea216c922f73d87f46e7afbe38ed30c6921561d92175a007402",
+      "concurrency/human_review.py": "2f9b84d1a8a7c854e716cce17ec041550fc2d075bc47224de361a35181fb8d4b",
+      "concurrency/mock_inference.py": "e4a9fbd1b3cf629810d832814f24d06d31966e921698fc976e6a36e23b67f662",
+      "concurrency/models.py": "28161b9b7d26a07dcf6b664a7c75f8c5d364792819160744d53f298f1bfd6df5",
+      "concurrency/progress.py": "2af129af639f78ee855845920f46146c7d8153e0d3aae899022c839f43438064",
+      "concurrency/smoke.py": "e67007c9b0e2e120360c072922873d7dd4e78a65908c709fc7f521fde5fc83e7",
+      "concurrency/__init__.py": "57940d15763ce48b61a3ba211ad21d5c82054f91058871e55164fdc39fc01785",
+      "concurrency/analyzer/classifier.py": "ca7851ed177b15e03773b5279215dbfa9d3e5aa096a26b9e7653095d83b15d89",
+      "concurrency/analyzer/fingerprints.py": "50ad39ec7c08801eefc51d97e5f9ebc088a46a9ec3f8bc15f21fec92d16e455d",
+      "concurrency/analyzer/routing.py": "ad55f4b5776c7b0ebd49c663a90b577709f62d3d2c2c33321645d560968368b2",
+      "concurrency/analyzer/trace_parser.py": "fd6b3ba23604d35a1940268590e7900ab49e951d9231f7ea96b1e9e4403ca0e0",
+      "concurrency/analyzer/__init__.py": "878545e64cd7983b46129df24de66660d04249b0c4cf2a9d4f440648575afa8b",
+      "concurrency/benchmark/evaluator.py": "12a90262ee435d2dc73a8c3ad2154fd103189c9209a776d9a5574641ea42e69a",
+      "concurrency/benchmark/loader.py": "d411b8af2864ef3fef5ea21e1bc01226484240b33aebcecb21e0ae3f1f676622",
+      "concurrency/benchmark/metrics.py": "c640222334c07c78ff3d807e3bf7b8a4c81b5b77b7dd55a012ed150b1aff1ff1",
+      "concurrency/benchmark/report.py": "d2246c479a9b696fae56261a71a0326a1b7d4209f7c82151b8c1c4bb6b5ec2b7",
+      "concurrency/benchmark/__init__.py": "64b9c9f3fbdb6aae91d2caeeb4b4c94ea4a3c97d22cfda6b5b85212439f1d44e",
+      "concurrency/campaign/manager.py": "95c94465486c53116caae1d73668ce542286f5bca828a724ce5133ea244a407e",
+      "concurrency/campaign/models.py": "12f64969a5d196ee9793b6d95c856e96abca258e28d3b380666e70ceb01096c3",
+      "concurrency/campaign/scheduler.py": "bde47aae558f9efbba89b9a8697dc40c89d8750f0b5bde3947efc5a9c1940032",
+      "concurrency/campaign/__init__.py": "dad857e9f3a357178543caa26d2005c4145efb37149b8ef22047e1caad4078e9",
+      "concurrency/compile/compiler.py": "10c50a08a526e7a3b36d937166587c3073bdad4ff4af1f302a34b59a4b7e0178",
+      "concurrency/compile/models.py": "60473c9a78671a84b384e880bb23e7f333b5f0d221564db94f84ba2d1e89714b",
+      "concurrency/compile/__init__.py": "32594a1363713da9d6ca446eb9ae1566e807b6c22026badefb392fe56e00c89a",
+      "concurrency/execution/models.py": "968b2ec34c05203f1096620e0030e6e02bc93dd4c9a2f20eac742764fa751032",
+      "concurrency/execution/runner.py": "5864081d1f57268a40a4d905bd64a299f6ba5138a1a95bc75224746e41e8ebed",
+      "concurrency/execution/__init__.py": "56a745085405e475a114eae9030aafb94ed08a5ffe9edfb80f30a9d8556305ee",
+      "concurrency/instrumentation/sanitizer.py": "a35bbef29684ea76b005b893cb92cf6d558afb64432eed794d0701615177081e",
+      "concurrency/instrumentation/__init__.py": "4de5d12311f095a5c0bd20ece4cc373f3d00fefad74ffbad5471d09430b8bc09",
+      "concurrency/repair/patch_applier.py": "265daae052bef153bd74eabeeb83c6933d45af6c562626ffbbfcce55678c1a59",
+      "concurrency/repair/patch_parser.py": "7ab835b7c508f68269388d706916d0f2798c8284f94b5a81bce5c073688cffdb",
+      "concurrency/repair/prompts.py": "2720e93c7a682d567defaca104bffa1ffa9ee07e9908affada7cdccc53c79766",
+      "concurrency/repair/source_edits.py": "bc057813fb6290c92ee5386e4eba08dee090027d6c4ccbe8c42f0168f6936b63",
+      "concurrency/repair/__init__.py": "6c7d9ea99e1d1ef0df7daa007052c17f1440d41c4e9c06c31fbfaf157db6e30a",
+      "concurrency/sandbox/base.py": "0c5fadc33626c168b14fe1d133032147cc342ebe7bf5c6180691a55bb1cb896e",
+      "concurrency/sandbox/local.py": "bcfe088fd717fdb8f333fe100fd7dca67b187dcc698e801b6e8d9cba2f7be610",
+      "concurrency/sandbox/nebius.py": "438090f1908c11f79094a0e5f2308cce9748134f2a8126374369aa0f672722b3",
+      "concurrency/sandbox/__init__.py": "7468b522b93aeb4e2597bd3b5617f1554177680b1ac46a584f7fd8861b6d8c14",
+      "concurrency/verification/concurrency_verifier.py": "dcce6ca0534d9c7e1286c5cec18392c595a6a14c7d9e3ecb62af44b028d0e5ed",
+      "concurrency/verification/repair_verifier.py": "5001048bc464d0a54c932891b3c7e7464994ce00ee851477bb6fd7d74cf52a44",
+      "concurrency/verification/semantics.py": "a271eac6ce6b9ab9064a5cef5bf49f62f64446e118e15d9e50d394b305915464",
+      "concurrency/verification/__init__.py": "686726ea1fb55ee44483093cb93b9a908f061b5d0ab7eb216ce7236254f5a019"
+    },
+    "image": "agentkernel-clang:20261003122908",
+    "reuse_implementation": "1c9decc2359820c4254a64c5561cb0b43937183c951159f94c53606dfa7cf9f5"
+  },
+  "patch": "--- a/solution.c\n+++ b/solution.c\n@@ -1,12 +1,20 @@\n #include \"state.h\"\n #include <sched.h>\n int take_item(Inventory *stock) {\n+    pthread_mutex_lock(&stock->mutex);\n     int old = stock->remaining;\n-    if (old == 0) return 0;\n+    if (old == 0) {\n+        pthread_mutex_unlock(&stock->mutex);\n+        return 0;\n+    }\n     sched_yield();\n     stock->remaining = old - 1;\n+    pthread_mutex_unlock(&stock->mutex);\n     return 1;\n }\n int remaining_stock(Inventory *stock) {\n-    return stock->remaining;\n+    pthread_mutex_lock(&stock->mutex);\n+    int value = stock->remaining;\n+    pthread_mutex_unlock(&stock->mutex);\n+    return value;\n }\n",
+  "patch_sha256": "4d0c8e8d5cd9f9148d783d3e388470c91a9dae1dc56e456974f8d5fbd8ece0d4",
+  "verification": {
+    "passed": true,
+    "build_passed": true,
+    "total_runs": 100,
+    "passed_runs": 100,
+    "failed_runs": 0,
+    "race_count": 0,
+    "deadlock_count": 0,
+    "crash_count": 0,
+    "infrastructure_failures": 0,
+    "observed_program_failures": 0,
+    "sanitizer_findings": [],
+    "regressions": [],
+    "duration_ms": 31244.022900000346,
+    "evidence": {
+      "build": {
+        "command": [
+          "gcc",
+          "-pthread",
+          "-g",
+          "-O1",
+          "solution.c",
+          "oracle.c",
+          "-o",
+          "app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "duration_ms": 216.925081,
+        "timed_out": false,
+        "metadata": {
+          "execution_backend": "nebius",
+          "output_truncated": false,
+          "remote_image_id": "06b59659-81da-408f-a18c-9bcaa173b996",
+          "transport_wall_ms": 2438.2542000003014
+        },
+        "success": true
+      },
+      "original_tests": {
+        "passed": true,
+        "results": [
+          {
+            "command": [
+              "./app",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "SEMANTIC_PASS\n",
+            "stderr": "",
+            "duration_ms": 5.707978999999974,
+            "timed_out": false,
+            "metadata": {
+              "execution_backend": "nebius",
+              "output_truncated": false,
+              "remote_image_id": "06b59659-81da-408f-a18c-9bcaa173b996",
+              "transport_wall_ms": 1978.327900000295
+            }
+          }
+        ],
+        "configured": true
+      },
+      "campaign": {
+        "total_runs": 100,
+        "failed_runs": 0,
+        "infrastructure_failures": 0,
+        "requested_runs": 100,
+        "execution_blocked": false,
+        "counts": {
+          "PASS": 100
+        },
+        "duration_ms": 18624.886099998548,
+        "representative_runs": []
+      },
+      "semantic": {
+        "configured": true,
+        "passed": true,
+        "required_passed": true,
+        "regression": false,
+        "infrastructure_failures": 0,
+        "checks": [
+          {
+            "name": "Reserve at most 500 units across 800 concurrent requests: exactly 500 requests must succeed, all remaining requests must return zero, and stock must end at zero. Concurrent stock readers must be synchronized. Retain the existing sched_yield call.",
+            "required": true,
+            "passed": true,
+            "infrastructure_failure": false,
+            "build": {
+              "command": [
+                "gcc",
+                "-pthread",
+                "-g",
+                "-O1",
+                "solution.c",
+                "oracle.c",
+                "-o",
+                "app"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "duration_ms": 216.92095499999996,
+              "timed_out": false,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "28adc209-0925-46ce-97a0-8ae4b3cb0eb3",
+                "transport_wall_ms": 1428.1283000000258
+              }
+            },
+            "run": {
+              "command": [
+                "./app",
+                "--check"
+              ],
+              "exit_code": 0,
+              "stdout": "SEMANTIC_PASS\n",
+              "stderr": "",
+              "duration_ms": 5.3944789999999525,
+              "timed_out": false,
+              "metadata": {
+                "execution_backend": "nebius",
+                "output_truncated": false,
+                "remote_image_id": "28adc209-0925-46ce-97a0-8ae4b3cb0eb3",
+                "transport_wall_ms": 1723.046399998566
+              }
+            }
+          }
+        ]
+      },
+      "sanitizer": {
+        "status": "passed",
+        "campaign": {
+          "total_runs": 3,
+          "failed_runs": 0,
+          "infrastructure_failures": 0,
+          "requested_runs": 3,
+          "execution_blocked": false,
+          "counts": {
+            "PASS": 3
+          },
+          "duration_ms": 1422.4054999995133,
+          "representative_runs": []
+        }
+      }
+    },
+    "reason": "The patch passed the configured verification campaign.",
+    "execution_passed": true,
+    "semantic_passed": true,
+    "sanitizer_passed": true,
+    "semantic_regression": false,
+    "false_fix": false
+  },
+  "origin_evidence": "C:\\Users\\HARI HARAAN\\Documents\\Codex\\2026-09-14\\files-pasted-by-the-user-you\\outputs\\agentkernel\\reports\\sites-console\\runs\\2c402840-71de-4ce2-a684-0e67dc7a9d75"
+}
